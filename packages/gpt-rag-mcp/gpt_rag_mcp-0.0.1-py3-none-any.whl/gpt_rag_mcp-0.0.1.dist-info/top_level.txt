@@ -1,0 +1,8 @@
+configuration
+connectors
+inputs
+models
+prompts
+resources
+sse
+tools
