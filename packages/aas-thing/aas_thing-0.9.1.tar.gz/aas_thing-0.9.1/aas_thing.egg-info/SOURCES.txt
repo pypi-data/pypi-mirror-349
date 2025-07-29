@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+aas_thing/__init__.py
+aas_thing/aas_connection.py
+aas_thing/core.py
+aas_thing/message_handler.py
+aas_thing/s3i_connection.py
+aas_thing.egg-info/PKG-INFO
+aas_thing.egg-info/SOURCES.txt
+aas_thing.egg-info/dependency_links.txt
+aas_thing.egg-info/requires.txt
+aas_thing.egg-info/top_level.txt
