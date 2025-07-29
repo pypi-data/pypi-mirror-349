@@ -1,0 +1,112 @@
+#!/bin/bash -e
+
+# This script deploys a new production release of pydarm to the
+# current LIGO site.
+#
+# https://git.ligo.org/Calibration/pydarm
+#
+# The release is done through a custom conda environment, built from
+# environment maintained with the pydarm source:
+#
+# https://git.ligo.org/Calibration/pydarm/-/blob/master/conda/environment.yaml
+#
+# If a conda environment does not exist it will be created.  It will
+# then be updated to the latest versions of the packages specified
+# with the pydarm source.  The specified tag of pydarm will then be
+# installed into the newly updated environment.
+
+PYDARM_URL=https://git.ligo.org/Calibration/pydarm.git
+
+# If this is being run at the site control room then the cal "home"
+# directory is at /ligo/groups/cal
+if [ -e /ligo/groups/cal ] ; then
+    ENV_ROOT=/ligo/groups/cal/conda
+else
+    ENV_ROOT=~/conda
+    SYSTEMD_SERVICES="calmonitor_scald.service gstlal_compute_transfer_functions.service gstlal_compute_pcalxy_comp.service"
+fi
+
+BUILDD="${ENV_ROOT}/build"
+ENV_PATH="${ENV_ROOT}/pydarm"
+ENV_FILE="${ENV_FILE:=${BUILDD}/pydarm/conda/environment.yaml}"
+
+########################################
+
+# FIXME: this is probably not the best way to resolve the base conda
+# environment
+source $(cd $(dirname $(which python))/../../../etc/profile.d && pwd)/conda.sh
+
+log() {
+    echo "$@" >&2
+}
+
+if [ "$1" ] ; then
+    PYDARM_TAG="$1"
+else
+    # find the latest production tag
+    PYDARM_TAG=$(git ls-remote --tags "${PYDARM_URL}" | awk '{print $2}' | cut -f 3 -d / | egrep '^[0-9]+\.[0-9]+$' | tail -1)
+fi
+
+ENV_TARGET="${ENV_ROOT}/pydarm-${PYDARM_TAG}"
+
+log "pydarm tag: $PYDARM_TAG"
+log "env path: $ENV_TARGET"
+read -p "type 'yes' to confirm: "
+if [[ "${REPLY,,}" != 'yes' ]] ; then
+    log "aborting."
+    exit 1
+fi
+
+########################################
+
+log "cleaning/creating build directory $BUILDD ..."
+rm -rf "${BUILDD}"
+mkdir -p "${BUILDD}"
+
+log "cloning pydarm tag ${PYDARM_TAG}..."
+git clone --depth=1 --single-branch --branch="${PYDARM_TAG}" "${PYDARM_URL}" "${BUILDD}/pydarm"
+
+########################################
+
+if [ ! -d "${ENV_TARGET}" ] ; then
+
+    log "creating conda env: $ENV_TARGET..."
+    conda env create --prefix "${ENV_TARGET}" --file "${ENV_FILE}"
+
+    # FIXME: consider using pinning to pin the python version
+    # https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-pkgs.html#preventing-packages-from-updating-pinning
+
+else
+
+    log "updating conda env $ENV_PATH..."
+    conda env update --prefix "${ENV_TARGET}" --file "${ENV_FILE}" --prune
+
+fi
+
+########################################
+
+log "activating environment ${ENV_TARGET}..."
+conda activate "${ENV_TARGET}"
+
+log "installing pydarm..."
+cd "${BUILDD}/pydarm"
+pip install .
+
+ln -sfn "$(basename ${ENV_TARGET})" "${ENV_PATH}"
+
+log "conda environment built: $ENV_TARGET"
+log "python: $(python --version)"
+log "pydarm: $(python -m pydarm --version)"
+
+if [ "$SYSTEMD_SERVICES" ] ; then
+    log "restart systemd services to use the new environment?:"
+    for s in $SYSTEMD_SERVICES ; do
+        log "  $s"
+    done
+    read -p "type 'yes' to confirm: "
+    if [[ "${REPLY,,}" == 'yes' ]] ; then
+        for s in $SYSTEMD_SERVICES ; do
+            systemctl --user restart $s
+        done
+    fi
+fi

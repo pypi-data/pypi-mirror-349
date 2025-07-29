@@ -1,0 +1,175 @@
+---
+# runtime parameters for processing Sensing and Actuation function measurements
+
+# Common parameters are *defaults* for Sensing and Actuation.
+# That is, we look to Sensing and Actuation arguments *first*. Any values not
+# specified there will fall back to their Common counterparts.
+
+Common:
+  measurements:
+    pcal: PCal
+    bb  : BroadBand
+    sens: Sensing
+    act1x: Actuation/L1/EX
+    act2x: Actuation/L2/EX
+    act3x: Actuation/L3/EX
+    # act1y: Actuation/L1/EY
+    # act2y: Actuation/L2/EY
+    # act3y: Actuation/L3/EY
+  measurement_sequence:
+    - bb
+    - sens
+    - pcal
+    - act1x
+    - pcal
+    - act2x
+    - pcal
+    - act3x
+    - pcal
+    - bb
+  required_grd_state: 'ISC_LOCK:NLN_CAL_MEAS'
+
+  calcs_filters:
+    # index starts at 1, same as medm module numbers
+    # pydarm status will only compare against the first filter module
+    # in each section below.
+    1/Hc:
+      - bank_name: CS_DARM_ERR
+        mod_name: O4_Gain
+        mod_slot: 10
+      - bank_name: CS_DARM_CFTD_ERR
+        mod_name: O4_Gain
+        mod_slot: 10
+    Fcc:
+      - bank_name: CS_DARM_ERR
+        mod_name: O4_NoD2N
+        mod_slot: 9
+    L1/EX:
+      - bank_name: CS_DARM_ANALOG_ETMX_L1
+        mod_name: Npct_O4
+        mod_slot: 4
+    L2/EX:
+      - bank_name: CS_DARM_ANALOG_ETMX_L2
+        mod_name: Npct_O4
+        mod_slot: 4
+    L3/EX:
+      - bank_name: CS_DARM_ANALOG_ETMX_L3
+        mod_name: Npct_O4
+        mod_slot: 4
+
+  params:
+    mcmc_burn_in : 100
+    mcmc_steps: 100
+    coh_thresh_loop: 0.9
+    coh_thresh_pcal: 0.9
+    mcmc_mode: 'all' # Choose from 'none','latest', or 'all'
+    mcmc_print: True # Whether to print params to command line
+    n_recent_meas: 3 # number of latest measurements to plot
+
+  allowed_meas_extensions: [".xml", ".hdf5"]
+
+  # model ini variables that point to needed external data paths
+  external_data_file_model_vars:
+    - sensing.omc_filter_file
+    - actuation_y_arm.sus_filter_file
+    - actuation_y_arm.suspension_file
+    - actuation_y_arm.analog_anti_imaging_file
+    - actuation_x_arm.sus_filter_file
+    - actuation_x_arm.suspension_file
+    - actuation_x_arm.analog_anti_imaging_file
+    - digital.digital_filter_file
+    - pcal.analog_anti_aliasing_file
+    - calcs.xarm_uim_analog
+    - calcs.xarm_pum_analog
+    - calcs.xarm_tst_analog
+    - calcs.foton_delay_filter_tf
+
+  hfrl_location: __RDIR_PATH__/measurements/hf_roaming_lines
+
+  archive_location: __RDIR_PATH__/tmp/archive
+
+BroadBand:
+  params:
+    description: "PCal response, broad-band"
+    template: "PCALY2DARM_BB__template_.xml"
+
+PCal:
+  params:
+    description: "PCal response, swept-sine"
+    template: "PCALY2DARM_SS__template_.xml"
+
+Sensing:
+  params:
+    description: "sensing function"
+    template: "DARMOLG_SS__template_.xml"
+    mcmc_mode: 'latest'
+    mcmc_fmin: 80. #100.0 # Hz
+    mcmc_fmax: 1.2e+3 # Hz
+    # gpr_fmin: 15.0 # Hz
+    # gpr_fmax: 4100.0 # Hz
+    # gpr_freq_range_plot: [5.0, 4500.0]
+    # rbf_length_scale: 0.2
+    # rbf_length_scale_limit: [.18, .22]
+
+    gpr_fmin: 15.0 # Hz
+    gpr_fmax: 4100.0 # Hz
+    gpr_freq_range_plot: [5.0, 4500.0]
+    rbf_length_scale: 0.35
+    rbf_length_scale_limit: [.09, .37]
+
+    # User-specified boundary of prior distribution. Default boundaries
+    # are only for spring freq (must be within this range
+    # 0.0<spring freq<20.0) and inv Q (must be within this range
+    # 1.e-2<inv Q<1.0).
+    # If choosing a different set of boundaries, then this argument
+    # should be in form of a 2D array, 5X2. First (second) element of
+    # each row corresponds to the lower (upper) bound of each
+    # parameters: gain, pole freq, spring freq, inv Q, residual delay.
+    priors_bound: [[null, null], [null, null], [null, null], [null, null], [null, null]]
+
+Actuation:
+  params:
+    n_recent_meas: 5
+    # User-specified boundary of prior distribution. Default boundary
+    # is only for gain, gain must be larger or equal to 0.0.
+    # If choosing a different set of boundaries, then this argument
+    # should be in form of a 2D array, 2X2. First (second) element of
+    # each row corresponds to the lower (upper) bound of each
+    # parameters: gain, residual delay.
+    priors_bound: [[null, null], [null, null]]
+
+  L1:
+    params:
+      mcmc_fmin: 11.0  # Hz
+      mcmc_fmax: 90.0  # Hz
+      gpr_fmin: 10.0  # Hz
+      gpr_fmax: 50.0  # Hz
+
+    EX:
+      params:
+        description: "actuation X L1 (UIM) stage response"
+        template: "SUSETMX_L1_SS__template_.xml"
+
+  L2:
+    params:
+      mcmc_fmin: 10.0  # Hz
+      mcmc_fmax: 50.0  # Hz
+      gpr_fmin: 10.0  # Hz
+      gpr_fmax: 500.0  # Hz
+
+    EX:
+      params:
+        description: "actuation X L2 (PUM) stage response"
+        template: "SUSETMX_L2_SS__template_.xml"
+
+  L3:
+    params:
+      mcmc_fmin: 15.0  # Hz
+      mcmc_fmax: 500.0  # Hz
+      gpr_fmin: 10.0  # Hz
+      gpr_fmax: 800.0  # Hz
+
+    EX:
+      params:
+        description: "actuation X L3 (TST) stage response"
+        template: "SUSETMX_L3_SS__template_.xml"

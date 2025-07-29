@@ -1,0 +1,11 @@
+[flake8]
+exclude =
+        .git,
+        .eggs,
+        docs,
+        build,
+        dist,
+        test,
+        *__init__.py,
+        pydarm/_version.py,
+max-line-length = 100

@@ -1,0 +1,53 @@
+# default variables for testing
+variables:
+  IFO: "H1"
+  CAL_ROOT: "/ligo/groups/cal/H1"
+
+include:
+  # https://computing.docs.ligo.org/guide/gitlab/components/python/qa/
+  - component: $CI_SERVER_FQDN/computing/gitlab/components/python/qa@2
+    inputs:
+      # use flake8
+      code_quality_analyzer: flake8
+      # run GitLab Advanced SAST
+      run_advanced_sast: true
+
+  # https://computing.docs.ligo.org/guide/gitlab/components/sphinx/build/
+  - component: $CI_SERVER_FQDN/computing/gitlab/components/sphinx/build@1
+    inputs:
+      image: "python:3.11"
+      requirements: ".[docs]"
+      # publish to gitlab pages for all default branch pipelines
+      pages_when: default
+
+  # https://computing.docs.ligo.org/guide/gitlab/components/python/test/
+  - component: $CI_SERVER_FQDN/computing/gitlab/components/python/test@2
+    inputs:
+      # use conda as the base
+      conda: true
+      python_versions:
+        # should match pyproject.toml
+        - "3.9"
+        - "3.10"
+        - "3.11"
+      pytest_options: >-
+        --cov=pydarm
+        --durations=0
+        --numprocesses=4
+        -ra
+        test/
+      extra_test_commands:
+        # test the CLIs
+        - python -m coverage run --append --source=pydarm -m pydarm --help
+        - python -m coverage run --append --source=pydarm -m pydarm report --help
+
+# customise the test job using conda
+python_test_conda:
+  before_script:
+    # run the before_script from the component (included with python/test)
+    - !reference [.conda_base, before_script]
+    # insert the right version of python into the environment file
+    - sed -i -E "s|\-(\s+)python($\|=.*)|-\1python=${PYTHON_VERSION}|g" conda/environment.yaml
+    # build the test environment
+    - conda env create -n test -f conda/environment.yaml
+    - conda activate test

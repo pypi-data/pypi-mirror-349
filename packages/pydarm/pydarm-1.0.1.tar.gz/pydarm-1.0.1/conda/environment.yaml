@@ -1,0 +1,46 @@
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9
+  - numpy<1.25
+  - scipy
+  - emcee
+  - flake8
+  - pytest
+  - pytest-cov
+  - pytest-xdist
+  - scikit-learn>=1.1.0
+  - corner
+  - h5py
+  - matplotlib
+  - gwpy
+  - python-nds2-client
+  - declarative
+  - dttxml
+  - pyepics
+  - gpstime
+  - tabulate
+  - python-foton
+  - gitpython
+  # FIXME: this git version restriction is only needed because newer
+  # versions of git break setuptools_scm with python3.9:
+  # https://github.com/pypa/setuptools_scm/issues/1038
+  # we can drop this once we move to python 3.10 or later
+  - git<=2.44.0
+  - ligo-scald
+  - gpflow
+  - tensorflow=2.15.0
+  - tensorflow-probability=0.23.0
+  - python-ldas-tools-framecpp
+
+# the following packages are needed by the gstlal "monitor" services
+# running on the site LDAS calib nodes
+  # FIXME: this is a newer version of gstlal with patches needed for
+  # gstlal-calibration, once the gstlal-calibration package has been
+  # updated to depend on this gstlal version this won't be needed
+  # anymore.
+  - gstlal=1.13
+  - gstlal-calibration
+  - python-confluent-kafka
+# extra things we want for the site deployments
+  - ipython

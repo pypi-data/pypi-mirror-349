@@ -1,0 +1,498 @@
+#!/bin/bash
+
+set -o pipefail
+
+RDIR=$(dirname $0)
+RDIR_FULL=$(cd $RDIR && pwd)
+
+export IFO=H1
+export CAL_ROOT="${RDIR}"
+#export NDSSERVER="nds.ligo.caltech.edu"
+export NDSSERVER="file:${RDIR}/data/data_TDCF_1397269467.hdf5"
+export GIT_AUTHOR_NAME="Test Test"
+export GIT_AUTHOR_EMAIL="test@example.com"
+export LOG_LEVEL=DEBUG
+# for some reason this fail in wayland environments
+export QT_QPA_PLATFORM=
+
+##################################################
+# infrastructure commands
+
+_log() {
+    echo "$@" >&2
+}
+
+_start_test() {
+    _log "##############################"
+    _log "test: $@"
+    _log "##########"
+}
+
+_end_test() {
+    local last=$?
+    _log "##########"
+    if [[ $last == 0 ]] ; then
+        _log "test result: PASS"
+    else
+        _log "test result: FAIL (last test command had non-zero exit code"
+        exit 10
+    fi
+    _log "##############################"
+}
+
+##################################################
+# helper commands
+
+find_sort() {
+    (cd "$1" && find . -type f | cut -c 3- | sort)
+}
+
+##################################################
+
+_log "run directory: $RDIR_FULL"
+
+if [[ "$1" == '-k' ]] ; then
+    skip=t
+fi
+
+if [ -z "$skip" ] ; then
+    _log "reseting test data..."
+    (cd "${RDIR}" && rm -rf {data,measurements,reports,uncertainty}) || exit 10
+    if ! (cd "${RDIR}" && unzip "data.zip") ; then
+        echo "make sure you git LFS download the data.zip"
+        exit 10
+    fi
+else
+    _log "skipping data reset but purging report git repo..."
+    (cd "${RDIR}" && rm -rf reports/20230504T055052Z/{.git{,ignore},tags,foo}) || exit 10
+fi
+(cd "${RDIR}" && rm -rf tmp) || exit 10
+mkdir -p "${RDIR}/tmp"
+
+sed "s|__RDIR_PATH__|${RDIR_FULL}|g" < test/cmd/ifo/pydarm_cmd_H1.yaml.in > test/cmd/ifo/pydarm_cmd_H1.yaml
+
+##################################################
+
+_start_test "version"
+python -m pydarm --version
+_end_test
+
+_start_test "env"
+python -m pydarm env
+_end_test
+
+_start_test "report generation skip mcmc fail"
+! python -m pydarm report --no-display --skip-mcmc
+_end_test
+
+_start_test "report generation"
+python -m pydarm report --no-display --skip-bb
+_end_test
+
+_start_test "report file list"
+cat <<EOF | sort > "${RDIR}/tmp/report-ls-files_ref"
+actuation_L1_EX_gpr.hdf5
+actuation_L1_EX_gpr.png
+actuation_L1_EX_mcmc_chain.hdf5
+actuation_L1_EX_mcmc_compare.png
+actuation_L1_EX_mcmc_corner.png
+actuation_L1_EX_mcmc_map.json
+actuation_L1_EX_tf_history.png
+actuation_L2_EX_gpr.hdf5
+actuation_L2_EX_gpr.png
+actuation_L2_EX_mcmc_chain.hdf5
+actuation_L2_EX_mcmc_compare.png
+actuation_L2_EX_mcmc_corner.png
+actuation_L2_EX_mcmc_map.json
+actuation_L2_EX_tf_history.png
+actuation_L3_EX_gpr.hdf5
+actuation_L3_EX_gpr.png
+actuation_L3_EX_mcmc_chain.hdf5
+actuation_L3_EX_mcmc_compare.png
+actuation_L3_EX_mcmc_corner.png
+actuation_L3_EX_mcmc_map.json
+actuation_L3_EX_tf_history.png
+deltal_external_calib_dtt.txt
+export_epics_records.txt
+foton_filters_to_export.json
+fir_plots/nonsens_corr_fd_comparison.png
+fir_plots/nonsens_corr_fd_comparison_ratio_above10Hz.png
+fir_plots/nonsens_corr_fd_comparison_ratio.png
+fir_plots/PUM_corr_fd_comparison.png
+fir_plots/PUM_corr_fd_comparison_ratio_above10Hz.png
+fir_plots/PUM_corr_fd_comparison_ratio.png
+fir_plots/rescorr_fd_comparison.png
+fir_plots/rescorr_fd_comparison_ratio_above10Hz.png
+fir_plots/rescorr_fd_comparison_ratio.png
+fir_plots/rescorr_highpass_fd_comparison.png
+fir_plots/rescorr_highpass_fd_comparison_ratio_above10Hz.png
+fir_plots/rescorr_highpass_fd_comparison_ratio.png
+fir_plots/rescorr_noccpole_fd_comparison.png
+fir_plots/rescorr_noccpole_fd_comparison_ratio_above10Hz.png
+fir_plots/rescorr_noccpole_fd_comparison_ratio.png
+fir_plots/rescorr_nopole_fd_comparison.png
+fir_plots/rescorr_nopole_fd_comparison_ratio_above10Hz.png
+fir_plots/rescorr_nopole_fd_comparison_ratio.png
+fir_plots/TST_corr_fd_comparison.png
+fir_plots/TST_corr_fd_comparison_ratio_above10Hz.png
+fir_plots/TST_corr_fd_comparison_ratio.png
+fir_plots/UIM_corr_fd_comparison.png
+fir_plots/UIM_corr_fd_comparison_ratio_above10Hz.png
+fir_plots/UIM_corr_fd_comparison_ratio.png
+fir_plots_unified/A_highpass_fd_comparison.png
+fir_plots_unified/A_highpass_fd_comparison_ratio.png
+fir_plots_unified/A_highpass_fd_comparison_ratio_above10Hz.png
+fir_plots_unified/invsens_fd_comparison.png
+fir_plots_unified/invsens_fd_comparison_ratio.png
+fir_plots_unified/invsens_fd_comparison_ratio_above10Hz.png
+fir_plots_unified/invsens_highpass_fd_comparison.png
+fir_plots_unified/invsens_highpass_fd_comparison_ratio.png
+fir_plots_unified/invsens_highpass_fd_comparison_ratio_above10Hz.png
+fir_plots_unified/invsens_noccpole_fd_comparison.png
+fir_plots_unified/invsens_noccpole_fd_comparison_ratio.png
+fir_plots_unified/invsens_noccpole_fd_comparison_ratio_above10Hz.png
+fir_plots_unified/invsens_nopole_fd_comparison.png
+fir_plots_unified/invsens_nopole_fd_comparison_ratio.png
+fir_plots_unified/invsens_nopole_fd_comparison_ratio_above10Hz.png
+fir_plots_unified/pum_actuation_fd_comparison.png
+fir_plots_unified/pum_actuation_fd_comparison_ratio.png
+fir_plots_unified/pum_actuation_fd_comparison_ratio_above10Hz.png
+fir_plots_unified/td_vs_fd_response.png
+fir_plots_unified/tst_actuation_fd_comparison.png
+fir_plots_unified/tst_actuation_fd_comparison_ratio.png
+fir_plots_unified/tst_actuation_fd_comparison_ratio_above10Hz.png
+fir_plots_unified/uim_actuation_fd_comparison.png
+fir_plots_unified/uim_actuation_fd_comparison_ratio.png
+fir_plots_unified/uim_actuation_fd_comparison_ratio_above10Hz.png
+gstlal_compute_strain_C00_filters_H1.npz
+gstlal_compute_strain_C00_filters_unified_H1.npz
+H1_calibration_report_20230504T055052Z.pdf
+H1CALCS_InverseSensingFunction_Foton_tf.txt
+hf_roaming_lines.txt
+id
+log
+measurements/DARMOLG_SS_20230504T043706Z.xml
+measurements/hf_roaming_lines/DARM_OVER_PCAL_1001.txt
+measurements/hf_roaming_lines/DARM_OVER_PCAL_1501.txt
+measurements/hf_roaming_lines/DARM_OVER_PCAL_2001.txt
+measurements/hf_roaming_lines/DARM_OVER_PCAL_2501.txt
+measurements/hf_roaming_lines/DARM_OVER_PCAL_3001.txt
+measurements/hf_roaming_lines/DARM_OVER_PCAL_3501.txt
+measurements/hf_roaming_lines/DARM_OVER_PCAL_4001.txt
+measurements/PCALY2DARM_SS_20230504T045423Z.xml
+measurements/PCALY2DARM_SS_20230504T051715Z.xml
+measurements/PCALY2DARM_SS_20230504T054221Z.xml
+measurements/SUSETMX_L1_SS_20230504T050254Z.xml
+measurements/SUSETMX_L2_SS_20230504T052546Z.xml
+measurements/SUSETMX_L3_SS_20230504T055052Z.xml
+pcal_calib_dtt.txt
+pydarm_cmd_H1.yaml
+pydarm_H1.ini
+pydarm_H1.orig.ini
+pydarm_H1.orig-parsed.ini
+pydarm_version
+sensing_gpr.hdf5
+sensing_gpr.png
+sensing_mcmc_chain.hdf5
+sensing_mcmc_compare.png
+sensing_mcmc_corner.png
+sensing_mcmc_map.json
+sensing_tf_history.png
+EOF
+find_sort "${CAL_ROOT}/reports/20230504T055052Z" > "${RDIR}/tmp/report-ls-files_cmd"
+diff -u "${RDIR}"/tmp/report-ls-files_{ref,cmd} && cat "${RDIR}"/tmp/report-ls-files_cmd
+_end_test
+
+_start_test "report list 0"
+cat <<EOF > "${RDIR}/tmp/report-ls_ref"
+IFO: H1
+report: 20230504T055052Z
+report GPS: 1367214670
+date: 2023-05-04 05:50:52+00:00
+git status: 0000000*
+git hash int: 0
+tags: None
+valid: False
+exported: False
+path: test/cmd/reports/20230504T055052Z
+config file: test/cmd/reports/20230504T055052Z/pydarm_cmd_H1.yaml
+model file: test/cmd/reports/20230504T055052Z/pydarm_H1.ini
+report file: test/cmd/reports/20230504T055052Z/H1_calibration_report_20230504T055052Z.pdf
+GDS filter file: test/cmd/reports/20230504T055052Z/gstlal_compute_strain_C00_filters_H1.npz
+measurement set:
+  Sensing:
+    loop: test/cmd/reports/20230504T055052Z/measurements/DARMOLG_SS_20230504T043706Z.xml
+    pcal: test/cmd/reports/20230504T055052Z/measurements/PCALY2DARM_SS_20230504T045423Z.xml
+    deltat: 0:17:17
+  Actuation/L1/EX:
+    loop: test/cmd/reports/20230504T055052Z/measurements/SUSETMX_L1_SS_20230504T050254Z.xml
+    pcal: test/cmd/reports/20230504T055052Z/measurements/PCALY2DARM_SS_20230504T045423Z.xml
+    deltat: -1 day, 23:51:29
+  Actuation/L2/EX:
+    loop: test/cmd/reports/20230504T055052Z/measurements/SUSETMX_L2_SS_20230504T052546Z.xml
+    pcal: test/cmd/reports/20230504T055052Z/measurements/PCALY2DARM_SS_20230504T051715Z.xml
+    deltat: -1 day, 23:51:29
+  Actuation/L3/EX:
+    loop: test/cmd/reports/20230504T055052Z/measurements/SUSETMX_L3_SS_20230504T055052Z.xml
+    pcal: test/cmd/reports/20230504T055052Z/measurements/PCALY2DARM_SS_20230504T054221Z.xml
+    deltat: -1 day, 23:51:29
+EOF
+python -m pydarm ls -r last \
+    | grep -v '^GDS filter file hash' \
+    > "${RDIR}/tmp/report-ls_cmd"
+diff -u "${RDIR}"/tmp/report-ls_{ref,cmd} && cat "${RDIR}"/tmp/report-ls_cmd
+_end_test
+
+_start_test "get last report id"
+report_id=$(LOG_LEVEL=info python -m pydarm ls -r last | grep 'report:' | cut -d: -f 2 | xargs)
+echo "report id: $report_id"
+[ "$report_id" == 20230504T055052Z ]
+_end_test
+
+_start_test "report GPS for report id"
+report_gps=$(LOG_LEVEL=info python -m pydarm ls -r 20230504T055052Z | grep 'report GPS:' | cut -d: -f 2 | xargs)
+echo "report GPS: $report_gps"
+[ "$report_gps" == 1367214670 ]
+_end_test
+
+_start_test "find report by GPS"
+report_gps=$(LOG_LEVEL=info python -m pydarm ls -r 1367214670 | grep 'report GPS:' | cut -d: -f 2 | xargs)
+[ "$report_gps" == 1367214670 ]
+_end_test
+
+_start_test "test export fail not committed"
+! python -m pydarm export
+_end_test
+
+_start_test "report commit"
+python -m pydarm commit --message "intengration test commit"
+_end_test
+
+_start_test "report git ls-files"
+(cd "${CAL_ROOT}/reports/20230504T055052Z" && git ls-files | grep -v .gitignore | sort) > "${RDIR}/tmp/report-git-ls-files_cmd"
+diff -u "${RDIR}"/tmp/report-ls-files_ref "${RDIR}"/tmp/report-git-ls-files_cmd && cat "${RDIR}"/tmp/report-git-ls-files_cmd
+_end_test
+
+_start_test "archive upload"
+python -m pydarm upload 20230504T055052Z
+_end_test
+
+_start_test "git clone archived report"
+(cd "${RDIR}/tmp" && git clone "${RDIR_FULL}/tmp/archive/reports/20230504T055052Z/.git" )
+_end_test
+
+_start_test "git clone ls-files"
+(cd "${RDIR}/tmp/20230504T055052Z" && git ls-files | grep -v .gitignore | sort) > "${RDIR}/tmp/clone-git-ls-files_cmd"
+diff -u "${RDIR}"/tmp/report-ls-files_ref "${RDIR}"/tmp/clone-git-ls-files_cmd && cat "${RDIR}"/tmp/clone-git-ls-files_cmd
+_end_test
+
+_start_test "report list 1"
+cat <<EOF > "${RDIR}/tmp/report-ls_ref"
+IFO: H1
+report: 20230504T055052Z
+report GPS: 1367214670
+date: 2023-05-04 05:50:52+00:00
+tags: None
+valid: False
+exported: False
+path: test/cmd/reports/20230504T055052Z
+config file: test/cmd/reports/20230504T055052Z/pydarm_cmd_H1.yaml
+model file: test/cmd/reports/20230504T055052Z/pydarm_H1.ini
+report file: test/cmd/reports/20230504T055052Z/H1_calibration_report_20230504T055052Z.pdf
+GDS filter file: test/cmd/reports/20230504T055052Z/gstlal_compute_strain_C00_filters_H1.npz
+measurement set:
+  Sensing:
+    loop: test/cmd/reports/20230504T055052Z/measurements/DARMOLG_SS_20230504T043706Z.xml
+    pcal: test/cmd/reports/20230504T055052Z/measurements/PCALY2DARM_SS_20230504T045423Z.xml
+    deltat: 0:17:17
+  Actuation/L1/EX:
+    loop: test/cmd/reports/20230504T055052Z/measurements/SUSETMX_L1_SS_20230504T050254Z.xml
+    pcal: test/cmd/reports/20230504T055052Z/measurements/PCALY2DARM_SS_20230504T045423Z.xml
+    deltat: -1 day, 23:51:29
+  Actuation/L2/EX:
+    loop: test/cmd/reports/20230504T055052Z/measurements/SUSETMX_L2_SS_20230504T052546Z.xml
+    pcal: test/cmd/reports/20230504T055052Z/measurements/PCALY2DARM_SS_20230504T051715Z.xml
+    deltat: -1 day, 23:51:29
+  Actuation/L3/EX:
+    loop: test/cmd/reports/20230504T055052Z/measurements/SUSETMX_L3_SS_20230504T055052Z.xml
+    pcal: test/cmd/reports/20230504T055052Z/measurements/PCALY2DARM_SS_20230504T054221Z.xml
+    deltat: -1 day, 23:51:29
+EOF
+python -m pydarm ls -r last \
+    | grep -v '^git' \
+    | grep -v '^GDS filter file hash:' \
+    > "${RDIR}/tmp/report-ls_cmd"
+diff -u "${RDIR}"/tmp/report-ls_{ref,cmd} && cat "${RDIR}"/tmp/report-ls_cmd
+_end_test
+
+_start_test "export fail not valid"
+! python -m pydarm export
+_end_test
+
+# add an old-style valid tag just to make sure it's correctly removed
+# when we do the commit --valid below
+_start_test "old style valid tag"
+mkdir "${CAL_ROOT}/reports/20230504T055052Z/tags"
+touch "${CAL_ROOT}/reports/20230504T055052Z/tags/valid"
+_end_test
+
+_start_test "report commit --valid"
+python -m pydarm commit --valid --message "add valid tag"
+_end_test
+
+_start_test "confirm old style valid tag removed"
+[ ! -a "${CAL_ROOT}/reports/20230504T055052Z/tags/valid" ]
+_end_test
+
+_start_test "modifying report and re-tagging valid"
+last_valid_commit=$(cd ${CAL_ROOT}/reports/20230504T055052Z && git rev-parse HEAD)
+touch ${CAL_ROOT}/reports/20230504T055052Z/foo
+python -m pydarm commit --valid --message "add foo file"
+new_valid_commit=$(cd ${CAL_ROOT}/reports/20230504T055052Z && git rev-parse HEAD)
+[ "$last_valid_commit" != "$new_valid_commit" ]
+_end_test
+
+_start_test "report list 2"
+cat <<EOF > "${RDIR}/tmp/report-ls_ref"
+IFO: H1
+report: 20230504T055052Z
+report GPS: 1367214670
+date: 2023-05-04 05:50:52+00:00
+valid: True
+exported: False
+path: test/cmd/reports/20230504T055052Z
+config file: test/cmd/reports/20230504T055052Z/pydarm_cmd_H1.yaml
+model file: test/cmd/reports/20230504T055052Z/pydarm_H1.ini
+report file: test/cmd/reports/20230504T055052Z/H1_calibration_report_20230504T055052Z.pdf
+GDS filter file: test/cmd/reports/20230504T055052Z/gstlal_compute_strain_C00_filters_H1.npz
+measurement set:
+  Sensing:
+    loop: test/cmd/reports/20230504T055052Z/measurements/DARMOLG_SS_20230504T043706Z.xml
+    pcal: test/cmd/reports/20230504T055052Z/measurements/PCALY2DARM_SS_20230504T045423Z.xml
+    deltat: 0:17:17
+  Actuation/L1/EX:
+    loop: test/cmd/reports/20230504T055052Z/measurements/SUSETMX_L1_SS_20230504T050254Z.xml
+    pcal: test/cmd/reports/20230504T055052Z/measurements/PCALY2DARM_SS_20230504T045423Z.xml
+    deltat: -1 day, 23:51:29
+  Actuation/L2/EX:
+    loop: test/cmd/reports/20230504T055052Z/measurements/SUSETMX_L2_SS_20230504T052546Z.xml
+    pcal: test/cmd/reports/20230504T055052Z/measurements/PCALY2DARM_SS_20230504T051715Z.xml
+    deltat: -1 day, 23:51:29
+  Actuation/L3/EX:
+    loop: test/cmd/reports/20230504T055052Z/measurements/SUSETMX_L3_SS_20230504T055052Z.xml
+    pcal: test/cmd/reports/20230504T055052Z/measurements/PCALY2DARM_SS_20230504T054221Z.xml
+    deltat: -1 day, 23:51:29
+EOF
+python -m pydarm ls -r last \
+    | grep -v '^git' \
+    | grep -v '^tags:' \
+    | grep -v '^GDS filter file hash' \
+    > "${RDIR}/tmp/report-ls_cmd"
+diff -u "${RDIR}"/tmp/report-ls_{ref,cmd} && cat "${RDIR}"/tmp/report-ls_cmd
+_end_test
+
+_start_test "archive upload valid tag"
+python -m pydarm upload 20230504T055052Z
+_end_test
+
+_start_test "git archive clone check valid tag"
+local_valid_commit=$(cd ${CAL_ROOT}/reports/20230504T055052Z && git rev-parse valid)
+(cd "${RDIR}/tmp/20230504T055052Z" && git pull)
+clone_valid_commit=$(cd "${RDIR}/tmp/20230504T055052Z" && git rev-parse valid)
+echo local: "$local_valid_commit"
+echo clone: "$clone_valid_commit"
+[ "$local_valid_commit" = "$clone_valid_commit" ]
+_end_test
+
+_start_test "export"
+python -m pydarm export
+(cd "${CAL_ROOT}/reports/20230504T055052Z" && git tag "exported" -m export || true)
+_end_test
+
+_start_test "report info 3"
+cat <<EOF > "${RDIR}/tmp/report-ls_ref"
+IFO: H1
+report: 20230504T055052Z
+report GPS: 1367214670
+date: 2023-05-04 05:50:52+00:00
+valid: True
+exported: True
+path: test/cmd/reports/20230504T055052Z
+config file: test/cmd/reports/20230504T055052Z/pydarm_cmd_H1.yaml
+model file: test/cmd/reports/20230504T055052Z/pydarm_H1.ini
+report file: test/cmd/reports/20230504T055052Z/H1_calibration_report_20230504T055052Z.pdf
+GDS filter file: test/cmd/reports/20230504T055052Z/gstlal_compute_strain_C00_filters_H1.npz
+measurement set:
+  Sensing:
+    loop: test/cmd/reports/20230504T055052Z/measurements/DARMOLG_SS_20230504T043706Z.xml
+    pcal: test/cmd/reports/20230504T055052Z/measurements/PCALY2DARM_SS_20230504T045423Z.xml
+    deltat: 0:17:17
+  Actuation/L1/EX:
+    loop: test/cmd/reports/20230504T055052Z/measurements/SUSETMX_L1_SS_20230504T050254Z.xml
+    pcal: test/cmd/reports/20230504T055052Z/measurements/PCALY2DARM_SS_20230504T045423Z.xml
+    deltat: -1 day, 23:51:29
+  Actuation/L2/EX:
+    loop: test/cmd/reports/20230504T055052Z/measurements/SUSETMX_L2_SS_20230504T052546Z.xml
+    pcal: test/cmd/reports/20230504T055052Z/measurements/PCALY2DARM_SS_20230504T051715Z.xml
+    deltat: -1 day, 23:51:29
+  Actuation/L3/EX:
+    loop: test/cmd/reports/20230504T055052Z/measurements/SUSETMX_L3_SS_20230504T055052Z.xml
+    pcal: test/cmd/reports/20230504T055052Z/measurements/PCALY2DARM_SS_20230504T054221Z.xml
+    deltat: -1 day, 23:51:29
+EOF
+python -m pydarm ls -r last \
+    | grep -v '^GDS filter file hash' \
+    | grep -v '^tags:' \
+    | grep -v '^git' \
+    > "${RDIR}/tmp/report-ls_cmd"
+diff -u "${RDIR}"/tmp/report-ls_{ref,cmd} && cat "${RDIR}"/tmp/report-ls_cmd
+_end_test
+
+_start_test "model save"
+python -m pydarm model \
+       --save "${RDIR}/tmp/model.png" \
+       --save "${RDIR}/tmp/model.pdf" \
+       --save "${RDIR}/tmp/model.svg" \
+       --save "${RDIR}/tmp/model.hdf5"
+_end_test
+
+_start_test "uncertainty generation"
+python -m pydarm uncertainty 1397269467
+_end_test
+
+_start_test "list uncertainty output"
+cat <<EOF > "${RDIR}/tmp/unc-ls_ref"
+calibration_uncertainty_H1_1397269467_pydarm.png
+calibration_uncertainty_H1_1397269467_pydarm.txt
+gps
+log
+pydarm_uncertainty_H1.ini
+pydarm_version
+report
+EOF
+find_sort "${CAL_ROOT}/uncertainty/1397/269467" > "${RDIR}/tmp/unc-ls_cmd"
+diff -u "${RDIR}"/tmp/unc-ls_{ref,cmd} && cat "${RDIR}"/tmp/unc-ls_cmd
+_end_test
+
+_start_test "python Uncertainty check"
+cat <<EOF | python - > "${RDIR}/tmp/unc-check_cmd"
+from pydarm.cmd import Uncertainty
+unc = Uncertainty("${CAL_ROOT}/uncertainty/1397/269467/")
+print(unc.gps)
+print(unc.report)
+print(unc.path)
+print(unc.get_plot())
+EOF
+_end_test
+
+_start_test "python Uncertainty data check"
+cat <<EOF > "${RDIR}/tmp/unc-check_ref"
+1397269467
+20230504T055052Z
+test/cmd/uncertainty/1397/269467
+test/cmd/uncertainty/1397/269467/calibration_uncertainty_H1_1397269467_pydarm.png
+EOF
+diff -u "${RDIR}"/tmp/unc-check_{ref,cmd} && cat "${RDIR}"/tmp/unc-check_cmd
+_end_test
+
+_log "ALL TESTS PASS"

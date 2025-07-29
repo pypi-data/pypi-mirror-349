@@ -1,0 +1,16 @@
+pydarm.egg-info/
+.pytest_cache
+*__pycache__/
+.coverage
+coverage.xml
+.eggs/
+build/
+dist/
+pydarm/_version.py
+_build/
+*~
+test/cmd/data
+test/cmd/measurements
+test/cmd/reports
+test/cmd/uncertainty
+test/cmd/tmp

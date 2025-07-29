@@ -1,0 +1,104 @@
+Metadata-Version: 2.4
+Name: pydarm
+Version: 1.0.1
+Summary: pyDARM modeling package for LIGO detector calibration
+Author-email: Evan Goetz <evan.goetz@ligo.org>
+License: GPL-3.0-or-later
+Project-URL: Source Code, https://git.ligo.org/Calibration/pydarm
+Project-URL: Bug Tracker, https://git.ligo.org/Calibration/pydarm/-/issues
+Project-URL: Documentation, https://calibration.docs.ligo.org/pydarm
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Scientific/Engineering :: Astronomy
+Classifier: Topic :: Scientific/Engineering :: Physics
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: h5py
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: scipy
+Provides-Extra: measurement
+Requires-Dist: dttxml; extra == "measurement"
+Requires-Dist: emcee; extra == "measurement"
+Requires-Dist: gpstime; extra == "measurement"
+Requires-Dist: scikit-learn>=1.2.0; extra == "measurement"
+Provides-Extra: uncertainty
+Requires-Dist: gpflow; extra == "uncertainty"
+Requires-Dist: gwpy; extra == "uncertainty"
+Requires-Dist: ligo-scald; extra == "uncertainty"
+Requires-Dist: numpy<1.25; extra == "uncertainty"
+Requires-Dist: tensorflow==2.15.0; extra == "uncertainty"
+Requires-Dist: tensorflow-probability==0.23.0; extra == "uncertainty"
+Requires-Dist: tqdm; extra == "uncertainty"
+Provides-Extra: cmd
+Requires-Dist: corner; extra == "cmd"
+Requires-Dist: gitpython; extra == "cmd"
+Requires-Dist: gpstime; extra == "cmd"
+Requires-Dist: pyepics; extra == "cmd"
+Requires-Dist: pydarm[measurement]; extra == "cmd"
+Requires-Dist: pydarm[uncertainty]; extra == "cmd"
+Requires-Dist: yaml; extra == "cmd"
+Provides-Extra: test
+Requires-Dist: flake8; extra == "test"
+Requires-Dist: pytest; extra == "test"
+Requires-Dist: pytest-cov; extra == "test"
+Requires-Dist: pytest-xdist; extra == "test"
+Requires-Dist: pydarm[cmd]; extra == "test"
+Provides-Extra: docs
+Requires-Dist: sphinx; extra == "docs"
+Requires-Dist: sphinx-immaterial-igwn; extra == "docs"
+Requires-Dist: numpydoc; extra == "docs"
+Dynamic: license-file
+
+# pyDARM
+
+[![PyPI version](https://badge.fury.io/py/pydarm.svg)](https://badge.fury.io/py/pydarm)
+[![Conda version](https://img.shields.io/conda/vn/conda-forge/pydarm.svg)](https://anaconda.org/conda-forge/pydarm/)
+[![License](https://img.shields.io/pypi/l/pydarm.svg)](https://choosealicense.com/licenses/gpl-3.0/)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/pydarm.svg)
+
+pyDARM is a python implementation of the LIGO DARM servo loop
+model. It is used to calibrate the detector digital output into units
+of differential arm length variations or spacetime strain.
+
+If you need assistance, please review INSTALL.md and CONTRIBUTING.md
+for detailed installation instructions and contribution guidelines,
+respectively.
+
+## Installation
+
+For best results, please install from [conda-forge](https://conda-forge.org/):
+
+```shell
+conda install -c conda-forge pydarm
+```
+
+On Unix systems, you can also install directly from PyPI:
+
+```shell
+pip install pydarm
+```
+
+## Basic usage
+
+See the [web-based documentation](https://calibration.docs.ligo.org/pydarm) and/or [examples](examples) directory
+for examples of library usage. You can use pyDARM either from `python`, `ipython`, or a
+jupyter notebook, depending on your preferences.
+
+### Command line interface
+
+pyDARM will eventually include a command line interface to help guide through the
+calibration process.  See the command help for more info:
+```shell
+$ python3 -m pydarm --help
+```

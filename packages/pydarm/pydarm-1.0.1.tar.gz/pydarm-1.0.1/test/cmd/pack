@@ -1,0 +1,3 @@
+#!/bin/bash
+rm -f data.zip
+zip -r data.zip data measurements
