@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: mseep-mcp-server-mas-sequential-thinking
+Version: 0.2.5
+Summary: MCP Agent Implementation for Sequential Thinking
+Author-email: mseep <support@skydeck.ai>
+Maintainer-email: mseep <support@skydeck.ai>
+Requires-Python: >=3.10
+Requires-Dist: agno
+Requires-Dist: asyncio
+Requires-Dist: exa-py
+Requires-Dist: groq
+Requires-Dist: mcp
+Requires-Dist: python-dotenv
+Provides-Extra: dev
+Requires-Dist: black; extra == 'dev'
+Requires-Dist: isort; extra == 'dev'
+Requires-Dist: mypy; extra == 'dev'
+Requires-Dist: pytest; extra == 'dev'
+Description-Content-Type: text/markdown
+
+# Package managed by MseeP.ai
