@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+mcp_studio/__init__.py
+mcp_studio/version.py
+mcp_studio.egg-info/PKG-INFO
+mcp_studio.egg-info/SOURCES.txt
+mcp_studio.egg-info/dependency_links.txt
+mcp_studio.egg-info/requires.txt
+mcp_studio.egg-info/top_level.txt
