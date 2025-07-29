@@ -1,0 +1,16 @@
+__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+convert_tiff_to_hdf5.py,sha256=rY6d19GFGV01cE3KCw0l4W38v7pFjn-vgInLHkPQGNU,182
+create_fire_config.py,sha256=1t0LV59YdSCy_-PgdQRcdfiINV0np6ip4-DHdpyn_oM,3541
+drive_downloader.py,sha256=TL7UtUnYND3ENHywZWRfcuyGOVcvhnxyHYJndcemgnA,3975
+get_globfire.py,sha256=0eKrcVAQlQAsjyyGrEH1p56D5ShmAPWeUkJkejItquo,11086
+main.py,sha256=MR3xECrV1PvpCpv8yDnMNuvVqK4IHeo8pAFVuscVQ3o,9106
+DataPreparation/DatasetPrepareService.py,sha256=4l7mfaJ8YpzuHa7N--7FkcGWxCuGo4ZK1b4wDsUHby0,6008
+DataPreparation/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+DataPreparation/satellites/FirePred.py,sha256=7R74AUF5YaCGI6vu08dSGEuqPBaRhDbtAIMy7garV8w,8351
+DataPreparation/satellites/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ee_wildfire-2025.0.7.dist-info/licenses/LICENSE,sha256=sHpgTIiVC3vqRBxuDWpCY3ykz2xyMGM2ddMRp4Yk8fE,1089
+ee_wildfire-2025.0.7.dist-info/METADATA,sha256=q2kuimqFtvHIZglnJC43Wl0-VpoudOFQk3wieyABGVw,8360
+ee_wildfire-2025.0.7.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+ee_wildfire-2025.0.7.dist-info/entry_points.txt,sha256=WjK6m2vo7_wESSw-K7mVwCdZ3n6Egtz5Zznl5E33G_0,42
+ee_wildfire-2025.0.7.dist-info/top_level.txt,sha256=oValwPwPF2L-1EualZj98LJNfwWYTYQN_KfVojdzfg8,100
+ee_wildfire-2025.0.7.dist-info/RECORD,,
