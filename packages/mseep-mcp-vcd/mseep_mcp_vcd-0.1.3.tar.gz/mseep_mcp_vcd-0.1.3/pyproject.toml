@@ -1,0 +1,28 @@
+[project]
+name = "mseep-mcp-vcd"
+version = "0.1.3"
+description = "A model context protocol (MCP) server for value change dump (VCD) waveforms."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "httpx>=0.28.1",
+    "ipykernel>=6.29.5",
+    "mcp>=1.1.2",
+]
+authors = [
+    { name = "mseep", email = "support@skydeck.ai" },
+]
+maintainers = [
+    { name = "mseep", email = "support@skydeck.ai" },
+]
+
+[project.scripts]
+mcp-vcd = "mcp_vcd:main"
+
+[build-system]
+requires = [
+    "hatchling",
+]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets]
