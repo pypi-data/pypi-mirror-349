@@ -1,0 +1,16 @@
+gaussian_suite/__init__.py,sha256=Pg8FilUIax_GxF8qrzforZC9D9fdND43QJy2iZXhiXo,33
+gaussian_suite/__version__.py,sha256=Ocn5WzoRjWAWd37QhuPaFyeKqLmQODOZvDcnUFD5xyk,107
+gaussian_suite/basis_ecp_data.py,sha256=DGHRJMbVfgL6WDWCpDe8ZLVbIf6TbOWLxmKM3QMmxII,40324
+gaussian_suite/cd_extractor.py,sha256=2DfdkfyC4SzmU2mqC2KhET1HHFv4B1d0y1X4CipEK7Y,2170
+gaussian_suite/cli.py,sha256=9_ROgqNH_FEcFUZ4V5oys0mBolCbjSRFWX6DiXMMtWs,27300
+gaussian_suite/extractor.py,sha256=yqxkKKhCmujSab5oe4IHl2gia7xW9seVZ5JAXfUibYY,10391
+gaussian_suite/gen_input.py,sha256=sCHXjc7qGNqtKU44UybsdbkhIyS7fW9wtp-ivbgnHfk,23367
+gaussian_suite/gen_job.py,sha256=FXyiEReGu4DGrZ8ool96gkizzZrwGLEcqUFisj2DfOw,2320
+gaussian_suite/infrared.py,sha256=HS5Umm-cpd0B1IWpJHkkQv53r4qnxSZlvWGG0J1HtD8,5459
+gaussian_suite/opt_extractor.py,sha256=j7YAtK64sfXg5TPhhn4iX4TmUdnyc0Fry5xZ5bB1JWY,11830
+gaussian_suite-1.14.0.dist-info/licenses/LICENSE,sha256=8Qt6ttdTzPf7wDSos2lFRAkJfKi9xBkcE4Bx2oYcfeU,35072
+gaussian_suite-1.14.0.dist-info/METADATA,sha256=Z6waRjM8msnkPz_sVWiheCtcVCbonyokkoTeIhpp6Gk,3788
+gaussian_suite-1.14.0.dist-info/WHEEL,sha256=Nw36Djuh_5VDukK0H78QzOX-_FQEo6V37m3nkm96gtU,91
+gaussian_suite-1.14.0.dist-info/entry_points.txt,sha256=YWjOQJWAg5sOISsY5XZBtrn-QaP6fFAhnbX7P-7a7lo,59
+gaussian_suite-1.14.0.dist-info/top_level.txt,sha256=EBjBUyWIXoJhNAmgTRdA7j0dYYZNAW8XqLDXvKKHKQA,15
+gaussian_suite-1.14.0.dist-info/RECORD,,
