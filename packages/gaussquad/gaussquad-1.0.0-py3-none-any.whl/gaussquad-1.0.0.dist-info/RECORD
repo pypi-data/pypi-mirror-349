@@ -1,0 +1,10 @@
+gaussquad/__init__.py,sha256=mr2hOkBfBQTY-lgkudPgxkcncFqUcmmJjR13vtdw1LQ,101
+gaussquad/_logging_utils.py,sha256=oU5m672rkJEFmc-v6-qdrFjPvi90Fo1B7D1_KPBtylU,712
+gaussquad/_moments.py,sha256=nhs9YGI8fE-bsGBDNKNFZF5Ovve1Vnnc3HcLTLKj7HQ,3663
+gaussquad/_validate_utils.py,sha256=zcJLAQrfZkyULZ4Tf3nG0WFCLYPCTw98_sGDG5a2vQE,3047
+gaussquad/gauss_quadrature.py,sha256=0CaeMpXftZ0zivBXZ2OoiBYAY7JykP8qliErA6WetWc,8967
+gaussquad-1.0.0.dist-info/licenses/LICENSE.txt,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+gaussquad-1.0.0.dist-info/METADATA,sha256=Ts6C__yFn0yLzvNHvxfjEAe8l4xa2gHNTZcPzX-2J5Q,3478
+gaussquad-1.0.0.dist-info/WHEEL,sha256=Nw36Djuh_5VDukK0H78QzOX-_FQEo6V37m3nkm96gtU,91
+gaussquad-1.0.0.dist-info/top_level.txt,sha256=z_-Ln1QYQ5n3BaZtew51VBf8v_LiGBGyZt38EnMB29o,10
+gaussquad-1.0.0.dist-info/RECORD,,
