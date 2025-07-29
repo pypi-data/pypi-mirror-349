@@ -1,0 +1,7 @@
+README.md
+setup.py
+pyreggression.egg-info/PKG-INFO
+pyreggression.egg-info/SOURCES.txt
+pyreggression.egg-info/dependency_links.txt
+pyreggression.egg-info/requires.txt
+pyreggression.egg-info/top_level.txt
