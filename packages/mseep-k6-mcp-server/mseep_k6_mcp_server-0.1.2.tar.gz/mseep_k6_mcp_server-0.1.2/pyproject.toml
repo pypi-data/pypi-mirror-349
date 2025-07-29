@@ -1,0 +1,22 @@
+[project]
+name = "mseep-k6-mcp-server"
+version = "0.1.2"
+description = "Model context protocol server for k6 load testing"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "mcp[cli]>=1.6.0",
+]
+authors = [
+    { name = "mseep", email = "support@skydeck.ai" },
+]
+maintainers = [
+    { name = "mseep", email = "support@skydeck.ai" },
+]
+
+[build-system]
+requires = [
+    "setuptools>=42",
+    "wheel",
+]
+build-backend = "setuptools.build_meta"
