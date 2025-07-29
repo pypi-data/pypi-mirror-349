@@ -1,0 +1,12 @@
+warp/__init__.py,sha256=6ObXdugxK6novuVn6w2cpZaogGMUvi5mdehSnT8DMFw,157
+warp/create_domain.py,sha256=4r3Etpj1QKRCxLeOxV8CKCCDYHjKC30H0h6s-QyejWE,977
+warp/resolve.py,sha256=WznRANAVMkjrC1FNRT6QFu04VaKdX0hduuKvqTfq3BE,831
+warp/servers.py,sha256=wdAN-af4ik890nUdac1yycGWFzIgUNH0o4kKHQ0CFgo,210
+warp/set_ip.py,sha256=qhYyiMGAzL-2q7xSi4F7KAN12SqjHoEJw5uhV3Xutuo,1048
+warp/host/__init__.py,sha256=d8oz4AZQ38SUVW_gUtHaoAwn5HPy_asypnTn9D9U9E0,67
+warp/host/host.py,sha256=8sNoJ8Ps_D2y2vHdkeEIuvUsIDhpqzoFk-e_wNKzcKk,4630
+warp_python-1.3.2.dist-info/licenses/LICENSE,sha256=B64JUb1rsvlFIRiqctzGipFeuC9Qz6QKHWaBzZeKUwI,1069
+warp_python-1.3.2.dist-info/METADATA,sha256=9_j7wgRqx-dVF1iuED0N6lcZgHStHerC3FZS00-7rmk,1029
+warp_python-1.3.2.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+warp_python-1.3.2.dist-info/top_level.txt,sha256=8pupHORyKoiN_BYWlTmv5OFBWdhqpppiBYQV5KxgEvg,5
+warp_python-1.3.2.dist-info/RECORD,,
