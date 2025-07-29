@@ -1,0 +1,45 @@
+Metadata-Version: 2.4
+Name: hzzzwl-agriculture-mcp-x
+Version: 0.1.0
+Summary: A tool for search agriculture information
+Author-email: hzzzwl <1085501772@qq.com>
+License-Expression: MIT
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.12
+Requires-Dist: httpx>=0.28.1
+Requires-Dist: mcp[cli]>=1.9.0
+Description-Content-Type: text/markdown
+
+# 提供农业方面信息服务的工具
+
+
+
+## 农产品检测信息
+
+农产品检测合格率
+
+
+## 农资产品购销信息
+
+农资产品购买量销售量
+
+## 农事指导信息
+
+专业的农事知道意见
+
+## 病虫测报信息
+
+病虫测报及防治意见
+
+## 农资产品基本信息
+
+基本信息，有效成分，生产企业，使用范围，使用方法
+
+## 农产品常见用药信息
+
+农产品常见用药
+
+## 农产品药物检出限信息
+
+农产品上药物检出限量标准
+
