@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+setup.py
+filter_persist/__init__.py
+filter_persist/example.py
+filter_persist.egg-info/PKG-INFO
+filter_persist.egg-info/SOURCES.txt
+filter_persist.egg-info/dependency_links.txt
+filter_persist.egg-info/requires.txt
+filter_persist.egg-info/top_level.txt
+filter_persist/frontend/build/asset-manifest.json
+filter_persist/frontend/build/bootstrap.min.css
+filter_persist/frontend/build/index.html
+filter_persist/frontend/build/static/css/main.265676ba.css
+filter_persist/frontend/build/static/js/main.c34c89af.js
+filter_persist/frontend/build/static/js/main.c34c89af.js.LICENSE.txt
