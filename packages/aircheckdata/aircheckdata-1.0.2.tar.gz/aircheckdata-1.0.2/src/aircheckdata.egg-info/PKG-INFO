@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: aircheckdata
+Version: 1.0.2
+Summary: A simple Python package
+Author-email: nabin <test@gmail.com>
+Project-URL: Homepage, https://github.com/yourusername/parquet_dataset_loader
+Project-URL: Bug Tracker, https://github.com/yourusername/parquet_dataset_loader/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: pandas>=1.3.0
+Requires-Dist: pyarrow>=5.0.0
+Requires-Dist: tqdm>=4.62.0
+Requires-Dist: requests>=2.25.0
+Requires-Dist: PyYAML>=5.4.0
+Requires-Dist: gcsfs>=2025.3.2
+Provides-Extra: gcs
+Requires-Dist: google-cloud-storage>=2.0.0; extra == "gcs"

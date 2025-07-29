@@ -1,0 +1,44 @@
+#https://medium.com/@ebimsv/building-python-packages-07fbfbb959a9
+#https://realpython.com/python-pyproject-toml/
+
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aircheckdata"
+version = "1.0.2"
+authors = [
+    {name = "nabin", email = "test@gmail.com"}
+]
+description = "A simple Python package"
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+requires-python = ">=3.7"
+dependencies = [
+    "pandas>=1.3.0",
+    "pyarrow>=5.0.0",
+    "tqdm>=4.62.0",
+    "requests>=2.25.0",
+    "PyYAML>=5.4.0",
+    "gcsfs>=2025.3.2",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/yourusername/parquet_dataset_loader"
+"Bug Tracker" = "https://github.com/yourusername/parquet_dataset_loader/issues"
+
+[project.optional-dependencies]
+gcs = ["google-cloud-storage>=2.0.0"]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+
