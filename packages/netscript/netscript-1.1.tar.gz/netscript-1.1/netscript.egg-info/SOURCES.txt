@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+netscript/__init__.py
+netscript/script_server.py
+netscript.egg-info/PKG-INFO
+netscript.egg-info/SOURCES.txt
+netscript.egg-info/dependency_links.txt
+netscript.egg-info/top_level.txt
