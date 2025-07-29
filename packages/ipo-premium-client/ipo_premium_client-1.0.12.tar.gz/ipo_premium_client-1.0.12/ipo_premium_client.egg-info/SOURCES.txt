@@ -1,0 +1,12 @@
+setup.py
+ipo_premium_client/__init__.py
+ipo_premium_client/client.py
+ipo_premium_client/exceptions.py
+ipo_premium_client/mapper.py
+ipo_premium_client/models.py
+ipo_premium_client/utils.py
+ipo_premium_client.egg-info/PKG-INFO
+ipo_premium_client.egg-info/SOURCES.txt
+ipo_premium_client.egg-info/dependency_links.txt
+ipo_premium_client.egg-info/requires.txt
+ipo_premium_client.egg-info/top_level.txt

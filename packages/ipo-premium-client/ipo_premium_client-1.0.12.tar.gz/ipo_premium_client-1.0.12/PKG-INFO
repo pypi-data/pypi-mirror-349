@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: ipo_premium_client
+Version: 1.0.12
+Summary: Unofficial ipopremium.in client
+Home-page: https://github.com/dhaval-mehta/ipo-premium-client
+Author: Dhaval Mehta
+Keywords: ipo premium
+Requires-Python: >=3.7, <4
+Requires-Dist: requests
+Requires-Dist: lxml
+Requires-Dist: requests-cache
+Dynamic: author
+Dynamic: description
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+Unofficial ipo premium client
