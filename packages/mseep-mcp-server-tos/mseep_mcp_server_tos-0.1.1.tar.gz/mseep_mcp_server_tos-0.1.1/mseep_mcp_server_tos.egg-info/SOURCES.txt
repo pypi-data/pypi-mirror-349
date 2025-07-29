@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.py
+mseep_mcp_server_tos.egg-info/PKG-INFO
+mseep_mcp_server_tos.egg-info/SOURCES.txt
+mseep_mcp_server_tos.egg-info/dependency_links.txt
+mseep_mcp_server_tos.egg-info/entry_points.txt
+mseep_mcp_server_tos.egg-info/requires.txt
+mseep_mcp_server_tos.egg-info/top_level.txt
