@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: mseep-onepassword-mcp-server
+Version: 0.1.2
+Summary: An MCP server that enables secure credential retrieval from 1Password to be used by Agentic AI
+Home-page: 
+Author: mseep
+Author-email: mseep <support@skydeck.ai>
+Maintainer-email: mseep <support@skydeck.ai>
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: mcp[cli]>=1.6.0
+Requires-Dist: onepassword-sdk>=0.2.1
+Dynamic: author
+Dynamic: requires-python
+
+# Package managed by MseeP.ai
