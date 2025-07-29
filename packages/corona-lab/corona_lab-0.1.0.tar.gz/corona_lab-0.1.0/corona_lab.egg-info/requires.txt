@@ -1,0 +1,15 @@
+astropy
+scipy
+scikit-image
+
+[docs]
+sphinx
+sphinx-automodapi
+pydata-sphinx-theme
+
+[docs:python_version < "3.11"]
+tomli
+
+[test]
+pytest
+pytest-doctestplus
