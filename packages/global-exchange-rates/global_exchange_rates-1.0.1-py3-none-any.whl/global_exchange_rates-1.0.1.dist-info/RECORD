@@ -1,0 +1,9 @@
+global_exchange_rates/__init__.py,sha256=2OUVlzB6LOvAGE2fxTxTp5_3hpGJIT8pN-p59uOSx4Y,469
+global_exchange_rates/client.py,sha256=yXh3QOhlj79nNWEHWFWgx0OQuCcpzgrhJIhO-KFUBKk,14312
+global_exchange_rates/exceptions.py,sha256=H-3seMGartZ8dLjI_mkSvz0W4E-pdIgZRxer8UNlRTw,1669
+global_exchange_rates/models.py,sha256=IkVMhp0Yq_Mhrvu3oSXUtTb2iPhtkL0qmSWqsWXPMlE,1613
+global_exchange_rates-1.0.1.dist-info/licenses/LICENSE,sha256=4WHoNPDyJhG5_eH9EqwpNham-jqB4oEe7KguGwBbaug,1075
+global_exchange_rates-1.0.1.dist-info/METADATA,sha256=DI_q0Sh6DtNz9YmmkS0smIEE4-5R4hR8uSfmDfulo3A,8063
+global_exchange_rates-1.0.1.dist-info/WHEEL,sha256=Nw36Djuh_5VDukK0H78QzOX-_FQEo6V37m3nkm96gtU,91
+global_exchange_rates-1.0.1.dist-info/top_level.txt,sha256=2h-l_WJQ1imbNOn2rb4CDEcDLV-gGrQdnNrM4QsuSrg,22
+global_exchange_rates-1.0.1.dist-info/RECORD,,
