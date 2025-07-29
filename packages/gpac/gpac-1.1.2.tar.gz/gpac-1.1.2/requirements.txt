@@ -1,0 +1,10 @@
+scipy
+sympy
+numpy
+matplotlib
+rebop
+xarray
+tqdm
+polars
+ipywidgets
+ipykernel
