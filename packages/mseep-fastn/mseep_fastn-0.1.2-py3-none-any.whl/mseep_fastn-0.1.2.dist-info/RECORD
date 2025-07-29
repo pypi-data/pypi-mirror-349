@@ -1,0 +1,14 @@
+./.gitignore,sha256=EHt6ctecVZu6iheZvNs4IeQLy1pNIlIybzNy_yf2xWM,112
+./.python-version,sha256=ekGkE1SrgEkJHvGgAlPKAFZ_Wh0_mu9VAsC0tc6a5wc,5
+./LICENSE,sha256=dim0LiLxigRHRaoAyuPX6_cheKoLGZ1SKMxHLoFikVg,1062
+./PKG-INFO,sha256=fryvA-5ikbCF0vm6X3JngFV0Xp2uOfYes2I0IzdNwog,353
+./README.md,sha256=HnDK8LQab1iBwmI4J6ezp4qWobox4L6dm7HlR5YYsOc,30
+./fastn-server.py,sha256=FMfhYwDg7x6F5YDPx7kqF4JUsDNUjL-jDkTCwAcS7pk,5529
+./pyproject.toml,sha256=0OjvVFfBAv7hwYfGa0WZMxcpURfqULQ4gykdWPD8WXE,522
+./setup.py,sha256=9PHW7f6FvDA59Hj78V8nfuH-kYnENe6J1HGPGdMwBDQ,531
+./uv.lock,sha256=k93MvEer_itrGQBXmgoG6V4R0nk-uKJBB8l_FnRqhOM,36725
+mseep_fastn-0.1.2.dist-info/METADATA,sha256=fryvA-5ikbCF0vm6X3JngFV0Xp2uOfYes2I0IzdNwog,353
+mseep_fastn-0.1.2.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+mseep_fastn-0.1.2.dist-info/entry_points.txt,sha256=5x7W2b3yChJznAvWyDv3l5LuGA2qlihD2DStRoumG_o,37
+mseep_fastn-0.1.2.dist-info/licenses/LICENSE,sha256=dim0LiLxigRHRaoAyuPX6_cheKoLGZ1SKMxHLoFikVg,1062
+mseep_fastn-0.1.2.dist-info/RECORD,,
