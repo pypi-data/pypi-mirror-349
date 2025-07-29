@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: mseep-mcps
+Version: 0.1.2
+Summary: Model Context Protocol server for continue.dev
+Author-email: mseep <support@skydeck.ai>
+Maintainer-email: mseep <support@skydeck.ai>
+Requires-Python: >=3.12
+Requires-Dist: fastmcp>=0.4.1
+Description-Content-Type: text/markdown
+
+# Package managed by MseeP.ai
