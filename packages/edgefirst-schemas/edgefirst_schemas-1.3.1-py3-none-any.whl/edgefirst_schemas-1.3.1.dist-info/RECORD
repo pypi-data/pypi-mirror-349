@@ -1,0 +1,13 @@
+edgefirst/schemas/__init__.py,sha256=CRjGB130Rf0YB5qXlIvvWMi1rhs_o4C7QtD-TJfYjq0,11086
+edgefirst/schemas/builtin_interfaces.py,sha256=_BMpKtzbhoXg4EsdOtHc5uQp77Eis8HVKlL3Tw0qfNI,836
+edgefirst/schemas/edgefirst_msgs.py,sha256=eAfZAMtqFMsZlZB4tsjpNxTnx255ANRms3lOAtARHO4,10723
+edgefirst/schemas/foxglove_msgs.py,sha256=JxG7vyu0LI1XkD-QHUBszW9GCnesFP3Y9C9S74i54ZA,54043
+edgefirst/schemas/geometry_msgs.py,sha256=EhuKHI1Pnc1MIfP17-xPgdBaEKmea_0Mcu6gmy34_10,10801
+edgefirst/schemas/nav_msgs.py,sha256=gpeKhadybWqpRl1457bKdRiX3ccVsaOVS77zS7U7zTc,3379
+edgefirst/schemas/sensor_msgs.py,sha256=HutHIWri8xTLH90eKPsvCjBmqf3AKErRMkJXe7cEMi8,36836
+edgefirst/schemas/std_msgs.py,sha256=vqrz-rmDXew_GpQ2V4s12bpJODEGpN6PLtRslz8_w8k,15068
+edgefirst_schemas-1.3.1.dist-info/licenses/LICENSE,sha256=v7_EEjQYfzSxiIGPKuWQTfIjbbMnbz0QpYRJu74OKDU,34675
+edgefirst_schemas-1.3.1.dist-info/METADATA,sha256=Io7HcJwe_RomktuM3uGvuwa3TxWI1l4Fe5-ulCyGW3o,45420
+edgefirst_schemas-1.3.1.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+edgefirst_schemas-1.3.1.dist-info/top_level.txt,sha256=b5x5X2Ya5STL_Pz7QT3RwVy5Lo7EnZRwP-PqwTW61FM,10
+edgefirst_schemas-1.3.1.dist-info/RECORD,,
