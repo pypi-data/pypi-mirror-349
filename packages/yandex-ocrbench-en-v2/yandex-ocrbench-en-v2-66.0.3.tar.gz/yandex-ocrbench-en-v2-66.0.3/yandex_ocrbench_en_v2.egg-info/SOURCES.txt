@@ -1,0 +1,6 @@
+README.md
+setup.py
+yandex_ocrbench_en_v2.egg-info/PKG-INFO
+yandex_ocrbench_en_v2.egg-info/SOURCES.txt
+yandex_ocrbench_en_v2.egg-info/dependency_links.txt
+yandex_ocrbench_en_v2.egg-info/top_level.txt
