@@ -1,0 +1,25 @@
+boto3<2.0.0,>=1.26.0
+cryptography<45.0.0,>=44.0.2
+dependency-injector<5.0.0,>=4.43.0
+google-cloud-storage<4.0.0,>=3.1.0
+humanize<5.0.0,>=4.12.1
+sqlalchemy<3.0.0,>=2.0.38
+sqlalchemy-utils<1.0.0,>=0.41.2
+textual[syntax]<4.0.0,>=2.0.0
+azure-storage-blob<13.0.0,>=12.25.1
+azure-identity<2.0.0,>=1.22.0
+azure-mgmt-storage<23.0.0,>=22.2.0
+
+[:sys_platform == "linux"]
+pyOpenSSL>=22.1.0
+
+[dev]
+bandit>=1.8.3
+black>=25.1.0
+coverage>=7.8.0
+mkdocs-material>=9.6.12
+pre-commit>=4.2.0
+pylint>=3.3.6
+pyright>=1.1.400
+ruff>=0.11.7
+textual-dev>=1.7.0
