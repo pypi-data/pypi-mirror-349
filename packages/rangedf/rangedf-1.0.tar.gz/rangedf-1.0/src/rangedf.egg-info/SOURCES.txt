@@ -1,0 +1,11 @@
+LICENSE.txt
+MANIFEST.in
+README_link.md
+pyproject.toml
+src/rangedf/__init__.py
+src/rangedf/rangedf.py
+src/rangedf.egg-info/PKG-INFO
+src/rangedf.egg-info/SOURCES.txt
+src/rangedf.egg-info/dependency_links.txt
+src/rangedf.egg-info/requires.txt
+src/rangedf.egg-info/top_level.txt
