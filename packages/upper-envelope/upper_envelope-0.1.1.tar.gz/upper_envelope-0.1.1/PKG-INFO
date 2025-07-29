@@ -1,0 +1,65 @@
+Metadata-Version: 2.4
+Name: upper_envelope
+Version: 0.1.1
+Summary: Upper envelope scan for dynamic discrete-continuous life cycle models.
+Project-URL: Github, https://github.com/OpensourceEconomics/upper-envelope
+Author-email: Max Blesch <maximilian.blesch@hu-berlin.de>, Sebastian Gsell <gsell.sebastian@gmail.com>
+Maintainer-email: Sebastian Gsell <gsell.sebastian@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2024 Open Source Economics
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+License-File: LICENSE
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.10
+Requires-Dist: jax
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scipy
+Description-Content-Type: text/markdown
+
+# Fast Upper Envelope Scan (FUES)
+
+[![Continuous Integration Workflow](https://github.com/OpenSourceEconomics/upper-envelope/actions/workflows/main.yml/badge.svg)](https://github.com/OpenSourceEconomics/upper-envelope/actions/workflows/main.yml)
+[![Codecov](https://codecov.io/gh/OpenSourceEconomics/upper-envelope/branch/main/graph/badge.svg)](https://app.codecov.io/gh/OpenSourceEconomics/upper-envelope)
+[![Black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
+Extension of the Fast Upper-Envelope Scan (FUES) for solving discrete-continuous dynamic
+programming problems based on Dobrescu & Shanker (2022). Both `jax` and `numba` versions
+are available.
+
+## References
+
+1. Iskhakov, Jorgensen, Rust, & Schjerning (2017).
+   [The Endogenous Grid Method for Discrete-Continuous Dynamic Choice Models with (or without) Taste Shocks](http://onlinelibrary.wiley.com/doi/10.3982/QE643/full).
+   *Quantitative Economics*
+
+1. Loretti I. Dobrescu & Akshay Shanker (2022).
+   [Fast Upper-Envelope Scan for Discrete-Continuous Dynamic Programming](https://dx.doi.org/10.2139/ssrn.4181302).
