@@ -1,0 +1,2 @@
+[console_scripts]
+azure-img-utils = azure_img_utils.cli.cli:az_img_utils
