@@ -1,0 +1,12 @@
+ml_eval_dashboard/__init__.py,sha256=Q9OPZYk0ut0iuQF4xcuQy85g70ZV_dnail4t4YEkqdU,86
+ml_eval_dashboard/dashboard.py,sha256=8c5lLm1AboF6lZe3rcra7HhU_LMiUxRpZfF2S89s_dM,5772
+ml_eval_dashboard/evaluator.py,sha256=Mf_QDnhIhxsyCwEReGbYYgKgOol19NEMtTEHkSWs99k,2333
+ml_eval_dashboard/main.py,sha256=FlcE4WEULFKlhfUhVHuLRKGlBZ_lETXrfzSNoJBmC30,91
+ml_eval_dashboard/report_generator.py,sha256=71MqyxcZLPkG49OW3yOH2xLhbMOJW3YZkA_DEhKqdxs,3154
+ml_eval_dashboard/visualizer.py,sha256=QK0axd6CTQV7oUM-guHKwruJbT7g21nOM6Y6_44svBI,4703
+ml_eval_dashboard-0.1.1.dist-info/LICENCE,sha256=zQo9hJGvDSQ-DY1_Gha12rnV_dYulQKr98kDucAtb1M,1079
+ml_eval_dashboard-0.1.1.dist-info/METADATA,sha256=Asm5YeRIbiNtbsN-e5iiOgug8ghAeStbQovXGaIVblc,473
+ml_eval_dashboard-0.1.1.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+ml_eval_dashboard-0.1.1.dist-info/entry_points.txt,sha256=9jaPtYYQ016rWevVntvlvhR2VRp3t6bhsjcwbodA6c8,81
+ml_eval_dashboard-0.1.1.dist-info/top_level.txt,sha256=cJ81mDdshL6okMR_t0l6EOsYRbQZWZMdwXJe_sUlb-k,18
+ml_eval_dashboard-0.1.1.dist-info/RECORD,,
