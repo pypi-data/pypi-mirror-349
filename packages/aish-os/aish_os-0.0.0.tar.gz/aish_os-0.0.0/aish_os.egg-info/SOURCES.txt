@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+aish_os.egg-info/PKG-INFO
+aish_os.egg-info/SOURCES.txt
+aish_os.egg-info/dependency_links.txt
+aish_os.egg-info/top_level.txt
+noop/__init__.py
