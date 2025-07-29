@@ -1,0 +1,8 @@
+ftdi_io-0.1.3.dist-info/licenses/LICENSE,sha256=qEVyh0chLtzWA2gMzS_fTD_hLzhlpgs4tNFRxb2gpEE,1087
+ftio/__init__.py,sha256=M_wZwhwCMhR399cqhk4U0_aaHml_csGK8v9ZLQ-q-5k,113
+ftio/_ft_define.py,sha256=xHvBgwidcqrYTfmfpL1wOcfurE5_G92G1InmyUojKEw,301
+ftio/ftio.py,sha256=tRrUn-rJGW6_sbxPeYGzO41nbGOYzO5ETtexh1SNbcQ,3302
+ftdi_io-0.1.3.dist-info/METADATA,sha256=fo6uaelB7X59tcOxnsBsws_CuCWho4E_MByzxMOOzVI,1571
+ftdi_io-0.1.3.dist-info/WHEEL,sha256=Nw36Djuh_5VDukK0H78QzOX-_FQEo6V37m3nkm96gtU,91
+ftdi_io-0.1.3.dist-info/top_level.txt,sha256=ipIV5GLEfI5AOcxTi89fsb6NGm0nI2D6eSsLSl17Qkw,5
+ftdi_io-0.1.3.dist-info/RECORD,,
