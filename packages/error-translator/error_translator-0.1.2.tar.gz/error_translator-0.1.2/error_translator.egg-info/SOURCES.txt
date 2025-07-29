@@ -1,0 +1,7 @@
+README.md
+setup.py
+error_translator.egg-info/PKG-INFO
+error_translator.egg-info/SOURCES.txt
+error_translator.egg-info/dependency_links.txt
+error_translator.egg-info/requires.txt
+error_translator.egg-info/top_level.txt
