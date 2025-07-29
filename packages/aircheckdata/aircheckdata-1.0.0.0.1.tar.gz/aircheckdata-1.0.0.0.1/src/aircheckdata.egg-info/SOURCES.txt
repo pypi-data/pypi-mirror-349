@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+src/aircheckdata/__init__.py
+src/aircheckdata/main.py
+src/aircheckdata.egg-info/PKG-INFO
+src/aircheckdata.egg-info/SOURCES.txt
+src/aircheckdata.egg-info/dependency_links.txt
+src/aircheckdata.egg-info/requires.txt
+src/aircheckdata.egg-info/top_level.txt
