@@ -1,0 +1,72 @@
+{#
+  Copyright (C) 2020-2023 Graz University of Technology.
+  Copyright (C) 2025 Shared RDM.
+
+  invenio-override is free software; you can redistribute it and/or
+  modify it under the terms of the MIT License; see LICENSE file for more
+  details.
+#}
+
+{% set options = [] %}
+
+{# Ensure at least one default option exists #}
+{% set base_option = {
+    "key": "rdm",
+    "text": "Research Results",
+    "value": "/records/search",
+    "title": "Research Data",
+} %}
+{% set options = options + [base_option] %}
+
+{% if config.OVERRIDE_SHOW_PUBLICATIONS_SEARCH %}
+    {% set pub_option = {
+        "key": "marc21",
+        "text": "Publications",
+        "value": url_for("invenio_records_marc21.search"),
+        "title": "Publication",
+    } %}
+    {% set options = options + [pub_option] %}
+{% endif %}
+
+{% if config.OVERRIDE_SHOW_EDUCATIONAL_RESOURCES %}
+    {% set edu_option = {
+        "key": "lom",
+        "text": "Educational Resources",
+        "value": url_for("invenio_records_lom.search"),
+        "title": "OER",
+    } %}
+    {% set options = options + [edu_option] %}
+{% endif %}
+
+{% if options | length > 1 %}
+    {% set all_option = {
+        "key": "records",
+        "text": "All",
+        "value": url_for("invenio_search_ui.search"),
+        "title": "repo",
+    } %}
+    {% set options = [all_option] + options %}
+{% endif %}
+
+{# Ensure options is not None or Undefined #}
+{% set options_json = options | tojson if options is not none else "[]" %}
+
+<div class="ui container">
+  <div class="short-menu" id="all-menu-top-table">
+    <div class="ui secondary menu">
+      <a href="/" title="Home" class="no-decoration" style="margin-top: 10px;">
+        <img height="100" id="int-header-logo-img" src="{{ url_for('static', filename=config.OVERRIDE_LOGO) }}">
+      </a>
+      <div class="right menu">
+        <div class="item">
+          <div class="ui icon input">
+            <div id="header-search-bar" data-options='{{ options | tojson }}'></div>
+          </div>
+        </div>
+        {%- block navbar_right %}
+        {%- include config.THEME_HEADER_LOGIN_TEMPLATE %}
+        {%- endblock navbar_right %}
+      </div>
+    </div>
+  </div>
+</div>

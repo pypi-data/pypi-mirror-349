@@ -1,0 +1,69 @@
+{#
+    Copyright (C) 2020-2023 Graz University of Technology.
+    Copyright (C) 2024 - 2025 Shared RDM.
+
+    invenio-override is free software; you can redistribute it and/or
+    modify it under the terms of the MIT License; see LICENSE file for more
+    details.
+#}
+
+{%- extends "invenio_app_rdm/header_frontpage.html" %}
+
+{% set options = [] %}
+
+{# Ensure at least one default option exists #}
+{% set base_option = {
+    "key": "rdm",
+    "text": "Research Results",
+    "value": "/records/search",
+    "title": "Research Data",
+} %}
+{% set options = options + [base_option] %}
+
+{% if config.OVERRIDE_SHOW_PUBLICATIONS_SEARCH %}
+    {% set pub_option = {
+        "key": "marc21",
+        "text": "Publications",
+        "value": url_for("invenio_records_marc21.search"),
+        "title": "Publication",
+    } %}
+    {% set options = options + [pub_option] %}
+{% endif %}
+
+{% if config.OVERRIDE_SHOW_EDUCATIONAL_RESOURCES %}
+    {% set edu_option = {
+        "key": "lom",
+        "text": "Educational Resources",
+        "value": url_for("invenio_records_lom.search"),
+        "title": "OER",
+    } %}
+    {% set options = options + [edu_option] %}
+{% endif %}
+
+{% if options | length > 1 %}
+    {% set all_option = {
+        "key": "records",
+        "text": "All",
+        "value": url_for("invenio_search_ui.search"),
+        "title": "repo",
+    } %}
+    {% set options = [all_option] + options %}
+{% endif %}
+
+{%- block frontpage_search %}
+<div class="ui container fluid frontpage-header">
+  <div class="ui container grid rel-mt-2">
+    {%- block frontpage_form %}
+    <div class="row">
+      <div class="sixteen wide mobile four wide computer column"></div>
+      <div class="sixteen wide mobile eight wide computer column center aligned">
+        <div class="frontpage-search-container">
+          <div id="frontpage-search-bar" data-options='{{ options | tojson }}'></div>
+        </div>
+      </div>
+    </div>
+    <div class="ui divider hidden"></div>
+    {%- endblock frontpage_form %}
+  </div>
+</div>
+{%- endblock frontpage_search %}

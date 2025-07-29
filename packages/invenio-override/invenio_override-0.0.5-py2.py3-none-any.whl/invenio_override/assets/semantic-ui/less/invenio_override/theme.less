@@ -1,0 +1,153 @@
+/*
+ *   Copyright (C) 2020-2023 Graz University of Technology.
+ *   Copyright (C) 2024 Shared RDM.
+ *
+ * invenio-override  is free software; you can redistribute it and/or modify it
+ * under the terms of the MIT License; see LICENSE file for more details.
+ */
+
+@import "variables";
+@import "header";
+@import "footer";
+@import "overrides";
+@import "frontpage";
+@import "record";
+@import "search";
+@import "macros";
+@import "login";
+@import "communities";
+
+/***
+**TODO:
+** test overriding variables.
+***/
+
+//@import "../invenio_app_rdm/theme";
+//@import "variables";
+
+// used in various templates
+// add no hyperlink decoration
+.no-decoration {
+  color: inherit;
+  text-decoration: none;
+  transition: background-color 0.15s ease 0s, color 0.15s ease 0s;
+  outline: none;
+}
+
+.nowrap-link {
+  white-space: nowrap;
+}
+
+.ui.label.schema {
+  border: 1px solid #bfb5b5;
+}
+
+.ui.fluid.input input,
+.ui.fluid.input button {
+  font-size: 16px !important;
+  height: 50px !important;
+  border-radius: 0 !important;
+}
+
+.ui.fluid.input input {
+  width: 0.6rem;
+}
+
+.ui.fluid.input.frontpage-search-container input {
+  width: 600px !important;
+}
+
+.random-records-frontpage {
+  width: 95% !important;
+  margin: 0 auto;
+}
+
+.random-records-frontpage .grid {
+  align-items: stretch;
+  gap: 10px;
+  width: 100%;
+}
+
+.random-records-frontpage .grid .column {
+  width: 380px !important;
+  padding: 14px !important;
+}
+
+.frontpage-search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100% !important;
+}
+
+.random-records-frontpage .grid .column {
+  flex: 1 1 auto;
+  min-width: 280px;
+  max-width: 680px;
+}
+
+.resource-container .column {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 1024px) {
+  .ui.fluid.input input {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .ui.fluid.input input {
+    width: 100% !important;
+    font-size: 14px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .ui.fluid.input input,
+  .ui.fluid.input button {
+    width: 100% !important;
+    font-size: 14px !important;
+  }
+}
+
+#custom-overview{
+  display: flex !important;
+}
+
+#custom-column {
+  display: flex !important;
+  justify-content: space-between !important;
+  max-width: 100%;
+}
+
+
+@media (min-width: 768px) and (max-width: 1298px) {
+  #custom-column{
+      display: flex !important;
+      justify-content: space-between !important;
+      width: 200px;
+      max-width: 100%;
+  }
+}
+
+#custom-segment {
+  display: flex !important;
+  justify-content: space-between !important;
+  flex-wrap: wrap !important;
+  flex-direction: column;
+  width: 620px;
+  height: 480px;
+}
+
+#overview-img{
+  width: 300px;
+}
+
+@media (max-width: 768px) {
+  #overview-img{
+    width: 150px;
+  }
+}
+

@@ -1,0 +1,79 @@
+{#
+  Copyright (C) 2020-2025 Graz University of Technology.
+
+  invenio-theme-tugraz is free software; you can redistribute it and/or
+  modify it under the terms of the MIT License; see LICENSE file for more
+  details.
+#}
+
+{%- extends config.OVERRIDE_BASE_TEMPLATE %}
+
+{%- set active_dashboard_menu_item = "overview" %}
+{%- set title = _("Overview") %}
+
+{% block javascript %}
+  {{ super() }}
+{% endblock javascript %}
+
+{%- block page_body %}
+  {%- block user_dashboard_header %}
+    {% include "invenio_app_rdm/users/header.html" %}
+  {%- endblock user_dashboard_header %}
+
+  <div class="ui container rel-mt-2">
+    <h2>Overview</h2>
+
+    <div id="custom-overview" class="ui five column stackable grid overview">
+      {% if is_authenticated %}
+      {# 3 columns: Research-Uploads, Communities, and Requests #}
+      <div id="custom-column" class="column">
+        <div id="custom-segment" class="ui segment">
+          <h2 style="margin-left: auto; margin-right: auto;">{{ _("Research Results") }}</h2>
+          <a class="ui left floated image" style="margin: auto;" href="/me/uploads">
+            <img id="overview-img" alt="Research Results" src="{{ url_for("static", filename="images/diamond.svg") }}">
+          </a>
+          <div class="ui right floated text">
+            {{ _("Overview: Description for research results") }}
+            {{_("Research results gives the base on which publications are built.")}}
+          </div>
+        </div>
+      </div>
+      <div id="custom-column" class="column">
+        <div id="custom-segment" class="ui segment">
+          <h2 style="margin-left: auto; margin-right: auto;">{{ _("Communities") }}</h2>
+          <a class="ui left floated image" style="margin: auto;" href="/me/communities">
+            <img id="overview-img" alt="Communities" src="{{ url_for("static", filename="images/group-discussion.svg") }}">
+          </a>
+          <div>
+            {{_("Grow a community of individuals to sustain the platform going forward and thereby organize, curate and collaborate on records for your institution, project, topic or event.")}}
+          </div>
+        </div>
+      </div>
+      <div id="custom-column" class="column">
+        <div id="custom-segment" class="ui segment">
+          <h2 style="margin-left: auto; margin-right: auto;">{{ _("Requests") }}</h2>
+          <a class="ui left floated image" style="margin: auto;" href="/me/requests">
+            <img id="overview-img" alt="Requests" src="{{ url_for("static", filename="images/umbrella.svg") }}">
+          </a>
+          <div>
+            {{_("Check for incoming notifications and community assignments or inquiries.")}}
+          </div>
+        </div>
+      </div>
+      {% endif %}
+      {% if can_view_marc21 %}
+      <div id="custom-column" class="column">
+        <div id="custom-segment" class="ui segment">
+          <h2 style="margin-left: auto; margin-right: auto;">{{ _("Publications") }}</h2>
+          <a class="ui left floated image" style="margin: auto;" href="/publications/uploads">
+            <img id="overview-img" alt="Publications" src="{{ url_for("static", filename="images/library-book-svgrepo-com.svg") }}">
+          </a>
+          <div>
+            {{_("Publications are the synthesized result of research.")}}
+          </div>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+{%- endblock %}
