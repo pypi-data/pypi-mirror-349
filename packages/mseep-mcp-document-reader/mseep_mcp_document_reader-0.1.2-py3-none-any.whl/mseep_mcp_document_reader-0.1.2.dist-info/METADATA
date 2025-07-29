@@ -1,0 +1,103 @@
+Metadata-Version: 2.3
+Name: mseep-mcp-document-reader
+Version: 0.1.2
+Summary: A MCP Server for reading PDF and EPUB files.
+Author: mseep
+Author-email: support@skydeck.ai
+Maintainer: mseep
+Maintainer-email: support@skydeck.ai
+Requires-Python: >=3.11,<4
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: beautifulsoup4 (>=4.13.3,<5.0.0)
+Requires-Dist: ebooklib (>=0.18,<0.19)
+Requires-Dist: mcp[cli] (>=1.3.0,<2.0.0)
+Requires-Dist: pypdf (>=5.3.1,<6.0.0)
+Requires-Dist: rich (>=13.9.4,<14.0.0)
+Description-Content-Type: text/markdown
+
+# mcp-document-reader
+
+A rudimentary [MCP server](https://modelcontextprotocol.io/introduction) for interacting with PDF and EPUB documents.
+
+I use this with [Windsurf IDE by Codeium](https://codeium.com/windsurf), which
+only supports MCP tools, not resources.
+
+## Installation
+
+### Requirements
+
+- [Python 3.11+](https://www.python.org/downloads/)
+- [Poetry](https://python-poetry.org/docs/)
+
+```bash
+# Clone the repository
+git clone https://github.com/jbchouinard/mcp-document-reader.git
+cd mcp-document-reader
+poetry install
+```
+
+## Configure MCP Server
+
+Run with poetry:
+
+```json
+{
+  "mcpServers": {
+    "documents": {
+      "command": "poetry",
+      "args": ["-C", "path/to/mcp-document-reader", "run", "mcp-document-reader"]
+    }
+  }
+}
+```
+
+Alternatively, build and install with pip, then run the script directly:
+
+```bash
+poetry build
+pipx install dist/*.whl
+which mcp-document-reader
+```
+
+Then use the following config, with the path output by which:
+
+```json
+{
+  "mcpServers": {
+    "documents": {
+      "command": "/path/to/mcp-document-reader",
+      "args": []
+    }
+  }
+}
+```
+
+## Development
+
+### Setup
+
+```bash
+# Install dependencies
+poetry install
+```
+
+### Testing
+
+```bash
+poetry run pytest
+```
+
+### Linting
+
+```bash
+poetry run ruff check --fix .
+poetry run ruff format .
+```
+
+## License
+
+[MIT](LICENSE)
+
