@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.py
+mseep_mcp2tavily.egg-info/PKG-INFO
+mseep_mcp2tavily.egg-info/SOURCES.txt
+mseep_mcp2tavily.egg-info/dependency_links.txt
+mseep_mcp2tavily.egg-info/requires.txt
+mseep_mcp2tavily.egg-info/top_level.txt
