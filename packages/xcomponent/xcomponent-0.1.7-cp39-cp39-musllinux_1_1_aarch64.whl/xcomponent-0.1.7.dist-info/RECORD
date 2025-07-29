@@ -1,0 +1,11 @@
+xcomponent-0.1.7.dist-info/METADATA,sha256=Z0VIKoVxNxK62f8nGS0RrTJoBE6fMdx9NYYuXDsIMaY,819
+xcomponent-0.1.7.dist-info/WHEEL,sha256=261sNnZpJObNmPYgbqoXCYLduRj_GlKFbr3emyAm9_k,106
+xcomponent-0.1.7.dist-info/licenses/LICENSE,sha256=sA-Q_5mG2TQtH_DzePl1Xf9L5t_Syn5cTmvLyf1HQv0,1075
+xcomponent.libs/libgcc_s-e52197c3.so.1,sha256=vkPW1Auw6CH9Bjk7frmX3hry_1H9c0tRI0Ncyg71WUI,724137
+xcomponent/__init__.py,sha256=6cW1ML5y40r-ZHdbXuT6LcwAH3xtFr2wOUlnqMjF0Uw,190
+xcomponent/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+xcomponent/service/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+xcomponent/service/catalog.py,sha256=FZ4ONZ-E3GJNDbvmoVfjtlZdgOWJYl0YNarFVZ4-pro,3504
+xcomponent/xcore.cpython-39-aarch64-linux-gnu.so,sha256=XzMikfpKdHNDHjACMTHZQujoxbBZsqGFlE9WknoU2MI,2886529
+xcomponent/xcore.pyi,sha256=46_HDKOMPVGd3bWW1UF-hcPVym_0qYqf5sLdt0ODvRY,2217
+xcomponent-0.1.7.dist-info/RECORD,,
