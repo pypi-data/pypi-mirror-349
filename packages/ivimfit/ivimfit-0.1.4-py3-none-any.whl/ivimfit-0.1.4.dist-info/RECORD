@@ -1,0 +1,12 @@
+ivimfit/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ivimfit/adc.py,sha256=_Aykr-Oz9RF_bgQVafEL2UwFi-fU8rddTVV-m-carYk,1746
+ivimfit/bayesian.py,sha256=Blv5tfDIyFH3CL9SkjthexiuGeWtsIZIi0SNiKK4Cqc,2114
+ivimfit/biexp.py,sha256=jh024H0rm2qmUAZrj5nQ8ew0OpUTTCmy0LAnXbQ330E,1984
+ivimfit/segmented.py,sha256=8sXOgeG3Pc3KxDOkpD4mD7gOEiqEDU8NtvZcp6YxBjg,2766
+ivimfit/triexp.py,sha256=P9iD867IL_9TTbxKQso1aWQXOEgCGcCnl8kWKd_udxc,842
+ivimfit/utils.py,sha256=pOpsHBKqUYBgWR2iwYOG2xBefnXHOVLnK_oad-SIRxc,1931
+ivimfit-0.1.4.dist-info/licenses/LICENSE,sha256=H6RT5wyQLR-34O_iiDF7vklemMm9uy9z7GeKRRPxyT0,1091
+ivimfit-0.1.4.dist-info/METADATA,sha256=Au9NLHqBeHhUAnhLl-YyTOp5Tui8X0a_cttGBi7MprY,3833
+ivimfit-0.1.4.dist-info/WHEEL,sha256=Nw36Djuh_5VDukK0H78QzOX-_FQEo6V37m3nkm96gtU,91
+ivimfit-0.1.4.dist-info/top_level.txt,sha256=OVcx_jXiEFo9B89B5Tnv0pYQGJw0zAzHAqlJn_B4aJY,8
+ivimfit-0.1.4.dist-info/RECORD,,
