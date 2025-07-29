@@ -1,0 +1,2 @@
+[console_scripts]
+bak = bak.main:main
