@@ -1,0 +1,25 @@
+[project]
+name = "mseep-map-mcp"
+version = "0.1.2"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "folium>=0.19.4",
+    "mcp[cli]===1.2.0rc1",
+    "requests>=2.32.3",
+    "selenium>=4.27.1",
+]
+authors = [
+    { name = "mseep", email = "support@skydeck.ai" },
+]
+maintainers = [
+    { name = "mseep", email = "support@skydeck.ai" },
+]
+
+[build-system]
+requires = [
+    "setuptools>=42",
+    "wheel",
+]
+build-backend = "setuptools.build_meta"
