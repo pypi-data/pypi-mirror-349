@@ -1,0 +1,13 @@
+numpy
+pandas
+matplotlib
+pyyaml
+pyyaml-include
+
+[develop]
+pytest
+pytest-subtests
+pytest-dependency
+responses
+jupyter-book
+sphinxcontrib-napoleon

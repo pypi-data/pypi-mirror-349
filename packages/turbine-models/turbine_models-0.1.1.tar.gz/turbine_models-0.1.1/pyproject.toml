@@ -1,0 +1,90 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "turbine-models"
+dynamic = ["version"]
+authors = [
+    {name = "Patrick Duffy", email = "patrick.duffy@nrel.gov"},
+    {name = "Travis Williams"},
+]
+maintainers = [
+    {name = "Patrick Duffy", email = "patrick.duffy@nrel.gov"},
+    {name = "Elenya Grant", email = "elenya.grant@nrel.gov"},
+    {name = "Rob Hammond", email = "rob.hammond@nrel.gov"},
+]
+readme = {file = "README.md", content-type = "text/markdown"}
+description = "Retrieves power curves and key data for commonly used turbine models in industry and R&D community."
+requires-python = ">=3.10, <3.14"
+license = {file = "LICENSE"}
+dependencies = [
+    "numpy",
+    "pandas",
+    "matplotlib",
+    "pyyaml",
+    "pyyaml-include",
+]
+keywords = [
+    "python3",
+    "turbine-library",
+    "wind-turbines",
+    "power-curve",
+    "power-curves",
+    "data",
+    "wind-energy",
+]
+
+# https://pypi.org/classifiers/
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: BSD License",
+    "Natural Language :: English",
+    "Operating System :: MacOS",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: Unix",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+source = "https://github.com/NREL/turbine-models"
+documentation = "https://nrel.github.io/turbine-models/"
+issues = "https://github.com/NREL/turbine-models/issues"
+changelog = "https://github.com/NREL/turbine-models/blob/main/RELEASE.md"
+
+[project.optional-dependencies]
+develop = [
+    "pytest",
+    "pytest-subtests",
+    "pytest-dependency",
+    "responses",
+    "jupyter-book",
+    "sphinxcontrib-napoleon",
+]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+include = [
+    "turbine_models",
+    "turbine_models/data/Offshore/*csv",
+    "turbine_models/data/Onshore/*csv",
+    "turbine_models/data/Distributed/*csv",
+    "turbine_models/specs/Offshore/*yaml",
+    "turbine_models/specs/Onshore/*yaml",
+    "turbine_models/specs/Distributed/*yaml",
+]
+
+[tool.setuptools.dynamic]
+version = {attr = "turbine_models.__version__"}
