@@ -1,0 +1,14 @@
+spatioloji-0.2.3.dist-info/licenses/LICENSE,sha256=-hg6-9Xv-sSLP24hSZeFiiMyzmmpu7APuApe3G3-TLE,1064
+src/__init__.py,sha256=Il5Q9ATdX8yXqVxtP_nYqUhExzxPC_qk_WXQ_4h0exg,16
+src/spatioloji/__init__.py,sha256=KPMS8zIXjC6Tbr-AnpKoPkh_y1wroQnEOg2f73CkleU,73
+src/spatioloji/data/Spatial_Object.py,sha256=QWMLR5CC20mTTCncVHZeIyRfm5wUVT42bBKPI6QF3R8,27230
+src/spatioloji/data/__init__.py,sha256=MD4ogu7SvBUNt78RXXFviAVZhlGIwPGhMuiurd16yY0,30
+src/spatioloji/pl/Plot_Spatial_Image.py,sha256=PXlX5sCifC1Is2EwaVWe4nQXBrUjwIj5BD-H6FLO6bY,98491
+src/spatioloji/pl/__init__.py,sha256=k4pVlAzR0DVBHBUxuUHZO6VqRgaDYc6jq0U10DVfnqg,34
+src/spatioloji/tl/Spatial_function.py,sha256=aQ5urKwHljLGb19s3xNXj-0on427BvfC3_HlfTJS490,312533
+src/spatioloji/tl/__init__.py,sha256=rfOFyVNUcg5sWs5Ap71hAjbiYuDZ9_2AXmDWKbOGz8A,32
+src/spatioloji/utils/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+spatioloji-0.2.3.dist-info/METADATA,sha256=BAlwjqLfAd2-cKtkh7OwRCtyTHPejAx9sTbjQqXJN0M,5431
+spatioloji-0.2.3.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+spatioloji-0.2.3.dist-info/top_level.txt,sha256=74rtVfumQlgAPzR5_2CgYN24MB0XARCg0t-gzk6gTrM,4
+spatioloji-0.2.3.dist-info/RECORD,,
