@@ -1,0 +1,39 @@
+# pyproject.toml
+
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyholfuy"
+version = "0.2"
+description = "A Python library for interacting with Holfuy weather stations."
+authors = [{name="Håvard Dagenborg", email="haavardj@dagenborg.net"}]
+license = "MIT"
+readme = "README.md"
+keywords = ["weather", "holfuy", "api", "python"]
+requires-python = ">=3.11"
+dependencies    = [
+    "aiohttp>=3.9.4"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+homepage = "https://github.com/haavardj/PyHolfuy"
+
+[project.optional-dependencies]
+test = [
+  "aioresponses==0.7.8",
+  "coverage==7.8.0",
+  "mypy==1.15.0",
+]
+dev = [
+]
+
+
+[tool.pylint]
+max-line-length = 88
+disable = ["C0114", "C0115", "C0116"]
