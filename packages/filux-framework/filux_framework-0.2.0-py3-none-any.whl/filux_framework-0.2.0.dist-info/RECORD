@@ -1,0 +1,12 @@
+filux_framework/__init__.py,sha256=lEELbSpOvsWFSwO0eI9d-pTdp8NPn7KjhgLw-wzIObU,246
+filux_framework/io/Directory.py,sha256=xyXh6qQhMMdhZtpKrB39O374H6cQ_W1EkeC8itfzZYE,1252
+filux_framework/io/File.py,sha256=IGynlJMofXOH2cBX0Bg5YCGNPJ5NTk6DAyWTMdZrCYM,4254
+filux_framework/io/Path.py,sha256=b_utyqLts8Dr4jxIRVtmP27pflhGW-NS2KkQ4BX_vME,925
+filux_framework/io/file_types/ImageFile.py,sha256=V-HMtg2-2sGIlYx4DPHtgtk5_nW3DHYgP3gLs-Dz3TA,2150
+filux_framework/io/file_types/TextFile.py,sha256=VdQccvPMm6BACQ5yA4hhZylIvdg2q0oDLHaSNG3KEX4,805
+filux_framework/system/DuplicateFinder.py,sha256=nzstJPZB8nVdEn5UQeZkY_2-kmf_KKRCYa95GbcZ9Iw,1602
+filux_framework-0.2.0.dist-info/licenses/LICENSE.txt,sha256=64HLLWUU2JkfmrjO4KtLd6enew4ng5NOPOIE575T8pM,1057
+filux_framework-0.2.0.dist-info/METADATA,sha256=WidQYx86NT16lPRcxk8SO60JFO7YZvYidaqZFhnF1sY,2659
+filux_framework-0.2.0.dist-info/WHEEL,sha256=Nw36Djuh_5VDukK0H78QzOX-_FQEo6V37m3nkm96gtU,91
+filux_framework-0.2.0.dist-info/top_level.txt,sha256=giEHUMlmcrL7MWhUQImdlmbnze4U8idD1F-k6AiNGxA,16
+filux_framework-0.2.0.dist-info/RECORD,,
