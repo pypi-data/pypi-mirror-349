@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "netbox_cesnet_services_plugin"
+version = "1.2.3"
+description = "NetBox plugin for CESNET services."
+authors = [
+    {name = "Jan Krupa", email = "jan.krupa@cesnet.cz"},
+    {name = "Jiri Vrany", email = "jiri.vrany@cesnet.cz"},
+]
+license = "MIT"
+dependencies = [
+    "geocoder",
+    "python-slugify",
+    "deepdiff",
+    "netutils",
+    "netbox-scripts-lib",
+]
+requires-python = ">=3.8"  # Adjust based on your requirements
+
+[tool.setuptools]
+packages = ["netbox_cesnet_services_plugin"]
+include-package-data = true

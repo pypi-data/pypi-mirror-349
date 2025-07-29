@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: netbox_cesnet_services_plugin
+Version: 1.2.3
+Summary: NetBox plugin for CESNET services.
+Author-email: Jan Krupa <jan.krupa@cesnet.cz>, Jiri Vrany <jiri.vrany@cesnet.cz>
+License-Expression: MIT
+Requires-Python: >=3.8
+License-File: LICENSE
+Requires-Dist: geocoder
+Requires-Dist: python-slugify
+Requires-Dist: deepdiff
+Requires-Dist: netutils
+Requires-Dist: netbox-scripts-lib
+Dynamic: license-file
