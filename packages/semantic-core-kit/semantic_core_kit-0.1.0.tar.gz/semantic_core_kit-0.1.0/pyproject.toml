@@ -1,0 +1,67 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "semantic_core_kit"
+version = "0.1.0"
+description = "AI-Assisted Semantic Core & Article Idea Generator"
+readme = "README.md"
+requires-python = ">=3.8"
+# Add openai to dependencies
+dependencies = [
+    "openai>=1.0.0"
+]
+authors = [
+  { name = "Ihor Tykhonenko", email = "tykhonenkoigor@gmail.com" },
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License", # Example, choose your license
+    "Operating System :: OS Independent",
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Text Processing :: Linguistic",
+]
+# Add keywords relevant to your project
+keywords = ["seo", "nlp", "ai", "keyword research", "content generation", "llm"]
+
+# If you have a URL for your project:
+# [project.urls]
+# "Homepage" = "https://example.com/semantic-core-kit"
+# "Bug Tracker" = "https://example.com/semantic-core-kit/issues"
+
+# --- Ruff Configuration ---
+[tool.ruff]
+# Enable Pyflakes (F) and pycodestyle (E, W) error checks by default.
+# For a full list of supported rules, see: https://docs.astral.sh/ruff/rules/
+select = [
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "F",  # Pyflakes
+    "I",  # isort
+    "UP", # pyupgrade
+    "B",  # flake8-bugbear
+    "C4", # flake8-comprehensions
+    "SIM",# flake8-simplify
+    # Add more as desired, e.g., "N" for naming conventions, "D" for pydocstyle
+]
+ignore = [] # Add specific rules to ignore if necessary, e.g., "E501" for line too long if not handled by formatter
+
+line-length = 120
+target-version = "py38" # Specify the minimum Python version you support
+
+[tool.ruff.lint.isort]
+known-first-party = ["semantic_core_kit", "tests"]
+
+# Optional: Pydocstyle configuration if you select "D" rules
+# [tool.ruff.lint.pydocstyle]
+# convention = "google" # e.g., google, numpy, or pep257
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
