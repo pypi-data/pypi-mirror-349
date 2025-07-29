@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+spacekernel/__init__.py
+spacekernel.egg-info/PKG-INFO
+spacekernel.egg-info/SOURCES.txt
+spacekernel.egg-info/dependency_links.txt
+spacekernel.egg-info/top_level.txt

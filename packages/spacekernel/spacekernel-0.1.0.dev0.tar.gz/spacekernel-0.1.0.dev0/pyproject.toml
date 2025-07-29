@@ -1,0 +1,16 @@
+[project]
+name = "spacekernel"
+version = "0.1.0-dev0"
+description = "The Core Engine for Space Mission Simulation and Analysis"
+readme = "README.md"
+requires-python = ">=3.12"
+license = {file = "LICENSE"}
+authors = [{name = "Rafael R. L. Benevides", email = "rafael.rl.benevides@gmail.com"}]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/spacekernel/spacekernel"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
