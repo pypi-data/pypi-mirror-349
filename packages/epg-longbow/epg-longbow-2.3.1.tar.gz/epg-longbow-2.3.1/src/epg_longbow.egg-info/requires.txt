@@ -1,0 +1,8 @@
+pyfastx>=2.0.2
+statsmodels>=0.13.5
+numpy>=1.21.6
+psutil
+pytest
+
+[dev]
+pytest

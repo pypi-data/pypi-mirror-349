@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: epg-longbow
+Version: 2.3.1
+Summary: A Python program for nanopore sequencing basecalling configuration prediction
+Home-page: https://github.com/JMencius/longbow
+Author: Jun Mencius
+Author-email: zjmeng22@m.fudan.edu.cn
+Keywords: longbow,ont,configuration
+Requires-Python: >=3.7
+Provides-Extra: dev
+License-File: LICENSE
