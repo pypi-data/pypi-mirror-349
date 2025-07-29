@@ -1,0 +1,16 @@
+README.md
+setup.py
+StructureContext.egg-info/PKG-INFO
+StructureContext.egg-info/SOURCES.txt
+StructureContext.egg-info/dependency_links.txt
+StructureContext.egg-info/requires.txt
+StructureContext.egg-info/top_level.txt
+src/__init__.py
+src/hierarchical_context.py
+src/hierarchical_model.py
+src/utils/__init__.py
+src/utils/data_utils.py
+src/utils/matric.py
+src/utils/model_utils.py
+src/utils/result_utils.py
+src/utils/visualize.py
