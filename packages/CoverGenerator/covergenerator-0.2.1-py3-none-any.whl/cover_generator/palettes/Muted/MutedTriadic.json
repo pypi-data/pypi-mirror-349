@@ -1,0 +1,81 @@
+{
+   "name": "MutedTriadic", 
+   "category": "Muted", 
+   "color_pairs": [
+      {
+         "id": 0, 
+         "primary_color": "#260101", 
+         "secondary_color": "#3d663d"
+      }, 
+      {
+         "id": 7, 
+         "primary_color": "#172601", 
+         "secondary_color": "#3d5566"
+      }, 
+      {
+         "id": 8, 
+         "primary_color": "#102601", 
+         "secondary_color": "#3d4d66"
+      }, 
+      {
+         "id": 9, 
+         "primary_color": "#092601", 
+         "secondary_color": "#3d4566"
+      }, 
+      {
+         "id": 10, 
+         "primary_color": "#012601", 
+         "secondary_color": "#3d3d66"
+      }, 
+      {
+         "id": 11, 
+         "primary_color": "#012609", 
+         "secondary_color": "#453d66"
+      }, 
+      {
+         "id": 12, 
+         "primary_color": "#012610", 
+         "secondary_color": "#4d3d66"
+      }, 
+      {
+         "id": 13, 
+         "primary_color": "#012617", 
+         "secondary_color": "#553d66"
+      }, 
+      {
+         "id": 14, 
+         "primary_color": "#01261e", 
+         "secondary_color": "#5d3d66"
+      }, 
+      {
+         "id": 15, 
+         "primary_color": "#012626", 
+         "secondary_color": "#653d66"
+      }, 
+      {
+         "id": 16, 
+         "primary_color": "#011e26", 
+         "secondary_color": "#663d5d"
+      }, 
+      {
+         "id": 21, 
+         "primary_color": "#090126", 
+         "secondary_color": "#66453d"
+      }, 
+      {
+         "id": 22, 
+         "primary_color": "#100126", 
+         "secondary_color": "#664d3d"
+      }, 
+      {
+         "id": 23, 
+         "primary_color": "#170126", 
+         "secondary_color": "#66553d"
+      }, 
+      {
+         "id": 24, 
+         "primary_color": "#1e0126", 
+         "secondary_color": "#665d3d"
+      }
+   ]
+}

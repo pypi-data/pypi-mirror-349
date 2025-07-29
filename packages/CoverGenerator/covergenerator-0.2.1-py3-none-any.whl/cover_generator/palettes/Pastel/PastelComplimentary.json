@@ -1,0 +1,16 @@
+{
+   "name": "PastelComplimentary", 
+   "category": "Pastel", 
+   "color_pairs": [
+      {
+         "id": 3, 
+         "primary_color": "#ffd699", 
+         "secondary_color": "#3d4d66"
+      }, 
+      {
+         "id": 4, 
+         "primary_color": "#ffea99", 
+         "secondary_color": "#3d4566"
+      }
+   ]
+}

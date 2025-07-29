@@ -1,0 +1,76 @@
+{
+   "name": "ColorWhite", 
+   "category": "ColorWhite", 
+   "color_pairs": [
+      {
+         "id": 0, 
+         "primary_color": "#f0f0f0", 
+         "secondary_color": "#ff3232"
+      }, 
+      {
+         "id": 1, 
+         "primary_color": "#f0f0f0", 
+         "secondary_color": "#ff5b32"
+      }, 
+      {
+         "id": 2, 
+         "primary_color": "#f0f0f0", 
+         "secondary_color": "#ff8432"
+      }, 
+      {
+         "id": 3, 
+         "primary_color": "#f0f0f0", 
+         "secondary_color": "#ffad32"
+      }, 
+      {
+         "id": 4, 
+         "primary_color": "#f0f0f0", 
+         "secondary_color": "#ffd632"
+      }, 
+      {
+         "id": 12, 
+         "primary_color": "#f0f0f0", 
+         "secondary_color": "#32ff84"
+      }, 
+      {
+         "id": 13, 
+         "primary_color": "#f0f0f0", 
+         "secondary_color": "#32ffad"
+      }, 
+      {
+         "id": 14, 
+         "primary_color": "#f0f0f0", 
+         "secondary_color": "#32ffd6"
+      }, 
+      {
+         "id": 15, 
+         "primary_color": "#f0f0f0", 
+         "secondary_color": "#32ffff"
+      }, 
+      {
+         "id": 16, 
+         "primary_color": "#f0f0f0", 
+         "secondary_color": "#32d6ff"
+      }, 
+      {
+         "id": 17, 
+         "primary_color": "#f0f0f0", 
+         "secondary_color": "#32adff"
+      }, 
+      {
+         "id": 27, 
+         "primary_color": "#f0f0f0", 
+         "secondary_color": "#ff32ad"
+      }, 
+      {
+         "id": 28, 
+         "primary_color": "#f0f0f0", 
+         "secondary_color": "#ff3284"
+      }, 
+      {
+         "id": 29, 
+         "primary_color": "#f0f0f0", 
+         "secondary_color": "#ff325b"
+      }
+   ]
+}

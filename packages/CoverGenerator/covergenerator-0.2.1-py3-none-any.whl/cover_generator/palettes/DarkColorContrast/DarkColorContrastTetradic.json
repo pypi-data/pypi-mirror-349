@@ -1,0 +1,36 @@
+{
+   "name": "DarkColorContrastTetradic", 
+   "category": "DarkColorContrast", 
+   "color_pairs": [
+      {
+         "id": 9, 
+         "primary_color": "#124c03", 
+         "secondary_color": "#0cadf2"
+      }, 
+      {
+         "id": 10, 
+         "primary_color": "#034c03", 
+         "secondary_color": "#0c7ff2"
+      }, 
+      {
+         "id": 11, 
+         "primary_color": "#034c12", 
+         "secondary_color": "#0c51f2"
+      },
+      {
+         "id": 24, 
+         "primary_color": "#3d034c", 
+         "secondary_color": "#f2510c"
+      }, 
+      {
+         "id": 25, 
+         "primary_color": "#4c034c", 
+         "secondary_color": "#f27f0c"
+      }, 
+      {
+         "id": 26, 
+         "primary_color": "#4c033d", 
+         "secondary_color": "#f2ad0c"
+      }
+   ]
+}

@@ -1,0 +1,121 @@
+{
+   "name": "PastelAnalogous", 
+   "category": "Pastel", 
+   "color_pairs": [
+      {
+         "id": 0, 
+         "primary_color": "#ff9999", 
+         "secondary_color": "#66453d"
+      }, 
+      {
+         "id": 8, 
+         "primary_color": "#c1ff99", 
+         "secondary_color": "#45663d"
+      }, 
+      {
+         "id": 9, 
+         "primary_color": "#adff99", 
+         "secondary_color": "#3d663d"
+      }, 
+      {
+         "id": 10, 
+         "primary_color": "#99ff99", 
+         "secondary_color": "#3d6645"
+      }, 
+      {
+         "id": 11, 
+         "primary_color": "#99ffad", 
+         "secondary_color": "#3d664d"
+      }, 
+      {
+         "id": 12, 
+         "primary_color": "#99ffc1", 
+         "secondary_color": "#3d6655"
+      }, 
+      {
+         "id": 13, 
+         "primary_color": "#99ffd6", 
+         "secondary_color": "#3d665d"
+      }, 
+      {
+         "id": 14, 
+         "primary_color": "#99ffea", 
+         "secondary_color": "#3d6666"
+      }, 
+      {
+         "id": 15, 
+         "primary_color": "#99ffff", 
+         "secondary_color": "#3d5d66"
+      }, 
+      {
+         "id": 16, 
+         "primary_color": "#99eaff", 
+         "secondary_color": "#3d5566"
+      }, 
+      {
+         "id": 17, 
+         "primary_color": "#99d6ff", 
+         "secondary_color": "#3d4d66"
+      }, 
+      {
+         "id": 18, 
+         "primary_color": "#99c1ff", 
+         "secondary_color": "#3d4566"
+      }, 
+      {
+         "id": 19, 
+         "primary_color": "#99adff", 
+         "secondary_color": "#3d3d66"
+      }, 
+      {
+         "id": 20, 
+         "primary_color": "#9999ff", 
+         "secondary_color": "#453d66"
+      }, 
+      {
+         "id": 21, 
+         "primary_color": "#ad99ff", 
+         "secondary_color": "#4d3d66"
+      }, 
+      {
+         "id": 22, 
+         "primary_color": "#c199ff", 
+         "secondary_color": "#553d66"
+      }, 
+      {
+         "id": 23, 
+         "primary_color": "#d699ff", 
+         "secondary_color": "#5d3d66"
+      }, 
+      {
+         "id": 24, 
+         "primary_color": "#ea99ff", 
+         "secondary_color": "#653d66"
+      }, 
+      {
+         "id": 25, 
+         "primary_color": "#ff99ff", 
+         "secondary_color": "#663d5d"
+      }, 
+      {
+         "id": 26, 
+         "primary_color": "#ff99ea", 
+         "secondary_color": "#663d55"
+      }, 
+      {
+         "id": 27, 
+         "primary_color": "#ff99d6", 
+         "secondary_color": "#663d4d"
+      }, 
+      {
+         "id": 28, 
+         "primary_color": "#ff99c1", 
+         "secondary_color": "#663d45"
+      }, 
+      {
+         "id": 29, 
+         "primary_color": "#ff99ad", 
+         "secondary_color": "#663d3d"
+      }
+   ]
+}

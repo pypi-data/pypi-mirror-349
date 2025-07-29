@@ -1,0 +1,76 @@
+{
+   "name": "DarkColorContrastAnalogous", 
+   "category": "DarkColorContrast", 
+   "color_pairs": [
+      {
+         "id": 0, 
+         "primary_color": "#4c0303", 
+         "secondary_color": "#f23a0c"
+      }, 
+      {
+         "id": 1, 
+         "primary_color": "#4c1203", 
+         "secondary_color": "#f2680c"
+      }, 
+      {
+         "id": 2, 
+         "primary_color": "#4c2003", 
+         "secondary_color": "#f2960c"
+      }, 
+      {
+         "id": 3, 
+         "primary_color": "#4c2f03", 
+         "secondary_color": "#f2c40c"
+      }, 
+      {
+         "id": 13, 
+         "primary_color": "#034c2f", 
+         "secondary_color": "#0cf2c4"
+      }, 
+      {
+         "id": 14, 
+         "primary_color": "#034c3d", 
+         "secondary_color": "#0cf2f2"
+      }, 
+      {
+         "id": 15, 
+         "primary_color": "#034c4c", 
+         "secondary_color": "#0cc4f2"
+      }, 
+      {
+         "id": 16, 
+         "primary_color": "#033d4c", 
+         "secondary_color": "#0c96f2"
+      }, 
+      {
+         "id": 17, 
+         "primary_color": "#032f4c", 
+         "secondary_color": "#0c68f2"
+      }, 
+      {
+         "id": 21, 
+         "primary_color": "#12034c", 
+         "secondary_color": "#680cf2"
+      }, 
+      {
+         "id": 22, 
+         "primary_color": "#20034c", 
+         "secondary_color": "#960cf2"
+      }, 
+      {
+         "id": 23, 
+         "primary_color": "#2f034c", 
+         "secondary_color": "#c40cf2"
+      },
+      {
+         "id": 27, 
+         "primary_color": "#4c032f", 
+         "secondary_color": "#f20c68"
+      }, 
+      {
+         "id": 28, 
+         "primary_color": "#4c0320", 
+         "secondary_color": "#f20c3a"
+      }
+   ]
+}

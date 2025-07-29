@@ -1,0 +1,96 @@
+{
+   "name": "PastelTetradic", 
+   "category": "Pastel", 
+   "color_pairs": [
+      {
+         "id": 0, 
+         "primary_color": "#ff9999", 
+         "secondary_color": "#51663d"
+      }, 
+      {
+         "id": 1, 
+         "primary_color": "#ffad99", 
+         "secondary_color": "#49663d"
+      }, 
+      {
+         "id": 4, 
+         "primary_color": "#ffea99", 
+         "secondary_color": "#3d6649"
+      }, 
+      {
+         "id": 5, 
+         "primary_color": "#ffff99", 
+         "secondary_color": "#3d6651"
+      }, 
+      {
+         "id": 6, 
+         "primary_color": "#eaff99", 
+         "secondary_color": "#3d6659"
+      }, 
+      {
+         "id": 7, 
+         "primary_color": "#d6ff99", 
+         "secondary_color": "#3d6661"
+      }, 
+      {
+         "id": 8, 
+         "primary_color": "#c1ff99", 
+         "secondary_color": "#3d6166"
+      }, 
+      {
+         "id": 9, 
+         "primary_color": "#adff99", 
+         "secondary_color": "#3d5966"
+      }, 
+      {
+         "id": 10, 
+         "primary_color": "#99ff99", 
+         "secondary_color": "#3d5166"
+      }, 
+      {
+         "id": 11, 
+         "primary_color": "#99ffad", 
+         "secondary_color": "#3d4966"
+      }, 
+      {
+         "id": 12, 
+         "primary_color": "#99ffc1", 
+         "secondary_color": "#3d4166"
+      }, 
+      {
+         "id": 13, 
+         "primary_color": "#99ffd6", 
+         "secondary_color": "#413d66"
+      }, 
+      {
+         "id": 14, 
+         "primary_color": "#99ffea", 
+         "secondary_color": "#493d66"
+      }, 
+      {
+         "id": 15, 
+         "primary_color": "#99ffff", 
+         "secondary_color": "#513d66"
+      }, 
+      {
+         "id": 16, 
+         "primary_color": "#99eaff", 
+         "secondary_color": "#593d66"
+      }, 
+      {
+         "id": 17, 
+         "primary_color": "#99d6ff", 
+         "secondary_color": "#613d66"
+      }, 
+      {
+         "id": 18, 
+         "primary_color": "#99c1ff", 
+         "secondary_color": "#663d61"
+      }, 
+      {
+         "id": 19, 
+         "primary_color": "#99adff", 
+         "secondary_color": "#663d59"
+      }
+   ]
+}

@@ -1,0 +1,21 @@
+{
+   "name": "DarkColorContrastComplimentary", 
+   "category": "DarkColorContrast", 
+   "color_pairs": [
+      {
+         "id": 16, 
+         "primary_color": "#033d4c", 
+         "secondary_color": "#f23a0c"
+      }, 
+      {
+         "id": 17, 
+         "primary_color": "#032f4c", 
+         "secondary_color": "#f2680c"
+      }, 
+      {
+         "id": 18, 
+         "primary_color": "#03204c", 
+         "secondary_color": "#f2960c"
+      }
+   ]
+}

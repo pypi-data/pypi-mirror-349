@@ -1,0 +1,86 @@
+{
+   "name": "DarkNeon", 
+   "category": "DarkNeon", 
+   "color_pairs": [
+      {
+         "id": 0, 
+         "primary_color": "#000000", 
+         "secondary_color": "#f20000"
+      }, 
+      {
+         "id": 1, 
+         "primary_color": "#000000", 
+         "secondary_color": "#f23000"
+      }, 
+      {
+         "id": 2, 
+         "primary_color": "#000000", 
+         "secondary_color": "#f26000"
+      }, 
+      {
+         "id": 3, 
+         "primary_color": "#000000", 
+         "secondary_color": "#f29100"
+      }, 
+      {
+         "id": 4, 
+         "primary_color": "#000000", 
+         "secondary_color": "#f2c100"
+      },
+      {
+         "id": 13, 
+         "primary_color": "#000000", 
+         "secondary_color": "#00f291"
+      }, 
+      {
+         "id": 14, 
+         "primary_color": "#000000", 
+         "secondary_color": "#00f2c1"
+      }, 
+      {
+         "id": 15, 
+         "primary_color": "#000000", 
+         "secondary_color": "#00f2f2"
+      }, 
+      {
+         "id": 16, 
+         "primary_color": "#000000", 
+         "secondary_color": "#00c1f2"
+      }, 
+      {
+         "id": 17, 
+         "primary_color": "#000000", 
+         "secondary_color": "#0091f2"
+      }, 
+      {
+         "id": 18, 
+         "primary_color": "#000000", 
+         "secondary_color": "#0060f2"
+      },
+      {
+         "id": 22, 
+         "primary_color": "#000000", 
+         "secondary_color": "#6000f2"
+      }, 
+      {
+         "id": 23, 
+         "primary_color": "#000000", 
+         "secondary_color": "#9100f2"
+      }, 
+      {
+         "id": 24, 
+         "primary_color": "#000000", 
+         "secondary_color": "#c100f2"
+      },
+      {
+         "id": 28, 
+         "primary_color": "#000000", 
+         "secondary_color": "#f20060"
+      }, 
+      {
+         "id": 29, 
+         "primary_color": "#000000", 
+         "secondary_color": "#f20030"
+      }
+   ]
+}

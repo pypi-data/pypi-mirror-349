@@ -1,0 +1,51 @@
+{
+   "name": "MutedComplimentary", 
+   "category": "Muted", 
+   "color_pairs": [
+      {
+         "id": 2, 
+         "primary_color": "#261001", 
+         "secondary_color": "#3d5566"
+      }, 
+      {
+         "id": 3, 
+         "primary_color": "#261701", 
+         "secondary_color": "#3d4d66"
+      }, 
+      {
+         "id": 8, 
+         "primary_color": "#102601", 
+         "secondary_color": "#553d66"
+      }, 
+      {
+         "id": 9, 
+         "primary_color": "#092601", 
+         "secondary_color": "#5d3d66"
+      }, 
+      {
+         "id": 10, 
+         "primary_color": "#012601", 
+         "secondary_color": "#653d66"
+      }, 
+      {
+         "id": 11, 
+         "primary_color": "#012609", 
+         "secondary_color": "#663d5d"
+      }, 
+      {
+         "id": 17, 
+         "primary_color": "#011726", 
+         "secondary_color": "#664d3d"
+      }, 
+      {
+         "id": 18, 
+         "primary_color": "#011026", 
+         "secondary_color": "#66553d"
+      }, 
+      {
+         "id": 19, 
+         "primary_color": "#010926", 
+         "secondary_color": "#665d3d"
+      }
+   ]
+}

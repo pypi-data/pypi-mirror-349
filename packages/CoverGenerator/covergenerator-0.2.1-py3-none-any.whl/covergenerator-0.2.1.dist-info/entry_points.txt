@@ -1,0 +1,2 @@
+[console_scripts]
+cover-generator = cover_generator:main

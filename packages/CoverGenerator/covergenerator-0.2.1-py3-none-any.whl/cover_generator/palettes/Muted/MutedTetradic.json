@@ -1,0 +1,56 @@
+{
+   "name": "MutedTetradic", 
+   "category": "Muted", 
+   "color_pairs": [
+      {
+         "id": 15, 
+         "primary_color": "#012626", 
+         "secondary_color": "#513d66"
+      }, 
+      {
+         "id": 16, 
+         "primary_color": "#011e26", 
+         "secondary_color": "#593d66"
+      }, 
+      {
+         "id": 17, 
+         "primary_color": "#011726", 
+         "secondary_color": "#613d66"
+      }, 
+      {
+         "id": 18, 
+         "primary_color": "#011026", 
+         "secondary_color": "#663d61"
+      }, 
+      {
+         "id": 19, 
+         "primary_color": "#010926", 
+         "secondary_color": "#663d59"
+      }, 
+      {
+         "id": 20, 
+         "primary_color": "#010126", 
+         "secondary_color": "#663d51"
+      }, 
+      {
+         "id": 21, 
+         "primary_color": "#090126", 
+         "secondary_color": "#663d49"
+      }, 
+      {
+         "id": 22, 
+         "primary_color": "#100126", 
+         "secondary_color": "#663d41"
+      }, 
+      {
+         "id": 23, 
+         "primary_color": "#170126", 
+         "secondary_color": "#66413d"
+      }, 
+      {
+         "id": 24, 
+         "primary_color": "#1e0126", 
+         "secondary_color": "#66493d"
+      }
+   ]
+}
