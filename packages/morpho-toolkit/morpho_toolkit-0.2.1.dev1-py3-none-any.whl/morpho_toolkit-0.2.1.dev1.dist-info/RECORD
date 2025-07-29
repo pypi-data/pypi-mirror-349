@@ -1,0 +1,12 @@
+MORPHO/__init__.py,sha256=TSlwEpPmqc4-JF7CGgmZRbzxEMAwlQrZIrUcgdym5Lg,225
+MORPHO/combineCSV.py,sha256=eIgTpll9oqM7ZC1MXBdjFpjNq7RRT2TvT_XgnHVDHU0,1232
+MORPHO/createConfig.py,sha256=TGg7KNbvb3uXeLbmSHJhjiqYgkFQq8nB9ZtdrwBWSnE,1170
+MORPHO/loadingBar.py,sha256=eIghxN7wQLxVLHJSVSOfxJwcv55SJX54VpSGj8eWEEM,670
+MORPHO/modeSelect.py,sha256=b0Sg0_C9tpy43c6tLO5KOVHJOswnwN6pA0l9sslN71o,9742
+MORPHO/playBeep.py,sha256=7k2KwssfgrcHwFEXoY4omYWk9ebOVLQZJvWNQ3b9_yM,437
+MORPHO/uniqueID.py,sha256=tzTp10VCp1FQftj2ps36BSUgA9LK6McsayyZxc9J6eY,1084
+morpho_toolkit-0.2.1.dev1.dist-info/licenses/LICENSE,sha256=ThGx-Ipel6okwEiQ62AQMXLreHwmGOvXNk4toi5L1gI,1067
+morpho_toolkit-0.2.1.dev1.dist-info/METADATA,sha256=SLCdN2y5jap2zjGEa4Za_fvDFcicMCOE4ldVihAgjAI,3551
+morpho_toolkit-0.2.1.dev1.dist-info/WHEEL,sha256=Nw36Djuh_5VDukK0H78QzOX-_FQEo6V37m3nkm96gtU,91
+morpho_toolkit-0.2.1.dev1.dist-info/top_level.txt,sha256=YS9KbxGrJJXJqmR7t7dE3MD5zKoWsWYmD6z_FrjTtD8,7
+morpho_toolkit-0.2.1.dev1.dist-info/RECORD,,
