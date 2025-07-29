@@ -1,0 +1,11 @@
+sp00kyvectors/__init__.py,sha256=EoRKhkMV_D4s_0_c36EqhRY3MAeuwvWvBTyGiklVh64,84
+sp00kyvectors/core.py,sha256=mFFf29iVibkKZk8vjMiKAAXd9qbsZLBzukW3Kahqzc0,14384
+sp00kyvectors/dataframes.py,sha256=E8pYXa2U0WHMYOUWD7zbWcwHG-YSTRLrsiI-8jp8oOo,3423
+sp00kyvectors/notbooks/dataframe_ex.ipynb,sha256=rI5JgIrXbw6CQ6HZ2O0A2yWhFQez_Nzq1aearMrGag8,1437
+sp00kyvectors/notbooks/dev.ipynb,sha256=rpYyqX-Q6_Pv95yrl58yMnBXWI9qxljXs44DP5r3iUc,131276
+sp00kyvectors/notbooks/sandbox.ipynb,sha256=NzRd9jB5TVIaVvpmuCXUQhBKnZA1e-TS-0A9TNiLQ3o,179941
+sp00kyvectors/utils.py,sha256=SnPTQMJyHVHAAi7yPF2HAxOXBf_2qVFjq6RuP0iujNA,5611
+sp00kyvectors-0.1.7.dist-info/LICENSE,sha256=AA0VZw7Od2PA7Az8RstZY6Ni3CADUr0jvq27ZMKb8vc,1066
+sp00kyvectors-0.1.7.dist-info/METADATA,sha256=ONGj9swttZf45qMnB8iQ9X6qcTyIsIjIBMl7Li5UMeA,6696
+sp00kyvectors-0.1.7.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+sp00kyvectors-0.1.7.dist-info/RECORD,,
