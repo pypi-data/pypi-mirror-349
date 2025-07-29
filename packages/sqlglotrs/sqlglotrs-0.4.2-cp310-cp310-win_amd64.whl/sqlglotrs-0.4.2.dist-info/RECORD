@@ -1,0 +1,5 @@
+sqlglotrs-0.4.2.dist-info/METADATA,sha256=kJ-1IEC32FGT1aDUnK1lUCnGxE0ADvxGGOjcFy39Apg,545
+sqlglotrs-0.4.2.dist-info/WHEEL,sha256=tvMehAuwYswG9dMmwHb6RW7O-9AAAcnneXQ2akCAgrw,96
+sqlglotrs/__init__.py,sha256=tCQ0zs3bLVVL6H7X2DkYps8LctVa1amhR952vNPJoIQ,119
+sqlglotrs/sqlglotrs.cp310-win_amd64.pyd,sha256=CU6PA6ks9av2Ygs_1kxvaa6JmANGccyUMfFymcor5z0,467968
+sqlglotrs-0.4.2.dist-info/RECORD,,
