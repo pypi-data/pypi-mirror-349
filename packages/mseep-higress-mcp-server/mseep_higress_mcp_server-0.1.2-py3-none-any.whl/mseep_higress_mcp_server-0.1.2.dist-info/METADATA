@@ -1,0 +1,24 @@
+Metadata-Version: 2.4
+Name: mseep-higress-mcp-server
+Version: 0.1.2
+Summary: MCP Server for Higress
+Home-page: 
+Author: mseep
+Author-email: mseep <support@skydeck.ai>
+Maintainer-email: mseep <support@skydeck.ai>
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: uvicorn>=0.24.0
+Requires-Dist: starlette>=0.27.0
+Requires-Dist: requests>=2.31.0
+Requires-Dist: mcp[cli]>=1.2.1
+Requires-Dist: openai>=1.61.0
+Requires-Dist: langchain-mcp-adapters>=0.0.5
+Requires-Dist: langgraph>=0.3.16
+Requires-Dist: langchain-openai>=0.3.9
+Requires-Dist: fastmcp>=0.4.1
+Requires-Dist: python-dotenv>=1.0.1
+Dynamic: author
+Dynamic: requires-python
+
+# Package managed by MseeP.ai
