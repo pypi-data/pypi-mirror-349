@@ -1,0 +1,11 @@
+modak-0.2.0.dist-info/METADATA,sha256=oXEeKXhOZmQKUWnsFLX-xQ11otzsiQmxYKEpeIAm29Q,8631
+modak-0.2.0.dist-info/WHEEL,sha256=1jPu3n-qSOALIocQzj1BCK7m566fcDd8aVkx3SXbPGk,125
+modak-0.2.0.dist-info/entry_points.txt,sha256=G-Azfu_HCBaf2Nd2wM3SxYhM8D4g68C169DsfCYXg8k,43
+modak-0.2.0.dist-info/licenses/LICENSE-APACHE,sha256=ZfNfhtepXrahd5fVs0PcjFNTTbVG8onYfEhgfGDn624,11351
+modak-0.2.0.dist-info/licenses/LICENSE-MIT,sha256=YDjd3rMkMY7xW0k438LWlYjA_p0_GUy1X8bDTZqCtYg,1077
+modak/__init__.py,sha256=0fZusE9VnI9TAGAgeN_hvJmrmmDHjYDLyExLl4CVd64,4785
+modak/__main__.py,sha256=UXwfQ-62U0jhyxMGsLym5jxRTUO-kjn2NR7XkX-ve3A,658
+modak/graph.py,sha256=9fjAp8k1ECRCGoUUCa8kpCDWd49qOCQdKfKYT5DThDc,9325
+modak/modak.cpython-313-i386-linux-gnu.so,sha256=HJdDgTN4Nu3Q14FRAG0iULZRS0WtXEgowV-R3CSw7o0,943192
+modak/monitor.py,sha256=KbBB40TCvhvof2U2qFUk0HV5ttTmgVst0f2zPDr114A,8059
+modak-0.2.0.dist-info/RECORD,,
