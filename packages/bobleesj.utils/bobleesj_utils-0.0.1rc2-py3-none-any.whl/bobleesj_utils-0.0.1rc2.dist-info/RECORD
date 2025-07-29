@@ -1,0 +1,15 @@
+bobleesj/__init__.py,sha256=xlhQGWj_J0miSBVbo6FeIIhFqLj0ouqbixsoR8TDJcg,517
+bobleesj/utils/__init__.py,sha256=ThoRXTROLJGNvhAWmjnxk8uS-3YUVU3tGWuM3RPA-8U,620
+bobleesj/utils/numbers.py,sha256=ZR6hgA4KRDBSY0CjGm2OH-DrFXSD9b59xTzczTz1-GY,321
+bobleesj/utils/version.py,sha256=w0RSh5JU9iQOGGhqaRyPie9IWvSv46HqdPh_5nhHAZk,745
+bobleesj/utils/data/db/oliynyk-elemental-property-list.xlsx,sha256=HqNTUuTfBu4A1FEnkipNEgPAgW926Pysa4c-vqkpBYw,30360
+bobleesj/utils/parsers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bobleesj/utils/parsers/formula.py,sha256=ztnQm2dB1rzZAVJkyw0j_QmMJHVpPtt7ZMPSALK0Ink,12197
+bobleesj/utils/sources/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bobleesj/utils/sources/oliynyk.py,sha256=AQPn2D77izbkdPk_-JuAq3zJRZAsu742HtTNincICcY,5928
+bobleesj_utils-0.0.1rc2.dist-info/licenses/AUTHORS.rst,sha256=ipbwr94eteXeMvfyR0HcJpqStkzmESr0cEL0-kTY4GU,142
+bobleesj_utils-0.0.1rc2.dist-info/licenses/LICENSE.rst,sha256=7XlQBLkShCXWXeahAHIuONk-OxnhpvH2JQjUmbFiIXs,1521
+bobleesj_utils-0.0.1rc2.dist-info/METADATA,sha256=lVxecs72qVWcmDR4q1Arr4THR-0QdErfgf-mhfBR1JU,5270
+bobleesj_utils-0.0.1rc2.dist-info/WHEEL,sha256=Nw36Djuh_5VDukK0H78QzOX-_FQEo6V37m3nkm96gtU,91
+bobleesj_utils-0.0.1rc2.dist-info/top_level.txt,sha256=IZ9bjuuRnQwCu704XtyGij3w7uXe72UrbFvZEiK3cIo,9
+bobleesj_utils-0.0.1rc2.dist-info/RECORD,,
