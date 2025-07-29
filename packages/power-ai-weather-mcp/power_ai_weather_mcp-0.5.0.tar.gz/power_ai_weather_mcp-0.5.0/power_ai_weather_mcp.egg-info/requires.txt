@@ -1,0 +1,8 @@
+mcp>=1.8.1
+python-dotenv>=0.19.0
+requests>=2.26.0
+urllib3>=1.26.0
+pydantic>=1.8.2
+uvicorn>=0.15.0
+uuid>=1.30
+power-ai-common>=0.0.1

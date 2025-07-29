@@ -1,0 +1,2 @@
+[console_scripts]
+power-ai-weather-mcp = power_ai.weather_mcp.main:main

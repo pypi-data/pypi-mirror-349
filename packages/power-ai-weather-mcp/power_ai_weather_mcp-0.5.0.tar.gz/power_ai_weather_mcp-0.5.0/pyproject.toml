@@ -1,0 +1,37 @@
+[project]
+name = "power-ai-weather-mcp"
+version = "0.5.0"
+description = "用以访问基于位置的天气数据，包括实况天气、逐小时预报、空气质量AQI，灾害预警、分钟级降水、生活建议、台风等天气数据服务"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+dependencies = [
+    "mcp>=1.8.1",
+    "python-dotenv>=0.19.0",
+    "requests>=2.26.0",
+    "urllib3>=1.26.0",
+    "pydantic>=1.8.2",
+    "uvicorn>=0.15.0",
+    "uuid>=1.30",
+    "power-ai-common>=0.0.1",
+]
+
+[tool.uv]
+dev-dependencies = [
+    "isort>=6.0.1",
+    "mypy>=1.9.0",
+    "pre-commit>=4.1.0",
+    "pyright>=1.1.389",
+    "pytest>=8.3.3",
+    "pytest-asyncio>=0.23.0",
+    "ruff>=0.8.0",
+]
+
+[project.scripts]
+power-ai-weather-mcp = "power_ai.weather_mcp.main:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+python_functions = "test_*"
+asyncio_mode = "auto"
