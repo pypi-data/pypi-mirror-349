@@ -1,0 +1,3 @@
+argparse
+biopython==1.85
+pandas==2.2.3
