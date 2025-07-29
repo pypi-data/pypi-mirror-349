@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: mseep-minecraft-docker-mcp
+Version: 0.1.2
+Summary: Model Context Protocol Server for Minecraft Administration
+Home-page: 
+Author: mseep
+Author-email: mseep <support@skydeck.ai>
+Maintainer-email: mseep <support@skydeck.ai>
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: httpx>=0.28.1
+Requires-Dist: mcp[cli]>=1.2.1
+Dynamic: author
+Dynamic: requires-python
+
+# Package managed by MseeP.ai
