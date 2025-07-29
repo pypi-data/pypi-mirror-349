@@ -1,0 +1,2 @@
+[console_scripts]
+runc = runc.runc:main

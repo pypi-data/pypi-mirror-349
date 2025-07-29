@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: runcx
+Version: 0.1
+Summary: Simple CLI tool to run binaries globally
+Author: Cansila
+Requires-Python: >=3.6
+Dynamic: author
+Dynamic: requires-python
+Dynamic: summary
