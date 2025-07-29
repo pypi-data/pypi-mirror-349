@@ -1,0 +1,17 @@
+betty_nginx/__init__.py,sha256=Y5PpB1Ww3Uh3Fkj0829xMoPbkxl7cVt_-HJ04u5rNJQ,2277
+betty_nginx/_cli.py,sha256=Hf5k9K16K2ii52za48Nncypyyx_fY2X48LXu-Yjv4VA,1720
+betty_nginx/artifact.py,sha256=7v2oF6Vgbac6kB6Wn3U35kHHXoDU5-t-JwSjzVVl3Ls,2693
+betty_nginx/config.py,sha256=g0Hr-ugLsZACVE7Jzj76Q-KSo8of3aorx_qwZHmDU18,2239
+betty_nginx/docker.py,sha256=FRxAXeeyOghlL1Xhm_I0J_zZwHBO7YUVn92snlnVqnY,2680
+betty_nginx/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+betty_nginx/serve.py,sha256=orl5S6l5iDPWAD3LQ0kNMRWZUmj66AJEp7WeOYrnNUk,3901
+betty_nginx/assets/Dockerfile,sha256=Pmm7P1fanuxXgs7bDMA7tgY9CjpugNKc_frYlXcalNg,201
+betty_nginx/assets/content_negotiation.lua,sha256=6nSHuo1LWD_VC0y9iMggd_dmekpoX-f3hriDZCiIVRg,1812
+betty_nginx/assets/nginx.conf.j2,sha256=taxoRITNTpz5EFj66q8JzRLaAwofFxTmPyebdKF2mq0,4772
+betty_nginx/assets/locale/betty.pot,sha256=f4eQB5eQ5SmWb2ssMrTjTv3_tzBR7Eb18zWMQeM_dbg,821
+betty_nginx-0.2.0a2.dist-info/licenses/LICENSE.txt,sha256=uXvVf2nwKu6QW4W_2GjOC6pCUZMHUR6Y8-qAYWPAGiA,32453
+betty_nginx-0.2.0a2.dist-info/METADATA,sha256=MDvmqErZyZYAfAtJjJ_ujE-wfdT5uZ4G3RHFeZIttEQ,41081
+betty_nginx-0.2.0a2.dist-info/WHEEL,sha256=Nw36Djuh_5VDukK0H78QzOX-_FQEo6V37m3nkm96gtU,91
+betty_nginx-0.2.0a2.dist-info/entry_points.txt,sha256=XnsXuzHnQFBVYnLhQCC9PGWL2RKfBKYsQoNme1Tt9KI,103
+betty_nginx-0.2.0a2.dist-info/top_level.txt,sha256=He2-dnGkXAPvhh8qztH4tFBld_8q0SqXmAbF3n2d7Oo,28
+betty_nginx-0.2.0a2.dist-info/RECORD,,
