@@ -1,0 +1,22 @@
+[project]
+name = "mseep-stk-mcp"
+version = "0.1.1"
+description = "STK-MCP, an MCP server allowing LLMs to interact with Ansys/AGI STK - Digital Mission Engineering Software"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "mcp[cli]>=1.6.0",
+]
+authors = [
+    { name = "mseep", email = "support@skydeck.ai" },
+]
+maintainers = [
+    { name = "mseep", email = "support@skydeck.ai" },
+]
+
+[build-system]
+requires = [
+    "setuptools>=42",
+    "wheel",
+]
+build-backend = "setuptools.build_meta"
