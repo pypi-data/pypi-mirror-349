@@ -1,0 +1,5 @@
+setup.py
+gpt_rag.egg-info/PKG-INFO
+gpt_rag.egg-info/SOURCES.txt
+gpt_rag.egg-info/dependency_links.txt
+gpt_rag.egg-info/top_level.txt
