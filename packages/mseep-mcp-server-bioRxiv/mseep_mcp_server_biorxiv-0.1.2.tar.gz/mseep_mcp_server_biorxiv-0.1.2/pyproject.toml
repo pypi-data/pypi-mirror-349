@@ -1,0 +1,24 @@
+[project]
+name = "mseep-mcp-server-bioRxiv"
+version = "0.1.2"
+description = "An MCP server for searching and retrieving articles from bioRxiv"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp[cli]>=1.4.1",
+    "requests>=2.25.1",
+    "beautifulsoup4>=4.9.3",
+]
+authors = [
+    { name = "mseep", email = "support@skydeck.ai" },
+]
+maintainers = [
+    { name = "mseep", email = "support@skydeck.ai" },
+]
+
+[build-system]
+requires = [
+    "setuptools>=42",
+    "wheel",
+]
+build-backend = "setuptools.build_meta"
