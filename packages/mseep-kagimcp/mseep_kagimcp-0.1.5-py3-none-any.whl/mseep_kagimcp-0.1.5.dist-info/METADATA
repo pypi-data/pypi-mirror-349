@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: mseep-kagimcp
+Version: 0.1.5
+Summary: Kagi MCP server
+Home-page: 
+Author: mseep
+Author-email: mseep <support@skydeck.ai>
+Maintainer-email: mseep <support@skydeck.ai>
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: kagiapi~=0.2.1
+Requires-Dist: mcp[cli]~=1.6.0
+Requires-Dist: pydantic~=2.10.3
+Dynamic: author
+Dynamic: license-file
+Dynamic: requires-python
+
+# Package managed by MseeP.ai
