@@ -1,0 +1,9 @@
+LICENCE
+README.md
+pyproject.toml
+setup.py
+mseep_upsonic.egg-info/PKG-INFO
+mseep_upsonic.egg-info/SOURCES.txt
+mseep_upsonic.egg-info/dependency_links.txt
+mseep_upsonic.egg-info/requires.txt
+mseep_upsonic.egg-info/top_level.txt
