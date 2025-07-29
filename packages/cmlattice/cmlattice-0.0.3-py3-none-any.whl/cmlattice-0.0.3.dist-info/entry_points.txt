@@ -1,0 +1,2 @@
+[console_scripts]
+cmlattice = cmlattice.cli:main
