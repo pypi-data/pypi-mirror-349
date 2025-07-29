@@ -1,0 +1,52 @@
+# Environment and editor files
+.env
+node_modules
+.DS_Store
+.idea/
+.vscode/
+
+# Logs and data
+/logs/
+/output/
+/data/
+/knowledge/
+/chroma_db/
+archive/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Python distribution / packaging
+dist/
+build/
+*.egg-info/
+*.egg
+.eggs/
+.pytest_cache/
+.tox/
+.coverage
+coverage.xml
+*.cover
+MANIFEST
+
+# Python virtual environments
+.venv/
+venv/
+ENV/
+env/
+.python-version
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Allow specific __init__.py files but ignore others
+__init__.py
+!src/crewai_mcp_toolbox/__init__.py
+
+# Lock files
+*.lock

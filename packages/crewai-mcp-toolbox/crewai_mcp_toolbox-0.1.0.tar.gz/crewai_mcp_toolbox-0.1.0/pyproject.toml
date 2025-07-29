@@ -1,0 +1,73 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "crewai-mcp-toolbox"  # Added hyphen here
+version = "0.1.0"
+description = "CrewAI integration for the Model Context Protocol (MCP)"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {file = "LICENSE"}
+authors = [
+    {name = "MCP Toolbox Authors"}
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "crewai>=0.28.0",
+    "crewai-tools>=0.1.0",
+    "mcp-python-client>=0.1.0",
+    "pydantic>=2.0.0",
+    # For MCP server via filesystem
+    "modelcontextprotocol>=0.1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.23.0",
+    "mypy>=1.0.0",
+    "black>=23.0.0",
+    "isort>=5.12.0",
+    "flake8>=6.0.0",
+]
+test = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.23.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/openbridge/mcp-toolbox"
+"Bug Tracker" = "https://github.com/openbridge/mcp-toolbox/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/crewai_mcp_toolbox"]
+
+[tool.black]
+line-length = 79
+target-version = ["py39", "py310", "py311", "py312"]
+
+[tool.isort]
+profile = "black"
+line_length = 79
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+
+[[tool.mypy.overrides]]
+module = "tests.*"
+disallow_untyped_defs = false
+disallow_incomplete_defs = false
