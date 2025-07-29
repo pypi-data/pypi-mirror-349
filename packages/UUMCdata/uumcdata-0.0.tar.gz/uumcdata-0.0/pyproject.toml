@@ -1,0 +1,35 @@
+[build-system]
+requires = ["flit_core >= 3.12.0, <4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "UUMCdata"
+description = """Unitless, Unrestricted, Markov-Consistent Random SCM and Data Generation."""
+authors = [
+    {name = "Rebecca J. Herman"},
+]
+license = {text = "GNU General Public License v3.0"}
+keywords = [
+  "benchmark",
+  "data generation",
+  "causal discovery",
+]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering",
+  "Topic :: Scientific/Engineering :: Mathematics",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+  "License :: OSI Approved :: GNU General Public License (GPL)",
+  "Intended Audience :: Science/Research",
+]
+dependencies = [
+  "numpy",
+  "mpmath",
+  "sympy",
+  "matplotlib", 
+  "daosim",
+  "seaborn",
+  "pandas",
+]
+readme = "README.md"
+version = "0.0"
