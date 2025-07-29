@@ -1,0 +1,17 @@
+mantarix_web/__init__.py,sha256=V_Vqaz6Lh3Bcp2RqPJWMSzM-XnOCmd8HP2RIgsX-mbk,274
+mantarix_web/fastapi/__init__.py,sha256=VLZhE5OaitZYzZcGcATPdNGLF-7PCrhsMjfEsmgG1ZA,368
+mantarix_web/fastapi/app.py,sha256=LJtRhuxLJPkPRvW0zsuNhtWgdYqAbEYfiuAwxpKr7RE,5120
+mantarix_web/fastapi/mantarix_app.py,sha256=N_jGsbWVk1Enzp88Q2r3Lf72yY3qMGQ1VVi78Ka0JGw,17479
+mantarix_web/fastapi/mantarix_app_manager.py,sha256=F_3ou-WbN3shpDQr0mmnHZTzVntYjNmMavBSWH2NZug,6367
+mantarix_web/fastapi/mantarix_fastapi.py,sha256=IE0hNOPpN8f26t0TC5jVFyY1TMrBKCF8YI1LuJLDekE,4827
+mantarix_web/fastapi/mantarix_oauth.py,sha256=84lFIHv1Jj1jAtt2MWmGJF5PJvKg_uzp12v0Sz1v8-w,2191
+mantarix_web/fastapi/mantarix_static_files.py,sha256=yQKe4mcPBcePa3VLtJ8Ivf8IrC5dJAifPtRzdosRvKk,7561
+mantarix_web/fastapi/mantarix_upload.py,sha256=rSk5PegYe9dwdHHopds3pNKjuiEBA4_cNWZkeKAGWbg,3242
+mantarix_web/fastapi/oauth_state.py,sha256=HSYD5aR5iIrYNgdqXVue_PlrPOf0RWAT_0xQB4g5sOY,319
+mantarix_web/fastapi/serve_fastapi_web_app.py,sha256=83yvRbiTk2DNpcMP7EW_oahMGVXiV7WzJVXFehPq4W4,2434
+mantarix_web/patch_index.py,sha256=B0chLI2BNom1XL7NK2MZXbM0tfp-NvM38P0hDSzn7HE,3566
+mantarix_web/uploads.py,sha256=ZBmYXYKgAXVN_sHwvWRYNfBF-i5L7AlYj7898c-zLKw,1649
+mantarix_web/version.py,sha256=OPXSG3I4ieD3a4KFzXGSj6N7Yl7NjaJ9jlJEnhTS9cM,19
+mantarix_web-1.0.0.dist-info/METADATA,sha256=bIz247Cr3JjQk5_39L9Xqmj-3VBSeJsTXlZPG3yHihQ,779
+mantarix_web-1.0.0.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+mantarix_web-1.0.0.dist-info/RECORD,,
