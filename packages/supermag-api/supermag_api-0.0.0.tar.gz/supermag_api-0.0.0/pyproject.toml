@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+include-package-data = true
+
+[project]
+name = "supermag_api"
+version = "0.0.0"
+authors = [
+    {name = "Eric Winter", email = "eric.winter@jhuapl.edu"},
+]
+description = "Python software to fetch SuperMag data"
+readme = "README.md"
+requires-python = ">=3.8"
+keywords = ["SUPERMAG"]
+license = {text = "BSD 3-Clause"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "certifi",
+    "pandas",
+]
