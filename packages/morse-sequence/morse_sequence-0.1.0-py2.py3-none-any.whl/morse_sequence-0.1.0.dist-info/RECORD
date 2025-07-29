@@ -1,0 +1,16 @@
+morse_sequence/__init__.py,sha256=Wy_P8YEwhOM_51qtpjMcZPkxde3GtjMF8dkaGsZyXDg,41
+morse_sequence/decreasing.py,sha256=Q53t2k1eys2b_m1uoLq63ek_aTBFj4bliMdB4YT5FrQ,4093
+morse_sequence/increasing.py,sha256=VIyrExw6dmZGCpg2guFktexKd5VmB6ADFa6lWCWUnGE,4089
+morse_sequence/max.py,sha256=dQESxs4KuLRSRFw8WSTmvotUO6PkDic0623Z9jk2kFo,3977
+morse_sequence/min.py,sha256=2PrAYePGnJW7jr-1aUP7zJ9cjHIT4vVXVMgxm3Md8_Q,3750
+morse_sequence/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+morse_sequence/tests/example.py,sha256=eI-knBrIPlBTeTloF4b7cQ8QAqx5zWQxjyNYcPatIzI,895
+morse_sequence/tests/test_decreasing.py,sha256=48_XSLz3y7a8Ngfc9xepGv8fL3m11XcQ9rIPBZ5p7yk,816
+morse_sequence/tests/test_increasing.py,sha256=69sF_nqHqs1Bmngc5Rbyluouq6bz1w8NZ7ybGg9J--o,1114
+morse_sequence/tests/test_max.py,sha256=-5qe00xIUxXuCqUWoXaFpa0sI71d8Vsg-vEvIREgJUs,877
+morse_sequence/tests/test_min.py,sha256=JYFz-mIsE3e0i0mr3XztniYqAu9SKhoBiTDVSyX5etU,898
+morse_sequence/tests/timer.py,sha256=9WL4xwqNHAFNrghnJ51mHUOSD-OUCcJ_js9ZmCa0Tdo,6787
+morse_sequence-0.1.0.dist-info/METADATA,sha256=PcTTKPEeVqyzg3hjxmWcOsWt4wlI5H2_VuRtgwosm0U,2982
+morse_sequence-0.1.0.dist-info/WHEEL,sha256=_z0Kb-VmhLeNt2nZ-PsoQBjD25rP0tBwgAyRYD7oTKI,109
+morse_sequence-0.1.0.dist-info/top_level.txt,sha256=GbcfKcfBQzd883ZBw47HyQSN1i5nNoYV50lymOpiRuA,15
+morse_sequence-0.1.0.dist-info/RECORD,,
