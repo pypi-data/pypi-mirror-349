@@ -1,0 +1,10 @@
+portpicker
+pyyaml
+
+[:platform_system == "Windows"]
+pywin32
+
+[testing]
+mock
+pytest
+pytz
