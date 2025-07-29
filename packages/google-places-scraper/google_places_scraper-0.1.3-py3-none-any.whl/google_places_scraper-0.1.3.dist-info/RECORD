@@ -1,0 +1,9 @@
+google_places_scraper/__init__.py,sha256=BIyKvHWU0T96GIz-fUjy6OlLdoV2RG-ES5ctLditR-4,41
+google_places_scraper/cli.py,sha256=LGtAgw0m3LdtawLmv-OFBFfpFquLuO2Z75HBc3x1fgc,824
+google_places_scraper/scraper.py,sha256=kEur9yQv4r0hTi9EGF8SYSTyHCYumtT09qvfri34xXo,7500
+google_places_scraper-0.1.3.dist-info/licenses/LICENSE,sha256=CtBLYLi8eKxruC0scEJw_S5RmZIA-aZC05r5aFnDsTE,1097
+google_places_scraper-0.1.3.dist-info/METADATA,sha256=V-m3SDyK3BB4mIzsOuhe7uXouF55bwuJMoEKcdsKvnA,3009
+google_places_scraper-0.1.3.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+google_places_scraper-0.1.3.dist-info/entry_points.txt,sha256=9cTYfMjHgQoIt1ALYSJ5zioV7nAcVGuPLR-F6Hbs64I,73
+google_places_scraper-0.1.3.dist-info/top_level.txt,sha256=kgGHA8SQwEnVC_bRJZbd_CQcsCfwJUloM0WFABhca0k,22
+google_places_scraper-0.1.3.dist-info/RECORD,,
