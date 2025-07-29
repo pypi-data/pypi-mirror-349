@@ -1,0 +1,21 @@
+[project]
+name = "mcp-redis-airnet"
+version = "1.0.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "atmas", email = "tst@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "mcp[cli]>=1.4.1",
+    "pydantic-settings>=2.8.1",
+    "redis>=5.2.1",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project.scripts]
+mcp-server-redis = "mcp_server_redis:main"
