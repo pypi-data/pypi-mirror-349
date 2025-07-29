@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: controller-reader
+Version: 0.1.4
+Summary: Add your description here
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: pygame>=2.6.1
+
+# CONTROLLER
+
+This library lets you deal with controller inputs easily via callbacks or conditional logic.
