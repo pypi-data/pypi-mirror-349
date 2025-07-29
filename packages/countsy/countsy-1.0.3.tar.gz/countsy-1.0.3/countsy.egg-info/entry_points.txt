@@ -1,0 +1,2 @@
+[console_scripts]
+countsy = countsy.cli:main
