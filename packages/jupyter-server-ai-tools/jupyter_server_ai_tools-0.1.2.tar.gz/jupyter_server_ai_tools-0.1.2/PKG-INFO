@@ -1,0 +1,186 @@
+Metadata-Version: 2.4
+Name: jupyter_server_ai_tools
+Version: 0.1.2
+Project-URL: Home, https://github.com/Abigayle-Mercer/jupyter-server-ai-tools
+Author-email: Abigayle Mercer <abigaylemercer@gmail.com>
+License: BSD 3-Clause License
+        
+        Copyright (c) 2025, Abigayle Mercer
+        All rights reserved.
+        
+        Redistribution and use in source and binary forms, with or without
+        modification, are permitted provided that the following conditions are met:
+        
+        1. Redistributions of source code must retain the above copyright notice, this
+           list of conditions and the following disclaimer.
+        
+        2. Redistributions in binary form must reproduce the above copyright notice,
+           this list of conditions and the following disclaimer in the documentation
+           and/or other materials provided with the distribution.
+        
+        3. Neither the name of the copyright holder nor the names of its
+           contributors may be used to endorse or promote products derived from
+           this software without specific prior written permission.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+        AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+        IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+        DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+        FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+        DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+        SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+        CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+        OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+        OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+License-File: LICENSE
+Keywords: Extension,Jupyter
+Classifier: Framework :: Jupyter
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.8
+Requires-Dist: jupyter-server<3,>=1.6
+Requires-Dist: pydantic>=1.10
+Provides-Extra: lint
+Requires-Dist: black>=22.6.0; extra == 'lint'
+Requires-Dist: mdformat-gfm>=0.3.5; extra == 'lint'
+Requires-Dist: mdformat>=0.7.16; extra == 'lint'
+Requires-Dist: mypy>=0.990; extra == 'lint'
+Requires-Dist: pydantic>=1.10; extra == 'lint'
+Requires-Dist: ruff>=0.0.156; extra == 'lint'
+Requires-Dist: types-jsonschema; extra == 'lint'
+Provides-Extra: test
+Requires-Dist: pytest-asyncio>=0.21; extra == 'test'
+Requires-Dist: pytest-jupyter[server]>=0.6; extra == 'test'
+Requires-Dist: pytest>=7.0; extra == 'test'
+Description-Content-Type: text/markdown
+
+# 🧠 jupyter-server-ai-tools
+
+[![CI](https://github.com/Abigayle-Mercer/jupyter-server-ai-tools/actions/workflows/ci.yml/badge.svg)](https://github.com/Abigayle-Mercer/jupyter-server-ai-tools/actions/workflows/ci.yml)
+
+A Jupyter Server extension for discovering and aggregating callable tools from other extensions.
+
+This project provides a structured way for extensions to declare tools using `ToolDefinition` objects, and for agents or other consumers to retrieve those tools — with optional metadata validation.
+
+______________________________________________________________________
+
+## ✨ Features
+
+- ✅ Simple, declarative `ToolDefinition` API for registering callable tools
+- ✅ Automatic metadata inference from Python function signature and docstring
+- ✅ `find_tools()` for discovering tools from all installed Jupyter server extensions
+- ✅ `run_tools()` for executing tools from structured call objects (supports sync, async, and multiple tool call formats)
+- ✅ Built-in support for OpenAI, Anthropic, MCP, and Vercel tool call schemas
+- ✅ Custom parser support for user-defined tool call formats
+- ✅ Clean separation between tool metadata and callable execution
+- ✅ Optional JSON Schema validation to enforce tool structure at definition time
+
+______________________________________________________________________
+
+## 📦 Install
+
+```bash
+pip install jupyter_server_ai_tools
+```
+
+To install for development:
+
+```bash
+git clone https://github.com/Abigayle-Mercer/jupyter-server-ai-tools.git
+cd jupyter-server-ai-tools
+pip install -e ".[lint,test]"
+```
+
+## Usage
+
+#### Expose tools in your own extensions:
+
+```python
+from jupyter_server_ai_tools.models import ToolDefinition
+
+def greet(name: str):
+    """Say hello to someone."""
+    return f"Hello, {name}!"
+
+def jupyter_server_extension_tools():
+    return [ToolDefinition(callable=greet)]
+```
+
+#### Discover tools from all extensions:
+
+```python
+from jupyter_server_ai_tools.tool_registry import find_tools
+
+tools = find_tools(extension_manager)
+```
+
+#### Execute tools via structured calls:
+
+The `run_tools()` function allows dynamic execution of tool calls using a standard format such as `"mcp"`, `"openai"`, `"anthropic"`, or `"vercel"`:
+
+```python
+from jupyter_server_ai_tools.tool_registry import run_tools
+
+tool_calls = [
+    {"name": "greet", "input": {"name": "Abigayle"}}
+]
+
+results = await run_tools(
+    extension_manager=serverapp.extension_manager,
+    tool_calls=tool_calls,
+    parse_fn="mcp"
+)
+```
+
+## 🧪 Running Tests
+
+```bash
+pip install -e ".[test]"
+pytest
+```
+
+## 🧼 Linting and Formatting
+
+```bash
+pip install -e ".[lint]"
+bash .github/workflows/lint.sh
+```
+
+## Tool Output Example
+
+Given the `greet()` tool above, `find_tools(return_metadata_only=True)` will return:
+
+```json
+[
+  {
+    "name": "greet",
+    "description": "Say hello to someone.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" }
+      },
+      "required": ["name"]
+    }
+  }
+]
+```
+
+## Impact
+
+This system enables:
+
+- Extension authors to register tools with minimal effort
+- Agent builders to dynamically discover and bind tools
+- Compatibility with multiple tool call formats, including OpenAI, Anthropic, MCP, and Vercel
+
+## 🧹 Uninstall
+
+```bash
+pip uninstall jupyter_server_ai_tools
+```
