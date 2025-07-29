@@ -1,0 +1,84 @@
+name: tests
+
+on:
+  push:
+    branches:
+      - '*'
+    tags:
+      - '*'
+  pull_request:
+  schedule:
+  # Runs at 6:10am UTC on Monday
+    - cron: '10 6 * * 1'
+
+
+jobs:
+  linting:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: neuroinformatics-unit/actions/lint@v2
+
+  manifest:
+    name: Check Manifest
+    runs-on: ubuntu-latest
+    steps:
+      - uses: neuroinformatics-unit/actions/check_manifest@v2
+
+  test:
+    needs: [linting, manifest]
+    name: ${{ matrix.os }} py${{ matrix.python-version }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        # Run all supported Python versions on linux
+        python-version: ["3.10", "3.11", "3.12"]
+        os: [ubuntu-latest]
+        # Include one windows and ARM/Intel macos run
+        include:
+        - os: macos-13 # Intel Mac
+          python-version: "3.12"
+        - os: macos-latest # ARM Mac
+          python-version: "3.12"
+        - os: windows-latest
+          python-version: "3.11"
+
+    steps:
+      # Run tests
+      - uses: neuroinformatics-unit/actions/test@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+
+
+      - name: Notify slack on scheduled failure
+        if: failure() && github.event_name == 'schedule'
+        uses: ravsamhq/notify-slack-action@v2
+        with:
+          status: ${{ job.status }} # required
+          notify_when: 'failure'
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_NOTIFYBOT_WEBHOOK_URL }} # required
+
+
+  build_sdist_wheels:
+    name: Build source distribution
+    needs: [test]
+    if: github.event_name == 'push' && github.ref_type == 'tag'
+    runs-on: ubuntu-latest
+    steps:
+    - uses: neuroinformatics-unit/actions/build_sdist_wheels@v2
+
+
+  upload_all:
+    name: Publish build distributions
+    needs: [build_sdist_wheels]
+    if: github.event_name == 'push' && github.ref_type == 'tag'
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/download-artifact@v4
+      with:
+        name: artifact
+        path: dist
+    - uses: pypa/gh-action-pypi-publish@release/v1
+      with:
+        user: __token__
+        password: ${{ secrets.BTB_UPLOAD_API_KEY }}
