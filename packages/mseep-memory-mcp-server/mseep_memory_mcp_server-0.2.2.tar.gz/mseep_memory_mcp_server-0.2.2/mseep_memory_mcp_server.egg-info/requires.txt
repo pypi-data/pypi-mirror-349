@@ -1,0 +1,11 @@
+aiofiles
+loguru>=0.7.3
+mcp[cli]>=1.2.0
+memory-mcp-server
+ruff>=0.9.4
+thefuzz[speedup]>=0.20.0
+
+[test]
+pytest
+pytest-asyncio
+pytest-cov
