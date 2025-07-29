@@ -1,0 +1,10 @@
+datachampsai/__init__.py,sha256=4mj67JRndCSttY6pMLkhAWY5VjkPcdiIh9CGYPHyfSI,621
+datachampsai/codex.py,sha256=pWybKtnFvC_dsDsBAz1wMx6UIT_Kz7oQ4palg4q9xJo,4855
+datachampsai/datachampsai.py,sha256=mHT8hp1-V9KqGzVgDnCLc0wTZQ7noP16Evqk8uyFkJ8,5286
+datachampsai/sqlcoder.py,sha256=5PMZXsjB7IofH_5cFECSYxnAk8_SDB0wS0yCFQsQwQE,8180
+datachampsai-0.1.2.dist-info/licenses/LICENSE,sha256=jdxLnaS--O4tYAJam_fvmPaXESDNxSDz4mVCqKVf474,1075
+datachampsai-0.1.2.dist-info/METADATA,sha256=g9FqG8S-Alad-b-Ppbb8flaRmp6yHOMpu6THDZtqo48,1401
+datachampsai-0.1.2.dist-info/WHEEL,sha256=Nw36Djuh_5VDukK0H78QzOX-_FQEo6V37m3nkm96gtU,91
+datachampsai-0.1.2.dist-info/entry_points.txt,sha256=L-4GMbj_7xS1Om8sZ7wgZ3jl1bJ-hDbANAx2Zc5Xrs8,63
+datachampsai-0.1.2.dist-info/top_level.txt,sha256=Y9rIoMgYOzKUW8Tyfc3mZLORNWjJEbsZebYOkjxVgzg,13
+datachampsai-0.1.2.dist-info/RECORD,,
