@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.cfg
+ldqn97_mysql_mcp/__init__.py
+ldqn97_mysql_mcp/server.py
+ldqn97_mysql_mcp_server.egg-info/PKG-INFO
+ldqn97_mysql_mcp_server.egg-info/SOURCES.txt
+ldqn97_mysql_mcp_server.egg-info/dependency_links.txt
+ldqn97_mysql_mcp_server.egg-info/entry_points.txt
+ldqn97_mysql_mcp_server.egg-info/top_level.txt
