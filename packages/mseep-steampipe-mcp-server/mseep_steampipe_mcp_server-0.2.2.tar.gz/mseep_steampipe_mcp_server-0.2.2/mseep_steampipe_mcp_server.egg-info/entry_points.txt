@@ -1,0 +1,2 @@
+[console_scripts]
+steampipe-mcp-server = steampipe_mcp_server.cli:main
