@@ -1,0 +1,10 @@
+ai
+app
+client
+dist
+docs
+examples
+mcp_solana
+scripts
+test
+workspace
