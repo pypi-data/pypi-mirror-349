@@ -1,0 +1,55 @@
+from plavchan import __cuda__plavchan_pgram
+
+def plavchan_periodogram(mags, times, trial_periods, width):
+    """
+    Calculate the Plavchan periodogram using CUDA GPU acceleration.
+    
+    Parameters
+    ----------
+    mags : list of lists of floats
+        Magnitude measurements for each object
+    times : list of lists of floats
+        Time measurements for each object
+    trial_periods : list of floats
+        Trial periods to calculate the periodogram for. Should not include 0.
+    width : float
+        The phase width parameter
+        
+    Returns
+    -------
+    list of lists of floats
+        Periodogram values for each object and trial period
+    """
+
+    # ensure that all inputs are lists
+    if not isinstance(mags, list) or not all(isinstance(m, list) for m in mags):
+        raise ValueError("mags must be a list of lists")
+    if not isinstance(times, list) or not all(isinstance(t, list) for t in times):
+        raise ValueError("times must be a list of lists")
+    if not isinstance(trial_periods, list):
+        raise ValueError("trial_periods must be a list")
+    if not isinstance(width, (int, float)):
+        raise ValueError("width must be a float or int")
+    
+    # ensure that all inner lists have the same length
+    if len(mags) != len(times):
+        raise ValueError("Mismatch in number of times and mags provided")
+    for i in range(len(mags)):
+        if len(mags[i]) != len(times[i]):
+            raise ValueError(f"Mismatch in number of times and mags for object {i}")
+    if len(trial_periods) == 0:
+        raise ValueError("trial_periods must not be empty")
+    if 0 in trial_periods:
+        raise ValueError("trial_periods must not include 0")
+    if width <= 0 or width > 1:
+        raise ValueError("width must be on (0,1]")
+    
+    # zero out times
+
+    for i in range(len(times)):
+        min_t = min(times[i])
+        times[i] = [t - min_t for t in times[i]]
+
+    return __cuda__plavchan_pgram(mags, times, trial_periods, width)
+
+__version__ = "0.1.0"
