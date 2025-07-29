@@ -1,0 +1,12 @@
+easysweeps/__init__.py,sha256=i-_LJnw0GGdsJOpGGJPrQKwiCn6943d-WJchN03JUy0,111
+easysweeps/cli.py,sha256=aVA6h5A1BujR7jwrfzWx55YXqgS6pMVUC_OPRuqF2a4,13848
+easysweeps/config.py,sha256=u0ZPmwyygow1yLJqj56PJr4vBTnefpgVhWcOC_6o9bc,2881
+easysweeps/launch_agents.py,sha256=t6pt0EKEfqKUKgXqgaxk6F5hr5sH86kX9e9VtZ07EdQ,7397
+easysweeps/launch_sweeps.py,sha256=9Pl7cjYIqwJexa0fX7rsBDdzZujM_RhWLoXYbakR_vU,2629
+easysweeps/utils.py,sha256=7WtWeSyzBipmkNmipifQy7qIiB1r9lYSul9UcqLOB04,2802
+easysweeps-0.2.0.dist-info/licenses/LICENSE,sha256=KdHmtwz7yKtJNWE1Ti9z6PRbOGKgVJMskUsNLKBRWrE,1069
+easysweeps-0.2.0.dist-info/METADATA,sha256=8Bzwf_hJ83-GQ7gWWUYOyarlbIx1a-memM0qMD3nQnI,8098
+easysweeps-0.2.0.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+easysweeps-0.2.0.dist-info/entry_points.txt,sha256=GT1h5Zdf2Pc2EeuUu3gDHj3wTco5c-MREcxaQ1pv4MU,74
+easysweeps-0.2.0.dist-info/top_level.txt,sha256=8lhmf79598QfIcTlwtwA1aJZZErQ0YUlUxvTF10isCU,11
+easysweeps-0.2.0.dist-info/RECORD,,
