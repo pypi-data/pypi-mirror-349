@@ -1,0 +1,77 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pvg"
+dynamic = ["version"]
+description = 'PVG - pip-via-git: Install Python packages directly from Git repositories'
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+keywords = ["git", "pip", "package manager", "development", "pip-via-git"]
+authors = [
+  { name = "Hao Wu", email = "haowu@dataset.sh" },
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+dependencies = [
+  "click>=8.0.0",
+]
+
+[project.urls]
+Documentation = "https://github.com/Hao Wu/pvg#readme"
+Issues = "https://github.com/Hao Wu/pvg/issues"
+Source = "https://github.com/Hao Wu/pvg"
+
+[project.scripts]
+pvg = "pvg.cli:cli"
+
+[tool.hatch.version]
+path = "src/pvg/__about__.py"
+
+[tool.hatch.envs.default]
+dependencies = [
+  "pytest>=7.0.0",
+  "pytest-cov>=4.0.0",
+]
+
+[tool.hatch.envs.types]
+extra-dependencies = [
+  "mypy>=1.0.0",
+]
+[tool.hatch.envs.types.scripts]
+check = "mypy --install-types --non-interactive {args:src/pvg tests}"
+
+[tool.pytest.ini_options]
+addopts = "-ra -q"
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.coverage.run]
+source_pkgs = ["pvg", "tests"]
+branch = true
+parallel = true
+omit = [
+  "src/pvg/__about__.py",
+]
+
+[tool.coverage.paths]
+pvg = ["src/pvg", "*/pvg/src/pvg"]
+tests = ["tests", "*/pvg/tests"]
+
+[tool.coverage.report]
+exclude_lines = [
+  "no cov",
+  "if __name__ == .__main__.:",
+  "if TYPE_CHECKING:",
+]
