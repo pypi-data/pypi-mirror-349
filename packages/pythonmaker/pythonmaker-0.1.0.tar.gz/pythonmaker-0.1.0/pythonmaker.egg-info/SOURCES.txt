@@ -1,0 +1,7 @@
+README.md
+main.py
+pyproject.toml
+pythonmaker.egg-info/PKG-INFO
+pythonmaker.egg-info/SOURCES.txt
+pythonmaker.egg-info/dependency_links.txt
+pythonmaker.egg-info/top_level.txt
