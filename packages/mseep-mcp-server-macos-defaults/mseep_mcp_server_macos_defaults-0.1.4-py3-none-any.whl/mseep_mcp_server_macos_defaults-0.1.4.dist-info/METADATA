@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: mseep-mcp-server-macos-defaults
+Version: 0.1.4
+Summary: MCP server for reading/writing macOS defaults (settings)
+Home-page: 
+Author: mseep
+Author-email: mseep <support@skydeck.ai>
+Maintainer-email: mseep <support@skydeck.ai>
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: mcp>=1.0.0
+Dynamic: author
+Dynamic: requires-python
+
+# Package managed by MseeP.ai
