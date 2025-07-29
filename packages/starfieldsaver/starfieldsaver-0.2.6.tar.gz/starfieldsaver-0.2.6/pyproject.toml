@@ -1,0 +1,46 @@
+[project]
+name = "starfieldsaver"
+version = "0.2.6"
+description = "Starfield automatic quicksave and backup utility"
+authors = [{ name = "Danny Stewart", email = "danny@stewart.cc" }]
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    "natsort (>=8.4.0,<9.0.0)",
+    "numpy (>=2.2.6,<3.0.0)",
+    "polykit (>=0.11.1)",
+    "psutil (>=7.0.0,<8.0.0)",
+    "pygame (>=2.6.1,<3.0.0)",
+    "pynput (>=1.8.1,<2.0.0)",
+    "pywin32 (>=310,<311) ; sys_platform == \"win32\"",
+    "toml (>=0.10.2,<0.11.0)",
+    "tzdata (>=2025.2,<2026.0)",
+    "watchdog (>=6.0.0,<7.0.0)",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Operating System :: Microsoft :: Windows",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Games/Entertainment",
+    "Topic :: Games/Entertainment :: Role-Playing",
+]
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.11.10"
+mypy = "^1.15.0"
+pyinstaller = "^6.13.0"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[project.scripts]
+starfieldsaver = "starfieldsaver.main:main"
