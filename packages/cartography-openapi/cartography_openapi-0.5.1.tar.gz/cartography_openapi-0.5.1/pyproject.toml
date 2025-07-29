@@ -1,0 +1,39 @@
+[project]
+name = "cartography-openapi"
+description = "A intel plugin builder for cartography for API supporting OpenAPI."
+authors = [
+    { name = "Jeremy Chapeau", email = "jeremy.chapeau@gmail.com" },
+]
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.10"
+dependencies = [
+    "loguru>=0.7.3",
+    "jinja2>=3.1.6",
+    "requests>=2.32.3",
+]
+dynamic = [ "version" ]
+
+[project.urls]
+Homepage = "https://github.com/jychp/cartography-openapi"
+Download = "https://github.com/jychp/cartography-openapi/releases"
+"Bug Report" = "https://github.com/jychp/cartography-openapi/issues"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.5",
+    "pre-commit>=4.2.0",
+    "pytest-cov>=6.1.1"
+]
+
+[build-system]
+requires = [
+  "setuptools",
+  "setuptools-scm",
+  "wheel"
+]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+# See configuration details in https://github.com/pypa/setuptools_scm
+write_to = "cartography_openapi/_version.py"

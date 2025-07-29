@@ -1,0 +1,30 @@
+version: 2
+updates:
+  # Maintain dependencies for GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    assignees:
+      - "jychp"
+    commit-message:
+      prefix: "chore: "
+    groups:
+      gha-minor-and-patch:
+        update-types:
+          - "minor"
+          - "patch"
+  # Maintain dependencies for Python
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    assignees:
+      - "jychp"
+    commit-message:
+      prefix: "chore: "
+    groups:
+      python-minor-and-patch:
+        update-types:
+          - "minor"
+          - "patch"
