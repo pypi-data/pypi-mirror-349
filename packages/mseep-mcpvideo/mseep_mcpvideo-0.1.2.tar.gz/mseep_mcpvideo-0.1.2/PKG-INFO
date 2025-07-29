@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: mseep-mcpvideo
+Version: 0.1.2
+Summary: Add your description here
+Home-page: 
+Author: mseep
+Author-email: mseep <support@skydeck.ai>
+Maintainer-email: mseep <support@skydeck.ai>
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: chromadb>=1.0.4
+Requires-Dist: colorama>=0.4.6
+Requires-Dist: mcp[cli]>=1.6.0
+Requires-Dist: smolagents[litellm,mcp]>=1.13.0
+Requires-Dist: yfinance>=0.2.55
+Dynamic: author
+Dynamic: requires-python
+
+# Package managed by MseeP.ai

@@ -1,0 +1,26 @@
+[project]
+name = "mseep-mcpvideo"
+version = "0.1.2"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "chromadb>=1.0.4",
+    "colorama>=0.4.6",
+    "mcp[cli]>=1.6.0",
+    "smolagents[litellm,mcp]>=1.13.0",
+    "yfinance>=0.2.55",
+]
+authors = [
+    { name = "mseep", email = "support@skydeck.ai" },
+]
+maintainers = [
+    { name = "mseep", email = "support@skydeck.ai" },
+]
+
+[build-system]
+requires = [
+    "setuptools>=42",
+    "wheel",
+]
+build-backend = "setuptools.build_meta"
