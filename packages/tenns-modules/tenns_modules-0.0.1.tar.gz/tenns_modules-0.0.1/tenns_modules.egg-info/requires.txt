@@ -1,0 +1,6 @@
+torch>=2
+scipy
+onnxscript
+
+[test]
+pytest

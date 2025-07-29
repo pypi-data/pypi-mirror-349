@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: tenns_modules
+Version: 0.0.1
+Summary: TENNs modules definition.
+Author: Brainchip
+Maintainer-email: Kevin Tsiknos <ktsiknos@brainchip.com>
+License: LICENSE.md
+Project-URL: Documentation, https://doc.brainchipinc.com
+Requires-Python: >=3.9
+License-File: LICENSE.md
+Requires-Dist: torch>=2
+Requires-Dist: scipy
+Requires-Dist: onnxscript
+Provides-Extra: test
+Requires-Dist: pytest; extra == "test"
+Dynamic: license-file
+
+# TENNs modules
+
+Brainchip in-house package for TENNs collection of modules and tools. `tenns_modules` package
+provides base modules for "Temporal Event Neural Networks".

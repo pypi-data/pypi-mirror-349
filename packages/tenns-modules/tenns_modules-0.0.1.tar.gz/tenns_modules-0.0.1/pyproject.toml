@@ -1,0 +1,33 @@
+[build-system]
+requires = [ "setuptools",]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tenns_modules"
+version = "0.0.1"
+description = "TENNs modules definition."
+readme = "README"
+dependencies = [ "torch>=2", "scipy", "onnxscript",]
+requires-python = ">= 3.9"
+[[project.authors]]
+name = "Brainchip"
+
+[[project.maintainers]]
+name = "Kevin Tsiknos"
+email = "ktsiknos@brainchip.com"
+
+[options]
+manifest-includes = [ "MANIFEST.in",]
+
+[project.license]
+text = "LICENSE.md"
+
+[project.optional-dependencies]
+test = [ "pytest",]
+
+[project.urls]
+Documentation = "https://doc.brainchipinc.com"
+
+[tool.setuptools.packages.find]
+where = [ ".",]
+include = [ "tenns*",]
