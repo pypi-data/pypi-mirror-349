@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: mseep-mcp-twikit
+Version: 0.1.2
+Summary: Twitter search tool for FastMCP using Twikit
+Home-page: 
+Author: mseep
+Author-email: mseep <support@skydeck.ai>
+Maintainer-email: mseep <support@skydeck.ai>
+License-Expression: MIT
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: fastmcp
+Requires-Dist: twikit
+Requires-Dist: requests
+Dynamic: author
+Dynamic: license-file
+Dynamic: requires-python
+
+# Package managed by MseeP.ai

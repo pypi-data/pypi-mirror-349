@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-twikit = mcp_twikit.twitter:mcp.run
