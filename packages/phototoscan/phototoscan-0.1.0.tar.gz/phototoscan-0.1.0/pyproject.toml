@@ -1,0 +1,42 @@
+[project]
+name = "phototoscan"
+version = "0.1.0"
+description = "A Python library that converts casual document snapshots into professional-quality scanned documents."
+authors = [
+    { name = "Andrew Campbell", email = "andrewc@captricity.com" },
+    { name = "joaofauvel", email = "fauvel@tutanota.com" },
+    { name = "j-about", email = "142051449+j-about@users.noreply.github.com" },
+]
+requires-python = ">=3.8.20"
+dependencies = [
+    "numpy==1.18.5",
+    "ocrd-fork-pylsd==0.0.3",
+    "opencv-python==4.2.0.34",
+    "scipy==1.5.0",
+]
+readme = "README.md"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python :: 3.8",
+    "Topic :: Multimedia :: Graphics :: Capture :: Scanners",
+    "Topic :: Scientific/Engineering :: Image Processing",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+
+]
+
+[project.urls]
+Homepage = "https://github.com/j-about/PhotoToScan"
+Issues = "https://github.com/j-about/PhotoToScan/issues"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project.scripts]
+phototoscan = "phototoscan:main"
+
+[[tool.uv.index]]
+name = "testpypi"
+url = "https://test.pypi.org/simple/"
+publish-url = "https://test.pypi.org/legacy/"
+explicit = true
