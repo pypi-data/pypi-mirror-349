@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+aiogramx/__init__.py
+aiogramx/pagination.py
+aiogramx/time.py
+aiogramx/utils.py
+aiogramx.egg-info/PKG-INFO
+aiogramx.egg-info/SOURCES.txt
+aiogramx.egg-info/dependency_links.txt
+aiogramx.egg-info/requires.txt
+aiogramx.egg-info/top_level.txt
