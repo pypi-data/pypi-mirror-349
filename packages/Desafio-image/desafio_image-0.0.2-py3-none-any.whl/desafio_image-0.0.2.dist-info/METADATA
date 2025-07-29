@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: Desafio_image
+Version: 0.0.2
+Summary: Desafio de processamento de imagem usando Skimage
+Home-page: https://github.com/tiemi/image-processing-package
+Author: Jacqueline
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: scikit-image>=0.16.1
+Dynamic: author
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
