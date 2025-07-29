@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: mseep-cinema4d-mcp
+Version: 0.1.4
+Summary: Cinema 4D MCP Server for Claude Desktop with MoGraph support
+Author: mseep
+Author-email: mseep <support@skydeck.ai>
+Maintainer: mseep
+Maintainer-email: mseep <support@skydeck.ai>
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: mcp>=1.2.0
+Requires-Dist: starlette
+Dynamic: author
+Dynamic: license-file
+Dynamic: maintainer
+
+# Package managed by MseeP.ai
