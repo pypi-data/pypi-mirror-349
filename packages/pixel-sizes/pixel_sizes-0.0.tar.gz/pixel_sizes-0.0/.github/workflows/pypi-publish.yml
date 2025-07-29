@@ -1,0 +1,49 @@
+name: Packaging
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+  release:
+    # "released" events are emitted either when directly be released or be edited from pre-released.
+    types: [prereleased, released]
+
+env:
+  python_version: 3.13
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        id: setup-python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.python_version }}
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v6
+
+      - name: Install dependencies
+        run: |
+          uv python pin ${{ env.python_version }}
+          uv sync
+
+      - name: Build
+        run: uv build
+
+      - name: Publish distribution to Test PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        if: github.event_name == 'release' && github.event.release.prerelease
+        with:
+          user: __token__
+          password: ${{ secrets.TEST_PYPI_API_TOKEN }}
+          repository-url: https://test.pypi.org/legacy/
+
+      - name: Publish distribution to PyPI
+        if: github.event_name == 'release' && !github.event.release.prerelease
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          user: __token__
+          password: ${{ secrets.PYPI_API_TOKEN }}
