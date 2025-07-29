@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-live-events = mcp_live_events:main
