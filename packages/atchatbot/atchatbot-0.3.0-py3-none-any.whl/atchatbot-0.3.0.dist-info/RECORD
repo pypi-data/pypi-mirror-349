@@ -1,0 +1,12 @@
+atchatbot/__init__.py,sha256=05Xt6Hfqiqdua4kGsJWhctp13YjRCSDjcKhzUC8ENYU,230
+atchatbot/chatbot.py,sha256=QBSbrjmWvKjRY7CrVetzFaq6sagODA8jCX2UPBaCsFM,2756
+atchatbot/core.py,sha256=-mKsU46kiRgVB9ZMlBM_3S3I-FTNyvV645oLWCRpS48,1168
+atchatbot/intent_detector.py,sha256=01E2GScyMtwH_btr0vyFCwh8TKjwggglPtedW58X_vY,4938
+atchatbot/parser.py,sha256=3npJz-ha40GbiQJ-OCyNf8shWQWh0ioWiilsOCqNqI8,3962
+atchatbot/response_generator.py,sha256=vm14DYAbAqzY93NcnQ3Oxzf0xxcdUNYD8fAeSa_OwG4,5007
+atchatbot/utils.py,sha256=VUBa93iR4MozaXR-ZYjVo-0VQ43m-oQrCW0hQInaPB0,1149
+atchatbot-0.3.0.dist-info/licenses/LICENSE,sha256=qprXpayAsXQGwdp_qNeXniCUh03agldtIi_lGVJzLaE,1091
+atchatbot-0.3.0.dist-info/METADATA,sha256=aPWZ43NnUl0qqcRC1lpnAE_Y33v3pkEFOng2qVAE-0A,917
+atchatbot-0.3.0.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+atchatbot-0.3.0.dist-info/top_level.txt,sha256=d1WClY3B6UkT0EzHJPWUMGO0kQD2AhWPAFviSP4Tz4s,10
+atchatbot-0.3.0.dist-info/RECORD,,
