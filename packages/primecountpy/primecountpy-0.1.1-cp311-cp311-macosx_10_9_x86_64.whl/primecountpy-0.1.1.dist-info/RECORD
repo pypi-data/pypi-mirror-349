@@ -1,0 +1,10 @@
+primecountpy-0.1.1.dist-info/RECORD,,
+primecountpy-0.1.1.dist-info/WHEEL,sha256=0EQGS9H7gDPyHSEiIZm-YW8sxyEArhi-xNgDJ_hLVxo,137
+primecountpy-0.1.1.dist-info/top_level.txt,sha256=6y8t2DMtviUX8fE4_Ms7Q1RSChqx_Ml1bQtWzUiKUaQ,13
+primecountpy-0.1.1.dist-info/METADATA,sha256=1jvPZd_q2SL8HfqrzT2OQRH14XExOMM141kQee7JoHU,22540
+primecountpy-0.1.1.dist-info/licenses/LICENSE,sha256=gXf5dRMhNSbfLPYYTY_5hsZ1r7UU1OaKQEAQUhuIBkM,18092
+primecountpy-0.1.1.dist-info/licenses/AUTHORS,sha256=gUVKk99IDA-78ESS89mJBKZXylJPdMKgOIDTGSCoIP0,122
+primecountpy/defs.pxd,sha256=ZTfuJhV6ImtXCGdEPlUTujbXh4Tr0kI2vdfDUNKRSik,522
+primecountpy/primecount.cpython-311-darwin.so,sha256=iNUBkGA1HSf1lOvePmD4nd9mhT_WeRVyoR2NHEWfNU0,669080
+primecountpy/primecount.pyx,sha256=4is17eqfWt677GCUvXHehMDNAKGRUWRuqwh3TAqVpKg,2759
+primecountpy/__init__.py,sha256=09IByjZgmgwaj8_jKl4bQTvLpBHKsmXoFehkGRxcVug,26
