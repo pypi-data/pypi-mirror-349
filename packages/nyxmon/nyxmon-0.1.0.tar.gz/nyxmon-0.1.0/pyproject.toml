@@ -1,0 +1,50 @@
+[project]
+name = "nyxmon"
+version = "0.1.0"
+description = "Minimal monitoring package"
+readme = "README.md"
+authors = [
+    { name = "Jochen Wersdörfer", email = "jochen-nyxmon@wersdoerfer.de" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "aiosqlite>=0.21.0",
+    "httpx>=0.28.1",
+    "uvloop>=0.21.0",
+    "django",
+    "django-environ",
+    "django-htmx",
+]
+
+[project.scripts]
+start-agent = "nyxmon.entrypoints.cli:start_agent"
+add-check = "nyxmon.entrypoints.check_management:add_check_to_db"
+show-checks = "nyxmon.entrypoints.check_management:show_checks"
+llm-content = "nyxmon.entrypoints.developer_tools:llm_content"
+
+[build-system]
+requires = ["uv_build>=0.7.5,<0.8.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "mypy",
+    "pytest",
+    "pytest-anyio",
+]
+dashboard-dev = [
+    "django-debug-toolbar",
+    "django-stubs[compatible-mypy]",
+    "pytest-django",
+]
+
+[tool.uv]
+default-groups = ["dev", "dashboard-dev"]
+
+[tool.pytest.ini_options]
+addopts = "-ra"
+DJANGO_SETTINGS_MODULE = "config.settings.test"
+django_find_project = false
+pythonpath = [
+    "src/django",  # to make config.settings.test work
+]
