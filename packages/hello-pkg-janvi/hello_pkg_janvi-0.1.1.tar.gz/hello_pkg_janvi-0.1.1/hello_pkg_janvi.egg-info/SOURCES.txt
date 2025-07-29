@@ -1,0 +1,8 @@
+README.md
+setup.py
+hello_pkg_janvi.egg-info/PKG-INFO
+hello_pkg_janvi.egg-info/SOURCES.txt
+hello_pkg_janvi.egg-info/dependency_links.txt
+hello_pkg_janvi.egg-info/top_level.txt
+helloprinter/__init__.py
+helloprinter/core.py

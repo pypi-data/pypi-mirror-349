@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: hello_pkg_janvi
+Version: 0.1.1
+Summary: A simple hello world package
+Home-page: https://github.com/Janvi-05/hello_pkg
+Author: Janvi
+Author-email: janvi@dataprowess.com.au
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: requires-python
+Dynamic: summary
