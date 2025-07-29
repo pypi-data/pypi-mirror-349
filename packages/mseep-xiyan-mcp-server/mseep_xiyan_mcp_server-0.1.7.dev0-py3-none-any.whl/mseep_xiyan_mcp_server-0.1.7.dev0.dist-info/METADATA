@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: mseep-xiyan_mcp_server
+Version: 0.1.7.dev0
+Summary: A Model Context Protocol (MCP) server that utilizes XiyanSQL with databases. This server enables AI assistants to list tables, read data, and execute natural language queries
+Home-page: https://github.com/XGenerationLab/xiyan_mcp_server
+Author: mseep
+Author-email: mseep <support@skydeck.ai>
+Maintainer-email: mseep <support@skydeck.ai>
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: mcp>=1.0.0
+Requires-Dist: mysql-connector-python>=9.1.0
+Requires-Dist: llama_index
+Requires-Dist: sqlalchemy
+Requires-Dist: pymysql
+Dynamic: author
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+
+# Package managed by MseeP.ai
