@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: gfESDdataMergeTools
+Version: 1.0.0
+Summary: GUI Tool for Merging ESD Test Data
+Home-page: 
+Author: Yang Ting
+Author-email: ting009@e.ntu.edu.sg
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: PyQt5>=5.15.4
+Requires-Dist: openpyxl>=3.0.0
+Requires-Dist: xlrd>=2.0.0
+
+# gfESDdataMergeTools
+
+A GUI tool for merging ESD test data from TLP and HBM systems.
+
+## Installation
+```bash
+pip install gfESDdataMergeTools
