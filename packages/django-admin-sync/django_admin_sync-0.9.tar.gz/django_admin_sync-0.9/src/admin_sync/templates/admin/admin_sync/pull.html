@@ -1,0 +1,41 @@
+{% extends "admin/admin_sync/_publish_base.html" %}
+
+{% block action-content %}
+    {% if data %}
+        <table>
+            <tr>
+                <th>Status</th>
+                <td>{{ data.status }}</td>
+            </tr>
+            <tr>
+                <th>Message</th>
+                <td>{{ data.message }}</td>
+            </tr>
+            <tr>
+                <th>Details</th>
+                <td>{{ data.details }}</td>
+            </tr>
+            <tr>
+                <th>Size</th>
+                <td>{{ data.size }}</td>
+            </tr>
+            <tr>
+                <th>Records</th>
+                <td>{{ data.records }}</td>
+            </tr>
+        </table>
+        <input type="button" value="Back" onclick="location.href='..'">
+    {% else %}
+        <div style="margin:10px">
+            Proceeding will pull data from <strong>{{ server }}</strong>
+        </div>
+        <div style="margin-top:50px">
+            <form method="post" id="sync-remote-pull">
+                {% csrf_token %}
+                <input class="default" type="submit" value="Pull">
+                <input type="button" value="Cancel" onclick="javascript:history.back()">
+            </form>
+        </div>
+    {% endif %}
+
+{% endblock %}
