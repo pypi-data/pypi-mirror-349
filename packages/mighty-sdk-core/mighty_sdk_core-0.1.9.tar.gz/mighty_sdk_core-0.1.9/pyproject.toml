@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "mighty-sdk-core"
+version = "0.1.9"
+description = "This is the core module for the Mighty Network's SDK, providing essential functionalities and utilities."
+authors = ["Nguyen Truong <nguyen.truong@c0x12c.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+varint = "^1.0.2"
+semver-range = "^0.0.3"
+cryptography = "^43.0.3"
+aiohttp = "^3.11.14"
+pydantic = "^2.10.6"
+pynacl = "^1.5.0"
+urllib3 = "^2.3.0"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.5"
+pytest-asyncio = "^0.25.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
