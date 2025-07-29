@@ -1,0 +1,2 @@
+[console_scripts]
+alpha-vantage-mcp = alpha_vantage_mcp:main
