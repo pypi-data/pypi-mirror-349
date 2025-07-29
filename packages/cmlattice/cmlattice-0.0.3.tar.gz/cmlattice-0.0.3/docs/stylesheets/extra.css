@@ -1,0 +1,12 @@
+.md-header__button.md-logo {
+  margin: 0;  /* Remove any default margins */
+  padding: 0; /* Remove any default padding */
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+    height: 3.5rem;
+    width: 3.5rem;
+}

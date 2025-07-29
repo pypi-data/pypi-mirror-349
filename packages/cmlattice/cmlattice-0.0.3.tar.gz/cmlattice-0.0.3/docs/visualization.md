@@ -1,0 +1,3 @@
+# Visualization
+
+::: cmlattice.viz.Visualization

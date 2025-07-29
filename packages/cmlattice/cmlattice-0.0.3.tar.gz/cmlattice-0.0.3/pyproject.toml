@@ -1,0 +1,31 @@
+[project]
+name = "cmlattice"
+version = "0.0.3"
+description = "An implementation of coupled map lattices."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "matplotlib>=3.10.1",
+    "numpy>=2.2.5",
+]
+
+[project.scripts]
+cmlattice = "cmlattice.cli:main"
+
+[build-system]
+requires = ["hatchling >= 1.26"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "ffmpeg>=1.4",
+    "ipympl>=0.9.7",
+    "jupyter>=1.1.1",
+    "mkdocs>=1.6.1",
+    "mkdocs-material>=9.6.12",
+    "mkdocstrings[python]>=0.29.1",
+    "pre-commit>=4.2.0",
+    "pytest>=8.3.5",
+    "ruff>=0.11.7",
+    "seaborn>=0.13.2",
+]
