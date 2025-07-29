@@ -1,0 +1,3 @@
+jaqpot-api-client
+polling2
+pydantic

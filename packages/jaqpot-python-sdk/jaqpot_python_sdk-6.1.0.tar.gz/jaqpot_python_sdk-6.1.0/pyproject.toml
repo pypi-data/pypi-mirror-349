@@ -1,0 +1,67 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "jaqpot-python-sdk"
+dynamic = ["version"]
+description = 'The Jaqpot Python SDK provides an easy-to-use interface for accessing the Jaqpot API, allowing users to upload machine learning models, manage datasets, and make predictions seamlessly. It supports ONNX, fine-grained access control, and subscription-based API access for researchers and developers.'
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+keywords = []
+authors = [
+  { name = "UPCI NTUA", email = "upci.ntua@gmail.com" },
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+dependencies = [
+  "jaqpot-api-client>=6.42.3",
+  "polling2",
+  "pydantic",
+  "python-dateutil",
+  "urllib3"
+]
+
+[project.urls]
+Documentation = "https://github.com/ntua-unit-of-control-and-informatics/jaqpot-python-sdk#readme"
+Issues = "https://github.com/ntua-unit-of-control-and-informatics/jaqpot-python-sdk/issues"
+Source = "https://github.com/ntua-unit-of-control-and-informatics/jaqpot-python-sdk"
+
+[tool.hatch.version]
+path = "src/jaqpot_python_sdk/__about__.py"
+
+[tool.hatch.envs.types]
+extra-dependencies = [
+  "mypy>=1.0.0",
+]
+[tool.hatch.envs.types.scripts]
+check = "mypy --install-types --non-interactive {args:src/jaqpot_python_sdk tests}"
+
+[tool.coverage.run]
+source_pkgs = ["jaqpot_python_sdk", "tests"]
+branch = true
+parallel = true
+omit = [
+  "src/jaqpot_python_sdk/__about__.py",
+]
+
+[tool.coverage.paths]
+jaqpot_python_sdk = ["src/jaqpot_python_sdk", "*/jaqpot-python-sdk/src/jaqpot_python_sdk"]
+tests = ["tests", "*/jaqpot-python-sdk/tests"]
+
+[tool.coverage.report]
+exclude_lines = [
+  "no cov",
+  "if __name__ == .__main__.:",
+  "if TYPE_CHECKING:",
+]
