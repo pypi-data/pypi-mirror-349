@@ -1,0 +1,39 @@
+Metadata-Version: 2.4
+Name: endura-sdk
+Version: 0.1.8
+Summary: SDK for Edge AI Device Agent
+Author-email: Michael Kirschbaum <hi@michaelkirschbaum.com>
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: torch>=2.0
+Requires-Dist: psutil
+Requires-Dist: numpy
+Requires-Dist: httpx>=0.27.0
+Provides-Extra: dev
+Requires-Dist: pytest>=8.1.1; extra == "dev"
+Requires-Dist: pytest-asyncio; extra == "dev"
+Requires-Dist: python-dotenv; extra == "dev"
+Dynamic: license-file
+
+# **Endura SDK**
+
+The **Endura SDK** provides a trust layer for edge AI models, allowing you to securely log telemetry, capture model metadata, and validate data at the edge.
+
+---
+
+## **Usage**
+
+### **Using the SDK in Python**:
+
+Once the SDK is installed, you can import and use it in your Python code:
+
+```python
+from endura_sdk import EnduraAgent
+
+# Initialize with your model path
+agent = EnduraAgent("path_to_model.pth")
+
+# Log an inference event
+agent.log_inference(input_data)
+```

@@ -1,0 +1,9 @@
+torch>=2.0
+psutil
+numpy
+httpx>=0.27.0
+
+[dev]
+pytest>=8.1.1
+pytest-asyncio
+python-dotenv
