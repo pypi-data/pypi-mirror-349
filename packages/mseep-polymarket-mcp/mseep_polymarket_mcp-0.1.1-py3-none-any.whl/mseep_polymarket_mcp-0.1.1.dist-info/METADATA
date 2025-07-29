@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: mseep-polymarket_mcp
+Version: 0.1.1
+Summary: MCP Server for PolyMarket API
+Home-page: 
+Author: mseep
+Author-email: mseep <support@skydeck.ai>
+Maintainer-email: mseep <support@skydeck.ai>
+Requires-Python: >=3.6
+Requires-Dist: mcp>=0.1.0
+Requires-Dist: httpx>=0.24.0
+Requires-Dist: python-dotenv>=1.0.0
+Requires-Dist: py-clob-client
+Dynamic: author
+Dynamic: requires-python
