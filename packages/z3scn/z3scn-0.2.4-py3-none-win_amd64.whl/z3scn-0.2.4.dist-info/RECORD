@@ -1,0 +1,10 @@
+z3scn/__init__.py,sha256=M0lVw2GAtG9oZ6tEa-ZqT3D5TwkyGcg6oGw9aDwSa74,440
+z3scn/z3scn.pyd,sha256=PCepWVFx2_Ww06MnBoi_15c1nrZ7qFWZgzCqQ7X6A5I,317952
+z3scn/z3scn.pyi,sha256=6ubD1ER5TLAaYJWle6pr0ktK8i-FYN0eFk40Y6Zx2Ko,3973
+z3scn/zeng64.dll,sha256=JxmWUQSpPJa3wjsSHz1Uyii68IhvF1Yp7-2sJfTxiB8,115200
+z3scn-0.2.4.data/data/tests/test_z3scn_api.py,sha256=d4t5kmrGsOZD6GWvSJyjzGI2LMMAiUijVBTzazE_Zi8,4871
+z3scn-0.2.4.dist-info/licenses/LICENSE,sha256=zXJAClfBVaH6-2xO1psdIZiS3hWbwEytgUAZDS7C8zE,5253
+z3scn-0.2.4.dist-info/METADATA,sha256=r0cPEP0Fyl17kNCOpWooujdZARiIEfDxSB4o2Z9Tf0g,13967
+z3scn-0.2.4.dist-info/WHEEL,sha256=GRAwO4abswPoD8u6X5Ix8yKoy-wTIXRf_V-PAIDNIsM,97
+z3scn-0.2.4.dist-info/top_level.txt,sha256=vdWS6gjETMZNAKCbpIQ9jxAudinvw5wnMhrPykmyM7w,6
+z3scn-0.2.4.dist-info/RECORD,,
