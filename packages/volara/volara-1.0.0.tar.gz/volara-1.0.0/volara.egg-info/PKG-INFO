@@ -1,0 +1,56 @@
+Metadata-Version: 2.4
+Name: volara
+Version: 1.0.0
+Summary: A package for common blockwise computations for large microscopy volumes.
+Author-email: William Patton <wllmpttn24@gmail.com>, Arlo Sheridan <arlo@e11.bio>
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: click>=8.0
+Requires-Dist: daisy>=1.2.2
+Requires-Dist: funlib.geometry>=0.3
+Requires-Dist: funlib.persistence>=0.6
+Requires-Dist: mwatershed>=0.5.2
+Requires-Dist: pydantic>=2.6.3
+Requires-Dist: numba>=0.59.0
+Requires-Dist: scipy>=1.15.3
+Requires-Dist: scikit-image>=0.25.2
+Provides-Extra: dev
+Requires-Dist: pytest>=8.0; extra == "dev"
+Requires-Dist: pytest-cov>=5.0; extra == "dev"
+Requires-Dist: mypy>=1.0; extra == "dev"
+Requires-Dist: ruff>=0.6; extra == "dev"
+Provides-Extra: docs
+Requires-Dist: autodoc_pydantic>=2.0; extra == "docs"
+Requires-Dist: sphinx-autodoc-typehints>=2.0; extra == "docs"
+Requires-Dist: sphinx-material>=0.0.36; extra == "docs"
+Requires-Dist: sphinx-click>=6.0; extra == "docs"
+Requires-Dist: sphinx-rtd-theme>=2.0; extra == "docs"
+Requires-Dist: myst-parser>=4.0; extra == "docs"
+Requires-Dist: jupyter-sphinx>=0.5; extra == "docs"
+Requires-Dist: matplotlib>=3.0; extra == "docs"
+Requires-Dist: pooch>=1.8; extra == "docs"
+Requires-Dist: wget>=3.2; extra == "docs"
+Requires-Dist: funlib-show-neuroglancer>=0.2; extra == "docs"
+Requires-Dist: nbsphinx>=0.9.7; extra == "docs"
+Requires-Dist: jupytext>=1.16.7; extra == "docs"
+Dynamic: license-file
+
+[![tests](https://github.com/e11bio/volara/actions/workflows/tests.yaml/badge.svg)](https://github.com/e11bio/volara/actions/workflows/tests.yaml)
+[![ruff](https://github.com/e11bio/volara/actions/workflows/ruff.yaml/badge.svg)](https://github.com/e11bio/volara/actions/workflows/ruff.yaml)
+[![mypy](https://github.com/e11bio/volara/actions/workflows/mypy.yaml/badge.svg)](https://github.com/e11bio/volara/actions/workflows/mypy.yaml)
+<!-- [![codecov](https://codecov.io/gh/e11bio/volara/branch/main/graph/badge.svg?token=YOUR_TOKEN)](https://codecov.io/gh/e11bio/volara) -->
+
+# volara
+Easy application of common blockwise operations for image processing of arbitrarily large volumetric microscopy.
+
+# Available blockwise operations:
+- `FragmentExtraction`: Fragment extraction via mutex watershed
+- `AffAgglom`: Supervoxel affinity score edge creation
+- `ArgMax`: Argmax accross predicted probabilities
+- `DistanceAgglom`: Supervoxel distance score edge creation
+- `GlobalSeg`: Global creation of look up tables for fragment -> segment agglomeration
+- `LUT`: Remapping and saving fragments as segments
+- `SeededExtractFrags`: Fragment extraction via mutex watershed that accepts skeletonized seed points for constrained fragment extraction
