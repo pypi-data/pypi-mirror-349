@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+predictram-parameter-data/__init__.py
+predictram-parameter-data/api.py
+predictram-parameter-data/data_handler.py
+predictram-parameter-data/query_parser.py
+predictram-parameter-data/visualization.py
+predictram-parameter-data/data/all_stocks.json
+predictram_parameter_data.egg-info/PKG-INFO
+predictram_parameter_data.egg-info/SOURCES.txt
+predictram_parameter_data.egg-info/dependency_links.txt
+predictram_parameter_data.egg-info/requires.txt
+predictram_parameter_data.egg-info/top_level.txt
