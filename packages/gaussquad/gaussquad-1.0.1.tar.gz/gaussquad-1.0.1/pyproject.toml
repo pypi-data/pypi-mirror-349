@@ -1,0 +1,46 @@
+# pyproject.toml
+
+[build-system]
+requires = ["setuptools>=64.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gaussquad"
+description = "Compute Gauss quadrature nodes and weights for arbitrary weight functions."
+version = "1.0.1"
+readme = "README.md"
+license = { text = "Apache-2.0" }
+keywords = ["gauss quadrature", "numerical integration", "golub-welsch"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent"
+]
+requires-python = ">=3.13"
+authors = [{ name = "Mariia Steeghs-Turchina" }]
+dependencies = [
+  "numpy>=2.2.0",
+  "scipy>=1.15.0"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/thatmariia/gaussquad"
+"Documentation" = "https://thatmariia.github.io/gaussquad"
+"Source" = "https://github.com/thatmariia/gaussquad"
+
+[project.optional-dependencies]
+dev = ["pytest", "flake8", "black", "build"]
+docs = ["sphinx", "myst-parser", "sphinx-book-theme"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+log_cli = true
+log_cli_level = "DEBUG"
+log_level = "DEBUG"
+addopts = "--doctest-modules"
+
+[tool.black]
+line-length = 100
+target-version = ["py38"]

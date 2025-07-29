@@ -1,0 +1,17 @@
+LICENSE.txt
+README.md
+pyproject.toml
+src/gaussquad/__init__.py
+src/gaussquad/_logging_utils.py
+src/gaussquad/_moments.py
+src/gaussquad/_validate_utils.py
+src/gaussquad/gauss_quadrature.py
+src/gaussquad.egg-info/PKG-INFO
+src/gaussquad.egg-info/SOURCES.txt
+src/gaussquad.egg-info/dependency_links.txt
+src/gaussquad.egg-info/requires.txt
+src/gaussquad.egg-info/top_level.txt
+tests/test_gauss_quadrature.py
+tests/test_moments.py
+tests/test_moments_exact.py
+tests/test_moments_legendre.py
