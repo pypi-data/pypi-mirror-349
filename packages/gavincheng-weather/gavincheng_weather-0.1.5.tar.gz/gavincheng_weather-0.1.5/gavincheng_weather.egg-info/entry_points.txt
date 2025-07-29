@@ -1,0 +1,5 @@
+[console_scripts]
+gavincheng-weather = gavincheng_weather.weather:main
+
+[gui_scripts]
+gavincheng_weather = gavincheng_weather.weather:main
