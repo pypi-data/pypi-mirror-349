@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+libbr/__init__.py
+libbr/core.py
+libbr/layout.py
+libbr/widgets.py
+libbr.egg-info/PKG-INFO
+libbr.egg-info/SOURCES.txt
+libbr.egg-info/dependency_links.txt
+libbr.egg-info/top_level.txt
