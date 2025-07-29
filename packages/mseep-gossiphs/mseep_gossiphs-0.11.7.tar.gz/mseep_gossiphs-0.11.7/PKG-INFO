@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: mseep-gossiphs
+Version: 0.11.7
+Home-page: 
+Author: mseep
+Author-email: mseep <support@skydeck.ai>
+Maintainer-email: mseep <support@skydeck.ai>
+Requires-Python: >=3.6
+License-File: LICENSE
+Dynamic: author
+Dynamic: license-file
+Dynamic: requires-python

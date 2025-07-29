@@ -1,0 +1,25 @@
+[project]
+name = "mseep-gossiphs"
+version = "0.11.7"
+description = ""
+requires-python = ">=3.8"
+dependencies = []
+authors = [
+    { name = "mseep", email = "support@skydeck.ai" },
+]
+maintainers = [
+    { name = "mseep", email = "support@skydeck.ai" },
+]
+
+[build-system]
+requires = [
+    "maturin>=1.0,<2.0",
+]
+build-backend = "maturin"
+
+[tool.maturin]
+features = [
+    "pyo3/extension-module",
+]
+python-source = "py_wrapper"
+module-name = "gossiphs._rust_api"
