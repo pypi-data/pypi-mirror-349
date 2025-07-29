@@ -1,0 +1,60 @@
+Metadata-Version: 2.4
+Name: word2num_converter
+Version: 1.0.0
+Summary: Convert words to numbers in English, Hindi, and Marathi
+Home-page: https://github.com/singhchandann/word2num_converter
+Author: Chandan Singh
+Author-email: chandan21082000@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: Hindi
+Classifier: Natural Language :: Marathi
+Classifier: Natural Language :: English
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+Dynamic: summary
+
+# Word2num_converter
+
+Convert number words to numeric values in English, Hindi, and Marathi.
+
+## Installation
+
+```bash
+pip install word2num_converter
+```
+# Usage
+
+```bash
+from word2num_converter import convert_word2num
+
+print(convert_word2num("I have one hundred rupees", lang="en"))
+print(convert_word2num("मेरे पास पाँच सौ रुपये हैं", lang="hin"))
+print(convert_word2num("माझ्याकडे पाचशे रुपये आहेत", lang="mr"))
+```
+
+# Author
+Built with ❤️ by Chandan Singh
+
+
+---
+
+### 📜 LICENSE
+
+You can use something like MIT:
+
+```txt
+Apache License 2.0
+
+Copyright (c) 2025 Chandan Singh
+```

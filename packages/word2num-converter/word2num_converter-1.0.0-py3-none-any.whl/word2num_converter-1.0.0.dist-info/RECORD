@@ -1,0 +1,9 @@
+languages/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+languages/english.py,sha256=KY4BNyY74ccGsxhk_Xp30YIq0OFdcllWjf2ei99SkzY,1913
+languages/hindi.py,sha256=_CtE456XhSWuWFIzpG0yObUwMIWxw5OUcUV-uOj93Q0,6411
+languages/marathi.py,sha256=SSRoYTx8SNVj1y-Z2xs5j32una5KOirDoMNDNjhdm64,7962
+word2num_converter-1.0.0.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+word2num_converter-1.0.0.dist-info/METADATA,sha256=9VU3WI6Noyeu1fXGcDvXedX2QPIfXUxJxOqYXHtdbB0,1465
+word2num_converter-1.0.0.dist-info/WHEEL,sha256=Nw36Djuh_5VDukK0H78QzOX-_FQEo6V37m3nkm96gtU,91
+word2num_converter-1.0.0.dist-info/top_level.txt,sha256=lC35v3tgK6tgccKUYdVbkSDrFgZSClMnam1lek2_LYQ,10
+word2num_converter-1.0.0.dist-info/RECORD,,
