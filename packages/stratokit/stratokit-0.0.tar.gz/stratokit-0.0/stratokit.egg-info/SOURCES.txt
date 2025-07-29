@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+stratokit/__init__.py
+stratokit.egg-info/PKG-INFO
+stratokit.egg-info/SOURCES.txt
+stratokit.egg-info/dependency_links.txt
+stratokit.egg-info/top_level.txt
+stratokit/stratokit_hello/__init__.py
+stratokit/stratokit_hello/main.py
