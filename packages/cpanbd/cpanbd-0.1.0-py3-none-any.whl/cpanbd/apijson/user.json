@@ -1,0 +1,63 @@
+{
+	"uinfo": {
+		"method": "GET",
+		"url": "/rest/2.0/xpan/nas",
+		"params": {
+			"method": "uinfo", // 固定值
+			"access_token": "{{access_token}}", // 用户的access_token, 从Auth 类中获取或者环境变量中获取
+			"vip_version": "None: optional" // 非必选, 会被转为 None
+			//eg: "user_id": ": required" // 必选, 需要传入用户的user_id, 否则会报错
+			//eg: "checkfree": "0: int: optional", // 非必选, 会被转为int类型
+			//eg: "checkexpire": "0: str: optional" // 非必选, 会被转为str类型
+			//eg: "checkexpire": "true: bool: optional" // 非必选, 会被转为bool类型
+		},
+		"schema_": {
+			"type": "object",
+			"properties": {
+				"avatar_url": {
+					"type": "string"
+				},
+				"baidu_name": {
+					"type": "string"
+				},
+				"netdisk_name": {
+					"type": "string"
+				},
+				"uk": {
+					"type": "number"
+				},
+				"vip_type": {
+					"type": "number"
+				}
+			},
+			"required": ["avatar_url", "baidu_name", "netdisk_name", "uk", "vip_type"]
+		}
+	},
+	"quota": {
+		"method": "GET",
+		"url": "/api/quota",
+		"params": {
+			"access_token": "{{access_token}}",
+			"checkfree": "0: int: optional",
+			"checkexpire": "0: int: optional"
+		},
+		"schema_": {
+			"type": "object",
+			"properties": {
+				"total": {
+					"type": "number"
+				},
+				"free": {
+					"type": "number"
+				},
+				"expire": {
+					"type": "boolean"
+				},
+				"used": {
+					"type": "number"
+				}
+			},
+			"required": ["total", "free", "expire", "used"]
+		}
+	}
+}

@@ -1,0 +1,144 @@
+{
+	"precreate": {
+		"method": "POST",
+		"url": "/rest/2.0/xpan/file",
+		"params": {
+			"method": "precreate",
+			"access_token": "{{access_token}}"
+		},
+		"data": {
+			"path": "/: required",
+			"size": "0: required", //文件和目录两种情况:上传文件时, 表示文件的大小, 单位B；上传目录时, 表示目录的大小, 目录的话大小默认为0
+			"isdir": "0: required", //是否为目录, 0 文件, 1 目录
+			"block_list": "list: required", //分片上传时, 分片列表, 分片大小为4MB, 最大支持10000个分片
+			"rtype": "1: optional", // 文件命名策略. 1 表示当path冲突时, 进行重命名 //2 表示当path冲突且block_list不同时, 进行重命名
+			"uploadid": "None: string: optional", // 上传ID,
+			"content-md5": "None: string: optional", // 文件MD5, 32位小写
+			"slice-md5": "None: string: optional", // 文件校验段的MD5, 32位小写, 校验段对应文件前256KB
+			"local_ctime": "None: int: optional", // 客户端创建时间,  默认为当前时间戳
+			"local_mtime": "None: int: optional", // 客户端修改时间,  默认为当前时间戳
+			"autoinit": 1 // 固定值
+		},
+		"schema_": {
+			"type": "object",
+			"properties": {
+				"uploadid": {
+					"type": "string"
+				},
+				"return_type": {
+					"type": "number"
+				},
+				"errno": {
+					"type": "number"
+				},
+				"block_list": {
+					"type": "array"
+				},
+				"request_id": {
+					"type": "number"
+				}
+			},
+			"required": ["uploadid", "return_type", "errno", "request_id", "block_list"]
+		}
+	},
+	"upload": {
+		"method": "POST",
+		"url": "https://c3.pcs.baidu.com/rest/2.0/pcs/superfile2",
+		"params": {
+			"method": "upload",
+			"access_token": "{{access_token}}",
+			"type": "tmpfile", // 固定值 tmpfile
+			"path": "/: required", //上传后使用的文件绝对路径
+			"uploadid": "string: required", // 上一个阶段预上传precreate接口下发的uploadid
+			"partseq": "int: required" // 文件分片的位置序号, 从0开始,
+		},
+		"files": "files: required", // 上传的文件内容
+		"schema_": {
+			"type": "object",
+			"properties": {
+				"md5": {
+					"type": "string"
+				},
+				"request_id": {
+					"type": "number"
+				}
+			},
+			"required": ["md5", "request_id"]
+		}
+	},
+
+	"create": {
+		"method": "POST",
+		"url": "/rest/2.0/xpan/file",
+		"params": {
+			"method": "create",
+			"access_token": "{{access_token}}"
+		},
+		"data": {
+			"path": "/: required", //上传后使用的文件绝对路径
+			"size": "string: required", // 文件或目录的大小, 必须要和文件真实大小保持一致
+			"isdir": "0: required", // 是否目录, 0 文件、1 目录,
+			"block_list": "lits: required", // 文件各分片md5数组字符串
+			"uploadid": "string: required", // 上传ID, 预上传接口下发的uploadid
+			"rtype": "1: int: optional", // 文件命名策略. 1 表示当path冲突时, 进行重命名 //2 表示当path冲突且block_list不同时, 进行重命名
+			"local_ctime": "None: int: optional", // 客户端创建时间,  默认为当前时间戳
+			"local_mtime": "None: int: optional", // 客户端修改时间,  默认为当前时间戳
+			"zip_quality": "None: int: optional", // 图片压缩程度, 有效值 50、70、100(与zip_sign参数配合使用)
+			"zip_sign": "None: int: optional", // 未压缩原始图片文件真实md5(zip_quality 参数需要一并带上)
+			"is_revision": "0: int: optional", // 是否需要多版本支持,1为支持, 0为不支持
+			"mode": "1: int: optional", // 上传方式, 1 手动、2 批量上传、3 文件自动备份. 4 相册自动备份、5 视频自动备份
+			"exif_info": "None: string: optional" // exif信息, json格式字符串, orientation、width、height、recovery为必传字段, 其他字段如果没有可以不传
+		},
+		"schema_": {
+			"type": "object",
+			"properties": {
+				"errno": {
+					"type": "number"
+				},
+				"fs_id": {
+					"type": "number"
+				},
+				"md5": {
+					"type": "string"
+				},
+				"server_filename": {
+					"type": "string"
+				},
+				"category": {
+					"type": "number"
+				},
+				"path": {
+					"type": "string"
+				},
+				"size": {
+					"type": "number"
+				},
+				"ctime": {
+					"type": "number"
+				},
+				"mtime": {
+					"type": "number"
+				},
+				"isdir": {
+					"type": "number"
+				},
+				"name": {
+					"type": "string"
+				}
+			},
+			"required": ["errno", "fs_id", "path", "size", "ctime", "mtime", "isdir"]
+		}
+	},
+	"locateupload": {
+		"method": "GET",
+		"url": "https://d.pcs.baidu.com/rest/2.0/pcs/file",
+		"params": {
+			"method": "locateupload",
+			"access_token": "{{access_token}}",
+			"appid": "250528", //固定值
+			"path": "/: required", //上传后使用的文件绝对路径
+			"uploadid": "string: required", // 上传ID, 预上传接口下发的uploadid
+			"upload_version": "2.0" // 固定值
+		}
+	}
+}

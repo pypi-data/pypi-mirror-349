@@ -1,0 +1,502 @@
+{
+	"list_files": {
+		"method": "GET",
+		"url": "/rest/2.0/xpan/file",
+		"params": {
+			"method": "list", // 固定值
+			"access_token": "{{access_token}}", //  从Auth 类中获取
+			"dir": "/: str: optional", // 非必选, 会被转为str类型
+			"order": "name: str: optional", // 非必选, 会被转为str类型
+			"desc": "1: int: optional", // 非必选, 会被转为int类型
+			"start": "0: int: optional", // 非必选, 会被转为int类型
+			"limit": "100: int: optional", // 非必选, 会被转为int类型
+			"web": "1: int: optional", // 非必选, 会被转为int类型
+			"folder": "0: int: optional", // 非必选, 会被转为int类型
+			"showempty": "0: int: optional" // 非必选, 会被转为int类型
+		},
+		"schema_": {
+			"type": "object",
+			"properties": {
+				"list": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"server_filename": {
+								"type": "string"
+							},
+							"category": {
+								"type": "number"
+							},
+							"fs_id": {
+								"type": "number"
+							},
+							"size": {
+								"type": "number"
+							},
+							"isdir": {
+								"type": "number"
+							},
+							"path": {
+								"type": "string"
+							}
+						},
+						"required": ["server_filename", "category", "fs_id", "size", "isdir", "path"]
+					}
+				}
+			}
+		}
+	},
+
+	"listall": {
+		"method": "GET",
+		"url": "/rest/2.0/xpan/multimedia",
+		"params": {
+			"method": "listall", // 固定值
+			"access_token": "{{access_token}}", //  从Auth 类中获取
+			"path": "/: str: optional", // 目录名称绝对路径, 必须/开头；
+			"recursion": "0: int: optional", // 是否递归, 0为否, 1为是, 默认为0
+			"order": "name: str: optional", // 排序字段: time(修改时间), name(文件名), size(文件大小)
+			"desc": "0: int: optional", //0为升序, 1为降序, 默认为0
+			"start": "0: int: optional", // 查询起点, 默认为0, 当返回has_more=1时, 应使用返回的cursor作为下一次查询的起点
+			"limit": "100: int: optional", // 查询条数, 默认为1000, 最大值为1000
+			"ctime": "None: int: optional", // 文件上传时间, 设置此参数, 表示只返回上传时间大于ctime的文件
+			"mtime": "None: int: optional", // 文件修改时间, 设置此参数, 表示只返回修改时间大于mtime的文件
+			"web": "0: int: optional", // 默认为0,  为1时返回缩略图地址
+			"device_id": "None: str: optional" // 设备ID, 硬件设备必传
+		},
+		"schema_": {
+			"type": "object",
+			"properties": {
+				"info": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"server_filename": {
+								"type": "string"
+							},
+							"category": {
+								"type": "number"
+							},
+							"fs_id": {
+								"type": "number"
+							},
+							"size": {
+								"type": "number"
+							},
+							"isdir": {
+								"type": "number"
+							},
+							"path": {
+								"type": "string"
+							}
+						},
+						"required": ["server_filename", "category", "fs_id", "size", "isdir", "path"]
+					}
+				}
+			}
+		}
+	},
+	"doclist": {
+		"method": "GET",
+		"url": "/rest/2.0/xpan/file?method=doclist",
+		"params": {
+			"method": "doclist", // 固定值
+			"access_token": "{{access_token}}", //  从Auth 类中获取
+			"parent_path": "/: str: optional", // 目录名称绝对路径, 必须/开头；
+			"page": "1: int: optional", // 页码, 从1开始,  如果不指定页码, 则为不分页模式, 返回所有的结果. 如果指定page参数, 则按修改时间倒序排列
+			"num": "100: int: optional", // 一页返回的文档数,  默认值为1000, 建议最大值不超过1000
+			"order": "name: str: optional", // 排序字段: time(修改时间), name(文件名), size(文件大小)
+			"desc": "1: int: optional", // 0为升序, 1为降序, 默认为1
+			"recursion": "0: int: optional", //是否需要递归, 0为不需要, 1为需要, 默认为0, 递归是指:当目录下有文件夹, 使用此参数, 可以获取到文件夹下面的文档
+			"web": "0: int: optional" // 默认为0,  为1时返回缩略图地址
+		},
+		"schema_": {
+			"type": "object",
+			"properties": {
+				"info": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"server_filename": {
+								"type": "string"
+							},
+							"category": {
+								"type": "number"
+							},
+							"fs_id": {
+								"type": "number"
+							},
+							"size": {
+								"type": "number"
+							},
+							"isdir": {
+								"type": "number"
+							},
+							"path": {
+								"type": "string"
+							}
+						},
+						"required": ["server_filename", "category", "fs_id", "size", "isdir", "path"]
+					}
+				}
+			}
+		}
+	},
+	"imagelist": {
+		"method": "GET",
+		"url": "/rest/2.0/xpan/file",
+		"params": {
+			"method": "imagelist", // 固定值
+			"access_token": "{{access_token}}", //  从Auth 类中获取
+			"parent_path": "/: str: optional", // 目录名称绝对路径, 必须/开头；
+			"page": "1: int: optional", // 页码, 从1开始,  如果不指定页码, 则为不分页模式, 返回所有的结果. 如果指定page参数, 则按修改时间倒序排列
+			"num": "100: int: optional", // 一页返回的文档数,  默认值为1000, 建议最大值不超过1000
+			"order": "name: str: optional", // 排序字段: time(修改时间), name(文件名), size(文件大小)
+			"desc": "0: int: optional", // 0为升序, 1为降序, 默认为1
+			"recursion": "0: int: optional", //是否需要递归, 0为不需要, 1为需要, 默认为0, 递归是指:当目录下有文件夹, 使用此参数, 可以获取到文件夹下面的文档
+			"web": "0: int: optional" // 默认为0,  为1时返回缩略图地址
+		},
+		"schema_": {
+			"type": "object",
+			"properties": {
+				"info": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"server_filename": {
+								"type": "string"
+							},
+							"category": {
+								"type": "number"
+							},
+							"fs_id": {
+								"type": "number"
+							},
+							"size": {
+								"type": "number"
+							},
+							"isdir": {
+								"type": "number"
+							},
+							"path": {
+								"type": "string"
+							}
+						},
+						"required": ["server_filename", "category", "fs_id", "size", "isdir", "path"]
+					}
+				}
+			}
+		}
+	},
+	"videolist": {
+		"method": "GET",
+		"url": "/rest/2.0/xpan/file",
+		"params": {
+			"method": "videolist", // 固定值
+			"access_token": "{{access_token}}", //  从Auth 类中获取
+			"parent_path": "/: str: optional", // 目录名称绝对路径, 必须/开头；
+			"page": "1: int: optional", // 页码, 从1开始,  如果不指定页码, 则为不分页模式, 返回所有的结果. 如果指定page参数, 则按修改时间倒序排列
+			"num": "100: int: optional", // 一页返回的文档数,  默认值为1000, 建议最大值不超过1000
+			"order": "name: str: optional", // 排序字段: time(修改时间), name(文件名), size(文件大小)
+			"desc": "0: int: optional", // 0为升序, 1为降序, 默认为1
+			"recursion": "0: int: optional", //是否需要递归, 0为不需要, 1为需要, 默认为0, 递归是指:当目录下有文件夹, 使用此参数, 可以获取到文件夹下面的文档
+			"web": "1: int: optional" // 默认为1,  为1时返回缩略图地址
+		},
+		"schema_": {
+			"type": "object",
+			"properties": {
+				"info": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"server_filename": {
+								"type": "string"
+							},
+							"category": {
+								"type": "number"
+							},
+							"fs_id": {
+								"type": "number"
+							},
+							"size": {
+								"type": "number"
+							},
+							"isdir": {
+								"type": "number"
+							},
+							"path": {
+								"type": "string"
+							}
+						},
+						"required": ["server_filename", "category", "fs_id", "size", "isdir", "path"]
+					}
+				}
+			}
+		}
+	},
+	"btlist": {
+		"method": "GET",
+		"url": "/rest/2.0/xpan/file",
+		"params": {
+			"method": "btlist", // 固定值
+			"access_token": "{{access_token}}", //  从Auth 类中获取
+			"parent_path": "/: str: optional", // 目录名称绝对路径, 必须/开头；
+			"page": "1: int: optional", // 页码, 从1开始,  如果不指定页码, 则为不分页模式, 返回所有的结果. 如果指定page参数, 则按修改时间倒序排列
+			"num": "100: int: optional", // 一页返回的文档数,  默认值为1000, 建议最大值不超过1000
+			"order": "name: str: optional", // 排序字段: time(修改时间), name(文件名), size(文件大小)
+			"desc": "0: int: optional", // 0为升序, 1为降序, 默认为1
+			"recursion": "0: int: optional", //是否需要递归, 0为不需要, 1为需要, 默认为0, 递归是指:当目录下有文件夹, 使用此参数, 可以获取到文件夹下面的文档
+			"web": "0: int: optional" // 默认为0,  为1时返回缩略图地址
+		},
+		"schema_": {
+			"type": "object",
+			"properties": {
+				"info": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"server_filename": {
+								"type": "string"
+							},
+							"category": {
+								"type": "number"
+							},
+							"fs_id": {
+								"type": "number"
+							},
+							"size": {
+								"type": "number"
+							},
+							"isdir": {
+								"type": "number"
+							},
+							"path": {
+								"type": "string"
+							}
+						},
+						"required": ["server_filename", "category", "fs_id", "size", "isdir", "path"]
+					}
+				}
+			}
+		}
+	},
+	"categoryinfo": {
+		"method": "GET",
+		"url": "/api/categoryinfo",
+		"params": {
+			"access_token": "{{access_token}}", //  从Auth 类中获取
+			"category": "1: int: optional", // 文件类型, 1 视频、2 音频、3 图片、4 文档、5 应用、6 其他、7 种子
+			"parent_path": "/: str: optional", // 目录名称绝对路径, 必须/开头；
+			"recursion": "0: int: optional" // 是否递归, 0 不递归、1 递归, 默认0
+		},
+		"schema_": {
+			"type": "object",
+			"properties": {
+				"info": {
+					"type": "object",
+					"properties": {
+						"^\\d+$": {
+							"type": "object",
+							"properties": {
+								"real_server_mtime_2": {
+									"type": "string"
+								},
+								"size": {
+									"type": "number"
+								},
+								"total": {
+									"type": "number"
+								},
+								"count": {
+									"type": "number"
+								}
+							},
+							"required": ["real_server_mtime_2", "size", "total", "count"]
+						}
+					},
+					"required": ["4"]
+				}
+			},
+			"required": ["info"]
+		}
+	},
+	"categorylist": {
+		"method": "GET",
+		"url": "/rest/2.0/xpan/multimedia",
+		"params": {
+			"method": "categorylist", // 固定值
+			"access_token": "{{access_token}}", //  从Auth 类中获取
+			"category": "1: str: optional", // 文件类型, 1 视频、2 音频、3 图片、4 文档、5 应用、6 其他、7 种子, 多个category使用英文逗号分隔, 示例:3,4
+			"parent_path": "/: str: optional", // 目录名称绝对路径, 必须/开头；
+			"recursion": "0: int: optional", // 是否递归, 0 不递归、1 递归, 默认0
+			"ext": "None: str: optional", // 需要的文件格式, 多个格式以英文逗号分隔, 示例: txt,epub, 默认为category下所有格式
+			"start": "0: int: optional", // 查询起点, 默认为0, 当返回has_more=1时, 应使用返回的cursor作为下一次查询的起点
+			"limit": "100: int: optional", // 查询条数, 默认为1000, 最大值为1000
+			"order": "name: str: optional", // 排序字段: time(修改时间), name(文件名), size(文件大小)
+			"desc": "0: str: optional", // 0为升序, 1为降序, 默认为0
+			"device_id": "None: str: optional" // 设备ID, 硬件设备必传
+		},
+		"schema_": {
+			"type": "object",
+			"properties": {
+				"list": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"server_filename": {
+								"type": "string"
+							},
+							"category": {
+								"type": "number"
+							},
+							"fs_id": {
+								"type": "number"
+							},
+							"size": {
+								"type": "number"
+							},
+							"path": {
+								"type": "string"
+							}
+						},
+						"required": ["server_filename", "category", "fs_id", "size", "path"]
+					}
+				}
+			},
+			"required": ["list"]
+		}
+	},
+	"search": {
+		"method": "GET",
+		"url": "/rest/2.0/xpan/file",
+		"params": {
+			"method": "search", // 固定值
+			"access_token": "{{access_token}}", //  从Auth 类中获取
+			"key": "day: str: optional", // 搜索关键字, 最大30字符(UTF8格式)
+			"dir": "/: str: optional", // 目录名称绝对路径, 必须/开头；
+			"category": "None: int: optional", // 文件类型, 1 视频、2 音频、3 图片、4 文档、5 应用、6 其他、7 种子
+			"num": "100: int: optional", // 一页返回的文档数,  默认值为1000, 建议最大值不超过1000
+			"recursion": "0: int: optional", // 是否递归, 0 不递归、1 递归, 默认0
+			"web": "0: int: optional", // 默认为0,  为1时返回缩略图地址
+			"device_id": "None: str: optional" // 设备ID, 硬件设备必传
+		},
+		"schema_": {
+			"type": "object",
+			"properties": {
+				"has_more": {
+					"type": "number"
+				},
+				"list": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"server_filename": {
+								"type": "string"
+							},
+							"category": {
+								"type": "number"
+							},
+							"fs_id": {
+								"type": "number"
+							},
+							"size": {
+								"type": "number"
+							},
+							"path": {
+								"type": "string"
+							},
+							"isdir": {
+								"type": "number"
+							}
+						},
+						"required": ["server_filename", "category", "fs_id", "size", "path", "isdir"]
+					}
+				}
+			},
+			"required": ["has_more", "list"]
+		}
+	},
+
+	"filemetas": {
+		"method": "GET",
+		"url": "/rest/2.0/xpan/multimedia",
+		"params": {
+			"method": "filemetas", // 固定值
+			"access_token": "{{access_token}}", //  从Auth 类中获取
+			"fsids": "list: required", // 文件id数组, 数组中元素是uint64类型, 数组大小上限是:100
+			"dlink": "0: int: optional", // 是否需要下载地址, 0为否, 1为是, 默认为0. 获取到dlink后
+			"path": "None: str: optional", // 目录名称绝对路径, 必须/开头；
+			"thumb": "0: int: optional", // 是否需要缩略图, 0为否, 1为是, 默认为0
+			"extra": "0: int: optional", // 是否需要额外信息, 0为否, 1为是, 默认为0
+			"needmedia": "0: int: optional", // 视频是否需要展示时长信息, needmedia=1时, 返回 duration 信息时间单位为秒 (s), 转换为向上取整.
+			"detail": "0: int: optional", // 视频是否需要展示长, 宽等信息. 0 否、1 是, 默认0
+			"device_id": "None: str: optional", // 设备ID, 硬件设备必传
+			"from_apaas": "1" //
+		},
+		"schema_": {
+			"type": "object",
+			"properties": {
+				"list": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"filename": {
+								"type": "string"
+							},
+							"category": {
+								"type": "number"
+							},
+							"fs_id": {
+								"type": "number"
+							},
+							"size": {
+								"type": "number"
+							},
+							"path": {
+								"type": "string"
+							},
+							"isdir": {
+								"type": "number"
+							}
+						},
+						"required": ["filename", "category", "fs_id", "size", "path", "isdir"]
+					}
+				}
+			},
+			"required": ["list"]
+		}
+	},
+
+	"filemanager": {
+		"method": "POST",
+		"url": "/rest/2.0/xpan/file",
+		"params": {
+			"method": "filemanager", // 固定值
+			"access_token": "{{access_token}}", //  从Auth 类中获取
+			"opera": "copy: required" // 文件操作参数, 可实现文件复制、移动、重命名、删除, 依次对应的参数值为: copy, move, rename, delete
+		},
+		"data": {
+			"async": "0: required", // 是否异步, 0为否, 1为是, 默认为0
+			"filelist": "list: required", // 文件操作列表, 数组中元素是object类型, 数组大小上限是:100
+			"ondup": "overwrite: required" // 全局ondup,遇到重复文件的处理策略, fail(默认, 直接返回失败)、newcopy(重命名文件)、overwrite、skip
+		},
+		"schema_": {
+			"type": "object",
+			"properties": {
+				"info": {
+					"type": "array"
+				}
+			},
+			"required": ["list"]
+		}
+	}
+}
