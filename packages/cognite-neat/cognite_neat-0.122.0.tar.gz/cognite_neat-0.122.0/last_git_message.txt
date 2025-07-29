@@ -1,0 +1,32 @@
+Neat 984 update doc and release package (#1202)
+
+# Description
+
+Update docs and tutorials with the latest terminology:
+
+* *Rules* -> *Data Model*
+* *Information Rules* -> *Conceptual Data Model*
+* *DMS Rules* -> *Physical Data Model*
+* *Class* -> *Concept*
+* *Graph* -> *Instances*
+* *Instances* + *Data Model* -> *Knowledge Graph*
+
+Last bits of renaming of internal variables and methods of neat that
+were missed in the previous PRs. No new functionality added!
+
+**TO RISK REVIEWERS**: large number of lines is due to generation of
+graph visualization for docs (html) file, docs, docstrings, and missed
+renaming of internal vars/methods form the previous PRs.
+
+## Bump
+
+- [ ] Patch
+- [x] Minor
+- [ ] Skip
+
+## Changelog
+### Improved
+
+- Docs and tutorials to reflect latest terminology
+- Fix remaining naming of internal variables and methods to use latest
+terminology
