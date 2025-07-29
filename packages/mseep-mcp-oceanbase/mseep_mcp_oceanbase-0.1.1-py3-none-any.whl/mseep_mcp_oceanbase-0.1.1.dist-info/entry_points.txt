@@ -1,0 +1,3 @@
+[console_scripts]
+oceanbase_mcp_server = oceanbase_mcp_server:main
+ocp_mcp_server = ocp_mcp_server:main
