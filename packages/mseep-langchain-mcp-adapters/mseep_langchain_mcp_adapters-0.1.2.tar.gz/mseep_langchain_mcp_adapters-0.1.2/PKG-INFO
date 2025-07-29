@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: mseep-langchain-mcp-adapters
+Version: 0.1.2
+Summary: Make Anthropic Model Context Protocol (MCP) tools compatible with LangChain and LangGraph agents.
+Author-Email: mseep <support@skydeck.ai>
+Maintainer-Email: mseep <support@skydeck.ai>
+License-Expression: MIT
+Requires-Python: >=3.10
+Requires-Dist: langchain-core<0.4,>=0.3.36
+Requires-Dist: mcp>=1.7
+Description-Content-Type: text/markdown
+
+# Package managed by MseeP.ai
