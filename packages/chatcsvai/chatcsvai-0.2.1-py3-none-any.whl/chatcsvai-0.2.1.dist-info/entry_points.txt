@@ -1,0 +1,2 @@
+[console_scripts]
+chatcsvai = chatcsvai.cli:main
