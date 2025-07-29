@@ -1,0 +1,65 @@
+Metadata-Version: 2.4
+Name: nanocompore
+Version: 2.0.0
+Summary: Software package that identifies raw signal changes between two conditions from dRNA-Seq data.
+Project-URL: repository, https://github.com/tleonardi/nanocompore
+Project-URL: documentation, http://nanocompore.rna.rocks
+Author-email: Mihail Zdravkov <mail@mzdravkov.com>, Logan Mulroney <lmulrone@soe.ucsc.edu>, Tommaso Leonardi <tom@itm6.xyz>, Adrien Leger <aleg@ebi.ac.uk>
+License: GPL-3.0
+License-File: LICENSE
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Requires-Python: <4.0,>=3.10
+Requires-Dist: gmm-gpu>=0.2.5
+Requires-Dist: gtfparse>=2.5.0
+Requires-Dist: jaxtyping>=0.2.38
+Requires-Dist: loguru<1.0,>=0.5
+Requires-Dist: matplotlib<4.0,>=3.10
+Requires-Dist: numpy<2.0
+Requires-Dist: ont-remora==3.3
+Requires-Dist: pandas<3.0,>=2.2
+Requires-Dist: pod5<1.0.0,>=0.3.6
+Requires-Dist: pyfaidx<1.0,>=0.8
+Requires-Dist: pynvml<13.0.0,>=12.0.0
+Requires-Dist: pysam<1.0.0,>=0.22.0
+Requires-Dist: pyyaml<5.4,>=5
+Requires-Dist: schema<1.0.0,>=0.7.5
+Requires-Dist: scikit-learn<2.0,>=1.4
+Requires-Dist: scipy<2.0,>=1.15
+Requires-Dist: seaborn<1.0,>=0.13
+Requires-Dist: statsmodels<1.0,>=0.14
+Requires-Dist: tqdm<5,>=4
+Description-Content-Type: text/markdown
+
+![Nanocompore](docs/pictures/Nanocompore_logo.png)
+
+---
+
+[![GitHub license](https://img.shields.io/github/license/tleonardi/nanocompore)](https://github.com/tleonardi/nanocompore/blob/master/LICENSE)
+[![Python](https://img.shields.io/badge/Python-%3E%3D3.6-yellow)](https://www.python.org/)
+[![BioRxiv](https://img.shields.io/badge/BioRxiv-10.1101%2F843136%20-red)](https://www.biorxiv.org/content/10.1101/843136v1.full)
+
+[![PyPI version](https://badge.fury.io/py/nanocompore.svg)](https://badge.fury.io/py/nanocompore)
+[![Downloads](https://pepy.tech/badge/nanocompore)](https://pepy.tech/project/nanocompore)
+[![Build Status](https://travis-ci.com/tleonardi/nanocompore.svg?token=2uTrW9fP9RypfMALjksc&branch=master)](https://travis-ci.com/tleonardi/nanocompore)
+
+---
+
+**Nanocompore identifies differences in ONT nanopore sequencing raw signal corresponding to RNA modifications by comparing 2 samples**
+
+Nanocompore compares 2 ONT nanopore direct RNA sequencing datasets from different experimental conditions expected to have a significant impact on RNA modifications. It is recommended to have at least 2 replicates per condition. For example one can use a control condition with a significantly reduced number of modifications such as a cell line for which a modification writing enzyme was knocked-down or knocked-out. Alternatively, on a smaller scale transcripts of interests could be synthesized in-vitro.
+
+**Full documentation is available at http://nanocompore.rna.rocks**
+
+[![Nanocompore](docs/pictures/worflow.png)](http://nanocompore.rna.rocks)
+
+## Main authors
+
+* Mihail Zdravkov - mail {at} mzdravkov.com
+* Logan Mulroney - lmulrone {at} soe.ucsc.edu
+* Adrien Leger - aleg {at} ebi.ac.uk
+* Tommaso Leonardi - tom {at} tleo.io
+

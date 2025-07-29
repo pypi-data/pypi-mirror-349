@@ -1,0 +1,72 @@
+[project]
+authors = [
+    {name = "Mihail Zdravkov", email = "mail@mzdravkov.com"},
+    {name = "Logan Mulroney", email = "lmulrone@soe.ucsc.edu"},
+    {name = "Tommaso Leonardi", email = "tom@itm6.xyz"},
+    {name = "Adrien Leger", email = "aleg@ebi.ac.uk"},
+]
+license = {text = "GPL-3.0"}
+requires-python = "<4.0,>=3.10"
+dependencies = [
+    "numpy<2.0",
+    "scipy<2.0,>=1.15",
+    "tqdm<5,>=4",
+    "pyfaidx<1.0,>=0.8",
+    "matplotlib<4.0,>=3.10",
+    "seaborn<1.0,>=0.13",
+    "pandas<3.0,>=2.2",
+    "statsmodels<1.0,>=0.14",
+    "scikit-learn<2.0,>=1.4",
+    "pyyaml<5.4,>=5",
+    "loguru<1.0,>=0.5",
+    "pod5<1.0.0,>=0.3.6",
+    "pysam<1.0.0,>=0.22.0",
+    "ont-remora==3.3",
+    "schema<1.0.0,>=0.7.5",
+    "pynvml<13.0.0,>=12.0.0",
+    "jaxtyping>=0.2.38",
+    "gmm-gpu>=0.2.5",
+    "gtfparse>=2.5.0",
+]
+name = "nanocompore"
+version = "2.0.0"
+description = "Software package that identifies raw signal changes between two conditions from dRNA-Seq data."
+readme = "README.md"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Programming Language :: Python :: 3",
+]
+
+[project.urls]
+repository = "https://github.com/tleonardi/nanocompore"
+documentation = "http://nanocompore.rna.rocks"
+
+[project.scripts]
+nanocompore = "nanocompore.__main__:main"
+
+[dependency-groups]
+dev = [
+    "pytest<9,>=8",
+    "nbconvert<8,>=7",
+    "mkdocs>=1.6",
+    "pymdown-extensions>=10",
+    "mknotebooks<1,>=0",
+    "mkdocs-material>=9.6",
+    "markdown>=3.8",
+    "mkdocstrings[python]>=0.18",
+    "pytest-cov>=6.1.1",
+    "pytest-xdist>=3.6.1",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.sdist]
+include = [
+  "nanocompore/**",
+  "/tests",
+]
