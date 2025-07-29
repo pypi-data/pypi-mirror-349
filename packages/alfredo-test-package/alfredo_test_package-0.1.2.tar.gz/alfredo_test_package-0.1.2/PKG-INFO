@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: alfredo-test-package
+Version: 0.1.2
+Summary: Dummy project
+Author-email: Alfredo Cinelli <alfredocinelli96@gmail.com>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+
+# Intro
+This is a test package

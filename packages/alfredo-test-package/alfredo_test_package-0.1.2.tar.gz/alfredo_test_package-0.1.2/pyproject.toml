@@ -1,0 +1,58 @@
+[project]
+name = "alfredo-test-package"
+version = "0.1.2"
+description = "Dummy project"
+readme = "README.md"
+requires-python = ">=3.12"
+#license = {"file" = "LICENSE"} # old way
+license = "MIT"
+license-files = [
+    "LICENSE",
+]
+authors = [
+    {name = "Alfredo Cinelli", email = "alfredocinelli96@gmail.com"},
+]
+classifiers = [
+    # Development Status
+    "Development Status :: 3 - Alpha",
+    # "Development Status :: 4 - Beta",
+    # "Development Status :: 5 - Production/Stable",
+    
+    # Intended audience
+    "Intended Audience :: Developers",
+    # "Intended Audience :: Science/Research",
+    # "Intended Audience :: System Administrators",
+    # "Intended Audience :: Education",
+    
+    # License (must match your license)
+    "License :: OSI Approved :: MIT License",
+    
+    # Natural language support
+    "Natural Language :: English",
+    
+    # Operating system support
+    "Operating System :: OS Independent",
+    # "Operating System :: POSIX :: Linux",
+    # "Operating System :: Microsoft :: Windows",
+    # "Operating System :: MacOS",
+    
+    # Programming language support
+    "Programming Language :: Python :: 3.12",
+    
+    # Topic categories
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    # "Topic :: Utilities",
+    # "Topic :: Scientific/Engineering",
+    # "Topic :: System :: Systems Administration",
+]
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "ipython>=9.2.0",
+    "pytest>=8.3.5",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
