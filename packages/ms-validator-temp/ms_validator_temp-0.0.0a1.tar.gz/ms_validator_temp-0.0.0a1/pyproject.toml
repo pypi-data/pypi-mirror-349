@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ms_validator_temp"
+version = "0.0.0.a1"
+description = "A package for validating ."
+authors = [
+    { name = "Jiwang Liu" }
+]
+requires-python = ">=3.8"
+
+[tool.setuptools.packages.find]
+include = ["ms_validator"]
+
+[tool.setuptools.package-data]
+"*" = ["*.json"]
