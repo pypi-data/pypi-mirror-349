@@ -1,0 +1,38 @@
+[project]
+name = "mseep-mcp-server-naa"
+version = "0.1.2"
+description = "An MCP server for Netwrix Access Analyzer"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "mcp[cli]>=1.5.0",
+    "pyodbc>=4.0.39",
+    "python-dotenv>=1.0.0",
+]
+license = "MIT"
+authors = [
+    { name = "mseep", email = "support@skydeck.ai" },
+]
+maintainers = [
+    { name = "mseep", email = "support@skydeck.ai" },
+]
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = [
+    "E",
+    "F",
+    "UP",
+    "B",
+    "SIM",
+    "I",
+]
+
+[build-system]
+requires = [
+    "setuptools>=42",
+    "wheel",
+]
+build-backend = "setuptools.build_meta"
