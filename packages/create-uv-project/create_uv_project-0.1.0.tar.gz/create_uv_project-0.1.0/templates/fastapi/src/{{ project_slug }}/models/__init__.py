@@ -1,0 +1,1 @@
+# src/{{ project_slug }}/models/__init__.py 

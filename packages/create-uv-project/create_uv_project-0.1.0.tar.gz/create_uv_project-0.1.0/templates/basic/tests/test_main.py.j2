@@ -1,0 +1,19 @@
+"""Tests for the main module of {{ project_slug }}."""
+
+import pytest
+from {{ project_slug }}.main import main
+# If __version__ is in your src/{{project_slug}}/__init__.py
+from {{ project_slug }} import __version__ 
+
+def test_main_executes(capsys):
+    """Test that the main function executes and prints something containing the project name."""
+    assert main() == 0
+    captured = capsys.readouterr()
+    assert "{{ project_name }}" in captured.out
+
+def test_version_is_present():
+    """Test that the __version__ is available and is a string."""
+    assert isinstance(__version__, str)
+    # You could also check for a specific version format if desired
+    # import re
+    # assert re.match(r"^\d+\.\d+\.\d+.*", __version__) 

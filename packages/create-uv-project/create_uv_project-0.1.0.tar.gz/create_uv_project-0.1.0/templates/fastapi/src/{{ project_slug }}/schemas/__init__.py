@@ -1,0 +1,1 @@
+# src/{{ project_slug }}/schemas/__init__.py 

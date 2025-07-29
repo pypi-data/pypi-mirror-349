@@ -1,0 +1,21 @@
+[project]
+dependencies = [
+    "uv",
+    "Jinja2>=3.0.0",
+]
+description = "A modern Python project scaffolder powered by UV."
+name = "create-uv-project"
+readme = "README.md"
+requires-python = ">=3.12"
+version = "0.1.0"
+authors = [{ name = "hupanpan", email = "angrypandahu@163.com" }]
+
+[tool.uv]
+package = true
+
+[project.scripts]
+create-uv-project = "create_uv_project.app:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

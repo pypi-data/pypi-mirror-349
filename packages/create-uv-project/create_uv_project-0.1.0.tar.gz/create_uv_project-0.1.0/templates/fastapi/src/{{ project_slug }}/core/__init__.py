@@ -1,0 +1,1 @@
+# src/{{ project_slug }}/core/__init__.py 

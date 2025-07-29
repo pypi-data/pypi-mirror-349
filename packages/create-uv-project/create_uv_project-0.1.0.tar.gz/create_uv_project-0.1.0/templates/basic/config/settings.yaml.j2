@@ -1,0 +1,29 @@
+# {{ project_name }} Configuration File
+# This is a sample YAML configuration file for the project.
+
+# Example application settings
+app:
+  name: "{{ project_name }}"
+  version: "{{ project_version }}" # 使用 project_version
+  debug: false
+  environment: "development"
+
+# Example database configuration (replace with your actual needs)
+database:
+  type: "sqlite"
+  host: "localhost"
+  port: 5432
+  username: "{{ project_slug }}_user"
+  password: "secure_password_placeholder" # Should be managed via secrets/env vars
+  db_name: "{{ project_slug }}_dev"
+
+# Example API keys (better managed via environment variables)
+api_keys:
+  service_a: "YOUR_API_KEY_A_PLACEHOLDER"
+  service_b: "YOUR_API_KEY_B_PLACEHOLDER"
+
+# You can add more project-specific settings here
+# For example:
+# feature_flags:
+#   new_dashboard: true
+#   user_experiment_group: "A" 

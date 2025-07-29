@@ -1,0 +1,1 @@
+# src/{{ project_slug }}/routers/__init__.py 
