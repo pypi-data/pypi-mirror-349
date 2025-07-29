@@ -1,0 +1,11 @@
+jupyter_server_ai_tools/__init__.py,sha256=UQUD9DrHVqdgXFdWubkSAycEUUksaJBOgGJ49J95GJ8,511
+jupyter_server_ai_tools/extension.py,sha256=60THKi8yY6npTFBmyDSnMBc9Ie4uQwmEgFIHhQ0G0kA,712
+jupyter_server_ai_tools/handlers.py,sha256=s2ZolVcufJc5RRdf8ItLfbiviltonSDhKvtqEXBaM5Q,535
+jupyter_server_ai_tools/models.py,sha256=BOzpydgOoWFdOoq68BOL8kbyYWIKvn3nNQ3X159Qq5s,1873
+jupyter_server_ai_tools/schema.py,sha256=_NOFyvVndLlWJeQkg44nkWu6YVynxNxOhIzUuL5Gw9A,987
+jupyter_server_ai_tools/tool_registry.py,sha256=enZjO4GEAXr_2AEV2gfHLOBV6cW-gRr9BhMigS3gtWM,5746
+jupyter_server_ai_tools-0.1.1.data/data/etc/jupyter/jupyter_server_config.d/jupyter_server_ai_tools.json,sha256=99ohFaukm0q7bwvN6NDkZIKYXLzaScIWnMwTgJSnG0c,98
+jupyter_server_ai_tools-0.1.1.dist-info/METADATA,sha256=Zk4L0wcCAplqBJGIuXStm6GExMBWnB8IxzvidnX2TCI,5495
+jupyter_server_ai_tools-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+jupyter_server_ai_tools-0.1.1.dist-info/licenses/LICENSE,sha256=1omDwXs8YNmInWwjD8ZJFrD377ZHzjyKMAEBSxljKtw,1523
+jupyter_server_ai_tools-0.1.1.dist-info/RECORD,,
