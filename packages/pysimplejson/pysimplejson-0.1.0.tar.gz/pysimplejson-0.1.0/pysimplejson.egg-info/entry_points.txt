@@ -1,0 +1,5 @@
+[console_scripts]
+pysimplejsonviewer = pysimplejsonviewer.__main__:main
+
+[gui_scripts]
+pysimplejsonviewer-gui = pysimplejsonviewer.__main__:main

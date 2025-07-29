@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+pysimplejson.egg-info/PKG-INFO
+pysimplejson.egg-info/SOURCES.txt
+pysimplejson.egg-info/dependency_links.txt
+pysimplejson.egg-info/entry_points.txt
+pysimplejson.egg-info/requires.txt
+pysimplejson.egg-info/top_level.txt
+pysimplejsonviewer/__main__.py
+pysimplejsonviewer/main.py

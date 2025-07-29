@@ -1,0 +1,106 @@
+<!-- filepath: d:\py\pysimplejson\README.md -->
+# PySimpleJSONViewer 🚀
+
+[![PyPI version](https://img.shields.io/pypi/v/pysimplejson.svg)](https://pypi.org/project/pysimplejson/)
+[![Build Status](https://img.shields.io/travis/com/yourusername/pysimplejson.svg)](https://travis-ci.com/yourusername/pysimplejson)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python Version](https://img.shields.io/pypi/pyversions/pysimplejson.svg)](https://pypi.org/project/pysimplejson/)
+
+**A user-friendly tool to view, analyze, and interact with JSON and JSONL data.**
+
+PySimpleJSONViewer provides an intuitive graphical interface built with FreeSimpleGUI to make JSON exploration seamless. It features a side-by-side view for raw JSON input and a structured tree display, along with powerful filtering capabilities using JSONPath.
+
+## ✨ Key Features
+
+*   **Dual Pane Interface:**
+    *   **Left Pane:** Input single JSON objects or multiple JSON objects in JSONL format (one JSON object per line).
+    *   **Right Pane:** Interactive tree view of the parsed JSON, clearly showing keys, values, levels, and hierarchy.
+*   **JSONL Support:**
+    *   Handles JSONL files or input.
+    *   Displays the selected JSONL row in the tree view.
+    *   Efficiently loads large JSONL files (initially showing a subset if very large - *feature mentioned in functions.md, implementation details may vary*).
+*   **Interactive Tree View:**
+    *   Expand and collapse nodes to explore complex JSON structures.
+    *   Clear distinction between keys and values.
+*   **JSONPath Filtering:**
+    *   Filter the JSON data displayed in the tree view using JSONPath expressions for precise data extraction.
+    *   Quick help for JSONPath syntax.
+*   **Pretty Print:**
+    *   Format the JSON in the input pane with a "Pretty JSON" button.
+*   **Status Bar:** Provides feedback on operations and errors.
+
+## 📸 Screenshots
+
+*Placeholder: Add screenshots of your application here! Showcasing the UI, tree view, and filtering in action would be great.*
+
+*Example:*
+*   `![Main Interface](link_to_screenshot_main.png)`
+*   `![JSONPath Filter](link_to_screenshot_filter.png)`
+
+## 🛠️ Installation
+
+1.  **Clone the repository (or download the source):**
+    ```bash
+    git clone https://github.com/fxyzbtc/pysimplejsonviewer.git
+    cd pysimplejson
+    ```
+2.  **Ensure you have Python 3.12+ installed.**
+3.  **Install dependencies:**
+    The project uses `uv` for package management (as indicated by `uv.lock`). If you have `uv` installed:
+    ```bash
+    uv pip install -r requirements.txt 
+    ```
+    (You might need to generate `requirements.txt` from `pyproject.toml` first if it's not present: `uv pip freeze > requirements.txt` or `uv pip compile pyproject.toml -o requirements.txt`)
+
+    Alternatively, using `pip` with `pyproject.toml`:
+    ```bash
+    pip install .
+    ```
+    This will install `pysimplejson` and its dependencies:
+    *   `freesimplegui>=5.2.0.post1`
+    *   `jsonpath-ng>=1.7.0`
+
+## 🚀 Usage
+
+To run the PySimpleJSONViewer application:
+
+```bash
+python pysimplejsonviewer/main.py
+```
+
+Once the application starts:
+1.  Paste your JSON or JSONL content into the "JSON Input" text area on the left.
+2.  The JSON tree view on the right will automatically update.
+    *   If using JSONL, click on a line in the input (or have a mechanism to select a line) to see it in the tree view.
+3.  Use the "JSONPath Filter" input and "Apply Filter" button to query the displayed JSON.
+4.  Use "Expand All" / "Collapse All" for the tree view as needed.
+5.  Use "Pretty JSON" to format the input in the left pane.
+
+## 🧩 Dependencies
+
+*   [FreeSimpleGUI](https://pypi.org/project/FreeSimpleGUI/): For the graphical user interface.
+*   [jsonpath-ng](https://pypi.org/project/jsonpath-ng/): For JSONPath filtering capabilities.
+
+## 🤝 Contributing
+
+Contributions are welcome! If you'd like to contribute, please follow these steps:
+
+1.  Fork the repository.
+2.  Create a new branch (`git checkout -b feature/your-feature-name`).
+3.  Make your changes.
+4.  Commit your changes (`git commit -m 'Add some feature'`).
+5.  Push to the branch (`git push origin feature/your-feature-name`).
+6.  Open a Pull Request.
+
+Please make sure to update tests as appropriate.
+
+## 📜 License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details (assuming you will add one).
+
+*Placeholder: Create a `LICENSE.md` file with the MIT License text, or choose another license.*
+
+---
+
+Generated with ❤️ by an AI assistant and your project details.
+Remember to replace placeholders like `yourusername` and add actual screenshots and a license file.

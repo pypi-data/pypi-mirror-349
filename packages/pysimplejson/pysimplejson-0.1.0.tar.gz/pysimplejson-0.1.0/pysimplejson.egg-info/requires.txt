@@ -1,0 +1,2 @@
+freesimplegui>=5.2.0.post1
+jsonpath-ng>=1.7.0

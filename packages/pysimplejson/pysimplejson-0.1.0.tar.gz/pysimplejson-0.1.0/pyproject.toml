@@ -1,0 +1,16 @@
+[project]
+name = "pysimplejson"
+version = "0.1.0"
+description = "A user-friendly tool to view, analyze, and interact with JSON and JSONL data."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "freesimplegui>=5.2.0.post1",
+    "jsonpath-ng>=1.7.0",
+]
+
+[project.scripts]
+pysimplejsonviewer = "pysimplejsonviewer.__main__:main"
+
+[project.gui-scripts]
+pysimplejsonviewer-gui = "pysimplejsonviewer.__main__:main"
