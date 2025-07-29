@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+mseep_image_gen.egg-info/PKG-INFO
+mseep_image_gen.egg-info/SOURCES.txt
+mseep_image_gen.egg-info/dependency_links.txt
+mseep_image_gen.egg-info/entry_points.txt
+mseep_image_gen.egg-info/requires.txt
+mseep_image_gen.egg-info/top_level.txt
