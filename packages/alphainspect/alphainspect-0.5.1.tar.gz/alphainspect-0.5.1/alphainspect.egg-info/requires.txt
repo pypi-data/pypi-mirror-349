@@ -1,0 +1,11 @@
+pandas
+polars
+matplotlib
+numba
+seaborn
+statsmodels
+ipykernel
+nbconvert
+loguru
+scipy
+scikit-learn
