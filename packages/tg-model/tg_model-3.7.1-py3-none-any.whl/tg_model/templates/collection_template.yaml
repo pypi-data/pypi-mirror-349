@@ -1,0 +1,244 @@
+collection:
+    title:
+        comments:
+            - Title of the collection
+        short:
+            comments:
+                - Short title of the collection
+        long:
+            comments:
+                - Long title of the collection
+    rights_holder:
+        comments:
+            - 'Collection rights holder'
+            - ' examples:'
+            - '- fullname: Lanegan, Mark'
+            - '  url: https://en.wikipedia.org/wiki/Mark_Lanegan'
+            - '- fullname: Gossard, Stone'
+            - '  url: https://en.wikipedia.org/wiki/Stone_Gossard'
+        required:
+            attr_name: rights_holder  # Name of attribute in TEIParser
+            iso_date: false  # No date validation needed
+            or_attrib: null # No alternative attributes available
+            and_attrib: null # No additional attributes required
+    collector:
+        comments:
+            - 'Collection collector'
+            - ' examples:'
+            - '- fullname: Vedder, Eddie'
+            - '  url: https://en.wikipedia.org/wiki/Eddie_Vedder'
+            - '- fullname: Cornell, Chris'
+            - '  url: https://en.wikipedia.org/wiki/Chris_Cornell'
+        required:
+            attr_name: collector
+            iso_date: false
+            or_attrib: null
+            and_attrib: null
+    attributes:
+        comments:
+            - define an xpath for each attribute within TEI file
+        work:
+            title:
+                comments:
+                    - This is the main title
+                xpath:
+                proposals:
+                    - //fileDesc//titleStmt//title
+                    - //fileDesc//titleStmt//name
+            author:
+                id:
+                    xpath:
+                    proposals:
+                        - //sourceDesc//author//idno[@type='gnd']/@type
+                        - //fileDesc//titleStmt//author/@ref
+                fullname:
+                    xpath:
+                    proposals:
+                        - //fileDesc/titleStmt//author//name[@type="full"]
+                        - //fileDesc/titleStmt//author
+                    required:
+                        attr_name: author_fullname
+                        iso_date: false
+                        or_attrib: null
+                        and_attrib: null
+                firstname:
+                    xpath:
+                    proposals:
+                        - //sourceDesc//author//forename
+                        - //sourceDesc//author//firstname
+                        - //fileDesc/titleStmt//author//persName//forename
+                lastname:
+                    xpath:
+                    proposals:
+                        - //sourceDesc//author//surname
+                        - //sourceDesc//author//lastname
+            genre:
+                xpath:
+                proposals:
+                    - //profileDesc//term[@type='text.form']
+                    - //profileDesc//term[@type='text.genre']
+                required:
+                    attr_name: genre
+                    iso_date: false
+                    or_attrib: null
+                    and_attrib: null
+            dateOfCreation:
+                date:
+                    xpath:
+                    proposals:
+                        - //listBibl//bibl[@type="print-source"]//date
+                        - //sourceDesc//biblFull//publicationStmt//date
+                        - //sourceDesc//bibl[@type="printSource"]//date
+                    required:
+                        attr_name: work_date
+                        iso_date: true  # Must be ISO date format
+                        or_attrib:  # OR: These attributes are alternatives
+                            - work_notBefore
+                            - work_notAfter
+                        and_attrib: null
+                notBefore:
+                    xpath:
+                    proposals:
+                    required:
+                        attr_name: work_notBefore
+                        iso_date: true
+                        or_attrib:
+                            - work_date
+                        and_attrib: # AND: Needs end date too
+                            - work_notAfter
+                notAfter:
+                    xpath:
+                    proposals:
+                    required:
+                        attr_name: work_notAfter
+                        iso_date: true
+                        or_attrib:
+                            - work_date
+                        and_attrib: # AND: Needs start date too
+                            - work_notBefore
+            place:
+                xpath:
+                proposals:
+                    - //listBibl//bibl[@type="print-source"]//pubPlace
+                    - //sourceDesc//biblFull//publicationStmt//pubPlace
+                    - //sourceDesc//bibl[@type="printSource"]//pubPlace
+            id:
+                xpath:
+                proposals:
+                    - //sourceDesc//title//idno[@type]/@corresp
+
+        edition:
+            title:
+                xpath:
+                proposals:
+                    - //sourceDesc//bibl[@type="firstEdition"]//title
+            author:
+                id:
+                    xpath:
+                    proposals:
+                        - //sourceDesc//bibl[@type="firstEdition"]//author/@ref
+                fullname:
+                    xpath:
+                    proposals:
+                        - //sourceDesc//bibl[@type="firstEdition"]//author
+                firstname:
+                    xpath:
+                    proposals:
+                        - //sourceDesc//bibl[@type="firstEdition"]//forename
+                        - //sourceDesc//bibl[@type="firstEdition"]//firstname
+                lastname:
+                    xpath:
+                    proposals:
+                        - //sourceDesc//bibl[@type="firstEdition"]//surname
+                        - //sourceDesc//bibl[@type="firstEdition"]//lastname
+            license:
+                title:
+                    xpath:
+                    proposals:
+                    required:
+                        attr_name: edition_license_title
+                        iso_date: false
+                        or_attrib: null
+                        and_attrib: null
+                url:
+                    xpath:
+                    proposals:
+                    required:
+                        attr_name: edition_license_url
+                        iso_date: false
+                        or_attrib: null
+                        and_attrib: null
+            date:
+                xpath:
+                proposals:
+                    - //sourceDesc//bibl[@type="firstEdition"]//date
+                    - //publicationStmt/date
+            place:
+                xpath:
+                proposals:
+                    - //sourceDesc//bibl[@type="firstEdition"]//pubPlace
+            language:
+                xpath:
+                proposals:
+                    - //profileDesc//term[@type='text.language']
+                    - //profileDesc//term[@type='text.lang']
+                    - //profileDesc/languageUsage/language
+                    - //profileDesc/langUsage/language
+            wordcount:
+                xpath:
+                proposals:
+                    - //fileDesc/extent/measure[@unit='ws']
+                    - //fileDesc/extent/measure[@unit='words']
+
+    basic_classifications:
+        comments:
+            - 'basic_classifications can be defined as a list of dictionaries with the following'
+            - 'examples:'
+            - '- id:'
+            - '     value:'
+            - '     xpath: //find_me[@via="this"]/xpath'
+            - '  url:'
+            - '     value: https://d-nb.info/gnd/'
+            - '     xpath:'
+            - '  value:'
+            - '     value: I am a fixed value'
+            - '     xpath:'
+    gnd_subjects:
+        comments:
+            - 'gnd_subjects can be defined as a list of dictionaries with the following'
+            - 'examples:'
+            - '- id:'
+            - '     value:'
+            - '     xpath: //keywords[@scheme="https://d-nb.info/gnd/"]/term/@ref'
+            - '  url:'
+            - '     value: https://d-nb.info/gnd/'
+            - '     xpath:'
+            - '  value:'
+            - '     value:'
+            - '     xpath: //keywords[@scheme="https://d-nb.info/gnd/"]/term'
+    eltec_specs:
+        comments:
+            - eltec_specifications
+        time_slot:
+            xpath:
+            proposals:
+                # - //profileDesc//@{http://distantreading.net/eltec/ns}/@timeSlot
+        author_gender:
+            xpath:
+            proposals:
+                - //profileDesc//term[@type='author.gender']
+                - //profileDesc//term[@type='author.sex']
+                - //fileDesc//notesStmt/note[@type='author-gender']
+                # - //profileDesc//@{http://distantreading.net/eltec/ns}/@authorGender
+        size:
+            xpath:
+            proposals:
+                # - //profileDesc//@{http://distantreading.net/eltec/ns}/@size
+        reprintCount:
+            xpath:
+            proposals:
+                # - //profileDesc//@{http://distantreading.net/eltec/ns}/@reprintCount
+        corpus_collection:
+            xpath:
+            proposals:
+    elements: []
