@@ -1,0 +1,16 @@
+pySWXF/AuI_funs.py,sha256=Nu5ZZyfmCFz658nA9aJxh3kxZEh_VxUoUUT6KHJMctw,40499
+pySWXF/Br_funs.py,sha256=W_vAY1rVS2kX-z8MYU5yL4luycRHA1MspenTRE7VhuY,2479
+pySWXF/NM_clean_NIU_NOKW_Mar26_24_fit4.json,sha256=cgjL8y4QODl-RRWZB2WtuxJ7vNrzEZgg4q_jAFAeBG8,3063
+pySWXF/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pySWXF/bilayer_model.py,sha256=cbGxCmr2mbDRLI3QRfgnrSNIKb_0CFdZfxvKLAIGbnQ,5437
+pySWXF/bilayer_model_july24.py,sha256=D0Cnl6tp2VVOtC9e3TbtWBcCoRe1NnZvzV9vIBpjBS4,4403
+pySWXF/fit_simple_surface.ipynb,sha256=TjBXh0j7D6BZ8IitxXq51-sj6T6X5L9yGj6x9OqNSHc,5240
+pySWXF/fluor_fit.py,sha256=XHO42YslBm4HTqjrv5COBHmDo0mjCsTsYpx761rqvE8,11725
+pySWXF/niu_multilayer_fit_params_3_LBL.json,sha256=nTXgA2bJ-wer56isV2dw9qz01sUOglHX6lJqyfWosx0,6752
+pySWXF/refl_funs.py,sha256=NjabM_EdVFIT0UJfX98FfHP6xIAXla2VH6xpUFjMmwo,2112
+pySWXF/spec_utils.py,sha256=F_Btg9xeX7rkKLi3PnITDX203E_elgThz3jIjZkbc0Q,30136
+pySWXF/xray_utils.py,sha256=-HsTTOJPEa9lVKq8PsZJJ9s8NvCHuTES5FXYt0VwUmQ,952
+pyswxf-1.0.7.dist-info/METADATA,sha256=yReAXSFyMXRSr_i8VMBc2FXEt93QZjo_16ZAzHcQRjM,3943
+pyswxf-1.0.7.dist-info/WHEEL,sha256=KGYbc1zXlYddvwxnNty23BeaKzh7YuoSIvIMO4jEhvw,87
+pyswxf-1.0.7.dist-info/licenses/LICENSE,sha256=7EI8xVBu6h_7_JlVw-yPhhOZlpY9hP8wal7kHtqKT_E,1074
+pyswxf-1.0.7.dist-info/RECORD,,
