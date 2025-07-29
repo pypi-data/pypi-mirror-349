@@ -1,0 +1,2 @@
+[console_scripts]
+nviz = nviz.cli:trigger
