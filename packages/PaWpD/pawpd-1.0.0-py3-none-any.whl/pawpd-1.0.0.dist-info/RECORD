@@ -1,0 +1,14 @@
+pawpd/__init__.py,sha256=DUsyNVDMXR9eiWM4RQJDN3yok1MvuR77sF-Ib9M62M0,13241
+pawpd/channel.py,sha256=SuhAtAEz0UbmTpdKKNt7jf5frykPmVvJ5acm4N9aeis,1570
+pawpd/color.py,sha256=g7CWbl0AjV33W8RFbUKacJleplayHNp7CxT98Lb3PVI,770
+pawpd/embed.py,sha256=e25R4fdWKGpoyhjZXWJclhHJhrYgH-dad39ZjExToh0,978
+pawpd/guild.py,sha256=UYWt7rfnn7OkPIfMS_13s_CrZmvsWuM-Xx2lLji9wKQ,353
+pawpd/http.py,sha256=Vx_v22mDrMM0Ws2h_7j1Vqqb-06JVMT9uFSNn6ZONXc,2593
+pawpd/intents.py,sha256=gT6Iv2TgvE_GnE6UMGOlIjzUzbtotoK8FNsKMElurwo,27
+pawpd/message.py,sha256=kAZvhMxm13tLVM8CNRFUygrbzfrgUcHAB7EqbaHhxoU,658
+pawpd/msg.py,sha256=2xlN4b1QJi1xSEID8DHZXfrPXaGnmu9wrs61IiNwmxk,1749
+pawpd/user.py,sha256=4qQrGQ_nA7g9jYZ3u2gZfOSnnjtGQ5VR-YumUyJ18dE,2284
+pawpd-1.0.0.dist-info/METADATA,sha256=YSG65826PcdG9u4sYZBf0TlZspaEVXNmwH6KcA8Ucaw,4705
+pawpd-1.0.0.dist-info/WHEEL,sha256=Nw36Djuh_5VDukK0H78QzOX-_FQEo6V37m3nkm96gtU,91
+pawpd-1.0.0.dist-info/top_level.txt,sha256=AofZawpFjV3dVSqktnNhApUBfz98WCG_tVPlcw7Od5A,6
+pawpd-1.0.0.dist-info/RECORD,,
