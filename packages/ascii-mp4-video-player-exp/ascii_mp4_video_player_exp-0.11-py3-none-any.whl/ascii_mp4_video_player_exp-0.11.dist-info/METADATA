@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: ascii-mp4-video-player-exp
+Version: 0.11
+Summary: ASCII mp4 video player experimental
+Author: paul
+Author-email: paul@kfsoft.info
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Requires-Dist: opencv-python
+Requires-Dist: numpy
+Requires-Dist: windows-curses; platform_system == "Windows"
+
