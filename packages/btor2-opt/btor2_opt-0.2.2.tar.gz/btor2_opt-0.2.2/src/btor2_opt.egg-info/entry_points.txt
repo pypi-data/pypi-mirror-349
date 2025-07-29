@@ -1,0 +1,3 @@
+[console_scripts]
+btormiter = src.btormiter:main
+btoropt = btoropt.__main__:main
