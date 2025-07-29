@@ -1,0 +1,370 @@
+name: Automatic Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+concurrency:
+  group: test-${{github.ref}}
+  cancel-in-progress: true
+
+jobs:
+  vanilla:
+    name: Vanilla Python ${{matrix.python}} on ${{matrix.platform}}
+    runs-on: ${{matrix.platform}}
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        python:
+          - "3.11"
+          - "3.12"
+          - "3.13"
+        platform:
+          - ubuntu-latest
+          - ubuntu-24.04-arm
+          - macos-latest
+          - windows-latest
+        exclude:
+          - python: "3.13"
+            platform: macos-latest
+          - python: "3.13"
+            platform: windows-latest
+
+    steps:
+      - name: 🛒 Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 🕶️ Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          python-version: ${{ matrix.python }}
+
+      - name: 🧐 Inspect environment
+        if: runner.os != 'Windows'
+        run: |
+          set -x
+          env
+          ${CC:-cc} --version
+
+      - name: 📦 Set up Python dependencies (Unix)
+        if: runner.os != 'Windows'
+        run: |
+          uv_extra=
+          if [ "${{matrix.python}}" = "3.13" ]; then
+            uv_extra="--no-extra ray"
+          fi
+          if [ "$(uname)" = Linux ]; then
+            export CC=gcc
+          fi
+          uv sync --all-extras $uv_extra --no-default-groups --group test
+        env:
+          SETUPTOOLS_RUST_CARGO_PROFILE: release
+
+      - name: 📦 Set up Python dependencies (Windows)
+        if: runner.os == 'Windows'
+        run: |
+          uv sync --no-default-groups --group test
+
+      - name: 🔍 Inspect environment
+        run: |
+          coverage run -m lenskit doctor
+
+      - name: 🏃🏻‍➡️ Test LKPY
+        run: |
+          python -m pytest --verbose --log-file=test.log --durations=25 --cov=src/lenskit --cov-append tests
+
+      - name: 📐 Coverage results
+        if: ${{ !cancelled() }}
+        run: |
+          coverage xml
+          coverage report
+          cp .coverage coverage.db
+
+      - name: 📤 Upload test results
+        uses: actions/upload-artifact@v4
+        if: ${{ !cancelled() }}
+        with:
+          name: "test-vanilla-${{matrix.platform}}-py${{matrix.python}}"
+          path: |
+            test*.log
+            coverage.db
+            coverage.xml
+
+  mindep-all:
+    name: Minimal dependency tests (all options)
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: 🛒 Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 🕶️ Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          python-version: "3.11"
+
+      - name: 📦 Set up Python dependencies
+        run: |
+          uv sync --only-group=test
+          uv pip install --resolution=lowest-direct '.[sklearn,hpf,implicit,funksvd]'
+        env:
+          SETUPTOOLS_RUST_CARGO_PROFILE: release
+          CC: gcc
+
+      - name: 🔍 Inspect environment
+        run: |
+          lenskit doctor
+
+      - name: 🏃🏻‍➡️ Test LKPY
+        run: |
+          python -m pytest --verbose --log-file=test.log --durations=25 --cov=src/lenskit tests
+
+      - name: 📐 Coverage results
+        if: ${{ !cancelled() }}
+        run: |
+          coverage xml
+          coverage report
+          cp .coverage coverage.db
+
+      - name: 📤 Upload test results
+        uses: actions/upload-artifact@v4
+        if: ${{ !cancelled() }}
+        with:
+          name: test-mindep-all
+          path: |
+            test*.log
+            coverage.db
+            coverage.xml
+
+  mindep:
+    name: Minimal dependency tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: 🛒 Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 🕶️ Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          python-version: "3.11"
+
+      - name: 📦 Set up Python dependencies
+        run: |
+          uv sync --only-group=test
+          uv pip install --resolution=lowest-direct .
+        env:
+          SETUPTOOLS_RUST_CARGO_PROFILE: release
+
+      - name: 🔍 Inspect environment
+        run: |
+          lenskit doctor
+
+      - name: 🏃🏻‍➡️ Test LKPY
+        run: |
+          python -m pytest --verbose --log-file=test.log --durations=25 --cov=src/lenskit tests
+
+      - name: 📐 Coverage results
+        if: ${{ !cancelled() }}
+        run: |
+          coverage xml
+          coverage report
+          cp .coverage coverage.db
+
+      - name: 📤 Upload test results
+        uses: actions/upload-artifact@v4
+        if: ${{ !cancelled() }}
+        with:
+          name: test-mindep
+          path: |
+            test*.log
+            coverage.db
+            coverage.xml
+
+  eval-tests:
+    name: Evaluation-based tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🛒 Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 🕶️ Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          python-version: "3.12"
+
+      - name: 📦 Set up Python dependencies (Unix)
+        if: runner.os != 'Windows'
+        run: |
+          uv sync --all-extras --no-default-groups --group test
+        env:
+          SETUPTOOLS_RUST_CARGO_PROFILE: release
+
+      - name: Cache ML data
+        uses: actions/cache@v4
+        with:
+          path: |
+            data
+          key: test-eval-data
+
+      - name: Download datasets
+        run: |
+          coverage run --source=src/lenskit -m lenskit data fetch -D data --movielens ml-100k ml-20m ml-1m ml-10m
+          coverage run -a --source=src/lenskit -m lenskit data fetch -D data/az23 --amazon --core Video_Games
+          coverage run -a --source=src/lenskit -m lenskit data fetch -D data/az18 --amazon --edition 2018 Video_Games
+          coverage run -a --source=src/lenskit -m lenskit data fetch -D data/az14 --amazon --edition 2014 Video_Games
+
+      - name: Run Eval Tests
+        run: |
+          pytest --cov-append --cov=src/lenskit -m 'eval or realdata' --log-file test-eval.log tests
+
+      - name: 📐 Coverage results
+        if: ${{ !cancelled() }}
+        run: |
+          coverage xml
+          coverage report
+          cp .coverage coverage.db
+
+      - name: 📤 Upload test results
+        uses: actions/upload-artifact@v4
+        if: ${{ !cancelled() }}
+        with:
+          name: test-eval-tests
+          path: |
+            test*.log
+            coverage.db
+            coverage.xml
+
+  doc-tests:
+    name: Demos, examples, and docs
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🛒 Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 🕶️ Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          python-version: "3.12"
+
+      - name: 📦 Set up Python dependencies (Unix)
+        if: runner.os != 'Windows'
+        run: |
+          uv sync --all-extras --no-default-groups --group test --group doc  --group demo
+        env:
+          SETUPTOOLS_RUST_CARGO_PROFILE: release
+
+      - name: Cache ML data
+        uses: actions/cache@v4
+        with:
+          path: |
+            data
+            !data/*.zip
+          key: test-doc-mldata
+
+      - name: Download ML data
+        run: |
+          coverage run --source=src/lenskit -m lenskit data fetch -D data --movielens ml-100k ml-1m ml-10m ml-20m
+
+      - name: 📕 Validate code examples
+        run: |
+          sphinx-build -b doctest docs build/doc
+
+      - name: 📕 Validate example notebooks
+        run: |
+          pytest --cov=src/lenskit --nbval-lax --log-file test-notebooks.log docs
+
+      - name: 📐 Coverage results
+        if: ${{ !cancelled() }}
+        run: |
+          coverage xml
+          coverage report
+          cp .coverage coverage.db
+
+      - name: 📤 Upload test results
+        uses: actions/upload-artifact@v4
+        if: ${{ !cancelled() }}
+        with:
+          name: test-examples
+          path: |
+            test*.log
+            coverage.db
+            coverage.xml
+
+  results:
+    name: Test suite results
+    runs-on: ubuntu-latest
+    needs:
+      - vanilla
+      - mindep-all
+      - mindep
+      - eval-tests
+      - doc-tests
+
+    if: ${{ !cancelled() }}
+    steps:
+      - name: 🛒 Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Add upstream remote & author config
+        run: |
+          git remote add upstream https://github.com/lenskit/lkpy.git
+          git fetch upstream
+          git config user.name "LensKit Bot"
+          git config user.email lkbot@lenskit.org
+
+      - name: 🕶️ Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          python-version: "3.11"
+
+      - name: 📦 Set up Python dependencies
+        run: |
+          uv sync --only-group=reporting
+
+      - name: 📥 Download test artifacts
+        uses: actions/download-artifact@v4
+        with:
+          pattern: test-*
+          path: test-logs
+
+      - name: 📋 List log files
+        run: ls -laR test-logs
+
+      - name: 🔧 Fix coverage databases
+        run: |
+          for dbf in test-logs/*/coverage.db; do
+              echo "fixing $dbf"
+              sqlite3 -echo "$dbf" "UPDATE file SET path = replace(path, '\', '/');"
+          done
+
+      - name: ⛙ Merge and report
+        run: |
+          coverage combine --keep test-logs/*/coverage.db
+          coverage xml
+          coverage html -d lenskit-coverage
+          coverage report --format=markdown >coverage.md
+
+      - name: 📤 Upload coverage to CodeCov
+        uses: codecov/codecov-action@v4.2.0
+        env:
+          CODECOV_TOKEN: ab58c9cf-25b8-4283-a485-0b6382dc9a61

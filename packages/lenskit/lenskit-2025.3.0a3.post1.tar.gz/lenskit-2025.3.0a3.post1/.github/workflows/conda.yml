@@ -1,0 +1,77 @@
+name: Conda Packages
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+concurrency:
+  group: conda-test-${{github.ref}}
+  cancel-in-progress: true
+
+jobs:
+  conda-build:
+    name: Build Conda packages on ${{matrix.platform}}
+    runs-on: ${{matrix.platform}}
+    strategy:
+      fail-fast: false
+      matrix:
+        platform:
+          - ubuntu-latest
+          - macos-latest
+          - windows-latest
+
+    steps:
+      - name: 🛒 Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 🏷️ Fetch Git tags
+        run: git fetch --tags
+
+      - name: 🔬 Install Conda base
+        uses: mamba-org/setup-micromamba@v2
+        with:
+          environment-name: build
+          create-args: rattler-build uv
+
+      - name: 🔨 Build Conda packages
+        run: |
+          uv run --only-group=scripting invoke build-conda
+        shell: bash -el {0}
+
+      - name: Save package
+        uses: actions/upload-artifact@v4
+        with:
+          name: conda-dist-${{matrix.platform}}
+          path: dist/conda
+
+  conda-upload:
+    name: "Upload to prefix.dev"
+    needs: conda-build
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+
+    steps:
+      - name: Fetch Conda packages
+        uses: actions/download-artifact@v4
+        with:
+          pattern: conda-dist-*
+          path: dist/conda
+          merge-multiple: true
+
+      - name: List Conda packages
+        run: ls -R dist/conda
+
+      - name: Install rattler-build
+        uses: jaxxstorm/action-install-gh-release@v2.0.0
+        with:
+          repo: prefix-dev/rattler-build
+
+      - name: Upload packages
+        if: github.event_name == 'push'
+        run: |
+          rattler-build upload prefix --channel lenskit-dev dist/conda/*/*.conda

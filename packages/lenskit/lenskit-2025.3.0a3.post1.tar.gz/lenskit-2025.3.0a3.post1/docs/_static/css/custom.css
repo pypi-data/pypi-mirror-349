@@ -1,0 +1,23 @@
+/* This file is part of LensKit.
+ * Copyright (C) 2018-2023 Boise State University
+ * Copyright (C) 2023-2025 Drexel University
+ * Licensed under the MIT license, see LICENSE.md for details.
+ * SPDX-License-Identifier: MIT
+ */
+
+@import url(https://fonts.bunny.net/css?family=source-sans-3:300,300i,400,400i,500,500i,700,700i|source-code-pro:300,300i,400,400i,500,500i,600,600i,700,700i);
+
+html {
+    --pst-font-family-base: "Source Sans 3", var(--pst-font-family-base-system);
+    --pst-font-family-heading: "Source Sans 3", var(--pst-font-family-base-system);
+    --pst-font-weight-heading: 500;
+    --pst-font-family-monospace: "Source Code Pro", var(--pst-font-family-monospace-system);
+}
+
+.mermaid tt {
+    font-family: var(--pst-font-family-monospace);
+}
+
+code.xref, a code {
+    font-weight: 600;
+}

@@ -1,0 +1,36 @@
+[package]
+name = "lenskit"
+version = "2025.3.0-alpha.3.post1"
+edition = "2021"
+
+[lib]
+name = "_accel"
+path = "src/accel/lib.rs"
+crate-type = ["cdylib"]
+
+[dependencies]
+log = "^0.4"
+pyo3 = { version = "^0.24", features = ["extension-module", "abi3-py311"] }
+pyo3-log = "^0.12"
+
+rayon = "^1.10"
+
+ordered-float = "^5"
+rustc-hash = "^2.1.1"
+
+serde = { version = "^1.0", features = ["derive"] }
+serde_json = "^1.0"
+
+arrow = { version = "^55", features = ["pyarrow"], default-features = false }
+arrow-schema = { version = "^55", features = ["serde"] }
+nalgebra = { version = "^0.33" }
+ndarray = { version = "^0.16", features = ["rayon"] }
+nshare = { version = "^0.10", default-features = false, features = ["ndarray", "nalgebra"] }
+numpy = "^0.24"
+
+[profile.dev]
+opt-level = 2
+
+[profile.release]
+lto = true
+debug = "line-tables-only"

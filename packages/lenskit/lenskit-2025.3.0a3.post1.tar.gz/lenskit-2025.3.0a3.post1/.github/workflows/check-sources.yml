@@ -1,0 +1,63 @@
+name: Static Checks
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+concurrency:
+  group: check-${{github.ref}}
+  cancel-in-progress: true
+
+jobs:
+  pre-commit:
+    name: Check pre-commit hooks
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Check out source code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 📦 Install pre-commit
+        run: pipx install pre-commit
+
+      - name: 🪝 Install pre-commit hooks
+        run: pre-commit install-hooks
+
+      # switch git branches so we don't trip the branch pre-commit check
+      - name: Switch branches
+        run: git checkout -b check-source HEAD
+
+      - name: ✅ Check that pre-commit is clean
+        run: |
+          if pre-commit run --all-files; then
+            echo "::debug title=pre-commit::pre-commit checks passed"
+          else
+            git diff
+            git status -s |sed -Ee 's/^...(.*)/::error file=\1,title=pre-commit::pre-commit would modify this file/'
+            exit 1
+          fi
+
+  lint:
+    name: Annotate with lint failures
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Check out source code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 🕶️ Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install packages
+        run: uv sync --only-dev
+
+      - name: 🐜 Check source code lint rules
+        id: lint
+        run: ruff check --output-format=github
