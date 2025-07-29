@@ -1,0 +1,17 @@
+colored-logging
+earthaccess
+geopandas
+netCDF4
+python-dateutil
+rasters
+rioxarray
+spectral
+xarray
+
+[dev]
+build
+pytest>=6.0
+pytest-cov
+jupyter
+pytest
+twine
