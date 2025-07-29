@@ -1,0 +1,13 @@
+utils_flask_sqla_geo/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+utils_flask_sqla_geo/export.py,sha256=79tNZ2m9aW89R7Ev3t8rRkfuKnpk1LLnWZPRQX1KjDI,5411
+utils_flask_sqla_geo/generic.py,sha256=VmhtgCipc5vCWK2QXmetxsphnJvKgVwGmIvCTEAdKCQ,7979
+utils_flask_sqla_geo/mixins.py,sha256=Sd1Xv_BUpxNYd2dr1qKsh5CXrZSZMqPNoJu1lzV4mjo,218
+utils_flask_sqla_geo/schema.py,sha256=AnknjgD3diVUtCeEqirZW_29Vi71G5sGXhkCWSnwUDU,8638
+utils_flask_sqla_geo/serializers.py,sha256=FHanscjoQktvSbzp0tlhCT1-eJDswW8JQ36YUscXrrA,11158
+utils_flask_sqla_geo/utils.py,sha256=1LD8y2bvb1NeOfQeS89vgsR4Ol2wycpaYgMWihcTImQ,1475
+utils_flask_sqla_geo/utilsgeometry.py,sha256=Cnd2ZR4L4-KmTTYcU9HzW03Iq0yZbZ3veoQl9nNGh68,18083
+utils_flask_sqlalchemy_geo-0.3.3.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+utils_flask_sqlalchemy_geo-0.3.3.dist-info/METADATA,sha256=4ba-yVAnpbpqpxSIJnffck67lMsdIQkHomCT8fYcaMc,5859
+utils_flask_sqlalchemy_geo-0.3.3.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+utils_flask_sqlalchemy_geo-0.3.3.dist-info/top_level.txt,sha256=Sikn2HoCzxxPXEYD3EsHFAwlxIlTohs9aNrlcRTZQ_E,21
+utils_flask_sqlalchemy_geo-0.3.3.dist-info/RECORD,,
