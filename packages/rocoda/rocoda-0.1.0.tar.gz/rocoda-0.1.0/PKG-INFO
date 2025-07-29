@@ -1,0 +1,40 @@
+Metadata-Version: 2.4
+Name: rocoda
+Version: 0.1.0
+Summary: RoCoDA Alpha 0.1
+Author: GT PAIR Lab
+License: MIT
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: h5py>=3.13.0
+Requires-Dist: jupyter>=1.1.1
+Requires-Dist: networkx>=3.4.2
+Requires-Dist: pillow>=11.2.1
+Requires-Dist: robosuite==1.4.1
+Requires-Dist: torch==2.6.0
+Requires-Dist: torchvision>=0.21.0
+Requires-Dist: tqdm>=4.67.1
+Dynamic: license-file
+
+# ROCODA Alpha 0.1
+
+To install
+```bash
+git clone git@github.com:pairlab/rocoda.git
+cd rocoda
+conda create -n rocoda python=3.10
+conda activate rocoda
+pip install -r requirements.txt
+pip install -e .
+```
+
+Additionally, to pull `example/stack_three.hdf5`, you will need to install Git LFS (Large File Storage).
+On Ubuntu, run
+
+```bash
+sudo apt update
+sudo apt install git-lfs
+git lfs install
+git lfs pull
+```

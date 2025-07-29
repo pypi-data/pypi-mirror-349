@@ -1,0 +1,29 @@
+[project]
+
+name = "rocoda"
+version = "0.1.0"
+description = "RoCoDA Alpha 0.1"
+authors = [ { name="GT PAIR Lab" } ]
+license = { text="MIT" }
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "h5py>=3.13.0",
+    "jupyter>=1.1.1",
+    "networkx>=3.4.2",
+    "pillow>=11.2.1",
+    "robosuite==1.4.1",
+    "torch==2.6.0",
+    "torchvision>=0.21.0",
+    "tqdm>=4.67.1",
+]
+
+[tool.setuptools.packages.find]
+
+where    = ["."]
+include  = ["rocoda*"]
+
+[build-system]
+
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
