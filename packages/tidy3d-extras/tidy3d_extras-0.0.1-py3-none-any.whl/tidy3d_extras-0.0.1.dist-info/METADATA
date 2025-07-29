@@ -1,0 +1,16 @@
+Metadata-Version: 2.3
+Name: tidy3d-extras
+Version: 0.0.1
+Summary: Extras for Tidy3D
+Author: Casey Wojcik
+Author-email: charles@flexcompute.com
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Description-Content-Type: text/markdown
+
+# Tidy3D-Extras
+
+Extras package for Tidy3D
+
