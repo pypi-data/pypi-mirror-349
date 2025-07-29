@@ -1,0 +1,6 @@
+# 包括动态库
+include closeformIK/CloseFormIK.cpython-39-x86_64-linux-gnu.so
+include closeformIK/CloseFormIK.cp39-win_amd64.pyd
+
+# 包括 README.md
+include README.md
