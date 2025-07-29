@@ -1,0 +1,105 @@
+Metadata-Version: 2.4
+Name: burdenoff-common
+Version: 0.1.0
+Summary: Python SDK for Burdenoff Workspace Server
+Author-email: Burdenoff Team <info@burdenoff.com>
+Project-URL: Homepage, https://github.com/burdenoff/burdenoff-common
+Project-URL: Bug Tracker, https://github.com/burdenoff/burdenoff-common/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.25.0
+Requires-Dist: gql>=3.0.0
+Requires-Dist: graphql-core>=3.1.0
+Requires-Dist: pyjwt>=2.0.0
+
+# Burdenoff Common SDK
+
+The Burdenoff Common SDK provides a comprehensive set of tools for interacting with the Burdenoff Server. It enables developers to manage workspaces, projects, billing functions, and more through a simple Python interface.
+
+## Installation
+
+```bash
+pip install burdenoff-common
+```
+
+## Quick Start
+
+```python
+import asyncio
+from burdenoff_common import WorkspaceClient # Assuming WorkspaceClient is exposed via __init__.py
+
+async def main():
+    # Initialize the client
+    client = WorkspaceClient(
+        endpoint="https://api.example.com/graphql",
+        api_key="your-api-key"  # Or use token-based authentication
+    )
+    
+    # Authenticate if using username/password
+    # token = await client.auth.login("user@example.com", "password")
+    # client.set_token(token)
+    
+    # Get all workspaces
+    workspaces = await client.workspace.list_workspaces()
+    for workspace in workspaces:
+        print(f"Workspace: {workspace['name']} ({workspace['id']})")
+        
+        # Get projects in this workspace
+        projects = await client.project.list_projects_by_workspace(workspace['id'])
+        for project in projects:
+            print(f"  - Project: {project['name']} ({project['id']})")
+
+if __name__ == "__main__":
+    asyncio.run(main())
+```
+
+## Documentation
+
+The SDK is divided into several modules, each with its own documentation:
+
+- [Authentication Module](burdenoff_common/auth/README.md) - User authentication and token management
+- [Workspace Module](burdenoff_common/workspace/README.md) - Managing workspaces and workspace members
+- [Project Module](burdenoff_common/project/README.md) - Managing projects and project resources
+- [Billing Module](burdenoff_common/billing/README.md) - Payment processing, quota management, and usage tracking
+- [Permissions Module](burdenoff_common/permissions/README.md) - Granular permissions system
+
+## Core Features
+
+- **Authentication**: Secure login and API key support
+- **Workspace Management**: Create, read, update, and delete workspaces
+- **Project Management**: Organize and manage projects within workspaces
+- **Billing**: Handle payments, subscriptions, and usage tracking
+- **Permissions**: Fine-grained access control for all resources
+
+## Examples
+
+Check out the examples directory for comprehensive usage examples:
+
+- [Billing Examples](examples/billing_examples.py)
+- [Permissions Examples](examples/permissions_examples.py)
+- [Authentication Examples](examples/authentication.py)
+- [Project Management Examples](examples/project_management.py)
+- [Workspace Management Examples](examples/workspace_management.py)
+
+## Error Handling
+
+The SDK uses a consistent error handling approach. Most methods return `None` or an empty collection when an error occurs:
+
+```python
+result = await client.workspace.get_workspace("ws_nonexistent")
+if result is None:
+    print("Workspace not found or access denied")
+else:
+    print(f"Found workspace: {result['name']}")
+```
+
+## Contributing
+
+Contributions are welcome! Please check our contributing guidelines for more information.
+
+## License
+
+This SDK is licensed under the [MIT License](LICENSE). 
