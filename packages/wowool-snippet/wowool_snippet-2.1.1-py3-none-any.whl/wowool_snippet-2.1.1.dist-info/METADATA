@@ -1,0 +1,112 @@
+Metadata-Version: 2.4
+Name: wowool-snippet
+Version: 2.1.1
+Summary: The Wowool Snippet Package
+Home-page: https://www.wowool.com/
+Author: Wowool
+Author-email: info@wowool.com
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: wowool-sdk
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Injecting custom NLP in your pipelines
+
+The snippet app extends the NLP in your pipeline with a small set of rules or lexicons. 
+
+## Options
+
+```typescript
+interface SnippetOptions {
+    source: string;
+}
+```
+
+with:
+
+| Property | Description        |
+|----------|--------------------|
+| `source` | Wowool source code |
+
+## Results
+
+The app extends the NLP, the results of which will be reflected in the [analysis results](docs/basics/analysis).
+
+## Examples
+
+<sample data-uuid="snippet"></sample>
+# Injecting custom NLP in your pipelines
+
+The snippet app extends the NLP in your pipeline with a small set of rules or lexicons. 
+
+## Options
+
+```typescript
+interface SnippetOptions {
+    source: string;
+}
+```
+
+with:
+
+| Property | Description        |
+|----------|--------------------|
+| `source` | Wowool source code |
+
+## Results
+
+The app extends the NLP, the results of which will be reflected in the [analysis results](docs/basics/analysis).
+
+# API
+
+## Examples
+
+
+### Trying out the wowool language.
+
+This script uses the wowool SDK annotate entities and uses the snippet app ton annotate the relationships between people and companies.
+
+```python
+from wowool.sdk import Pipeline
+
+text = "John Smith works for Ikea."
+pipeline = Pipeline(
+    [
+        "english",
+        "entity",
+        {
+            "name": "snippet.app",
+            "options": {
+                "source": "rule:{ Person .. Company } = PersonCompany;",
+            },
+        },
+    ]
+)
+document = pipeline(text)
+print(document)
+
+```
+
+
+
+## License
+
+In both cases you will need to acquirer a license file at https://www.wowool.com
+
+### Non-Commercial
+
+    This library is licensed under the GNU AGPLv3 for non-commercial use.  
+    For commercial use, a separate license must be purchased.  
+
+### Commercial license Terms
+
+    1. Grants the right to use this library in proprietary software.  
+    2. Requires a valid license key  
+    3. Redistribution in SaaS requires a commercial license.  
