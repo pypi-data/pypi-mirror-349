@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: code2postman-mcp
+Version: 0.1.0
+Summary: MCP server for converting code to Postman collections
+Author-email: Mario Toribio <zen-krypton-derail@duck.com>
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: mcp[cli]>=1.9.0
+Requires-Dist: pytest-asyncio>=0.26.0
+Requires-Dist: pytest>=8.3.5
+Requires-Dist: loguru>=0.7.3
+Provides-Extra: test
+Requires-Dist: pytest>=7.0.0; extra == "test"
+Requires-Dist: pytest-asyncio>=0.20.0; extra == "test"
+Requires-Dist: pytest-cov>=4.0.0; extra == "test"

@@ -1,0 +1,15 @@
+code2postman_mcp/__init__.py,sha256=vJpNyv7gJxST6XFWyBZUEqumyAaR8sABI8MlwanoJY4,31
+code2postman_mcp/server.py,sha256=mnFw-8iqpBkumuHy1bnmkklVdcZPsIgIUTa1yOaN-MI,2049
+code2postman_mcp/consts/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+code2postman_mcp/consts/excluded_files.py,sha256=vsSMM5GkdYZqGwP2Ouo_2JO0YjgTqktRKFShzYj9vBM,4143
+code2postman_mcp/consts/postman_template.py,sha256=ENNi-FK9K8shbWX9_9Ul78HiFVSL3w_ek-FxRXQUGEk,225
+code2postman_mcp/tools/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+code2postman_mcp/tools/handle_files.py,sha256=dZC9j0GEHV_FfiOd9RG6-m-JFMd4RFv_MHO9xbK8EKQ,7073
+code2postman_mcp/tools/handle_postman.py,sha256=dOAWMSnAOyjjUX5m1d4mFw8b2vZvXmujq-OsoWWfugY,19640
+code2postman_mcp/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+code2postman_mcp/utils/files.py,sha256=p6lRHCZUh4omcqMTmVvQASNnYGE2AjljqlENWUNkV6w,964
+code2postman_mcp-0.1.0.dist-info/METADATA,sha256=T6oCq5ljvLinVJMGfCzRDntCm4_w8AHZbzMOxhDfiRQ,722
+code2postman_mcp-0.1.0.dist-info/WHEEL,sha256=Nw36Djuh_5VDukK0H78QzOX-_FQEo6V37m3nkm96gtU,91
+code2postman_mcp-0.1.0.dist-info/entry_points.txt,sha256=w7hSOxeao0DIIuy2T3y0MpgUHH2OhcFtm2vinFHNDyk,70
+code2postman_mcp-0.1.0.dist-info/top_level.txt,sha256=QYDH9osNoEZuLwdT8KgHIpfPdr8AEwWMGHemKAFkLSE,17
+code2postman_mcp-0.1.0.dist-info/RECORD,,

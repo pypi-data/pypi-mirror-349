@@ -1,0 +1,2 @@
+[console_scripts]
+code2postman-mcp = src.code2postman_mcp.server:main
