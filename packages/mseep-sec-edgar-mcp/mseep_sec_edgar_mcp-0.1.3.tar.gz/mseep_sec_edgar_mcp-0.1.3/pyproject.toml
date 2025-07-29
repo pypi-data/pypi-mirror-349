@@ -1,0 +1,35 @@
+[build-system]
+requires = [
+    "setuptools>=61.0",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mseep-sec-edgar-mcp"
+version = "0.1.3"
+description = "SEC EDGAR MCP server for company filings and financial data"
+authors = [
+    { name = "mseep", email = "support@skydeck.ai" },
+]
+readme = "README.md"
+requires-python = ">=3.13"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "mcp[cli]>=1.7.1",
+    "secedgar==0.6.0a0",
+]
+maintainers = [
+    { name = "mseep", email = "support@skydeck.ai" },
+]
+
+[project.license]
+file = "LICENSE"
+
+[tool.setuptools]
+packages = [
+    "sec_edgar_mcp",
+]
