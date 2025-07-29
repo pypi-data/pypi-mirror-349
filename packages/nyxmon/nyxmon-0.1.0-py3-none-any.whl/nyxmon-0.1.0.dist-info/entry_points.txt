@@ -1,0 +1,6 @@
+[console_scripts]
+add-check = nyxmon.entrypoints.check_management:add_check_to_db
+llm-content = nyxmon.entrypoints.developer_tools:llm_content
+show-checks = nyxmon.entrypoints.check_management:show_checks
+start-agent = nyxmon.entrypoints.cli:start_agent
+
