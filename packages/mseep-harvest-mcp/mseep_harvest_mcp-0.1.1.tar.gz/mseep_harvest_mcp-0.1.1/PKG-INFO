@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: mseep-harvest-mcp
+Version: 0.1.1
+Summary: A simple MCP server for Harvest
+Home-page: 
+Author: mseep
+Author-email: mseep <support@skydeck.ai>
+Maintainer-email: mseep <support@skydeck.ai>
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: httpx>=0.28.1
+Requires-Dist: mcp>=1.4.1
+Dynamic: author
+Dynamic: license-file
+Dynamic: requires-python
