@@ -1,0 +1,9 @@
+cvec/__init__.py,sha256=STe9SLrHiNU1-7Q4hGZwlxcyHaO3wreFW-oaRtJfvfE,111
+cvec/cvec.py,sha256=BVGX7yx_DilKtmJ-sEqlh32Gup0W8gls5yzQ_JNcyNA,9418
+cvec/metric.py,sha256=Ye3BRMaU3gSvSf7x1GJCDGfD9LqpIvTjPAqMOTAYBLQ,674
+cvec/py.typed,sha256=8PjyZ1aVoQpRVvt71muvuq5qE-jTFZkK-GLHkhdebmc,26
+cvec/span.py,sha256=0c2kVCAOyNYFtQq5jeyisDAK6jB5r30eBEaVxR8Wv8c,1210
+cvec-0.1.0.dist-info/LICENSE,sha256=iLFe-ialSIZJ6tmQQztcfhngfJGf0j_K-Qmnk6xnCY8,1071
+cvec-0.1.0.dist-info/METADATA,sha256=hj0yoAPWpIyKEAucsHL2vB4Dt6BZZgC_oI42kHDEQGc,7288
+cvec-0.1.0.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+cvec-0.1.0.dist-info/RECORD,,
