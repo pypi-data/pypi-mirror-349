@@ -1,0 +1,26 @@
+[project]
+name = "mseep-mcp-server-macos-defaults"
+version = "0.1.4"
+description = "MCP server for reading/writing macOS defaults (settings)"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "mcp>=1.0.0",
+]
+authors = [
+    { name = "mseep", email = "support@skydeck.ai" },
+]
+maintainers = [
+    { name = "mseep", email = "support@skydeck.ai" },
+]
+
+[project.scripts]
+mcp-server-macos-defaults = "mcp_server_macos_defaults:main"
+
+[build-system]
+requires = [
+    "hatchling",
+]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets]
