@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "django-cache-helper"
+authors = [
+    { name="YCharts", email="developers@ycharts.com" },
+]
+description = "a simple tool for making caching functions, methods, and class methods a little bit easier."
+readme = "README.md"
+requires-python = ">=3.8"
+keywords = [
+    "cache",
+    "django"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Environment :: Web Environment",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Framework :: Django",
+]
+dependencies = []
+dynamic = ["version"]
+
+[project.urls]
+"Homepage" = "https://github.com/ycharts/django_cache_helper"
+
+[tool.setuptools]
+packages = [
+    "cache_helper",
+]
+
+[tool.setuptools.dynamic]
+version = {attr = "cache_helper.VERSION"}
