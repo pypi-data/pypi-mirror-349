@@ -1,0 +1,11 @@
+pygments
+colorama
+executing
+
+[dev]
+pytest>=6.0
+pytest-cov
+black
+isort
+mypy
+flake8
