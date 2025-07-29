@@ -1,0 +1,31 @@
+Metadata-Version: 2.4
+Name: class_only_design
+Version: 1.0.0
+Summary: Tools for class only design.
+Home-page: https://github.com/InvestmentSystems/class_only_design
+Author: Tom Rutherford
+Author-email: foreverwintr@gmail.com
+License: MIT
+Keywords: functional-programming singleton immutability
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: license-file
+Dynamic: summary
+
+
+A collection of tools for class only design.
+
+For more information, please visit the `project on github <https://github.com/InvestmentSystems/class_only_design>`_.
