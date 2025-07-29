@@ -1,0 +1,10 @@
+fifi/__init__.py,sha256=P7xG0b_eMPD4LQ5St_RxBmISubMzs0LtRsB0hVj_PlA,285
+fifi/database/engine_base.py,sha256=djLboR_l6ezbrR6Wm53_ras2Zz8vlIy0bAaDI_4kb4g,1025
+fifi/decorator/db_async_session_injection.py,sha256=d4k2vnxg6FCx3pKZ5hM62qH7EBB0JrhRgtsX_R44Rjs,694
+fifi/decorator/singleton.py,sha256=TsXWOQUgNmT0YlV79DnbBPHUE-Ww01wSL3T_UxcEIzA,410
+fifi/decorator/time_log.py,sha256=9jW8TdD_NHo6Bw7eurYLwczVNLlQYxKHbNXcTBlzZEU,465
+fificore-0.0.1.dist-info/licenses/LICENSE,sha256=fqdwf5uhp1CBO_t8zhXTvv62-QXSLrzBaNT0nMo10YM,1067
+fificore-0.0.1.dist-info/METADATA,sha256=5KUTI_WOXz40YaCvJE19TTO0eEnuOtBOAM-VIGFxeNg,2069
+fificore-0.0.1.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+fificore-0.0.1.dist-info/top_level.txt,sha256=D440r5iJWp0CewXtHhc3JwRew-8W_63FiDvgk8GtwqA,5
+fificore-0.0.1.dist-info/RECORD,,
