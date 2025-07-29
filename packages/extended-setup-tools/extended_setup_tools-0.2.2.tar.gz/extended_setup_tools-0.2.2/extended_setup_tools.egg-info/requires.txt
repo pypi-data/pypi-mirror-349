@@ -1,0 +1,11 @@
+setuptools
+
+[all]
+html-testRunner
+lxml
+unittest-xml-reporting
+
+[test]
+html-testRunner
+lxml
+unittest-xml-reporting
