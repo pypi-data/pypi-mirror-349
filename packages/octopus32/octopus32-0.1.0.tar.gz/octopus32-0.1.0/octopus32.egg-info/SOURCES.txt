@@ -1,0 +1,7 @@
+setup.py
+octopus32/__init__.py
+octopus32/utils.py
+octopus32.egg-info/PKG-INFO
+octopus32.egg-info/SOURCES.txt
+octopus32.egg-info/dependency_links.txt
+octopus32.egg-info/top_level.txt
