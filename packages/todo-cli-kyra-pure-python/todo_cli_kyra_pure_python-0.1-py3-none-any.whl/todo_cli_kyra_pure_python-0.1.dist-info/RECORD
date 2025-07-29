@@ -1,0 +1,11 @@
+todo_cli/Storage.py,sha256=QfaoeUnNeFEXiQbk5MFDx-xQV_D7GRpr1kHc8w-V9Hw,3762
+todo_cli/Task.py,sha256=NJaLy4iyH2kajvSn1L-zanhxu4lRPmWkeP0vLcSlCY0,1435
+todo_cli/TaskService.py,sha256=cVgAkXlk81KrWa0alNw6Y3xEuVm74PiTErAYyKjo8ZM,11280
+todo_cli/TaskView.py,sha256=QT1_wCbS1G3VLRDhRTaAs-g4aa6No-WLlxqdfaYt8KI,9504
+todo_cli/__init__.py,sha256=J0ZHKmij2QB-5rJO6b576mNZvqzhmQyKgEdl_lOTTQI,65
+todo_cli/main.py,sha256=6-hCAqtdieZtJ951pWvmt0l5s8fXKjdnD5izRfUzIGM,855
+todo_cli_kyra_pure_python-0.1.dist-info/METADATA,sha256=LJf9AkKA1OjfXMPQ8rpPHTzZlGcj0PsZneYMoG4ncfI,1677
+todo_cli_kyra_pure_python-0.1.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+todo_cli_kyra_pure_python-0.1.dist-info/entry_points.txt,sha256=OdnIsH3mjljXcg1M50ySF7ITQGeFxbuuyiHDu0IvQRM,48
+todo_cli_kyra_pure_python-0.1.dist-info/top_level.txt,sha256=4xaZBzARTw98acNbgoe3IQa-PJJJiui84HlCJ5jJKUs,9
+todo_cli_kyra_pure_python-0.1.dist-info/RECORD,,
