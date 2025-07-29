@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+src/abcattrs/__init__.py
+src/abcattrs/_version.py
+src/abcattrs/abcattrs.py
+src/abcattrs/py.typed
+src/abcattrs/type_hints.py
+src/abcattrs.egg-info/PKG-INFO
+src/abcattrs.egg-info/SOURCES.txt
+src/abcattrs.egg-info/dependency_links.txt
+src/abcattrs.egg-info/requires.txt
+src/abcattrs.egg-info/top_level.txt

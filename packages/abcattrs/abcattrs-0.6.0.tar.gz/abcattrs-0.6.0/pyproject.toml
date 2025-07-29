@@ -1,0 +1,67 @@
+[build-system]
+requires = [
+  "setuptools==80.8.0",
+  "setuptools-scm==8.3.1",
+  "wheel==0.45.1",
+]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+version_file = "src/abcattrs/_version.py"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.dynamic]
+readme = {file = "README.md", content-type = "text/markdown; charset=UTF-8"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+namespaces = false
+
+
+[project]
+name = "abcattrs"
+authors = [
+  { name="Anton Agestam", email="git@antonagestam.se" },
+]
+description = "Abstract class attributes"
+license = {text = "BSD-3-Clause"}
+requires-python = ">=3.10"
+classifiers = [
+  "Intended Audience :: Developers",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Development Status :: 5 - Production/Stable",
+  "Typing :: Typed",
+]
+dynamic = ["version", "readme"]
+
+[project.optional-dependencies]
+test = [
+  "pytest",
+  "pytest-mypy-plugins",
+  "coverage",
+]
+type-check = [
+  "mypy",
+  "pytest",
+  "types-setuptools",
+]
+
+[project.urls]
+"Source Repository" = "https://github.com/antonagestam/abcattrs/"
+
+
+[tool.check-manifest]
+ignore = ["src/abcattrs/_version.py"]
+
+
+[tool.coverage.report]
+exclude_also = ['^\s*\.\.\.']

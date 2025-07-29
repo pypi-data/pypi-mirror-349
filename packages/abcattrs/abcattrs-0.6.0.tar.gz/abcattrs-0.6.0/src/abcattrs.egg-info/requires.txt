@@ -1,0 +1,10 @@
+
+[test]
+pytest
+pytest-mypy-plugins
+coverage
+
+[type-check]
+mypy
+pytest
+types-setuptools

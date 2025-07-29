@@ -1,0 +1,17 @@
+exclude Makefile
+recursive-exclude docs *
+recursive-exclude .github *
+recursive-exclude .goose *
+recursive-exclude tests *
+recursive-include abcattrs py.typed
+exclude *.yaml
+exclude *.yml
+exclude *.toml
+exclude *.txt
+include README.md
+include LICENSE
+include pyproject.toml
+exclude setup.cfg
+exclude .gitignore
+exclude .editorconfig
+exclude mypy.ini
