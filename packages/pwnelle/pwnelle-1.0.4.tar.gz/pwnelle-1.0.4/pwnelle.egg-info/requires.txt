@@ -1,0 +1,6 @@
+typer>=0.12
+rich>=13.7
+python-Levenshtein>=0.25
+pwntools>=4.12
+capstone>=5.0
+pyelftools>=0.30
