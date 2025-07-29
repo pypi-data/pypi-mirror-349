@@ -1,0 +1,25 @@
+[project]
+name = "mseep-mcp-finnhub"
+version = "0.1.1"
+description = "An MCP server to connect with Finnhub financial API."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "mcp>=1.0.0",
+    "python-dotenv>=1.0.1",
+    "fastmcp>=0.4.0",
+    "finnhub-python",
+]
+authors = [
+    { name = "mseep", email = "support@skydeck.ai" },
+]
+maintainers = [
+    { name = "mseep", email = "support@skydeck.ai" },
+]
+
+[build-system]
+requires = [
+    "setuptools>=42",
+    "wheel",
+]
+build-backend = "setuptools.build_meta"
