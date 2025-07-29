@@ -1,0 +1,12 @@
+certbot_deployer_vsphere/__init__.py,sha256=R9ODKRO3JMsdb2oobByHkEHCih0B2f9Y5NYjfNqCqsA,76
+certbot_deployer_vsphere/__main__.py,sha256=i_NyPNYeiRNgAUnyxLKv8VM4Sv-V0LXTD7D4IsOeErQ,161
+certbot_deployer_vsphere/meta.py,sha256=au9ku6K5gHn5Ta2s-wlbSRrnEnif7pgy9qR0hfKVJKM,247
+certbot_deployer_vsphere/_main/__init__.py,sha256=1p7-VXmhAMhxYlZlI6vZpuAvrtIencwTQ2ynuTiG-OI,326
+certbot_deployer_vsphere/certbot_deployer_vsphere/__init__.py,sha256=mAVl-V0-juOmoSLEhcKhgvPS3GIUYvnisRqEmUxi9Nc,3326
+certbot_deployer_vsphere-0.1.0.data/scripts/certbot_deployer_vsphere,sha256=ibljpCHJBJQcUokIXnNKoAEG2Hf5pbtRS_bWHDieZbo,148
+certbot_deployer_vsphere-0.1.0.dist-info/licenses/LICENSE,sha256=dFpJz1E-s2O4pDKQdb1IytAQqzfh4mrk7S9IfXHgiAQ,1124
+certbot_deployer_vsphere-0.1.0.dist-info/METADATA,sha256=U5X228NQha_EuN2rcazdlt0k2wH0Zi7KfRREgtU03vU,3233
+certbot_deployer_vsphere-0.1.0.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+certbot_deployer_vsphere-0.1.0.dist-info/entry_points.txt,sha256=m_vz6h8zBKJcRfAqSV8Eecw7aeok_PTtq6yQ7f0OsUk,253
+certbot_deployer_vsphere-0.1.0.dist-info/top_level.txt,sha256=Otc_YsXTignRd9Cw6IWpHo-nGdATmJajhxlMbZfGEso,25
+certbot_deployer_vsphere-0.1.0.dist-info/RECORD,,
