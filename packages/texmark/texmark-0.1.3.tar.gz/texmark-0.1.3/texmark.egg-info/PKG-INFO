@@ -1,0 +1,90 @@
+Metadata-Version: 2.4
+Name: texmark
+Version: 0.1.3
+Summary: Write scientific articles in markdown
+Author-email: Mahé Perrette <mahe.perrette@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2025 Mahé Perrette
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: homepage, https://github.com/perrette/texmark
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pypandoc
+Requires-Dist: jinja2
+Requires-Dist: pyyaml
+Requires-Dist: panflute
+Requires-Dist: python-frontmatter
+Dynamic: license-file
+
+# texmark
+
+Write scientific articles in markdown
+
+
+## Installation
+
+for development, after cloning:
+
+    pip install -e .
+
+and soon:
+
+    pip install texmark
+
+## Example
+
+See [example.md](example.md) for a sample markdown file with yaml metadata in the header.
+
+The command to convert the markdow to tex is:
+
+    texmark example.md
+
+And to convert to PDF
+
+    texmark example.md --pdf
+
+For another journal, it is enough to change the `journal -> template' field in the yaml metadata.
+For testing it is also possible to pass `-j` for `--journal-template`:
+
+    texmark example.md --pdf -j science -o build/example-science.pdf --tex build/example-science.tex
+
+See the example tex and pdf results in [build](/build)
+
+For now only `copernicus` and `science` template are available.
+Only partial support is provided. Upon submission you'll most likely need
+to rework the final latex version, especially to handle things like appendix or special sections.
+Alternatively, you may write your custom template (see the advanced section)
+
+## Advanced: latex template
+
+The templates are written in [jinja2](https://jinja.palletsprojects.com).
+
+Just copy from e.g. texmark/templates/science/template.tex to your own, e.g. custom_template.tex
+And run again with:
+
+    texmark example.md --pdf -j science -o build/example-science.pdf --tex build/example-science.tex --template custom_template.tex
+
+The -j journal template option (here `science`) is still used to set custom filters (e.g. only `\cite` for Science, no `\citet` ; extract specific sections as metadata to be injected as `{{section}}` instead of `{{body}}` etc). The machinery is defined in [texmark/filters.py](/texmark/filters.py) and can in principle be extended or copied.
+Two approaches are possible:
+- just add more filters via the `--filters` command or in the yaml metadata.
+- extend the existing filters in a module, e.g. custom_filter.py, that extends the `filters` dict from the `texmark.filters` module (see the source code to check the details). And then pass it via `--filters-module custom_filter` parameter (or `custom_filter` in the metadata) to prompt the texmark filter to load that module and make it available via `-j your-custom-name`. Note that will require you to explicitly pass `--template` as well. Unless you overwrite an existing filter.
