@@ -1,0 +1,2 @@
+[console_scripts]
+jwtee = jwtee.jwtee:main
