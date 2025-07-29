@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "poromat"
+version = "0.1.2"
+description = "Stress-strain prediction with porosity-aware models (Interpolation, LightGBM, Meta_learning)"
+readme = { file = "README.md", content-type = "text/markdown" }
+authors = [
+    {name = "Yun Zhou", email = "robbiezhou1@gmail.com"}
+]
+license = {file = "LICENSE.txt"}
+requires-python = ">=3.10"
+
+dependencies = [
+    "numpy>=1.23,<2.0",
+    "pandas>=2.2.3",
+    "scikit-learn>=1.6.1",
+    "matplotlib>=3.9.2",
+    "lightgbm>=4.6.0",
+    "jax==0.4.28",
+    "jaxlib==0.4.28",
+    "numpyro==0.18.0",
+    "joblib",
+    "torch",
+    "torchvision",
+    "torchaudio",
+    "learn2learn",
+    "qpth>=0.0.18"
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = "src"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3.4",
+    "jupyter",
+    "notebook",
+    "ipywidgets",
+    "scikit-posthocs"
+]
