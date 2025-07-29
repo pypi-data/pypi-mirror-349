@@ -1,0 +1,188 @@
+Metadata-Version: 2.4
+Name: wowool-quotes
+Version: 2.1.1
+Summary: The Wowool Quotes Package
+Home-page: https://www.wowool.com/
+Author: Wowool
+Author-email: info@wowool.com
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: wowool-sdk
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Extracting quotes and their referenced entities
+
+The quotes app extracts quotations, even when the quotes extend through several sentences of text. 
+
+<note>The app performs a lookup when a `QuotationScope` entity is found, that encompasses the `Quotation` and the `QuotationAuthor`. You can find this in the `quotation` domain or you can make your own custom domain with this entity.</note>
+
+## Options
+
+#### QuotesOptions
+
+```typescript
+interface QuotesOptions {
+    mentions: string[];
+}
+```
+
+with:
+
+| Property   | Description                                                                           |
+|------------|---------------------------------------------------------------------------------------|
+| `mentions` | URIs of the entities that should be extracted, if present, from the identified quotes |
+
+## Results
+
+#### QuotesResults
+
+```typescript
+type QuotesResults = QuoteResult[];
+```
+
+#### QuoteResult
+
+```typescript
+interface QuoteResult {
+    author: string;
+    text: string;
+    begin_offset: string;
+    end_offset: string;
+}
+```
+
+with
+
+| Property       | Description                                                                           |
+|----------------|---------------------------------------------------------------------------------------|
+| `mentions`     | URIs of the entities that should be extracted, if present, from the identified quotes |
+| `author`       | Quotation author                                                                      |
+| `text`         | Quotation text                                                                        |
+| `begin_offset` | Begin offset within the document                                                      |
+| `end_offset`   | End offset within the document                                                        |
+
+## Examples
+
+#### Quotes only
+
+<sample data-uuid="quotes"></sample>
+
+#### Quotes and mentioned entities
+
+<sample data-uuid="quotes"></sample>
+# Extracting quotes and their referenced entities
+
+The quotes app extracts quotations, even when the quotes extend through several sentences of text. 
+
+<note>The app performs a lookup when a `QuotationScope` entity is found, that encompasses the `Quotation` and the `QuotationAuthor`. You can find this in the `quotation` domain or you can make your own custom domain with this entity.</note>
+
+## Options
+
+#### QuotesOptions
+
+```typescript
+interface QuotesOptions {
+    mentions: string[];
+}
+```
+
+with:
+
+| Property   | Description                                                                           |
+|------------|---------------------------------------------------------------------------------------|
+| `mentions` | URIs of the entities that should be extracted, if present, from the identified quotes |
+
+## Results
+
+#### QuotesResults
+
+```typescript
+type QuotesResults = QuoteResult[];
+```
+
+#### QuoteResult
+
+```typescript
+interface QuoteResult {
+    author: string;
+    text: string;
+    begin_offset: string;
+    end_offset: string;
+}
+```
+
+with
+
+| Property       | Description                                                                           |
+|----------------|---------------------------------------------------------------------------------------|
+| `mentions`     | URIs of the entities that should be extracted, if present, from the identified quotes |
+| `author`       | Quotation author                                                                      |
+| `text`         | Quotation text                                                                        |
+| `begin_offset` | Begin offset within the document                                                      |
+| `end_offset`   | End offset within the document                                                        |
+
+# API
+
+## Examples
+
+You will need to install the english language module to run the sample. `pip install wowool-english` 
+
+### Extracting sentiments
+
+Note that in the results the sentiments have been resolved. For this to happen we need to add the entities in the pipeline.
+
+
+
+```python
+from wowool.sdk import Pipeline
+from wowool.quotes import Quotes
+
+text = '"Wowool has cool technology", said John Smith.'
+pipeline = Pipeline(
+    [
+        "english",
+        "quotation",
+        "quotes.app",
+    ]
+)
+document = pipeline(text)
+print(document.results(Quotes.ID))
+
+```
+
+results:
+
+```json
+[
+    {
+        "text": "\"Wowool has cool technology\"",
+        "begin_offset": 0,
+        "end_offset": 28,
+        "author": "John Smith"
+    }
+]
+```
+
+
+
+## License
+
+In both cases you will need to acquirer a license file at https://www.wowool.com
+
+### Non-Commercial
+
+    This library is licensed under the GNU AGPLv3 for non-commercial use.  
+    For commercial use, a separate license must be purchased.  
+
+### Commercial license Terms
+
+    1. Grants the right to use this library in proprietary software.  
+    2. Requires a valid license key  
+    3. Redistribution in SaaS requires a commercial license.  
