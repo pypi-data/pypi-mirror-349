@@ -1,0 +1,36 @@
+[project]
+name = "mseep-mssql_mcp_server"
+version = "0.1.2"
+description = "A Model Context Protocol (MCP) server that enables secure interaction with Microsoft SQL Server databases."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "mcp>=1.0.0",
+    "pymssql>=2.2.8",
+]
+authors = [
+    { name = "mseep", email = "support@skydeck.ai" },
+]
+maintainers = [
+    { name = "mseep", email = "support@skydeck.ai" },
+]
+
+[project.scripts]
+mssql_mcp_server = "mssql_mcp_server:main"
+
+[tool.mcp.system_dependencies]
+darwin = [
+    "freetds",
+]
+linux = [
+    "freetds-dev",
+]
+win32 = []
+
+[tool.hatch.build.targets]
+
+[build-system]
+requires = [
+    "hatchling",
+]
+build-backend = "hatchling.build"
