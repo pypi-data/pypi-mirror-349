@@ -1,0 +1,12 @@
+pydrodynamics/__init__.py,sha256=XOSCCMtLoOpvNpiGFKDpeVMHadFeEwAXZZ_uvLGxBTc,75
+pydrodynamics/dynamics.py,sha256=ezyNMRF1nu45nFR-SS5pc_OkWXK4liGF70eQx56JJ_Y,4604
+pydrodynamics/environment.py,sha256=UwSYgAxYAB04pNaPKbImnRDgt2EnqnJ6b0vZLl-ahto,5072
+pydrodynamics/params.py,sha256=mrKqAn1WAEGeRkNwLYftdGg3sC02W-FaluvptfiAj44,12877
+pydrodynamics/thrusters.py,sha256=XJUTpu3HL1YFz0c2UHXnAvzUmsWreERA9OLT63rXFrQ,5136
+pydrodynamics/utils.py,sha256=7sPVPF8W35RlA3IGFiQeFVTteL3TWfmfy-ZCRR3CNpM,7812
+pydrodynamics/vehicle.py,sha256=wVZOGarBGwMcVLBbLqHUyxmZnG5vF0eNAFqu7_dklis,1779
+pydrodynamics-1.0.0.dist-info/licenses/LICENSE,sha256=Qv2ilebwoUtMJnRsZwRy729xS5JZQzLauJ0tQzkAkTA,1088
+pydrodynamics-1.0.0.dist-info/METADATA,sha256=iX0VGFm_pbgSbUeCq5qFueNtWBeglbWtjKTBvryWmOo,6968
+pydrodynamics-1.0.0.dist-info/WHEEL,sha256=Nw36Djuh_5VDukK0H78QzOX-_FQEo6V37m3nkm96gtU,91
+pydrodynamics-1.0.0.dist-info/top_level.txt,sha256=33saD6d8N_CNAwE6UFpTpI-RSR60cnEORl1F0YWtdBY,14
+pydrodynamics-1.0.0.dist-info/RECORD,,
