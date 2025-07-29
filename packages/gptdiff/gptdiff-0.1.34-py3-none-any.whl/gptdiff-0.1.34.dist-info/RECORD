@@ -1,0 +1,11 @@
+gptdiff/__init__.py,sha256=o1hrK4GFvbfKcHPlLVArz4OunE3euIicEBYaLrdDo0k,198
+gptdiff/applydiff.py,sha256=FMLkEtNnOdnU7c8LgYafGuROsDz3utpyXKJVFRs_BvI,11473
+gptdiff/gptdiff.py,sha256=Wpj9AReofBFDXdmckqrMsdPONGkVGT9sWh33cApY3_w,39536
+gptdiff/gptpatch.py,sha256=Vqk2vliYs_BxtuTpwdS88n3A8XToh6RvrCA4N8VqOu0,2759
+gptdiff/plangptdiff.py,sha256=EkcBM0xWMYzVpkjg6pe0nZW-SAoqu5vWoTPpgUVz9xA,6934
+gptdiff-0.1.34.dist-info/licenses/LICENSE.txt,sha256=zCJk7yUYpMjFvlipi1dKtaljF8WdZ2NASndBYYbU8BY,1228
+gptdiff-0.1.34.dist-info/METADATA,sha256=ajqqT9MaOuVXOXih2zKPD9YM8I1Hz06za-E4c7uckgQ,9923
+gptdiff-0.1.34.dist-info/WHEEL,sha256=Nw36Djuh_5VDukK0H78QzOX-_FQEo6V37m3nkm96gtU,91
+gptdiff-0.1.34.dist-info/entry_points.txt,sha256=UX4OYAj1HKIT1JmDQ7fkG6Fbf6Vqfpbojw4psdODR2c,121
+gptdiff-0.1.34.dist-info/top_level.txt,sha256=XNkQkQGINaDndEwRxg8qToOrJ9coyfAb-EHrSUXzdCE,8
+gptdiff-0.1.34.dist-info/RECORD,,
