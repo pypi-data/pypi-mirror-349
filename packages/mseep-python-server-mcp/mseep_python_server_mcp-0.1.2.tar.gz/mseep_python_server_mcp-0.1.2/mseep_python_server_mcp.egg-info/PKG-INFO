@@ -1,0 +1,25 @@
+Metadata-Version: 2.4
+Name: mseep-python-server-mcp
+Version: 0.1.2
+Summary: MCP server for cryptocurrency price information
+Home-page: 
+Author: mseep
+Author-email: mseep <support@skydeck.ai>
+Maintainer-email: mseep <support@skydeck.ai>
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: httpx>=0.28.1
+Requires-Dist: mcp[cli]>=1.6.0
+Requires-Dist: pydantic>=2.11.1
+Requires-Dist: pydantic-settings>=2.8.1
+Requires-Dist: python-coinmarketcap>=0.6
+Requires-Dist: python-decouple>=3.8
+Provides-Extra: dev
+Requires-Dist: black>=25.1.0; extra == "dev"
+Requires-Dist: icecream>=2.1.4; extra == "dev"
+Dynamic: author
+Dynamic: license-file
+Dynamic: requires-python
+
+# Package managed by MseeP.ai
