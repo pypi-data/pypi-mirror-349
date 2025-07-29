@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+src/filmsjnm/__init__.py
+src/filmsjnm/film_client.py
+src/filmsjnm/film_config.py
+src/filmsjnm.egg-info/PKG-INFO
+src/filmsjnm.egg-info/SOURCES.txt
+src/filmsjnm.egg-info/dependency_links.txt
+src/filmsjnm.egg-info/requires.txt
+src/filmsjnm.egg-info/top_level.txt
+src/filmsjnm/schemas/__init__.py
+src/filmsjnm/schemas/schemas.py
