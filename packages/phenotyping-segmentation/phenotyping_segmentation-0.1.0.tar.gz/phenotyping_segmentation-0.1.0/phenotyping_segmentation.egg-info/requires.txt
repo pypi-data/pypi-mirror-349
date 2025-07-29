@@ -1,0 +1,5 @@
+numpy
+scipy
+opencv-python
+torch
+segmentation-models-pytorch
