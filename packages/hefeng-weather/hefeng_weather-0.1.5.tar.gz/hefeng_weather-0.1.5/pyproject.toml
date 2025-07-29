@@ -1,0 +1,13 @@
+[project]
+name = "hefeng-weather"
+version = "0.1.5"
+description = "hefeng-weather mcp"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp[cli]>=1.6.0",
+    "requests>=2.32.3",
+]
+
+[project.scripts]
+hefeng-weather = "hefeng_weather.cli:main"
