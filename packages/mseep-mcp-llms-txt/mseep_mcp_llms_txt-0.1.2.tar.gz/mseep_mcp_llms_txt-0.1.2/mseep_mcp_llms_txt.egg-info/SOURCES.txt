@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.py
+mcp_llms/__init__.py
+mcp_llms/llms_txt.py
+mseep_mcp_llms_txt.egg-info/PKG-INFO
+mseep_mcp_llms_txt.egg-info/SOURCES.txt
+mseep_mcp_llms_txt.egg-info/dependency_links.txt
+mseep_mcp_llms_txt.egg-info/requires.txt
+mseep_mcp_llms_txt.egg-info/top_level.txt
