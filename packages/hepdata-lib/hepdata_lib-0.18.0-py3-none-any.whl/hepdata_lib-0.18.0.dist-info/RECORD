@@ -1,0 +1,10 @@
+hepdata_lib/__init__.py,sha256=1ZfsVURtMqDtrSlTF7di-RiA0X0Eu1cazPavUKHouSo,29211
+hepdata_lib/c_file_reader.py,sha256=RvrIC5NMceOv_3lVeq8vsTyChClm9oR1j1-aO6vRGgg,14213
+hepdata_lib/helpers.py,sha256=pnkI5BJi80AVqrfp5ZPJOYgUAIXNsgmD9OFkIXSJ2sI,12186
+hepdata_lib/hist_utils.py,sha256=Qyd4rRgUF4Zg6OZze8Ui4zVUxP5pzoed9b7zU6RUHwg,9087
+hepdata_lib/root_utils.py,sha256=w-K2YsNDFc6tpIbXqm6dS2u9Lt1bp7y8UWOCojN1eE4,17627
+hepdata_lib-0.18.0.dist-info/licenses/LICENSE,sha256=AhGw9Fwe5kgnkMHRq7wRqq-cdZlE5ZgE7MA44egDxWM,1070
+hepdata_lib-0.18.0.dist-info/METADATA,sha256=wTLQmhHMeCng_qJ9NqYsbDeKTD7-lGwhVmVvku2_T2U,7791
+hepdata_lib-0.18.0.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+hepdata_lib-0.18.0.dist-info/top_level.txt,sha256=IkchiWUuuK6CKSwphBaYoq2c8u8H3VnIaDjqOjqQh2A,12
+hepdata_lib-0.18.0.dist-info/RECORD,,
