@@ -1,0 +1,9 @@
+{
+    "name": "Orby app",
+    "version": "0.1.0",
+    "author": "Unknown",
+    "description": "Simple console app.",
+    "permissions": {},
+    "entry_point": "main.py",
+    "requirements": {}
+}

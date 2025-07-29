@@ -1,0 +1,12 @@
+orbydev/__init__.py,sha256=7N2t_o5wgwXkYW1RDDd6tRlF14qBc9RKwSkREDQx7zA,468
+orbydev/cli.py,sha256=iOeM8pi8pn7AVzaPWBcDo57bWB2l8PpYrzj9OJZ8e70,4550
+orbydev/master.py,sha256=XPa5QcxvyuLjQUvb37IIILXxKgPvDoaqXAsHGMZAtgs,413
+orbydev/project.py,sha256=x_1F4FsBvoBnbJfRZDHAH4wP0YnCFBBdREPO_hOWzmg,6283
+orbydev/templates.py,sha256=hxnMz9R0WP434R8j7Sm_PO2lS1GNWUuVw0iQgdX97f8,4229
+orbydev/templates/default/main.py,sha256=188G_ZJKijvD8IUfc_O-lUs7iTmhvkD_VF-nxKcshjU,21
+orbydev/templates/default/manifest.json,sha256=dA3wAfjNSTQCzHzle_iKR_VCnwXkE3NypAq8Qo1b8EA,202
+orby_devtools-25.5.2.dist-info/METADATA,sha256=o5X6a4D61ikBxt0C8nsBkZMgzrePYaybdjUtld18sBM,1974
+orby_devtools-25.5.2.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+orby_devtools-25.5.2.dist-info/entry_points.txt,sha256=AF8zMdYHzJ1R1BukUITpKwrC-Re1xg-_alxZ80HLpUM,45
+orby_devtools-25.5.2.dist-info/top_level.txt,sha256=yqczM2NUAQdfJ80svXxUkdjJI_YiAIFIDzMg6N4l_ts,8
+orby_devtools-25.5.2.dist-info/RECORD,,
