@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+ssa_tools/__init__.py
+ssa_tools/accelerated.py
+ssa_tools/classic.py
+ssa_tools/core.py
+ssa_tools.egg-info/PKG-INFO
+ssa_tools.egg-info/SOURCES.txt
+ssa_tools.egg-info/dependency_links.txt
+ssa_tools.egg-info/requires.txt
+ssa_tools.egg-info/top_level.txt
+tests/test_ssa.py
