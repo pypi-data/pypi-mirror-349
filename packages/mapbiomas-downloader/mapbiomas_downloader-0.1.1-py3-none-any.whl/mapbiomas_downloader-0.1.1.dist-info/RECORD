@@ -1,0 +1,10 @@
+src/__init__.py,sha256=GK0qrEbhx4aA4DuwDObJ8jdzq43xgIqLERfbDIj2td8,49
+src/downloader/__init__.py,sha256=a6XgWpBIXnSCBGaSgUMx-KP27PVT1WwUzDoZr7bqpd4,151
+src/downloader/downloader.py,sha256=HuJnQQx4_yepai1bj2S_7JkdgHLHXgIwADTrjL87tfo,18021
+src/tests/__init__.py,sha256=KLflYM3uBg1MZZKVn9552MGZgGfrpK87ZDrwt8NXT1M,52
+src/tests/conftest.py,sha256=F5yWueHE-jBOoLo-i50lqMXT6c1G5EATFVboPdrak2M,1708
+src/tests/test_downloader.py,sha256=mlL80lj8nkwuoNC64vuSJ0CKkCMJvkWR0vn6nyjnPIU,7202
+mapbiomas_downloader-0.1.1.dist-info/LICENSE,sha256=sBbz7_n2TTh46wICEwgoO-YieCKsLzfjtjeS6EYrk9c,1072
+mapbiomas_downloader-0.1.1.dist-info/METADATA,sha256=T3SvglSoxnSwjF8OSVaQ2-6zGsVKOiJqwVH-PaPVXrA,3951
+mapbiomas_downloader-0.1.1.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+mapbiomas_downloader-0.1.1.dist-info/RECORD,,
