@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/romann/__init__.py
+src/romann/hiragana_english.json
+src/romann/katakana_english.json
+src/romann/romann.py
+src/romann.egg-info/PKG-INFO
+src/romann.egg-info/SOURCES.txt
+src/romann.egg-info/dependency_links.txt
+src/romann.egg-info/requires.txt
+src/romann.egg-info/top_level.txt
+tests/test_romann.py

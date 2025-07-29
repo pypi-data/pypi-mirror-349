@@ -1,0 +1,2 @@
+include src/romann/hiragana_english.json
+include src/romann/katakana_english.json

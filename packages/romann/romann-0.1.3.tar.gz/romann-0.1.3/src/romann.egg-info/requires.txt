@@ -1,0 +1,11 @@
+pykakasi
+jaconv
+sudachipy
+sudachidict_core
+
+[dev]
+pytest
+pytest-cov
+flake8
+pylint
+black
