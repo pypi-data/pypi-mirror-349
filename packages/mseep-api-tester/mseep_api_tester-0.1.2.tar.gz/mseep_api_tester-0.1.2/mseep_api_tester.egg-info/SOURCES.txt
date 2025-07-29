@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.py
+mseep_api_tester.egg-info/PKG-INFO
+mseep_api_tester.egg-info/SOURCES.txt
+mseep_api_tester.egg-info/dependency_links.txt
+mseep_api_tester.egg-info/requires.txt
+mseep_api_tester.egg-info/top_level.txt
