@@ -1,0 +1,9 @@
+kanalizer-0.1.0.dist-info/METADATA,sha256=lU7-2PWwiCFGy0uRpSoGsgePKcHgiV0Rqm9n2SU-pPY,970
+kanalizer-0.1.0.dist-info/WHEEL,sha256=9jQGB5o4wUPNs5f8Asc1XsLwIvMK14qFqXrqsSf6_Cw,106
+kanalizer-0.1.0.dist-info/licenses/NOTICE.md,sha256=cGyEo5AUMlULVSQO76P4ALKvd1byryEt29fM9BEKOLA,313069
+kanalizer/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kanalizer/_error.py,sha256=T4bD2hoC8nGHn2jHOq_jvVCzz5fyEN3JODnIWfn8POs,2241
+kanalizer/__init__.py,sha256=X38MjbZrOZVSvsYPMrYBqHbvXOrAR7yuKCUHTsmhafo,731
+kanalizer/_rust.pyi,sha256=JHC37X5yQox2UT82z7NwBUu3cOJvxQ6WbUIOqdCU5Zs,3148
+kanalizer/_rust.abi3.so,sha256=eOaRuebQlXX6-ifyXn_iriHP_irY9fw2qtPCLQKaybY,5241080
+kanalizer-0.1.0.dist-info/RECORD,,
