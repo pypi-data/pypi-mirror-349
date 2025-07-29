@@ -1,0 +1,11 @@
+norming/__init__.py,sha256=hJln2ekjnoAmseBokSAGUrQ5QqDJQZD2ujZzZm5TTo4,55
+norming/_utils.py,sha256=kc0a87vNpgUDDfAUjLOcRyYQ1c6Rcy0pqlWIpDQMb0E,1581
+norming/core/__init__.py,sha256=z_bgcIttJrDjvv2NijjfRxLNBS1zlD_wdsY80oodo8Y,1049
+norming/tests/__init__.py,sha256=KWd4sSIUsr6Cfp1yU4mv3-CHnNaNm3EdMgHbKy9tdcs,295
+norming/tests/test_tuple_0.py,sha256=8m1wWS3tEV5Nldpb5rHxF3rfAEhkfEo2_53t3YRUST4,1631
+norming/tests/test_tuple_qual.py,sha256=5OgL6qj20g90OJZbs4zL16bp7lXioWszKLK0q5Xfb0I,1627
+norming-0.1.0.dist-info/licenses/LICENSE.txt,sha256=fOh9FHccUt9OcJPBaVJ482GX4yrl_FxCUk9YRZ53JOI,1074
+norming-0.1.0.dist-info/METADATA,sha256=7o9L6IFPynEReBEC0g7a0oRK1YrGHFrT3TJyMmMlASY,2253
+norming-0.1.0.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+norming-0.1.0.dist-info/top_level.txt,sha256=jkWx3yfs4kTSvkv9S6PYfGHtMqaK_fakXwfqtEYQSu4,8
+norming-0.1.0.dist-info/RECORD,,
