@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-server-zhxg-search = mcp_server_zhxg_search:main
