@@ -1,0 +1,10 @@
+libschema/__init__.py,sha256=3g6SlnBuFdiIQIZ-gHuyc-bleoKdde9UdFa50EN6NnM,71
+libschema/analysis.py,sha256=MrKVdR7K-HDiklCJ3ZNVXi-xw_hnha_EhYpPmEZukZU,5442
+libschema/bmi.py,sha256=lRnl73Gu7N8etVS-x9TlIQEUIWuOKkZeTKQ7Ty8Z0w8,6312
+libschema/classes.py,sha256=w2GeqVSPEW-MzO6K4I47B6RrqMpD4VRZFaA4RJXg0a8,1479
+libschema/model.py,sha256=eS5addlFubYXfbnPkc8DoeAQov8-2EcLqkrvAsEW1_k,10419
+libschema-0.1.0.dist-info/licenses/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+libschema-0.1.0.dist-info/METADATA,sha256=Y7NvqWhYGWqnSZ6p8HV58NYoPWNKQzw3ZFX1oxbGav0,6003
+libschema-0.1.0.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+libschema-0.1.0.dist-info/top_level.txt,sha256=0VDau4qcENfzPpiRXoQHD16srEac7IiP55Ooj1kdrtg,10
+libschema-0.1.0.dist-info/RECORD,,
