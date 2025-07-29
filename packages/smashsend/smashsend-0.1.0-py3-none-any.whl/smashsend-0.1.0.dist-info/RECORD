@@ -1,0 +1,12 @@
+smashsend/__init__.py,sha256=LiueHH4J1PDnWB6bwM7WM1IZgHkVePbXL4CM12DRBl4,895
+smashsend/client.py,sha256=x7I6CjUG8-I75gIdCtl_6buKZDnY9AFOP1eNdqOR0wg,2753
+smashsend/errors.py,sha256=aXUWzK_VVHpMzWbxWQymDTSAI_tzoiGVngxOQX7ROj0,1896
+smashsend/api/contacts.py,sha256=-IydHvBPWiVkGp-_viEX4ZqCRqvZqEPwgTKBRgRUysE,3412
+smashsend/api/emails.py,sha256=6zxRtUA7wGNvDaljnwjVT7SFJbgCqWbX7aeq_vFMJbU,2626
+smashsend/api/webhooks.py,sha256=bsX9z8vDD83vl5QH6GLSzg5j5PxKgrBWZhzjISq5uWI,3564
+smashsend/interfaces/types.py,sha256=Bm2UYV8p5XDqYxV1q4D9TB-9CXC3iige46JtV2SK-Is,2790
+smashsend/utils/http_client.py,sha256=6Caa717oJPXydmrV5hO1DIbKP3NXn3wO7LrFnpX_gKA,5180
+smashsend-0.1.0.dist-info/METADATA,sha256=cbRlrPMt6CMOx7yPZEk1TXbT71Sj1iVs--ZmN6liBmY,4658
+smashsend-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+smashsend-0.1.0.dist-info/licenses/LICENSE,sha256=JZFRNPHebCE6NdgcQUiUmoiFHBjFonm9voUqB3ndJPY,1086
+smashsend-0.1.0.dist-info/RECORD,,
