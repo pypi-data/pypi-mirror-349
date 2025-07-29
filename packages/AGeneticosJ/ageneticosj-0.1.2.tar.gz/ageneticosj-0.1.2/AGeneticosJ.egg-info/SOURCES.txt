@@ -1,0 +1,7 @@
+README.md
+setup.py
+AGeneticosJ.egg-info/PKG-INFO
+AGeneticosJ.egg-info/SOURCES.txt
+AGeneticosJ.egg-info/dependency_links.txt
+AGeneticosJ.egg-info/requires.txt
+AGeneticosJ.egg-info/top_level.txt
