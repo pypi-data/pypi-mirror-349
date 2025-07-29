@@ -1,0 +1,95 @@
+Metadata-Version: 2.3
+Name: jup-python-sdk
+Version: 1.0.1
+Summary: Python SDK for Jupiter Exchange APIs.
+License: MIT
+Keywords: solana,jupiter,sdk
+Author: Fiji
+Author-email: charismoutafidis@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: base58 (>=2.1.1,<3.0.0)
+Requires-Dist: httpx (>=0.28.1,<0.29.0)
+Requires-Dist: pydantic (>=2.11.3,<3.0.0)
+Requires-Dist: solana (>=0.36.6,<0.37.0)
+Requires-Dist: solders (>=0.26.0,<0.27.0)
+Project-URL: Homepage, https://github.com/cmoutafidis/jup-ag-sdk
+Project-URL: Repository, https://github.com/cmoutafidis/jup-ag-sdk
+Description-Content-Type: text/markdown
+
+# **Jup Python SDK**
+
+A Python SDK for interacting with Jupiter Exchange APIs.
+
+## **Installation**
+
+To install the SDK in your project, run:
+```
+sh
+pip install jup-ag-sdk
+```
+## **Quick Start**
+
+Here's a basic example to help you get started with the Jup Python SDK:
+```
+python
+from dotenv import load_dotenv
+
+from jup_python_sdk.clients.ultra_api_client import UltraApiClient
+from jup_python_sdk.models.ultra_api.ultra_order_request_model import (
+    UltraOrderRequest,
+)
+
+load_dotenv()
+client = UltraApiClient()
+
+order_request = UltraOrderRequest(
+   input_mint="So11111111111111111111111111111111111111112",  # WSOL
+   output_mint="EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",  # USDC
+   amount=10000000,  # 0.01 WSOL
+   taker=client._get_public_key(),
+)
+
+try:
+   client_response = client.order_and_execute(order_request)
+   signature = str(client_response["signature"])
+   
+   print("Order and Execute API Response:")
+   print(f"  - Transaction Signature: {signature}")
+   print(f"  - View on Solscan: https://solscan.io/tx/{signature}")
+
+except Exception as e:
+   print("Error occurred while processing the order:", str(e))
+finally:
+   client.close()
+```
+
+## **Setup Instructions**
+
+Before using the SDK, please ensure you have completed the following steps:
+
+1. **Environment Variables**:  
+   Set up your required environment variables.  
+   Example:
+   ```sh
+   export PRIVATE_KEY=your_private_key_here
+   ```
+
+2. **Python Version**:  
+   Make sure you are using Python 3.9 or later.
+
+3**Configuration**:  
+   TBD
+
+## **Disclaimer**
+
+🚨 **This project is actively worked on.**  
+While we don't expect breaking changes as the SDK evolves, we recommend you stay updated with the latest releases.  
+Any important updates will be announced in the [Discord server](https://discord.gg/jup).
