@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: print_merge_generator
+Version: 1.0.0
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+License-File: LICENSE
+Summary: Bindings for PrintMergeGenerator's Rust backend
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+
+<img src="icons/printmergegenerator_icon.svg" width="125">
+
+# PrintMergeGenerator
+
+Print Merge Generator provides a simple way to create .csv and .txt files for Corel Draw's print merge feature. It is a website built in Python and Streamlit, using Python's built in `csv` module.
+
+You can visit the website [here](https://printmergegenerator.streamlit.app/).
+
