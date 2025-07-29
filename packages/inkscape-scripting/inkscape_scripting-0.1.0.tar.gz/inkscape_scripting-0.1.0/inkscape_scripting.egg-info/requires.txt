@@ -1,0 +1,2 @@
+ipython>=8.18.1
+python-libxdo>=0.1.2a1
