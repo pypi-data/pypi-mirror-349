@@ -1,0 +1,201 @@
+Metadata-Version: 2.4
+Name: global-exchange-rates
+Version: 1.0.1
+Summary: A Python client library for interacting with the Global Exchange Rates API
+Author-email: Global Exchange Rates <info@globalexchangerates.org>
+License-Expression: MIT
+Project-URL: Homepage, https://www.globalexchangerates.org/
+Project-URL: Documentation, https://doc.globalexchangerates.org/
+Keywords: exchange rates,currency,finance,currency rates,currency exchange rates,exchange rates api
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Office/Business :: Financial
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: httpx>=0.24.0
+Requires-Dist: anyio>=3.6.0
+Requires-Dist: pydantic>=2.0
+Dynamic: license-file
+
+<p align="center">
+  <img src="https://www.globalexchangerates.org/wp-content/uploads/2025/03/Logo_216_White-150x150.png" alt="Global Exchange Rates" width="150">
+</p>
+
+# Global Exchange Rates
+
+A Python client library for interacting with the [Global Exchange Rates API](https://www.globalexchangerates.org/).
+
+It provides a set of methods for retrieving exchange rates, currency and providers information, and converting amounts between currencies. 
+
+## Global Exchange Rates API
+
+The **Global Exchange Rates API** provides a simple and reliable way to download **official exchange rates** from central banks and tax authorities (*providers*) worldwide. 
+
+You can check the updated list from the [official website](https://www.globalexchangerates.org/global-coverage/).
+
+**Daily exchange rates** of all the available currencies are also provided, calculated using a proprietary algorithm blending the official data from central banks and the market rate from commercial institutions.
+
+Ideal for accounting, CRM and ERP systems, business intelligence, auditing, tax compliance and reporting.
+
+## Getting Started
+
+1. Sign up to the [Developer API Portal](https://dev.globalexchangerates.org/Account/Signup) and start the 30 day free trial.
+2. Get your API key.
+3. Install:
+
+```bash
+pip install global-exchange-rates
+```
+
+## Usage
+
+### Synchronous API
+
+```python
+from global_exchange_rates import GlobalExchangeRates, ApiException
+
+# Initialize the client
+client = GlobalExchangeRates(api_key="your_api_key")
+
+try:
+    # Get all currencies
+    currencies = client.get_currencies()
+    print(f"Got {len(currencies)} currencies")
+    
+    # Get specific currencies
+    eur_usd = client.get_currencies(codes=["EUR", "USD"])
+    print(f"EUR: {eur_usd[0].name}, USD: {eur_usd[1].name}")
+    
+    # Get latest exchange rates
+    rates = client.get_latest(
+        base_currency="EUR", 
+        currencies=["USD", "GBP", "JPY"]
+    )
+    print(f"1 EUR = {rates.exchange_rates['USD']} USD")
+    
+    # Get historical exchange rates
+    from datetime import date
+    historical = client.get_historical(
+        date_value=date(2025, 1, 1),
+        base_currency="EUR",
+        currencies=["USD", "GBP"]
+    )
+    print(f"1 EUR = {historical.exchange_rates['USD']} USD on Jan 1, 2025")
+    
+    # Convert currency
+    conversion = client.convert(
+        amount=100.0,
+        base_currency="EUR",
+        to_currencies=["USD", "GBP"]
+    )
+    print(f"€100 = ${conversion.conversions['USD']:.2f}")
+    
+    # Get providers
+    providers = client.get_providers()
+    for provider in providers:
+        print(f"Provider: {provider.code} ({provider.description})")
+    
+except ApiException as e:
+    print(f"API Error: {e}")
+```
+
+### Asynchronous API
+
+```python
+import asyncio
+from global_exchange_rates import GlobalExchangeRates, ApiException
+
+async def main():
+    # Use as async context manager
+    async with GlobalExchangeRates(api_key="your_api_key") as client:
+        try:
+            # Get all currencies
+            currencies = await client._get_currencies_async()
+            print(f"Got {len(currencies)} currencies")
+            
+            # Get latest exchange rates
+            rates = await client._get_latest_async(
+                base_currency="EUR", 
+                currencies=["USD", "GBP", "JPY"]
+            )
+            print(f"1 EUR = {rates.exchange_rates['USD']} USD")
+            
+            # Get historical exchange rates
+            from datetime import date
+            historical = await client._get_historical_async(
+                date_value=date(2025, 1, 1),
+                base_currency="EUR",
+                currencies=["USD", "GBP"]
+            )
+            print(f"1 EUR = {historical.exchange_rates['USD']} USD on Jan 1, 2025")
+            
+            # Convert currency
+            conversion = await client._convert_async(
+                amount=100.0,
+                base_currency="EUR",
+                to_currencies=["USD"]
+            )
+            print(f"€100 = ${conversion.conversions['USD']:.2f}")
+            
+        except ApiException as e:
+            print(f"API Error: {e}")
+
+# Run the async function
+asyncio.run(main())
+```
+
+## Error Handling
+
+The client raises `ApiException` when an API error occurs. This exception contains:
+
+- `status_code`: HTTP status code
+- `error_code`: API-specific error code (if available from the API)
+- `api_message`: Error message from the API (if available)
+
+```python
+try:
+    currencies = client.get_currencies()
+except ApiException as e:
+    print(f"Error message: {str(e)}")
+    print(f"HTTP Status: {e.status_code}")
+    if e.error_code:
+        print(f"Error Code: {e.error_code}")
+    if e.api_message:
+        print(f"API Message: {e.api_message}")
+```
+
+## API Reference
+
+The client provides the following methods:
+
+### Synchronous Methods
+
+- `get_currencies(codes: Optional[Iterable[str]] = None) -> List[Currency]`
+- `get_latest(provider: Optional[str] = None, currencies: Optional[Iterable[str]] = None, base_currency: Optional[str] = None) -> ExchangeRateResponse`
+- `get_historical(date_value: Union[date, datetime, str], latest: Optional[bool] = None, provider: Optional[str] = None, currencies: Optional[Iterable[str]] = None, base_currency: Optional[str] = None) -> ExchangeRateResponse`
+- `convert(amount: float, base_currency: Optional[str] = None, to_currencies: Optional[Iterable[str]] = None, provider: Optional[str] = None, date_value: Optional[Union[date, datetime, str]] = None) -> ConversionResponse`
+- `get_providers(codes: Optional[Iterable[str]] = None, country_code: Optional[str] = None) -> List[Provider]`
+
+### Asynchronous Methods
+
+- `_get_currencies_async(codes: Optional[Iterable[str]] = None) -> List[Currency]`
+- `_get_latest_async(provider: Optional[str] = None, currencies: Optional[Iterable[str]] = None, base_currency: Optional[str] = None) -> ExchangeRateResponse`
+- `_get_historical_async(date_value: Union[date, datetime, str], latest: Optional[bool] = None, provider: Optional[str] = None, currencies: Optional[Iterable[str]] = None, base_currency: Optional[str] = None) -> ExchangeRateResponse`
+- `_convert_async(amount: float, base_currency: Optional[str] = None, to_currencies: Optional[Iterable[str]] = None, provider: Optional[str] = None, date_value: Optional[Union[date, datetime, str]] = None) -> ConversionResponse`
+- `_get_providers_async(codes: Optional[Iterable[str]] = None, country_code: Optional[str] = None) -> List[Provider]`
+
+## License
+
+MIT License - see the LICENSE file for details.
+
+## Full Documentation
+
+The full API documentation is available at [doc.globalexchangerates.org](https://doc.globalexchangerates.org/).

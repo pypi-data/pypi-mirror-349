@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+global_exchange_rates/__init__.py
+global_exchange_rates/client.py
+global_exchange_rates/exceptions.py
+global_exchange_rates/models.py
+global_exchange_rates.egg-info/PKG-INFO
+global_exchange_rates.egg-info/SOURCES.txt
+global_exchange_rates.egg-info/dependency_links.txt
+global_exchange_rates.egg-info/requires.txt
+global_exchange_rates.egg-info/top_level.txt
