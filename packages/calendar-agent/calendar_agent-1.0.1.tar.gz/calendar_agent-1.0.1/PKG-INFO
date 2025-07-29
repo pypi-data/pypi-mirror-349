@@ -1,0 +1,27 @@
+Metadata-Version: 2.3
+Name: calendar-agent
+Version: 1.0.1
+Summary: Control Google Calendar using OpenAI Agents
+Author: Jimming Cheng
+Author-email: jimming@gmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: google-api-python-client (>=2.169.0,<3.0.0)
+Requires-Dist: oauth2client (>=4.1.3,<5.0.0)
+Requires-Dist: openai (>=1.78.1,<2.0.0)
+Requires-Dist: openai-agents (>=0.0.15,<1.0.0)
+Description-Content-Type: text/markdown
+
+# calendar_agent
+
+Control Google Calendar using OpenAI Agents
+
+## Versions
+
+### 1.0.0
+
+Initial release
+
