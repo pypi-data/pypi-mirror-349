@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: jaalvarez2818_ratehawk_sdk
+Version: 0.2.0
+Summary: SDK para la comunicación con el API de RateHawk para las reservas de hoteles.
+Home-page: https://github.com/jaalvarez2818/ratehawk-sdk
+Author: José Angel Alvarez Abraira
+Author-email: jaalvarez2818development@gmail.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: summary
