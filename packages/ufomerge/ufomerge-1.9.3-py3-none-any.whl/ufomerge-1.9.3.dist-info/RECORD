@@ -1,0 +1,14 @@
+ufomerge/__init__.py,sha256=4YDf6l4JvV5js32qhVqwabVlaylZrFk2CtqhEjvpHrk,26219
+ufomerge/__main__.py,sha256=3DuXU_LW7KbCNAybCQSCPhuF8RXatoQSmRf3pvpW-bc,87
+ufomerge/_version.py,sha256=9iRyJjXIu4ospHHgY6jThnBbx_i0E46WrhiFzzJdLrE,511
+ufomerge/cli.py,sha256=X5dirLeb1ZJGUtpoY0-LmYk0C5xx_WkvVdAUvKCuLfE,4926
+ufomerge/layout.py,sha256=FEReqHH15FkAs1wVgBjfL0gY2hCcjxqceLCRjNu_lF4,17497
+ufomerge/scaler.py,sha256=U8xM3N9XES4Gy47JdREigHKrxEd8kU89kduWApaRyR4,1298
+ufomerge/utils.py,sha256=lvYyTV-5bGGW09tYHlcw3BLXdL04BsmBF2WHrvq_zqA,3041
+ufomerge-1.9.3.dist-info/licenses/AUTHORS.txt,sha256=0iDXDMGB07PQIktGBJqw_kvJAq-aylcWdmASiMkUCLs,302
+ufomerge-1.9.3.dist-info/licenses/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+ufomerge-1.9.3.dist-info/METADATA,sha256=EGVxnvJvmorYgY-CrgRgq32TYO3pBOscGH50-S04Lpc,2619
+ufomerge-1.9.3.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+ufomerge-1.9.3.dist-info/entry_points.txt,sha256=Zo82lvqVtgEBp808W35AK8qqIZ9lwIUQU4GV0EILikU,47
+ufomerge-1.9.3.dist-info/top_level.txt,sha256=UtbfdVQgOAXKKA7SKN5Vkmp9T2k4UHSWtTgUD0_98Ms,9
+ufomerge-1.9.3.dist-info/RECORD,,
