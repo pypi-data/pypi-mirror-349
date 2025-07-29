@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fibonacci_number"
+version = "0.0.1"
+authors = [
+  { name="v-m.dev", email="v.mdeve.ops@gmail.com" },
+]
+description = "Project about Fibonacci algorithms, including multiple parallelization strategies."
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development",
+]
+license = "MIT"
+dependencies = [
+    "numpy>=2.2.6",
+    "typer>=0.15.4",
+]
+
+[project.urls]
+Homepage = "https://github.com/v-mdev/fibonacci_project"
+Issues = "https://github.com/v-mdev/fibonacci_project/issues"
+
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.11.6",
+    "pytest>=8.3.5",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.scripts]
+fib = "fib.main:main"

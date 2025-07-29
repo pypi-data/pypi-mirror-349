@@ -1,0 +1,6 @@
+numpy>=2.2.6
+typer>=0.15.4
+
+[dev]
+ruff>=0.11.6
+pytest>=8.3.5

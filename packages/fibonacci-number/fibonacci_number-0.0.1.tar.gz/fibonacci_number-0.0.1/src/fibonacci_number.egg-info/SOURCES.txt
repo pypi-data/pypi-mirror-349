@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+src/fib/__init__.py
+src/fib/fib.py
+src/fib/main.py
+src/fib/parallelization.py
+src/fib/parser.py
+src/fibonacci_number.egg-info/PKG-INFO
+src/fibonacci_number.egg-info/SOURCES.txt
+src/fibonacci_number.egg-info/dependency_links.txt
+src/fibonacci_number.egg-info/entry_points.txt
+src/fibonacci_number.egg-info/requires.txt
+src/fibonacci_number.egg-info/top_level.txt
+tests/test_fib_pytest.py
+tests/test_fib_unittest.py
