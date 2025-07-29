@@ -1,0 +1,10 @@
+commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+commands/create_repo.py,sha256=iEKQWh0gZp1Ncwm9l6gzXelRQVH32-g8iq4b359-GpU,1833
+commands/delete_repos.py,sha256=seDNSKkaHHe1TxctoD0GTKCXyyVSiNcuoPCyQNxVheM,591
+commands/list_repos.py,sha256=-hITBffaUVkLgGBi0fI_iY1Neda-4kMaXnDwDQqcb44,906
+commands/main.py,sha256=Lc1zzU5EbzxGe6sqiXi3LjLUkiSjO30GBG9PMU_FDNQ,1274
+init_gitee-0.1.0.dist-info/METADATA,sha256=OI5QqNjOX5GjajoRoOONFcDMx0s1DBt3rlOp4m0az3k,1784
+init_gitee-0.1.0.dist-info/WHEEL,sha256=Nw36Djuh_5VDukK0H78QzOX-_FQEo6V37m3nkm96gtU,91
+init_gitee-0.1.0.dist-info/entry_points.txt,sha256=fbRz8jJU0-lEhQmXOoZB6aS08NBp16dLltYayIdggVU,49
+init_gitee-0.1.0.dist-info/top_level.txt,sha256=6dNUbRvZAy7fLWNbD4YeUosLYwGk-SVew-Swd5CfFkg,9
+init_gitee-0.1.0.dist-info/RECORD,,
