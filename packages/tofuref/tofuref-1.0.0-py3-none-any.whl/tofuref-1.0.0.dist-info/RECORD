@@ -1,0 +1,13 @@
+tofuref/__init__.py,sha256=J-j-u0itpEFT6irdmWmixQqYMadNl1X91TxUmoiLHMI,22
+tofuref/main.py,sha256=lrRW8pwcEvKpgPEiVKFIfYIJZSt_bNClxM0d4Wns0t4,9683
+tofuref/tofuref.tcss,sha256=4bgEV6lz56pQbIcZOqF9y7NfWNOiVXYuXuRkfTSlObg,513
+tofuref/ui_logic.py,sha256=wfke62lY0NrqZ0G1KgPJtNcw_NRVhGpv3w8ENuuTrNU,2226
+tofuref/widgets.py,sha256=Vy4ODqJw22BzulyboXkehsoKm5-mcGoy6HtuSUm5_oU,3457
+tofuref/data/helpers.py,sha256=5Db06VNYBrr50xCdGsBwAxVTNs7n4yTpLFTjwvxO23A,2141
+tofuref/data/providers.py,sha256=EQiNW1F_WfXbgywoDjALt2ndHtLX8sVuI3kRqFJrY_E,4714
+tofuref/data/registry.py,sha256=ROsF0AHUWaAm54rrKkeGFjG15rqA0IUMtiDO_c-qR5c,427
+tofuref/data/resources.py,sha256=1DGTAZ9O6wEqnMedFBuOJoHOeAKG7Oz3HsU7dN1kwOs,1341
+tofuref-1.0.0.dist-info/METADATA,sha256=HTqxbM-6BQtbT1Fy1pUcaP68IyYoIZqPW_F7zyiPYJc,3124
+tofuref-1.0.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+tofuref-1.0.0.dist-info/entry_points.txt,sha256=pDaYiKbYbetWgelVTXg154W_2U6oLUnAytr4lU_IucI,46
+tofuref-1.0.0.dist-info/RECORD,,
