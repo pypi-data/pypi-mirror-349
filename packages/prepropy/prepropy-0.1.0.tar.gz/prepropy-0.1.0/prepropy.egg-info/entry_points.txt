@@ -1,0 +1,2 @@
+[console_scripts]
+prepropy = prepropy.cli:main
