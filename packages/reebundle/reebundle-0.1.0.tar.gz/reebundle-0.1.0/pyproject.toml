@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "reebundle"
+version = "0.1.0"
+description = "A package for working with Reeb graphs."
+authors = [
+    { name="S Shailja", email="shailjasah12@gmail.com" }
+]
+readme = "README.md"
+requires-python = ">=3.8"
+license = { file = "LICENSE" }
+
+[project.urls]
+Homepage = "https://github.com/yourusername/reebundle"
+Documentation = "https://github.com/yourusername/reebundle#readme"
+Issues = "https://github.com/yourusername/reebundle/issues"
+
+[project.optional-dependencies]
+test = [
+  "pytest"
+]
+
+[tool.flake8]
+max-line-length = 88
+exclude = ["build", "dist", ".venv"]
