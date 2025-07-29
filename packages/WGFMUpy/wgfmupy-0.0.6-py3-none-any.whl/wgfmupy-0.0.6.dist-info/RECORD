@@ -1,0 +1,10 @@
+WGFMUpy/__init__.py,sha256=lDtC3RdlI2k3bm2HcrvwrP_KXsYU78JEuAo3A4Uw8jI,77754
+WGFMUpy/libs/visa64.dll,sha256=yngU55GWrqBAm-ddlNHQpSlmLoKFog_pLUR5Mr6F_yY,662528
+WGFMUpy/libs/visaConfMgr.dll,sha256=lEIwfM78w8RtlS15TEpb84XPOHFqZhZa4fwkQOoURZY,759296
+WGFMUpy/libs/visaUtilities.dll,sha256=RKl03Apu0esRY7cc2zhiLT7Wv9OKNvu9AnHt82r4Pvw,617472
+WGFMUpy/libs/wgfmu.dll,sha256=g6bQAqEZDbpV_z54qizME6a_J3mVKmwKt0lNpGJZjz0,1030656
+wgfmupy-0.0.6.dist-info/licenses/LICENSE,sha256=6kbiFSfobTZ7beWiKnHpN902HgBx-Jzgcme0SvKqhKY,1091
+wgfmupy-0.0.6.dist-info/METADATA,sha256=4y-ZWkCFR1M3GT3f76R2ANt-uUU9cmb9k8H226yZHW8,1115
+wgfmupy-0.0.6.dist-info/WHEEL,sha256=Nw36Djuh_5VDukK0H78QzOX-_FQEo6V37m3nkm96gtU,91
+wgfmupy-0.0.6.dist-info/top_level.txt,sha256=jmAABcSXSyvSrgAzPURqv_Q7-1q-iqoF5OeitVouw6A,8
+wgfmupy-0.0.6.dist-info/RECORD,,
