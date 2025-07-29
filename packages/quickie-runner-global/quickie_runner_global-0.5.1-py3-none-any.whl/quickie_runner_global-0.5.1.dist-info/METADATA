@@ -1,0 +1,60 @@
+Metadata-Version: 2.4
+Name: quickie-runner-global
+Version: 0.5.1
+Summary: Run global quickie tasks.
+Project-URL: Homepage, https://github.com/adrianmrit/quickie
+Project-URL: Documentation, https://quickie.readthedocs.io
+Project-URL: Repository, https://github.com/adrianmrit/quickie.git
+Project-URL: Issues, https://github.com/adrianmrit/quickie/issues
+Project-URL: Changelog, https://github.com/adrianmrit/quickie/blob/main/CHANGELOG.md
+Author-email: Adrian Martinez Rodriguez <adrianmrit@gmail.com>
+License: The MIT License
+        
+        Copyright 2024 Adrian Martinez Rodriguez <adrianmrit@gmail.com>
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in
+        all copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+        THE SOFTWARE.
+License-File: LICENSE
+Keywords: CLI,quick,tasks
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.12
+Requires-Dist: quickie-runner==0.5.1
+Description-Content-Type: text/markdown
+
+# Quickie Global
+
+This package provides a separate binary `qkg` that allows you to run global quickie tasks from any directory, without conflicts with quickie tasks defined in your projects.
+
+## Installing
+
+It is recommended to use `pipx` to install in an isolated environment:
+
+```sh
+pipx install quickie-runner-global
+qkg --help
+```
+
+If you have any issues with the `quickie` package missing when running `qkg`, you can inject it manually:
+
+```sh
+pipx inject quickie-runner-global quickie-runner
+```

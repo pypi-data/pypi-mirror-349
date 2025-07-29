@@ -1,0 +1,2 @@
+[console_scripts]
+qkg = quickie._cli:global_main
