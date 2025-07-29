@@ -1,0 +1,15 @@
+wasenderapi/__init__.py,sha256=tG84yb8f_k44YGVk8WX4dWy8Gpc0RnkdP7kW_mzR9xs,841
+wasenderapi/_version.py,sha256=5U9MUsXQbcmYV_B-Wr5u_JHcFToVR3zN2dZAHyIqlQk,22
+wasenderapi/async_client.py,sha256=3SwXPXECwOQrWvKEJM3H-9cwR3Z8iCWKCJsNDLFOHpI,21946
+wasenderapi/channel.py,sha256=BVJqmEvd-TW10S_Cq0ajKIcVwCgYS6JBuhgeFuoLSjc,504
+wasenderapi/contacts.py,sha256=ckOYlobc8oZjXJEi7uRk0teJmkGghcgareNAlRDxiPU,1383
+wasenderapi/errors.py,sha256=zdspfGGymTb9T9TEaodhT8pEkTYD3BOre0RUJSuE2nY,1274
+wasenderapi/groups.py,sha256=whtUutTdSUPqXoRREmOJ_NYnxjXNP_eJJJN7q2HmXtI,3325
+wasenderapi/models.py,sha256=DiEx-Y0OSpl21x2GXCyvQdaW-zGp08azBj0A-itop5M,3861
+wasenderapi/sessions.py,sha256=CvvKVEofcJ4gy13HxhZSWXMCu0Iepl6LHSPxwnilZ8c,5277
+wasenderapi/sync_client.py,sha256=PHSJE61p2PjM-t2Aihk6UgPteaqs_KPF8l2-X5To2Cs,20023
+wasenderapi/webhook.py,sha256=JZuCEx47Z8fgKBuJ9OVkGJ1WRKjCJj-r2d0y-mejYdw,9231
+wasenderapi-0.2.1.dist-info/METADATA,sha256=I7zsZfhZbXduq_gwrfpCXDwPqGdGnT_nhHDO3l_4AfQ,37143
+wasenderapi-0.2.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+wasenderapi-0.2.1.dist-info/licenses/LICENSE,sha256=V5OtQkKnfNIpXVT2JU0NDUPEZ9mcKxn4zl_4z5NP0YI,1084
+wasenderapi-0.2.1.dist-info/RECORD,,
