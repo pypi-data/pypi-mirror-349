@@ -1,0 +1,14 @@
+somu-1.0.1.dist-info/METADATA,sha256=8OdlOW4GZxlh28wNVlM4vmDElLdbppnA4P7PC3fJTeI,1275
+somu-1.0.1.dist-info/WHEEL,sha256=pCBDenx5Gdn2bHrhDD_mC_4bczslAeFgUful75sL-pA,106
+somu-1.0.1.dist-info/licenses/LICENSE,sha256=CvyjFFWWzQBfb27ZdzE-oxkoCU_FtKqrwhu3Zeo2nQk,19342
+somu.libs/libOpenCL-8e08ba18.so.1,sha256=eakj7PVUmyud-C6JPFHIa-bHlkW_Hf50Evu7n2Y1OqU,32361
+somu.libs/libaf-3cd91a14.so.3,sha256=QsXNogzxdTLCNNoN3IBUwNPVNnm_sl0iqE2uBrSeRU4,6227065
+somu.libs/libiomp5-1bef3c4b.so,sha256=lyb_bLnCA3S5gNVTr1yfdOJfMD0N3FUcosJaTe_5Ns8,2264801
+somu.libs/libmkl_core-0b91374c.so,sha256=dLnq_tY-zmw5WHIw04HDLCe3PSlnIKYJ1Op0uFScq6s,71108169
+somu.libs/libmkl_intel_lp64-6bcd9cb5.so,sha256=gMTLZuv0pLJusE_SX_NMbFC8glxhDJVWZ_D8SnsrjlQ,11585977
+somu.libs/libmkl_intel_thread-13011518.so,sha256=nXKHqPl4IFY-0uNZBNHm8RiP2XJKb14gMKk-9aitWm8,40418617
+somu/__init__.py,sha256=g9Tl4ecK6FwuJsLIqy4ttU8WEM932BQB70VGYgAAHKc,19
+somu/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+somu/somu.abi3.so,sha256=ljquaId-z5zl1NvJt9Ep9Uzpgp7H3pb5wQhavsv2oiY,519145
+somu/somu.pyi,sha256=Pz00xqpho0C0FIF7JN8-yli_KZO7PYWATBG90VbBvqk,924
+somu-1.0.1.dist-info/RECORD,,
