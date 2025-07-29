@@ -1,0 +1,17 @@
+matplotlib
+nibabel
+numpy
+pandas
+pydicom
+python-gdcm
+pylibjpeg-libjpeg
+importlib-resources
+scipy
+imageio
+vreg
+
+[extensions]
+scikit-image
+itk-elastix
+dipy
+scikit-learn
