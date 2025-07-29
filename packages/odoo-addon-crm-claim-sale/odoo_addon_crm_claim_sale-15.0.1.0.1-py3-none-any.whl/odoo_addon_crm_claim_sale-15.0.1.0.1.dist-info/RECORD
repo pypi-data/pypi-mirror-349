@@ -1,0 +1,16 @@
+odoo/addons/crm_claim_sale/README.rst,sha256=l9co_NSPm_2PiYh2F0zanxgzl-2JvVSlvHGy__isU24,2203
+odoo/addons/crm_claim_sale/__init__.py,sha256=aZKOYa2w32amSpd-XEZz_jcbu3mt23I7tUtQ9gTItnA,162
+odoo/addons/crm_claim_sale/__manifest__.py,sha256=FJa5wIA0LfPHdfyIQqxB_v5be6CAVlb0zxhI1Wb289Q,704
+odoo/addons/crm_claim_sale/i18n/es.po,sha256=b8EbyZt6NyPnnFpwww0zNFx0Ww6YCHDee5KGArEJWj4,2488
+odoo/addons/crm_claim_sale/models/__init__.py,sha256=ojB_pG4djuZfYYPYbOXXHUuDgavOZMOCV4zAE80YsGc,221
+odoo/addons/crm_claim_sale/models/crm_claim.py,sha256=Pu3esaiEkVEAhrl2jixe54JMlKPo5JPc5qO9juYE5tQ,2219
+odoo/addons/crm_claim_sale/models/sale_order.py,sha256=Ua3KZhsDr_KNLrFfzZhJ1_Iq6DtJUyC3QCyJuRRTSRQ,309
+odoo/addons/crm_claim_sale/models/sale_order_type.py,sha256=wa4gPMsKGmuemGVLFnsWIABXGVMXa9IRJgQXQ28T9Xc,702
+odoo/addons/crm_claim_sale/static/description/icon.png,sha256=bVbNdnyk7PXHuZ3ye_Aqh1M9tbfPJ5zU5W1VnoO8mBQ,35820
+odoo/addons/crm_claim_sale/views/crm_claim_views.xml,sha256=Sq5nAerHmh7U4I4aJ2UqLNCha-QYIgYkeG-05l4Enyc,1845
+odoo/addons/crm_claim_sale/views/sale_order_type_view.xml,sha256=PjhngyatfRw53bK_P5y7mlkilX0RG6CU6lDq-hkRJyw,716
+odoo/addons/crm_claim_sale/views/sale_order_views.xml,sha256=Aos2gpuFHJc8zzkMSPE1_FY70tcNsK9Qf63EI-RR32o,1123
+odoo_addon_crm_claim_sale-15.0.1.0.1.dist-info/METADATA,sha256=JqDwK8GbUnTtiaGc2cudDSI98K0ONPwIQnWEeLfbjmU,2842
+odoo_addon_crm_claim_sale-15.0.1.0.1.dist-info/WHEEL,sha256=9fEMia4zL7ZuZbnCOrcYogUhmn4XFIVaJ8G4YGI31xc,81
+odoo_addon_crm_claim_sale-15.0.1.0.1.dist-info/top_level.txt,sha256=QE6RBQ0QX5f4eFuUcGgU5Kbq1A_qJcDs-e_vpr6pmfU,4
+odoo_addon_crm_claim_sale-15.0.1.0.1.dist-info/RECORD,,
