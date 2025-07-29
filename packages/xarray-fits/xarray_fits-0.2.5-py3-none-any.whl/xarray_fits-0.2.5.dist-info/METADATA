@@ -1,0 +1,28 @@
+Metadata-Version: 2.3
+Name: xarray-fits
+Version: 0.2.5
+Summary: xarray Datasets for FITS-like data
+Author: Simon Perkins
+Author-email: simon.perkins@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Provides-Extra: testing
+Requires-Dist: astropy (>=6.0.0,<7.0.0)
+Requires-Dist: dask[array] (>=2024.1.0,<2025)
+Requires-Dist: distributed[testing] (>=2024.1.0,<2025) ; extra == "testing"
+Requires-Dist: fsspec (>=2024,<2025)
+Requires-Dist: pytest[testing] (>=8.1.1,<9.0.0) ; extra == "testing"
+Requires-Dist: xarray (>=2024,<2025)
+Description-Content-Type: text/x-rst
+
+===========
+xarray-fits
+===========
+
+Documentation: https://xarray-fits.readthedocs.io
+

@@ -1,0 +1,11 @@
+xarrayfits/__init__.py,sha256=244yztsFpGynFBjPbSOuzvd-nBZwnaGjo5SlAHCW2Xg,211
+xarrayfits/fits.py,sha256=3lD35YxofwseOsvU5VvcPMXrbHmQacbsTMVdsrVhJAk,7954
+xarrayfits/fits_proxy.py,sha256=qRoPtLSMVzXpReUdtmyZXzaylN5KsyXa7DkBO38l9m4,1961
+xarrayfits/grid.py,sha256=f1I472k9TGvxce2ZYbTYd_C03FdY7yEk7FVnES60KF8,2123
+xarrayfits/typing.py,sha256=usiOOJj44XGY4rM_crXvGZSycjBpJOrsV-kxxe1nQLI,221
+xarrayfits/utils.py,sha256=xN9A0fP3lQJBrN8J23DbeH3zXa3CUtjq9eb1R8cYS08,2947
+xarray_fits-0.2.5.dist-info/AUTHORS.rst,sha256=pJcOHm3n3juZT_YFItL8EMjLavae5YVVr92BkMJE228,157
+xarray_fits-0.2.5.dist-info/LICENSE,sha256=Zvx6WXi5bFq_FVncdvxA_M9duOwd8Y3UFaP6Ns0lviU,1565
+xarray_fits-0.2.5.dist-info/METADATA,sha256=ic7cwukSPkstlqiuJ0MEDexanB4BGSpTUYow7zCMsn8,944
+xarray_fits-0.2.5.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+xarray_fits-0.2.5.dist-info/RECORD,,
