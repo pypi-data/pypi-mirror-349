@@ -1,0 +1,11 @@
+yta_file/__init__.py,sha256=VNGvkT43bu5XILv4HgZslpj7HLUEmY_IJ_j58LxveOg,40
+yta_file/filename/__init__.py,sha256=64D-prAQ5gyu4idWTLRFJ8WKOHRc97zfZn1mqBW3TlQ,179
+yta_file/filename/dataclasses.py,sha256=rDK6OJoxtVRNjrstdBxt_F_PhiLCW9SWGeztVkUVCKE,6528
+yta_file/filename/handler.py,sha256=3a5NaI9bhsxjYNy_x5QCg5tCuAhsTRs6iHF3i4Q31MQ,8433
+yta_file/filename/utils.py,sha256=jtsAYjIvsf4dbS_egBzBp-nF4N9oNGs8mdbfY-bqWro,316
+yta_file/handler.py,sha256=LomD4bTFmQ2dzVlm7rw0yeZO3d6aJeL5sEPNBHr_G_M,23574
+yta_file/path/__init__.py,sha256=FsS6KK4RcMOaX3xFtyaBLPWPPD8Dym8PgaqwuS5cjiA,2730
+yta_file-0.0.10.dist-info/LICENSE,sha256=6kbiFSfobTZ7beWiKnHpN902HgBx-Jzgcme0SvKqhKY,1091
+yta_file-0.0.10.dist-info/METADATA,sha256=afOpbyJuqkwhFPIKlFSEOpIAf0S9r4Y_3FbQje5dMoY,560
+yta_file-0.0.10.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+yta_file-0.0.10.dist-info/RECORD,,
