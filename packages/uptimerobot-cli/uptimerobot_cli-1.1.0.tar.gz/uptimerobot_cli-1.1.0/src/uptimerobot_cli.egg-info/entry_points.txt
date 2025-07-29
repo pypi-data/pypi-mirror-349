@@ -1,0 +1,2 @@
+[console_scripts]
+utr = uptimerobot_cli.utr:main
