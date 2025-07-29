@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src/",
+    "noImplicitAny": true,
+    "module": "nodenext",
+    "target": "es2022",
+    "strict": true,
+    "allowJs": true,
+    "moduleResolution": "nodenext",
+  },
+  "include": [
+    "./src/**/*.ts"
+  ]
+}

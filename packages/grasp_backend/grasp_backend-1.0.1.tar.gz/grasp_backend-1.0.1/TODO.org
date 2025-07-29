@@ -1,0 +1,81 @@
+* TODO [#A] simple auth for server bit? 
+* TODO [#C] how to test it? try on different pages?
+  https://www.blazemeter.com/blog/6-easy-steps-testing-your-chrome-extension-selenium
+  looks tricky...
+* TODO [#C] some sort of delayed append logic? e.g. don't dump immediately and add as subitems?
+* TODO [#C] or, add menu to extension?
+* TODO [#C] hmm. if template is specified on client site, it's easier to dispatch todo vs non-todo etc?..
+* CNCL not sure, maybe extension press should be default? control it via option?
+:LOGBOOK:
+- State "CNCL"       from "TODO"       [2022-12-29 Thu 17:41]
+:END:
+
+* DONE [#B] doesn't look like hotkey working unless you manually rebind.. wtf?
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2022-12-29 Thu 17:41]
+:END:
+
+* DONE [#D] do not minfy for dev
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2022-12-29 Thu 17:40]
+:END:
+
+* DONE [#D] make manifest templated so we don't have to hardcode actions
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2022-12-29 Thu 17:40]
+:END:
+
+* DONE [#D] production build?
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2022-12-29 Thu 17:40]
+:END:
+: ## Packing
+: After the development of your extension run the command
+:
+: ```
+: $ NODE_ENV=production npm run build
+: ```
+: Now, the content of `build` folder will be the extension ready to be submitted to the Chrome Web Store. Just take a look at the [official guide](https://developer.chrome.com/webstore/publish) to more infos about publishing.
+
+
+* DONE [#A] adjust permissions... I guess gonna have to make it include /capture endpoint?
+  CLOSED: [2019-01-06 Sun 23:57]
+
+* DONE [#A] move server to a separate folder, systemd install script
+  CLOSED: [2019-01-05 Sat 14:38]
+  
+* DONE [#A] entering additional information and tags
+  CLOSED: [2019-01-06 Sun 20:41]
+
+* DONE [#B] circleci?
+  CLOSED: [2019-01-13 Sun 13:01]
+* DONE [#B] release somewhere? not sure if necessary
+  CLOSED: [2019-01-07 Mon 23:57]
+** DONE [#C] post on reddit?
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2022-12-29 Thu 17:40]
+:END:
+
+* DONE [#B] get rid of kython, run ci for python too?
+  CLOSED: [2019-01-07 Mon 23:57]
+ 
+* DONE [#B] docs on using
+  CLOSED: [2019-01-06 Sun 21:39]
+* DONE [#C] update screens and video now that the notification is nicer
+  CLOSED: [2019-01-13 Sun 15:32]
+  
+* DONE [#C] custom capture template?
+  CLOSED: [2019-01-13 Sun 14:57]
+* DONE [#C] make notification configurable or only in case of errors
+  CLOSED: [2019-01-13 Sun 13:01]
+* DONE [#C] motivation
+  CLOSED: [2019-01-06 Sun 21:35]
+** DONE the benefit is that you can also add anything as a backend, e.g. you might be more of markdown fan or todo.txt
+   CLOSED: [2019-01-06 Sun 21:35]
+
+* DONE [#D] nicer manifest?
+  CLOSED: [2019-01-06 Sun 13:43]
+
+* DONE unsafe-eval in content security policy??
+  CLOSED: [2019-01-06 Sun 23:36]
+  

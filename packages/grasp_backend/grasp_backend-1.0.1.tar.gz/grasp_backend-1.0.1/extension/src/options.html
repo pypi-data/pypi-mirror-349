@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script type="module" src="options_page.js"/></script>
+  <style>
+   input:invalid {
+       background-color: red;
+   }
+  </style>
+</head>
+<body>
+    <h1>Grasp settings</h1>
+    <fieldset>
+        <legend>Endpoint</legend>
+        <input type='URL' size='40' id='endpoint_id'/>
+        <div id='has_permission_id' style="display: none; color: red">
+            No permission to access the endpoint. Will request when you press "Save".
+        </div>
+    </fieldset>
+    <label for="notification_id">Notification after capture</label>
+        <div><input type="checkbox"  id="notification_id"/></div>
+    <label for="default_tags_id">Default tags</label>
+        <div><input type="text" id="default_tags_id" /></div>
+        <div><button id="save_id">Save</button></div>
+</body>
+</html>
