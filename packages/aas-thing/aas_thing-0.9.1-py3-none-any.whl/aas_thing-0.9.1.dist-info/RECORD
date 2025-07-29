@@ -1,0 +1,10 @@
+aas_thing/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aas_thing/aas_connection.py,sha256=JS4GgR2pDsCeobJhgRaXCqzRsXjXvXj307zZK8qbLz0,14025
+aas_thing/core.py,sha256=6vtOVSjarh-nrDBDzr37VS28JBbadPuQIJKFonO3VVY,7287
+aas_thing/message_handler.py,sha256=-iNGQxcuYZxgqgEfHauA_JK0w7hqVmqDhZso_rUcVh8,17002
+aas_thing/s3i_connection.py,sha256=yLnda6EHkcStKhEApoI8OtWw1JPm1eK7yLgCSuPTckk,15660
+aas_thing-0.9.1.dist-info/licenses/LICENSE,sha256=vhlqZ76jeevrB2SUIXUfuA7Parxw7YCtwXLiczH2uag,7757
+aas_thing-0.9.1.dist-info/METADATA,sha256=MO1ByRhWRKF1uulYYmVY8b5Iy_ikp6getgQUXO_2ENY,8044
+aas_thing-0.9.1.dist-info/WHEEL,sha256=Nw36Djuh_5VDukK0H78QzOX-_FQEo6V37m3nkm96gtU,91
+aas_thing-0.9.1.dist-info/top_level.txt,sha256=Pe1QEbpQYOLnI_XoKIbeWSCqG98RJ_xJDvSpkNG43zI,10
+aas_thing-0.9.1.dist-info/RECORD,,
