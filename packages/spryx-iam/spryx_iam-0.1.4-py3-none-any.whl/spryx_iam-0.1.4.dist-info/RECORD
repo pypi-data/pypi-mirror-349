@@ -1,0 +1,13 @@
+spryx_iam/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spryx_iam/auth_application.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spryx_iam/client.py,sha256=scCTsEtlnuSjMICpihX-EUER3bLH3vqAs39_FtORwA4,609
+spryx_iam/resources/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spryx_iam/resources/organizations.py,sha256=mpwun8EYY45E9VOL9s8WlAP_5xij6AblyaYG_PS16xk,718
+spryx_iam/resources/plans.py,sha256=aUY40Rsa8S0OlgnAOS_LkZoQQoF0flns0YPxBmDfPFU,305
+spryx_iam/types/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spryx_iam/types/organization.py,sha256=hYYu5husMh9lmXWTSRXBE6ED5XHXkhkHoKq0XtCRRdM,1069
+spryx_iam/types/plan.py,sha256=awedjBHS3kvGRQsJ4fPaBprA-y0HWQhUW03gzEwD8Hk,493
+spryx_iam-0.1.4.dist-info/LICENSE,sha256=vt5n8iKTAy1LJb9EJqYu7maVTn_H-U5rJyGPLrrYqZc,1062
+spryx_iam-0.1.4.dist-info/METADATA,sha256=gSq_VjbPChWOP0wbx9yKj_0P1SKU9z-wqxcsZt44xCc,446
+spryx_iam-0.1.4.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+spryx_iam-0.1.4.dist-info/RECORD,,
