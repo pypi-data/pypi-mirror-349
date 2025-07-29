@@ -1,0 +1,2 @@
+[console_scripts]
+create-fastapi-app = cli:main
