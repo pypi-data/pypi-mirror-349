@@ -1,0 +1,2 @@
+[console_scripts]
+rpmeta = rpmeta.cli.main:entry_point
