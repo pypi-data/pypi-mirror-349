@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+powerpoint2pdf/__main__.py
+powerpoint2pdf/main.py
+powerpoint2pdf.egg-info/PKG-INFO
+powerpoint2pdf.egg-info/SOURCES.txt
+powerpoint2pdf.egg-info/dependency_links.txt
+powerpoint2pdf.egg-info/entry_points.txt
+powerpoint2pdf.egg-info/requires.txt
+powerpoint2pdf.egg-info/top_level.txt
