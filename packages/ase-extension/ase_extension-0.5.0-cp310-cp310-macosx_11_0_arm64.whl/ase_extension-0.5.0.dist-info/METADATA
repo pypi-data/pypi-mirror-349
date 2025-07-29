@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: ase-extension
+Version: 0.5.0
+Summary: Extension functionalities for ASE (Atomic Simulation Environment)
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: ase>=3.24.0
+Requires-Dist: numpy>=1.26.0
+Requires-Dist: typing-extensions>=4.13.2
+Requires-Dist: vesin
+
+# ase-extension
