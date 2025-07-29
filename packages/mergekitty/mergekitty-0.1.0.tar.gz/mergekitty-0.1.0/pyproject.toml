@@ -1,0 +1,116 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+
+[project]
+name = "mergekitty"
+description = "Tools for merging pre-trained large language models"
+readme = "README.md"
+license = { text = "LGPL-3.0-or-later" }
+version = "0.1.0"
+authors = [
+    { name = "fizz~", email = "fizzarolli@riseup.net" },
+    { name = "Charles Goddard", email = "chargoddard@gmail.com" }
+]
+dependencies = [
+    "torch~=2.5.0",
+    "tqdm==4.67.1",
+    "click==8.1.8",
+    "safetensors~=0.5.2",
+    "accelerate~=1.3.0",
+    "pydantic~=2.10.6",
+    "immutables==0.20",
+    "transformers>=4.45.2",
+    "tokenizers>=0.20.1",
+    "huggingface_hub",
+    "peft",
+    "typing-extensions",
+    "sentencepiece",
+    "protobuf",
+    "scipy",
+    "datasets",
+]
+requires-python = ">=3.10"
+
+[project.optional-dependencies]
+dev = [
+    "ruff~=0.9.4",
+    "pre-commit~=4.1.0",
+]
+gradio = [
+    "gradio[oauth]==5.15.0",
+    "gradio_log",
+    "gradio-huggingfacehub-search"
+]
+
+
+[project.urls]
+repository = "https://github.com/allura-org/mergekitty"
+
+[project.scripts]
+mergekitty-yaml = "mergekitty.scripts.run_yaml:main"
+mergekitty-mega = "mergekitty.scripts.megamerge:main"
+mergekitty-layershuffle = "mergekitty.scripts.layershuffle:main"
+mergekitty-moe = "mergekitty.scripts.moe:main"
+mergekitty-tokensurgeon = "mergekitty.scripts.tokensurgeon:main"
+mergekitty-extract-lora = "mergekitty.scripts.extract_lora:main"
+mergekitty-gui = "mergekitty.scripts.gui:cli_main"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.envs.default]
+installer = "uv"
+features = [
+    "dev",
+    "gradio"
+]
+
+[tool.hatch.envs.default.extra-scripts]
+lint = "ruff check"
+lint-fix = "ruff check --fix --unsafe-fixes"
+format = "ruff format"
+
+[tool.hatch.envs.hatch-test]
+extra-dependencies = ["pytest"]
+
+[tool.hatch.envs.hatch-test.scripts]
+run = "pytest{env:HATCH_TEST_ARGS:} {args}"
+run-cov = "coverage run -m pytest{env:HATCH_TEST_ARGS:} {args}"
+cov-combine = "coverage combine"
+cov-report = "coverage html"
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "mergekitty/",
+    "examples/",
+    "tests/",
+    "docs/",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = [
+    "mergekitty",
+    "mergekitty.executor",
+    "mergekitty.io",
+    "mergekitty.merge_methods",
+    "mergekitty.moe",
+    "mergekitty.scripts",
+    "mergekitty.tokenizer",
+    "mergekitty._data",
+    "mergekitty._data.architectures",
+    "mergekitty._data.chat_templates",
+]
+
+[tool.ruff]
+line-length = 88
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+filterwarnings = [
+    "ignore::pydantic.PydanticDeprecatedSince20:huggingface_hub.*:",
+    "ignore::FutureWarning:huggingface_hub.*:",
+    "ignore:(read_text|open_text|contents|is_resource) is deprecated:DeprecationWarning", # yes i know, but files() doesn't exist in 3.8
+]
+testpaths = ["tests"]
