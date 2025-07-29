@@ -1,0 +1,9 @@
+README.md
+setup.py
+JDlibreria/Funciones.py
+JDlibreria/__init__.py
+JDlibreria.egg-info/PKG-INFO
+JDlibreria.egg-info/SOURCES.txt
+JDlibreria.egg-info/dependency_links.txt
+JDlibreria.egg-info/requires.txt
+JDlibreria.egg-info/top_level.txt
