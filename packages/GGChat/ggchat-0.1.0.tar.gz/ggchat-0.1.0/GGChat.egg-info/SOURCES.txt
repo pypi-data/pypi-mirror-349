@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.py
+GGChat/__init__.py
+GGChat/core.py
+GGChat.egg-info/PKG-INFO
+GGChat.egg-info/SOURCES.txt
+GGChat.egg-info/dependency_links.txt
+GGChat.egg-info/requires.txt
+GGChat.egg-info/top_level.txt
