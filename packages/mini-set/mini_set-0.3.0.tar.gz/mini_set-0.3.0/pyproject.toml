@@ -1,0 +1,62 @@
+[project]
+name = "mini-set"
+dynamic = ["version"]
+description = "A Jinja2 template processor for interacting with an SQL engine"
+readme = "README.md"
+requires-python = ">=3.9,<4.0"
+authors = [{ name = "Manabu Niseki", email = "manabu.niseki@gmail.com" }]
+dependencies = ["jinja2~=3.1"]
+
+[project.urls]
+Homepage = "https://github.com/ninoseki/miniset"
+Repository = "https://github.com/ninoseki/miniset"
+Documentation = "https://ninoseki.github.io/miniset/"
+
+[build-system]
+requires = ["hatchling", "uv-dynamic-versioning"]
+build-backend = "hatchling.build"
+
+[tool.hatch.version]
+source = "uv-dynamic-versioning"
+
+[tool.hatch.build.targets.wheel]
+packages = ["miniset"]
+
+[tool.uv]
+default-groups = ["dev", "docs"]
+
+[dependency-groups]
+dev = [
+    "lefthook>=1.11.13",
+    "mypy>=1.15.0",
+    "pre-commit>=4.2.0",
+    "pytest>=8.3.5",
+    "pytest-pretty>=1.2,<2.0",
+    "pytest-randomly>=3.16.0",
+    "ruff>=0.11.10",
+    "sqlmodel>=0.0.24",
+    "uv-sort>=0.5.1",
+]
+docs = [
+    "mkdocs>=1.6.1",
+    "mkdocs-material>=9.6.14",
+    "mkdocstrings[python]>=0.29.1",
+]
+
+[tool.ruff.lint]
+select = [
+    "B",   # flake8-bugbear
+    "C",   # flake8-comprehensions
+    "E",   # pycodestyle errors
+    "F",   # pyflakes
+    "I",   # isort
+    "N",   # pep8-naming
+    "RET", # flake8-return
+    "RUF", # Ruff-specific rules
+    "SIM", # flake8-simplify
+    "T20", # flake8-print
+    "W",   # pycodestyle warnings
+]
+ignore = [
+    "E501", # line too long, handled by black
+]
