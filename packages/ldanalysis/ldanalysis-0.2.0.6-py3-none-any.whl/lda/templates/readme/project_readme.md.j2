@@ -1,0 +1,18 @@
+# {{ project_name }}
+
+Created: {{ creation_time }}
+Analyst: {{ analyst }}
+
+## Overview
+
+This project was created using the Linked Document Analysis (LDA) system.
+
+## Structure
+
+{% for section in sections %}
+- `{{ section.name }}`: {{ section.folder }}
+{% endfor %}
+
+## Provenance
+
+All files are tracked in the manifest. Use `lda status` to check project status.
