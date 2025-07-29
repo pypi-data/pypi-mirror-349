@@ -1,0 +1,14 @@
+pyproject.toml
+setup.py
+src/todo_cli/Storage.py
+src/todo_cli/Task.py
+src/todo_cli/TaskService.py
+src/todo_cli/TaskView.py
+src/todo_cli/__init__.py
+src/todo_cli/main.py
+src/todo_cli_kyra_pure_python.egg-info/PKG-INFO
+src/todo_cli_kyra_pure_python.egg-info/SOURCES.txt
+src/todo_cli_kyra_pure_python.egg-info/dependency_links.txt
+src/todo_cli_kyra_pure_python.egg-info/entry_points.txt
+src/todo_cli_kyra_pure_python.egg-info/requires.txt
+src/todo_cli_kyra_pure_python.egg-info/top_level.txt

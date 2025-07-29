@@ -1,0 +1,57 @@
+[build-system]
+# 声明构建工具依赖（必须）
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+# 核心元数据（必填）
+name = "todo_cli_kyra_pure_python"
+version = "0.1"
+description = "A command line todo tool"
+authors = [
+  { name = "kyra", email = "m13409971925@163.com" }
+]
+readme = "README.md"  # 假设 README 路径为项目根目录下的 README.md
+requires-python = ">=3.6"
+license = { text = "MIT" }  # 简化的许可证声明，如需文件引用可改为 `file = "LICENSE"`
+
+# 项目分类器（与 setup.py 中的 classifiers 对应）
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: End Users/Desktop",
+  "Topic :: Utilities",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.7",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Operating System :: OS Independent",
+]
+
+
+# 依赖管理
+dependencies = [
+  "click>=8.1.3",
+  "fuzzywuzzy>=0.18.0",
+  "jieba>=0.42.1",
+  "tabulate>=0.9.0",
+  "python-dateutil>=2.8.2",
+  "dataclasses>=0.8; python_version < '3.7'"
+]
+
+# 可选依赖（与 setup.py 中的 extras_require 对应）
+[project.optional-dependencies]
+visualization = ["matplotlib>=3.7.1", "wordcloud>=1.8.2.2"]
+notification = ["plyer>=2.0.0"]
+dev = ["pytest>=7.3.1", "flake8>=6.0.0", "black>=23.3.0", "isort>=5.12.0"]
+docs = ["sphinx>=6.2.1", "sphinx-rtd-theme>=1.2.0"]
+
+# 命令行入口（与 setup.py 中的 entry_points 对应）
+[project.scripts]
+todo-cli = "todo_cli.main:main"
+
+# 动态元数据声明（仅包含确实需要动态生成的字段，此处无）
+
+# 若无需动态生成，可省略此表或留空
