@@ -1,0 +1,30 @@
+Metadata-Version: 2.4
+Name: pypersia
+Version: 1.5.0
+Summary: A Python library for Persian utilities
+Author-email: Aria Farahmand <aria.farahmand1391@gmail.com>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/the-golden-one/pypersia
+Project-URL: Issues, https://github.com/the-golden-one/pypersia/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Dynamic: license-file
+
+# PyPersia
+
+A Python library for Persian utilities, including:
+- 🏷️ **Digit Conversion** (EN ⇆ FA)
+- 📆 **Calendar Conversion** (Jalali ⇆ Gregorian ⇆ Hijri)
+- 📝 **Text Normalization** (Fixing Arabic characters)
+- 🔢 **Number Formatting** (Convert numbers to Persian words)
+- ⌨️ **Keyboard Fix** (Correct Persian text typed in English layout)
+
+## Installation
+```bash
+pip install pypersia
+```
+
+*Documnetion Getting Ready Soon!*
