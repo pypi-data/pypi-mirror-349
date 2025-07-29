@@ -1,0 +1,4 @@
+pywin32
+infinity
+mysql
+pyautogui
