@@ -1,0 +1,140 @@
+Metadata-Version: 2.4
+Name: abutils
+Version: 0.5.3
+Summary: Utilities for analysis of adaptive immune receptor repertoire (AIRR) data
+Home-page: https://github.com/briney/abutils
+Author: Bryan Briney
+Author-email: briney@scripps.edu
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: abstar>=0.7
+Requires-Dist: baltic
+Requires-Dist: biopython>=1.78
+Requires-Dist: dnachisel
+Requires-Dist: fastcluster
+Requires-Dist: matplotlib
+Requires-Dist: mnemonic
+Requires-Dist: natsort
+Requires-Dist: numpy<2
+Requires-Dist: pandas
+Requires-Dist: paramiko
+Requires-Dist: parasail
+Requires-Dist: polars>=1.6
+Requires-Dist: prettytable
+Requires-Dist: pyarrow
+Requires-Dist: pyfamsa
+Requires-Dist: pyfastx
+Requires-Dist: pytest
+Requires-Dist: python-circos
+Requires-Dist: pyyaml
+Requires-Dist: rapidfuzz
+Requires-Dist: sample-sheet
+Requires-Dist: scikit-learn
+Requires-Dist: scipy
+Requires-Dist: seaborn>=0.11
+Requires-Dist: smart_open
+Requires-Dist: tqdm
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+![](https://img.shields.io/pypi/v/abutils.svg?colorB=blue)
+[![tests](https://github.com/briney/abutils/actions/workflows/pytest.yml/badge.svg)](https://github.com/briney/abutils/actions/workflows/pytest.yml)
+[![Documentation Status](https://readthedocs.org/projects/abutils/badge/?version=latest)](https://abutils.readthedocs.io/en/latest/?badge=latest)
+![](https://img.shields.io/pypi/pyversions/abutils.svg)
+![](https://img.shields.io/badge/license-MIT-blue.svg)
+
+# abutils
+
+Models, functions and visualization tools for working with adaptive immune receptore repertoire (AIRR) data. The primary purpose of `abutils` is to provide generalizable tools suitable for direct use analyzing bulk AIRR datasets, and is used by [`scab`](https://github.com/briney/scab) for single cell AIRR analysis. `abutils` is a core component of the ab\[x\] toolkit for AIRR data analysis.
+  
+  - Source code: [github.com/briney/abutils](https://github.com/briney/abutils)  
+  - Documentation: [abutils.readthedocs.org](http://abutils.readthedocs.org)  
+  - Download: [pypi.python.org/pypi/abutils](https://pypi.python.org/pypi/abutils)  
+  - Docker: [hub.docker.com/r/brineylab/datascience/](https://hub.docker.com/r/brineylab/datascience/)  
+  
+## install  
+``` bash
+pip install abutils
+```
+
+
+## api  
+We've tried to design the  `abutils` API to be intuitive yet powerful, with the goal of enabling both interactive analyses (via environments like Jupyter notebooks) as well as integration of `abutils` tools into more complex analysis pipelines and/or standalone software tools. See the [documentation](http://abutils.readthedocs.org) for more detail about the API. As always, any feedback is greatly appreciated!!  
+
+
+### testing  
+You can run the complete `abutils` test suite by first installing `pytest`:
+``` bash
+pip install pytest
+```
+
+and then running:
+
+``` bash
+git clone https://github.com/brineylab/abutils
+cd abutils
+pytest
+```
+
+This test suite is automatically run against all supported versions of Python following every commit.
+  
+
+### requirements  
+**python 3.10+**  
+  
+abstar  
+baltic  
+biopython  
+dnachisel  
+fastcluster  
+matplotlib  
+mnemonic  
+natsort  
+numpy  
+pandas  
+parasail  
+polars  
+prettytable  
+pyarrow  
+pyfamsa  
+pyfastx  
+pytest  
+python-circos  
+pyyaml  
+rapidfuzz  
+sample-sheet  
+scikit-learn  
+scipy  
+seaborn  
+smart_open  
+tqdm  
+  
+`abutils` includes several additional binaries that are required for certain functionality:
+
+* ``abutils.tl.mafft`` uses [MAFFT](https://mafft.cbrc.jp/alignment/software/)
+* ``abutils.tl.muscle`` uses [MUSCLE](https://www.drive5.com/muscle/)
+* ``abutils.tl.cluster`` uses [CD-HIT](https://cd-hit.org), [MMseqs2](https://github.com/soedinglab/MMseqs2), and [VSEARCH](https://github.com/torognes/vsearch)
+* ``abutils.tl.fasttree`` uses [FastTree](http://www.microbesonline.org/fasttree/)
+
+Although these binaries are all packaged into `abutils`, each respective `abutils.tl` function provides the option to supply a alternate binary path in case you'd prefer to use a different version.  
+
+
