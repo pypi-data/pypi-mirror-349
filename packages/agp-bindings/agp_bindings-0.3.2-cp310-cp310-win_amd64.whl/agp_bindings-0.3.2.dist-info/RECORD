@@ -1,0 +1,6 @@
+agp_bindings-0.3.2.dist-info/METADATA,sha256=P0SQ_tfDN4pXm6HbiE-A5BUwrStij8j0e1Wy9ddqprk,27722
+agp_bindings-0.3.2.dist-info/WHEEL,sha256=EFCgXGXxeCwiKFSIXs99j9wi5CzhWN9wgZDTgX5-fdU,96
+agp_bindings/_agp_bindings.pyi,sha256=r6qVxgy4aEy-jrO6nnFzn3p9ma2UB36XRZM36e0MH3Y,2976
+agp_bindings/__init__.py,sha256=c1tNwyWoFdi1fei9aI9-GpFZHVWxLaPo3ZqYw9Y0Kyw,21659
+agp_bindings/_agp_bindings.cp310-win_amd64.pyd,sha256=8gnXCFm1j5r6I5VX5pmBKbdXuasu06eKnndtB3GF2JY,14274560
+agp_bindings-0.3.2.dist-info/RECORD,,
