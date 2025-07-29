@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: xcfr
+Version: 2025.5.20
+Summary: xcfr
+Home-page: https://github.com/fzhu2e/xcfr
+Author: Feng Zhu
+Author-email: fengzhu@ucar.edu
+License: BSD-3
+Keywords: Climate Field Reconstruction
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: netCDF4
+Requires-Dist: xarray
+Requires-Dist: dask
+Requires-Dist: nc-time-axis
+Requires-Dist: colorama
+Requires-Dist: tqdm
+Requires-Dist: x4c-exp
+
+# xcfr

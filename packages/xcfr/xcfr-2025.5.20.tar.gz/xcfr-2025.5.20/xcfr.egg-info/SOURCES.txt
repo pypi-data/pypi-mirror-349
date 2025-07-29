@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+xcfr/__init__.py
+xcfr.egg-info/PKG-INFO
+xcfr.egg-info/SOURCES.txt
+xcfr.egg-info/dependency_links.txt
+xcfr.egg-info/not-zip-safe
+xcfr.egg-info/requires.txt
+xcfr.egg-info/top_level.txt
