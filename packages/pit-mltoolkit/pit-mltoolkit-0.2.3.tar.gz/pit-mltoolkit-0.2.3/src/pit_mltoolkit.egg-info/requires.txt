@@ -1,0 +1,10 @@
+google-auth<2.41,>=2.40.1
+google-cloud-artifact-registry<1.17,>=1.16.0
+google-cloud-logging<3.13,>=3.12.1
+google-cloud<0.35,>=0.34.0
+kfp<2.14,>=2.13.0
+matplotlib<3.11,>=3.10.3
+numpy<2.3,>=2.2.6
+pandas<2.3,>=2.2.3
+protobuf==4.25.6
+seaborn<0.14,>=0.13.2
