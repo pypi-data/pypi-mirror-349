@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+mseep_mcp_vcd.egg-info/PKG-INFO
+mseep_mcp_vcd.egg-info/SOURCES.txt
+mseep_mcp_vcd.egg-info/dependency_links.txt
+mseep_mcp_vcd.egg-info/entry_points.txt
+mseep_mcp_vcd.egg-info/requires.txt
+mseep_mcp_vcd.egg-info/top_level.txt
+tests/test_generator.py
