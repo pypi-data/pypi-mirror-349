@@ -1,0 +1,11 @@
+genericache/__init__.py,sha256=gx33mON4yy6W656u-RPF-VqAtBLtdQYZ-7n0ZGgH_uk,4146
+genericache/digest.py,sha256=I_gRNqOlGpT0QojZtrQ_jOoM2pF0w8ykwDASnd1MYTc,1491
+genericache/disk_cache.py,sha256=UN5EdfhyCg4FTuFu-15GpfATX6UOr0JHcXxCaYocDto,9071
+genericache/memory_cache.py,sha256=BVCuINQ5TaB-zrkzZuEJA9Rta3guoPYPiklVEhNv0qo,4493
+genericache/noop_cache.py,sha256=a-UjOa0m2BSZe5sWs7fuCZUyFC0uDXwRUxhMdi_JTvE,1613
+genericache/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+genericache-0.4.0.dist-info/licenses/LICENSE,sha256=vqyEvFhWUQkWgHHyhDjkhFaSPcQqMrqgLHc1heVHk4o,1069
+genericache-0.4.0.dist-info/METADATA,sha256=-7lDv-AtrnYlB5tKyZzL9SuPLjCs6mohqwOE0YUi54U,2049
+genericache-0.4.0.dist-info/WHEEL,sha256=Nw36Djuh_5VDukK0H78QzOX-_FQEo6V37m3nkm96gtU,91
+genericache-0.4.0.dist-info/top_level.txt,sha256=pUGfLD1ON38AvZ7UQb22jmauHxYOQutTV0VC74Ouq4Y,12
+genericache-0.4.0.dist-info/RECORD,,
