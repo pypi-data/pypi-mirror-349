@@ -1,0 +1,24 @@
+[project]
+name = "justjanvi"
+version = "0.1.2"
+description = "A simple hello world package"
+authors = [
+    { name = "Janvi", email = "janvi@dataprowess.com.au" }
+]
+requires-python = ">=3.6"
+readme = "README.md"
+license = { text = "MIT" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent"
+]
+
+[project.urls]
+Homepage = "https://github.com/Janvi-05/hello_pkg"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
