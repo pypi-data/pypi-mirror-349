@@ -1,0 +1,9 @@
+mseep_firstcycling-0.1.2.dist-info/licenses/LICENSE,sha256=SGzYaXBSkpDXjfToACx3EU0mapAV3AMC6QvATqKXzsU,1086
+tests/__init__.py,sha256=3o3xCF-lIHWx9q3UQD7J8F0mO10cd4YELXrFNLDoiQc,69
+tests/test_rider_search.py,sha256=xE1-XZRB1C9soZj_JczBS3Y8M343m0kU_XXliGJwtkQ,926
+tests/debug/__init__.py,sha256=RZknigbIZJor6fQ0udfvrf6H4leiUrXi00i7536u_F4,90
+tests/debug/debug_monuments.py,sha256=HBmnMfsbm3OAJYyV9MryOEMcC0tuuPSiNPdHmpD7dZo,2243
+mseep_firstcycling-0.1.2.dist-info/METADATA,sha256=FvAnVn9yYxWb6M7m9RZzsdalIsbyPux_OhWseIUYG-o,702
+mseep_firstcycling-0.1.2.dist-info/WHEEL,sha256=Nw36Djuh_5VDukK0H78QzOX-_FQEo6V37m3nkm96gtU,91
+mseep_firstcycling-0.1.2.dist-info/top_level.txt,sha256=EdW7283x-lr_cbuivW8Ij7ANAP-ZJ9sLtILQseEPxXg,6
+mseep_firstcycling-0.1.2.dist-info/RECORD,,
