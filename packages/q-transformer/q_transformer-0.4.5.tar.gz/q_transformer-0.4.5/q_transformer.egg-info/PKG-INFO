@@ -1,0 +1,39 @@
+Metadata-Version: 2.4
+Name: q-transformer
+Version: 0.4.5
+Summary: Q-Transformer
+Home-page: https://github.com/lucidrains/q-transformer
+Author: Phil Wang
+Author-email: lucidrains@gmail.com
+License: MIT
+Keywords: artificial intelligence,deep learning,attention mechanisms,transformers,q-learning
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: accelerate
+Requires-Dist: adam-atan2-pytorch>=0.0.12
+Requires-Dist: beartype
+Requires-Dist: classifier-free-guidance-pytorch>=0.7.1
+Requires-Dist: einops>=0.8.0
+Requires-Dist: ema-pytorch>=0.5.3
+Requires-Dist: hl-gauss-pytorch>=0.1.17
+Requires-Dist: hyper-connections>=0.1.7
+Requires-Dist: jaxtyping
+Requires-Dist: numpy
+Requires-Dist: sentencepiece
+Requires-Dist: x-transformers>=2.0.2
+Requires-Dist: torch>=2.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary

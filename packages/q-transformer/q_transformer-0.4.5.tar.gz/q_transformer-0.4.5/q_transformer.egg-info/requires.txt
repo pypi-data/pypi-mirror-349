@@ -1,0 +1,13 @@
+accelerate
+adam-atan2-pytorch>=0.0.12
+beartype
+classifier-free-guidance-pytorch>=0.7.1
+einops>=0.8.0
+ema-pytorch>=0.5.3
+hl-gauss-pytorch>=0.1.17
+hyper-connections>=0.1.7
+jaxtyping
+numpy
+sentencepiece
+x-transformers>=2.0.2
+torch>=2.0
