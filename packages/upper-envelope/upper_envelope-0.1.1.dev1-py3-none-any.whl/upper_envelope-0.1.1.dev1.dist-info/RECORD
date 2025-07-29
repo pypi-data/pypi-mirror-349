@@ -1,0 +1,12 @@
+upper_envelope/__init__.py,sha256=6LXww24tK2yR4Q8r6yO4v6VSPLpYSJbQGDwVUzIe7Ck,164
+upper_envelope/_version.py,sha256=-CfGaT3ITqt0xt4c5hlA9QdGTYixUyh617kkhdIBTxo,524
+upper_envelope/math_funcs.py,sha256=TBpjuFdHeowS2raPW80f6yo1FALktJk9gH6hvvQELAU,7188
+upper_envelope/fues_jax/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+upper_envelope/fues_jax/check_and_scan_funcs.py,sha256=u933BHnhpL9UgmzUHYCFcwSdVElLUSlMN-Zb8_D1PTc,21402
+upper_envelope/fues_jax/fues_jax.py,sha256=0GUezNn-poXPTbL_xS0JreB-qhfsNVAGpKPA66l7F1Y,31184
+upper_envelope/fues_numba/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+upper_envelope/fues_numba/fues_numba.py,sha256=9s-yd4NSL1gpMHFKWpi0PEjZ4SLjovutzg5eFTy8VWg,32610
+upper_envelope-0.1.1.dev1.dist-info/METADATA,sha256=ecnz3s6rCugIGgVkpUV0YORssmuJ_oDM3Fu8OOOEQcc,2165
+upper_envelope-0.1.1.dev1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+upper_envelope-0.1.1.dev1.dist-info/licenses/LICENSE,sha256=hssXA8UHfprOiqzttiTxRu7oB1nalgbQEaYIpXlgP8k,1078
+upper_envelope-0.1.1.dev1.dist-info/RECORD,,
