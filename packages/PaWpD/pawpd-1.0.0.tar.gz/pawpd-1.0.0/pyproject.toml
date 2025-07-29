@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools >= 77.0.3", "aiohttp", "websockets"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "PaWpD"
+version = "1.0.0"
+authors = [
+  { name="Lordpomind", email="support@wooftech.live" },
+]
+description = "PaWpD is a package for creating discord bots. PaWpD is a minimal client made for performance and low latencies."
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"

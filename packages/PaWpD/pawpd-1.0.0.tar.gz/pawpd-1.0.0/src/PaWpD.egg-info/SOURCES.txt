@@ -1,0 +1,16 @@
+README.md
+pyproject.toml
+src/PaWpD.egg-info/PKG-INFO
+src/PaWpD.egg-info/SOURCES.txt
+src/PaWpD.egg-info/dependency_links.txt
+src/PaWpD.egg-info/top_level.txt
+src/pawpd/__init__.py
+src/pawpd/channel.py
+src/pawpd/color.py
+src/pawpd/embed.py
+src/pawpd/guild.py
+src/pawpd/http.py
+src/pawpd/intents.py
+src/pawpd/message.py
+src/pawpd/msg.py
+src/pawpd/user.py
