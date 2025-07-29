@@ -1,0 +1,42 @@
+Metadata-Version: 2.4
+Name: OptimalAgents-power
+Version: 0.1.4
+Summary: A project generator for web superheroes using FastAPI, Flask, or REST.
+Home-page: https://github.com/sandilyaKishlay
+Author: Sandilya Kishlay
+Author-email: sandilyakishlay@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: fastapi
+Requires-Dist: flask
+Requires-Dist: requests
+Requires-Dist: uvicorn
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Optimal Agents Project Scaffold Generator ðŸ¦¸
+
+This is a superhero-themed CLI utility that generates starter templates for your next agent-powered web application. Whether you're using **FastAPI**, **Flask**, or a **REST-based Python server**, this tool gives you a jumpstart with:
+
+- CORS-enabled setup
+- Static and template folders
+- Docker support
+- Auto-injected `check_agent_run()` method
+- Metadata collection for README
+- Heroic vibes throughout!
+
+## ðŸ”§ Installation
+
+```bash
+pip install optimalagents

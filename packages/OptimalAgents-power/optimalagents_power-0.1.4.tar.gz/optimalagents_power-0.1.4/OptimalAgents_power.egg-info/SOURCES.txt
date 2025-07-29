@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+OptimalAgents_power.egg-info/PKG-INFO
+OptimalAgents_power.egg-info/SOURCES.txt
+OptimalAgents_power.egg-info/dependency_links.txt
+OptimalAgents_power.egg-info/entry_points.txt
+OptimalAgents_power.egg-info/requires.txt
+OptimalAgents_power.egg-info/top_level.txt
+optimalagents/__init__.py
+optimalagents/cli.py
