@@ -1,0 +1,25 @@
+Metadata-Version: 2.4
+Name: mseep-semgrep-mcp
+Version: 0.2.2
+Summary: MCP Server for using Semgrep to scan code
+Author-email: mseep <support@skydeck.ai>
+Maintainer-email: mseep <support@skydeck.ai>
+License: MIT
+License-File: LICENSE
+Keywords: code-scanning,mcp,security,semgrep,static-analysis
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Security
+Classifier: Topic :: Software Development :: Quality Assurance
+Requires-Python: >=3.10
+Requires-Dist: mcp>=1.6.0
+Requires-Dist: semgrep>=1.117.0
+Description-Content-Type: text/markdown
+
+# Package managed by MseeP.ai
