@@ -1,0 +1,31 @@
+Metadata-Version: 2.4
+Name: song-runner
+Version: 0.1.0
+Summary: A simple CLI tool to play YouTube songs from the terminal
+Author: Vishesh Jain
+Author-email: visheshj2005@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: yt-dlp
+Requires-Dist: ffpyplayer
+Requires-Dist: youtube-search-python
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# song-runner
+
+Play songs from YouTube directly from your terminal.
+
+## Installation
+
+```bash
+pip install song-runner
