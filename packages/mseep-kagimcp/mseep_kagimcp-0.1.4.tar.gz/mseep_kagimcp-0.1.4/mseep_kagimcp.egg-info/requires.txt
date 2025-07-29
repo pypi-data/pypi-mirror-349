@@ -1,0 +1,3 @@
+kagiapi~=0.2.1
+mcp[cli]~=1.6.0
+pydantic~=2.10.3
