@@ -1,0 +1,34 @@
+Metadata-Version: 2.4
+Name: predictram-pyratio
+Version: 0.1.2
+Summary: A package for analyzing stock financial metrics
+Home-page: https://github.com/yourusername/predictram_PyRatio
+Author: Your Name
+Author-email: your.email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pandas>=1.0
+Requires-Dist: numpy>=1.0
+Requires-Dist: matplotlib>=3.0
+Requires-Dist: seaborn>=0.11
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# PyRatio - Stock Financial Metrics Analysis
+
+PyRatio is a Python package for analyzing stock financial metrics from JSON data files.
+
+## Installation
+
+```bash
+pip install predictram_PyRatio
