@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.py
+spark_debugger.egg-info/PKG-INFO
+spark_debugger.egg-info/SOURCES.txt
+spark_debugger.egg-info/dependency_links.txt
+spark_debugger.egg-info/requires.txt
+spark_debugger.egg-info/top_level.txt
