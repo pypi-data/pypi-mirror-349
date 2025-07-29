@@ -1,0 +1,35 @@
+# MANIFEST.in
+
+include README.md
+include LICENSE
+recursive-include cardiolife_apiclient *.py
+
+# Evita arquivos desnecessários
+exclude *.pyc
+exclude *.pyo
+exclude *.pyd
+exclude *.json
+exclude token.py
+exclude setup.py
+exclude setup.cfg
+prune build
+prune dist
+prune __pycache__
+prune *.egg-info
+
+
+include README.md
+include LICENSE
+include setup.py
+
+recursive-include cardiolife_apiclient *.py
+
+exclude token.py
+exclude *.pyc
+exclude *.pyo
+exclude *.json
+exclude *.log
+prune __pycache__
+prune build
+prune dist
+prune *.egg-info
