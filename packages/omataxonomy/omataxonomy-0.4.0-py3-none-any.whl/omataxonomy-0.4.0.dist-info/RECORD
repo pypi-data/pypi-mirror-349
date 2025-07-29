@@ -1,0 +1,9 @@
+omataxonomy/__init__.py,sha256=_207fHfKP8S771A-jv1avKVLOi2KJttLlmcOUNGbOk4,378
+omataxonomy/build_db.py,sha256=aY_J9bzYn3Db-c4Psti9QcJ96sIfo34JJjTmseRAQGQ,12260
+omataxonomy/gtdb.py,sha256=xcMenmQXFDN2IcOlOgjqYA_9dGT1TDN_OKVIcXk5Ycc,4850
+omataxonomy/mnemonic.py,sha256=KMZGps4afbI7IhtrqLdmPKQUI5IS3c4GjglGgED8teI,1360
+omataxonomy/query.py,sha256=nCEgbApJieVtPKIBzsHk7_KPMTNLvrSIYBAJbIdqCAA,23569
+omataxonomy-0.4.0.dist-info/LICENSE.txt,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+omataxonomy-0.4.0.dist-info/METADATA,sha256=otL8H6sZQ6P419Ll45W0n10cl6_9KyIUYcewysaSgdY,3143
+omataxonomy-0.4.0.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+omataxonomy-0.4.0.dist-info/RECORD,,
