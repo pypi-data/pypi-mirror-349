@@ -1,0 +1,16 @@
+[console_scripts]
+riskbench=riskbench_core.cli:main
+
+[riskbench.agents]
+DummyAgent=tests.test_runner:DummyAgent
+
+[riskbench.envs]
+DummyEnv=tests.test_runner:DummyEnv
+
+[riskbench.monitors]
+DummyMonitor=tests.test_runner:DummyMonitor
+budget100=riskbench_core.monitors:BudgetMonitor100
+budget50=riskbench_core.monitors:BudgetMonitor50
+cvar90=riskbench_core.monitors:CVaRMonitor90
+cvar95=riskbench_core.monitors:CVaRMonitor95
+
