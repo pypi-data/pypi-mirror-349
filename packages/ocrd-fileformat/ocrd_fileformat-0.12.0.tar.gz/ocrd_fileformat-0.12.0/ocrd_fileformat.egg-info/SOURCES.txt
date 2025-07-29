@@ -1,0 +1,17 @@
+LICENSE
+README.md
+ocrd-tool.json
+pyproject.toml
+requirements-test.txt
+requirements.txt
+ocrd_fileformat/__init__.py
+ocrd_fileformat/ocrd-tool.json
+ocrd_fileformat/processor.py
+ocrd_fileformat.egg-info/PKG-INFO
+ocrd_fileformat.egg-info/SOURCES.txt
+ocrd_fileformat.egg-info/dependency_links.txt
+ocrd_fileformat.egg-info/entry_points.txt
+ocrd_fileformat.egg-info/requires.txt
+ocrd_fileformat.egg-info/top_level.txt
+tests/test_0smoke.py
+tests/test_convert.py
