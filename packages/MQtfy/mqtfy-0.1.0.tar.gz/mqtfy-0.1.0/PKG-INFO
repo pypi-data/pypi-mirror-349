@@ -1,0 +1,26 @@
+Metadata-Version: 2.4
+Name: MQtfy
+Version: 0.1.0
+Summary: MQtfy - A ntfy <-> mqtt gateway. Subscribes to ntfy and mqtt topics and sends these to the other side ;)
+Author-email: "Dave aka. FreakErn" <github@freakern.de>
+License: MIT
+Project-URL: Homepage, https://github.com/FreakErn/MQtfy
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: paho-mqtt>=2.0
+Requires-Dist: pyyaml>=6.0
+Requires-Dist: requests>=2.31.0
+Requires-Dist: toml
+Dynamic: license-file
+
+# MQtfy - Ntfy Mqtt Gateway
+Send MQTT Messages to send ntfy Notifications and subscribe to ntfy to send them to mqtt
+
+### Installation
+
+
+```bash
+$ cp config.yaml.example config.yaml # update the yaml to fit your needs
+$ pip install mqtfy
+```
