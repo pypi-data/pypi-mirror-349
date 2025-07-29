@@ -1,0 +1,13 @@
+{% load wagtailcore_tags %}
+<div id="place-detail">
+    {% load wagtailadmin_tags i18n %}
+    <iframe width="100%" height="350" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key={{google_maps_api_key}}&q={{place.address|urlencode}}" allowfullscreen></iframe>
+    <h2>{{ place.name }}</h2>
+    <p>{{ place.description|richtext }}</p>
+    <script type="text/javascript">
+        (function() {
+            const placeName = document.getElementById("wagtail-places-place-name");
+            placeName.innerHTML = `: {{ place.name }}`;
+        })();
+    </script>
+</div>

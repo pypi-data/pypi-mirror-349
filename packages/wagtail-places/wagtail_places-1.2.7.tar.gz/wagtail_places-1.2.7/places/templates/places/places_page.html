@@ -1,0 +1,82 @@
+{% extends EXTEND_TEMPLATE %}
+
+{% load i18n static wagtailcore_tags wagtailroutablepage_tags %}
+
+{% block title %}{{self.title}}{% endblock %}
+
+{% block extra_css %}
+    {{block.super}}
+    <link rel="stylesheet" href="{% static 'places/css/places.min.css' %}">
+{% endblock %}
+
+{% block extra_js %}
+    {{block.super}}
+{% endblock %}
+
+{% block content %}
+    <div class="places-page">
+
+        <div class="container">
+            <div class="row" style="--bs-gutter-x: 1rem;">
+                <div class="col-xs-12 col-sm-12 col-md-5 col-lg-3 col-xl-3">
+                    <div class="places-sidebar">
+
+                        {% if self.sidebar_title %}
+                            <div class="places-sidebar-heading places-heading">
+                                <p class="places-sidebar-heading-text">{{ self.sidebar_title }}</p>
+                            </div>
+                        {% endif %}
+
+                        <div class="places-sidebar-content">
+                            {% for place in places %}
+                                <div class="place-item">
+                                    {% routablepageurl self 'places_detail' place.slug as detail_url %}
+                                    <a class="place-link"
+                                      href="{{ detail_url }}"
+                                      hx-get="{{ detail_url }}"
+                                      hx-trigger="click"
+                                      hx-swap="innerHTML"
+                                      hx-target="#places-container"
+                                      hx-select="#place-detail"
+                                      hx-swap-oob="true"
+                                      hx-replace-url="true">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="place-link--icon" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+                                        </svg>
+                                        <h3>{{ place.name }}</h3>
+                                    </a>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-7 col-lg-9 col-xl-9">    
+                    <details class="places-details"{% if not place %} open{% endif %}>
+                        <summary>
+                            <div class="places-heading">
+                                <h1>{{ self.title }}<span id="wagtail-places-place-name">{% if place %}: {{ place.name }}{% endif %}</span></h1>
+                            </div>
+                        </summary>
+                        <p>{{ self.description|richtext }}</p>
+                    </details>
+
+                    <div id="places-container">
+
+                        {% if place %}
+                            {% include "./places_detail.html" with place=place %}
+                        {% else %}
+                            {% if self.no_place_message %}
+                                <h2>{{ self.no_place_message|richtext }}</h2>
+                            {% else %}
+                                <h2>{% translate "No place selected" %}</h2>
+                            {% endif %}
+                        {% endif %}
+                        
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

@@ -1,0 +1,67 @@
+Metadata-Version: 2.1
+Name: wagtail-places
+Version: 1.2.7
+Summary: An application made for the Django Web Framework.
+Home-page: https://github.com/Nigel2392/wagtail-places
+Author: Nigel
+Author-email: nigel@goodadvice.it
+License: GPL-3.0-only
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 4.2
+Classifier: Framework :: Wagtail
+Classifier: Framework :: Wagtail :: 5
+Classifier: Framework :: Wagtail :: 6
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: Django>=4.2
+Requires-Dist: Wagtail>=5.0
+
+# wagtail-places
+
+This app was mainly created to easily add multiple locations to a page in a Wagtail site.
+
+This can be useful to improve SEO, show locations of your business on a map, etc.
+
+## Example Use Case
+
+A client has a single store, but ships/does work across multiple cities.
+
+The store will likely only show up if someone searches the name of the store, or a related keyword and the location/city name of where the store is located.  
+Let's say the store is located in New York, but the client also ships to Los Angeles, Chicago, and Miami.
+
+When someone searches for `"<keyword> in Los Angeles"`, the client's store will not show up in the search results, because the store is located in New York.
+
+We aim to improve this by allowing a list of locations to be added to a `PlacesPage`, so that when someone searches for `"<keyword> in Los Angeles"`, the client's store will show up in the search results.
+
+In short, the goal is to add a "place" for each city the client ships to, and the client's store will show up in the search results for each of those cities.
+
+## Quick start
+
+1. Install the package via pip:
+
+   ```bash
+   pip install wagtail-places
+   ```
+
+2. Add 'places' to your INSTALLED_APPS setting like this:
+
+   ```python
+   INSTALLED_APPS = [
+   ...,
+      'places',
+   ]
+   ```
+
+3. Go to the pages section in the Wagtail admin and create a new page with the 'Places' page type.

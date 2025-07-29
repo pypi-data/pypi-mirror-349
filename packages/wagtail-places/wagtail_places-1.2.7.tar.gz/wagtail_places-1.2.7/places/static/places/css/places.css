@@ -1,0 +1,100 @@
+:root {
+    --places-text-color: #333;
+    --places-link-color: #333;
+    --places-link-hover-color: #444;
+}
+
+.places-page {
+    height: 100%;
+    color: var(--places-text-color);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.places-details {
+    border: 1px solid var(--places-text-color);
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+}
+.places-details summary::marker {
+    color: var(--places-text-color);
+}
+.places-details summary .places-heading {
+    display: inline-block;
+    cursor: pointer;
+}
+.places-sidebar {
+    height: 100%;
+    border: 1px solid var(--places-text-color);
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+.places-heading {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: var(--places-text-color);
+}
+.places-heading::after {
+    content: "";
+    display: block;
+    width: 100%;
+    max-width: 5rem;
+    margin-top: 0.5rem;
+    border-bottom: 1px solid var(--places-text-color);
+}
+.places-sidebar-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.places-sidebar-heading-text {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.place-item {
+
+}
+.place-link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: var(--places-link-color);
+    text-decoration: none;
+
+}
+.place-link:hover {
+    color: var(--places-link-hover-color);
+}
+.place-link--icon {
+    display: inline-block;
+    vertical-align: middle;
+    height: 2rem;
+    aspect-ratio: 1;
+    margin-left: 0;
+    margin-right: 0.5rem;
+    transition: transform 0.2s, margin 0.2s;
+}
+.place-link:hover .place-link--icon {
+    transform: scale(1.1);
+    margin-left: 0.5rem;
+    margin-right: 0;
+    transition: transform 0.2s, margin 0.2s;
+}
+
+.places-page .row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-bottom: calc(var(--bs-gutter-y));
+}
+.places-page .row > * {
+  flex-shrink: 0;
+  max-width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-top: var(--bs-gutter-y);
+}

@@ -1,0 +1,7 @@
+include LICENSE
+include README.md
+recursive-include places/static *
+recursive-include places/templates *
+recursive-include places/locale *
+recursive-include places/migrations *
+recursive-include places/templatetags *
