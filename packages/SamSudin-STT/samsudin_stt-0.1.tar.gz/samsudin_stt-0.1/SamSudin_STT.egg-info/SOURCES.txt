@@ -1,0 +1,6 @@
+setup.py
+SamSudin_STT/__init__.py
+SamSudin_STT.egg-info/PKG-INFO
+SamSudin_STT.egg-info/SOURCES.txt
+SamSudin_STT.egg-info/dependency_links.txt
+SamSudin_STT.egg-info/top_level.txt
