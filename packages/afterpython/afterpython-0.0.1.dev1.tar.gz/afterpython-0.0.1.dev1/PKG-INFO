@@ -1,0 +1,17 @@
+Metadata-Version: 2.3
+Name: afterpython
+Version: 0.0.1.dev1
+Summary: 
+License: Apache-2.0
+Author: Stephen Yau
+Author-email: softwareentrepreneer+afterpython@gmail.com
+Requires-Python: >=3.12
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: marimo[recommended] (>=0.13.10)
+Description-Content-Type: text/markdown
+
+# afterpython
+
