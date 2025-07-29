@@ -1,0 +1,12 @@
+syre_version_converter/__about__.py,sha256=u6L2m98bMIjqTzRx_8IzkmczaWXWxl0xGwxac85VKx8,143
+syre_version_converter/__init__.py,sha256=J-0UD0IAKqOiN3_overt8ZMRYyuGeFwiMisotn6eIEo,188
+syre_version_converter/__main__.py,sha256=1Fk6h58Utrp1MSG8PZG45z4XJVY4A8IjpypyXv1pjIQ,2310
+syre_version_converter/common.py,sha256=fHWOXbpqsJf1OxFBjV_LB9JzZu_odmGRnbjo3aQOKPI,1060
+syre_version_converter/convert_0_10_0.py,sha256=N-hUc0ewJHdNMNePbPWOSJ9xH1uSCUFCtqChs40jgEA,2208
+syre_version_converter/convert_0_10_1.py,sha256=5DZL2_vpnsJAjzTRAbdDcNagdy4HmcmnVYHDaxdqZoM,3320
+syre_version_converter/convert_0_10_2.py,sha256=At584WAdlEeYTnbtUjdCkO0a3tNcddJFHZM5Z6S2ef0,11234
+syre_version_converter/paths.py,sha256=2CBLORZaRDgbNBMnjJLYfWavUOmzvZkgcfBLr4J_69w,5856
+syre_version_converter-0.11.0.post1.dist-info/METADATA,sha256=0zBQEj_y6TIsjJmk7W1tltoXQpj_mRRQqan4e9RvCNQ,1673
+syre_version_converter-0.11.0.post1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+syre_version_converter-0.11.0.post1.dist-info/licenses/LICENSE.txt,sha256=OIq-_GQSTmFX8GzQDOnIPyBPCb06U_RTRXs49MT_llw,1111
+syre_version_converter-0.11.0.post1.dist-info/RECORD,,
