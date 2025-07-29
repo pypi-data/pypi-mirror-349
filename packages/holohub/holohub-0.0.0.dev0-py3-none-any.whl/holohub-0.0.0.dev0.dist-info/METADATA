@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: holohub
+Version: 0.0.0.dev0
+Summary: Holohub CLI
+Home-page: https://github.com/nvidia-holoscan/holohub
+Author: NVIDIA
+Author-email: agirault@nvidia.com
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+License-File: LICENSE
+
