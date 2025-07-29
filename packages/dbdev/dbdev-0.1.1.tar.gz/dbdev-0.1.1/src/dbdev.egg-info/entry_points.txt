@@ -1,0 +1,2 @@
+[console_scripts]
+dbdev = dbdev.cli:app
