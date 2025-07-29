@@ -1,0 +1,9 @@
+listmonk/__init__.py,sha256=iQLgvSZGT3P6hwCr1EGW4GD1I-mi7mT-G-gYdQSh_AY,1936
+listmonk/urls.py,sha256=KdRYd4Gkt5gshoKZa9US0O52NmkajnjPT361vY5tVW4,554
+listmonk/errors/__init__.py,sha256=4xbHvfva3ND1-i8Uzl1BfkKXxQRdXGH0qu8GzlJqpjk,156
+listmonk/impl/__init__.py,sha256=WgP_nH5QELIDbDC_n9DRmmzMbwUQi_k3NHEV0oUToKA,45743
+listmonk/models/__init__.py,sha256=EwOdxUKdzXbXmJTnaV3BqsZzfiR0wTGWCmK13TSIDfA,4769
+listmonk-0.3.6.dist-info/METADATA,sha256=Qwk2hK6DCPprUYNzrSdmltbtPKHqtpjUkylYxTszS7Q,7354
+listmonk-0.3.6.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+listmonk-0.3.6.dist-info/licenses/LICENSE,sha256=12NN0UxiyDHVbhIG43LgZQLLxijQUO0Uj8TcT0RkR2A,1081
+listmonk-0.3.6.dist-info/RECORD,,
