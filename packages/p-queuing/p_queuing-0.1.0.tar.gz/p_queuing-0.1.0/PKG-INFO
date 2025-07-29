@@ -1,0 +1,28 @@
+Metadata-Version: 2.4
+Name: p_queuing
+Version: 0.1.0
+Summary: p_queuing Flask service & worker
+Home-page: 
+Author: Wares
+Author-email: Wares <dr.wares007@gmail.com>
+License: MIT
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: flask
+Requires-Dist: pika
+Dynamic: author
+Dynamic: license-file
+Dynamic: requires-python
+
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+---
+
+## [1.0.1] - 2025-02-10
+
+### Added
+
+- Initial release of the **p queuing** repository.

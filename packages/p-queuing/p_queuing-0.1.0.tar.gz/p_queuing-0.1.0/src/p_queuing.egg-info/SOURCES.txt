@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/p_queue/__init__.py
+src/p_queue/app.py
+src/p_queue/utils.py
+src/p_queue/worker.py
+src/p_queuing.egg-info/PKG-INFO
+src/p_queuing.egg-info/SOURCES.txt
+src/p_queuing.egg-info/dependency_links.txt
+src/p_queuing.egg-info/entry_points.txt
+src/p_queuing.egg-info/requires.txt
+src/p_queuing.egg-info/top_level.txt
