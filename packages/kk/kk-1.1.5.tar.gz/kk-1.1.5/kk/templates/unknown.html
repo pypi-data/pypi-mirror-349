@@ -1,0 +1,26 @@
+<html>
+<head>
+<link rel="stylesheet" href="{{ static_url('src/layui/css/layui.css') }}">
+</head>
+<body>
+<body style="display:flex;flex-direction: column;justify-content:center;align-items:center;height:100%;">
+<div><img style="max-width:100px;" src="{{ static_url(f'img/{icon}') }}"></div>
+<div style="margin-top:10px"><h3>{{path.name}}</h3></div>
+<div style="margin-top:10px">
+<span style="font-size:14px;color:#888">{{size}}</span>
+<span style="font-size:14px;color:#888">{{mtime}}</span>
+</div>
+<div style="margin-top:10px">
+<a class="layui-btn layui-btn-radius btn-copy" add-host data-clipboard-text="/disk/{{name}}">复制链接</a>
+<a class="layui-btn layui-btn-radius layui-bg-blue" href="/disk/{{name}}?f=download">下载</a>
+</div>
+</body>
+
+  <script src="{{ static_url('src/layui/layui.js') }}"></script>
+  <script src="{{ static_url('src/js/jquery.min.js') }}"></script>
+  <script src="{{ static_url('src/js/clipboard.min.js') }}"></script>
+  <script src="{{ static_url('src/js/webuploader.nolog.min.js') }}"></script>
+  <script src="{{ static_url('src/js/utils.min.js') }}"></script>
+  <script src="{{ static_url('src/js/page.js') }}"></script>
+
+</html>
