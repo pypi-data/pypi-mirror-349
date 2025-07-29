@@ -1,0 +1,156 @@
+Metadata-Version: 2.4
+Name: hefeng-weather
+Version: 0.1.5
+Summary: hefeng-weather mcp
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: mcp[cli]>=1.6.0
+Requires-Dist: requests>=2.32.3
+
+和风天气 MCP 服务
+
+项目概述
+
+这是一个基于 FastMCP 框架的和风天气 API 服务封装，提供了完整的天气查询功能套件，包括：
+
+• 全球城市位置代码查询
+
+• 实时天气数据获取
+
+• 未来天气预报查询
+
+• ISO 3166 国家代码参考
+
+
+功能特性
+
+• 全球城市查询：通过名称或坐标查找城市位置代码
+
+• 实时天气查询：获取指定位置的当前天气状况
+
+• 天气预报查询：支持3天到30天的长期预报和24小时到168小时的短期预报
+
+• 国家代码参考：内置完整的ISO 3166国家代码列表
+
+
+快速开始
+
+
+
+配置服务
+
+```
+{
+    "mcpServers": {
+        hefeng-weather": {
+            "command": "uvx",
+            "args": [
+                "hefeng-weather",
+                "--token",
+                "eyJhbGciOiAiRWREU0EiLCJraWQiOiAiQUJDRDEyMzQifQ.eyJpc3MiOiJBQkNEMTIzNCIsImlhdCI6MTcwMzkxMjQwMCwiZXhwIjoxNzAzOTEyOTQwfQ.MEQCIFGLmpmAEwuhB74mR04JWg_odEau6KYHYLRXs8Bp_miIAiBMU5O13vnv9ieEBSK71v4UULMI4K5T9El6bCxBkW4BdA,
+                "--host",
+                "abc.re.qweatherapi.com"
+            ]
+        }
+    }
+}
+```
+
+API 文档
+
+1. 城市查询
+
+```python
+@mcp.tool()
+def lookup_city(location: str, number: int = 1, range: str = 'cn') -> str:
+    """
+    根据城市名称查询城市位置代码
+    
+    参数:
+        location: 城市名称或坐标 (如"北京"或"116.41,39.92")
+        number: 返回结果数量 (1-20)
+        range: 搜索范围 (默认'cn'表示中国)
+    
+    返回:
+        JSON格式的城市信息，包含:
+        - id: 城市ID
+        - name: 城市名称
+        - lat/lon: 经纬度坐标
+        - adm1/adm2: 行政区划信息
+        - country: 所属国家
+    """
+```
+
+2. 实时天气
+
+```python
+@mcp.tool()
+def weather_now(location: str = '101010100') -> str:
+    """
+    获取实时天气信息
+    
+    参数:
+        location: 城市ID或坐标
+    
+    返回:
+        JSON格式的实时天气数据，包含:
+        - temp: 当前温度(℃)
+        - feelsLike: 体感温度
+        - text: 天气状况描述
+        - windDir/windScale: 风向风力
+        - humidity: 湿度(%)
+        - 等20+项实时数据
+    """
+```
+
+3. 天气预报
+
+```python
+@mcp.tool()
+def weather_furture(location: str = '101010100', furture: str = '3d') -> str:
+    """
+    获取天气预报
+    
+    参数:
+        location: 城市ID或坐标
+        furture: 预报时长 ('3d','7d','10d','15d','30d','24h','72h','168h')
+    
+    返回:
+        JSON格式的预报数据，包含:
+        - tempMax/tempMin: 最高/最低温度
+        - textDay/textNight: 白天/夜间天气
+        - sunrise/sunset: 日出日落时间
+        - precip: 降水量
+        - uvIndex: 紫外线指数
+        - 等30+项预报数据
+    """
+```
+
+4. 国家代码参考
+
+```python
+@mcp.tool()
+def get_iso3166() -> str:
+    """
+    获取ISO 3166国家代码列表
+    
+    返回:
+        格式化文本的国家代码列表，包含:
+        - 国家名称
+        - 2字母代码
+    """
+```
+
+
+
+[生成JWT Token用于认证](https://dev.qweather.com/docs/configuration/authentication/)
+
+
+
+贡献指南
+
+欢迎通过Issue或Pull Request提交改进建议。
+
+许可证
+
+MIT License
