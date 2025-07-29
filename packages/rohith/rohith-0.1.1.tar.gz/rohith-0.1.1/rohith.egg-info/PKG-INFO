@@ -1,0 +1,59 @@
+Metadata-Version: 2.4
+Name: rohith
+Version: 0.1.1
+Summary: CLI card for Rohit Gowda with contact, resume and meeting options.
+Home-page: https://github.com/rohithgowdax/cli-card
+Author: Rohit Gowda R
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: questionary
+Requires-Dist: rich
+Requires-Dist: requests
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary
+
+# 📦 rohith (CLI Tool)
+
+rohith is a simple and elegant command-line portfolio card. It lets you display your professional bio, links to your social profiles, and options like downloading your resume, contacting you via Formspree, or scheduling a meeting — all directly from the terminal.
+
+This tool is great for sharing your portfolio in a unique and tech-friendly way.
+
+🚀 Features
+View a professional CLI portfolio card
+
+Quick access to:
+- Email contact form
+- Resume download
+- Meeting scheduler
+
+Powered by Rich and Questionary for an interactive and visually appealing experience 
+
+## Installation
+You can run this CLI tool instantly without installing anything globally:
+```
+pipx run rohith
+```
+
+Make sure you have pipx installed. If not, you can install it with:
+```
+python3 -m pip install --user pipx
+python3 -m pipx ensurepath
+```
+
+Alternatively, you can install it permanently:
+```
+pipx install rohith
+```
+Then simply run:
+```
+rohith
+```
+---
