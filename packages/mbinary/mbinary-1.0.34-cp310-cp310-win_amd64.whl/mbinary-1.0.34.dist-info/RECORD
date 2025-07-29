@@ -1,0 +1,6 @@
+mbinary-1.0.34.dist-info/METADATA,sha256=v6NhP8KpokqPWFgjeXfiWSX9r6f5H7LksXGROgXrqiE,2395
+mbinary-1.0.34.dist-info/WHEEL,sha256=tvMehAuwYswG9dMmwHb6RW7O-9AAAcnneXQ2akCAgrw,96
+mbinary/__init__.py,sha256=ZGaclmJxkV8O3X_yodfmR9xQ8Mx7Kdbbk8D75xbX1lE,21
+mbinary/_lib.cp310-win_amd64.pyd,sha256=VU7pDmw0WY3BLfoA60S-RJCtomVF5xYl0h9plfzXAm0,1617920
+mbinary/_lib.pyi,sha256=aWyhV5K2sZYWByyLYsDBCp881rNkXGbsB_PcljAoGQY,15574
+mbinary-1.0.34.dist-info/RECORD,,
