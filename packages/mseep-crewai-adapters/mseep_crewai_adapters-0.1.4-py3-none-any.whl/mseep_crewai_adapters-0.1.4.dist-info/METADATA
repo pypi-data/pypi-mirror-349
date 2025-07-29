@@ -1,0 +1,37 @@
+Metadata-Version: 2.4
+Name: mseep-crewai-adapters
+Version: 0.1.4
+Summary: Native adapter support for CrewAI with Model Context Protocol (MCP) integration
+Home-page: 
+Author: mseep
+Author-email: mseep <support@skydeck.ai>
+Maintainer-email: mseep <support@skydeck.ai>
+License: MIT
+Keywords: crewai,mcp,adapters,ai,agents
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: crewai>=0.1.0
+Requires-Dist: pydantic>=2.0.0
+Requires-Dist: mcp>=1.3.0
+Requires-Dist: pydantic-core>=2.0.0
+Requires-Dist: build>=1.2.2.post1
+Requires-Dist: twine>=6.1.0
+Provides-Extra: test
+Requires-Dist: pytest>=8.3.4; extra == "test"
+Requires-Dist: pytest-asyncio>=0.25.3; extra == "test"
+Provides-Extra: docs
+Requires-Dist: mkdocs>=1.5.0; extra == "docs"
+Requires-Dist: mkdocs-material>=9.5.0; extra == "docs"
+Dynamic: author
+Dynamic: license-file
+Dynamic: requires-python
+
+# Package managed by MseeP.ai
