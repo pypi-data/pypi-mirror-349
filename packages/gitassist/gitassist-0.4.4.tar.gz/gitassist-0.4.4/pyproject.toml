@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gitassist"
+version = "0.4.4"
+description = "AI-powered Git helper"
+authors = [
+    { name = "Vijay Bala", email = "contact@vijaybala.com" }
+]
+license = { text = "MIT" }
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = [
+    "click",
+    "openai",
+    "gitpython"
+]
+
+[project.scripts]
+gitassist = "gitassist.cli:cli"

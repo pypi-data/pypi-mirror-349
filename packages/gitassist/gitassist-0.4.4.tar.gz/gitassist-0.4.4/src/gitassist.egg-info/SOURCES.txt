@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+src/gitassist/__init__.py
+src/gitassist/cli.py
+src/gitassist.egg-info/PKG-INFO
+src/gitassist.egg-info/SOURCES.txt
+src/gitassist.egg-info/dependency_links.txt
+src/gitassist.egg-info/entry_points.txt
+src/gitassist.egg-info/requires.txt
+src/gitassist.egg-info/top_level.txt
