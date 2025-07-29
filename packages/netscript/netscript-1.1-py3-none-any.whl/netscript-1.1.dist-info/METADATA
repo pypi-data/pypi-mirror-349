@@ -1,0 +1,47 @@
+Metadata-Version: 2.4
+Name: netscript
+Version: 1.1
+Summary: toml version
+Author: Grey Liedtke
+Author-email: grey.liedtke@gmail.com
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/pypa/sampleproject
+Project-URL: Issues, https://github.com/pypa/sampleproject/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: license-file
+
+# NetScript
+
+A simple python script to host a flask server to run python scripts and output over a network.
+
+
+### URL's
+
+- /start
+- stop
+- log
+
+### Usage
+
+```python
+
+from netscript.script_server import ScriptServer
+
+py_exec = "venv/bin/python3.12"
+py_script = "active/NetScript/netscript/netscript/tests/script_1.py"
+app = ScriptServer(py_exec, py_script, "script_out.txt", 3000)
+app.run()
+
+```
+
+
+### Example Script
+
+- Website
+- HTML example download
