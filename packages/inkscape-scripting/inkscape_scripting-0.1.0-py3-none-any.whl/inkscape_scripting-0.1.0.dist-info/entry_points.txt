@@ -1,0 +1,2 @@
+[console_scripts]
+inkscape_scripting_console = inkscape_scripting.ipython:main
