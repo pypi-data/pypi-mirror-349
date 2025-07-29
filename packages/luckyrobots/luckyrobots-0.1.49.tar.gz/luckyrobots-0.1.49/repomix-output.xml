@@ -1,0 +1,3986 @@
+This file is a merged representation of the entire codebase, combined into a single document by Repomix.
+
+<file_summary>
+This section contains a summary of this file.
+
+<purpose>
+This file contains a packed representation of the entire repository's contents.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+</purpose>
+
+<file_format>
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Repository files (if enabled)
+4. Repository files, each consisting of:
+  - File path as an attribute
+  - Full contents of the file
+</file_format>
+
+<usage_guidelines>
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+</usage_guidelines>
+
+<notes>
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+- Files are sorted by Git change count (files with more changes are at the bottom)
+</notes>
+
+<additional_info>
+
+</additional_info>
+
+</file_summary>
+
+<directory_structure>
+docs/
+  CNAME
+  index.md
+examples/
+  controller.py
+sites/
+  README.MD
+src/
+  luckyrobots/
+    core/
+      luckyrobots.py
+      manager.py
+      models.py
+      node.py
+      parameters.py
+    message/
+      srv/
+        client.py
+        service.py
+        types.py
+      __init__.py
+      pubsub.py
+      transporter.py
+    misc/
+      testserver.py
+      testsockets.js
+    runtime/
+      builds.py
+      run_executable.py
+      test.py
+    utils/
+      check_updates.py
+      download.py
+      event_loop.py
+      library_dev.py
+    __init__.py
+.gitignore
+.pre-commit-config.yaml
+CNAME
+LICENSE
+pyproject.toml
+README.md
+upload_new_pip_version_win.sh
+upload_new_pip_version.sh
+</directory_structure>
+
+<files>
+This section contains the contents of the repository's files.
+
+<file path="docs/index.md">
+asdf
+</file>
+
+<file path="sites/README.MD">
+TEST SITE
+</file>
+
+<file path="src/luckyrobots/message/__init__.py">
+"""Service and publisher/subscriber patterns for LuckyRobots.
+
+This module provides service and publisher/subscriber patterns for:
+- Services (request/response)
+- Publishers (one-to-many)
+- Subscribers (many-to-one)
+"""
+
+from ..core.parameters import get_param, has_param, set_param
+from .pubsub import Publisher, Subscriber
+from .srv.client import ServiceClient
+from .srv.service import ServiceServer
+
+__all__ = [
+    "get_param",
+    "has_param",
+    "set_param",
+    "ServiceClient",
+    "ServiceServer",
+    "Publisher",
+    "Subscriber",
+]
+</file>
+
+<file path="src/luckyrobots/runtime/builds.py">
+import curses
+import os
+
+import requests
+
+
+def get_files_from_folder(folder_id):
+    url = f"https://www.googleapis.com/drive/v3/files"
+    params = {
+        "q": f"'{folder_id}' in parents",
+        "key": "AIzaSyDTaRC95-CsIE5NZupKmxG5ZeKUKCP2ZhU",
+        "pageSize": 1000,
+    }
+
+    response = requests.get(url, params=params)
+    if response.status_code == 200:
+        items = response.json().get("files", [])
+        return [
+            item
+            for item in items
+            if item["mimeType"] != "application/vnd.google-apps.folder"
+        ]
+    else:
+        print(f"Error: {response.status_code} - {response.text}")
+        return []
+
+
+def download_file(file_id, file_name):
+    url = f"https://www.googleapis.com/drive/v3/files/{file_id}?alt=media"
+    params = {
+        "key": "AIzaSyDTaRC95-CsIE5NZupKmxG5ZeKUKCP2ZhU",
+    }
+
+    response = requests.get(url, params=params)
+    if response.status_code == 200:
+        with open(file_name, "wb") as f:
+            f.write(response.content)
+        print(f"File '{file_name}' downloaded successfully.")
+    else:
+        print(f"Error downloading file: {response.status_code} - {response.text}")
+
+
+def interactive_file_selection(stdscr, files):
+    curses.curs_set(0)
+    current_row = 0
+    selected_files = set()
+
+    while True:
+        stdscr.clear()
+        height, width = stdscr.getmaxyx()
+
+        for idx, file in enumerate(files):
+            x = 5
+            y = idx + 3
+            if y >= height:
+                break
+
+            if idx == current_row:
+                stdscr.attron(curses.A_REVERSE)
+            if idx in selected_files:
+                stdscr.addstr(y, x - 3, "* ")
+            stdscr.addstr(y, x, file["name"][: width - x - 1])
+            if idx == current_row:
+                stdscr.attroff(curses.A_REVERSE)
+
+        stdscr.addstr(
+            1, 5, "Use arrow keys to navigate, Space to select, Enter to download"
+        )
+        stdscr.refresh()
+
+        key = stdscr.getch()
+
+        if key == curses.KEY_UP and current_row > 0:
+            current_row -= 1
+        elif key == curses.KEY_DOWN and current_row < len(files) - 1:
+            current_row += 1
+        elif key == ord(" "):
+            if current_row in selected_files:
+                selected_files.remove(current_row)
+            else:
+                selected_files.add(current_row)
+        elif key == 10:  # Enter key
+            break
+
+    return [files[i] for i in selected_files]
+
+
+def main(stdscr):
+    folder_id = "15iYXzqFNEg1b2E6Ft1ErwynqBMaa0oOa"
+    files = get_files_from_folder(folder_id)
+
+    if not files:
+        print("No files found in the folder.")
+        return
+
+    selected_files = interactive_file_selection(stdscr, files)
+
+    curses.endwin()
+
+    if selected_files:
+        print("Downloading selected files:")
+        for file in selected_files:
+            download_file(file["id"], file["name"])
+    else:
+        print("No files selected for download.")
+
+
+if __name__ == "__main__":
+    curses.wrapper(main)
+</file>
+
+<file path="src/luckyrobots/runtime/test.py">
+import time
+
+
+class Test:
+    @staticmethod
+    def receiver(func):
+        Test.receiver_function = func
+        return func
+
+    @staticmethod
+    def message_received(message):
+        print("Test message_received", message)
+        if Test.receiver_function is not None:
+            Test.receiver_function(message)
+        else:
+            print("Test message_received no receiver function")
+
+
+@Test.receiver
+def receiver(message):
+    print("receiver ", message)
+    pass
+
+
+while True:
+    time.sleep(1)
+    Test.message_received("hello from python")
+</file>
+
+<file path="src/luckyrobots/utils/check_updates.py">
+import json
+import mimetypes
+import os
+import platform
+import re
+import sys
+import time
+import zlib
+from urllib.parse import urljoin
+
+import requests
+
+root_path = os.path.join(os.path.dirname(__file__), "..", "..", "examples/Binary/mac")
+json_file = os.path.join(root_path, "file_structure.json")
+base_url = "https://builds.luckyrobots.xyz/"
+
+
+def get_os_type():
+    os_type = platform.system().lower()
+    if os_type == "darwin":
+        return "mac"
+    elif os_type == "windows":
+        return "win"
+    elif os_type == "linux":
+        return "linux"
+    else:
+        raise ValueError(f"Unsupported operating system: {os_type}")
+
+
+def calculate_crc32(file_path):
+    with open(file_path, "rb") as file:
+        crc32 = 0
+        while True:
+            data = file.read(65536)  # Read in 64kb chunks
+            if not data:
+                break
+            crc32 = zlib.crc32(data, crc32)
+    return crc32 & 0xFFFFFFFF  # Ensure unsigned 32-bit integer
+
+
+def scan_directory(root_path):
+    file_structure = []
+
+    for dirpath, dirnames, filenames in os.walk(root_path):
+        # Add directories
+        for dirname in dirnames:
+            dir_path = os.path.join(dirpath, dirname)
+            relative_path = os.path.relpath(dir_path, root_path)
+            file_structure.append(
+                {
+                    "path": relative_path,
+                    "type": "directory",
+                    "size": 0,  # Directories don't have a size in this context
+                    "mtime": os.path.getmtime(dir_path),
+                    "crc32": 0,
+                    "mime_type": "directory",
+                }
+            )
+
+        # Add files
+        for filename in filenames:
+            file_path = os.path.join(dirpath, filename)
+            relative_path = os.path.relpath(file_path, root_path)
+            file_stat = os.stat(file_path)
+
+            # Guess the file type using mimetypes
+            file_type, encoding = mimetypes.guess_type(file_path)
+            if file_type is None:
+                file_type = "application/octet-stream"  # Default to binary if type can't be guessed
+
+            file_structure.append(
+                {
+                    "path": relative_path,
+                    "crc32": calculate_crc32(file_path),
+                    "size": file_stat.st_size,
+                    "mtime": file_stat.st_mtime,
+                    "type": "file",
+                    "mime_type": file_type,
+                }
+            )
+
+    return file_structure
+
+
+def save_json(data, filename):
+    with open(filename, "w") as f:
+        json.dump(data, f, indent=2)
+
+
+def load_json(filename):
+    with open(filename, "r") as f:
+        return json.load(f)
+
+
+def clean_path(path):
+    # Remove ['children'] and quotes, replace '][' with '/'
+    cleaned = re.sub(r"\['children'\]", "", path).replace("']['", "/").strip("[]'")
+    # Replace remaining single quotes with nothing
+    cleaned = cleaned.replace("'", "")
+    # Split the path and the attribute that changed
+    parts = cleaned.rsplit("/", 1)
+    return parts[0], parts[1] if len(parts) > 1 else None
+
+
+def compare_structures(json1, json2):
+    dict1 = {item["path"]: item for item in json1}
+    dict2 = {item["path"]: item for item in json2}
+
+    result = []
+
+    # Check for new and modified items
+    for path, item in dict2.items():
+        if path not in dict1:
+            item["change_type"] = "new_file"
+            result.append(item)
+        elif item["type"] == "file" and item["crc32"] != dict1[path]["crc32"]:
+            item["change_type"] = "modified"
+            result.append(item)
+        # Unchanged items are not added to the result
+
+    # Check for deleted items
+    for path, item in dict1.items():
+        if path not in dict2:
+            item["change_type"] = "deleted"
+            result.append(item)
+
+    # Remove the item with "path": "hashmap.json" from the result
+    result = [item for item in result if item["path"] != "hashmap.json"]
+    # save_json(result, "changes.json")
+    return result
+
+
+def scan_server(server_path):
+    mac_path = os.path.join(server_path, "mac")
+    win_path = os.path.join(server_path, "win")
+    linux_path = os.path.join(server_path, "linux")
+
+    mac_structure = scan_directory(mac_path)
+    win_structure = scan_directory(win_path)
+    linux_structure = scan_directory(linux_path)
+
+    save_json(mac_structure, os.path.join(server_path, "mac/hashmap.json"))
+    save_json(win_structure, os.path.join(server_path, "win/hashmap.json"))
+    save_json(linux_structure, os.path.join(server_path, "linux/hashmap.json"))
+
+
+def check_updates(root_path):
+    # Determine the operating system
+    os_type = get_os_type()
+    global base_url
+    # Set the base URL
+
+    # Construct the URL based on the operating system
+    os_type = get_os_type()
+    url = urljoin(base_url, f"{os_type}/hashmap.json")
+
+    # Download the JSON file
+    try:
+        response = requests.get(url)
+        response.raise_for_status()  # Raise an exception for HTTP errors
+        server_structure = response.json()
+    except requests.RequestException as e:
+        print(f"Error downloading JSON file: {e}")
+        server_structure = None
+
+    if server_structure is None:
+        print("Using local scan as no remote file could be downloaded.")
+        server_structure = {}
+
+    # Scan the directory and create a new file structure
+    client_structure = scan_directory(root_path)
+
+    # If a previous scan exists, compare and show changes
+    if server_structure:
+        changes = compare_structures(client_structure, server_structure)
+
+        # for future debugging
+        # # Write the flat JSON to a file
+        # with open('changes.json', 'w') as f:
+        #     json.dump(changes, f, indent=2)
+
+        # print(f"Changes have been written to changes.json")
+    else:
+        print("No server structure available for comparison.")
+
+    # for future debugging
+    # # Save the new structure
+    # save_json(client_structure, "./client_structure.json")
+
+    return changes
+
+
+if __name__ == "__main__":
+    lr_server_root = None
+
+    for arg in sys.argv:
+        if arg.startswith("--lr-server-root="):
+            lr_server_root = arg.split("=", 1)[1]
+            break
+
+    if lr_server_root:
+        # this is being used as a cron job on the main server to keep the client file structures up to date
+        print(f"Scanning server at {lr_server_root}")
+        scan_server(lr_server_root)
+</file>
+
+<file path="src/luckyrobots/utils/download.py">
+import os
+import platform
+import re
+import sys
+import zipfile
+from datetime import datetime
+
+import requests
+from bs4 import BeautifulSoup
+from tqdm import tqdm
+
+from .check_updates import check_updates
+
+base_url = "https://builds.luckyrobots.xyz/"
+
+
+def get_base_url():
+    import requests
+    from requests.exceptions import RequestException
+
+    def is_server_active(url):
+        try:
+            response = requests.get(url, timeout=1)
+            return response.status_code == 200
+        except RequestException:
+            return False
+
+    local_url = "http://192.168.1.148/builds"
+    remote_url = "https://builds.luckyrobots.xyz"
+
+    if is_server_active(local_url):
+        print("Using local server:", local_url)
+        return local_url
+    else:
+        print("Using remote server:", remote_url)
+        return remote_url
+
+
+def get_os_type():
+    os_type = platform.system().lower()
+    if os_type == "darwin":
+        return "mac"
+    elif os_type == "windows":
+        return "win"
+    elif os_type == "linux":
+        return "linux"
+    else:
+        raise ValueError(f"Unsupported operating system: {os_type}")
+
+
+def apply_changes(changes):
+    # Iterate through changes and handle each change type
+    for item in changes:
+        if item["change_type"] in ["modified", "new_file"]:
+            # Check if the item is a directory
+            if item.get("type") == "directory":
+                # Create the directory
+                item_path = os.path.join("./Binary", item["path"])
+                os.makedirs(item_path, exist_ok=True)
+                print(f"Created directory: {item_path}")
+            else:
+                # Handle file download with progress bar
+                os_type = get_os_type()
+                file_url = f"{base_url}{os_type}/{item['path']}"
+
+                # Ensure the directory exists
+                item_path = os.path.join("./Binary", item["path"])
+                item_dir = os.path.dirname(item_path)
+                os.makedirs(item_dir, exist_ok=True)
+
+                # Download the file with progress bar
+                try:
+                    response = requests.get(file_url, stream=True)
+                    response.raise_for_status()
+                    total_size = int(response.headers.get("content-length", 0))
+                    # " ▁▂▃▄▅▆▇█"
+                    with open(item_path, "wb") as f, tqdm(
+                        desc=f"{item['path'][:8]}...{item['path'][-16:]}",
+                        total=total_size,
+                        unit="iB",
+                        unit_scale=True,
+                        unit_divisor=1024,
+                        ascii=" ▆",
+                    ) as progress_bar:
+                        for data in response.iter_content(chunk_size=1024):
+                            size = f.write(data)
+                            progress_bar.update(size)
+                    # print(f"Downloaded: {item_path}")
+                except requests.RequestException as e:
+                    print(f"Error downloading {item_path}: {e}")
+
+        elif item["change_type"] == "deleted":
+            # Delete the file or directory
+            item_path = os.path.join("./Binary", item["path"])
+            try:
+                if os.path.isdir(item_path):
+                    os.rmdir(item_path)
+                    print(f"Deleted directory: {item_path}")
+                else:
+                    os.remove(item_path)
+                    print(f"Deleted file: {item_path}")
+            except OSError as e:
+                print(f"Error deleting {item_path}: {e}")
+</file>
+
+<file path="src/luckyrobots/utils/library_dev.py">
+import ast
+import os
+import shutil
+import site
+import subprocess
+import sys
+
+import pkg_resources
+import requests
+from packaging import version
+
+
+def get_source_directory():
+    # Start from the directory of the script being run
+    current_dir = os.path.dirname(os.path.abspath(sys.argv[0]))
+
+    while current_dir != os.path.dirname(current_dir):  # Stop at root directory
+        setup_py_path = os.path.join(current_dir, "setup.py")
+        if os.path.exists(setup_py_path):
+            with open(setup_py_path, "r") as f:
+                content = f.read()
+
+            try:
+                tree = ast.parse(content)
+                for node in ast.walk(tree):
+                    if (
+                        isinstance(node, ast.Call)
+                        and getattr(node.func, "id", "") == "setup"
+                    ):
+                        for keyword in node.keywords:
+                            if (
+                                keyword.arg == "name"
+                                and keyword.value.s == "luckyrobots"
+                            ):
+                                return current_dir
+            except SyntaxError:
+                pass  # If the file is not valid Python, continue searching
+
+        current_dir = os.path.dirname(current_dir)
+
+    print(
+        "Could not find a setup.py file with name='luckyrobots'. This likely means you haven't cloned the repository. To use this feature, please clone the repository and run the command with the --lr-library-dev flag from within the cloned directory."
+    )
+    sys.exit(1)
+
+
+def check_for_newer_version():
+    try:
+        installed_version = pkg_resources.get_distribution("luckyrobots").version
+        response = requests.get("https://pypi.org/pypi/luckyrobots/json")
+        pypi_version = response.json()["info"]["version"]
+
+        pip_path = site.getsitepackages()[0]
+        luckyrobots_pip_path = os.path.join(pip_path, "luckyrobots")
+
+        # Check if pip_path is a symlink
+        if os.path.islink(luckyrobots_pip_path):
+            print("*" * 60)
+            print(
+                f"The luckyrobots directory in pip is already a symlink: {luckyrobots_pip_path}"
+            )
+            print("This likely means you've already set up library development mode.")
+            print(
+                "Please make sure to submit your pull request to the main repository, and pull the latest."
+            )
+            print("*" * 60)
+        else:
+            if version.parse(pypi_version) > version.parse(installed_version):
+                print(f"A newer version of luckyrobots is available: {pypi_version}")
+                print(f"Your current version is: {installed_version}")
+                response = input(
+                    "Do you want to install the newer version before continuing? (y/n): "
+                ).lower()
+                if response == "y":
+                    subprocess.check_call(
+                        [
+                            sys.executable,
+                            "-m",
+                            "pip",
+                            "install",
+                            "--upgrade",
+                            "luckyrobots",
+                        ]
+                    )
+                    print(
+                        "Newer version installed successfully. Please run the command again."
+                    )
+                    sys.exit(1)
+                else:
+                    print("Continuing with the current version.")
+            else:
+                print(
+                    f"You have the latest version of luckyrobots installed: {installed_version}"
+                )
+    except Exception as e:
+        print(f"Error checking for newer version: {e}")
+
+
+def library_dev():
+    if "--lr-library-dev" not in sys.argv:
+        print(
+            "If you want to help with developing this library, run with --lr-library-dev argument."
+        )
+        # Check for newer version before proceeding
+        check_for_newer_version()
+        return
+    else:
+        print(
+            "--------------------------------------------------------------------------------"
+        )
+        print(
+            "This will create a symbolic link to the src/luckyrobots directory in your pip installation directory."
+        )
+        print(
+            "This is useful if you want to test your local changes without having to reinstall the package."
+        )
+        print("Then you can push your branch and create a pull request.")
+        print(
+            "--------------------------------------------------------------------------------"
+        )
+        # Discover where pip is installing its modules
+        # Ask user for confirmation
+
+        pip_path = site.getsitepackages()[0]
+        luckyrobots_pip_path = os.path.join(pip_path, "luckyrobots")
+        luckyrobots_dev_dir = os.path.join(get_source_directory(), "src", "luckyrobots")
+
+        # print(f"Absolute path of luckyrobots directory: {luckyrobots_dir}")
+        print("Creating symlink between:")
+        print(
+            f"src_path: {luckyrobots_dev_dir}, luckyrobots_path: {luckyrobots_pip_path}"
+        )
+
+        input("Press Enter to continue or Ctrl+C to cancel...")
+        # Check if the pip_path exists
+        if os.path.isdir(pip_path):
+            print(f"Pip installation path found: {pip_path}")
+
+            # Remove existing luckyrobots directory or symlink if it exists
+            if os.path.exists(luckyrobots_pip_path):
+                print("Removing existing luckyrobots directory or symlink...")
+                if os.path.islink(luckyrobots_pip_path):
+                    os.unlink(luckyrobots_pip_path)
+                else:
+                    shutil.rmtree(luckyrobots_pip_path)
+            try:
+                os.symlink(luckyrobots_dev_dir, luckyrobots_pip_path)
+                print(
+                    "Symbolic link created successfully. Your local luckyrobots package is now used."
+                )
+                print(
+                    "Remember, if you change your virtual environment, you need to run this script again."
+                )
+            except OSError as e:
+                print(f"Error: Failed to create symbolic link. {e}")
+                sys.exit(1)
+        else:
+            print("Error: Pip installation path not found.")
+            sys.exit(1)
+</file>
+
+<file path=".pre-commit-config.yaml">
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+    -   id: trailing-whitespace
+        types: [text]
+    -   id: end-of-file-fixer
+        types: [text]
+    -   id: check-yaml
+        types: [yaml]
+    -   id: check-added-large-files
+        types: [file]
+
+-   repo: https://github.com/psf/black
+    rev: 23.3.0
+    hooks:
+    -   id: black
+        types: [python]
+</file>
+
+<file path="docs/CNAME">
+jobs.luckyrobots.ai
+</file>
+
+<file path="src/luckyrobots/core/parameters.py">
+import json
+import logging
+import os
+import threading
+from typing import Any, Dict, List
+
+logging.basicConfig(
+    level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+)
+logger = logging.getLogger("param_server")
+
+
+class ParameterServer:
+    _instance = None
+    _lock = threading.RLock()
+    _params: Dict[str, Any] = {}
+
+    def __new__(cls):
+        with cls._lock:
+            if cls._instance is None:
+                cls._instance = super(ParameterServer, cls).__new__(cls)
+            return cls._instance
+
+    def __init__(self):
+        # Already initialized if instance exists
+        if hasattr(self, "_initialized"):
+            return
+
+        self._params = {}
+        self._initialized = True
+        logger.info("Parameter server initialized")
+
+    def set_param(self, name: str, value: Any) -> None:
+        with self._lock:
+            # Handle namespaced parameters
+            if "/" in name and name != "/":
+                parts = name.strip("/").split("/")
+                current = self._params
+
+                # Navigate to the right level in the parameter tree
+                for i, part in enumerate(parts[:-1]):
+                    if part not in current:
+                        current[part] = {}
+                    elif not isinstance(current[part], dict):
+                        # Convert to dict if it wasn't already
+                        current[part] = {"_value": current[part]}
+                    current = current[part]
+
+                # Set the final parameter
+                current[parts[-1]] = value
+            else:
+                # Simple case - top level parameter
+                self._params[name.strip("/")] = value
+
+        logger.debug(f"Set parameter: {name} = {value}")
+
+    def get_param(self, name: str, default: Any = None) -> Any:
+        with self._lock:
+            # Handle namespaced parameters
+            if "/" in name and name != "/":
+                parts = name.strip("/").split("/")
+                current = self._params
+
+                # Navigate to the right level in the parameter tree
+                for part in parts:
+                    if part not in current:
+                        return default
+                    current = current[part]
+
+                return current
+            else:
+                # Simple case - top level parameter
+                return self._params.get(name.strip("/"), default)
+
+    def has_param(self, name: str) -> bool:
+        with self._lock:
+            # Handle namespaced parameters
+            if "/" in name and name != "/":
+                parts = name.strip("/").split("/")
+                current = self._params
+
+                # Navigate to the right level in the parameter tree
+                for part in parts:
+                    if part not in current:
+                        return False
+                    current = current[part]
+
+                return True
+            else:
+                # Simple case - top level parameter
+                return name.strip("/") in self._params
+
+    def delete_param(self, name: str) -> bool:
+        with self._lock:
+            # Handle namespaced parameters
+            if "/" in name and name != "/":
+                parts = name.strip("/").split("/")
+                current = self._params
+                parents = []
+
+                # Navigate to the right level in the parameter tree
+                for part in parts[:-1]:
+                    if part not in current:
+                        return False
+                    parents.append((current, part))
+                    current = current[part]
+
+                # Delete the parameter
+                if parts[-1] in current:
+                    del current[parts[-1]]
+
+                    # Clean up empty dictionaries
+                    for parent, key in reversed(parents):
+                        if not parent[key]:
+                            del parent[key]
+
+                    logger.debug(f"Deleted parameter: {name}")
+                    return True
+                return False
+            else:
+                # Simple case - top level parameter
+                name = name.strip("/")
+                if name in self._params:
+                    del self._params[name]
+                    logger.debug(f"Deleted parameter: {name}")
+                    return True
+                return False
+
+    def get_param_names(self) -> List[str]:
+        with self._lock:
+            result = []
+
+            def _collect_names(params: Dict[str, Any], prefix: str = ""):
+                for key, value in params.items():
+                    full_name = f"{prefix}/{key}" if prefix else key
+                    if isinstance(value, dict):
+                        _collect_names(value, full_name)
+                    else:
+                        result.append(full_name)
+
+            _collect_names(self._params)
+            return result
+
+    def load_from_file(self, filename: str) -> bool:
+        try:
+            with open(filename, "r") as f:
+                params = json.load(f)
+
+            with self._lock:
+                self._params.update(params)
+
+            logger.info(f"Loaded parameters from file: {filename}")
+            return True
+        except Exception as e:
+            logger.error(f"Error loading parameters from file {filename}: {e}")
+            return False
+
+    def save_to_file(self, filename: str) -> bool:
+        try:
+            os.makedirs(os.path.dirname(os.path.abspath(filename)), exist_ok=True)
+
+            with self._lock:
+                with open(filename, "w") as f:
+                    json.dump(self._params, f, indent=2)
+
+            logger.info(f"Saved parameters to file: {filename}")
+            return True
+        except Exception as e:
+            logger.error(f"Error saving parameters to file {filename}: {e}")
+            return False
+
+
+# Create a global instance
+param_server = ParameterServer()
+
+
+# Convenience functions for easier access
+def get_param(name: str, default: Any = None) -> Any:
+    return param_server.get_param(name, default)
+
+
+def set_param(name: str, value: Any) -> None:
+    param_server.set_param(name, value)
+
+
+def has_param(name: str) -> bool:
+    return param_server.has_param(name)
+
+
+def delete_param(name: str) -> bool:
+    return param_server.delete_param(name)
+
+
+def get_param_names() -> List[str]:
+    return param_server.get_param_names()
+
+
+def load_from_file(filename: str) -> bool:
+    return param_server.load_from_file(filename)
+
+
+def save_to_file(filename: str) -> bool:
+    return param_server.save_to_file(filename)
+</file>
+
+<file path="src/luckyrobots/message/srv/client.py">
+import asyncio
+from typing import Generic, Optional, Type, TypeVar
+
+from .service import (
+    ServiceNotFoundError,
+    ServiceServer,
+)
+
+T = TypeVar("T")  # Request type
+R = TypeVar("R")  # Response type
+
+
+class ServiceClient(Generic[T, R]):
+    def __init__(self, service_type: Type[T], service_name: str):
+        # ServiceClient attributes
+        self.service_type = service_type
+        self.service_name = service_name
+
+        # Initialize the ServiceServer object
+        self._service: Optional[ServiceServer] = None
+
+    async def connect(self, retry_count: int = 3, retry_delay: float = 1.0) -> bool:
+        for attempt in range(retry_count):
+            self._service = ServiceServer.get_service(self.service_name)
+            if self._service is not None:
+                return True
+
+            if attempt < retry_count - 1:
+                await asyncio.sleep(retry_delay)
+
+        return False
+
+    async def call(
+        self, request: T, service_name: str = None, timeout: float = 30.0
+    ) -> R:
+        # Default to the client's service name if none provided
+        if service_name is None:
+            service_name = self.service_name
+
+        if self.service_name != service_name:
+            raise ValueError(
+                f"Service name mismatch. Expected {self.service_name}, got {service_name}"
+            )
+
+        # Validate request type if possible
+        request_type = getattr(self.service_type, "Request", self.service_type)
+        if not isinstance(request, request_type):
+            raise TypeError(
+                f"Expected request of type {request_type.__name__}, got {type(request).__name__}"
+            )
+
+        if self._service is None:
+            connected = await self.connect()
+            if not connected:
+                raise ServiceNotFoundError(f"Service {self.service_name} not found")
+
+        # Check service type compatibility if possible
+        if (
+            hasattr(self.service_type, "Request")
+            and hasattr(self._service.service_type, "Request")
+            and self.service_type.Request != self._service.service_type.Request
+        ):
+            raise TypeError(
+                f"Service request type mismatch. Expected {self.service_type.Request.__name__}, "
+                f"got {self._service.service_type.Request.__name__}"
+            )
+
+        if (
+            hasattr(self.service_type, "Response")
+            and hasattr(self._service.service_type, "Response")
+            and self.service_type.Response != self._service.service_type.Response
+        ):
+            raise TypeError(
+                f"Service response type mismatch. Expected {self.service_type.Response.__name__}, "
+                f"got {self._service.service_type.Response.__name__}"
+            )
+
+        # Call the service server
+        return await self._service.call(request, service_name, timeout=timeout)
+</file>
+
+<file path="src/luckyrobots/misc/testserver.py">
+import json
+import logging
+from http.server import BaseHTTPRequestHandler, HTTPServer
+from urllib.parse import parse_qs
+
+# Configure logging
+logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(message)s")
+
+# Global variable to store the next request
+next_req = {}
+
+
+class RequestHandler(BaseHTTPRequestHandler):
+    def do_GET(self):
+        global next_req
+        self.log_request("GET")
+        if self.path == "/html":
+            self.send_response(200)
+            self.send_header("Content-type", "text/html")
+            self.end_headers()
+            html = f"""
+            <!DOCTYPE html>
+            <html>
+            <body>
+                <h2>Submit JSON Data</h2>
+                <form action="/html" method="post">
+                    <textarea name="json_data" rows="4" cols="50">{json.dumps(next_req, indent=2)}</textarea><br><br>
+                    <input type="submit" value="Submit">
+                </form>
+                <h3>Current stored JSON:</h3>
+                <pre id="storedJson">{json.dumps(next_req, indent=2)}</pre>
+            </body>
+            </html>
+            """
+            self.wfile.write(html.encode())
+        elif self.path == "/":
+            self.send_response(200)
+            self.send_header("Content-type", "application/json")
+            self.end_headers()
+            response = json.dumps(next_req)
+            self.wfile.write(response.encode())
+            # Reset next_req after sending
+            next_req = {}
+        else:
+            self.send_response(404)
+            self.end_headers()
+            self.wfile.write(b"404 Not Found")
+
+    def do_POST(self):
+        content_length = int(self.headers["Content-Length"])
+        post_data = self.rfile.read(content_length).decode("utf-8")
+        self.log_request("POST", post_data)
+
+        global next_req
+        if self.path == "/html":
+            parsed_data = parse_qs(post_data)
+            json_data = parsed_data.get("json_data", ["{}"])[0]
+            try:
+                global next_req
+                next_req = json.loads(json_data)
+                self.send_response(303)  # 303 See Other
+                self.send_header("Location", "/html")
+                self.end_headers()
+            except json.JSONDecodeError:
+                self.send_response(400)
+                self.send_header("Content-type", "text/html")
+                self.end_headers()
+                error_message = """
+                <html>
+                <body>
+                    <h2>Error: Invalid JSON data</h2>
+                    <a href="/html">Go back to form</a>
+                </body>
+                </html>
+                """
+                self.wfile.write(error_message.encode())
+        else:
+            self.send_response(404)
+            self.end_headers()
+            self.wfile.write(b"404 Not Found")
+
+    def log_request(self, method, data=None):
+        logging.info(f"{method} request received:")
+        logging.info(f"Path: {self.path}")
+        logging.info(f"Headers: {self.headers}")
+        if data:
+            logging.info(f"Data: {data}")
+
+
+def run_server(port=3000):
+    server_address = ("", port)
+    httpd = HTTPServer(server_address, RequestHandler)
+    print(f"Server running on port {port}")
+    httpd.serve_forever()
+
+
+if __name__ == "__main__":
+    run_server()
+</file>
+
+<file path="src/luckyrobots/misc/testsockets.js">
+const http = require('http');
+const crypto = require('crypto');
+
+const server = http.createServer((req, res) => {
+    res.writeHead(404);
+    res.end();
+});
+
+server.on('upgrade', (req, socket, head) => {
+    const { headers } = req;
+    const acceptKey = headers['sec-websocket-key'];
+    const hash = generateAcceptValue(acceptKey);
+
+    const responseHeaders = [
+        'HTTP/1.1 101 Switching Protocols',
+        'Upgrade: websocket',
+        'Connection: Upgrade',
+        `Sec-WebSocket-Accept: ${hash}`
+    ];
+
+    socket.write(responseHeaders.join('\r\n') + '\r\n\r\n');
+
+    console.log('Client connected');
+
+    const sendHello = () => {
+        const message = Buffer.from(JSON.stringify({'hello': 'world'}));
+        const frame = Buffer.alloc(2 + message.length);
+        frame.writeUInt8(0b10000001, 0); // FIN + Text frame
+        frame.writeUInt8(message.length, 1); // Payload length
+        message.copy(frame, 2);
+        socket.write(frame);
+        console.log('Sent: hello');
+    };
+
+    const interval = setInterval(sendHello, 1000);
+
+    socket.on('close', () => {
+        console.log('Client disconnected');
+        clearInterval(interval);
+    });
+});
+
+function generateAcceptValue(acceptKey) {
+    return crypto
+        .createHash('sha1')
+        .update(acceptKey + '258EAFA5-E914-47DA-95CA-C5AB0DC85B11', 'binary')
+        .digest('base64');
+}
+
+server.listen(3000, () => {
+    console.log('WebSocket server is running on ws://localhost:3000');
+});
+</file>
+
+<file path="src/luckyrobots/runtime/run_executable.py">
+import atexit
+import os
+import platform
+import subprocess
+import sys
+import tempfile
+
+import psutil
+
+LOCK_FILE = os.path.join(tempfile.gettempdir(), "luckyworld_lock")
+
+
+def is_luckyworld_running() -> bool:
+    """Check if LuckyWorld is running by checking the lock file or process name"""
+    # Check for the lock file
+    if os.path.exists(LOCK_FILE):
+        with open(LOCK_FILE, "r") as f:
+            pid = int(f.read().strip())
+        if psutil.pid_exists(pid):
+            # Double-check if the process is actually LuckyWorld
+            try:
+                process = psutil.Process(pid)
+                if "LuckyWorld" in process.name():
+                    return True
+            except psutil.NoSuchProcess:
+                pass  # Process doesn't exist, continue to remove lock file
+
+        # If we reach here, the lock file is stale
+        remove_lock_file()
+
+    # Check for any running LuckyWorld processes
+    for proc in psutil.process_iter(["name"]):
+        if "LuckyWorld" in proc.info["name"]:
+            create_lock_file(proc.pid)
+            return True
+
+    return False
+
+
+def create_lock_file(pid: int) -> None:
+    """Create a lock file with the process ID to prevent multiple instances of LuckyWorld from running"""
+    with open(LOCK_FILE, "w") as f:
+        f.write(str(pid))
+
+
+def remove_lock_file() -> None:
+    """Remove the lock file to allow LuckyWorld to run again"""
+    if os.path.exists(LOCK_FILE):
+        os.remove(LOCK_FILE)
+
+
+def run_luckyworld_executable(
+    scene: str, robot_type: str, task: str, directory_to_watch: str
+) -> None:
+    """Run the LuckyWorld executable"""
+    # Determine the correct path based on the operating system
+    if platform.system() == "Darwin":  # macOS
+        executable_path = os.path.join(
+            directory_to_watch, "..", "..", "..", "MacOS", "LuckyWorld"
+        )
+    elif platform.system() == "Linux":  # Linux
+        executable_path = os.path.join(directory_to_watch, "..", "..", "LuckyWorld.sh")
+    else:  # Windows or other platforms
+        executable_path = os.path.join(
+            directory_to_watch, "..", "..", "luckyrobots.exe"
+        )
+
+    # Check if the executable exists
+    if not os.path.exists(executable_path):
+        print(f"Error: Executable not found at {executable_path}")
+        sys.exit(1)
+        return
+
+    try:
+        # Set execute permissions
+        os.chmod(executable_path, 0o755)
+        print("running executable at:", executable_path)
+        # Check if --lr-verbose flag is used
+        verbose = "--lr-verbose" in sys.argv
+
+        # Build command with simulation parameters
+        command = [executable_path]
+        if scene:
+            command.extend(["--scene", scene])
+        if robot_type:
+            command.extend(["--robot-type", robot_type])
+        if task:
+            command.extend(["--task", task])
+
+        # Run the executable as a detached process
+        if platform.system() == "Windows":
+            # For Windows
+            DETACHED_PROCESS = 0x00000008
+            process = subprocess.Popen(
+                command,
+                creationflags=DETACHED_PROCESS,
+                close_fds=True,
+                stdout=subprocess.DEVNULL if not verbose else None,
+                stderr=subprocess.DEVNULL if not verbose else None,
+            )
+        else:
+            # For Unix-based systems (macOS, Linux)
+            process = subprocess.Popen(
+                command,
+                start_new_session=True,
+                stdout=subprocess.DEVNULL if not verbose else None,
+                stderr=subprocess.DEVNULL if not verbose else None,
+            )
+
+        # Create lock file with the new process ID
+        create_lock_file(process.pid)
+
+        if verbose:
+            print(
+                f"LuckyWorld application started successfully with scene={scene}, robot_type={robot_type}, task={task}"
+            )
+    except subprocess.CalledProcessError as e:
+        print(f"Error: Failed to start LuckyWorld application. {e}")
+    except PermissionError as e:
+        print(f"Error: Permission denied. Unable to set execute permissions. {e}")
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
+
+
+# Ensure lock file is removed if the script exits unexpectedly
+atexit.register(remove_lock_file)
+</file>
+
+<file path="src/luckyrobots/utils/event_loop.py">
+import asyncio
+import threading
+import logging
+
+logger = logging.getLogger("event_loop")
+
+# Global variables to store the event loop and thread
+_event_loop = None
+_event_loop_thread = None
+_ready_event = threading.Event()
+
+
+def initialize_event_loop():
+    global _event_loop, _event_loop_thread
+
+    # If already initialized, return the existing loop
+    if _event_loop is not None and _ready_event.is_set():
+        return _event_loop
+
+    def run_event_loop():
+        logger.info("Event loop thread started")
+        loop = asyncio.new_event_loop()
+        asyncio.set_event_loop(loop)
+
+        global _event_loop
+        _event_loop = loop
+
+        logger.info("Event loop created, setting ready event")
+        _ready_event.set()
+
+        logger.info("Shared event loop running")
+        try:
+            loop.run_forever()
+        finally:
+            logger.info("Shared event loop shutting down")
+            loop.close()
+
+    # Start the event loop in a background thread
+    _event_loop_thread = threading.Thread(target=run_event_loop, daemon=True)
+    _event_loop_thread.start()
+
+    # Wait with a longer timeout
+    logger.info("Waiting for event loop to be ready")
+    success = _ready_event.wait(timeout=10.0)
+
+    if not success:
+        logger.error("Failed to initialize shared event loop")
+        return None
+
+    return _event_loop
+
+
+def get_event_loop():
+    if _event_loop is None or not _ready_event.is_set():
+        return initialize_event_loop()
+    return _event_loop
+
+
+def run_coroutine(coro, timeout=None):
+    loop = get_event_loop()
+    if loop is None:
+        raise RuntimeError("Event loop is not initialized")
+
+    future = asyncio.run_coroutine_threadsafe(coro, loop)
+    if timeout is not None:
+        try:
+            return future.result(timeout)
+        except asyncio.TimeoutError:
+            logger.error(f"Coroutine timed out after {timeout} seconds")
+            raise
+    return future  # Return the future object when no timeout is specified
+
+
+def shutdown_event_loop():
+    global _event_loop, _event_loop_thread
+
+    if _event_loop is not None:
+        logger.info("Shutting down event loop")
+        _event_loop.call_soon_threadsafe(_event_loop.stop)
+        if _event_loop_thread is not None:
+            _event_loop_thread.join(timeout=5.0)
+
+        _event_loop = None
+        _event_loop_thread = None
+        _ready_event.clear()
+
+        logger.info("Event loop shutdown complete")
+</file>
+
+<file path="LICENSE">
+MIT License
+
+Copyright (c) 2025 Lucky Robots
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+</file>
+
+<file path="upload_new_pip_version_win.sh">
+#!/bin/bash
+
+rm -rf dist
+rm -rf build
+rm -rf src/luckyrobots.egg-info
+
+# Read the current version from pyproject.toml
+current_version=$(grep -E 'version\s*=\s*"[^"]+"' pyproject.toml | head -1 | sed 's/.*version\s*=\s*"\([^"]*\)".*/\1/')
+
+if [ -z "$current_version" ]; then
+    echo "Error: Could not find version in pyproject.toml"
+    exit 1
+fi
+
+# Split the version into parts
+IFS='.' read -ra version_parts <<< "$current_version"
+
+# Increment the last part
+last_part=$((${version_parts[2]} + 1))
+
+# Construct the new version
+new_version="${version_parts[0]}.${version_parts[1]}.$last_part"
+
+# Update the version in pyproject.toml
+sed -i.bak "s/version\s*=\s*\"$current_version\"/version = \"$new_version\"/" pyproject.toml && rm pyproject.toml.bak
+
+echo "Version updated from $current_version to $new_version"
+
+# Build and upload
+python -m pip install --upgrade build
+python -m build
+python -m pip install --upgrade twine
+python -m twine upload dist/*
+</file>
+
+<file path="src/luckyrobots/message/srv/service.py">
+import asyncio
+import logging
+from typing import Callable, Dict, Generic, List, Optional, Type, TypeVar
+
+logging.basicConfig(
+    level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+)
+logger = logging.getLogger("service")
+
+T = TypeVar("T")  # Request type
+R = TypeVar("R")  # Response type
+
+
+class ServiceError(Exception):
+    """Base exception for service-related errors"""
+
+    pass
+
+
+class ServiceTimeoutError(ServiceError):
+    """Exception raised when a service call times out"""
+
+    pass
+
+
+class ServiceNotFoundError(ServiceError):
+    """Exception raised when a service is not found"""
+
+    pass
+
+
+class ServiceHandlerError(ServiceError):
+    """Exception raised when a service handler raises an exception"""
+
+    pass
+
+
+class ServiceServer(Generic[T, R]):
+    """Enhanced service implementation with timeout and error handling"""
+
+    # Class dictionary to keep track of all services
+    _services: Dict[str, "ServiceServer"] = {}
+    _lock = asyncio.Lock()
+
+    def __init__(
+        self, service_type: Type[T], service_name: str, handler: Callable[[T], R]
+    ):
+        self._handler: Optional[Callable[[T], R]] = None
+
+        self.service_type = service_type
+        self.service_name = service_name
+
+        self.set_handler(handler)
+
+        # Register this service in the class dictionary
+        ServiceServer._services[service_name] = self
+
+        logger.debug(f"Created service: {service_name}")
+
+    def set_handler(self, handler: Callable[[T], R]) -> None:
+        self._handler = handler
+        logger.debug(f"Set handler for service: {self.service_name}")
+
+    async def call(self, request: T, service_name: str, timeout: float = 30.0) -> R:
+        if self.service_name != service_name:
+            raise ValueError(
+                f"Service name mismatch. Expected {self.service_name}, got {service_name}"
+            )
+
+        # Validate the request type if possible
+        request_type = getattr(self.service_type, "Request")
+        if not isinstance(request, request_type):
+            raise TypeError(
+                f"Expected request of type {request_type.__name__}, got {type(request).__name__}"
+            )
+
+        if self._handler is None:
+            raise ServiceNotFoundError(
+                f"No handler set for service {self.service_name}"
+            )
+
+        try:
+            # Run the handler with timeout
+            return await asyncio.wait_for(self._run_handler(request), timeout=timeout)
+        except asyncio.TimeoutError:
+            raise ServiceTimeoutError(
+                f"Service call to {self.service_name} timed out after {timeout} seconds"
+            )
+
+    async def _run_handler(self, request: T) -> R:
+        """Run the server handler and handle exceptions.
+
+        Args:
+            request: The request to send to the server
+
+        Returns:
+            The response from the server
+
+        Raises:
+            ServiceHandlerError: If the server handler raises an exception
+        """
+        try:
+            # If handler is already a coroutine function, await it
+            if asyncio.iscoroutinefunction(self._handler):
+                result = await self._handler(request)
+            else:
+                # Run non-async handler in a thread pool
+                loop = asyncio.get_event_loop()
+                result = await loop.run_in_executor(None, self._handler, request)
+
+            # Type check the result if possible
+            response_type = getattr(self.service_type, "Response", None)
+            if response_type and not isinstance(result, response_type):
+                raise TypeError(
+                    f"Service {self.service_name} returned {type(result).__name__}, expected {response_type.__name__}"
+                )
+
+            return result
+        except Exception as e:
+            logger.error(f"Error in service handler for {self.service_name}: {e}")
+            raise ServiceHandlerError(
+                f"Service handler for {self.service_name} raised an exception: {e}"
+            )
+
+    @classmethod
+    def get_service(cls, service_name: str) -> Optional["ServiceServer"]:
+        return cls._services.get(service_name)
+
+    @classmethod
+    def get_all_services(cls) -> List[str]:
+        return list(cls._services.keys())
+
+
+def get_service(name: str) -> Optional[ServiceServer]:
+    return ServiceServer.get_service(name)
+
+
+def get_all_services() -> List[str]:
+    return ServiceServer.get_all_services()
+</file>
+
+<file path="src/luckyrobots/message/pubsub.py">
+"""
+Publisher/subscriber implementation with integrated WebSocket communication.
+
+This module provides Publisher and Subscriber classes for implementing
+publisher/subscriber patterns with integrated WebSocket transport for distributed
+communication.
+"""
+
+import logging
+import threading
+from typing import Any, Callable, Dict, List, Type
+
+logging.basicConfig(
+    level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+)
+logger = logging.getLogger("pubsub")
+
+
+class Publisher:
+    # Class dictionary to keep track of all publishers by topic
+    _publishers_by_topic: Dict[str, List["Publisher"]] = {}
+    _lock = threading.RLock()
+
+    def __init__(self, topic: str, message_type: Type, queue_size: int = 10):
+        self.topic = topic
+        self.message_type = message_type
+        self.queue_size = queue_size
+        self._subscribers: List[Callable[[Any], None]] = []
+
+        # Register this publisher in the class dictionary
+        with Publisher._lock:
+            if topic not in Publisher._publishers_by_topic:
+                Publisher._publishers_by_topic[topic] = []
+            Publisher._publishers_by_topic[topic].append(self)
+
+        logger.debug(f"Created publisher for topic: {topic}")
+
+    def __del__(self):
+        with Publisher._lock:
+            if self.topic in Publisher._publishers_by_topic:
+                if self in Publisher._publishers_by_topic[self.topic]:
+                    Publisher._publishers_by_topic[self.topic].remove(self)
+                if not Publisher._publishers_by_topic[self.topic]:
+                    del Publisher._publishers_by_topic[self.topic]
+
+    def publish(self, message: Any) -> None:
+        # Type check the message
+        if not isinstance(message, self.message_type):
+            raise TypeError(
+                f"Expected message of type {self.message_type.__name__}, got {type(message).__name__}"
+            )
+
+        # Publish to all local subscribers
+        for subscriber in self._subscribers:
+            try:
+                subscriber(message)
+            except Exception as e:
+                logger.error(
+                    f"Error in subscriber callback for topic {self.topic}: {e}"
+                )
+
+        # Note: Remote publishing is handled by the Node class, which
+        # wraps this publish method to also publish to the WebSocket transport
+
+    def add_subscriber(self, subscriber: Callable[[Any], None]) -> None:
+        if subscriber not in self._subscribers:
+            self._subscribers.append(subscriber)
+            logger.debug(f"Added subscriber to topic: {self.topic}")
+
+    def remove_subscriber(self, subscriber: Callable[[Any], None]) -> None:
+        if subscriber in self._subscribers:
+            self._subscribers.remove(subscriber)
+            logger.debug(f"Removed subscriber from topic: {self.topic}")
+
+    @classmethod
+    def get_publishers_for_topic(cls, topic: str) -> List["Publisher"]:
+        with cls._lock:
+            return cls._publishers_by_topic.get(topic, [])
+
+    @classmethod
+    def get_all_topics(cls) -> List[str]:
+        with cls._lock:
+            return list(cls._publishers_by_topic.keys())
+
+
+class Subscriber:
+    # Class dictionary to keep track of all subscribers
+    _subscribers_by_topic: Dict[str, List["Subscriber"]] = {}
+    _lock = threading.RLock()
+
+    def __init__(
+        self,
+        topic: str,
+        message_type: Type,
+        callback: Callable[[Any], None],
+        queue_size: int = 10,
+    ):
+        self.topic = topic
+        self.message_type = message_type
+        self.callback = callback
+        self.queue_size = queue_size
+
+        # Find publishers for this topic and subscribe
+        self._connect_to_publishers()
+
+        # Register this subscriber in the class dictionary
+        with Subscriber._lock:
+            if topic not in Subscriber._subscribers_by_topic:
+                Subscriber._subscribers_by_topic[topic] = []
+            Subscriber._subscribers_by_topic[topic].append(self)
+
+        logger.debug(f"Created subscriber for topic: {topic}")
+
+    def __del__(self):
+        # Unsubscribe from all publishers
+        publishers = Publisher.get_publishers_for_topic(self.topic)
+        for publisher in publishers:
+            publisher.remove_subscriber(self.callback)
+
+        # Remove from class dictionary
+        with Subscriber._lock:
+            if self.topic in Subscriber._subscribers_by_topic:
+                if self in Subscriber._subscribers_by_topic[self.topic]:
+                    Subscriber._subscribers_by_topic[self.topic].remove(self)
+                if not Subscriber._subscribers_by_topic[self.topic]:
+                    del Subscriber._subscribers_by_topic[self.topic]
+
+    def _connect_to_publishers(self) -> None:
+        publishers = Publisher.get_publishers_for_topic(self.topic)
+        for publisher in publishers:
+            if publisher.message_type == self.message_type:
+                publisher.add_subscriber(self.callback)
+
+    @classmethod
+    def get_subscribers_for_topic(cls, topic: str) -> List["Subscriber"]:
+        with cls._lock:
+            return cls._subscribers_by_topic.get(topic, [])
+</file>
+
+<file path="upload_new_pip_version.sh">
+#!/bin/bash
+
+rm -rf dist
+rm -rf build
+rm -rf src/luckyrobots.egg-info
+
+# Read the current version from pyproject.toml
+current_version=$(grep -E 'version\s*=\s*"[^"]+"' pyproject.toml | head -1 | sed 's/.*version\s*=\s*"\([^"]*\)".*/\1/')
+
+if [ -z "$current_version" ]; then
+    echo "Error: Could not find version in pyproject.toml"
+    exit 1
+fi
+
+# Split the version into parts
+IFS='.' read -ra version_parts <<< "$current_version"
+
+# Increment the last part
+last_part=$((${version_parts[2]} + 1))
+
+# Construct the new version
+new_version="${version_parts[0]}.${version_parts[1]}.$last_part"
+
+# Update the version in pyproject.toml
+sed -i.bak "s/version\s*=\s*\"$current_version\"/version = \"$new_version\"/" pyproject.toml && rm pyproject.toml.bak
+
+echo "Version updated from $current_version to $new_version"
+
+# Build and upload
+python -m pip install --upgrade build
+python -m build
+python -m pip install --upgrade twine
+python -m twine upload dist/*
+</file>
+
+<file path="src/luckyrobots/core/manager.py">
+"""
+WebSocket server for distributed node communication.
+
+This module provides a WebSocket server that acts as a central hub for distributed
+nodes to discover each other and communicate.
+"""
+
+import msgpack
+import asyncio
+import logging
+from typing import Dict, Set
+
+from fastapi import FastAPI, WebSocket
+
+from ..message.transporter import MessageType, TransportMessage
+
+logging.basicConfig(
+    level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+)
+logger = logging.getLogger("manager")
+
+# FastAPI app
+app = FastAPI()
+
+
+class Manager:
+    def __init__(self):
+        # Dict of node name to WebSocket connection
+        self.active_nodes: Dict[str, WebSocket] = {}
+
+        # Dict of topic to set of subscribed node names
+        self.subscriptions: Dict[str, Set[str]] = {}
+
+        # Dict of service name to node name
+        self.services: Dict[str, str] = {}
+
+        # Lock for thread safety
+        self.lock = asyncio.Lock()
+
+    async def register_node(self, node_name: str, websocket: WebSocket):
+        """Register a node with the manager"""
+        async with self.lock:
+            self.active_nodes[node_name] = websocket
+            logger.info(f"Node registered: {node_name}")
+
+    async def unregister_node(self, node_name: str):
+        """Unregister a node from the manager"""
+        async with self.lock:
+            # Remove the node from active nodes
+            if node_name in self.active_nodes:
+                del self.active_nodes[node_name]
+
+            # Remove the node from subscriptions
+            for topic, nodes in list(self.subscriptions.items()):
+                if node_name in nodes:
+                    nodes.remove(node_name)
+                    if not nodes:
+                        del self.subscriptions[topic]
+
+            # Remove the node from services
+            for service, provider in list(self.services.items()):
+                if provider == node_name:
+                    del self.services[service]
+
+            logger.info(f"Node unregistered: {node_name}")
+
+    async def subscribe(self, node_name: str, topic: str):
+        """Subscribe a node to a topic"""
+        async with self.lock:
+            if topic not in self.subscriptions:
+                self.subscriptions[topic] = set()
+            self.subscriptions[topic].add(node_name)
+            logger.debug(f"Node {node_name} subscribed to topic: {topic}")
+
+    async def unsubscribe(self, node_name: str, topic: str):
+        """Unsubscribe a node from a topic"""
+        async with self.lock:
+            if topic in self.subscriptions and node_name in self.subscriptions[topic]:
+                self.subscriptions[topic].remove(node_name)
+                if not self.subscriptions[topic]:
+                    del self.subscriptions[topic]
+                logger.debug(f"Node {node_name} unsubscribed from topic: {topic}")
+
+    async def register_service(self, node_name: str, service_name: str):
+        async with self.lock:
+            self.services[service_name] = node_name
+            logger.debug(f"Service registered: {service_name} by node {node_name}")
+
+    async def unregister_service(self, node_name: str, service_name: str):
+        async with self.lock:
+            if (
+                service_name in self.services
+                and self.services[service_name] == node_name
+            ):
+                del self.services[service_name]
+                logger.debug(f"Service unregistered: {service_name}")
+
+    async def route_message(self, message: TransportMessage):
+        """Route a message to the appropriate nodes"""
+        try:
+            # Handle message based on its type
+            if message.msg_type == MessageType.PUBLISH:
+                await self._route_publish(message)
+            elif message.msg_type == MessageType.SERVICE_REQUEST:
+                await self._route_service_request(message)
+            elif message.msg_type == MessageType.SERVICE_RESPONSE:
+                await self._route_service_response(message)
+            else:
+                # For other message types, just log and ignore
+                logger.debug(
+                    f"Received message of type {message.msg_type}, not routing"
+                )
+        except Exception as e:
+            logger.error(f"Error routing message: {e}")
+
+    async def _route_publish(self, message: TransportMessage):
+        """Route a publish message to subscribed nodes"""
+        topic = message.topic_or_service
+        sender_node = message.node_name
+
+        # Get the list of subscribed nodes for this topic
+        async with self.lock:
+            subscribers = self.subscriptions.get(topic, set()).copy()
+
+        # Send the message to all subscribers except the sender
+        for node_name in subscribers:
+            if node_name != sender_node and node_name in self.active_nodes:
+                try:
+                    await self.active_nodes[node_name].send(
+                        msgpack.dumps(message.dict())
+                    )
+                except Exception as e:
+                    logger.error(f"Error sending to node {node_name}: {e}")
+
+    async def _route_service_request(self, message: TransportMessage):
+        service_name = message.topic_or_service
+        requester_node = message.node_name
+
+        # Find the service provider
+        async with self.lock:
+            provider_node = self.services.get(service_name)
+
+        if not provider_node:
+            # Service not found, send error response
+            error_response = TransportMessage(
+                msg_type=MessageType.SERVICE_RESPONSE,
+                node_name="node_server",
+                topic_or_service=service_name,
+                message_id=message.message_id,
+                data={"error": f"Service {service_name} not found"},
+            )
+
+            if requester_node in self.active_nodes:
+                try:
+                    await self.active_nodes[requester_node].send(
+                        msgpack.dumps(error_response.dict())
+                    )
+                except Exception as e:
+                    logger.error(
+                        f"Error sending error response to node {requester_node}: {e}"
+                    )
+            return
+
+        # Forward the request to the service provider
+        if provider_node in self.active_nodes:
+            try:
+                await self.active_nodes[provider_node].send_bytes(
+                    msgpack.dumps(message.dict())
+                )
+            except Exception as e:
+                logger.error(
+                    f"Error forwarding service request to node {provider_node}: {e}"
+                )
+                raise e
+        else:
+            # Provider not connected, send error response
+            error_response = TransportMessage(
+                msg_type=MessageType.SERVICE_RESPONSE,
+                node_name="node_server",
+                topic_or_service=service_name,
+                message_id=message.message_id,
+                data={"error": f"Service provider {provider_node} is not connected"},
+            )
+
+            if requester_node in self.active_nodes:
+                try:
+                    await self.active_nodes[requester_node].send(
+                        msgpack.dumps(error_response.dict())
+                    )
+                except Exception as e:
+                    logger.error(
+                        f"Error sending error response to node {requester_node}: {e}"
+                    )
+
+    async def _route_service_response(self, message: TransportMessage):
+        service_name = message.topic_or_service
+        message_id = message.message_id
+
+        if not message_id:
+            logger.error(f"Service response missing message_id: {message}")
+            return
+
+        # Extract requester node name from message_id (format: node_name_service_name_timestamp_id)
+        try:
+            parts = message_id.split("_")
+            requester_node = parts[0]
+
+            # For namespaced nodes, reconstruct the full name
+            if len(parts) > 4:  # There are more underscores in the node name
+                requester_node = "_".join(
+                    parts[:-3]
+                )  # Everything except the last 3 parts
+        except Exception as e:
+            logger.error(
+                f"Error extracting requester node from message_id {message_id}: {e}"
+            )
+            return
+
+        # Forward the response to the requester
+        if requester_node in self.active_nodes:
+            try:
+                await self.active_nodes[requester_node].send(
+                    msgpack.dumps(message.dict())
+                )
+            except Exception as e:
+                logger.error(
+                    f"Error forwarding service response to node {requester_node}: {e}"
+                )
+        else:
+            logger.warning(
+                f"Requester node {requester_node} not connected for response {message_id}"
+            )
+</file>
+
+<file path="src/luckyrobots/core/models.py">
+from typing import Any, Dict, List, Optional
+from pydantic import BaseModel, Field, model_validator
+
+
+class CameraShape(BaseModel):
+    """Shape of camera images"""
+
+    image_width: float = Field(description="Width of the image")
+    image_height: float = Field(description="Height of the image")
+    channel: int = Field(description="Number of color channels")
+
+
+class CameraData(BaseModel):
+    """Camera data in observations"""
+
+    camera_name: str = Field(alias="cameraName", description="Name of the camera")
+    dtype: str = Field(description="Data type of the image")
+    shape: CameraShape = Field(description="Shape of the image")
+    file_path: str = Field(alias="filePath", description="Path to the image file")
+    time_stamp: Optional[str] = Field(
+        None, alias="timeStamp", description="Camera timestamp"
+    )
+
+    class Config:
+        populate_by_name = True
+
+
+class ObservationModel(BaseModel):
+    """Observation model that matches the JSON structure"""
+
+    observation_state: Dict[str, float] = Field(
+        alias="observationState", description="State values for actuators"
+    )
+    observation_cameras: List[CameraData] = Field(
+        alias="observationCameras", description="List of camera data"
+    )
+
+    class Config:
+        populate_by_name = True
+
+
+class ActionModel(BaseModel):
+    """Action to control the robot"""
+
+    joint_positions: Optional[Dict[str, float]] = Field(
+        None, description="Joint positions in radians"
+    )
+    joint_velocities: Optional[Dict[str, float]] = Field(
+        None, description="Joint velocities in radians/sec"
+    )
+
+    @model_validator(mode="after")
+    def check_at_least_one_exists(self):
+        if self.joint_positions is None and self.joint_velocities is None:
+            raise ValueError(
+                "At least one of joint_positions or joint_velocities must be provided"
+            )
+        return self
+</file>
+
+<file path="src/luckyrobots/core/node.py">
+import asyncio
+import logging
+import threading
+import uuid
+from typing import Any, Callable, Dict, Type
+
+from ..message.pubsub import Publisher, Subscriber
+from ..message.srv.client import ServiceClient
+from ..message.srv.service import ServiceServer, ServiceError
+from ..message.transporter import Transporter
+from ..utils.event_loop import run_coroutine
+from .parameters import get_param, has_param, set_param
+
+logging.basicConfig(
+    level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+)
+logger = logging.getLogger("node")
+
+
+class Node:
+    def __init__(
+        self, name: str, namespace: str = "", host: str = None, port: int = None
+    ):
+        self.name = name
+        self.namespace = namespace.strip("/")
+        self.full_name = (
+            f"/{self.namespace}/{self.name}" if self.namespace else f"/{self.name}"
+        )
+
+        # Get host and port from parameters if not provided
+        self.host = host or get_param("core/host", "localhost")
+        self.port = port or get_param("core/port", 3000)
+
+        # Create a unique ID for this node instance
+        self.instance_id = str(uuid.uuid4())
+
+        self._publishers: Dict[str, Publisher] = {}
+        self._subscribers: Dict[str, Subscriber] = {}
+        self._services: Dict[str, ServiceServer] = {}
+        self._clients: Dict[str, ServiceClient] = {}
+        self._running = False
+        self._shutdown_event = threading.Event()
+
+        # Initialize WebSocket transporter
+        # Note: We connect to the same server for all communications
+        self.transporter = Transporter(
+            node_name=self.full_name,
+            uuid=self.instance_id,
+            host=self.host,
+            port=self.port,
+        )
+
+        logger.info(f"Created node: {self.full_name} (ID: {self.instance_id})")
+
+    def get_qualified_name(self, name: str) -> str:
+        if name.startswith("/"):
+            return name
+
+        return f"{self.full_name}/{name}"
+
+    def create_publisher(
+        self, message_type: Type, topic: str, queue_size: int = 10
+    ) -> Publisher:
+        qualified_topic = self.get_qualified_name(topic)
+        publisher = Publisher(qualified_topic, message_type, queue_size)
+        self._publishers[qualified_topic] = publisher
+
+        # Wrap the publish method to distribute messages
+        original_publish = publisher.publish
+
+        def distributed_publish(message):
+            # Publish locally
+            original_publish(message)
+
+            # Publish to remote nodes via transport layer
+            self.transporter.publish(qualified_topic, message)
+
+        publisher.publish = distributed_publish
+
+        return publisher
+
+    def create_subscription(
+        self,
+        message_type: Type,
+        topic: str,
+        callback: Callable[[Any], None],
+        queue_size: int = 10,
+    ) -> Subscriber:
+        qualified_topic = self.get_qualified_name(topic)
+        subscriber = Subscriber(qualified_topic, message_type, callback, queue_size)
+        self._subscribers[qualified_topic] = subscriber
+
+        # Create a wrapper for the callback that handles message type conversion
+        def transport_callback(data):
+            # Try to convert the data to the expected message type
+            if hasattr(message_type, "parse_obj"):
+                try:
+                    message = message_type.parse_obj(data)
+                    callback(message)
+                except Exception as e:
+                    logger.error(f"Error converting message data: {e}")
+            else:
+                # If the message type doesn't have parse_obj, pass the data directly
+                callback(data)
+
+        # Subscribe to the topic on the transport layer
+        self.transporter.subscribe(qualified_topic, transport_callback)
+
+        return subscriber
+
+    def create_client(self, service_type: Type, service_name: str) -> ServiceClient:
+        qualified_name = self.get_qualified_name(service_name)
+        client = ServiceClient(service_type, qualified_name)
+        self._clients[qualified_name] = client
+
+        # Store the original call method
+        original_call = client.call
+
+        # Create a new call method that tries both local and remote services
+        async def distributed_call(request, timeout=30.0):
+            try:
+                # Try to call the service locally first
+                return await original_call(request, qualified_name, timeout=timeout)
+            except Exception as e:
+                logger.debug(f"Local service call failed: {e}, trying remote service")
+
+                # Convert the request to a dictionary
+                if hasattr(request, "dict"):
+                    request_data = request.dict()
+                elif hasattr(request, "to_dict"):
+                    request_data = request.to_dict()
+                else:
+                    request_data = request
+
+                # Call the service through the transport
+                try:
+                    response_data = await self.transporter.call_service(
+                        qualified_name, request_data, timeout=timeout
+                    )
+
+                    # Check if response has an error
+                    if isinstance(response_data, dict) and "error" in response_data:
+                        raise ServiceError(
+                            response_data.get("error", "Unknown service error")
+                        )
+
+                    # Convert the response to the expected response type
+                    response_type = getattr(service_type, "Response", None)
+
+                    if response_type and hasattr(response_type, "parse_obj"):
+                        try:
+                            return response_type.parse_obj(response_data)
+                        except Exception as parse_error:
+                            logger.error(
+                                f"Error converting response data: {parse_error}"
+                            )
+                            raise ServiceError(f"Error parsing response: {parse_error}")
+                    else:
+                        # If no specific response type or parsing failed, return the data directly
+                        return response_data
+                except Exception as remote_error:
+                    logger.error(f"Remote service call failed: {remote_error}")
+                    raise ServiceError(f"Remote service call failed: {remote_error}")
+
+        # Replace the call method
+        client.call = distributed_call
+
+        return client
+
+    async def create_service(
+        self, service_type: Type, service_name: str, handler: Callable[[Any], Any]
+    ) -> ServiceServer:
+        qualified_name = self.get_qualified_name(service_name)
+        service = ServiceServer(service_type, qualified_name, handler)
+        self._services[qualified_name] = service
+
+        # Create a wrapper for the handler that handles message type conversion and async
+        async def transport_handler(request_data):
+            # Try to convert the request data to the expected request type
+            request_type = getattr(service_type, "Request", service_type)
+
+            if hasattr(request_type, "parse_obj"):
+                try:
+                    request = request_type.parse_obj(request_data)
+                except Exception as e:
+                    logger.error(f"Error converting request data: {e}")
+                    return {"error": str(e), "success": False}
+            else:
+                # If the request type doesn't have parse_obj, pass the data directly
+                request = request_data
+
+            # Call the original handler and properly handle async
+            try:
+                if asyncio.iscoroutinefunction(handler):
+                    # Await the coroutine directly
+                    response = await handler(request)
+                else:
+                    # Run synchronous handler
+                    response = handler(request)
+
+                # If the response is also a coroutine, await it (sometimes happens with wrapped handlers)
+                if asyncio.iscoroutine(response):
+                    response = await response
+
+                # Convert the response to a dictionary
+                if hasattr(response, "dict"):
+                    return response.dict()
+                elif isinstance(response, dict):
+                    return response
+                else:
+                    # Try to convert to dict
+                    try:
+                        return dict(response)
+                    except (TypeError, ValueError):
+                        return {"value": response, "success": True}
+            except Exception as e:
+                logger.error(f"Error in service handler: {e}")
+                return {"error": str(e), "success": False}
+
+        # Register with transport using the async-aware wrapper
+        self.transporter.register_service(qualified_name, transport_handler)
+
+        return service
+
+    def create_service_client(
+        self,
+        service_type: Type,
+        service_name: str,
+        host: str = "localhost",
+        port: int = 3000,
+    ) -> ServiceClient:
+        qualified_name = self.get_qualified_name(service_name)
+        client = ServiceClient(service_type, qualified_name, host, port)
+        self._clients[qualified_name] = client
+        return client
+
+    def get_param(self, name: str, default: Any = None) -> Any:
+        # Try node-specific parameter first
+        node_param = f"{self.full_name}/{name}"
+        if has_param(node_param):
+            return get_param(node_param)
+
+        # Fall back to global parameter
+        return get_param(name, default)
+
+    def set_param(self, name: str, value: Any) -> None:
+        # Always set as node-specific parameter
+        node_param = f"{self.full_name}/{name}"
+        set_param(node_param, value)
+
+    def start(self) -> None:
+        self._running = True
+        run_coroutine(self._setup_async())
+        logger.info(f"Node {self.full_name} started")
+
+    async def _setup_async(self):
+        pass
+
+    def spin(self) -> None:
+        logger.info(f"Node {self.full_name} spinning")
+        self._shutdown_event.wait()
+        logger.info(f"Node {self.full_name} stopped spinning")
+
+    def shutdown(self) -> None:
+        self._running = False
+
+        # Shutdown WebSocket transporter
+        self.transporter.shutdown()
+
+        self._shutdown_event.set()
+        logger.info(f"Node {self.full_name} shutdown")
+</file>
+
+<file path=".gitignore">
+# Python cache files
+__pycache__/
+*.py[cod]
+/examples/LuckEWorld.app
+.DS_Store
+.DS_Store
+/src/luckyrobots/__pycache__
+/src/luckyrobots/node_modules
+/src/luckyrobots/__pycache__
+/dist
+/dist
+/examples/Binary
+/src/luckyrobots/__pycache__
+/playground
+.env
+generated.tfvars
+terraform.tfstate
+terraform.tfstate.backup
+.terraform/
+.terraform.lock.hcl
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.history
+</file>
+
+<file path="CNAME">
+jobs.luckyrobots.ai
+</file>
+
+<file path="src/luckyrobots/message/transporter.py">
+"""
+WebSocket-based transport layer for the LuckyRobots messaging system.
+
+This module provides the WebSocketTransport class which handles message
+serialization and communication over WebSockets between distributed nodes.
+"""
+
+import msgpack
+import asyncio
+import json
+import logging
+import time
+import uuid
+import websockets
+from enum import Enum
+from typing import Any, Callable, Dict, List, Optional
+
+from pydantic import BaseModel, ValidationError
+
+from ..utils.event_loop import run_coroutine, get_event_loop
+
+
+logging.basicConfig(
+    level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+)
+logger = logging.getLogger("transporter")
+
+
+class MessageType(str, Enum):
+    PUBLISH = "publish"
+    SUBSCRIBE = "subscribe"
+    UNSUBSCRIBE = "unsubscribe"
+    SERVICE_REQUEST = "service_request"
+    SERVICE_RESPONSE = "service_response"
+    SERVICE_REGISTER = "service_register"
+    SERVICE_UNREGISTER = "service_unregister"
+    NODE_ANNOUNCE = "node_announce"
+    NODE_SHUTDOWN = "node_shutdown"
+
+
+class TransportMessage(BaseModel):
+    msg_type: MessageType
+    node_name: str
+    uuid: str
+    topic_or_service: str
+    data: Optional[dict] = None
+    message_id: Optional[str] = None
+
+
+class Transporter:
+    def __init__(
+        self,
+        node_name: str,
+        uuid: str,
+        host: str = "localhost",
+        port: int = 3000,
+        reconnect_interval: float = 5.0,
+    ):
+        self.node_name = node_name
+        self.uuid = uuid
+        self.server_uri = f"ws://{host}:{port}/nodes"
+        self.reconnect_interval = reconnect_interval
+
+        # Websocket connections
+        self._connection = None
+        self._connected = asyncio.Event()
+        self._connection_task = None
+        self._should_run = True
+
+        # Message handlers
+        self._topic_handlers: Dict[str, List[Callable[[Any], None]]] = {}
+        self._service_handlers: Dict[str, Callable[[Any], Any]] = {}
+        self._response_futures: Dict[str, asyncio.Future] = {}
+
+        # Start connection task using the shared event loop
+        self._connection_task = run_coroutine(self._maintain_connection())
+
+    async def _maintain_connection(self):
+        """Maintain a WebSocket connection to the server, reconnecting as needed"""
+        while self._should_run:
+            try:
+                async with websockets.connect(self.server_uri) as websocket:
+                    self._connection = websocket
+                    self._connected.set()
+                    logger.info(f"Node {self.node_name} connected to WebSocket server")
+
+                    # Announce this node
+                    await self._announce_node()
+
+                    # Re-subscribe to all topics
+                    await self._resubscribe()
+
+                    # Re-register all services
+                    await self._reregister_services()
+
+                    # Handle messages
+                    await self._handle_messages()
+            except (websockets.ConnectionClosed, ConnectionRefusedError) as e:
+                self._connected.clear()
+                self._connection = None
+                logger.warning(
+                    f"WebSocket connection lost: {e}. Reconnecting in {self.reconnect_interval} seconds"
+                )
+                await asyncio.sleep(self.reconnect_interval)
+            except Exception as e:
+                logger.error(f"Unexpected error in WebSocket connection: {e}")
+                self._connected.clear()
+                self._connection = None
+                await asyncio.sleep(self.reconnect_interval)
+
+    async def _announce_node(self):
+        """Announce this node to the network"""
+        message = TransportMessage(
+            msg_type=MessageType.NODE_ANNOUNCE,
+            node_name=self.node_name,
+            uuid=self.uuid,
+            topic_or_service="",
+        )
+
+        await self._send_message(message)
+
+    async def _resubscribe(self):
+        """Re-subscribe to all topics after reconnection"""
+        for topic in self._topic_handlers:
+            message = TransportMessage(
+                msg_type=MessageType.SUBSCRIBE,
+                node_name=self.node_name,
+                uuid=self.uuid,
+                topic_or_service=topic,
+            )
+
+            await self._send_message(message)
+
+    async def _reregister_services(self):
+        """Re-register all services after reconnection"""
+        for service in self._service_handlers:
+            message = TransportMessage(
+                msg_type=MessageType.SERVICE_REGISTER,
+                node_name=self.node_name,
+                uuid=self.uuid,
+                topic_or_service=service,
+            )
+
+            await self._send_message(message)
+
+    async def _handle_messages(self):
+        """Handle incoming messages from the WebSocket connection"""
+        while self._connection and self._should_run:
+            try:
+                try:
+                    message_text = await self._connection.recv()
+                    # Parse the message
+                    message_data = msgpack.unpackb(message_text)
+                    message = TransportMessage(**message_data)
+
+                    # Process directly since we're already in an async context
+                    await self._process_message(message)
+                except (json.JSONDecodeError, ValidationError) as e:
+                    logger.error(f"Error parsing message: {e}, message: {message_text}")
+            except websockets.ConnectionClosed:
+                logger.info("WebSocket connection closed")
+                break
+            except Exception as e:
+                logger.error(f"Error handling message: {e}")
+
+    async def _process_message(self, message: TransportMessage):
+        if message.msg_type == MessageType.PUBLISH:
+            # Handle published messages
+            if message.topic_or_service in self._topic_handlers:
+                for handler in self._topic_handlers[message.topic_or_service]:
+                    try:
+                        handler(message.data)
+                    except Exception as e:
+                        logger.error(f"Error in message handler: {e}")
+
+        elif message.msg_type == MessageType.SERVICE_REQUEST:
+            # Handle service requests
+            if message.topic_or_service in self._service_handlers:
+                handler = self._service_handlers[message.topic_or_service]
+                try:
+                    # Process the request
+                    result = await self._run_service_handler(handler, message.data)
+
+                    # Send the response
+                    response = TransportMessage(
+                        msg_type=MessageType.SERVICE_RESPONSE,
+                        node_name=self.node_name,
+                        uuid=self.uuid,
+                        topic_or_service=message.topic_or_service,
+                        message_id=message.message_id,
+                        data=result,
+                    )
+
+                    await self._send_message(response)
+                except Exception as e:
+                    logger.error(f"Error handling service request: {e}")
+                    # Send error response
+                    error_response = TransportMessage(
+                        msg_type=MessageType.SERVICE_RESPONSE,
+                        node_name=self.node_name,
+                        uuid=self.uuid,
+                        topic_or_service=message.topic_or_service,
+                        message_id=message.message_id,
+                        data={"error": str(e), "success": False},
+                    )
+
+                    await self._send_message(error_response)
+
+        elif message.msg_type == MessageType.SERVICE_RESPONSE:
+            # Handle service responses
+            if message.message_id in self._response_futures:
+                future = self._response_futures[message.message_id]
+                if not future.done():
+                    future.set_result(message.data)
+                del self._response_futures[message.message_id]
+
+    async def _run_service_handler(self, handler: Callable, request_data: dict) -> dict:
+        try:
+            # If the handler is asynchronous, await it
+            if asyncio.iscoroutinefunction(handler):
+                # This part is correct, but we need to ensure the result is properly awaited
+                result = await handler(request_data)
+            else:
+                # Run non-async handler in a thread pool
+                loop = get_event_loop()
+                result = await loop.run_in_executor(None, handler, request_data)
+
+            # Check if the result itself is a coroutine (sometimes happens with wrapped functions)
+            if asyncio.iscoroutine(result):
+                result = await result
+
+            # Ensure result is JSON serializable
+            if hasattr(result, "dict"):
+                return result.dict()
+            elif isinstance(result, dict):
+                return result
+            else:
+                # Try to convert to dict if possible
+                try:
+                    return dict(result)
+                except (TypeError, ValueError):
+                    return {"value": result, "success": True}
+        except Exception as e:
+            logger.error(f"Error in service handler: {e}")
+            raise
+
+    async def _send_message(self, message: TransportMessage):
+        if not self._connection:
+            await self._connected.wait()
+
+        try:
+            await self._connection.send(msgpack.dumps(message.dict()))
+        except websockets.ConnectionClosed:
+            logger.warning("Could not send message, connection closed")
+            self._connected.clear()
+        except Exception as e:
+            logger.error(f"Error sending message: {e}")
+
+    def publish(self, topic: str, message: Any):
+        # Ensure message is serializable
+        if hasattr(message, "dict"):
+            data = message.dict()
+        elif hasattr(message, "to_dict"):
+            data = message.to_dict()
+        elif isinstance(message, dict):
+            data = message
+        else:
+            data = {"value": message}
+
+        transport_message = TransportMessage(
+            msg_type=MessageType.PUBLISH,
+            node_name=self.node_name,
+            uuid=self.uuid,
+            topic_or_service=topic,
+            data=data,
+        )
+
+        run_coroutine(self._send_message(transport_message))
+
+    def subscribe(self, topic: str, callback: Callable[[Any], None]):
+        # Add the callback to the topic handlers
+        if topic not in self._topic_handlers:
+            self._topic_handlers[topic] = []
+        self._topic_handlers[topic].append(callback)
+
+        # Send a subscribe message
+        transport_message = TransportMessage(
+            msg_type=MessageType.SUBSCRIBE,
+            node_name=self.node_name,
+            uuid=self.uuid,
+            topic_or_service=topic,
+        )
+
+        run_coroutine(self._send_message(transport_message))
+
+    def unsubscribe(self, topic: str, callback: Callable[[Any], None]):
+        # Remove the callback from the topic handlers
+        if topic not in self._topic_handlers:
+            return
+
+        if callback in self._topic_handlers[topic]:
+            self._topic_handlers[topic].remove(callback)
+
+        # If no more handlers, send an unsubscribe message
+        if not self._topic_handlers[topic]:
+            transport_message = TransportMessage(
+                msg_type=MessageType.UNSUBSCRIBE,
+                node_name=self.node_name,
+                uuid=self.uuid,
+                topic_or_service=topic,
+            )
+
+            run_coroutine(self._send_message(transport_message))
+
+            # Remove the empty list
+            del self._topic_handlers[topic]
+
+    def register_service(self, service_name: str, handler: Callable[[Any], Any]):
+        # Add the handler to the service handlers
+        self._service_handlers[service_name] = handler
+
+        # Send a service register message
+        transport_message = TransportMessage(
+            msg_type=MessageType.SERVICE_REGISTER,
+            node_name=self.node_name,
+            uuid=self.uuid,
+            topic_or_service=service_name,
+        )
+
+        run_coroutine(self._send_message(transport_message))
+
+    def unregister_service(self, service_name: str):
+        # Remove the handler from the service handlers
+        if service_name in self._service_handlers:
+            del self._service_handlers[service_name]
+
+            # Send a service unregister message
+            transport_message = TransportMessage(
+                msg_type=MessageType.SERVICE_UNREGISTER,
+                node_name=self.node_name,
+                uuid=self.uuid,
+                topic_or_service=service_name,
+            )
+
+            run_coroutine(self._send_message(transport_message))
+
+    async def call_service(
+        self, service_name: str, request: Any, timeout: float = 30.0
+    ) -> Any:
+        # Ensure request is serializable
+        if hasattr(request, "dict"):
+            data = request.dict()
+        elif hasattr(request, "to_dict"):
+            data = request.to_dict()
+        elif isinstance(request, dict):
+            data = request
+        else:
+            data = {"value": request}
+
+        # Generate a unique message ID
+        message_id = f"{self.node_name}_{service_name}_{time.time()}_{uuid.uuid4().hex}"
+
+        # Create a future for the response within the same event loop
+        shared_loop = get_event_loop()
+        future = shared_loop.create_future()
+        self._response_futures[message_id] = future
+
+        # Create the service request message
+        transport_message = TransportMessage(
+            msg_type=MessageType.SERVICE_REQUEST,
+            node_name=self.node_name,
+            uuid=self.uuid,
+            topic_or_service=service_name,
+            message_id=message_id,
+            data=data,
+        )
+
+        # Send the message directly within the same event loop
+        try:
+            await self._send_message(transport_message)
+        except Exception as e:
+            # Clean up and propagate the error
+            if message_id in self._response_futures:
+                del self._response_futures[message_id]
+            raise Exception(f"Failed to send service request: {e}")
+
+        try:
+            # Wait for the response with timeout
+            return await asyncio.wait_for(future, timeout)
+        except asyncio.TimeoutError:
+            # Remove the future if it times out
+            if message_id in self._response_futures:
+                del self._response_futures[message_id]
+            raise TimeoutError(
+                f"Service call to {service_name} timed out after {timeout} seconds"
+            )
+        except Exception as e:
+            # Remove the future on any error
+            if message_id in self._response_futures:
+                del self._response_futures[message_id]
+            raise Exception(f"Service call error: {e}")
+
+    def shutdown(self):
+        """Shutdown the transport layer"""
+        self._should_run = False
+
+        # Send a node shutdown message
+        transport_message = TransportMessage(
+            msg_type=MessageType.NODE_SHUTDOWN,
+            node_name=self.node_name,
+            uuid=self.uuid,
+            topic_or_service="",
+        )
+
+        # Schedule the send operation in the event loop
+        try:
+            run_coroutine(self._send_message(transport_message))
+        except Exception:
+            pass
+
+        self._connection = None
+        self._response_futures.clear()
+</file>
+
+<file path="pyproject.toml">
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "luckyrobots"
+version = "0.1.48"
+description = "Robotics-AI Training in Hyperrealistic Game Environments"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+authors = [
+    {name = "Devrim Yasar", email = "braces.verbose03@icloud.com"},
+    {name = "Ethan Clark", email = "ethan@luckyrobots.com"},
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "watchdog",
+    "fastapi",
+    "uvicorn[standard]",
+    "ultralytics",
+    "requests",
+    "tqdm",
+    "beautifulsoup4",
+    "psutil",
+    "opencv-python",
+    "packaging",
+    "websockets",
+    "pydantic",
+    "numpy",
+    "asyncio",
+    "websocket-client",
+    "msgpack",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/luckyrobots/luckyrobots"
+"Bug Tracker" = "https://github.com/luckyrobots/luckyrobots/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/luckyrobots"]
+
+[project.optional-dependencies]
+dev = [
+    "build",
+    "twine",
+    "black",
+    "pre-commit",
+]
+</file>
+
+<file path="src/luckyrobots/message/srv/types.py">
+"""Data models for messaging system.
+
+This module defines the data models used for request and response messaging.
+"""
+
+from typing import Any, Dict, Optional
+
+from ...core.models import ActionModel, ObservationModel
+
+
+from pydantic import BaseModel, Field
+
+
+class ServiceRequest(BaseModel):
+    """Base class for service requests"""
+
+    pass
+
+
+class ServiceResponse(BaseModel):
+    """Base class for service responses"""
+
+    success: bool = Field(
+        default=True, description="Whether the service call was successful"
+    )
+    message: str = Field(
+        default="", description="A message describing the service call"
+    )
+
+    type: str = Field(description="Type of response (reset_response or step_response)")
+    id: str = Field(description="Unique identifier")
+    time_stamp: str = Field(alias="timeStamp", description="Timestamp value")
+
+    observation: ObservationModel = Field(description="Observation data")
+    info: Dict[str, str] = Field(description="Additional information")
+
+    class Config:
+        populate_by_name = True
+
+
+class ResetRequest(ServiceRequest):
+    """Request to reset the robot"""
+
+    seed: Optional[int] = Field(
+        default=None, description="The seed to reset the robot with"
+    )
+    options: Optional[Dict[str, Any]] = Field(
+        default=None, description="Options for the reset"
+    )
+
+
+class ResetResponse(ServiceResponse):
+    """Response to reset request"""
+
+    pass
+
+
+class Reset:
+    """Reset the robot"""
+
+    Request = ResetRequest
+    Response = ResetResponse
+
+
+class StepRequest(ServiceRequest):
+    """Request to step the robot with an action"""
+
+    action: ActionModel = Field(description="The action to step the robot with")
+
+
+class StepResponse(ServiceResponse):
+    """Response to step request"""
+
+    pass
+
+
+class Step:
+    """Step the robot with an action"""
+
+    Request = StepRequest
+    Response = StepResponse
+</file>
+
+<file path="examples/controller.py">
+import time
+import asyncio
+import logging
+import threading
+import argparse
+from luckyrobots import (
+    Node,
+    LuckyRobots,
+    Step,
+    Reset,
+    ActionModel,
+    run_coroutine,
+)
+
+logging.basicConfig(
+    level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+)
+logger = logging.getLogger("controller")
+
+
+class Controller(Node):
+    def __init__(
+        self,
+        name: str = "controller",
+        namespace: str = "",
+        host: str = None,
+        port: int = None,
+    ) -> None:
+        super().__init__(name, namespace, host, port)
+
+        logger.info(f"Controller node {self.full_name} created")
+        self._shutdown_event = threading.Event()
+        self.loop_running = False
+
+    async def _setup_async(self) -> None:
+        self.reset_client = self.create_client(Reset, "/reset")
+        self.step_client = self.create_client(Step, "/step")
+
+    async def request_reset(
+        self, seed: int | None = None, options: dict | None = None
+    ) -> Reset.Response:
+        request = Reset.Request(seed=seed, options=options)
+
+        try:
+            response = await self.reset_client.call(request, timeout=30.0)
+            return response
+        except Exception as e:
+            logger.error(f"Error resetting scene: {e}")
+            return None
+
+    async def request_step(self, action: ActionModel) -> Step.Response:
+        request = Step.Request(action=action)
+
+        try:
+            response = await self.step_client.call(request)
+            return response
+        except Exception as e:
+            logger.error(f"Error stepping robot: {e}")
+            return None
+
+    async def run_loop(self, rate_hz: float = 1.0) -> None:
+        logger.info("Starting control loop")
+        if self.loop_running:
+            logger.warning("Control loop already running")
+            return
+
+        self.loop_running = True
+        period = 1.0 / rate_hz
+
+        logger.info(f"Starting control loop at {rate_hz} Hz")
+
+        # Wait for a moment to ensure LuckyRobots core is fully initialized
+        await asyncio.sleep(1.0)
+
+        # Attempt to reset the robot
+        response = await self.request_reset()
+        if response is None:
+            self.loop_running = False
+            self.shutdown()
+            raise Exception("Failed to reset robot, control loop will not start")
+
+        logger.info(f"Reset info: {response.info}")
+
+        try:
+            while self.loop_running and not self._shutdown_event.is_set():
+                # start_time = time.time()
+
+                action = ActionModel(
+                    joint_positions={
+                        "0": 0.0,  # Rotation
+                        "1": 0.0,  # Pitch
+                        "2": 0.0,  # Elbow
+                        "3": 0.0,  # Wrist Pitch
+                        "4": 0.0,  # Wrist Roll
+                        "5": 0.0,  # Jaw
+                    }
+                )
+                response = await self.request_step(action)
+                if response is None:
+                    self.loop_running = False
+                    self.shutdown()
+                    raise Exception("Step request failed, control loop will not step")
+
+                logger.info(f"Step info: {response.info}")
+
+                # # Calculate sleep time to maintain the desired rate
+                # elapsed = time.time() - start_time
+                # sleep_time = max(0, period - elapsed)
+                # await asyncio.sleep(sleep_time)
+        except Exception as e:
+            logger.error(f"Error in control loop: {e}")
+        finally:
+            self.loop_running = False
+            logger.info("Control loop ended")
+
+    def start_loop(self, rate_hz: float = 1.0) -> None:
+        if self.loop_running:
+            logger.warning("Control loop is already running")
+            return
+
+        self._shutdown_event.clear()
+
+        # Use the shared event loop to run our coroutine
+        run_coroutine(self.run_loop(rate_hz))
+        logger.info("Started control loop in shared event loop")
+
+    def stop_loop(self) -> None:
+        self.loop_running = False
+        self._shutdown_event.set()
+        logger.info("Control loop stop requested")
+
+
+def main():
+    parser = argparse.ArgumentParser(description="Keyboard Teleop for LuckyRobots")
+    parser.add_argument("--host", type=str, default=None, help="Host to connect to")
+    parser.add_argument("--port", type=int, default=None, help="Port to connect to")
+    parser.add_argument(
+        "--rate", type=float, default=1.0, help="Control loop rate in Hz"
+    )
+    args = parser.parse_args()
+
+    try:
+        luckyrobots = LuckyRobots(host=args.host, port=args.port)
+
+        controller = Controller(host=args.host, port=args.port)
+
+        luckyrobots.register_node(controller)
+
+        luckyrobots.start()
+
+        logger.info("Waiting for Lucky World client to connect...")
+        if luckyrobots.wait_for_world_client(timeout=60.0):
+            controller.start_loop(rate_hz=args.rate)
+            logger.info("Controller running. Press Ctrl+C to exit.")
+            luckyrobots.spin()
+        else:
+            luckyrobots.shutdown()
+            raise Exception(
+                "No world client connected. Controller loop will not start."
+            )
+
+    except KeyboardInterrupt:
+        logger.info("Received keyboard interrupt, shutting down...")
+    except Exception as e:
+        logger.error(f"Error in main: {e}")
+    finally:
+        if "controller" in locals():
+            controller.stop_loop()
+        logger.info("Application terminated")
+
+
+if __name__ == "__main__":
+    main()
+</file>
+
+<file path="src/luckyrobots/core/luckyrobots.py">
+import json
+import msgpack
+import asyncio
+import logging
+import os
+import uuid
+import platform
+import signal
+import sys
+import threading
+import time
+from typing import Dict, Optional
+
+import uvicorn
+from fastapi import FastAPI, WebSocket, WebSocketDisconnect
+from websocket import create_connection
+
+from .manager import Manager
+from ..message.transporter import MessageType, TransportMessage
+from ..message.srv.types import Reset, Step
+from ..runtime.run_executable import is_luckyworld_running, run_luckyworld_executable
+from ..utils.library_dev import library_dev
+from ..core.models import ObservationModel
+from .node import Node
+from .parameters import load_from_file, set_param
+from ..utils.event_loop import (
+    get_event_loop,
+    initialize_event_loop,
+    shutdown_event_loop,
+)
+
+logging.basicConfig(
+    level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+)
+logger = logging.getLogger("luckyrobots")
+
+app = FastAPI()
+manager = Manager()
+
+
+class LuckyRobots(Node):
+    host = "localhost"
+    port = 3000
+
+    robot_client = None
+    world_client = None
+
+    _pending_resets = {}
+    _pending_steps = {}
+
+    _nodes: Dict[str, "Node"] = {}
+    _running = False
+    _shutdown_event = threading.Event()
+
+    def __init__(self, host: str = None, port: int = None):
+        initialize_event_loop()
+
+        self.host = host or self.host
+        self.port = port or self.port
+
+        if not self._is_websocket_server_running():
+            self._start_websocket_server()
+
+        super().__init__("lucky_robots_manager", "", host, port)
+
+        app.lucky_robots = self
+
+        self._load_default_params()
+
+    def _is_websocket_server_running(self) -> bool:
+        """Check if the websocket server is already running"""
+        try:
+            ws_url = f"ws://{self.host}:{self.port}/nodes"
+            ws = create_connection(ws_url, timeout=1)
+            ws.close()
+            logger.info(f"WebSocket server running on {self.host}:{self.port}")
+            return True
+        except Exception as e:
+            logger.info(f"WebSocket server not running on {self.host}:{self.port}")
+            return False
+
+    def _start_websocket_server(self) -> None:
+        """Start the websocket server in a separate thread using uvicorn"""
+
+        def run_server():
+            logging.getLogger("uvicorn.access").setLevel(logging.WARNING)
+            uvicorn.run(app, host=self.host, port=self.port, log_level="warning")
+
+        server_thread = threading.Thread(target=run_server, daemon=True)
+        server_thread.start()
+
+        logger.info(f"Starting WebSocket server on {self.host}:{self.port}")
+
+        # Give the server time to start
+        time.sleep(0.5)
+
+    def _load_default_params(self) -> None:
+        """Load the default parameters for the LuckyRobots node"""
+        set_param("core/host", self.host)
+        set_param("core/port", self.port)
+
+        # Look for parameter files
+        param_files = [
+            "luckyrobots_params.json",
+            os.path.expanduser("~/.luckyrobots/params.json"),
+        ]
+
+        for param_file in param_files:
+            if os.path.exists(param_file):
+                load_from_file(param_file)
+                logger.info(f"Loaded parameters from {param_file}")
+
+    @staticmethod
+    def set_host(ip_address: str) -> None:
+        """Set the host address for the LuckyRobots node"""
+        LuckyRobots.host = ip_address
+        set_param("core/host", ip_address)
+
+    def register_node(self, node: Node) -> None:
+        """Register a node with the LuckyRobots node"""
+        self._nodes[node.full_name] = node
+        logger.info(f"Registered node: {node.full_name}")
+
+    async def _setup_async(self):
+        """Setup the LuckyRobots node asynchronously"""
+        self.reset_service = await self.create_service(
+            Reset, "/reset", self.handle_reset
+        )
+        self.step_service = await self.create_service(Step, "/step", self.handle_step)
+
+    def start(
+        self,
+        scene: str = None,
+        task: str = None,
+        robot_type: str = None,
+        render_mode: str = None,
+        binary_path: Optional[str] = None,
+    ) -> None:
+        """Start the LuckyRobots node"""
+        if self._running:
+            logger.warning("LuckyRobots is already running")
+            return
+
+        if (
+            not is_luckyworld_running()
+            and "--lr-no-executable" not in sys.argv
+            and render_mode is not None
+        ):
+            logger.error("LuckyWorld is not running, starting it now...")
+            # run_luckyworld_executable(scene, task, robot_type, binary_path)
+
+        library_dev()
+
+        self._setup_signal_handlers()
+
+        # Start all registered nodes
+        for node in self._nodes.values():
+            try:
+                node.start()
+            except Exception as e:
+                logger.error(f"Error starting node {node.full_name}: {e}")
+
+        # Start the luckyrobots node
+        super().start()
+
+        self._running = True
+
+    def _setup_signal_handlers(self) -> None:
+        """Setup signal handlers for the LuckyRobots node to handle Ctrl+C"""
+
+        def sigint_handler(signum, frame):
+            print("\nCtrl+C pressed. Shutting down...")
+            self.shutdown()
+
+        signal.signal(signal.SIGINT, sigint_handler)
+
+    def _display_welcome_message(self) -> None:
+        """Display the welcome message for the LuckyRobots node in the terminal"""
+        print("*" * 60)
+        print(
+            "                                                                                "
+        )
+        print(
+            "                                                                                "
+        )
+        print("▄▄▌  ▄• ▄▌ ▄▄· ▄ •▄  ▄· ▄▌▄▄▄        ▄▄▄▄·       ▄▄▄▄▄.▄▄ · ")
+        print("██•  █▪██▌▐█ ▌▪█▌▄▌▪▐█▪██▌▀▄ █·▪     ▐█ ▀█▪▪     •██  ▐█ ▀. ")
+        print("██▪  █▌▐█▌██ ▄▄▐▀▀▄·▐█▌▐█▪▐▀▀▄  ▄█▀▄ ▐█▀▀█▄ ▄█▀▄  ▐█.▪▄▀▀▀█▄")
+        print("▐█▌▐▌▐█▄█▌▐███▌▐█.█▌ ▐█▀·.▐█•█▌▐█▌.▐▌██▄▪▐█▐█▌.▐▌ ▐█▌·▐█▄▪▐█")
+        print(".▀▀▀  ▀▀▀ ·▀▀▀ ·▀  ▀  ▀ • .▀  ▀ ▀█▄▀▪·▀▀▀▀  ▀█▄▀▪ ▀▀▀  ▀▀▀▀ ")
+        print(
+            "                                                                                "
+        )
+        print(
+            "                                                                                "
+        )
+        if platform.system() == "Darwin":
+            print("*" * 60)
+            print("For macOS users:")
+            print(
+                "Please be patient. The application may take up to a minute to open on its first launch."
+            )
+            print("If the application doesn't appear, please follow these steps:")
+            print("1. Open System Settings")
+            print("2. Navigate to Privacy & Security")
+            print("3. Scroll down and click 'Allow' next to the 'luckyrobots' app")
+            print("*" * 60)
+        print("Lucky Robots application started successfully.")
+        print("To move the robot: Choose a level and tick the HTTP checkbox.")
+        print("To receive camera feed: Choose a level and tick the Capture checkbox.")
+        print("*" * 60)
+
+    def wait_for_world_client(self, timeout: float = 60.0) -> bool:
+        """Wait for the world client to connect to the websocket server"""
+        start_time = time.time()
+
+        while not self.world_client and time.time() - start_time < timeout:
+            time.sleep(0.5)  # Check every half second
+
+        if self.world_client:
+            logger.info("World client connected successfully")
+            return True
+        else:
+            self.shutdown()
+            raise Exception(f"No world client connected after {timeout} seconds")
+
+    async def handle_reset(self, request: Reset.Request) -> Reset.Response:
+        """Handle the reset request by forwarding to the world client.
+
+        This method is called when a reset service request is received from a node.
+        It forwards the request to the world client via WebSocket and returns
+        the response.
+
+        Args:
+            request: The reset request containing optional seed
+
+        Returns:
+            Reset.Response: The response from the world client
+        """
+
+        if self.world_client is None:
+            self.shutdown()
+            raise Exception("No world client connection available")
+
+        id = f"{uuid.uuid4().hex}"
+
+        shared_loop = get_event_loop()
+        response_future = shared_loop.create_future()
+
+        self._pending_resets[id] = response_future
+
+        seed = request.seed if hasattr(request, "seed") else None
+
+        request_data = {"type": "reset", "id": id, "seed": seed}
+
+        # Send to world client
+        try:
+            await self.world_client.send_text(json.dumps(request_data))
+        except Exception as e:
+            if id in self._pending_resets:
+                del self._pending_resets[id]
+            self.shutdown()
+            raise Exception(f"Error sending reset request to world client: {e}")
+
+        # Await response from world client
+        try:
+            response_data = await asyncio.wait_for(response_future, timeout=30.0)
+
+            # Process response data into Reset.Response
+            success = True
+            message = "Reset request processed"
+            type = response_data["type"]
+            id = response_data["id"]
+            time_stamp = response_data["timeStamp"]
+
+            observation = ObservationModel(**response_data["observation"])
+
+            # Get any additional info
+            info = response_data.get("info", {})
+            if not isinstance(info, dict):
+                info = {"data": info}
+
+            return Reset.Response(
+                success=success,
+                message=message,
+                type=type,
+                id=id,
+                time_stamp=time_stamp,
+                observation=observation,
+                info=info,
+            )
+
+        except asyncio.TimeoutError:
+            self.shutdown()
+            raise Exception(f"Reset request {id} timed out after 30 seconds")
+
+        except Exception as e:
+            self.shutdown()
+            raise Exception(f"Error processing reset response: {e}")
+
+    async def _process_reset_response(self, message_data: dict) -> None:
+        """Process a reset response from the world client"""
+        id = message_data.get("id")
+
+        if not id:
+            self.shutdown()
+            raise Exception("Received reset response without id")
+
+        if id not in self._pending_resets:
+            self.shutdown()
+            raise Exception(f"Received reset response for unknown id: {id}")
+
+        # Get the future for this request
+        future = self._pending_resets[id]
+
+        shared_loop = get_event_loop()
+
+        shared_loop.call_soon_threadsafe(
+            lambda f=future, d=message_data: f.set_result(d) if not f.done() else None
+        )
+
+        shared_loop.call_soon_threadsafe(
+            lambda p=self._pending_resets, r=id: p.pop(r, None)
+        )
+
+    async def handle_step(self, request: Step.Request) -> Step.Response:
+        """Handle the step request by forwarding to the world client.
+
+        This method is called when a step service request is received from a node.
+        It forwards the request to the world client via WebSocket and returns
+        the response.
+
+        Args:
+            request: The step request containing action data
+
+        Returns:
+            Step.Response: The response from the world client
+        """
+        # Check if world client is connected
+        if self.world_client is None:
+            self.shutdown()
+            raise Exception("No world client connection available")
+
+        # Generate a unique ID for this request
+        id = f"{uuid.uuid4().hex}"
+
+        shared_loop = get_event_loop()
+        response_future = shared_loop.create_future()
+
+        self._pending_steps[id] = response_future
+
+        joint_positions = (
+            request.action.joint_positions
+            if hasattr(request.action, "joint_positions")
+            else None
+        )
+
+        joint_velocities = (
+            request.action.joint_velocities
+            if hasattr(request.action, "joint_velocities")
+            else None
+        )
+
+        if joint_positions is None and joint_velocities is None:
+            logger.error(
+                "No joint positions or velocities data provided in step request"
+            )
+            return Step.Response(
+                success=False,
+                message="No joint positions or velocities data provided in step request",
+                observation=None,
+                info={"error": "no_data"},
+            )
+
+        request_data = {
+            "type": "step",
+            "id": id,
+            "joint_positions": joint_positions,
+            "joint_velocities": joint_velocities,
+        }
+
+        # Send to world client
+        try:
+            await self.world_client.send_text(json.dumps(request_data))
+        except Exception as e:
+            self.shutdown()
+            raise Exception(f"Error sending step request to world client: {e}")
+
+        # Wait for response
+        try:
+            response_data = await asyncio.wait_for(response_future, timeout=30.0)
+
+            success = True
+            message = "Step request processed"
+            type = response_data["type"]
+            id = response_data["id"]
+            time_stamp = response_data["timeStamp"]
+
+            observation = ObservationModel(**response_data["observation"])
+
+            info = response_data.get("info", {})
+            if not isinstance(info, dict):
+                info = {"data": info}
+
+            return Step.Response(
+                success=success,
+                message=message,
+                type=type,
+                id=id,
+                time_stamp=time_stamp,
+                observation=observation,
+                info=info,
+            )
+
+        except asyncio.TimeoutError:
+            self.shutdown()
+            raise Exception(f"Step request {id} timed out after 30 seconds")
+
+        except Exception as e:
+            self.shutdown()
+            raise Exception(f"Error processing step response: {e}")
+
+    async def _process_step_response(self, message_data: dict) -> None:
+        """Process a step response from the world client"""
+        id = message_data.get("id")
+
+        if not id:
+            self.shutdown()
+            raise Exception("Received step response without id")
+
+        if id not in self._pending_steps:
+            self.shutdown()
+            raise Exception(f"Received step response for unknown id: {id}")
+
+        future = self._pending_steps[id]
+
+        shared_loop = get_event_loop()
+
+        # Use call_soon_threadsafe to ensure the future is completed in the right context
+        shared_loop.call_soon_threadsafe(
+            lambda f=future, d=message_data: f.set_result(d) if not f.done() else None
+        )
+
+        # Also clean up the pending steps in a thread-safe way
+        shared_loop.call_soon_threadsafe(
+            lambda p=self._pending_steps, r=id: p.pop(r, None)
+        )
+
+    def spin(self) -> None:
+        """Spin the LuckyRobots node to keep it running"""
+        if not self._running:
+            logger.warning("LuckyRobots is not running")
+            return
+
+        self._display_welcome_message()
+
+        logger.info("LuckyRobots spinning")
+        try:
+            self._shutdown_event.wait()
+        except KeyboardInterrupt:
+            self.shutdown()
+        logger.info("LuckyRobots stopped spinning")
+
+    def _stop_websocket_server(self) -> None:
+        """Stop the WebSocket server if it's running"""
+        if self._server is not None:
+            logger.info("Stopping WebSocket server...")
+            # Signal the server to stop
+            self._server.should_exit = True
+
+            # Wait for the server thread to exit (with timeout)
+            if self._server_thread and self._server_thread.is_alive():
+                self._server_thread.join(timeout=2.0)
+                if self._server_thread.is_alive():
+                    logger.warning(
+                        "WebSocket server thread did not terminate gracefully"
+                    )
+                else:
+                    logger.info("WebSocket server stopped")
+
+            # Reset server references
+            self._server = None
+            self._server_thread = None
+
+    def shutdown(self) -> None:
+        if not self._running:
+            return
+
+        self._running = False
+
+        # Shutdown all nodes
+        for node in self._nodes.values():
+            try:
+                node.shutdown()
+            except Exception as e:
+                logger.error(f"Error shutting down node {node.full_name}: {e}")
+
+        super().shutdown()
+
+        self._stop_websocket_server()
+
+        shutdown_event_loop()
+
+        self._shutdown_event.set()
+        logger.info("LuckyRobots shutdown complete")
+
+
+@app.websocket("/nodes")
+async def nodes_endpoint(websocket: WebSocket) -> None:
+    await websocket.accept()
+
+    node_name = None
+
+    try:
+        # Wait for the first message, which should be NODE_ANNOUNCE
+        message = await websocket.receive_bytes()
+        message_data = msgpack.unpackb(message)
+        message = TransportMessage(**message_data)
+
+        if message.msg_type != MessageType.NODE_ANNOUNCE:
+            logger.warning(
+                f"First message from node should be NODE_ANNOUNCE, got {message.msg_type}"
+            )
+            await websocket.close(4000, "First message must be NODE_ANNOUNCE")
+            return
+
+        # Register the node
+        node_name = message.node_name
+        await manager.register_node(node_name, websocket)
+
+        # Process messages until disconnection
+        while True:
+            try:
+                message = await websocket.receive_bytes()
+                message_data = msgpack.unpackb(message)
+                message = TransportMessage(**message_data)
+
+                # Process the message based on its type
+                if message.msg_type == MessageType.SUBSCRIBE:
+                    await manager.subscribe(node_name, message.topic_or_service)
+                elif message.msg_type == MessageType.UNSUBSCRIBE:
+                    await manager.unsubscribe(node_name, message.topic_or_service)
+                elif message.msg_type == MessageType.SERVICE_REGISTER:
+                    await manager.register_service(node_name, message.topic_or_service)
+                elif message.msg_type == MessageType.SERVICE_UNREGISTER:
+                    await manager.unregister_service(
+                        node_name, message.topic_or_service
+                    )
+                elif message.msg_type == MessageType.NODE_SHUTDOWN:
+                    logger.info(f"Node {node_name} shutting down")
+                    break
+                else:
+                    # Route other messages (PUBLISH, SERVICE_REQUEST, SERVICE_RESPONSE)
+                    await manager.route_message(message)
+            except msgpack.UnpackValueError:
+                logger.error(f"Received invalid msgpack from {node_name}")
+            except Exception as e:
+                logger.error(f"Error processing message from {node_name}: {e}")
+    except WebSocketDisconnect:
+        logger.info(f"Node {node_name} disconnected")
+
+
+@app.websocket("/world")
+async def world_endpoint(websocket: WebSocket) -> None:
+    await websocket.accept()
+
+    if hasattr(app, "lucky_robots"):
+        app.lucky_robots.world_client = websocket
+        logger.info("World client connected")
+
+    try:
+        # Process messages until disconnection
+        while True:
+            try:
+                message_json = await websocket.receive_json()
+
+                if "type" in message_json:
+                    if message_json["type"] == "reset_response":
+                        await app.lucky_robots._process_reset_response(message_json)
+                    elif message_json["type"] == "step_response":
+                        await app.lucky_robots._process_step_response(message_json)
+                    else:
+                        logger.warning(f"Unknown message type: {message_json['type']}")
+                else:
+                    logger.warning("Received message without type field")
+            except json.JSONDecodeError:
+                logger.error(f"Received invalid JSON from world client")
+            except Exception as e:
+                logger.error(f"Error processing message from world client: {e}")
+    except WebSocketDisconnect:
+        logger.info("World client disconnected")
+        if hasattr(app, "lucky_robots"):
+            app.lucky_robots.world_client = None
+</file>
+
+<file path="src/luckyrobots/__init__.py">
+from .core.node import Node
+from .core.luckyrobots import LuckyRobots
+from .core.models import ObservationModel, ActionModel
+from .message.srv.types import Reset, Step
+from .core.parameters import get_param, set_param
+from .utils.check_updates import check_updates
+from .utils.event_loop import run_coroutine
+
+
+__all__ = [
+    "LuckyRobots",
+    "Node",
+    "ObservationModel",
+    "ActionModel",
+    "Reset",
+    "Step",
+    "get_param",
+    "set_param",
+    "check_updates",
+    "set_host",
+    "start",
+    "run_coroutine",
+]
+</file>
+
+<file path="README.md">
+<p align="center">
+  <img width="384" alt="Default_Logo_Horizontal@2x" src="https://github.com/user-attachments/assets/ae6ad53a-741e-4e7a-94cb-5a46a8e81398" />
+</p>
+
+<p align="center">
+   Infinite synthetic data generation for embodied AI
+</p>
+
+<div align="center">
+
+[![GitHub stars](https://img.shields.io/github/stars/luckyrobots/luckyrobots?style=social)](https://github.com/luckyrobots/luckyrobots/stargazers)
+[![PyPI version](https://img.shields.io/pypi/v/luckyrobots.svg)](https://pypi.org/project/luckyrobots/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python Version](https://img.shields.io/pypi/pyversions/luckyrobots)](https://pypi.org/project/luckyrobots/)
+[![Status](https://img.shields.io/badge/Status-Alpha-orange)](https://pypi.org/project/luckyrobots/)
+[![Examples](https://img.shields.io/badge/Examples-View_Code-green)](https://github.com/luckyrobots/luckyrobots/tree/main/examples)
+[![Discord](https://dcbadge.vercel.app/api/server/5CH3wx3tAs?style=flat)](https://discord.gg/5CH3wx3tAs)
+
+</div>
+
+https://github.com/user-attachments/assets/0ab2953d-b188-4af7-a225-71decdd2378c
+
+## Why Lucky Robots?
+
+Our vision for accessible robotics was born out of trying to teach our kids how to train robots for simple tasks like picking and placing objects. We quickly discovered that existing simulators were either restricted to those with academic affiliations, prohibitively complex, or simply insufficient for modern robotic learning... so we decided to create something better.
+
+We built Lucky Robots to democratize robotic learning. Our platform pairs an intuitive Python API with [Lucky World](https://luckyrobots.com/luckyrobots/luckyworld), our state-of-the-art simulator that levarages UE5's hyperrealistic rendering and MuJoCo's precise physics. This combination makes professional-grade robotic simulation accessible to everyone, with no need for specialized hardware or a PhD-level understanding.
+
+Whether you're a parent inspiring the next generation, a researcher pushing the boundaries of science, or an industry professional developing cutting-edge applications, Lucky Robots was built for you.
+
+<p align="center">
+  <img width="49%" alt="Bedroom environment in Lucky World" src="https://github.com/user-attachments/assets/279a7864-9a8b-453e-8567-3a174f5db8ab" />
+  <img width="49%" alt="Open floor plan in Lucky World" src="https://github.com/user-attachments/assets/68c72b97-98ab-42b0-a065-8a4247b014c7" />
+</p>
+
+## Getting Started
+
+To start building with Lucky Robots:
+
+1. Clone the repository
+
+```bash
+git clone https://github.com/luckyrobots/luckyrobots.git
+cd luckyrobots/examples
+```
+
+2. Create your environment and install
+
+```bash
+conda create -n lr python=3.8
+conda activate lr
+pip install luckyrobots  # or use uv for faster installation
+```
+
+3. Run any of the following examples
+
+```bash
+python basic_usage.py
+python yolo_example.py
+python yolo_mac_example.py
+python vlm_gpt.py
+```
+
+This will automatically download our simulation binary and run it for you.
+
+## Event Listeners
+
+Lucky Robots provides several event listeners to interact with the simulated robot and receive updates on its state:
+
+1. **@lr.on("robot_output")**: Receives robot output, including RGB and depth images, and coordinates.
+
+   Example output:
+
+   ```python
+   {
+       "body_pos": {"Time": "1720752411", "rx": "-0.745724", "ry": "0.430001", "rz": "0.007442", "tx": "410.410786", "ty": "292.086556", "tz": "0.190011", "file_path": "/.../4_body_pos.txt"},
+       "depth_cam1": {"file_path": "/.../4_depth_cam1.jpg"},
+       "depth_cam2": {"file_path": "/.../4_depth_cam2.jpg"},
+       "hand_cam": {"Time": "1720752411", "rx": "-59.724758", "ry": "-89.132507", "rz": "59.738461", "tx": "425.359645", "ty": "285.063092", "tz": "19.006545", "file_path": "/.../4_hand_cam.txt"},
+       "head_cam": {"Time": "1720752411", "rx": "-0.749195", "ry": "0.433544", "rz": "0.010893", "tx": "419.352843", "ty": "292.814832", "tz": "59.460736", "file_path": "/.../4_head_cam.txt"},
+       "rgb_cam1": {"file_path": "/.../4_rgb_cam1.jpg"},
+       "rgb_cam2": {"file_path": "/.../4_rgb_cam2.jpg"}
+   }
+   ```
+2. **@lr.on("message")**: Decodes messages from the robot to understand its internal state.
+3. **@lr.on("start")**: Triggered when the robot starts, allowing for initialization tasks.
+4. **@lr.on("tasks")**: Manages the robot's task list.
+5. **@lr.on("task_complete")**: Triggered when the robot completes a task.
+6. **@lr.on("batch_complete")**: Triggered when the robot completes a batch of tasks.
+7. **@lr.on("hit_count")**: Tracks the robot's collisions.
+
+## Controlling the Robot
+
+To control the robot, send commands using the `lr.send_message()` function:
+
+```python
+commands = [["W 3600 1"]]  # This makes the main wheels turn 10 times.
+```
+
+For multiple commands and to know when a particular one ends, assign an ID field to your command:
+
+```python
+commands = [[{"id": 1234, "code": "W 18000 1"}]]
+```
+
+If you want to send a whole set of instructions, add multiple command lists. Each command list will wait until the previous command list finishes. Commands inside one list are executed simultaneously, allowing smoother movements like the robot lifting its arms while moving forward or turning its head while placing an object.
+
+```python
+commands = [["W 1800 1","a 30"],["a 0", "W 1800 1"]]
+```
+
+Commands in one list will override previous commands if they conflict. For instance, if you instruct your robot to turn its wheels 20 times, and on the 5th turn, you instruct it again to turn 3 times, the robot will travel a total of 8 revolutions and stop.
+
+To know when a particular batch of commands finishes, give it an ID and listen for that ID:
+
+```python
+commands = [
+    ["RESET"],
+    {"commands": [{"id": 123456, "code": "W 5650 1"}, {"id": 123457, "code": "a 30 1"}], "batchID": "123456"},
+    ["A 0 1", "W 18000 1"]
+]
+lr.send_message(commands)
+```
+
+### Moving the Robots
+
+**Forward/Backward**
+
+- `[DIRECTION] [DISTANCE] [SPEED]` Example: `W 50 1`
+  - `[DIRECTION]`: W is forward, S is backward
+  - `[DISTANCE]`: Travel distance in centimeters
+  - `[SPEED]`: Speed at which motor will react - km/h
+  - Send via API: `lr.send_message([["W 50 1"]])`
+
+**Left/Right**
+
+- `[DIRECTION] [DEGREE]` Example: `A 30`
+  - `[DIRECTION]`: A is left, D is right
+  - `[DEGREE]`: Spin Rotation in degrees
+  - Send via API: `lr.send_message([["A 30"]])`
+
+**Reset**
+
+- `RESET`: Resets all positions and rotations to the zero pose
+- Send via API: `lr.send_message([["RESET"]])`
+
+### Stretch v1
+
+- `[JOINT][DISTANCE]` Example: `EX1 30`
+
+  - `EX1 10`  (extend 1st joint 10cm outwards)
+  - `EX2 -10` (extend 2nd joint 10cm inwards)
+  - `EX3 10`  (extend 3rd joint 10cm outwards)
+  - `EX4 10`  (extend 4th joint 10cm outwards)
+  - Or: `lr.send_message([["EX1 10"]])`, `lr.send_message([["EX2 -10"]])`, etc.
+- `U 10` (Up) - Or: `lr.send_message([["U 10"]])`
+- `U -10` (Down) - Or: `lr.send_message([["U -10"]])`
+- Gripper: `G 5` or `G -10` - Or: `lr.send_message([["G 5"]])` or `lr.send_message([["G -10"]])`
+- Hand Cam Angle:
+
+  - `R1 10` - Or: `lr.send_message([["R1 10"]])`
+  - `R2 -30` (turn cam) - Or: `lr.send_message([["R2 -30"]])`
+
+### Luck-e v3
+
+- `[JOINT][DEGREE]` Example: `EX1 30`
+
+  - `EX1 20`  (1st rotate the joint 20 degrees)
+  - `EX2 -10` (2nd rotate the joint -10 degrees)
+  - `EX3 10`  (3rd rotate the joint 10 degrees)
+  - `EX4 10`  (4th rotate the joint 10 degrees)
+  - Or: `lr.send_message([["EX1 20"]])`, `lr.send_message([["EX2 -10"]])`, etc.
+- `U 10` (Up) - Or: `lr.send_message([["U 10"]])`
+- `U -10` (Down) - Or: `lr.send_message([["U -10"]])`
+- Gripper: `G 5` or `G -10` - Or: `lr.send_message([["G 5"]])` or `lr.send_message([["G -10"]])`
+- Hand Cam Angle: `R 10` - Or: `lr.send_message([["R 10"]])`
+
+## Starting the Robot
+
+To start the robot simulation with custom options:
+
+```python
+lr.start(binary_path, sendBinaryData=False)
+```
+
+Set `sendBinaryData=True` to include file contents in the `robot_output` object.
+
+## What's Next?
+
+* Drones
+* VLA demo
+* 3D scene reconstruction
+* (your idea?)
+
+## Contributing
+
+Contributions are welcome! Check out our [contribution guidelines](https://claude.ai/chat/CONTRIBUTING.md) to get started.
+
+## Join our team?
+
+Absolutely! Show us a few cool things and/or contribute a few PRs - let us know!
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+</file>
+
+</files>
