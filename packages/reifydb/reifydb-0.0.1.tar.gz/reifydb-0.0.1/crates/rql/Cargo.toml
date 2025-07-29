@@ -1,0 +1,17 @@
+[package]
+name = "rql"
+authors.workspace = true
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+base = { workspace = true }
+transaction = { workspace = true}
+
+nom = { workspace = true }
+nom_locate = { workspace = true }
+serde = { workspace = true }
+
+[dev-dependencies]

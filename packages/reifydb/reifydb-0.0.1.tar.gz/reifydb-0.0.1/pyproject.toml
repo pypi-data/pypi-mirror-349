@@ -1,0 +1,17 @@
+[build-system]
+requires = ["maturin>=1.0,<2.0"]
+build-backend = "maturin"
+
+[tool.maturin]
+bindings = "pyo3"
+features = ["include-python-workspace"]
+manifest-path = "pkg/python/Cargo.toml"
+
+[project]
+version = "0.0.1"
+name = "reifydb"
+requires-python = ">=3.10"
+description = "Data. Backend. Done"
+classifiers = ["Programming Language :: Rust",
+    "Programming Language :: Python :: Implementation :: CPython",
+]

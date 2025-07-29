@@ -1,0 +1,19 @@
+[package]
+name = "engine"
+authors.workspace = true
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+auth = { workspace = true }
+base = { workspace = true }
+rql = { workspace = true }
+storage = { workspace = true }
+transaction = { workspace = true }
+
+log = { workspace = true }
+serde = { workspace = true }
+
+[dev-dependencies]

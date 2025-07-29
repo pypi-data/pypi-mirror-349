@@ -1,0 +1,79 @@
+[workspace]
+resolver = "2"
+
+members = ["pkg/python"]
+
+default-members = ["bin/cli",
+    "bin/server",
+    "crates/auth",
+    "crates/base",
+    "crates/engine",
+    "crates/rql",
+    "crates/storage",
+    "crates/testing",
+    "crates/transaction",
+    "pkg/python",
+    "pkg/rust",
+    "testsuite/functional",
+    "testsuite/regression",
+    "testsuite/smoke"
+    ]
+
+[workspace.package]
+authors = ["Dev <dominique@reifydb.com>"]
+homepage = "https://reifydb.com"
+repository = "https://github.com/reifydb/reifydb"
+readme = "readme.md"
+license = "AGPL-3"
+
+version = "0.0.1"
+rust-version = "1.85.1"
+edition = "2024"
+
+[profile.dev]
+opt-level = 0
+debug = true
+debug-assertions = true
+overflow-checks = true
+incremental = true
+lto = false
+panic = "unwind"
+
+[profile.test]
+opt-level = 0
+debug = true
+lto = false
+debug-assertions = true
+overflow-checks = true
+
+[workspace.dependencies]
+reifydb = { path = "pkg/rust", version = "0.0.1" }
+auth = { path = "crates/auth", version = "0.0.1" }
+base = { path = "crates/base", version = "0.0.1" }
+engine = { path = "crates/engine", version = "0.0.1" }
+rql = { path = "crates/rql", version = "0.0.1" }
+storage = { path = "crates/storage", version = "0.0.1" }
+testing = { path = "crates/testing", version = "0.0.1" }
+transaction = { path = "crates/transaction", version = "0.0.1" }
+
+bincode = { version = "2.0.1", features = ["serde"] }
+dyn-clone = { version = "1.0.19" }
+goldenfile = { version = "1.8.0" }
+hex = { version = "0.4.3" }
+log = { version = "0.4.27" }
+nom = { version = "8.0.0" }
+nom_locate = { version = "5.0.0" }
+prost = "0.13.5"
+regex = { version = "1.11.1" }
+serde = { version = "1.0.219", features = ["derive"] }
+serde_bytes = { version = "0.11.17" }
+serde_json = { version = "1.0.140" }
+test_each_file = { version = "0.3.4" }
+tokio = { version = "1.45.0", features = ["macros", "rt-multi-thread"] }
+tokio-stream = "0.1.17"
+tonic = "0.13.1"
+tonic-build = "0.13.1"
+uuid = { version = "1.16.0", features = ["v4"] }
+
+
+

@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: reifydb
+Version: 0.0.1
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Summary: Data. Backend. Done
+Home-Page: https://reifydb.com
+Author: Dev <dominique@reifydb.com>
+Author-email: Dev <dominique@reifydb.com>
+License: AGPL-3
+Requires-Python: >=3.10
+Project-URL: Source Code, https://github.com/reifydb/reifydb

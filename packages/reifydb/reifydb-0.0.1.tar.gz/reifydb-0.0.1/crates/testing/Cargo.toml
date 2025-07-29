@@ -1,0 +1,18 @@
+[package]
+name = "testing"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+base = {workspace = true}
+
+goldenfile = { workspace = true }
+nom = { workspace = true }
+nom_locate = { workspace = true }
+regex = { workspace = true, features = [] }
+uuid = { workspace = true }
+
+[dev-dependencies]
+test_each_file = { workspace = true }
