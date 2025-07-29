@@ -1,0 +1,6 @@
+aipkgs_twilio/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aipkgs_twilio/helpers.py,sha256=va7QDMWPivhWn8zqWL0mMofjp5DzeRnYAVkfZPSB7BU,4366
+aipkgs_twilio-1.0.4.dist-info/LICENSE.md,sha256=oo2hmWWp-h0KgkfEZN9Pjlfll5kxOuK396Ud8WQfyHA,1058
+aipkgs_twilio-1.0.4.dist-info/METADATA,sha256=KJz69yV8IQMpNmXWtTdfucFTes2e7oM51v4XdQtiLH8,545
+aipkgs_twilio-1.0.4.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+aipkgs_twilio-1.0.4.dist-info/RECORD,,
