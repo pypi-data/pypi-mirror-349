@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "es2023",
+    "module": "es2020",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "checkJs": true,
+    "noEmit": true,
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true
+  },
+  "include": [
+    "*.ts",
+    "src/**/*.ts",
+    "src/**/*.svelte",
+    "test/**/*.ts",
+    "*.config.cjs",
+    "*.config.mjs"
+  ]
+}
