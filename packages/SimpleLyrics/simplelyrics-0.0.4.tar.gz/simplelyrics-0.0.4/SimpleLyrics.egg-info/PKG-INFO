@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: SimpleLyrics
+Version: 0.0.4
+Summary: "Simple cli app for lyrics search"
+Home-page: https://github.com/kamuridesu/SimpleLyrics
+Author: Kamuri Amorim
+Author-email: luiz.k.amorim@gmail.com
+License: MIT
+Keywords: music letras lyrics python cli
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3 :: Only
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: beautifulsoup4
+
+# SimpleLyrics
+Simple CLI app to retrieve songs lyrics
+
+## Setup
+`pip install SimpleLyrics`
+
+## Usage
+`pylyrics song name`

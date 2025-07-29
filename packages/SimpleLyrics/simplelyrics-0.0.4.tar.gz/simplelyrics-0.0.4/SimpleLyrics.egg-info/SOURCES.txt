@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.cfg
+SimpleLyrics/__init__.py
+SimpleLyrics/__main__.py
+SimpleLyrics.egg-info/PKG-INFO
+SimpleLyrics.egg-info/SOURCES.txt
+SimpleLyrics.egg-info/dependency_links.txt
+SimpleLyrics.egg-info/entry_points.txt
+SimpleLyrics.egg-info/requires.txt
+SimpleLyrics.egg-info/top_level.txt
