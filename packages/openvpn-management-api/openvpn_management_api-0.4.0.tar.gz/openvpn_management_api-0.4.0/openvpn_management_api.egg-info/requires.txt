@@ -1,0 +1,5 @@
+openvpn_status<1.0.0
+
+[dev]
+nose
+black
