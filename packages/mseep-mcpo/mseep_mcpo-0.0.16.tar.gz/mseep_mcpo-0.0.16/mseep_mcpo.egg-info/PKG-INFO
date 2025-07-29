@@ -1,0 +1,26 @@
+Metadata-Version: 2.4
+Name: mseep-mcpo
+Version: 0.0.16
+Summary: A simple, secure MCP-to-OpenAPI proxy server
+Home-page: 
+Author: mseep
+Author-email: mseep <support@skydeck.ai>
+Maintainer-email: mseep <support@skydeck.ai>
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: click>=8.1.8
+Requires-Dist: fastapi>=0.115.12
+Requires-Dist: mcp>=1.8.0
+Requires-Dist: mcp[cli]>=1.8.0
+Requires-Dist: passlib[bcrypt]>=1.7.4
+Requires-Dist: pydantic>=2.11.1
+Requires-Dist: pyjwt[crypto]>=2.10.1
+Requires-Dist: python-dotenv>=1.1.0
+Requires-Dist: typer>=0.15.2
+Requires-Dist: uvicorn>=0.34.0
+Dynamic: author
+Dynamic: license-file
+Dynamic: requires-python
+
+# Package managed by MseeP.ai
