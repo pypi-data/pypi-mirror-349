@@ -1,0 +1,91 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name="django-node-assets"
+dynamic = ["version"]
+description = "The Django application that allows to install and serve assets via Node.js package manager infrastructure."
+readme = "README.rst"
+license = { file = "LICENSE.txt" }
+authors = [
+    { name = "Andrey Butenko", email = "whitespysoftware@gmail.com" },
+]
+keywords=[
+    "django",
+    "assets",
+    "staticfiles",
+    "Node.js",
+    "npm",
+    "package.json",
+]
+classifiers = [
+    "Environment :: Web Environment",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Framework :: Django",
+    "Framework :: Django :: 4.2",
+    "Framework :: Django :: 5.0",
+    "Framework :: Django :: 5.1",
+    "Framework :: Django :: 5.2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "build",
+    "ruff",
+    "twine",
+]
+
+[project.urls]
+GitHub = "https://github.com/whitespy/django-node-assets"
+
+[tool.setuptools.packages.find]
+include = ["django_node_assets*"]
+
+[tool.setuptools.dynamic]
+version = {attr = "django_node_assets.__version__"}
+
+[tool.ruff.lint]
+select = [
+    "A",    # flake8-builtins
+    "ARG",  # flake8-unused-arguments
+    "B",    # flake8-bugbear
+    "BLE",  # flake8-blind-except
+    "C4",   # flake8-comprehensions
+    "C90",  # McCabe cyclomatic complexity
+    "E",    # pycodestyle (Error)
+    "F",    # Pyflakes
+    "FLY",  # flynt
+    "FURB", # refurb
+    "I",    # isort
+    "INT",  # flake8-gettext
+    "ISC",  # flake8-implicit-str-concat
+    "N",    # pep8-naming
+    "PERF", # Perflint
+    "PIE",  # flake8-pie
+    "PL",   # Pylint
+    "Q",    # flake8-quotes
+    "RET",  # flake8-return
+    "RSE",  # flake8-raise
+    "S",    # flake8-bandit
+    "SIM",  # flake8-simplify
+    "SLF",  # flake8-self
+    "SLOT", # flake8-slots
+    "T20",  # flake8-print
+    "UP",   # pyupgrade
+    "W",    # pycodestyle (Warning)
+]
+ignore = [
+    "A002",
+    "ARG002",
+    "S404",
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["django_node_assets"]
