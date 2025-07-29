@@ -1,0 +1,50 @@
+Metadata-Version: 2.4
+Name: google-places-scraper
+Version: 0.1.0
+Summary: A wrapper to scrape Google Places API with logging and export support
+Author: Muhammad Arsalan
+Author-email: arsalan.9798@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: pandas
+Requires-Dist: pyyaml
+Requires-Dist: geopy
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Google Places Scraper
+
+A Python wrapper and CLI tool to scrape nearby places using the Google Places API. Useful for lead generation, local business discovery, and location data gathering.
+
+---
+
+## ✨ Features
+
+- 🔍 Search places by location, radius, and type (e.g., schools, hospitals)
+- 📞 Fetch detailed info: address, phone, website
+- 📤 Export results as CSV, JSON, or YAML
+- 💰 Log request stats and estimated cost per Google API pricing
+- 🖥️ Use via Python or command-line (CLI)
+
+---
+
+## 📦 Installation
+
+From PyPI:
+
+```bash
+pip install google-places-scraper
