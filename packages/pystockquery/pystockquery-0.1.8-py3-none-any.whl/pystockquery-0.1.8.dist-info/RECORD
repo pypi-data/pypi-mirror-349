@@ -1,0 +1,10 @@
+pystockquery/__init__.py,sha256=Saj5d6zuHMS04etx8e0Y-T2FnYvuJrvZ-pDYUBngnaM,84
+pystockquery/api.py,sha256=BtUV4Boqb3vzNev2GwQAZ1AymaXAYY-W3BnAZbICilY,3046
+pystockquery/data_handler.py,sha256=ODPozarZhkutJeF-Ihvp7N4EQHlstO7ZfzAzQtrqBas,1245
+pystockquery/query_parser.py,sha256=oCycXAGHbdXjK-Zbbu5g9NgIEnM_3jD2USweynGRdr0,13078
+pystockquery/visualization.py,sha256=H2luv8mSUmQqcAAlZPykXrvY8mQr7DtzxY7QxcmLkbI,4669
+pystockquery/data/merged_stock_data.xlsx,sha256=mDNsYlXH48801Va9_igaZ80u6CW4Ng1jpGNgPbDegqM,13957392
+pystockquery-0.1.8.dist-info/METADATA,sha256=1nP8QRr0WjVgzENS6S1djfkNlsyXxB9mmbYsvPLZrRw,714
+pystockquery-0.1.8.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+pystockquery-0.1.8.dist-info/top_level.txt,sha256=T6pt82Q-z4TCZf4VWEBOeN27cmFA6msRCQiBVsiny8A,13
+pystockquery-0.1.8.dist-info/RECORD,,
