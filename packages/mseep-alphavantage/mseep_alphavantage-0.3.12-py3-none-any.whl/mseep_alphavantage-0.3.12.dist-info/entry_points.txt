@@ -1,0 +1,2 @@
+[console_scripts]
+alphavantage = alphavantage_mcp_server:main
