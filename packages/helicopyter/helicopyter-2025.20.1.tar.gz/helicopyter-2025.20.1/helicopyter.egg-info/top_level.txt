@@ -1,0 +1,8 @@
+bin
+dist
+documentation
+helicopyter
+hooks
+node_modules
+providers
+stacks

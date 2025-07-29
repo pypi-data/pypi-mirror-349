@@ -1,0 +1,207 @@
+- id: actionlint
+  entry: actionlint
+  files: ^.github/workflows/
+  language: system
+  name: actionlint
+
+- id: codespell
+  # Hook users will inherit this ignore and be able to define their own in the
+  # `[tool.codespell]` section of their `pyproject.toml`
+  entry: codespell --check-filenames --ignore-words-list READYness --write-changes
+  language: system
+  name: codespell
+  exclude: |
+      (?x)^(
+          package-lock\.json
+          |documentation/self2024-python-defined-infrastructure\.md
+          |yarn\.lock
+      )$
+  types:
+      - text
+
+# Should be kept in sync with pyproject.toml
+- id: codespell-complete
+  entry: >
+      codespell --builtin clear,en-GB_to_en-US,informal,name,rare,usage --check-filenames
+      --dictionary .biobuddies/dictionary.txt --ignore-words-list READYness --write-changes
+  language: system
+  name: codespell-complete
+  exclude: |
+      (?x)^(
+          \.pre-commit-hooks\.yaml
+          |documentation/self2024-python-defined-infrastructure\.md
+          |package-lock\.json
+          |yarn\.lock
+      )$
+  types:
+      - text
+
+- id: cookiecutter
+  # Allow overwriting with . to test local changes
+  args:
+      - https://github.com/biobuddies/helicopyter.git
+  entry: cookiecutter --config-file .cookiecutter.yaml --no-input --overwrite-if-exists
+  language: system
+  name: cookiecutter
+  pass_filenames: false
+  stages:
+      - manual # because Internet
+
+- id: django-upgrade
+  entry: django-upgrade
+  language: system
+  name: django-upgrade
+  types:
+      - python
+
+- id: djlint-django
+  entry: djlint --profile=django --reformat
+  language: system
+  name: djlint-django
+  types:
+      - html
+
+- id: djlint-jinja
+  entry: djlint --profile=jinja --reformat
+  language: system
+  name: djlint-jinja
+  types:
+      - jinja
+
+- id: dot-yaml
+  description: Require four letter suffix http://www.yaml.org/faq.html
+  entry: dot-yaml
+  files: .*\.yml$
+  language: fail
+  name: dot-yaml
+
+- id: hadolint
+  entry: hadolint
+  language: system
+  name: hadolint
+  types:
+      - dockerfile
+
+# Now just a wrapper around .biobuddies/includes.bash fetched by cookiecutter hook
+- id: includes-sh
+  entry: |
+      bash -c "
+      cat > includes.sh <<EOD
+      # shellcheck shell=bash
+      if [[ -f $PWD/.biobuddies/includes.bash ]]; then
+          source $PWD/.biobuddies/includes.bash
+      else
+          echo includes.sh has moved to .biobuddies/includes.bash to better accomodate downstream
+          echo extensions and share a single popular fetch mechanism with files like .gitignore.
+          echo Please update your .pre-commit-config.yaml to include the cookiecutter hook
+          echo '- repo: https://github.com/biobuddies/helicopyter'
+          echo '  rev: v2025.17.01  # or newer'
+          echo '  hooks:'
+          echo '      - id: cookiecutter'
+          echo
+          echo and run
+          echo 'pre-commit run --all-files --hook-stage manual cookiecutter'
+      fi
+      EOD"
+  language: system
+  name: includes-sh
+  pass_filenames: false
+  stages:
+      - manual # Because Internet
+
+- id: helicopyter
+  entry: bash .biobuddies/includes.bash hs
+  files: ^(helicopyter\.py|deploys/.+/terraform/main\.py)$
+  language: system
+  name: helicopyter
+  # Without this, there can be a useless run with specific deploys/*/terraform/main.py files,
+  # followed by the run for all deploys/*/terraform/main.py files (triggered by helicopyter.py)
+  require_serial: true
+
+- id: mailmap
+  entry: bash .biobuddies/includes.bash check_mailmap
+  language: system
+  name: mailmap
+  pass_filenames: false
+
+- id: mypy
+  entry: mypy .
+  language: system
+  name: mypy
+  pass_filenames: false
+  stages:
+      - manual # Because slow
+  types:
+      - python
+
+- id: prettier-write
+  entry: node_modules/.bin/prettier --write
+  exclude: ^deploys/.+/terraform/main.tf.json$
+  language: system
+  name: prettier-write
+  types_or:
+      - json
+      - yaml
+      - toml
+      - ts
+
+- id: ruff-check-fix
+  args:
+      - --fix
+  entry: ruff check --force-exclude
+  language: system
+  name: ruff
+  require_serial: true
+  types_or:
+      - python
+      - pyi
+
+- id: ruff-format
+  entry: ruff format --force-exclude
+  language: system
+  name: ruff-format
+  require_serial: true
+  types_or:
+      - python
+      - pyi
+
+- id: shellcheck
+  entry: shellcheck
+  language: system
+  name: shellcheck
+  require_serial: true # shellcheck can detect sourcing this way
+  types:
+      - shell
+
+- id: shfmt
+  entry: |
+      shfmt --binary-next-line --case-indent --simplify --write --indent 4 --language-dialect bash
+  language: system
+  name: shfmt
+  types:
+      - shell
+
+- id: validate-pyproject
+  entry: validate-pyproject
+  files: ^pyproject.toml$
+  language: system
+  name: Validate pyproject.toml
+
+- id: uv-pip-check
+  entry: uv pip check
+  language: system
+  name: uv-pip-check
+  pass_filenames: false
+
+- id: uv-pip-compile
+  entry: bash .biobuddies/includes.bash upc
+  language: system
+  name: uv-pip-compile
+
+- id: yamllint
+  entry: yamllint
+  language: system
+  name: yamllint
+  types:
+      - file
+      - yaml

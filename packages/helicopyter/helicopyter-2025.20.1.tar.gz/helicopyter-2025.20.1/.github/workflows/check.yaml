@@ -1,0 +1,51 @@
+defaults:
+    run:
+        shell: bash --noprofile --norc -o errexit -o nounset -o pipefail -o xtrace {0}
+env:
+    ALLOWEDFLARE_EMAIL: person@emailprovider.example
+    ALLOWEDFLARE_PRIVATE_DOMAIN: organization.example
+    CLOUDFLARE_ACCOUNT_ID: 0123456789abcdef0123456789abcdef00
+    CLOUDFLARE_ZONE_ID: 0123456789abcdef0123456789abcdef01
+    INSH_TF: tofu
+jobs:
+    check:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            - run: bash .biobuddies/includes.bash forceready
+
+            - run: |
+                  touch deploys/buddies/__init__.py \
+                  && source .biobuddies/includes.bash \
+                  && a \
+                  && just pcam --color always --show-diff-on-failure
+
+            - run: |
+                  source .biobuddies/includes.bash \
+                  && a \
+                  && hti demo \
+                  && tofu -chdir=deploys/demo/terraform validate
+
+            - run: |
+                  source .biobuddies/includes.bash \
+                  && a \
+                  && just test
+
+            - run: |
+                  source .biobuddies/includes.bash \
+                  && a \
+                  && python -m build \
+                  && python -m twine check --strict dist/*
+    summarize:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            - run: bash .biobuddies/includes.bash summarize
+
+on: # yamllint disable-line rule:truthy
+    pull_request:
+    push:
+        branches:
+            - main
+    workflow_dispatch:
+run-name: Checking on behalf of ${{ github.actor }}
