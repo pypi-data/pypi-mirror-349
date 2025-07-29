@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: mseep-mitmproxy-mcp
+Version: 0.1.2
+Summary: A MCP server project
+Home-page: 
+Author: mseep
+Author-email: mseep <support@skydeck.ai>
+Maintainer-email: mseep <support@skydeck.ai>
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: mcp>=1.3.0
+Requires-Dist: mitmproxy>=11.0.2
+Dynamic: author
+Dynamic: requires-python
+
+# Package managed by MseeP.ai
