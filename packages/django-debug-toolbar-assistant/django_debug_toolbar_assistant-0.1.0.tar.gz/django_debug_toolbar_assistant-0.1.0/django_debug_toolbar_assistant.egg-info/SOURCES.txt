@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+django_debug_toolbar_assistant.egg-info/PKG-INFO
+django_debug_toolbar_assistant.egg-info/SOURCES.txt
+django_debug_toolbar_assistant.egg-info/dependency_links.txt
+django_debug_toolbar_assistant.egg-info/requires.txt
+django_debug_toolbar_assistant.egg-info/top_level.txt
+django_debug_toolbar_assistant_panel/__init__.py
+django_debug_toolbar_assistant_panel/apps.py
+django_debug_toolbar_assistant_panel/panel.py
+django_debug_toolbar_assistant_panel/urls.py
+django_debug_toolbar_assistant_panel/views.py
+django_debug_toolbar_assistant_panel/static/__debug__/djdt_assistant_panel/css/panel.css
+django_debug_toolbar_assistant_panel/static/__debug__/djdt_assistant_panel/js/panel.js
+django_debug_toolbar_assistant_panel/templates/panels/djdt_assistant.html

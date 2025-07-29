@@ -1,0 +1,3 @@
+include LICENSE
+recursive-include django_debug_toolbar_assistant_panel/templates *
+recursive-include django_debug_toolbar_assistant_panel/static *

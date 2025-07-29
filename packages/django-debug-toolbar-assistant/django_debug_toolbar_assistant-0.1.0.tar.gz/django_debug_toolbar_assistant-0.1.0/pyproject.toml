@@ -1,0 +1,19 @@
+[project]
+name = "django-debug-toolbar-assistant"
+version = "0.1.0"
+description = ""
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "django>=5.2.1",
+    "django-debug-toolbar>=5.2.0",
+    "google-genai>=1.15.0",
+    "google-generativeai>=0.8.5",
+    "markdown>=3.8",
+]
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=8.3.5",
+    "twine>=6.1.0",
+]
