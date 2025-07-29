@@ -1,0 +1,7 @@
+[project]
+name = "fsbridge"
+version = "0.1.0"
+description = "A pragmatic library that transparently redirects Python's standard file operations to FSSpec backends through monkey-patching, enabling existing code to work with any filesystem without modification."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []

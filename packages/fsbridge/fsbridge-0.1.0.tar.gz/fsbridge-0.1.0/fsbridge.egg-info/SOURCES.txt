@@ -1,0 +1,8 @@
+LICENSE
+README.md
+main.py
+pyproject.toml
+fsbridge.egg-info/PKG-INFO
+fsbridge.egg-info/SOURCES.txt
+fsbridge.egg-info/dependency_links.txt
+fsbridge.egg-info/top_level.txt
