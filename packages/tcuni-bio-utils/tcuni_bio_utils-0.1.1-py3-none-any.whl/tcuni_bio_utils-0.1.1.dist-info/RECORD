@@ -1,0 +1,17 @@
+tc_utils/__init__.py,sha256=y-iGeRjonxQ6J9zvHpmte9jlsN2HqppX6OXSDPGFtyw,425
+tc_utils/cli/commands/__init__.py,sha256=eI18KHxw3ARIn7MnqxaNUzeYT7ExMpmZ1Ttb9Ydy-4c,2062
+tc_utils/config/settings.py,sha256=g--emFA8oj73NlmY2QjpGh8nHhjwHfa6T-y7F-ijGsI,1121
+tc_utils/core/__init__.py,sha256=q_xtcoyMV-jVg2Qf0UB_x3a8HMlidJJK9LjXWB-jHvY,264
+tc_utils/core/command.py,sha256=VW__o-6TOlSk7lDJm2h7XQfc-oZ9SWy2Hp89nieeaJY,2136
+tc_utils/core/registry.py,sha256=4jP12WTUpJsRvHCAxuL80FBs-h6hfCNLzpKC-8wp18M,1444
+tc_utils/tools/__init__.py,sha256=UahA32A98jasRLMJNrgpnFXH76qnfLCSn4I27rl-Qhw,447
+tc_utils/tools/blast/__init__.py,sha256=ZwlM1PQua_RtpdT1pfjeXHizwhKoMyRBsiTldRY0POo,357
+tc_utils/tools/blast/blast_match_count.py,sha256=BXVnl08LcjS3aawXGfRo691OumBqasfwUi8D1WfIt2c,8066
+tc_utils/tools/rnaseq/__init__.py,sha256=TIMMQDzl8o4jOaq-jd_Lm7JPqcOzEfMvL78eBRHWRUI,295
+tc_utils/tools/rnaseq/ma_plot.py,sha256=s1TzsKyly5Zp7fRQk-_xEvdcTCM9C7mpB4UzS6oRF7s,5034
+tc_utils/tools/vcf/__init__.py,sha256=oy5IlDHMI-4CMzhJIN05b4A5iq5mMk-K2JLuhmsmTYM,131
+tc_utils/tools/vcf/genome_similarity.py,sha256=kFF8rCs_gxW9xgoI6_KUVNAOgpyD8qv1pOXau2guhZI,2837
+tcuni_bio_utils-0.1.1.dist-info/METADATA,sha256=tsWEOpMU9fuuprFhnFmFyEnRtrd5ZUWDVojgNL4Hj28,984
+tcuni_bio_utils-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+tcuni_bio_utils-0.1.1.dist-info/entry_points.txt,sha256=PW6BZkPCKb6Q3ukXnqBnxqNhexggZcRoDNByWJ_ucHI,59
+tcuni_bio_utils-0.1.1.dist-info/RECORD,,

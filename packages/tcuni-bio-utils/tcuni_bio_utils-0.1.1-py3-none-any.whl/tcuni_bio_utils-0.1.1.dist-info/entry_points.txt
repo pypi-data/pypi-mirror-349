@@ -1,0 +1,2 @@
+[console_scripts]
+tc-bio-utils = tc_utils.cli.commands:app
