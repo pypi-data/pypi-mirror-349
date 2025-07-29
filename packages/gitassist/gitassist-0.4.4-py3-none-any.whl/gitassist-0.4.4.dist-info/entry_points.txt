@@ -1,0 +1,2 @@
+[console_scripts]
+gitassist = gitassist.cli:cli
