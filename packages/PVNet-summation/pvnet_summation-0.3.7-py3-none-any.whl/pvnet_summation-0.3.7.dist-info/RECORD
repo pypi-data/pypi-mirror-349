@@ -1,0 +1,14 @@
+pvnet_summation/__init__.py,sha256=1b7OxxExuqxr3QubMFxr2FJZHgaD2GCeFDKdkPX-IHs,44
+pvnet_summation/callbacks.py,sha256=8PVOpsSfOEGmmGaptTSn3XNiHvhaq2hwRwqS_V7hu-8,9193
+pvnet_summation/training.py,sha256=21S1YAm5Qc7Zk9mgV4wzG2cBDYIPsKGJsy5Lqky28t8,7042
+pvnet_summation/utils.py,sha256=WBTw-B4Tf-L2zDf7EAJ4lgA-zUGVtcB-hfzWirdiYCI,1928
+pvnet_summation/data/__init__.py,sha256=d2S2Y3rPc9_2EwJ2iz_QnUYBrVWezF2bnc35CUhRbqo,18
+pvnet_summation/data/datamodule.py,sha256=VYRh9oEd6kBaL46W1XjP9m_07iK7FQ95Ba1fD3K7Yj0,7214
+pvnet_summation/models/__init__.py,sha256=RE4Fg-XT_C31JOKB2fvqNtnp_pUCfNadWiYktFcQEHc,33
+pvnet_summation/models/base_model.py,sha256=SDP3gD7qZerWp7lud5d7VWDDUZ2VxjpBFuYWju_H7tk,10920
+pvnet_summation/models/flat_model.py,sha256=V8ilYbusl3KkW_qNGkvcFon3w1PMg0hhfZmMshEgQG4,4195
+pvnet_summation-0.3.7.dist-info/licenses/LICENSE,sha256=F-Q3UFCR-BECSocV55BFDpn4YKxve9PKrm-lTt6o_Tg,1073
+pvnet_summation-0.3.7.dist-info/METADATA,sha256=ayvk_0SSKfZg_8G9LpXw68tmzTrxJBSy7WIkGmw090o,4881
+pvnet_summation-0.3.7.dist-info/WHEEL,sha256=Nw36Djuh_5VDukK0H78QzOX-_FQEo6V37m3nkm96gtU,91
+pvnet_summation-0.3.7.dist-info/top_level.txt,sha256=5fWJ75RKtpaHUdLG_-2oDCInXeq4r1aMCxkZp5Wy-LQ,16
+pvnet_summation-0.3.7.dist-info/RECORD,,
