@@ -1,0 +1,5 @@
+[console_scripts]
+gaode-mcp-server = gavincheng_weather.weather:main
+
+[gui_scripts]
+gaode_mcp_server = gavincheng_weather.weather:main
