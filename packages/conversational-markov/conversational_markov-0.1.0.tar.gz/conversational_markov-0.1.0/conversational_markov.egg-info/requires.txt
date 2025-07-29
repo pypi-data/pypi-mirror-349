@@ -1,0 +1,4 @@
+markovify
+sqlalchemy>=2.0.38
+sqlmodel>=0.0.22
+tqdm>=4.67.1
