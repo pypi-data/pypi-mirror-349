@@ -1,0 +1,169 @@
+---
+description: Style guidelines for defining arguments in Python functions
+globs:
+alwaysApply: false
+---
+# Function Argument Style Guidelines
+
+This document outlines our guidelines for function argument style and usage.
+
+## Core Principles
+
+1. Make function calls clear and unambiguous
+2. Prevent accidental argument order mistakes
+3. Use type annotations for all arguments
+4. Consider human error in addition to type safety
+5. Balance convenience with safety
+
+## Argument Style Rules
+
+### Simple Functions (3 or fewer arguments)
+
+For simple functions with 3 or fewer arguments, positional arguments are acceptable:
+
+```python
+async def get_current_user(conn: AsyncConnection) -> str:
+    """Get the current database user."""
+    pass
+
+async def create_user(conn: AsyncConnection, username: str, password: str) -> None:
+    """Create a new database user."""
+    pass
+```
+
+### Complex Functions (4 or more arguments)
+
+For functions with 4 or more arguments, use required keyword arguments:
+
+```python
+async def create_database(
+    *,
+    conn: AsyncConnection,
+    name: str,
+    encoding: str = "UTF8",
+    owner: str | None = None,
+    template: str = "template0",
+    verbose: bool = False,
+) -> None:
+    """Create a new database."""
+    pass
+```
+
+### Same-Type Arguments
+
+When multiple arguments have the same type and could be confused, use required keyword arguments. Note that this is primarily for simple types like `str`, `int`, etc. Complex types that would be caught by the type checker don't need this protection:
+
+```python
+# Bad - Easy to mix up order of same-type arguments
+async def create_role(conn: AsyncConnection, name: str, parent: str) -> None:
+    pass
+
+# Good - Clear which value is which
+async def create_role(
+    *,
+    conn: AsyncConnection,
+    name: str,
+    parent: str,
+) -> None:
+    pass
+
+# OK - Complex types are caught by type checker
+async def verify_database_ownership(
+    conn: AsyncConnection,
+    db_owner_role: str,
+) -> None:
+    pass
+```
+
+## Examples
+
+### Good Examples
+
+```python
+# Simple function - positional args OK
+async def get_current_user(conn: AsyncConnection) -> str:
+    """Get the current database user."""
+    pass
+
+# Complex function - keyword args required
+async def create_database(
+    *,
+    conn: AsyncConnection,
+    name: str,
+    encoding: str = "UTF8",
+    owner: str | None = None,
+    template: str = "template0",
+    verbose: bool = False,
+) -> None:
+    """Create a new database."""
+    pass
+
+# Same-type arguments - keyword args required
+async def create_role(
+    *,
+    conn: AsyncConnection,
+    name: str,
+    parent: str,
+    inherit: bool = True,
+    login: bool = False,
+    password: str | None = None,
+) -> None:
+    """Create a new database role."""
+    pass
+```
+
+### Bad Examples
+
+```python
+# Too many positional args
+async def create_database(
+    conn: AsyncConnection,
+    name: str,
+    encoding: str = "UTF8",
+    owner: str | None = None,
+    template: str = "template0",
+    verbose: bool = False,
+) -> None:
+    pass
+
+# Same-type args that could be confused
+async def create_role(conn: AsyncConnection, name: str, parent: str) -> None:
+    pass
+
+# Optional args mixed with required args
+async def create_user(
+    conn: AsyncConnection,
+    username: str,
+    password: str,
+    is_superuser: bool = False,
+    is_createdb: bool = False,
+) -> None:
+    pass
+```
+
+## Best Practices
+
+1. Use required keyword arguments when:
+   - Function has 4 or more arguments
+   - Multiple arguments have the same simple type (str, int, etc.) that could be confused
+   - Argument order could be confused for simple types
+
+2. Use positional arguments when:
+   - Function has 3 or fewer arguments
+   - Arguments have distinct types
+   - Arguments are complex types that would be caught by the type checker
+   - Argument order is obvious
+
+3. Always use type annotations for all arguments
+
+4. Consider adding argument validation for complex types
+
+5. Document argument requirements in docstrings
+
+## Rationale
+
+1. Required keyword arguments make function calls more explicit
+2. Keyword arguments prevent accidental argument order mistakes for simple types
+3. Type annotations and type checkers prevent mistakes for complex types
+4. Clear argument style improves code readability
+5. Consistent style makes the codebase more maintainable
