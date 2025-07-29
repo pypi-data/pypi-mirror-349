@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: mseep-mcp-server-gemini-image-analyzer
+Version: 0.1.2
+Author-email: mseep <support@skydeck.ai>
+Maintainer-email: mseep <support@skydeck.ai>
+License: MIT
+Keywords: automation,http,llm,mcp
+Requires-Python: >=3.11
+Requires-Dist: fastmcp>=0.4.1
+Requires-Dist: google-genai>=1.7.0
+Requires-Dist: google>=3.0.0
+Requires-Dist: pillow>=11.1.0
+Description-Content-Type: text/markdown
+
+# Package managed by MseeP.ai
