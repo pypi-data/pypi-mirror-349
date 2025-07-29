@@ -1,0 +1,193 @@
+# PySAG-UdeC/pyproject.toml
+
+[build-system]
+# Especifica las herramientas necesarias para construir tu paquete
+requires = ["setuptools>=61.0", "wheel"] # setuptools es el constructor más común, wheel para crear .whl
+build-backend = "setuptools.build_meta"  # Indica que se usará setuptools para construir
+
+[project]
+# --- Metadatos principales del proyecto ---
+name = "PySAG-UdeC"                 # Nombre que se usará en PyPI (pip install PySAG-UdeC)
+version = "0.1.0"               # Versión inicial (la definimos también en __init__.py)
+authors = [
+  { name="John Sebastián Galindo", email="johnsgalindo@ucundinamarca.edu.co" }, 
+]
+description = "Una biblioteca de Algoritmos Genéticos en Python optimizada con Numba para alto rendimiento, con soporte para paralelización y múltiples operadores genéticos."
+readme = "README.md"            # Archivo que contiene la descripción larga
+requires-python = ">=3.8"       # Versión mínima de Python requerida
+license = {text = "MIT"}        # Licencia del proyecto
+
+# --- Clasificadores: Ayudan a PyPI a categorizar tu paquete ---
+classifiers = [
+    "Development Status :: 3 - Alpha", # Estado del proyecto (Alpha, Beta, Production/Stable)
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12", 
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+# --- Dependencias: Paquetes que tu librería NECESITA para funcionar ---
+dependencies = [
+    "numpy>=1.21",
+    "numba>=0.56.0",  # Para optimización JIT
+    "typing-extensions>=4.0.0",  # Para anotaciones de tipo mejoradas
+]
+
+# --- Dependencias Opcionales: Para funcionalidades extra o desarrollo ---
+[project.optional-dependencies]
+# Dependencias para graficar resultados
+plot = [
+    "matplotlib>=3.4",
+    "seaborn>=0.11.0",  # Para mejores visualizaciones
+]
+
+# Dependencias para procesamiento numérico avanzado
+num = [
+    "scipy>=1.7.0",  # Para funciones científicas adicionales
+    "pandas>=1.3.0",  # Para manejo de datos y análisis
+]
+
+# Dependencias para desarrollo (testing, linting, formatting, building)
+dev = [
+    "PySAG-UdeC[plot,num]",  # Incluye las dependencias de 'plot' y 'num'
+    "pytest>=7.0",  # Framework de testing
+    "pytest-cov>=3.0.0",  # Cobertura de pruebas
+    "pytest-xdist>=2.5.0",  # Pruebas en paralelo
+    "pytest-mock>=3.10.0",  # Mocks para pruebas
+    "pytest-benchmark>=3.4.1",  # Benchmarking de código
+    "flake8>=5.0",  # Linter (PEP 8 + errores básicos)
+    "flake8-docstrings>=1.6.0",  # Verificación de docstrings
+    "flake8-import-order>=0.18.1",  # Orden de imports,
+    "Flake8-pyproject>=1.2.0",  # Verificación de pyproject.toml
+    "black>=23.0",  # Formateador de código
+    "isort>=5.10",  # Ordenador de imports
+    "mypy>=0.910",  # Verificación estática de tipos
+    "build>=0.10",  # Herramienta para construir el paquete
+    "twine>=4.0",   # Herramienta para subir el paquete a PyPI
+    "pre-commit>=2.15.0",  # Hooks de pre-commit
+    "ipykernel>=6.0.0",  # Para notebooks de ejemplo
+    "jupyter>=1.0.0",  # Para notebooks de ejemplo
+]
+
+# Dependencias para documentación
+docs = [
+    "sphinx>=4.2.0",
+    "sphinx-rtd-theme>=1.0.0",
+    "sphinx-copybutton>=0.4.0",
+    "sphinx-autodoc-typehints>=1.12.0",
+    "nbsphinx>=0.8.8",
+    "myst-parser>=0.15.2",
+    "sphinxcontrib-napoleon>=0.7",
+]
+
+# --- URLs del Proyecto ---
+[project.urls]
+"Homepage" = "https://github.com/SebasGalindo/PySAG-UdeC" 
+"Bug Tracker" = "https://github.com/SebasGalindo/PySAG-UdeC/issues" 
+
+# --- Configuración de Herramientas ---
+
+# Configuración de Black
+[tool.black]
+line-length = 88
+target-version = ["py38"]
+include = '\.pyi?$'
+# Ignora archivos de entorno virtual, etc.
+exclude = '''
+/(
+    \.git
+  | \.mypy_cache
+  | \.pytest_cache
+  | _build
+  | build
+  | dist
+  | docs/_build
+  | examples/notebooks/.*\.ipynb
+)/
+'''
+
+# Configuración de isort
+[tool.isort]
+profile = "black"
+line_length = 88
+known_first_party = ["pysag"]
+include_trailing_comma = true
+multi_line_output = 3
+use_parentheses = true
+ensure_newline_before_comments = true
+
+# Configuración de Flake8
+[tool.flake8]
+max-line-length = 88
+ignore = ["E203", "W503", "I100","I201"] 
+exclude = [
+    ".git",
+    "__pycache__",
+    ".mypy_cache",
+    ".pytest_cache",
+    "_build",
+    "build",
+    "dist",
+    "docs/_build",
+    "examples/notebooks"
+]
+
+per-file-ignores = [
+    '__init__.py:F401',
+]
+
+# Configuración de mypy
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+disallow_untyped_decorators = true
+check_untyped_defs = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_unreachable = true
+strict_equality = true
+
+# Ignorar importaciones de terceros que no tienen stubs
+[[tool.mypy.overrides]]
+module = [
+    "numba",
+    "numpy",
+    "matplotlib",
+    "scipy",
+    "pandas",
+    "seaborn"
+]
+ignore_missing_imports = true
+
+# Configuración de pytest
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-v --cov=PySAG --cov-report=term-missing --cov-report=xml"
+norecursedirs = [".git", "build", "dist", "_build", "*.egg-info"]
+
+# Configuración de pre-commit
+
+[tool.pre-commit]
+
+repos = [
+
+    { repo = "https://github.com/psf/black", rev = "25.1.0", hooks = [{id = "black", name = "Black", language_version = "python3.12"}] },
+
+    { repo = "https://github.com/PyCQA/isort", rev = "6.0.1", hooks = [ { id = "isort", name = "isort (python)", additional_dependencies = ["toml>=0.10.2"], args = ["--profile", "black", "--filter-files"] } ] },
+
+    { repo = "https://github.com/PyCQA/flake8", rev = "7.2.0", hooks = [ { id = "flake8", additional_dependencies = [ "flake8-docstrings>=1.6.0", "flake8-import-order>=0.18.1" ] } ] }
+    
+]
