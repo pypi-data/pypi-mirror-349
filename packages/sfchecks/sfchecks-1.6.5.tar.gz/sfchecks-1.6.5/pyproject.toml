@@ -1,0 +1,26 @@
+[project]
+name = "sfchecks"
+version = "1.6.5"
+dependencies = [
+  'loguru == 0.7.2'
+]
+description = "A library for writing checks for SecureFlag's hands-on secure coding training labs"
+readme = "README.md"
+license-files = ["LICEN[CS]E*"]
+
+[project.optional-dependencies]
+dev = [
+  'pytest == 8.2.2',
+  'pdoc == 15.0.1',
+  'black == 24.4.2'
+]
+
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+testpaths = [
+    "tests"
+]

@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: sfchecks
+Version: 1.6.5
+Summary: A library for writing checks for SecureFlag's hands-on secure coding training labs
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: loguru==0.7.2
+Provides-Extra: dev
+Requires-Dist: pytest==8.2.2; extra == "dev"
+Requires-Dist: pdoc==15.0.1; extra == "dev"
+Requires-Dist: black==24.4.2; extra == "dev"
+Dynamic: license-file
+
+# sfchecks
+
+`sfchecks` is a Python library written by [SecureFlag](https://www.secureflag.com/) for writing automated checks to determine the status of a training exercise in SecureFlag's hands-on secure coding labs.
+
+To learn how to use `sfchecks` if you are creating your own exercises, head over to the [documentation](https://secureflag.gitlab.io/sf-tool-sfchecks/sfchecks.html).
