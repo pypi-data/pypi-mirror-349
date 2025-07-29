@@ -1,0 +1,24 @@
+Metadata-Version: 2.4
+Name: mseep-mcp-server-calculator
+Version: 0.2.2
+Summary: A Model Context Protocol server for calculating
+Home-page: 
+Author: mseep
+Author-email: mseep <support@skydeck.ai>
+Maintainer-email: mseep <support@skydeck.ai>
+License: MIT
+Keywords: mcp,llm,math,calculator
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: mcp>=1.4.1
+Dynamic: author
+Dynamic: license-file
+Dynamic: requires-python
+
+# Package managed by MseeP.ai
