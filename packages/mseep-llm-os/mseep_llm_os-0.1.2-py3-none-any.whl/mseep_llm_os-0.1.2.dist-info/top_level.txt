@@ -1,0 +1,7 @@
+ai
+app
+examples
+mcp_solana
+scripts
+test
+workspace
