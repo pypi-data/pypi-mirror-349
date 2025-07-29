@@ -1,0 +1,2 @@
+[console_scripts]
+radarr-sonarr-mcp = radarr_sonarr_mcp.cli:main

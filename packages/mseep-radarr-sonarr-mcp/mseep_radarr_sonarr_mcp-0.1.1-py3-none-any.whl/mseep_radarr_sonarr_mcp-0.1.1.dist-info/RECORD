@@ -1,0 +1,15 @@
+radarr_sonarr_mcp/__init__.py,sha256=IeLDr9RgoCA3l-V91Vmjd-5hp41TyfWY29nu9wTa-6I,112
+radarr_sonarr_mcp/cli.py,sha256=N-HQsLiQn4UyFKPdGdpA5EJ-098G8eU-TAvpM39v8OY,5622
+radarr_sonarr_mcp/server.py,sha256=r99DKNL49X9-SAKZax5nEQIBK0sBmEOeL647c4mDngk,15218
+radarr_sonarr_mcp/services/__init__.py,sha256=t7Lx0CLXaI-Y_CswZSPALBqkG8o_JGTFFGR9nC4Z1P4,60
+radarr_sonarr_mcp/services/jellyfin_service.py,sha256=hpcVseDkZ1uT6eqL9mxdYB1Zrm6J4NR_o8w-A81_q4E,2175
+radarr_sonarr_mcp/services/plex_service.py,sha256=bvuYNV6Ql9CfroM-9JueHQAg_4DIaQ2UtyGXRTU8p44,2789
+radarr_sonarr_mcp/services/radarr_service.py,sha256=JMgtJJ0VPx6DEqOdphEnx1GIEs5bNKbiJGzTuOy0wGg,3888
+radarr_sonarr_mcp/services/sonarr_service.py,sha256=T6p3ojjwX4aZ16mQXHjIJ0okBqvImi5Wl5uyqvo2ztY,6027
+tests/__init__.py,sha256=tX_Z-pG5mXX-M5mLwa09ttV-DC3B8dwtLvfAiDzftPk,42
+tests/test_server.py,sha256=vuqhAOGFJQVFgsKEXn_sGxSEJ1A8PWja9Hig7jDzmZQ,10678
+mseep_radarr_sonarr_mcp-0.1.1.dist-info/METADATA,sha256=LM5tCAUVsHF31crZGkQF5iiS1B78PFgQBWweYamivwo,5499
+mseep_radarr_sonarr_mcp-0.1.1.dist-info/WHEEL,sha256=Nw36Djuh_5VDukK0H78QzOX-_FQEo6V37m3nkm96gtU,91
+mseep_radarr_sonarr_mcp-0.1.1.dist-info/entry_points.txt,sha256=Ase2Y_BVtIfQok4W3cV6QdrJKLNVnmMAep_fA19TGRY,65
+mseep_radarr_sonarr_mcp-0.1.1.dist-info/top_level.txt,sha256=PYyeWHdKnTlpIuNr5e1LB4iM2PWft6_ibCBzJutmKlM,24
+mseep_radarr_sonarr_mcp-0.1.1.dist-info/RECORD,,
