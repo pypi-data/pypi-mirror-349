@@ -1,0 +1,2 @@
+[console_scripts]
+nanocompore = nanocompore.__main__:main
