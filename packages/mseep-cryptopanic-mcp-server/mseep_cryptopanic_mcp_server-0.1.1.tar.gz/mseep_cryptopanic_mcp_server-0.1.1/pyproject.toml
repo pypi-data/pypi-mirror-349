@@ -1,0 +1,24 @@
+[project]
+name = "mseep-cryptopanic-mcp-server"
+version = "0.1.1"
+description = "Provide the latest cryptocurrency news for AI agents."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "dotenv>=0.9.9",
+    "mcp[cli]>=1.3.0",
+    "requests>=2.32.3",
+]
+authors = [
+    { name = "mseep", email = "support@skydeck.ai" },
+]
+maintainers = [
+    { name = "mseep", email = "support@skydeck.ai" },
+]
+
+[build-system]
+requires = [
+    "setuptools>=42",
+    "wheel",
+]
+build-backend = "setuptools.build_meta"
