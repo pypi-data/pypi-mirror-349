@@ -1,0 +1,9 @@
+# environment.yml: Mandatory dependencies only.
+channels:
+- conda-forge
+- nodefaults
+# DO NOT EDIT ABOVE THIS LINE, ADD DEPENDENCIES BELOW AS SHOWN IN THE EXAMPLE
+dependencies:
+- ipywidgets
+- ecmwf-datastores-client
+- cdsapi>=0.7.6
