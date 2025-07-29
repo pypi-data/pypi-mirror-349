@@ -1,0 +1,20 @@
+[project]
+name = "probeX"  # 在PyPI上的包名，全小写、用 - 分隔
+version = "0.1.2"
+description = "A sample project for pytest"
+readme = "README.md"
+license = "MIT"
+authors = [
+  { name="gavin", email="yangguangyu_cn@163.com" }
+]
+dependencies = []
+
+[project.urls]
+"Homepage" = "https://github.com/"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project.scripts]
+probeX = "probeX.start:main"
