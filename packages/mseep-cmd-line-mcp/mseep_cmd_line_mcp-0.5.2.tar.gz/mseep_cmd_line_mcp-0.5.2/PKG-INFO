@@ -1,0 +1,30 @@
+Metadata-Version: 2.4
+Name: mseep-cmd-line-mcp
+Version: 0.5.2
+Summary: Command-line MCP server for safe command execution
+Home-page: 
+Author: mseep
+Author-email: mseep <support@skydeck.ai>
+Maintainer-email: mseep <support@skydeck.ai>
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: mcp>=1.6.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: pytest-asyncio>=0.18.0; extra == "dev"
+Requires-Dist: flake8>=4.0.0; extra == "dev"
+Requires-Dist: black>=22.0.0; extra == "dev"
+Dynamic: author
+Dynamic: license-file
+Dynamic: requires-python
+
+# Package managed by MseeP.ai
