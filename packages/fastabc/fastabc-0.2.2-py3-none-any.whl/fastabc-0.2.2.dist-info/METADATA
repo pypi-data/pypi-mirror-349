@@ -1,0 +1,16 @@
+Metadata-Version: 2.3
+Name: fastabc
+Version: 0.2.2
+Summary: Initialize and create app|server
+License: MIT
+Author: Aleksandr Yurlov
+Author-email: sasha.yur@mail.ru
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: fastapi (>=0.70.0,<0.71.0)
+Requires-Dist: uvicorn (>=0.15.0,<0.16.0)
