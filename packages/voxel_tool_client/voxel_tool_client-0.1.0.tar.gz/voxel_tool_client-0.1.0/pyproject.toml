@@ -1,0 +1,7 @@
+[project]
+name = "voxel_tool_client"
+version = "0.1.0"
+description = "voxel_tool_client"
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = []
