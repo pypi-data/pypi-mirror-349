@@ -1,0 +1,13 @@
+peco/.gitignore,sha256=k8e-DOj0fYnXYjlLOCHoN5GBgtkNXHAYEfEWr3_YZV0,3238
+peco/LICENSE,sha256=kyDBKd474K9knbpdBc9cpDhjaUAchKdIKju1G5HKne8,1092
+peco/README.md,sha256=KlRd8X0ecVUkOSu9GjI70Xowp_a_OhYNfV_yvco9V5M,1398
+peco/__init__.py,sha256=NlIZhSwKf2bE0nq5KjgABJxPIU_tVFNQ0OxhGWacvmI,21
+peco/cut.py,sha256=p9BM9RvwrEeGxT4ykQeMXGW1QnWCnVzJHzLg2-YVS4c,439
+peco/cut.pyi,sha256=wvYn9v98B_Q8OfL1YgVyQPY25IsmVdt6NHvcYIO_8Yc,129
+peco/peco.py,sha256=aSPcb4ez5Nts0WBRLigLcrkcP9F_aE8CH0-lvVkP3ew,2808
+peco/peco.pyi,sha256=hjGRxr3OBZErPBjLh5kNhwFd20pWCecWK2nrgDB-a1I,1385
+peco/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pecolib-0.0.2.dist-info/METADATA,sha256=RWj_nWhDgtFHGvnJVkp-Rn9Ve4I4ncxl9Q9GZ1vpjys,1839
+pecolib-0.0.2.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pecolib-0.0.2.dist-info/licenses/LICENSE,sha256=kyDBKd474K9knbpdBc9cpDhjaUAchKdIKju1G5HKne8,1092
+pecolib-0.0.2.dist-info/RECORD,,
