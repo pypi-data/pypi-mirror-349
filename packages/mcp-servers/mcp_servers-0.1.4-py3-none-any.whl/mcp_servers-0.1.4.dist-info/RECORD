@@ -1,0 +1,12 @@
+LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+README.md,sha256=6IVbvbolERG-X0KF_gzblL08bLMazaPeFGo16HMxVSE,5813
+mcp_servers/__init__.py,sha256=XbvYEuWelRv_4rt4124Vc8PgUSM-2TTYsPOdySsTlDc,437
+mcp_servers/brave_search.py,sha256=94gTiy4FaS9bDj4hMJgLimxa4rLdrMengPoI7m3CNNU,18921
+mcp_servers/cli_app.py,sha256=nDPk0Tt9MfSz6wEZnszKVSgfFHkLhS9ZuGzcFDxzKE4,15292
+mcp_servers/filesystem.py,sha256=6S2QXig7VJXczmayGU76QBpXd8K6FTppFw-tZrqSfTU,13616
+mcp_servers/searxng_search.py,sha256=C1o5eNqYRYK9iyfJKwd68pcH4h0z8cAJbuBRInwJU38,20265
+mcp_servers-0.1.4.dist-info/METADATA,sha256=VyVafy9GCEg86fHYipBNl_hK6ySVzJAfGfpaMjOtA48,6807
+mcp_servers-0.1.4.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+mcp_servers-0.1.4.dist-info/entry_points.txt,sha256=a-dtNB52319zvX52s6UcpdoGgUxwhkIBcwpwgH_90yw,55
+mcp_servers-0.1.4.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+mcp_servers-0.1.4.dist-info/RECORD,,
