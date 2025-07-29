@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: mseep-mcp-pandoc
+Version: 0.3.5
+Summary: MCP to interface with pandoc to convert files to differnt formats. Eg: Converting markdown to pdf.
+Home-page: 
+Author: mseep
+Author-email: mseep <support@skydeck.ai>
+Maintainer-email: mseep <support@skydeck.ai>
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: mcp>=1.1.0
+Requires-Dist: pandoc>=2.4
+Requires-Dist: pypandoc>=1.14
+Dynamic: author
+Dynamic: license-file
+Dynamic: requires-python
+
+# Package managed by MseeP.ai
