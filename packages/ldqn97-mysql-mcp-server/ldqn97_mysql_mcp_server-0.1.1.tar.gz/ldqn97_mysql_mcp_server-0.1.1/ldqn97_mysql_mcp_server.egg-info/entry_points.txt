@@ -1,0 +1,2 @@
+[console_scripts]
+ldqn97-mysql-mcp-server = mysql_mcp.server:main
