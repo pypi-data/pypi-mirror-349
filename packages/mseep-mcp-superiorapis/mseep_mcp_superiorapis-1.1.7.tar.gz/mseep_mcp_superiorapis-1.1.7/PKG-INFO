@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: mseep-mcp-superiorapis
+Version: 1.1.7
+Summary: This project is a Python-based **MCP Server** that dynamically fetches plugin definitions from **SuperiorAPIs** and auto-generates MCP tool functions based on OpenAPI schemas.
+Home-page: 
+Author: mseep
+Author-email: mseep <support@skydeck.ai>
+Maintainer-email: mseep <support@skydeck.ai>
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: mcp>=1.5.0
+Requires-Dist: aiohttp>=3.11.0
+Dynamic: author
+Dynamic: requires-python
+
+# Package managed by MseeP.ai
