@@ -1,0 +1,2 @@
+[console_scripts]
+co2monitor = main:app
