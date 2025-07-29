@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: dd-azure-worker-extension
+Version: 0.5.0
+Summary: Python Worker Extension for starting Datadog Tracer and a top level span to enable auto-instrumenting of Azure Function Apps
+Author: Datadog
+License: License: Apache 2.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 4 - Beta
+Description-Content-Type: text/markdown
+Requires-Dist: azure-functions<2.0.0,>=1.7.0
+Requires-Dist: ddtrace
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: summary
+
+# Deprecation Notice
+
+**This package is officially deprecated and no longer maintained.** Use [datadog-serverless-compat](https://pypi.org/project/datadog-serverless-compat/) instead.
