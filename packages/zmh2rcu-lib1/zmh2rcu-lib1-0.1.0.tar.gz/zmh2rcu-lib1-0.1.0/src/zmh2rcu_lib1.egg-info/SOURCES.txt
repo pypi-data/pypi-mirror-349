@@ -1,0 +1,9 @@
+pyproject.toml
+setup.cfg
+src/mylibrary/__init__.py
+src/mylibrary/module.py
+src/zmh2rcu_lib1.egg-info/PKG-INFO
+src/zmh2rcu_lib1.egg-info/SOURCES.txt
+src/zmh2rcu_lib1.egg-info/dependency_links.txt
+src/zmh2rcu_lib1.egg-info/top_level.txt
+tests/test_module.py
