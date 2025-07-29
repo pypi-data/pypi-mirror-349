@@ -1,0 +1,26 @@
+[project]
+name = "mseep-jnews-mcp-server"
+version = "0.1.4"
+description = "一个提供热点新闻头条信息功能的模型上下文协议（Model Context Protocol）服务器。"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp[cli]>=1.4.1",
+]
+authors = [
+    { name = "mseep", email = "support@skydeck.ai" },
+]
+maintainers = [
+    { name = "mseep", email = "support@skydeck.ai" },
+]
+
+[project.scripts]
+jnews-mcp-server = "jnews_mcp_server:main"
+
+[build-system]
+requires = [
+    "hatchling",
+]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets]
