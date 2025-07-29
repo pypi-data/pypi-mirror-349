@@ -1,0 +1,6 @@
+pyproject.toml
+suhaspuranik/__init__.py
+suhaspuranik.egg-info/PKG-INFO
+suhaspuranik.egg-info/SOURCES.txt
+suhaspuranik.egg-info/dependency_links.txt
+suhaspuranik.egg-info/top_level.txt
