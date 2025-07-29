@@ -1,0 +1,13 @@
+mlx-vlm==0.1.26
+mlx-lm==0.24.1
+fastapi
+uvicorn
+Pillow
+click
+loguru
+
+[dev]
+pytest
+black
+isort
+flake8
