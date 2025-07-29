@@ -1,0 +1,10 @@
+tyro
+tqdm
+seaborn
+pandas
+ruamel_yaml
+pingouin
+pydantic
+
+[test]
+pytest
