@@ -1,0 +1,12 @@
+sistema_bancario/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sistema_bancario/banco/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sistema_bancario/banco/banco.py,sha256=xd1dBPamyypUMof7qin1rZlMskEvBZeGJXIQle7lRjg,7745
+sistema_bancario/banco/teste.py,sha256=wclVxk9KgREUKdPnKjNrKKw1p8YXb0X-_cNZ3qB46_8,44
+sistema_bancario87/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sistema_bancario87/banco/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sistema_bancario87/banco/banco.py,sha256=xd1dBPamyypUMof7qin1rZlMskEvBZeGJXIQle7lRjg,7745
+sistema_bancario87/banco/teste.py,sha256=wclVxk9KgREUKdPnKjNrKKw1p8YXb0X-_cNZ3qB46_8,44
+sistema_bancario87-0.0.1.dist-info/METADATA,sha256=iaMUTMtQUmmLot4PbJtrY_QJOcXa0xy8y_9EOncDDcM,806
+sistema_bancario87-0.0.1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+sistema_bancario87-0.0.1.dist-info/top_level.txt,sha256=XrtG-ShURfOsC7toJbfE4lEsspv72usQHHNGwru2pJ8,19
+sistema_bancario87-0.0.1.dist-info/RECORD,,
