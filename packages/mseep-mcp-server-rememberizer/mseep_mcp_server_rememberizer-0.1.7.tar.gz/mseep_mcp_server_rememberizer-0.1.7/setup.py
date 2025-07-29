@@ -1,0 +1,20 @@
+
+from setuptools import setup, find_packages
+
+setup(
+    name="mseep-mcp-server-rememberizer",
+    version="0.1.5",
+    description="A Model Context Protocol server for interacting with Rememberizer's document and knowledge management API. This server enables Large Language Models to search, retrieve, and manage documents and integrations through Rememberizer.",
+    author="mseep",
+    author_email="support@skydeck.ai",
+    url="",
+    packages=find_packages(),
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
+    python_requires=">=3.6",
+    install_requires=['httpx>=0.27.2', 'mcp>=1.0.0', 'python-dotenv>=1.0.1'],
+    keywords=["mseep"] + [],
+)

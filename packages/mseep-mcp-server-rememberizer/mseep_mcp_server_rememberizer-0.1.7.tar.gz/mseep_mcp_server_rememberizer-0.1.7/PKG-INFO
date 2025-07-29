@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: mseep-mcp-server-rememberizer
+Version: 0.1.7
+Summary: A Model Context Protocol server for interacting with Rememberizer's document and knowledge management API. This server enables Large Language Models to search, retrieve, and manage documents and integrations through Rememberizer.
+Home-page: 
+Author: mseep
+Author-email: mseep <support@skydeck.ai>
+Maintainer-email: mseep <support@skydeck.ai>
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: httpx>=0.27.2
+Requires-Dist: mcp>=1.0.0
+Requires-Dist: python-dotenv>=1.0.1
+Dynamic: author
+Dynamic: license-file
+Dynamic: requires-python
+
+# Package managed by MseeP.ai
