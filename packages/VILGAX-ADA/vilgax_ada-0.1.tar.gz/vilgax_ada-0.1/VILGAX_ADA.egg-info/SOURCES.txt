@@ -1,0 +1,6 @@
+README.md
+setup.py
+VILGAX_ADA.egg-info/PKG-INFO
+VILGAX_ADA.egg-info/SOURCES.txt
+VILGAX_ADA.egg-info/dependency_links.txt
+VILGAX_ADA.egg-info/top_level.txt
