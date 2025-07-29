@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: SamSudin-STT
+Version: 0.1
+Summary: This is speech to text package created by Md Samsudi Rain
+Author: Md Samsudin Rain
+Author-email: hackerz9766@gmail.com
+Dynamic: author
+Dynamic: author-email
+Dynamic: summary
