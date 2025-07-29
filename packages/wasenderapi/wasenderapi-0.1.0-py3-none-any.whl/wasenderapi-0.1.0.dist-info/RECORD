@@ -1,0 +1,13 @@
+wasenderapi/__init__.py,sha256=SdJBIIdKCUwqRuJyXAOlEjb3RfAfifKL0bDZxDf91uc,617
+wasenderapi/channel.py,sha256=BVJqmEvd-TW10S_Cq0ajKIcVwCgYS6JBuhgeFuoLSjc,504
+wasenderapi/client.py,sha256=zRLcgGEzUAz-oU-duETscq1Bk0xo8x2Mz-Ex3mdRpzU,19336
+wasenderapi/contacts.py,sha256=zN1Okv48xKT1lDpYurMg0GWvTdbtn4l-JfMqR-xiCss,1298
+wasenderapi/errors.py,sha256=3NCcKL6Bl9-zQhPpvp43iYX3XLkg6s329Oy2iEJWjs0,1257
+wasenderapi/groups.py,sha256=9NpdH3uTXG2rvZuHCE7FURlxA9NrEcUoXJYowTXn0yA,2465
+wasenderapi/models.py,sha256=2y5Xmpt_xsnRzu4KTLoZiiQQ_TPsYwjTWBryiOgbxjA,3156
+wasenderapi/sessions.py,sha256=h-rF2hAc3CJBbe9p5RR0L3-VjS7ZRh5253W-n7a_53w,5124
+wasenderapi/webhook.py,sha256=JZuCEx47Z8fgKBuJ9OVkGJ1WRKjCJj-r2d0y-mejYdw,9231
+wasenderapi-0.1.0.dist-info/METADATA,sha256=51o54WLS4tEZJFXoNVoKhs6NcfLI4RRtCwbzpfStOOc,50158
+wasenderapi-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+wasenderapi-0.1.0.dist-info/licenses/LICENSE,sha256=V5OtQkKnfNIpXVT2JU0NDUPEZ9mcKxn4zl_4z5NP0YI,1084
+wasenderapi-0.1.0.dist-info/RECORD,,
