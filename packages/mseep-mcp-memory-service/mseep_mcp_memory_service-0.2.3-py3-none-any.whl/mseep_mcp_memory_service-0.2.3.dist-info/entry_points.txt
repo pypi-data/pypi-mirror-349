@@ -1,0 +1,2 @@
+[console_scripts]
+memory = mcp_memory_service.server:main
