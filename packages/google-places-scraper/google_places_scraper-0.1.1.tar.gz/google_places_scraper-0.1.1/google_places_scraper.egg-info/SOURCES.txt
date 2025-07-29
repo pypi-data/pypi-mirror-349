@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+google_places_scraper/__init__.py
+google_places_scraper/cli.py
+google_places_scraper/scraper.py
+google_places_scraper.egg-info/PKG-INFO
+google_places_scraper.egg-info/SOURCES.txt
+google_places_scraper.egg-info/dependency_links.txt
+google_places_scraper.egg-info/entry_points.txt
+google_places_scraper.egg-info/requires.txt
+google_places_scraper.egg-info/top_level.txt
