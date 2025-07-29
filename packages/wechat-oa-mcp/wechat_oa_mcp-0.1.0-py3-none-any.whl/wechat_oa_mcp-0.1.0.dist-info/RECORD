@@ -1,0 +1,9 @@
+wechat_oa_mcp/__init__.py,sha256=SRyOIixM--WCPrkhnht9LJ9YwXW2XTBpEZOJs3ZfJPA,474
+wechat_oa_mcp/__main__.py,sha256=4T2SE1XYrmMe2wox5sF_PM0_yec8IHNkaiZDq04R4hI,209
+wechat_oa_mcp/cli.py,sha256=2Ni32BZ0f4UH6XDJUG5lH1cFmXS6VhgSV63nOGIH4No,1566
+wechat_oa_mcp/server.py,sha256=JCx6bvXcJKda8QUWLWdu42qzZSW9qug2aq7gsOsmglQ,16243
+wechat_oa_mcp-0.1.0.dist-info/METADATA,sha256=UB9dOfm5QOSFyX4cZp0DhSgouRaMeLIk18HhgJuZCfs,8898
+wechat_oa_mcp-0.1.0.dist-info/WHEEL,sha256=Nw36Djuh_5VDukK0H78QzOX-_FQEo6V37m3nkm96gtU,91
+wechat_oa_mcp-0.1.0.dist-info/entry_points.txt,sha256=70rtTgmYxB-cYVZDixmVJzB2icRMryirgY4N4RF76ok,57
+wechat_oa_mcp-0.1.0.dist-info/top_level.txt,sha256=p-PuNK3dZVcehzabba8d0vTBb9i4_Hu0kVTNN4uMAog,14
+wechat_oa_mcp-0.1.0.dist-info/RECORD,,
