@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-knowledge-search = mcp_knowledge_search.server:mcp.run
