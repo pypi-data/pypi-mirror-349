@@ -1,0 +1,74 @@
+[project]
+name = "co2monitor"
+version = "2.0"
+description = "See the current co2 emissions per kWh of electricity in the Netherlands"
+readme = "README.md"
+authors = [{name = "Rens Oliemans"}]
+license = "GPL-3.0-or-later"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+dependencies = [
+    "click>=8.1.7",
+    "loguru>=0.6.0",
+    "python-dotenv>=1.0.1",
+    "requests>=2.32.2",
+]
+
+[dependency-groups]
+dev = [
+    "black>=24.10.0",
+    "isort>=5.13.2",
+    "mypy>=1.13.0",
+    "ruff>=0.8.0",
+    "types-requests>=2.31.0.6",
+]
+
+[project.entry-points.console_scripts]
+co2monitor = "main:app"
+
+[project.optional-dependencies]
+tray = [
+    "pillow~=11.2.0",
+    "pyside6>=6.8.0.2",
+]
+screen = [
+    "pillow~=11.2.0",
+    "rpi.gpio>=0.7.1",
+    "spidev>=3.6",
+]
+
+[tool.isort]
+profile = "black"
+
+[tool.mypy]
+files = [
+    "src",
+]
+
+[[tool.mypy.overrides]]
+module = [
+    "RPi",
+    "RPi.GPIO",
+    "PIL",
+]
+ignore_missing_imports = true
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+license-files = []
+
+
+[project.urls]
+Homepage = "https://git.sr.ht:~rensoliemans/co2monitor"
+Changelog = "https://git.sr.ht/~rensoliemans/co2monitor/log"
+
