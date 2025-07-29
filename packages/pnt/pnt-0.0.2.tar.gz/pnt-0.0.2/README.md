@@ -1,0 +1,175 @@
+---
+output:
+  html_document: default
+  word_document: default
+  pdf_document: default
+---
+
+# PubMed Network Toolkit (`pnt`)
+
+**pnt** is a simple Python package for extracting and analyzing bibliometric citation network data from PubMed. The package is designed to support:
+
+-   pulling citation metadata from PubMed;
+-   constructing co-authorship networks;
+-   generating edge and node lists;
+-   visualizing basic network structures.
+
+**Author**: Jacob Rohde ([jarohde1\@gmail.com](mailto:jarohde1@gmail.com))
+
+**Release notes:** Version 0.0.2 (released 2025-05-20) added a sub-package library with functions for filtering and summarizing PubMed data sets using locally hosted language models via [Ollama](https://ollama.com). This package is released under the [MIT](https://choosealicense.com/licenses/mit/) license.
+
+------------------------------------------------------------------------
+
+## Package overview
+
+### GetPubMedData()
+
+A class object for extracting a citation data set from PubMed using [Metapub](https://metapub.org).
+
+    pnt.GetPubMedData(search_term, 
+                      pubmed_api_key=None, 
+                      size=250, 
+                      start_date=None, 
+                      end_date=None)
+
+**Arguments/attributes:**
+
+-   **`search_term`**\
+    The only required argument. Takes a single string as a search term(s).\
+    Example:
+
+    ``` python
+    search_term='cancer' 
+    search_term='cancer and tobacco' 
+    ```
+
+-   **`pubmed_api_key`** *(optional)*\
+    A string argument to specify a PubMed NCBI API key. If set, this key is registered as an environment variable, reducing API rate limiting.
+
+-   **`size`** *(optional)*\
+    An integer that indicates how many PubMed citations to retrieve. Default is `250`.\
+    Note: This class is intended for small-scale or exploratory data pulls.
+
+-   **`start_date` / `end_date`** *(optional)*\
+    String parameter(s) to specify the date range for citation retrieval. Default end_date set to current date. Format: `'YYYY, MM, DD'` (e.g., `'2023, 01, 01'`)
+
+-   **`GetPubMedData.citation_df`**\
+    A pandas `DataFrame` containing the citation data. The DataFrame includes the following columns: 'pmid', 'first_author', 'last_author', 'author_list', 'title', 'journal', 'year', 'volume', 'issue', 'pages', 'url', 'abstract', 'citation', 'doi'
+
+-   **`GetPubMedData.write_data()`**\
+    Saves the citation DataFrame to file. Accepts the following optional keyword arguments:
+
+    -   `file_type`: Format to save the file. Accepts `'csv'` or `'json'`. Default is `'csv'`.
+    -   `file_name`: Name of the output file (without extension). Default is the provided `search_term`.
+
+### pnt.GetCitationNetwork()
+
+A class object for generating edge and node lists, and a NetworkX graph object from a PubMed citation data set.
+
+    pnt.GetCitationNetwork(citation_dataset, 
+                           edge_type='directed')
+
+**Arguments/attributes:**
+
+-   **`citation_dataset`**\
+    The only required argument. Takes an existing citation data set or a `GetPubMedData` object.
+
+-   **`edge_type`** *(optional)*\
+    String argument set to either `'directed'` or `'undirected'`, to signify network edge type; default is `'directed'`.
+
+-   **`GetCitationNetwork.edge_list`**\
+    Returns a pandas DataFrame of the network edge list with columns for source author, target co-author, and the journal.
+
+-   **`GetCitationNetwork.node_list`**\
+    Returns a pandas DataFrame of the network node list with columns for unique nodes, degree, and the node's associated journals.
+
+-   **`GetCitationNetwork.graph`**\
+    Returns a NetworkX graph object.
+
+-   **`GetCitationNetwork.write_data()`**  Object method that writes edge_list and node_list data sets to file. Accepts the same optional arguments as `GetPubMedData.write_data()` (i.e., `'file_type'` and `'file_name'`).
+
+### single_network_plot()
+
+A simple function for plotting networks via NetworkX and Matplotlib (additional install required). Please note this function is currently a work in progress and is meant to be basic tool to plot a single graph. See NetworkX documentation for more advanced plotting needs.
+
+    pnt.single_network_plot(network, **kwargs)
+
+**Arguments:**
+
+-   **`network`**\
+    The only required argument. Takes a `GetCitationNetwork` or NetworkX graph object.
+
+-   **`title`***(optional)*\
+    String argument to add a title to the plot.
+
+-   **`pos`***(optional)*\
+    String argument to set the NetworkX plotting algorithm. For ease of use, the argument currently accepts one of the following layout types as a string: 'spring_layout' (default), 'kamada_kawai_layout', 'circular_layout', or 'random_layout'
+
+-   **`kwargs`***(optional)*\
+    The function also accepts several other NetworkX keyword arguments for plotting (please see NetworkX documentation for more info on these arguments). Currently accepted arguments include:
+
+    -   'arrows' (bool)
+    -   'arrowsize' (int)
+    -   'edge_color' (str or list/array)
+    -   'font_size' (int)
+    -   'node_color' (str or list/array)
+    -   'node_size' (str or list/array)
+    -   'verticalalignment' (str)
+    -   'width' (int/float or list/array)
+    -   'with_labels' (bool)
+
+------------------------------------------------------------------------
+
+## Example use case for `pnt`
+
+This example demonstrates how to use `pnt` to:
+
+1.  Extract a PubMed citation data set.
+2.  Write the citation data to file.
+3.  Construct a citation network graph from the data.
+4.  Plot the citation network using Matplotlib.
+5.  Write the resulting edge list, node list, and adjacency matrices to file.
+
+``` python
+import pnt  # Assumes pnt is installed 
+
+# Extract citation data for the keyword topic 'tobacco control'
+pubmed_data = pnt.GetPubMedData(search_term='tobacco control',
+                                size=25, 
+                                start_date='2025, 1, 1',
+                                end_date='2025, 1, 31')
+
+# Access the resulting data set 
+df = pubmed_data.citation_df
+print(df)
+
+# Write the data to CSV
+pubmed_data.write_data(file_type='csv', file_name='tob_control_citations')
+
+# Create a citation network object from the data 
+network = pnt.GetCitationNetwork(pubmed_data, edge_type='directed')
+
+# Plot the citation network 
+pnt.single_network_plot(network=network,
+                        title='Example tobacco control co-citation network plot',
+                        arrows=True,
+                        with_labels=True)
+
+# Access the edge and node lists and save the data to file
+edge_df = network.edge_list
+node_df = network.node_list
+network.write_data(file_type='csv', file_name='citation_network')
+```
+
+------------------------------------------------------------------------
+
+## Requirements
+
+-   Python 3.XX
+-   metapub - a Python library with functions to query the PubMed API
+-   numpy - a Python library for handling arrays and matrices
+-   pandas - a Python library for data management
+-   NetworkX - a Python library for network analysis
+-   Matplotlib (only if using the `single_network_plot()` function) - a Python library for plotting
+
+------------------------------------------------------------------------
