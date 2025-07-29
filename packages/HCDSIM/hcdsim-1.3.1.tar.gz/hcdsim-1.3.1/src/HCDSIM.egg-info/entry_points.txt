@@ -1,0 +1,3 @@
+[console_scripts]
+hcdbench = hcdsim.bin.hcdbench_main:main
+hcdsim = hcdsim.bin.hcdsim_main:main
