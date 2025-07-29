@@ -1,0 +1,7 @@
+README.md
+license
+setup.py
+infra_analytics.egg-info/PKG-INFO
+infra_analytics.egg-info/SOURCES.txt
+infra_analytics.egg-info/dependency_links.txt
+infra_analytics.egg-info/top_level.txt
