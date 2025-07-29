@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+ftdi_io.egg-info/PKG-INFO
+ftdi_io.egg-info/SOURCES.txt
+ftdi_io.egg-info/dependency_links.txt
+ftdi_io.egg-info/requires.txt
+ftdi_io.egg-info/top_level.txt
+ftio/__init__.py
+ftio/_ft_define.py
+ftio/ftio.py
