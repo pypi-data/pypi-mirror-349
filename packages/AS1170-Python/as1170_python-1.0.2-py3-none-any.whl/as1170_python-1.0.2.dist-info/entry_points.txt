@@ -1,0 +1,2 @@
+[console_scripts]
+as1170_test = as1170.driver:main
