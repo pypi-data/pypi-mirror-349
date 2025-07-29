@@ -1,0 +1,65 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pull_pull_request"
+version = "0.1.0"
+description = "CLI for pull from pull requests and pushing to them."
+readme = "README.md"
+authors = [{ name = "Samuel Colvin", email = "s@muelcolvin.com" }]
+license = "MIT"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Internet",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+requires-python = ">=3.11"
+dependencies = ["httpx>=0.28.1"]
+
+[project.urls]
+Homepage = "https://github.com/samuelcolvin/pull_pull_request"
+Source = "https://github.com/samuelcolvin/pull_pull_request"
+
+[project.scripts]
+pull_pull_request = "pull_pull_request.__main__:main"
+
+[tool.ruff]
+line-length = 120
+target-version = "py313"
+include = ["pull_pull_request/**/*.py"]
+
+[tool.ruff.lint]
+extend-select = ["Q", "RUF100", "C90", "UP", "I"]
+flake8-quotes = { inline-quotes = "single", multiline-quotes = "double" }
+isort = { combine-as-imports = true }
+mccabe = { max-complexity = 15 }
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.format]
+# don't format python in docstrings, pytest-examples takes care of it
+docstring-code-format = false
+quote-style = "single"
+
+[tool.pyright]
+pythonVersion = "3.13"
+typeCheckingMode = "strict"
+reportUnnecessaryTypeIgnoreComment = true
+include = ["pull_pull_request"]
+venvPath = ".venv"
+
+[dependency-groups]
+dev = ["pyright>=1.1.399", "ruff>=0.11.5"]

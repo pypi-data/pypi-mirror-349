@@ -1,0 +1,61 @@
+Metadata-Version: 2.4
+Name: pull_pull_request
+Version: 0.1.0
+Summary: CLI for pull from pull requests and pushing to them.
+Project-URL: Homepage, https://github.com/samuelcolvin/pull_pull_request
+Project-URL: Source, https://github.com/samuelcolvin/pull_pull_request
+Author-email: Samuel Colvin <s@muelcolvin.com>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Internet
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.11
+Requires-Dist: httpx>=0.28.1
+Description-Content-Type: text/markdown
+
+# pull_pull_request
+
+[![pypi](https://img.shields.io/pypi/v/pull_pull_request.svg)](https://pypi.python.org/pypi/pull_pull_request)
+[![license](https://img.shields.io/github/license/samuelcolvin/pull_pull_request.svg)](https://github.com/samuelcolvin/pull_pull_request/blob/main/LICENSE)
+
+CLI for pull from pull requests and pushing to them.
+
+## Installation
+
+```bash
+uv tool install pull_pull_request
+```
+
+Add the an alias to your `~/.gitconfig`:
+
+```toml
+[alias]
+    ppr = "!f() { pull_pull_request $@; }; f"
+    ...
+```
+
+## Usage
+
+To pull:
+
+```bash
+git ppr <pull request id>
+```
+
+To push back to that branch:
+
+```bash
+git ppr <pull request id> push
+```
