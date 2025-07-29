@@ -1,0 +1,11 @@
+python-dotenv>=1.0.1
+httpx>=0.28.1
+mcp[cli]>=1.4.1
+
+[dev]
+pyright>=1.1.398
+ruff>=0.11.0
+mypy>=1.9.0
+pytest>=8.0.0
+pytest-asyncio>=0.23.5
+pytest-cov>=4.1.0
