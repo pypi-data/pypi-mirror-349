@@ -1,0 +1,27 @@
+Metadata-Version: 2.4
+Name: mseep-mcp-server-iris
+Version: 0.2.5
+Summary: A Model Context Protocol server for InterSystems IRIS.
+Home-page: 
+Author: mseep
+Author-email: mseep <support@skydeck.ai>
+Maintainer-email: mseep <support@skydeck.ai>
+License: MIT
+Keywords: iris,mcp,llm,automation
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: intersystems-irispython>=5.1.0
+Requires-Dist: mcp[cli]>=1.2.0
+Requires-Dist: starlette>=0.36.0
+Requires-Dist: uvicorn>=0.27.0
+Dynamic: author
+Dynamic: license-file
+Dynamic: requires-python
+
+# Package managed by MseeP.ai
