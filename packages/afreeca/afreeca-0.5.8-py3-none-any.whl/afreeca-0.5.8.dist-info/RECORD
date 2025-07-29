@@ -1,0 +1,15 @@
+afreeca/__init__.py,sha256=Kf95RyrEFQ109uVB_zP0VUsAJO0p6a1IT8zUStJYNEw,397
+afreeca/constants.py,sha256=OG6a8zfnPYWhQF1S_7DDmxXoNW1600Qxku4XAiWfFbA,7602
+afreeca/core.py,sha256=Q8YWyPylCZoyax0yUYskLKvGg821X4l_VpD0pOyjqlI,8491
+afreeca/credential.py,sha256=Xo7J28y1QScRBUp0pOMMyXKAlDOSuKQmGXgX5WfJgiQ,1711
+afreeca/exceptions.py,sha256=VEYXvcVGaecEENxGlsGTfn2b9MmSyB7q2AbM2SeSp94,454
+afreeca/interfaces.py,sha256=hgppolVWJFCNR-d6Lb6fm7wAmgHlcepg1m6EGcchjBI,2353
+afreeca/packet.py,sha256=DxiEGFrOYorMJxztn1ZY_D4erK4eukkdi_lRX91igcI,581
+afreeca/utils.py,sha256=Kt6ZtYIDRb1dU-nqTb7YthV5lf-ajhny7M9E3-8TwRU,1528
+afreeca/types/bj_info.py,sha256=_MQKPiDHYJ6nEymIapDeOtLvKdUNBo2g6N04s3lan2s,284
+afreeca/types/packet.py,sha256=PEzxKFGL-ksJW61ENzcr5gBo6t4Q_r801dHIPLemo6s,522
+afreeca-0.5.8.dist-info/licenses/LICENSE,sha256=vJiywqwxWUWZVlDTfU1RPX3sgoznlrwKC7vRP5KDezw,1086
+afreeca-0.5.8.dist-info/METADATA,sha256=LXItfVDG7MjW3Eae97xLc_Zucxdz94d-VDtjXI9ehYE,1032
+afreeca-0.5.8.dist-info/WHEEL,sha256=Nw36Djuh_5VDukK0H78QzOX-_FQEo6V37m3nkm96gtU,91
+afreeca-0.5.8.dist-info/top_level.txt,sha256=v1yA4pte89y4-It5uxpWo9HFOs5GKX3NFa_N2KLd8aE,8
+afreeca-0.5.8.dist-info/RECORD,,
