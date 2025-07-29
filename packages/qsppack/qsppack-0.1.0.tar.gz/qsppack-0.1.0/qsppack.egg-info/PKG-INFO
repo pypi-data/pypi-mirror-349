@@ -1,0 +1,56 @@
+Metadata-Version: 2.4
+Name: qsppack
+Version: 0.1.0
+Summary: Quantum Signal Processing optimization and analysis
+Author: James Larsen
+License: MIT
+Project-URL: Homepage, https://github.com/beevus77/qsp
+Project-URL: Bug Tracker, https://github.com/beevus77/qsp/issues
+Project-URL: Documentation, https://qsp.readthedocs.io/
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Physics
+Requires-Python: >=3.8
+Description-Content-Type: text/x-rst
+
+qsp - Quantum Signal Processing Optimization
+============================================
+
+A Python package for Quantum Signal Processing optimization and analysis.
+
+Installation
+------------
+
+You can install the package using pip:
+
+.. code-block:: bash
+
+    pip install qsppack
+
+Or install from source:
+
+.. code-block:: bash
+
+    git clone https://github.com/beevus77/qsp.git
+    cd qsp
+    pip install -e .
+
+Documentation
+-------------
+
+Full documentation is available at: https://qsp.readthedocs.io/
+
+Features
+--------
+
+* Quantum Signal Processing optimization
+* Support for various optimization methods (L-BFGS, FPI, Newton)
+* Utility functions for Chebyshev polynomials and phase factor manipulation
+
+License
+-------
+
+This project is licensed under the MIT License - see the LICENSE file for details.

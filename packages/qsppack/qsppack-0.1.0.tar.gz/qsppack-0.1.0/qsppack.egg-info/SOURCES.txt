@@ -1,0 +1,12 @@
+README.rst
+pyproject.toml
+optimization/QSP_solver.py
+optimization/__init__.py
+optimization/core.py
+optimization/objective.py
+optimization/optimizers.py
+optimization/utils.py
+qsppack.egg-info/PKG-INFO
+qsppack.egg-info/SOURCES.txt
+qsppack.egg-info/dependency_links.txt
+qsppack.egg-info/top_level.txt
