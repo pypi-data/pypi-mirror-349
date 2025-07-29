@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: predictram-py-finance-data
+Version: 0.1.0
+Summary: A Python library for querying and analyzing financial stock data with natural language processing
+Home-page: https://github.com/predictram/predictram-py-finance-data
+Author: Predictram
+Author-email: support@predictram.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pandas >=1.0.0
+Requires-Dist: openpyxl >=3.0.0
+Requires-Dist: matplotlib >=3.0.0
+Requires-Dist: seaborn >=0.11.0
+Requires-Dist: numpy >=1.0.0
+
+# Predictram Python Finance Data
+
+A Python library for querying and analyzing financial stock data with natural language processing.
+
+## Installation
+
+```bash
+pip install predictram-py-finance-data
