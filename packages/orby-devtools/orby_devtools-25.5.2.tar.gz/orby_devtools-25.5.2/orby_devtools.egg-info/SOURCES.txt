@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+pyproject.toml
+orby_devtools.egg-info/PKG-INFO
+orby_devtools.egg-info/SOURCES.txt
+orby_devtools.egg-info/dependency_links.txt
+orby_devtools.egg-info/entry_points.txt
+orby_devtools.egg-info/requires.txt
+orby_devtools.egg-info/top_level.txt
+orbydev/__init__.py
+orbydev/cli.py
+orbydev/master.py
+orbydev/project.py
+orbydev/templates.py
+orbydev/templates/default/main.py
+orbydev/templates/default/manifest.json
