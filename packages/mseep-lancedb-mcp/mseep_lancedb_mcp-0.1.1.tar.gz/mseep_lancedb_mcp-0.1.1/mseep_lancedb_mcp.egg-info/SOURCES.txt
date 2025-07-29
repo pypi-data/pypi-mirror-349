@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.py
+mseep_lancedb_mcp.egg-info/PKG-INFO
+mseep_lancedb_mcp.egg-info/SOURCES.txt
+mseep_lancedb_mcp.egg-info/dependency_links.txt
+mseep_lancedb_mcp.egg-info/entry_points.txt
+mseep_lancedb_mcp.egg-info/requires.txt
+mseep_lancedb_mcp.egg-info/top_level.txt
+tests/test_init.py
+tests/test_server.py
