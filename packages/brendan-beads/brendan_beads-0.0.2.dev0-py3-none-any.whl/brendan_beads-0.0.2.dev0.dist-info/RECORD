@@ -1,0 +1,13 @@
+brendan_beads/__init__.py,sha256=rpX6uUVQskWfGVAeAHS3y06j4pD01JAgHXiaTHBx4JQ,415
+brendan_beads/_version.py,sha256=QzeCcGjOWN8Fxp7jvyRI_2CKR9QZIqw6gPmenAlq4sE,524
+brendan_beads/_widget.py,sha256=97htk4pzGwHb-kiasTvmf95F0V3Wdhs7K8ZDUwCuHH0,2984
+brendan_beads/generate_data.py,sha256=o5qcwpjUPyq8EOnqQxS_wGPM7B1Y95Q9NKx9k26IFKE,7664
+brendan_beads/napari.yaml,sha256=VaL7ZcRnjM_CkMN91_-sz7NzNJo2ArW3dZ6NK4HYJp0,526
+brendan_beads/visualize.py,sha256=gFjL8hSNzYaeXr7nURkaTc2saWW5O9tMvh-9kzhcXYQ,2088
+brendan_beads/_tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+brendan_beads-0.0.2.dev0.dist-info/licenses/LICENSE,sha256=wlzqLuY2JA0E8j4B3yZyNtG6hhvf43JLn5Qc5bAFcaE,1084
+brendan_beads-0.0.2.dev0.dist-info/METADATA,sha256=IZUiihJT-12vXH9EBJ26VP9kiAx6RzwhNZPZtS64gN8,5909
+brendan_beads-0.0.2.dev0.dist-info/WHEEL,sha256=Nw36Djuh_5VDukK0H78QzOX-_FQEo6V37m3nkm96gtU,91
+brendan_beads-0.0.2.dev0.dist-info/entry_points.txt,sha256=HrnMPvqlHjYdVQIJWdRT69su-zBUVlhh6HVZ2axVI0c,60
+brendan_beads-0.0.2.dev0.dist-info/top_level.txt,sha256=_gIH-VfKoAI44GPrcSAq_uh_PKL24_yv-Tm8xhfbY_U,14
+brendan_beads-0.0.2.dev0.dist-info/RECORD,,
