@@ -1,0 +1,10 @@
+README.md
+cli.py
+setup.py
+fastapi_cli_starter.egg-info/PKG-INFO
+fastapi_cli_starter.egg-info/SOURCES.txt
+fastapi_cli_starter.egg-info/dependency_links.txt
+fastapi_cli_starter.egg-info/entry_points.txt
+fastapi_cli_starter.egg-info/top_level.txt
+fastapi_template/__init__.py
+fastapi_template/main.py
