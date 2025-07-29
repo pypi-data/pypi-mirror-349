@@ -1,0 +1,102 @@
+Metadata-Version: 2.4
+Name: vut
+Version: 0.1.2
+Summary: Toolkit for Video Understanding tasks
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: einops>=0.8.1
+Requires-Dist: ffmpeg-python>=0.2.0
+Requires-Dist: hydra-core>=1.3.2
+Requires-Dist: matplotlib>=3.10.3
+Requires-Dist: numpy>=2.2.5
+Requires-Dist: opencv-contrib-python>=4.11.0.86
+Requires-Dist: opencv-python>=4.11.0.86
+Requires-Dist: pillow>=11.2.1
+Requires-Dist: polars>=1.29.0
+Requires-Dist: python-dotenv>=1.1.0
+Requires-Dist: rich>=14.0.0
+Requires-Dist: torch>=2.7.0
+Requires-Dist: torchtyping>=0.1.5
+Requires-Dist: torchvision>=0.22.0
+Dynamic: license-file
+
+# Video Understanding Toolkit
+
+[![License](https://img.shields.io/github/license/kage1020/vut)](https://github.com/kage1020/vut/blob/main/LICENSE)
+[![Version](https://img.shields.io/github/v/release/kage1020/vut)](https://github.com/kage1020/vut/releases)
+[![PyPI](https://img.shields.io/pypi/v/vut)](https://pypi.org/project/vut/)
+[![codecov](https://codecov.io/gh/kage1020/vut/branch/main/graph/badge.svg)](https://codecov.io/gh/kage1020/vut)
+
+This repository provides a collection of tools and utilities for video understanding tasks, including video classification, action recognition, and more. The toolkit is designed to be modular and extensible, allowing researchers and developers to easily integrate new models and datasets.
+
+## Features
+
+TODO: Implement the features and tools in the toolkit.
+
+We provide a variety of features to facilitate video understanding tasks:
+
+- **Action Recognition**: Implementations of popular action recognition models, including 3D CNNs, RNNs, and transformer-based architectures.
+- **Video Classification**: Tools for training and evaluating video classification models on various datasets.
+- **Video Retrieval**: Methods for retrieving relevant video content based on user queries.
+- **Action Segmentation**: Tools for segmenting actions in videos, including temporal action detection and spatio-temporal action localization.
+- **Video Captioning**: Generate natural language descriptions for video content.
+- **Video Question Answering**: Answer questions about video content using natural language processing techniques.
+- **Video Generation**: Generate new video content based on existing videos or textual descriptions.
+- **Video Summarization**: Create concise summaries of long videos while preserving important information.
+- **Video Object Detection**: Detect and localize objects in video frames.
+- **Video Object Tracking**: Track objects across video frames.
+- **Video Anomaly Detection**: Identify unusual or unexpected events in video data.
+
+Additionally, we provide a set of tools for data preprocessing, model training, and evaluation. The toolkit is designed to be easy to use and flexible, allowing users to customize their workflows as needed.
+
+- **Ground Truth Generation**: Generate ground truth labels for video datasets.
+- **Data Augmentation**: Apply various data augmentation techniques to improve model performance.
+- **Model Training**: Train models using various architectures and configurations.
+- **Model Evaluation**: Evaluate model performance using standard metrics and benchmarks.
+- **Visualization**: Visualize model predictions and performance metrics.
+
+## Installation
+
+You can install the toolkit using pip:
+
+```bash
+pip install vut
+```
+
+## Usage
+
+TODO: Provide usage examples and documentation for the various features and tools in the toolkit.
+
+## Development
+
+This toolkit requires package management tool [uv](https://docs.astral.sh/uv). You first need to install it:
+
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+Then, you can install the toolkit using the following command:
+
+```bash
+git clone https://github.com/kage1020/vut.git
+cd vut
+uv sync
+```
+
+This will install all the required dependencies and set up the development environment.
+
+## License
+
+The core functionality of this toolkit is licensed under the [MIT License](LICENSE).
+
+However, the models included in the `vut/models` directory may be subject to different licenses:
+
+- Each model implementation in the `vut/models` directory includes its own licensing information.
+- Please refer to the [models README](vut/models/README.md) for specific license details of each model.
+
+When using this toolkit, especially when incorporating the provided models, please make sure to comply with the respective licenses.
+
+## Contributing
+
+We welcome contributions to the toolkit!
