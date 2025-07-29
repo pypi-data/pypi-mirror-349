@@ -1,0 +1,9 @@
+ocrd_fileformat/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ocrd_fileformat/ocrd-tool.json,sha256=zciKeP5dK1G0MLSIwphB8xtV4Jc9-70JYfHeXdqHCy0,1725
+ocrd_fileformat/processor.py,sha256=fKjxPQ5IHQZWlzrO982nAIO5y1LH35WzxV-MKnljQSg,3739
+ocrd_fileformat-0.12.0.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+ocrd_fileformat-0.12.0.dist-info/METADATA,sha256=-GcegTaFv0fVfYVUuHKojyzoVpvFNFLc_1ij97e3a6s,7468
+ocrd_fileformat-0.12.0.dist-info/WHEEL,sha256=Nw36Djuh_5VDukK0H78QzOX-_FQEo6V37m3nkm96gtU,91
+ocrd_fileformat-0.12.0.dist-info/entry_points.txt,sha256=cnXRRSTFj4zg521uT_NrE0XbfHQu6kF0JP7XPFNu5rU,76
+ocrd_fileformat-0.12.0.dist-info/top_level.txt,sha256=r0A0GcPFo3GBeoh7pYtNnQ_sZPfet-frDIrgkkLggg4,16
+ocrd_fileformat-0.12.0.dist-info/RECORD,,
