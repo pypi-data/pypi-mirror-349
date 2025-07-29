@@ -1,0 +1,10 @@
+toucan/__init__.py,sha256=czvNOH9-G2kwL9BX7TJyT78bXkY_xjT1Zmy2a8O7KJo,22
+toucan/FaceCan/__init__.py,sha256=DrICKnrZHjjVBTu2f_ygm2mwPDJA2QhFB9smChzwWKs,151
+toucan/FaceCan/detection/__init__.py,sha256=nV0qMjbzsNRYEhalK3-VzcWesMyVdKhGUa5Y5n3EPes,359
+toucan/FaceCan/detection/detection.py,sha256=QAySleNrucrWygWAkzKJ2_jTiZ7Q7-WygeYkLpNvI9Y,13032
+toucan/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+toucan/models/models.py,sha256=soDlxOpNshb1QPEbeApglMKnIq2OqaQCHK8hjDDlG4M,261
+the_toucan-1.1.7.dist-info/METADATA,sha256=GgJsRi8OyLdQv_7ktLwkt-15XzPj5sJ4bbELavyI8po,257
+the_toucan-1.1.7.dist-info/WHEEL,sha256=DnLRTWE75wApRYVsjgc6wsVswC54sMSJhAEd4xhDpBk,91
+the_toucan-1.1.7.dist-info/top_level.txt,sha256=EzYtGGhI9WKdcYsXwTx-cxN5KdBUHI4X-9aT2LbEbgc,7
+the_toucan-1.1.7.dist-info/RECORD,,
