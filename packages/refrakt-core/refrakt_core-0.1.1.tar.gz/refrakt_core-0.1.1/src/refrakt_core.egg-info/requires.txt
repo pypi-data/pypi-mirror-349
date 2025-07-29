@@ -1,0 +1,8 @@
+torch>=2.0
+torchvision
+einops
+matplotlib
+numpy
+requests
+pillow
+tqdm
