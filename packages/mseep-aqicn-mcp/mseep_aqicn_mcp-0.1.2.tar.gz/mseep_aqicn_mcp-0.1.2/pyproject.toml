@@ -1,0 +1,25 @@
+[project]
+name = "mseep-aqicn-mcp"
+version = "0.1.2"
+description = "MCP server for fetching air quality data from AQICN"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "mcp[cli]",
+    "httpx",
+    "pydantic>=2.0.0",
+    "python-dotenv>=1.0.0",
+]
+authors = [
+    { name = "mseep", email = "support@skydeck.ai" },
+]
+maintainers = [
+    { name = "mseep", email = "support@skydeck.ai" },
+]
+
+[build-system]
+requires = [
+    "setuptools>=42",
+    "wheel",
+]
+build-backend = "setuptools.build_meta"
