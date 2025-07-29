@@ -1,0 +1,5 @@
+geopandas
+scipy
+shapely
+xarray
+xpublish>=0.4.1
