@@ -1,0 +1,13 @@
+mcp_simple_arxiv/__init__.py,sha256=HeHWP645XoXGpiC5eXNU7qu1WY8bh8cvPj-4rDAgND4,236
+mcp_simple_arxiv/__main__.py,sha256=2fAudb8MmR3NqfCANGmL0Y07IaChTD7Opd57Wl2SgVk,152
+mcp_simple_arxiv/arxiv_client.py,sha256=kbFU3YvdmXWaJDhm4aY-WcqzzFVLyRNkJA4DW-54bgg,8078
+mcp_simple_arxiv/categories.py,sha256=JXZYr3Oj2hN8cAEVDnvLimDnu5hyc8EjVyZx1wfdz9A,6011
+mcp_simple_arxiv/server.py,sha256=Kpz4uvU57D2qDqkDAM2ggU2iXCVMTsVwKbHMPYkt4Es,9843
+mcp_simple_arxiv/taxonomy.json,sha256=0JEtFTmRB2qF5HuTKT6w2lVDG4lUfaDXg_gdJN6LKRs,5083
+mcp_simple_arxiv/update_taxonomy.py,sha256=Bhlla4NNcLZeSGQDz-gfSAUfaecedE70TSR193WBHYE,1394
+mseep_mcp_simple_arxiv-0.2.4.dist-info/licenses/LICENSE,sha256=E14_uVzuQtaoWSd-fLL-bD_xU9zS0dTUTenEoCwXNXw,1068
+mseep_mcp_simple_arxiv-0.2.4.dist-info/METADATA,sha256=6tIv-L3tbAWLVNP01_WcifSGpEg9t4Uylq5BZdoe1Ho,678
+mseep_mcp_simple_arxiv-0.2.4.dist-info/WHEEL,sha256=Nw36Djuh_5VDukK0H78QzOX-_FQEo6V37m3nkm96gtU,91
+mseep_mcp_simple_arxiv-0.2.4.dist-info/entry_points.txt,sha256=E_HQRjxtWgtVzeUPLfrA6VY3M2WQNZGLsLlSNOKP4gQ,59
+mseep_mcp_simple_arxiv-0.2.4.dist-info/top_level.txt,sha256=pjg6wHcSIrESEDJ3FyWYgJLNP79HQABnhzNOub2NXVE,17
+mseep_mcp_simple_arxiv-0.2.4.dist-info/RECORD,,
