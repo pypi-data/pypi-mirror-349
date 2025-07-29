@@ -1,0 +1,42 @@
+Metadata-Version: 2.4
+Name: maestro-mcp
+Version: 0.1.4
+Summary: The Official Maestro MCP for Claude Desktop, Cursor and other MCP clients.
+Project-URL: Homepage, https://github.com/mobile-dev-inc/maestro-mcp
+Project-URL: Bug Tracker, https://github.com/mobile-dev-inc/maestro-mcp/issues
+Project-URL: Documentation, https://docs.maestro.dev
+Author-email: herval <hervalfreire@gmail.com>
+License-Expression: MIT
+License-File: LICENSE
+Keywords: automation,maestro,mcp,mobile,testing
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Quality Assurance
+Classifier: Topic :: Software Development :: Testing
+Classifier: Topic :: Software Development :: Testing :: Acceptance
+Requires-Python: >=3.11
+Requires-Dist: mcp[cli]>=1.6.0
+Requires-Dist: requests
+Requires-Dist: uv
+Provides-Extra: dev
+Requires-Dist: build; extra == 'dev'
+Requires-Dist: pytest; extra == 'dev'
+Requires-Dist: twine; extra == 'dev'
+Description-Content-Type: text/markdown
+
+# Maestro MCP
+
+A Python package for Maestro MCP.
+
+## Installation
+
+You can install the package via pip:
+
+```bash
+pip install maestro-mcp
+```
+
+Refer to the full [Maestro MCP installation documentation](https://docs.maestro.dev/mcp) for more details.

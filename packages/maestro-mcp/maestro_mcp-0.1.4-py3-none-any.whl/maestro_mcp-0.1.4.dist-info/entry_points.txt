@@ -1,0 +1,2 @@
+[console_scripts]
+maestro-mcp = maestro_mcp.cli:mcp.run
