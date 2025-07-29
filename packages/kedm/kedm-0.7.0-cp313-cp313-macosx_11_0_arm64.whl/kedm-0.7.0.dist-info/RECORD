@@ -1,0 +1,10 @@
+kedm-0.7.0.dist-info/RECORD,,
+kedm-0.7.0.dist-info/WHEEL,sha256=RKIEjucJN8CeTl-8aT264f-d7DwF42JIv5EB5P7fyqg,131
+kedm-0.7.0.dist-info/top_level.txt,sha256=neU2V7Q0pOirziEOZV4wygWLoEnnLiOFKKKSvpuSUf8,5
+kedm-0.7.0.dist-info/METADATA,sha256=4KO11BF_k3rgPRJdfjnoPNoSw-m6_EbIszjWnjAKZiM,3913
+kedm-0.7.0.dist-info/licenses/LICENSE-THIRD-PARTY,sha256=-A7pHHXqtkNQeC6vvnNmvO3ONQdRlduLGNM7YOaDJ_M,16971
+kedm-0.7.0.dist-info/licenses/LICENSE,sha256=HPKibR5umz0gbhyiqDnRglJHCtNpqB3Ak2bJYDSBkaQ,1078
+kedm/_version.py,sha256=bUfmR_RXPyZcYxR3Fw8aZ5UkhxgS4olvDvQp7Knn6wU,497
+kedm/_kedm.cpython-313-darwin.so,sha256=7BPtCaNajxxiQRbeTBjT9EU6jJ1LlYfs1fHUJuq5qV0,1003424
+kedm/__init__.py,sha256=EZUiaCjggOAic59VtQE4dsVqZTLTqV8gTOj4FN1Vi7o,312
+kedm/.dylibs/libomp.dylib,sha256=ornmv9EKRdCIFEW0mDBho4QVdgHyjFCHRqqblnQ7nNg,1508960
