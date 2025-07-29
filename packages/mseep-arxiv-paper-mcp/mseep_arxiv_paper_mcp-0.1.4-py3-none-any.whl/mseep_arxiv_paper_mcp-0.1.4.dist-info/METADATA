@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: mseep-arxiv-paper-mcp
+Version: 0.1.4
+Summary: arXiv 논문 데이터를 Claude AI와 연동하는 MCP 서버
+Home-page: 
+Author: mseep
+Author-email: mseep <support@skydeck.ai>
+Maintainer-email: mseep <support@skydeck.ai>
+Keywords: arxiv,claude,ai,research,papers
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: mcp[cli]>=1.6.0
+Requires-Dist: requests>=2.0.0
+Requires-Dist: beautifulsoup4>=4.0.0
+Requires-Dist: lxml>=4.0.0
+Dynamic: author
+Dynamic: license-file
+Dynamic: requires-python
+
+# Package managed by MseeP.ai
