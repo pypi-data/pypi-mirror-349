@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: time-tracker-cli-keerthana
+Version: 0.1.0
+Summary: A simple CLI tool to track tasks and time logs
+Home-page: https://github.com/yourusername/time-tracker-cli
+Author: Keerthana P S
+Author-email: keerthanaps.work@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: rich
+Requires-Dist: matplotlib
+
+### README.md
+
+# Time Tracker CLI
+
+A simple command-line tool to help you track tasks, time spent, and generate reports or summaries.
+
+## Features
+
+- Start and stop tasks
+- View status of ongoing task
+- Generate daily or weekly summaries
+- Export logs to CSV
+
+## Installation
+
+```bash
+pip install time-tracker-cli
+```
+
+## Usage
+
+```bash
+time-tracker start --task "Writing"
+time-tracker stop
+time-tracker summary --type daily
+```
