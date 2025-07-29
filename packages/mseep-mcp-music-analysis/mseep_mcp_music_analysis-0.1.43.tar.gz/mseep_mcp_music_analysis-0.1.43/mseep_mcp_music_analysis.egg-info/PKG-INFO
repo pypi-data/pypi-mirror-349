@@ -1,0 +1,24 @@
+Metadata-Version: 2.4
+Name: mseep-mcp-music-analysis
+Version: 0.1.43
+Summary: \A MCP server with music tools\
+Home-page: https://github.com/mseep
+Author: mseep
+Author-email: mseep <support@skydeck.ai>
+Maintainer-email: mseep <support@skydeck.ai>
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: fastmcp==0.4.1
+Requires-Dist: librosa>=0.9.2
+Requires-Dist: matplotlib>=3.5.1
+Requires-Dist: numpy>=1.21.0
+Requires-Dist: pytubefix==8.12.2
+Requires-Dist: asyncio>=3.4.3
+Requires-Dist: soundfile==0.13.1
+Dynamic: author
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+
+# Package managed by MseeP.ai
