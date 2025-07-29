@@ -1,0 +1,8 @@
+[console_scripts]
+add-check = nyxmon.entrypoints.check_management:add_check_to_db
+db-from-production = nyxmon.entrypoints.deployment:production_db_to_local
+deploy-production = nyxmon.entrypoints.deployment:deploy_production
+deploy-staging = nyxmon.entrypoints.deployment:deploy_staging
+llm-content = nyxmon.entrypoints.developer_tools:llm_content
+show-checks = nyxmon.entrypoints.check_management:show_checks
+start-agent = nyxmon.entrypoints.cli:start_agent
