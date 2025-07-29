@@ -1,0 +1,14 @@
+teer/__about__.py,sha256=xt5Qwg3Ugr57y2F8Pm-yvlx-GfD3e_ixs9xl2ezamUo,123
+teer/__init__.py,sha256=6kp3szIbEhIJjCgy8z-GinY5P10nyb4qRzmBkcuGCy0,3414
+teer/http.py,sha256=QhcLBjXREuojQsN9th2N05uTEePDV7qis8ue-HRvqsA,2784
+teer/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+teer/types.py,sha256=Axwnq17Izq4g3l55ZDxfhI_ns6DcmNzytB11dFf_6AA,3520
+teer/resources/__init__.py,sha256=gbmEvcbgITZTL5h1kqA8dKMB9m3i2y4wvP61UWUThVY,207
+teer/resources/base.py,sha256=CgAQm8Kpm2AghryPc7bxDcT4LFjMc5JiYAXi6XYpguM,3091
+teer/resources/billing.py,sha256=MLqiY_330d1CYwwfJ96ZCAQQHn3_P_k8eFVqzop_zdA,3486
+teer/resources/ingest.py,sha256=ltZ5kH9K9GEtXpYVIqtkXMuhypafgm0d1o7BqrAfOLQ,1455
+teer-0.1.4.data/data/teer/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+teer-0.1.4.dist-info/METADATA,sha256=3-TIcfpo_ES3b1iNjGAwH_DOSktxbOuO7UQxHbPWSXs,7047
+teer-0.1.4.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+teer-0.1.4.dist-info/licenses/LICENSE.txt,sha256=ISfthpAADcFlJHlW3oxCL6Z5bYZUcQYbx7EKq-PSanA,1093
+teer-0.1.4.dist-info/RECORD,,
