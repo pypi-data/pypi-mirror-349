@@ -1,0 +1,14 @@
+flask_iam/__init__.py,sha256=1oGo437DpCTNdHy50QQGUUJea5vZmCmaaR4myn7JUnk,15805
+flask_iam/models.py,sha256=zPFgFsYUYiq3LTFftQcBp5ki78CAwBKqlZaL588DUY8,2161
+flask_iam/utils.py,sha256=pYPGUguCfdDNeHZ5YfIMrOZrYW45YBcBxphvfkZwxFo,2441
+flask_iam/templates/IAM/form.html,sha256=rkhl95GsWWwflCUSMlrhFhTIzZ7HHinUXmoF0f-G5ms,330
+flask_iam/templates/IAM/index.html,sha256=icX49gzfA1jqd5I9mqKv0zdKBhZsrdho5PJVzLKzdOk,549
+flask_iam/templates/IAM/list.html,sha256=jffaSB8dsddljbc4JMjDhWgBWrIVia_Wi4x83sXrIH4,1931
+flask_iam/templates/IAM/login.html,sha256=j5x1BNVPCcTTWeItsrG2lpvLwjUQbAFo9fJHR80rYMM,412
+flask_iam/templates/IAM/nav.html,sha256=Y2CV08d-n2ANSGjmqzYs-ZMs63-oLX_yJni6xXLAmTM,382
+flask_iam/templates/IAM/registration_success.html,sha256=nltn8JDTXnbYYsiH2UXyNuiPa339ibKy6eeMoWHWz1c,400
+flask_iam-0.0.4.dist-info/licenses/LICENSE,sha256=4U5AP0Kl9wE5LzRbv8KjInqV8-p-_pnwUCZoRmLc0Xc,1066
+flask_iam-0.0.4.dist-info/METADATA,sha256=8XJKkFAi0f_OW33oACtCwazkq7eu_UkZLFCLPpdE2Z8,334
+flask_iam-0.0.4.dist-info/WHEEL,sha256=Nw36Djuh_5VDukK0H78QzOX-_FQEo6V37m3nkm96gtU,91
+flask_iam-0.0.4.dist-info/top_level.txt,sha256=Mgtg2CJ1_AQWJXdYgOn6nJubwfwy_GCQ5TjrDQNoAvc,10
+flask_iam-0.0.4.dist-info/RECORD,,
