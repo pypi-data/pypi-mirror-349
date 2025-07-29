@@ -1,0 +1,12 @@
+fesslix/__init__.py,sha256=-YX2E0OHRhj_kXv1KV3x-VfT8z4rO3vdAyG6SbpvUQs,2461
+fesslix/core.cpython-312-aarch64-linux-gnu.so,sha256=Xvizo8tHzYNeDldxt1CmBIL-28azhMLEJmWzIPQO3XM,463896
+fesslix/gausspoints.dat,sha256=gtWP-cwc0VOyoFPcABi9xrYel4FG7Sw2RkWEmbIy6fw,42364
+fesslix/gpr.cpython-312-aarch64-linux-gnu.so,sha256=MLe3qeW8WJBtbRo_cL3QKK6X3pe2ah0qO3IRBSV8wLY,266192
+fesslix/libflxlib.so,sha256=d2crQFzkNuY2d1kn46OLJLY8kmlycskQK9lh8KHLqmo,5987656
+fesslix/model_templates.py,sha256=M7CtZzfZMOdLqtCMGo7d83sP33Bis4wD6Ebye2Q350E,1761
+fesslix/plot.py,sha256=dz3OY0dyllDocTsghrOI0i2WsYiudtm-0letiip-0MU,7530
+fesslix/tools.py,sha256=ypl1uxn0gEwCFXLyetp7wjSNmZK5B88E0GAUF6FNpp4,29052
+fesslix-0.3.1.dist-info/METADATA,sha256=V-X3UDx-1tacILaf_45atig6s9qdcue5SBYraXLl9aA,42458
+fesslix-0.3.1.dist-info/WHEEL,sha256=v2yWLFzCrsroSYSlO-9MLWFMQp2HQWXkfpb8AcwpiWc,159
+fesslix-0.3.1.dist-info/RECORD,,
+fesslix-0.3.1.dist-info/licenses/LICENSE,sha256=CuBIWlvTemPmNgNZZBfk6w5lMzT6bH-TLKOg6F1K8ic,35148
