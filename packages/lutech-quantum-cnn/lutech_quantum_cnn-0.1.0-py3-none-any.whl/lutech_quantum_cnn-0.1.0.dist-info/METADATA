@@ -1,0 +1,173 @@
+Metadata-Version: 2.4
+Name: lutech-quantum-cnn
+Version: 0.1.0
+Summary: Quantum Convolutional Neural Network Project
+Home-page: https://github.com/giuseppedambruoso/lutech-quantum--cnn
+Author: Giuseppe D'Ambruoso
+Author-email: github.crayfish163@passinbox.com
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: annotated-types==0.7.0
+Requires-Dist: antlr4-python3-runtime==4.9.3
+Requires-Dist: appdirs==1.4.4
+Requires-Dist: asttokens==3.0.0
+Requires-Dist: astunparse==1.6.3
+Requires-Dist: autograd==1.8.0
+Requires-Dist: autoray==0.7.1
+Requires-Dist: cachetools==5.5.2
+Requires-Dist: certifi==2025.4.26
+Requires-Dist: cffi==1.17.1
+Requires-Dist: charset-normalizer==3.4.2
+Requires-Dist: comm==0.2.2
+Requires-Dist: contourpy==1.3.2
+Requires-Dist: cryptography==45.0.2
+Requires-Dist: cycler==0.12.1
+Requires-Dist: debugpy==1.8.14
+Requires-Dist: decorator==5.2.1
+Requires-Dist: diastatic-malt==2.15.2
+Requires-Dist: dill==0.4.0
+Requires-Dist: executing==2.2.0
+Requires-Dist: filelock==3.18.0
+Requires-Dist: fonttools==4.58.0
+Requires-Dist: fsspec==2025.3.2
+Requires-Dist: gast==0.6.0
+Requires-Dist: hydra-core==1.3.2
+Requires-Dist: ibm-cloud-sdk-core==3.23.0
+Requires-Dist: ibm-platform-services==0.65.0
+Requires-Dist: idna==3.10
+Requires-Dist: ipykernel==6.29.5
+Requires-Dist: ipython==9.2.0
+Requires-Dist: ipython_pygments_lexers==1.1.1
+Requires-Dist: jedi==0.19.2
+Requires-Dist: Jinja2==3.1.6
+Requires-Dist: joblib==1.5.0
+Requires-Dist: jupyter_client==8.6.3
+Requires-Dist: jupyter_core==5.7.2
+Requires-Dist: kiwisolver==1.4.8
+Requires-Dist: MarkupSafe==3.0.2
+Requires-Dist: matplotlib==3.10.3
+Requires-Dist: matplotlib-inline==0.1.7
+Requires-Dist: mpmath==1.3.0
+Requires-Dist: nest-asyncio==1.6.0
+Requires-Dist: networkx==3.4.2
+Requires-Dist: numpy==2.2.5
+Requires-Dist: nvidia-cublas-cu12==12.6.4.1
+Requires-Dist: nvidia-cuda-cupti-cu12==12.6.80
+Requires-Dist: nvidia-cuda-nvrtc-cu12==12.6.77
+Requires-Dist: nvidia-cuda-runtime-cu12==12.6.77
+Requires-Dist: nvidia-cudnn-cu12==9.5.1.17
+Requires-Dist: nvidia-cufft-cu12==11.3.0.4
+Requires-Dist: nvidia-cufile-cu12==1.11.1.6
+Requires-Dist: nvidia-curand-cu12==10.3.7.77
+Requires-Dist: nvidia-cusolver-cu12==11.7.1.2
+Requires-Dist: nvidia-cusparse-cu12==12.5.4.2
+Requires-Dist: nvidia-cusparselt-cu12==0.6.3
+Requires-Dist: nvidia-nccl-cu12==2.26.2
+Requires-Dist: nvidia-nvjitlink-cu12==12.6.85
+Requires-Dist: nvidia-nvtx-cu12==12.6.77
+Requires-Dist: omegaconf==2.3.0
+Requires-Dist: packaging==25.0
+Requires-Dist: parso==0.8.4
+Requires-Dist: pbr==6.1.1
+Requires-Dist: PennyLane==0.41.1
+Requires-Dist: PennyLane-qiskit==0.41.0.post0
+Requires-Dist: PennyLane_Lightning==0.41.1
+Requires-Dist: pexpect==4.9.0
+Requires-Dist: pillow==11.2.1
+Requires-Dist: platformdirs==4.3.8
+Requires-Dist: prompt_toolkit==3.0.51
+Requires-Dist: psutil==7.0.0
+Requires-Dist: ptyprocess==0.7.0
+Requires-Dist: pure_eval==0.2.3
+Requires-Dist: pycparser==2.22
+Requires-Dist: pydantic==2.11.4
+Requires-Dist: pydantic_core==2.33.2
+Requires-Dist: Pygments==2.19.1
+Requires-Dist: PyJWT==2.10.1
+Requires-Dist: pyparsing==3.2.3
+Requires-Dist: pyspnego==0.11.2
+Requires-Dist: python-dateutil==2.9.0.post0
+Requires-Dist: PyYAML==6.0.2
+Requires-Dist: pyzmq==26.4.0
+Requires-Dist: qiskit==1.2.4
+Requires-Dist: qiskit-aer==0.16.0
+Requires-Dist: qiskit-ibm-provider==0.11.0
+Requires-Dist: qiskit-ibm-runtime==0.29.0
+Requires-Dist: requests==2.32.3
+Requires-Dist: requests_ntlm==1.3.0
+Requires-Dist: rustworkx==0.16.0
+Requires-Dist: scikit-learn==1.6.1
+Requires-Dist: scipy==1.15.3
+Requires-Dist: scipy-openblas32==0.3.29.0.0
+Requires-Dist: setuptools==80.7.1
+Requires-Dist: six==1.17.0
+Requires-Dist: stack-data==0.6.3
+Requires-Dist: stevedore==5.4.1
+Requires-Dist: symengine==0.13.0
+Requires-Dist: sympy==1.12.1
+Requires-Dist: termcolor==3.1.0
+Requires-Dist: threadpoolctl==3.6.0
+Requires-Dist: tomlkit==0.13.2
+Requires-Dist: torch==2.7.0
+Requires-Dist: torchvision==0.22.0
+Requires-Dist: tornado==6.4.2
+Requires-Dist: traitlets==5.14.3
+Requires-Dist: triton==3.3.0
+Requires-Dist: typing-inspection==0.4.0
+Requires-Dist: typing_extensions==4.13.2
+Requires-Dist: urllib3==2.4.0
+Requires-Dist: wcwidth==0.2.13
+Requires-Dist: websocket-client==1.8.0
+Requires-Dist: websockets==15.0.1
+Requires-Dist: wheel==0.45.1
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Noisy hybrid quantum-classical convolutional neural networks for multi-class image classification
+
+## Key features
+This library allows to investigate the performance of a noisy hybrid quantum-classical convolutional neural networks and compare it to its classical counterpart.
+
+The library allows to create, train and validate CNNs composed of:
+- a single quantum convolutional layer;
+- a flattening operation;
+- a single fully-connected layer;
+- a softmax layer.
+
+As in the classical case, the quantum convolutional layer acts on the input image by extracting sliding blocks from it and performing an operation - called filtering - on each of these blocks. However, unlike the ordinary case, the filtering operation relies upon the execution of a (variational) quantum circuit. More specifically, the $N$ pixel values of each sliding block are mapped into a $N$-qubit variational quantum circuit (VQC) by means of a particular arrangement of non-trainable parametric quantum gates, which compose the so-called "feature map". The remaining part of the VQC, usually referred to as "ansatz", features trainable parametric quantum gates. Finally, the VQC is executed a number of times and measurements in the computational basis on the output quantum state are performed, so to give an estimate for its $2^N$ probability coefficients. The obtained $2^N$ real values are fed into the $2^N$ output images, which are then created by means of a single filter. The number of trainable parameters in the ansatz can be chosen arbitrarily, so that one could in principle explore the chance to obtain better performance with fewer parameters.
+
+The parameters update of the whole net is performed by means of the mini-batch gradient descent algorithm. In order to differentiate the quantum filter's output, the parameter-shift rule is applied.
+
+The whole model is inspired to that proposed by Junhua Liu [1].
+
+Users have to possibility to decide whether to execution the VQC contained within the filter with or without quantum noise. Moreover, they can choose to introduce one or more noise models.
+
+## Usage
+To use the library, follow the steps below.
+1. Set the quantum filter architecture (feature map, ansatz, noise etc.), the model hyperparameters (epochs, learning rate etc.), the path of the dataset (dataset_folder_path) and the path of the csv file for saving the evolution of the metrics along the training (csv_path) in the configuration file. The configuration file location is `conf\config.yaml`.
+2. Execute `python main.py` in the terminal to start training and validation. The evolution of the metrics along the training procedure are saved in `csv_path`, indicated in the configuration file.
+
+A default 4-class synthetic dataset of 3x3 images, called 'Tetris', is placed in the root directory of the library. This dataset is composed of 640 training images, 160 validation images and 200 test images. Each image represent a tetris brick. The grey value of the brick pixels is randomly chosen between 0.7 and 1, whereas that of the background pixels between 0 and 0.3.
+
+## Author
+Giuseppe D'Ambruoso (Lutech S.p.A., University of Bari Aldo Moro).
+
+## Acknowledgements
+This library was realized with the indinspensable help of dr. Dario del Sorbo (Lutech S.p.A.), dr. Claudio Basilio Caporusso (Lutech S.p.A.), dr. Ivan Palmisano (Lutech S.p.A.), dr. Giuseppe Lamanna (Lutech S.p.A.) and prof. dr. Giovanni Gramegna (University of Bari Aldo Moro). We acknowledge also the support from the whole Lutech R&D 'MILE' pole, directed by dr. Giuseppe Ieva (Lutech S.p.A.).
+
+## References
+[1] Liu et al. (2021). _Hybrid quantum-classical convolutional neural networks_. Science China Physics, Mechanics &amp; Astronomy. DOI: 10.1007/s11433-021-1734-3. url: http://dx.doi.org/10.1007/s11433-021-1734-3.
