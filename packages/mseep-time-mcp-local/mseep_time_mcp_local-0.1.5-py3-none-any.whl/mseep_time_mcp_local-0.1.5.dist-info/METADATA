@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: mseep-time-mcp-local
+Version: 0.1.5
+Summary: Add your description here
+Home-page: 
+Author: mseep
+Author-email: mseep <support@skydeck.ai>
+Maintainer-email: mseep <support@skydeck.ai>
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: mcp>=1.3.0
+Requires-Dist: pydantic>=2.10.6
+Requires-Dist: tzdata>=2025.1
+Requires-Dist: tzlocal>=5.3
+Dynamic: author
+Dynamic: requires-python
+
+# Package managed by MseeP.ai
