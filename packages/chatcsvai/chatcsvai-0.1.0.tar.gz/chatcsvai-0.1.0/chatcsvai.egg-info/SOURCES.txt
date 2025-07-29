@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.py
+chatcsvai/__init__.py
+chatcsvai/core.py
+chatcsvai.egg-info/PKG-INFO
+chatcsvai.egg-info/SOURCES.txt
+chatcsvai.egg-info/dependency_links.txt
+chatcsvai.egg-info/requires.txt
+chatcsvai.egg-info/top_level.txt
