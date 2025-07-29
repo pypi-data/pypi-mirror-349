@@ -1,0 +1,10 @@
+setup.py
+bodyspore/__init__.py
+bodyspore/main.py
+bodyspore/mainOne.py
+bodyspore/mainThree.py
+bodyspore/mainTwo.py
+bodyspore.egg-info/PKG-INFO
+bodyspore.egg-info/SOURCES.txt
+bodyspore.egg-info/dependency_links.txt
+bodyspore.egg-info/top_level.txt
