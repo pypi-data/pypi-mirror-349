@@ -1,0 +1,11 @@
+include mviewer/mviewer.min.js
+include mviewer/mviewer.min.js.map
+include mviewer/async-*.js
+include mviewer/async-*.js.map
+include mviewer/*-shared.js
+include mviewer/*-shared.js.map
+include mviewer/metadata.json
+include mviewer/package-info.json
+include README.md
+include LICENSE
+include package.json

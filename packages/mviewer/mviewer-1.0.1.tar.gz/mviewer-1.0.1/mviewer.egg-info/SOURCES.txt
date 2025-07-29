@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+package.json
+setup.py
+mviewer/Mviewer.py
+mviewer/__init__.py
+mviewer/_imports_.py
+mviewer/metadata.json
+mviewer/mviewer.min.js
+mviewer/mviewer.min.js.map
+mviewer/package-info.json
+mviewer.egg-info/PKG-INFO
+mviewer.egg-info/SOURCES.txt
+mviewer.egg-info/dependency_links.txt
+mviewer.egg-info/top_level.txt
+tests/test_usage.py
