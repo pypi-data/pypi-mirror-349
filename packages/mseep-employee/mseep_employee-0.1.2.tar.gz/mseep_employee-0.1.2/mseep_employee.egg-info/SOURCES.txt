@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.py
+mseep_employee.egg-info/PKG-INFO
+mseep_employee.egg-info/SOURCES.txt
+mseep_employee.egg-info/dependency_links.txt
+mseep_employee.egg-info/requires.txt
+mseep_employee.egg-info/top_level.txt

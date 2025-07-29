@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: mseep-employee
+Version: 0.1.2
+Summary: Add your description here
+Home-page: 
+Author: mseep
+Author-email: mseep <support@skydeck.ai>
+Maintainer-email: mseep <support@skydeck.ai>
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: beeai-framework>=0.1.4
+Requires-Dist: mcp[cli]>=1.3.0
+Requires-Dist: requests>=2.32.3
+Dynamic: author
+Dynamic: requires-python
+
+# Package managed by MseeP.ai
