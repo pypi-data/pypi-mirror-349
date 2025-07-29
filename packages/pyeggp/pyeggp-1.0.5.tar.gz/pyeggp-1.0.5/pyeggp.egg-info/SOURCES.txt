@@ -1,0 +1,7 @@
+README.md
+setup.py
+pyeggp.egg-info/PKG-INFO
+pyeggp.egg-info/SOURCES.txt
+pyeggp.egg-info/dependency_links.txt
+pyeggp.egg-info/requires.txt
+pyeggp.egg-info/top_level.txt
