@@ -1,0 +1,19 @@
+[project]
+name = "mcp-knowledge-search"
+version = "0.1.0"
+description = "MCP文档查询助手"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "dotenv>=0.9.9",
+    "fastmcp>=2.3.4",
+    "httpx>=0.28.1",
+    "openai>=1.79.0",
+]
+
+[project.scripts]
+mcp-knowledge-search = "mcp_knowledge_search.server:mcp.run"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
