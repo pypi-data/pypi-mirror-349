@@ -1,0 +1,14 @@
+odoo/addons/sale_order_line_min_margin/README.rst,sha256=9uvZp3nrd5iH1febATIrYHr4qrj5rs4OOlqnbyPbJXs,1744
+odoo/addons/sale_order_line_min_margin/__init__.py,sha256=xuyEFmNVHLb-nWahYTZ1p3WnM1pIsemZv_jjuX1BI6g,145
+odoo/addons/sale_order_line_min_margin/__manifest__.py,sha256=82Rqi98ow3-mQg0aY-SYr896_qNI7hyil5Bxb78LSLw,569
+odoo/addons/sale_order_line_min_margin/i18n/es.po,sha256=akdnPmGFtQdZaYBVEjLd-4dvihB4fAUqqvOY8mGuGqg,2637
+odoo/addons/sale_order_line_min_margin/models/__init__.py,sha256=Wd71Z7a0TdyV2aSB9alBz5pcIdgFMNp8Gp9zjtrP-Yg,214
+odoo/addons/sale_order_line_min_margin/models/res_company.py,sha256=yAcr1JZH4sRBWReOBBELJyytt856imAIrdBoonP2wZo,451
+odoo/addons/sale_order_line_min_margin/models/res_config_settings.py,sha256=3NYRIlixozLfMn0j3B8wSXH3wbq98dXw_Frsw0QE4Lg,628
+odoo/addons/sale_order_line_min_margin/models/sale_order_line.py,sha256=wysOQGX3x_DEeS1hmJzNsIgRSp4Q3bKxo9CCxM5Kwag,1035
+odoo/addons/sale_order_line_min_margin/static/description/icon.png,sha256=bVbNdnyk7PXHuZ3ye_Aqh1M9tbfPJ5zU5W1VnoO8mBQ,35820
+odoo/addons/sale_order_line_min_margin/views/res_config_settings_views.xml,sha256=__PE6K-VKl3uprXYk3JafT4e3X-OZC4MmxiTOp6Ha-k,1645
+odoo_addon_sale_order_line_min_margin-15.0.1.0.1.dist-info/METADATA,sha256=AmK_dydbdZIzIOpnQ4iSC0f1aFWXYy4U_bXeoeGkeQo,2219
+odoo_addon_sale_order_line_min_margin-15.0.1.0.1.dist-info/WHEEL,sha256=9fEMia4zL7ZuZbnCOrcYogUhmn4XFIVaJ8G4YGI31xc,81
+odoo_addon_sale_order_line_min_margin-15.0.1.0.1.dist-info/top_level.txt,sha256=QE6RBQ0QX5f4eFuUcGgU5Kbq1A_qJcDs-e_vpr6pmfU,4
+odoo_addon_sale_order_line_min_margin-15.0.1.0.1.dist-info/RECORD,,
