@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-trader = mcp_trader:main
