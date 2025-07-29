@@ -1,0 +1,2 @@
+[console_scripts]
+ConvertEcritures-gui = py_convert.cli:main
