@@ -1,0 +1,2 @@
+[pygments.lexers]
+gdscript = pygments_gdscript.gdscript_lexer:GDScriptLexer
