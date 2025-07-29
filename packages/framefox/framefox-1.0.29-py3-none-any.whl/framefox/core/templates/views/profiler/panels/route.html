@@ -1,0 +1,49 @@
+<div class="profiler-panel">
+  <h2>Informations de route</h2>
+
+  <div class="panel-section">
+    <table class="panel-table">
+      <tr>
+        <th>Chemin</th>
+        <td>{{ data.route }}</td>
+      </tr>
+      <tr>
+        <th>Nom de la route</th>
+        <td>{{ data.route_name }}</td>
+      </tr>
+      <tr>
+        <th>Point d'entrée</th>
+        <td>{{ data.endpoint }}</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<style>
+  .profiler-panel {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    color: #333;
+  }
+
+  .panel-section {
+    margin-bottom: 30px;
+  }
+
+  .panel-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .panel-table th,
+  .panel-table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .panel-table th {
+    width: 30%;
+    background-color: #f8f8f8;
+  }
+</style>
