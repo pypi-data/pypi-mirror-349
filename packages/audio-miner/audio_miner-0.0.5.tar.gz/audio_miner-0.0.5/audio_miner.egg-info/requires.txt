@@ -1,0 +1,7 @@
+openai-whisper
+ffmpeg-python
+numpy
+colorama
+torch
+torchaudio
+pyannote.audio
