@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: mseep-ableton-live-mcp-server
+Version: 0.1.2
+Summary: Ableton Live MCP Server
+Home-page: 
+Author: mseep
+Author-email: mseep <support@skydeck.ai>
+Maintainer-email: mseep <support@skydeck.ai>
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: fastmcp>=0.4.1
+Requires-Dist: python-osc>=1.9.3
+Dynamic: author
+Dynamic: license-file
+Dynamic: requires-python
+
+# Package managed by MseeP.ai
