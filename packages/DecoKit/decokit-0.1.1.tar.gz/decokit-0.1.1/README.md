@@ -1,0 +1,227 @@
+以下是更新后的使用文档，其中 `print` 语句的输出内容均为中文：
+
+# DecoKit 库使用文档
+
+## 简介
+`DecoKit` 是一个Python库，提供了多种实用的装饰器，用于线程控制、定时任务、异常处理、性能统计等功能。这些装饰器可以帮助开发者更方便地实现复杂的功能，提高代码的可读性和可维护性。
+
+## 安装
+通过以下命令将其发布到 PyPI 后进行安装：
+```bash
+pip install DecoKit
+```
+
+## 使用方法
+### 1. 单次定时器 (`setTimeout`)
+`setTimeout` 是一个装饰器工厂，用于创建单次定时器。
+
+```python
+from DecoKit import setTimeout
+import time
+
+@setTimeout(sleep=2)
+def my_function():
+    print("此函数将在2秒后被调用。")
+
+# 启动定时任务
+controller = my_function()
+
+# 可以在需要时停止任务
+# controller.stop()
+
+# 等待任务执行完成
+time.sleep(3)
+```
+
+### 2. 循环定时器 (`setInterval`)
+`setInterval` 是一个装饰器工厂，用于创建循环定时器。
+
+```python
+from DecoKit import setInterval
+import time
+
+@setInterval(interval=1, end=5)
+def my_function():
+    print("此函数将每隔1秒调用一次，持续5秒。")
+
+# 启动定时任务
+controller = my_function()
+
+# 可以在需要时停止任务
+# controller.stop()
+
+# 等待任务执行完成
+time.sleep(6)
+```
+
+### 3. 创建多线程 (`createThread`)
+`createThread` 是一个装饰器工厂，用于创建多线程。
+
+```python
+from DecoKit import createThread
+import time
+
+@createThread(inherit=False)
+def my_function():
+    print("此函数正在一个单独的线程中运行。")
+    time.sleep(2)
+    print("线程执行完成。")
+
+# 启动线程
+controller = my_function()
+
+# 可以在需要时停止线程
+# controller.stop()
+
+# 等待线程执行完成
+time.sleep(3)
+```
+
+### 4. 耗时计算 (`timeIt`)
+`timeIt` 是一个装饰器工厂，用于统计函数的执行耗时。
+
+```python
+from DecoKit import timeIt
+
+@timeIt(number=3, show=True)
+def my_function():
+    result = 0
+    for i in range(1000000):
+        result += i
+    return result
+
+# 调用函数
+result, elapsed = my_function()
+print(f"函数执行结果: {result}")
+print(f"函数执行耗时信息: {elapsed}")
+```
+
+### 5. 异常处理 (`catch`)
+`catch` 是一个装饰器工厂，用于捕获函数执行过程中的异常。
+
+```python
+from DecoKit import catch
+
+@catch(exceptionToHandle=ZeroDivisionError, defaultValue=0, reRaise=False, showError=True)
+def my_function():
+    return 1 / 0
+
+# 调用函数
+result = my_function()
+print(f"函数执行结果: {result}")
+```
+
+### 6. 全局异常捕获 (`catchAll`)
+`catchAll` 是一个模块级的全局异常捕获函数。
+
+```python
+from DecoKit import catchAll
+import my_module
+
+# 处理 my_module 模块中的所有函数
+catchAll(name='my_module', error=True, value=None)
+```
+
+### 7. 调用限制 (`callLimit`)
+`callLimit` 是一个装饰器工厂，用于限制函数的调用次数。
+
+```python
+from DecoKit import callLimit
+
+@callLimit(maxCalls=2, defaultValue=None)
+def my_function():
+    print("此函数被调用。")
+
+# 第一次调用
+my_function()
+
+# 第二次调用
+my_function()
+
+# 第三次调用，将返回默认值
+result = my_function()
+print(f"函数执行结果: {result}")
+```
+
+### 8. 失败重试 (`retry`)
+`retry` 是一个装饰器工厂，用于在函数执行失败时进行重试。
+
+```python
+from DecoKit import retry
+import random
+
+@retry(maxAttempts=3, delay=1, exceptions=ValueError, showError=True)
+def my_function():
+    if random.random() < 0.5:
+        raise ValueError("发生随机错误。")
+    return "成功"
+
+# 调用函数
+result = my_function()
+print(f"函数执行结果: {result}")
+```
+
+### 9. 缓存装饰器 (`memoize`)
+`memoize` 是一个装饰器工厂，用于缓存函数的执行结果。
+
+```python
+from DecoKit import memoize
+
+@memoize(maxSize=2, ttl=2)
+def my_function(x):
+    print(f"正在计算 {x} 的结果...")
+    return x * 2
+
+# 第一次调用
+result1 = my_function(2)
+print(f"第一次调用结果: {result1}")
+
+# 第二次调用，使用缓存结果
+result2 = my_function(2)
+print(f"第二次调用结果: {result2}")
+
+# 等待缓存过期
+import time
+time.sleep(3)
+
+# 第三次调用，重新计算结果
+result3 = my_function(2)
+print(f"第三次调用结果: {result3}")
+```
+
+### 10. 速率限制装饰器 (`rateLimit`)
+`rateLimit` 是一个装饰器工厂，用于限制函数的调用速率。
+
+```python
+from DecoKit import rateLimit
+import time
+
+@rateLimit(maxCalls=2, period=1, value=None)
+def my_function():
+    print("此函数被调用。")
+
+# 第一次调用
+my_function()
+
+# 第二次调用
+my_function()
+
+# 第三次调用，将返回默认值
+result = my_function()
+print(f"函数执行结果: {result}")
+
+# 等待一段时间后再次调用
+time.sleep(1)
+my_function()
+```
+
+## 注意事项
+- 所有装饰器都可以独立使用，也可以组合使用，以实现更复杂的功能。
+- 在使用线程相关的装饰器时，需要注意线程安全问题，避免出现数据竞争等问题。
+- 在使用缓存装饰器时，需要注意缓存的有效期和最大条目数，避免缓存数据过多导致内存溢出。
+
+## 贡献
+如果你发现任何问题或有改进建议，请在 GitHub 上提交 issue 或 pull request。
+
+## 许可证
+本项目采用 [MIT 许可证](https://opensource.org/licenses/MIT)。
