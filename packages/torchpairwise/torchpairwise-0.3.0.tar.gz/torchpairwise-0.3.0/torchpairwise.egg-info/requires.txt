@@ -1,0 +1,11 @@
+torch<2.8.0,>=2.7.0
+
+[examples]
+scipy
+scikit-learn
+tqdm
+
+[tests]
+scipy
+scikit-learn
+tqdm
