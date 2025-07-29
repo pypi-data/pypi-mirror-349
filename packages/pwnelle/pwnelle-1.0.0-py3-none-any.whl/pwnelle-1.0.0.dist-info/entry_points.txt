@@ -1,0 +1,2 @@
+[console_scripts]
+pwnelle = pwnelle.main:main
