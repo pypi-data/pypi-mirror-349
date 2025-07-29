@@ -1,0 +1,2 @@
+[console_scripts]
+mattermost-mcp-host = mattermost_mcp_host.main:main
