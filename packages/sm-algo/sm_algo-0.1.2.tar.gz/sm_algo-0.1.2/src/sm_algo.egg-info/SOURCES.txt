@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+src/sm_algo/__init__.py
+src/sm_algo/kmeans.py
+src/sm_algo/linreg.py
+src/sm_algo/logisticreg.py
+src/sm_algo/simplex.py
+src/sm_algo.egg-info/PKG-INFO
+src/sm_algo.egg-info/SOURCES.txt
+src/sm_algo.egg-info/dependency_links.txt
+src/sm_algo.egg-info/requires.txt
+src/sm_algo.egg-info/top_level.txt

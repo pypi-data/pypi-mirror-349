@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sm_algo"
+version = "0.1.2"
+authors = [
+    {name = "Aleksandr", email = "Aleksandr7839@yandex.ru"},
+]
+description = "Small pacakge with various algorithms"
+readme = "README.md"
+requires-python = ">=3.12"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "numpy>=2.2.5",
+    "scipy>=1.15.3"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/a1eksandrTarasov/SmartAlgo.git"
+"Bug Tracker" = "https://github.com/a1eksandrTarasov/SmartAlgo.git/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
