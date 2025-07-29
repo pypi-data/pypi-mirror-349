@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+livetranscriber/__init__.py
+livetranscriber/livetranscriber.py
+livetranscriber/transcribers.py
+livetranscriber.egg-info/PKG-INFO
+livetranscriber.egg-info/SOURCES.txt
+livetranscriber.egg-info/dependency_links.txt
+livetranscriber.egg-info/entry_points.txt
+livetranscriber.egg-info/requires.txt
+livetranscriber.egg-info/top_level.txt
+tests/test_cli.py
+tests/test_constructor.py
