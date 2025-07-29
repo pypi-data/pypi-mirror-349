@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: mseep-mcp-server-ccxt
+Version: 0.1.2
+Summary: Add your description here
+Author-email: mseep <support@skydeck.ai>
+Maintainer-email: mseep <support@skydeck.ai>
+License-File: LICENSE
+Requires-Python: >=3.10
+Requires-Dist: ccxt
+Requires-Dist: mcp
+Description-Content-Type: text/markdown
+
+# Package managed by MseeP.ai
