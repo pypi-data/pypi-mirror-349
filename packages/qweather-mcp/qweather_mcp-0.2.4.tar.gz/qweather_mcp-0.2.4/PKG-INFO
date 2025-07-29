@@ -1,0 +1,188 @@
+Metadata-Version: 2.4
+Name: qweather-mcp
+Version: 0.2.4
+Summary: 和风天气查询API服务，支持MCP接口可被AI助手直接调用
+Project-URL: Homepage, https://gitcode.com/huqi/weather-mcp
+Project-URL: Bug Tracker, https://gitcode.com/huqi/weather-mcp/issues
+Project-URL: Documentation, https://gitcode.com/huqi/weather-mcp/blob/main/README.md
+Author-email: "zishu.co" <huqi1024@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2025 zishu.co.
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+License-File: LICENSE
+Keywords: ai,api,fastapi,mcp,weather
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Internet :: WWW/HTTP :: HTTP Servers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.10
+Requires-Dist: cryptography>=40.0.0
+Requires-Dist: fastapi-mcp>=0.3.4
+Requires-Dist: fastapi>=0.95.0
+Requires-Dist: pydantic>=2.0.0
+Requires-Dist: pyjwt>=2.6.0
+Requires-Dist: python-dotenv>=1.0.0
+Requires-Dist: requests>=2.28.0
+Requires-Dist: uvicorn>=0.22.0
+Description-Content-Type: text/markdown
+
+# 天气查询 API
+
+这是一个基于FastAPI开发的天气查询API服务，同时支持MCP（Machine Callable Program）接口，可以被AI助手直接调用。
+
+## 使用
+
+```json
+{
+  "mcpServers": {
+    "qweather": {
+      "command": "uvx",
+      "args": [
+        "qweather-mcp"
+      ],
+      "env": {
+        "WEATHER_PRIVATE_KEY": "YOUR_PRIVATE_KEY",
+        "WEATHER_PROJECT_ID": "YOUR_PROJECT_ID",
+        "WEATHER_KEY_ID": "YOUR_KEY_ID",
+        "WEATHER_API_HOST": "YOUR_URL_ADDRESS.qweatherapi.com",
+        "WEATHER_BEARER_TOKEN": ""
+      }
+    }
+  }
+}
+```
+
+## 功能特点
+
+- 支持通过城市名称查询天气信息
+- 提供JWT令牌生成和验证
+- 实现了MCP接口，可被AI助手直接调用
+- 使用和风天气API作为数据源
+- 支持Bearer Token认证
+
+## 接口说明
+
+### 主要接口
+
+- `/` - API主页，提供接口概览
+- `/generate-jwt` - 生成JWT令牌
+- `/city/lookup` - 根据城市名称查询位置ID
+- `/weather/now` - 根据位置ID查询当前天气
+- `/weather/by-city` - 一站式查询城市天气（只需提供城市名）
+
+### MCP接口
+
+本服务实现了MCP接口规范，可以被支持MCP的AI助手直接调用，目前开放的操作为：
+- `get_weather_by_city` - 通过城市名称查询天气
+
+## 安装与运行
+
+### 环境要求
+
+Python 3.8+
+
+### 安装依赖
+
+```bash
+pip install -r requirements.txt
+```
+
+### 运行服务
+
+```bash
+uvicorn main:app --reload
+```
+
+服务将在 http://localhost:8000 启动，API文档可访问 http://localhost:8000/docs
+
+## 配置说明
+
+项目使用环境变量或.env文件进行配置。主要配置项包括：
+
+### API配置
+- `WEATHER_PRIVATE_KEY` - EdDSA私钥，用于JWT签名
+- `WEATHER_PROJECT_ID` - 项目ID，用于JWT的subject声明
+- `WEATHER_KEY_ID` - 密钥ID，用于JWT的kid头部
+- `WEATHER_API_HOST` - 和风天气API主机地址
+
+### 安全配置
+- `WEATHER_BEARER_TOKEN` - API访问令牌
+
+### 服务器配置
+- `HOST` - 服务器监听地址，默认为0.0.0.0
+- `PORT` - 服务器端口，默认为8000
+- `DEBUG` - 是否启用调试模式，默认为True
+
+### JWT配置
+- `JWT_DEFAULT_EXPIRY` - JWT令牌默认过期时间（秒），默认为900（15分钟）
+
+### 缓存配置
+- `TOKEN_CACHE_ENABLED` - 是否启用令牌缓存，默认为True
+
+### 配置方法
+
+1. 创建`.env`文件（参考项目中的`.env.example`）
+2. 设置所需的环境变量
+
+```bash
+# 复制示例配置文件
+cp .env.example .env
+
+# 编辑配置文件
+vim .env
+```
+
+## 使用示例
+
+### 查询城市天气
+
+```bash
+curl -X POST "http://localhost:8000/weather/by-city" \
+     -H "Content-Type: application/json" \
+     -H "Authorization: Bearer zishu.co" \
+     -d '{"city":"北京"}'
+```
+
+### 生成JWT令牌
+
+```bash
+curl -X POST "http://localhost:8000/generate-jwt" \
+     -H "Content-Type: application/json" \
+     -d '{"expiry_seconds": 3600}'
+```
+
+## 错误处理
+
+API使用标准HTTP状态码表示请求结果：
+- 200: 请求成功
+- 401: 认证失败
+- 404: 资源不存在（如找不到指定城市）
+- 500: 服务器内部错误
+
+## 许可证
+
+MIT
