@@ -1,0 +1,2 @@
+[console_scripts]
+baidu-mcp-server = baidu_mcp_server.server:main
