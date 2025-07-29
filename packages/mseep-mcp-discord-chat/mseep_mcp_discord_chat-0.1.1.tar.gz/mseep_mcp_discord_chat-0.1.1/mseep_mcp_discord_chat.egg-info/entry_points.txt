@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-discord-chat = mcp_discord_chat:main
