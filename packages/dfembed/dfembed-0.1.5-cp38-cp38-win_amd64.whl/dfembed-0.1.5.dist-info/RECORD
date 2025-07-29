@@ -1,0 +1,8 @@
+dfembed-0.1.5.dist-info/METADATA,sha256=U3nOtxn18qgunLH0yBQ3iZ70BL6461KtjXXwWCFHJxE,8365
+dfembed-0.1.5.dist-info/WHEEL,sha256=ypFdP-bzcWPI3YpC7hUo0L3gNkY18kZWMj9SJHfCzBE,94
+dfembed-0.1.5.dist-info/licenses/LICENSE,sha256=6jSZohqZLtZWiAp3uI4AMObJ8eKxBynJBcsxVjmmFKg,1088
+dfembed/__init__.py,sha256=lnYwFsKbz8XGF4mBSbIRmAI-NIkQebDVYagaA8iMe84,1914
+dfembed/core.py,sha256=C5K-rIxGPhT1dzH5GZxrWESr41qQWPkrxPpwUC5lRNU,5090
+dfembed/dfembed.cp38-win_amd64.pyd,sha256=sDjO5fanijbaHe_4ES8vIvhh4p8PsrQgBDAj7aPtY-Q,116128768
+dfembed/llamaindex.py,sha256=E622G7d-r6Rk_yeHiN8OAMDHLBGBOeC-5H88OPlXwEI,6747
+dfembed-0.1.5.dist-info/RECORD,,
