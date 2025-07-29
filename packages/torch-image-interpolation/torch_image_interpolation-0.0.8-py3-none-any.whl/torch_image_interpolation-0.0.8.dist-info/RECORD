@@ -1,0 +1,10 @@
+torch_image_interpolation/__init__.py,sha256=fxJgQHy3pKNrWnEbCtoFmmtN1ip1OKemelU9QOXcIew,222
+torch_image_interpolation/grid_sample_utils.py,sha256=m4RP2Y1hzP2eDtuDY3QIpfiMXbDuxatc7SNF4NqGnv4,1858
+torch_image_interpolation/image_interpolation_1d.py,sha256=AJsOR0ZpI6_tHe_zwBc11JNZv8LJ_CSHMEOt-A1eBfQ,9112
+torch_image_interpolation/image_interpolation_2d.py,sha256=FPcdO27knDBXTjM1PTll7ZjiTV3GeNxeDMTIglC5sDc,10425
+torch_image_interpolation/image_interpolation_3d.py,sha256=FwKRh-0yPe43ODUR7B1qDYoXR6SoL4UmrSuj3_Ps4_E,11558
+torch_image_interpolation/utils.py,sha256=OYg-y7-swhCeXpgA9pk-9MWIBC6NmckRCVUQPi2jgVw,1057
+torch_image_interpolation-0.0.8.dist-info/METADATA,sha256=CC8qyXN6sHM761MCQmiHqCPx75BX0_e0BZ-B7xo30oc,6018
+torch_image_interpolation-0.0.8.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+torch_image_interpolation-0.0.8.dist-info/licenses/LICENSE,sha256=Kbo_h3sPum8rDAhMerH9fl4hzFn-QUCekJf05zk2epY,1499
+torch_image_interpolation-0.0.8.dist-info/RECORD,,
