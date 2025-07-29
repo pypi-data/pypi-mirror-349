@@ -1,0 +1,50 @@
+Metadata-Version: 2.4
+Name: package_calculator_zriiman84
+Version: 0.0.2
+Summary: Un paquete que contiene una clase Calculadora para operaciones matemáticas básicas, con pyproject.toml
+Author-email: Cristofer Vargas <crisric84@gmail.com>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/zriiman84/package_calculator
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# package_calculator
+Se tiene una clase Calculadora desde el módulo Calculadora.
+Contiene las operaciones básicas de:
+```
+Suma
+Resta
+Multiplicación
+División
+Potenciación
+Radicación
+```
+
+## Instalación
+**Windows**
+```
+> pip install package-calculator-zriiman84
+```
+
+**MacOs**
+```
+> pip3 install package-calculator-zriiman84
+```
+
+## Uso
+```
+from package_calculator import Calculadora
+
+> print('Sumar (6,3): ', Calculadora.sumar(6,3)) 
+> print('Restar (6,3): ', Calculadora.restar(6,3))
+> print('Dividir (6,3): ', Calculadora.dividir(6,3))
+> print('Multiplicar (6,3): ', Calculadora.multiplicar(6,3))
+> #Elevar 6 a la potencia 3 
+> print('Potenciar (6,3): ', Calculadora.exponenciar(6,3)) 
+> #Obtener la raíz cúbica de 6
+> print('Raíz (6,3): ', Calculadora.obtener_raiz(6,3))
+```
