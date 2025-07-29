@@ -1,0 +1,7 @@
+aws_pylambda_sam_builder/__init__.py,sha256=51aqMArko0REBhB0fx4c5rz6G1Bf8BcG_Ff7Zc4HXdc,10580
+aws_pylambda_sam_builder/__main__.py,sha256=4VRHWEnsE8IwFVFX3s45Hpvnj2YX5Y95LJzgLSqVOYo,187
+aws_pylambda_sam_builder/v02.diff,sha256=x60fIoRd5JZccIqKa4ITylDPWhVHzPpxgwS_SnrX51w,23783
+aws_pylambda_sam_builder-0.2.1.dist-info/METADATA,sha256=xmy2tP9WO4yE3d9GKmc4jE-UQd5H2NHLkzvLgUvmj0s,2363
+aws_pylambda_sam_builder-0.2.1.dist-info/WHEEL,sha256=IYZQI976HJqqOpQU6PHkJ8fb3tMNBFjg-Cn-pwAbaFM,88
+aws_pylambda_sam_builder-0.2.1.dist-info/entry_points.txt,sha256=szrKeIZfUhNrwbpQzLIH_Hjlp-bLPC97cz05LpRqO2U,74
+aws_pylambda_sam_builder-0.2.1.dist-info/RECORD,,
