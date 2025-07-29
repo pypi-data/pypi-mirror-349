@@ -1,0 +1,9 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+predictram_py_finance_data.egg-info/PKG-INFO
+predictram_py_finance_data.egg-info/SOURCES.txt
+predictram_py_finance_data.egg-info/dependency_links.txt
+predictram_py_finance_data.egg-info/requires.txt
+predictram_py_finance_data.egg-info/top_level.txt
