@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: test-valkey-glide-async
+Version: 0.1.1
+Classifier: Topic :: Database
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Dist: async-timeout>=4.0.2; python_version < '3.11'
+Requires-Dist: typing-extensions>=4.8.0; python_version < '3.11'
+Requires-Dist: protobuf>=6.20
+Summary: An open source Valkey client library that supports Valkey and Redis open source 6.2, 7.0, 7.2 and 8.0.
+Author: Valkey GLIDE Maintainers
+License: Apache-2.0
+Requires-Python: >=3.9
