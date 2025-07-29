@@ -1,0 +1,10 @@
+fastmcp>=0.1.0
+pexpect>=4.8.0
+
+[dev]
+black
+isort
+mypy
+
+[windows]
+pyautogui>=0.9.50
