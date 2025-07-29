@@ -1,0 +1,28 @@
+Metadata-Version: 2.4
+Name: ml-gen-alg
+Version: 1.0.4
+Summary: Una librería de algoritmos genéticos en Python
+Home-page: https://github.com/YFQG/ml-gen-alg
+Author: Yamid Quiroga
+Author-email: yfquiroga@ucundinamarca.edu.co
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: setuptools
+Requires-Dist: wheel
+Requires-Dist: twine
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# mi_libreria_genetica
+
+Esta es una librería de algoritmos genéticos implementada en Python. Permite construir soluciones basadas en evolución genética de manera modular y reutilizable.
