@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: kcprov
+Version: 0.2.1
+Summary: Utilities for provisioning Keycloak
+Author-email: Griddot <info@griddot.net>
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: click
+
+﻿# kcprov - Keycloak Provisioning package
+
+Docs 
