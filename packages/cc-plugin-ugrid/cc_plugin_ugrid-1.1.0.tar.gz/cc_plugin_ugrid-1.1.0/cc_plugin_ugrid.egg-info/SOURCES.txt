@@ -1,0 +1,9 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+pyproject.toml
+requirements-dev.txt
+requirements.txt
+cc_plugin_ugrid/__init__.py
+cc_plugin_ugrid/checker.py
+cc_plugin_ugrid/tests/test_checker.py
