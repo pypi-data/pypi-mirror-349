@@ -1,0 +1,20 @@
+# Ignore __pycache__ directories
+__pycache__/
+
+# PyCharm project files
+.idea/
+
+# macOS stuff
+.DS_Store
+
+# database
+db.sqlite3
+
+# environment variables
+.env
+
+# vim
+*.swp
+
+# javascript
+node_modules/
