@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+contextify/__init__.py
+contextify/cli.py
+contextify_cli.egg-info/PKG-INFO
+contextify_cli.egg-info/SOURCES.txt
+contextify_cli.egg-info/dependency_links.txt
+contextify_cli.egg-info/entry_points.txt
+contextify_cli.egg-info/top_level.txt
