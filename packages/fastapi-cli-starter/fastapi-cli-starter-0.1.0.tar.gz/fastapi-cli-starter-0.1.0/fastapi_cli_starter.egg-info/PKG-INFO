@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: fastapi-cli-starter
+Version: 0.1.0
+Summary: CLI tool to bootstrap FastAPI apps like create-react-app
+Author: Your Name
+Author-email: you@example.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
