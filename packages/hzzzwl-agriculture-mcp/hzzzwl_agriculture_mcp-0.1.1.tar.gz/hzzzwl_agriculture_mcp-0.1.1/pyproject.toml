@@ -1,0 +1,10 @@
+[project]
+name = "hzzzwl-agriculture-mcp"
+version = "0.1.1"
+description = "A tool for search agriculture information"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "httpx>=0.28.1",
+    "mcp[cli]>=1.9.0",
+]
