@@ -1,0 +1,59 @@
+{
+    "model_type": "mixtral",
+    "architectures": [
+        "MixtralForCausalLM"
+    ],
+    "pre_weights": [
+        {
+            "name": "model.embed_tokens.weight"
+        }
+    ],
+    "num_layers_config_key": "num_hidden_layers",
+    "num_experts_config_key": "num_local_experts",
+    "layer_templates": {
+        "weights": [
+            {
+                "name": "model.layers.${layer_index}.input_layernorm.weight"
+            },
+            {
+                "name": "model.layers.${layer_index}.self_attn.q_proj.weight"
+            },
+            {
+                "name": "model.layers.${layer_index}.self_attn.k_proj.weight"
+            },
+            {
+                "name": "model.layers.${layer_index}.self_attn.v_proj.weight"
+            },
+            {
+                "name": "model.layers.${layer_index}.self_attn.o_proj.weight"
+            },
+            {
+                "name": "model.layers.${layer_index}.post_attention_layernorm.weight"
+            },
+            {
+                "name": "model.layers.${layer_index}.block_sparse_moe.gate.weight"
+            },
+            {
+                "name": "model.layers.${layer_index}.block_sparse_moe.experts.${expert_index}.w1.weight",
+                "is_sparse": true
+            },
+            {
+                "name": "model.layers.${layer_index}.block_sparse_moe.experts.${expert_index}.w2.weight",
+                "is_sparse": true
+            },
+            {
+                "name": "model.layers.${layer_index}.block_sparse_moe.experts.${expert_index}.w3.weight",
+                "is_sparse": true
+            }
+        ]
+    },
+    "post_weights": [
+        {
+            "name": "model.norm.weight"
+        },
+        {
+            "name": "lm_head.weight",
+            "is_embed": true
+        }
+    ]
+}
