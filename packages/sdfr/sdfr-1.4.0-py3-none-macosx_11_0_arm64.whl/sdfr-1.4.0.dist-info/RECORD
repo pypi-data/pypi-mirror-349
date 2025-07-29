@@ -1,0 +1,11 @@
+sdfr/_commit_info.py,sha256=xWby5pBHkz40Df4UMHZ9hAQrFZmEhUpY0EwLKSy5QyE,110
+sdfr/sdf_helper.py,sha256=Fdod2nwFih-5h_Vpy2sq-sHPhAXOwKM-esfmQWGgbX4,61359
+sdfr/__init__.py,sha256=BAmluKbA8UkwlUTWKxjNyaSfx9xgTUaXovnSHQvr0qo,1111
+sdfr/SDF.py,sha256=-MbMqvOzQE3ifhN0gn_ulS2sXh3ijUT1GTIPgBI-hE0,30084
+sdfr/loadlib.py,sha256=dr5jYKAjAhW0jKCzudphV0D4e3-6lxAufsTVJHKYcZ8,2262
+sdfr/libsdfc_shared.dylib,sha256=cxT9NMCj3MC5rKEL8Irn_DAey4raec_wuKNg2NwdFw0,173176
+sdfr-1.4.0.dist-info/RECORD,,
+sdfr-1.4.0.dist-info/WHEEL,sha256=HTrPOApIPwPBm17ZPxRHsFBiLMv7HIyEx-CtG-rvYPM,111
+sdfr-1.4.0.dist-info/METADATA,sha256=lkxSLGXDi0cJXyueMbl5CWZelo3inMyLBplq13u0Sco,370
+sdfr-1.4.0.dist-info/licenses/LICENSE,sha256=Qu02Dqb67LYxdjaA0WVeZMwzcDFF_bSearhX7yzLCJQ,1621
+sdfr-1.4.0.dist-info/licenses/LICENSE_README.txt,sha256=kU0OIq6O4_qqBwDWpJrPw2nNLWDCDI7oJGCe_JBF8j0,231
