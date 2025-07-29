@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+mseep_pymcpautogui.egg-info/PKG-INFO
+mseep_pymcpautogui.egg-info/SOURCES.txt
+mseep_pymcpautogui.egg-info/dependency_links.txt
+mseep_pymcpautogui.egg-info/requires.txt
+mseep_pymcpautogui.egg-info/top_level.txt
+pymcpautogui/__init__.py
+pymcpautogui/server.py
