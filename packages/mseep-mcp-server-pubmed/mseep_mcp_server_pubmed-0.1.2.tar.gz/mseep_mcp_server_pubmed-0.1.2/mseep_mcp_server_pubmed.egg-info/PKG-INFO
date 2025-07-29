@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: mseep-mcp-server-pubmed
+Version: 0.1.2
+Summary: An MCP server for searching, retrieving, and analyzing articles from PubMed
+Home-page: 
+Author: mseep
+Author-email: mseep <support@skydeck.ai>
+Maintainer-email: mseep <support@skydeck.ai>
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: mcp[cli]>=1.4.1
+Requires-Dist: requests>=2.25.1
+Requires-Dist: beautifulsoup4>=4.9.3
+Requires-Dist: asyncio>=3.4.3
+Dynamic: author
+Dynamic: license-file
+Dynamic: requires-python
+
+# Package managed by MseeP.ai
