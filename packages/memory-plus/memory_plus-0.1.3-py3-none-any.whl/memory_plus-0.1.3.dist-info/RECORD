@@ -1,0 +1,9 @@
+memory_plus/__init__.py,sha256=CYnqTec3YqDX1kw31zRhShh9zu4BQV3mpyVDxOIa08w,456
+memory_plus/mcp.py,sha256=kQrF3bYTBYAEXaWaigGW0p9j6Tv0M27bOf6Hj7cZP5c,15399
+memory_plus/memory_protocol.py,sha256=0Jmz0Uxl3yQhr5NQzsW2tU1liXpKxuSozdFzHxPN44k,23534
+memory_plus/utils.py,sha256=eI3sEsxNoaYBfNm_z4GKn_M0teV9d4Dya3MHQbLkH2I,738
+memory_plus-0.1.3.dist-info/METADATA,sha256=KgP9u5ma6PYsUg8mrzj8grCG0jVE3CUzUYSR2R2nHQU,5823
+memory_plus-0.1.3.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+memory_plus-0.1.3.dist-info/entry_points.txt,sha256=dKt5YUp02rkLTnK-7vbCA03Hc47VUmURiwUVkAxXV7Q,53
+memory_plus-0.1.3.dist-info/licenses/LICENSE,sha256=JIwgXeqkAXSVIsKgKJhBR5P8n_eJpvwZ3dwmzcchisg,1088
+memory_plus-0.1.3.dist-info/RECORD,,
