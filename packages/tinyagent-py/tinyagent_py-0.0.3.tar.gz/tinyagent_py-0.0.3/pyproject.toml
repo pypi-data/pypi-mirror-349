@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=77.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["tinyagent"]
+exclude = ["public", "public.*"]
+
+[project]
+name = "tinyagent-py"
+version = "0.0.3"
+description = "Tiny Agent with MCP Client"
+readme = "README.md"
+authors = [
+  {name="Mahdi Golchin", email="golchin@askdev.ai"}
+]
+requires-python = ">=3.8"
+dependencies = [
+  "mcp",
+  "litellm",
+  "openai"
+  # add whatever else you need…
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest",
+  
+  
+]
+[project.urls]
+"Homepage" = "https://github.com/askbudi/tinyagent"
+"Bug Tracker" = "https://github.com/askbudi/tinyagent/issues"
+"Chat" = "https://askdev.ai/github/askbudi/tinyagent"
