@@ -1,0 +1,16 @@
+tagmapper/__init__.py,sha256=0viTTghFSJvvIkNdC_O9ds9_Besv5yRwbjsbMtw9bSI,235
+tagmapper/base_model.py,sha256=r44a9WBEcorZBpLMEkUmQAXPrCwOuauBqQhlMt0_dMY,724
+tagmapper/connector_api.py,sha256=43UNBZas4fs81cP1Cg7BFMJ-5YznqOa-OSzGjMBXEuw,5186
+tagmapper/connector_api.py.orig,sha256=eRkjKoL24l2qiBIehNCAQghy5n27bTGipnAzY2MWwoc,5434
+tagmapper/connector_db.py,sha256=SF80NzX9QjJaa5C2GY99zYRn3zrOTyzz6QuB_DRnIP0,7386
+tagmapper/generic_model.py,sha256=s9y-1N9dnlfuvhsI8ICWvMm7YYKijuD98LOYn3YcyxU,5435
+tagmapper/generic_model_template.py,sha256=Ih01qVtegivWNW6uglc-my01RE3KnklWybqv7m0TOe4,2622
+tagmapper/mapped_object.py,sha256=uzefovHo_0vjcUt4cQe6h3v6_9Y-ANQaTUqY3SLeqJI,186
+tagmapper/mapping.py,sha256=A9jQ8G_PMFbuUFj7eCSkNasNhoLILBgRcHYpCXP_ZA8,3734
+tagmapper/schemas.py,sha256=RuyMNmbLGG6MV4lTLOrU3rt5aAh8gazVCnMXgTOXd8o,1930
+tagmapper/schemas.py.orig,sha256=2fcon30ti-fcefCiFSCOjVDosJoJJvwwQP3sv-NlYNg,2162
+tagmapper/separator.py,sha256=__W3y-7ghwvsSQH5npeFyWdud3TApiN5zvFARWTtJvc,2252
+tagmapper/well.py,sha256=R9osdWqx2_uArxeqoSQnuvj0hyUJ3DMifEatLn3jb7g,2299
+tagmapper-0.4.0.dist-info/METADATA,sha256=VzXBs07Ldn_Z1zaTCylWeRO2CjqAIgy9wDSVuof9NOY,2154
+tagmapper-0.4.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+tagmapper-0.4.0.dist-info/RECORD,,

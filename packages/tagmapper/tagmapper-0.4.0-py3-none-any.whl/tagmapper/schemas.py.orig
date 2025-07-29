@@ -1,0 +1,70 @@
+from tagmapper.connector_api import get_api_url, get_json, download_file
+import requests
+import os
+
+
+class Schema:
+    def __init__(self, filename, owner, name, description, version):
+        self.filename = filename
+        self.owner = owner
+        self.name = name
+        self.description = description
+        self.version = version
+
+    def __repr__(self):
+        return f"Schemas(filename='{self.filename}', owner='{self.owner}', name='{self.name}', description='{self.description}', version={self.version})"
+
+    def to_dict(self):
+        """Convert the object to a dictionary."""
+        return {
+            "filename": self.filename,
+            "owner": self.owner,
+            "name": self.name,
+            "description": self.description,
+            "version": self.version,
+        }
+
+    @classmethod
+    def from_dict(cls, data):
+        """Create an instance from a dictionary."""
+        return cls(
+            filename=data["filename"],
+            owner=data["owner"],
+            name=data["name"],
+            description=data["description"],
+            version=data["version"],
+        )
+
+    @staticmethod
+    def get_schemas():
+        """
+        Get existing schemas from the API
+        """
+
+        url = get_api_url(use_dev=True) + "get-schema"
+        response = get_json(url)
+
+        if isinstance(response, dict):
+            if "data" in response.keys():
+                schema_data = response["data"]
+                schema_files = [Schema.from_dict(item) for item in schema_data]
+                return schema_files
+        else:
+            raise ValueError("Response is not a valid JSON object")
+
+    @staticmethod
+    def download_schema(file_name: str):
+        """Download the file from the given URL and save it to current working directory."""
+        url = get_api_url(use_dev=True) + f"/download-schema?filename={file_name}"
+        download_file(url, file_name, stream=True)
+<<<<<<< HEAD
+=======
+
+
+if __name__ == "__main__":
+    schema_files = Schema.get_schemas()
+    for schema in schema_files:
+        Schema.download_schema(schema.filename)
+        print(schema)
+    pass
+>>>>>>> aecd8b0 (style: black)
