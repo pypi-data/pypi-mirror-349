@@ -1,0 +1,113 @@
+<html>
+
+<head>
+  <title>ExplainEval Report</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f8f9fa;
+      padding: 30px;
+      color: #333;
+    }
+
+    h1 {
+      color: #2b6777;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 10px;
+    }
+
+    h2 {
+      margin-top: 30px;
+      color: #52ab98;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 10px;
+      margin-bottom: 30px;
+    }
+
+    th,
+    td {
+      border: 1px solid #dee2e6;
+      padding: 8px 12px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #e4f1fe;
+    }
+
+    pre {
+      background-color: #f0f0f0;
+      padding: 15px;
+      border-radius: 5px;
+      white-space: pre-wrap;
+    }
+
+    .json-block {
+      background-color: #f8f9fa;
+      border-left: 4px solid #52ab98;
+      padding: 10px 15px;
+      font-family: monospace;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>ExplainEval Report</h1>
+  <p><strong>Task:</strong> {{ task | capitalize }}</p>
+
+  {% for key, value in metrics.items() %}
+  <h2>{{ key | capitalize }}</h2>
+
+  {#— If it’s a plain Python dict, render a table #}
+  {% if value.__class__.__name__ == 'dict' %}
+  <table>
+    <thead>
+      <tr>
+        <th>Label</th>
+        {% set first_row = value.values()|list|first %}
+        {% for col in first_row.keys() %}
+        <th>{{ col | capitalize }}</th>
+        {% endfor %}
+      </tr>
+    </thead>
+    <tbody>
+      {% for row_label, row_vals in value.items() %}
+      <tr>
+        <td><strong>{{ row_label }}</strong></td>
+        {% for cell in row_vals.values() %}
+        <td>
+          {% if cell is number %}
+          {{ '%.3f' % cell }}
+          {% else %}
+          {{ cell }}
+          {% endif %}
+        </td>
+        {% endfor %}
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  {#— Otherwise it’s a scalar or string — show it plainly #}
+  {% else %}
+  <div class="json-block">
+    {% if value is number %}
+    {{ '%.3f' % value }}
+    {% else %}
+    {{ value }}
+    {% endif %}
+  </div>
+  {% endif %}
+
+  {% endfor %}
+
+
+</body>
+
+</html>
