@@ -1,0 +1,31 @@
+[project]
+authors = [{ "name" = "requrd", "email" = "requrd1989@gmail.com" }]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+name = "jrdb-model"
+version = "0.2.1"
+description = "ORM for JRDB"
+readme = "README.md"
+dependencies = ["flask-migrate>=4.1.0"]
+
+[project.urls]
+"Bug Tracker" = "https://github.com/astroripple/horseview/issues"
+Homepage = "https://github.com/astroripple/horseview"
+
+[build-system]
+requires = ["setuptools>=42"]
+build-backend = "setuptools.build_meta"
+
+[tool.uv]
+dev-dependencies = ["ruff>=0.11.10"]
+[tool.ruff.lint]
+select = ["RUF", "I", "SIM", "FURB", "PIE", "PERF", "C4", "B", "PL", "D", "S"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*.py" = ["S101"]
+
+[tool.ruff.format]
+docstring-code-format = true
