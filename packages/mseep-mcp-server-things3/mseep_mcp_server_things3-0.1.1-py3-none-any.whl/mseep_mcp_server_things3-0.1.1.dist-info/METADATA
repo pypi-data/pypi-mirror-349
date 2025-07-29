@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: mseep-mcp-server-things3
+Version: 0.1.1
+Summary: A server implementation for interacting with Things3 app on macOS through Claude AI
+Home-page: 
+Author: mseep
+Author-email: mseep <support@skydeck.ai>
+Maintainer-email: mseep <support@skydeck.ai>
+Requires-Python: >=3.6
+Requires-Dist: flask
+Dynamic: author
+Dynamic: requires-python
