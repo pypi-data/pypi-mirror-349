@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+jwtee/__init__.py
+jwtee/jwtee.py
+jwtee.egg-info/PKG-INFO
+jwtee.egg-info/SOURCES.txt
+jwtee.egg-info/dependency_links.txt
+jwtee.egg-info/entry_points.txt
+jwtee.egg-info/requires.txt
+jwtee.egg-info/top_level.txt
