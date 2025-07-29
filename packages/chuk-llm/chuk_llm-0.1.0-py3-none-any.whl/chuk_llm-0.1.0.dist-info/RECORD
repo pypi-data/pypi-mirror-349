@@ -1,0 +1,16 @@
+chuk_llm/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+chuk_llm/llm_client.py,sha256=jhvA2lkTCm2si2hKN53GnV-qa6mbpol1ckZvk5wSYOE,3769
+chuk_llm/openai_style_mixin.py,sha256=K5jb3gj2bEBevjUGkJ6-3nH4Mc7ytp8zjLvMkm1RnaE,4558
+chuk_llm/provider_config.py,sha256=BKWfTZwsEmZ6i56miTRUV-p1bUHZRH0RJNOcxYLp7wU,5316
+chuk_llm/system_prompt_generator.py,sha256=MKaLh6QfoZyA5Kq5FuwjN4UcwRqJabPG7wpj56gP01g,2494
+chuk_llm/providers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+chuk_llm/providers/anthropic_client.py,sha256=Uj6O0q9dlZiU2pwAF9I6_YdX4VG9q66a6a3iimJeqMg,6250
+chuk_llm/providers/base.py,sha256=TOcu8LsY3ODaLzHpTruos6Jntd96asN8zOMgws8Lh0I,824
+chuk_llm/providers/gemini_client.py,sha256=YROo7a6jXbKbid_QOKu9MhSS4XxJjfgIHcz6Oh7gkYo,10374
+chuk_llm/providers/groq_client.py,sha256=TmcbZpK79wZiWaJUYPSoq9HXGagjJ_DwB4btyxlE0Nw,4209
+chuk_llm/providers/ollama_client.py,sha256=38m1jvj9hDu4OX3k92155RKQvSeZo18z4JWbT2Nyvvs,11466
+chuk_llm/providers/openai_client.py,sha256=1VzLr8Sy_-_N7czlD30jamUf_HgEZ9hBCF59cM-Y3Yo,2007
+chuk_llm-0.1.0.dist-info/METADATA,sha256=OtUn1jDqvlrHuZ_jh1UNoHlHfiwiYVniDKb9M4SrQ2g,398
+chuk_llm-0.1.0.dist-info/WHEEL,sha256=Nw36Djuh_5VDukK0H78QzOX-_FQEo6V37m3nkm96gtU,91
+chuk_llm-0.1.0.dist-info/top_level.txt,sha256=Fx8Plh9X7ud-rUh1ajx5TWZuuAxFun4pDkxpLWjSiCw,9
+chuk_llm-0.1.0.dist-info/RECORD,,
