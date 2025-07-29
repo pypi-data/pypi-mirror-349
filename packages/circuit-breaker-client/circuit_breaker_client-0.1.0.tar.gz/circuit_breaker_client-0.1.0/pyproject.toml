@@ -1,0 +1,36 @@
+[project]
+name = "circuit-breaker-client"
+version = "0.1.0"
+description = ""
+authors = [
+    { name = "daniel.perebinos@ebs-integrator.com", email = "daniel.perebinos@ebs-integrator.com" }
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+
+[project.optional-dependencies]
+requests = ["requests"]
+httpx = ["httpx"]
+
+
+[tool.poetry]
+package-mode = true
+
+[tool.poetry.group.requests.dependencies]
+requests = "^2.32.3"
+
+
+[tool.poetry.group.httpx.dependencies]
+httpx = "^0.28.1"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[project.urls]
+Homepage = "https://github.com/danielperebinos/circuit-breaker-client"
+Issues = "https://github.com/danielperebinos/circuit-breaker-client/issues"
