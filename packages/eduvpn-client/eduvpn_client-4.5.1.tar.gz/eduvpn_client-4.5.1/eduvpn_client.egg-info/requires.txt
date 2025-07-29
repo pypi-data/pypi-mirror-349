@@ -1,0 +1,13 @@
+eduvpn_common<4.0.0,>=3.0.0
+pygobject<=3.50.0,>=3.38.0
+
+[lint]
+ruff
+
+[mypy]
+mypy
+pygobject-stubs
+types-setuptools
+
+[test]
+pytest
