@@ -1,0 +1,2 @@
+[console_scripts]
+lancedb-mcp = lancedb_mcp.__main__:main
