@@ -1,0 +1,9 @@
+_efoli_version.py,sha256=5ZOF-5IV4pxLAC7yWK2kh4cvLYgnT2AwvRq2FGzBL94,18
+efoli/__init__.py,sha256=JBcXxxEwtd94NE1dmntC1Q1OdFDuDvqKV_umMYhkcNM,476
+efoli/edifact_format.py,sha256=ifPOTPwYYZN2kHARMDMc8fbEMD6DNjVNqKFqixIAWN8,2606
+efoli/edifact_format_version.py,sha256=fUuOPCqA_OtkVlyA4SeVFTP_HBoio470jegD3ExfytA,3274
+efoli/py.typed,sha256=ZvYa-_QF7Xg7F6Dow8m1zHvSP6kNHuhh3BEBVxjAdUQ,168
+efoli/strenum.py,sha256=AUXpExQC7PZ_yL2xJcX9pPfp-1qAvH8DX1EeFiLba7A,975
+efoli-2.0.0.dist-info/METADATA,sha256=cFv6OO96RAawgoqY9kaWEVf3cDsH7ML0ar4st0o9T74,3516
+efoli-2.0.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+efoli-2.0.0.dist-info/RECORD,,
