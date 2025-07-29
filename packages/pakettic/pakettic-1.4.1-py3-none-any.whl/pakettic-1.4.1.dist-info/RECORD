@@ -1,0 +1,13 @@
+pakettic/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pakettic/__main__.py,sha256=dTle6OUcbd0910K5HD8xn3sbwsDmiOvNNVpFk5b0hEs,42
+pakettic/ast.py,sha256=K6jm1GgcwRQwhFCgPw4nBheBhkkQpV24PItmP0Gh-Gk,7649
+pakettic/main.py,sha256=EvHhgqEeIWGG6hAHz7qmaZnXoQ6Nxb8cClqN3eUcy2c,15907
+pakettic/optimize.py,sha256=YOpQ_uqm52V-ZmtJo_CRAsIZhU1DLy_fsm2_rBZ8c2Y,29594
+pakettic/parser.py,sha256=72ITN-S8pLF2113O7rysaD0WNrvZtFwKOshbpFm3mKo,13634
+pakettic/printer.py,sha256=YrXnN9wUVaajq850QU4ngWC_-3hfbVDMOWjHO98H-YQ,14664
+pakettic/ticfile.py,sha256=c_uob3UdQ3wELsURYqZICBorQoFs0H6M7rXWvWtDWq8,16566
+pakettic-1.4.1.dist-info/entry_points.txt,sha256=KTzXh6qx3vrH-Xp0pz9KWpqHK93R98byGLqrJ7fEmyY,47
+pakettic-1.4.1.dist-info/LICENSE,sha256=GkRuxFV-Izrt8_i2wk_BWSgk3PcUTTlWurfMmEv8qLo,1092
+pakettic-1.4.1.dist-info/METADATA,sha256=i-SDuSalnmUsAwMrwr0qKX8gC0YlMWfoyrI6Dqe3GEg,10811
+pakettic-1.4.1.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+pakettic-1.4.1.dist-info/RECORD,,
