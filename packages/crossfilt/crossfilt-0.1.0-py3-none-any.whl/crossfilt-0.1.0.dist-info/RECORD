@@ -1,0 +1,10 @@
+CrossFilt/identical_reads.py,sha256=XumOUz0Je0QzSmF9aelz3I9Aho1Rvy7ijpaE9VjHS9M,4676
+CrossFilt/liftover_bam.py,sha256=IDoGgtDstoH4WeMwfA-rptW0tKp7_JvdGWYsa5APhbE,6038
+CrossFilt/split_bam.py,sha256=s-YYJFYQ2nhRWlDHTQ23HWBP32x3NtJRYTSNcNAPrgc,5113
+CrossFilt/lib/liftover_functions.py,sha256=Tg0ckdwjH7S-WunXKx3GW85Nz6BaohP74QvDgDLsLxk,38607
+crossfilt-0.1.0.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+crossfilt-0.1.0.dist-info/METADATA,sha256=ECFt45JJNNLIT8PpTDjAAnWPemxN-9Y-i5Xg6aJKJwo,7564
+crossfilt-0.1.0.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+crossfilt-0.1.0.dist-info/entry_points.txt,sha256=WzX6tJ_9smBNsOPS-RFq5X5vyc8Xp0HURiYb0eXkCyM,156
+crossfilt-0.1.0.dist-info/top_level.txt,sha256=k56xwfsTT41JNOo3tWwQWEWwH5QFwLe2dEgke4IrseM,10
+crossfilt-0.1.0.dist-info/RECORD,,
