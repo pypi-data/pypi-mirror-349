@@ -1,0 +1,8 @@
+MANIFEST.in
+setup.py
+predictram_pyquant.egg-info/PKG-INFO
+predictram_pyquant.egg-info/SOURCES.txt
+predictram_pyquant.egg-info/dependency_links.txt
+predictram_pyquant.egg-info/entry_points.txt
+predictram_pyquant.egg-info/requires.txt
+predictram_pyquant.egg-info/top_level.txt
