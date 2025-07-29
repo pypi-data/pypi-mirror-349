@@ -1,0 +1,10 @@
+tap_socketdev/__init__.py,sha256=sgnn1rG5B-h5sLiKa-O9QwrWm3z3vLpRjuAzOnZL73Q,84
+tap_socketdev/__main__.py,sha256=Cs4UDdpnXjF8LCQ6736SHtshuo36L6qLb1lHd4igYQs,122
+tap_socketdev/client.py,sha256=kFtv4HULBdGUSQil-qGbeW42Swy6J1twMQ8GK1Z68Qg,831
+tap_socketdev/streams.py,sha256=77qDgoxbbIo2gFamnGRg9jyKYimpNRCuqmWmK4Qv9-s,1883
+tap_socketdev/tap.py,sha256=ol8k9SNuQg10i1HGsTJaQEoBpC-R1F0IW5kM-TbUbjk,947
+tap_socketdev-0.3.4.dist-info/LICENSE,sha256=_v6tlq8KgAuvM0XSmFaXn46EZ6vn1IKIN6QAyv3RW1M,11355
+tap_socketdev-0.3.4.dist-info/METADATA,sha256=NAjWEo5VvGhBvWZmQcwqZJMo0t0nTuY-e4OeE1s1W_c,9205
+tap_socketdev-0.3.4.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+tap_socketdev-0.3.4.dist-info/entry_points.txt,sha256=XdtN5VTTECGIvHy8zfwQElur4Y6-PQQqulMa61blSt4,68
+tap_socketdev-0.3.4.dist-info/RECORD,,
