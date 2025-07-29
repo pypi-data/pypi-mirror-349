@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+gemini_tool_agent/agent.py
+gemini_tool_agent.egg-info/PKG-INFO
+gemini_tool_agent.egg-info/SOURCES.txt
+gemini_tool_agent.egg-info/dependency_links.txt
+gemini_tool_agent.egg-info/requires.txt
+gemini_tool_agent.egg-info/top_level.txt
