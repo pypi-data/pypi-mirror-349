@@ -1,0 +1,8 @@
+from qscout.v1.std usepulses *
+
+register q[1]
+
+measure_all
+
+// EXPECTED ERROR
+// jaqalpaq.error.JaqalError: measure_all must follow a prepare_all
