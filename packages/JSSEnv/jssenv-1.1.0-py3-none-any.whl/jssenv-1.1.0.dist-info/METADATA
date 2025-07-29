@@ -1,0 +1,36 @@
+Metadata-Version: 2.4
+Name: JSSEnv
+Version: 1.1.0
+Summary: An optimized OpenAi gym's environment to simulate the Job-Shop Scheduling problem.
+Home-page: https://github.com/prosysscience/JSSEnv
+Author: Pierre Tassel
+Author-email: pierre.tassel@aau.at
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: gymnasium>=0.29.1
+Requires-Dist: pandas
+Requires-Dist: numpy<3.0.0,>=2.0.0
+Requires-Dist: plotly
+Requires-Dist: imageio
+Requires-Dist: psutil
+Requires-Dist: requests
+Requires-Dist: kaleido
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: pytest-cov>=4.0.0; extra == "dev"
+Requires-Dist: flake8>=6.0.0; extra == "dev"
+Requires-Dist: codecov>=2.1.0; extra == "dev"
+Requires-Dist: build>=1.0.0; extra == "dev"
+Requires-Dist: wheel>=0.40.0; extra == "dev"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
