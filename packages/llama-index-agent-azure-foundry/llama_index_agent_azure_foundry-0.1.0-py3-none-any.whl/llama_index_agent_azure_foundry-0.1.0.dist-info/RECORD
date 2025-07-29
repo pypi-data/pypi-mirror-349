@@ -1,0 +1,5 @@
+llama_index/agent/azure_foundry_agent/__init__.py,sha256=ZqUVlLs65aOTleZ1tPqLUNohTSeaK3t5mTFqtrX1tio,112
+llama_index/agent/azure_foundry_agent/base.py,sha256=u-hYzf4oMRjKpEa4Rlx1ql10LTwhUKqczckBsqePvK8,18109
+llama_index_agent_azure_foundry-0.1.0.dist-info/METADATA,sha256=zDBPeep84lNSp3gavTtUlDtC752wI4LoWeF32-XX9UY,5689
+llama_index_agent_azure_foundry-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+llama_index_agent_azure_foundry-0.1.0.dist-info/RECORD,,
