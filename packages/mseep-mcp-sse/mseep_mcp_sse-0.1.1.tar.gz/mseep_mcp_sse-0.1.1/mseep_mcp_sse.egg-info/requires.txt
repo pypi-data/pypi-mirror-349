@@ -1,0 +1,6 @@
+argparse>=1.4.0
+httpx>=0.28.1
+mcp[cli]>=1.2.1
+python-dotenv>=1.0.1
+paramiko>=3.5.1
+pymetasploit3>=1.0.6
