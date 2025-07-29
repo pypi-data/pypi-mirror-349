@@ -1,0 +1,3 @@
+include README.md
+include requirements.txt
+include predictram_parameter_data/data/all_stocks.json
