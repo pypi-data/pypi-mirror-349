@@ -1,0 +1,17 @@
+excel_mcp/__main__.py,sha256=_CrFkpbMG5fr_a1w-LMPYtshYlwcXW66Mxs3MDO8xO0,944
+excel_mcp/calculations.py,sha256=EYs39X3IQrOe2uDA1HaYT5Rehk3U8BEFZOII8bOJOKI,1910
+excel_mcp/cell_utils.py,sha256=NDGd2inua2jD5UnxLfX82onFUOZvu2xBimJezccGGo0,1545
+excel_mcp/chart.py,sha256=In2r7kClVLFIWlY-kro9YdkLsHhcw0wcW_gJkeiy3n8,8375
+excel_mcp/data.py,sha256=5Emo6mA_K6v4SCTVv_Coi4uznzzlXNrIRAVunoiIfPw,9403
+excel_mcp/exceptions.py,sha256=C2zx2WLPSuC3kpl1Yean6xJu_zC77q2Ew3WGYlNbJw0,822
+excel_mcp/formatting.py,sha256=oudd8jimnFBgbM5tuadDJDAwvTkB90d-P07Fn6Odnms,9450
+excel_mcp/pivot.py,sha256=BZqKLNcGkGUEEJe6RyrR9Be3E69yl726TJqzGTSrOts,10105
+excel_mcp/server.py,sha256=q8Wd0NSJ6Jf-flPog6hd2OZ3mDiU78912D98QEIdVnw,16390
+excel_mcp/sheet.py,sha256=iqNhXytPfWhl32pDA6U3BYdQCe22qbW6_x9CF6cT1Ag,13792
+excel_mcp/validation.py,sha256=Sl8fECXCsgWxWYosTS2fQkTY3OWhxuNGifkeRXCNM80,8403
+excel_mcp/workbook.py,sha256=SETLin6ojZHHSmwtNMTEkEuCmzt-dsFnTqQVtjrmEXU,3154
+excel_mcp_server-0.1.3.dist-info/METADATA,sha256=-Xgweg018TLKKDpZ7-8SpnclO99u724i93wB3iRsvC4,3173
+excel_mcp_server-0.1.3.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+excel_mcp_server-0.1.3.dist-info/entry_points.txt,sha256=ggZW7-SiqRh1diVwTK7mq0MH4k538hOU-O-MR0Tss4s,60
+excel_mcp_server-0.1.3.dist-info/licenses/LICENSE,sha256=XbnGBtEiNntldYUc2E-bHZdzoS-v7cSRhQHQfRN0P90,1062
+excel_mcp_server-0.1.3.dist-info/RECORD,,
