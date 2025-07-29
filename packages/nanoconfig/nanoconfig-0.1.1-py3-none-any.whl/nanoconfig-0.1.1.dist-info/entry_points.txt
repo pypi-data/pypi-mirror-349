@@ -1,0 +1,3 @@
+[console_scripts]
+clearml_task_launcher = nanoconfig.experiment.util.clearml_launcher:run
+nd = nanoconfig.cli:data

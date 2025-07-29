@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: nanoconfig
+Version: 0.1.1
+Summary: Add your description here
+Requires-Python: >=3.12
+Requires-Dist: click>=8.1.8
+Requires-Dist: fastapi>=0.115.12
+Requires-Dist: fsspec>=2025.3.2
+Requires-Dist: huggingface-hub>=0.30.2
+Requires-Dist: marimo>=0.13.2
+Requires-Dist: matplotlib>=3.10.1
+Requires-Dist: pandas>=2.2.3
+Requires-Dist: plotly>=6.0.1
+Requires-Dist: pyarrow>=19.0.1
+Requires-Dist: rich>=14.0.0
+Requires-Dist: torch>=2.6.0
+Requires-Dist: wandb[wandb]>=0.19.9
+Provides-Extra: clearml
+Requires-Dist: clearml>=1.18.0; extra == 'clearml'
+Description-Content-Type: text/markdown
+
+A nano-sized config library for ML projects.
