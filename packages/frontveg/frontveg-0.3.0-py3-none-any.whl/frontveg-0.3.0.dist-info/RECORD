@@ -1,0 +1,13 @@
+frontveg/__init__.py,sha256=m4oqJTxKFurizNLN-4HNrqF-hvjQkdyLMbIULtTd1NA,179
+frontveg/_version.py,sha256=9WppBElv1NvAyEcEfKgQ7lPPwwYXq7rnN9aaDi0TN-s,532
+frontveg/_widget.py,sha256=eZS0gv2f8NjMzskHFF0J_zscBWPVstqIQaSXIFhJOG4,5389
+frontveg/napari.yaml,sha256=33HxiAA2If2tjogtnkb5PYfeR8bXLxW4uWKV88kDYKQ,511
+frontveg/utils.py,sha256=3t011wr99KhJ4nW-lRYXoFLjZu_DULQOPcoXAlEKEK0,3214
+frontveg/_tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+frontveg/_tests/test_widget.py,sha256=jaFBX-JpnaRHDvQvU6QbUhOiL6Aejn2yljq11yl3hmY,2265
+frontveg-0.3.0.dist-info/licenses/LICENSE,sha256=2qUWKx6xVq9efOuuI6lxeftgMSY2njkm5Qy4HXLRQgA,1520
+frontveg-0.3.0.dist-info/METADATA,sha256=5DKXT3bY049syECZGRRsQQn7DiefgHXIRjJ4wsqIJMY,7967
+frontveg-0.3.0.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+frontveg-0.3.0.dist-info/entry_points.txt,sha256=VMaRha_yYtIcJAdA0suCmR0of0MZJfUaUn2aKSYtR0I,50
+frontveg-0.3.0.dist-info/top_level.txt,sha256=skkajXDCaVFNYqsXXqsUv6fqlA6Pl-2cLwKJO52ldBI,9
+frontveg-0.3.0.dist-info/RECORD,,
