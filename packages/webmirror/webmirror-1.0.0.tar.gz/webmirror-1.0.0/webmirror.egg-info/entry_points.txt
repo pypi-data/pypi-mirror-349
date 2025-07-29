@@ -1,0 +1,2 @@
+[console_scripts]
+webmirror = webmirror.webmirror:main

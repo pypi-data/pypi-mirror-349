@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+webmirror/__init__.py
+webmirror/webmirror.py
+webmirror.egg-info/PKG-INFO
+webmirror.egg-info/SOURCES.txt
+webmirror.egg-info/dependency_links.txt
+webmirror.egg-info/entry_points.txt
+webmirror.egg-info/requires.txt
+webmirror.egg-info/top_level.txt
