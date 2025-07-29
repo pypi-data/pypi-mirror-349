@@ -1,0 +1,12 @@
+mviewer/Mviewer.py,sha256=4jLA3WVvoIujdWU5cPPDoYQmvv-q6dwY6Wsidob3UqA,5307
+mviewer/__init__.py,sha256=IgTcxvWJrTmVXmRMHkxeDyq5_zqQ92LcplZbqitNJvA,2243
+mviewer/_imports_.py,sha256=u4_ulp569JI-RzqAncpgl3u4Apm8IWri6meRWSrq1t0,57
+mviewer/metadata.json,sha256=XjOdgBTLucyslkoTdPapf-GtzAXSKqyBj63d9b7XGNw,2397
+mviewer/mviewer.min.js,sha256=H83dKbJYsC_Dn1j6ROJiwDqghvgSOOeIfOv8M7_swf0,21251
+mviewer/mviewer.min.js.map,sha256=t3SY8fMZEc2EeRKM_-cD5wRxQDpD7iNoAyDxITXGte0,75557
+mviewer/package-info.json,sha256=bKGG-_9FF1oms4NOmXzoxEv5aCc_Co4LPTpvyXP5Xfs,1729
+mviewer-1.0.1.dist-info/LICENSE,sha256=mVlj3wrPLWwKJyUdJ56_X4Se1hfubXF3O_1pAU68AXE,1758
+mviewer-1.0.1.dist-info/METADATA,sha256=CXEB1grrtN3wMI3GB4G2VNzh821DPYpy0w4kPoMwsWY,1977
+mviewer-1.0.1.dist-info/WHEEL,sha256=52BFRY2Up02UkjOa29eZOS2VxUrpPORXg1pkohGGUS8,91
+mviewer-1.0.1.dist-info/top_level.txt,sha256=GoLuJatBMqMsCbcg0ImuRq8qya22fcO2sDm4DKkwX1Y,8
+mviewer-1.0.1.dist-info/RECORD,,
