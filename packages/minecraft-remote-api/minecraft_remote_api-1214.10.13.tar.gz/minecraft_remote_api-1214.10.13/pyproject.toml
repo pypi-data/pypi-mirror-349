@@ -1,0 +1,34 @@
+[project]
+name = "minecraft-remote-api"
+version = "1214.10.13"
+description = "Python Client-API for Minecraft Remote or mc-remote"
+readme = "README.md"
+requires-python = ">=3.8"
+keywords = ["minecraft", "remote", "API", "client"]
+classifiers = [
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+authors = [
+    { name = "Naohiro2g", email = "587586+Naohiro2g@users.noreply.github.com" }
+]
+
+[project.urls]
+Homepage = "https://github.com/Naohiro2g/minecraft-remote-api"
+Repository = "https://github.com/Naohiro2g/minecraft-remote-api"
+Documentation = "https://github.com/Naohiro2g/minecraft-remote-api/blob/main/README.md"
+
+[tool.poetry]
+packages = [
+    { include = "mc_remote", from = "." }
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
