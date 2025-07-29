@@ -1,0 +1,8 @@
+mseep_eka_mcp_server-0.2.5.dist-info/licenses/LICENSE,sha256=elTXs-yPjweH9g582Nj-uSlw0oL8xrtUY84tnQfkuKk,1065
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_auth.py,sha256=07ADe5VKJ06foT0rcV5HPwQkCCD6mxwoaLwfp29bIYE,2317
+mseep_eka_mcp_server-0.2.5.dist-info/METADATA,sha256=L4_coEKVuv38Ei--xI3akOHkfej5ezQi5v2P4oiQCIo,9140
+mseep_eka_mcp_server-0.2.5.dist-info/WHEEL,sha256=Nw36Djuh_5VDukK0H78QzOX-_FQEo6V37m3nkm96gtU,91
+mseep_eka_mcp_server-0.2.5.dist-info/entry_points.txt,sha256=ma47X4bnWeKGLPKWLrJPo3J7nX3yMGmBJ87yTexow14,55
+mseep_eka_mcp_server-0.2.5.dist-info/top_level.txt,sha256=EdW7283x-lr_cbuivW8Ij7ANAP-ZJ9sLtILQseEPxXg,6
+mseep_eka_mcp_server-0.2.5.dist-info/RECORD,,
