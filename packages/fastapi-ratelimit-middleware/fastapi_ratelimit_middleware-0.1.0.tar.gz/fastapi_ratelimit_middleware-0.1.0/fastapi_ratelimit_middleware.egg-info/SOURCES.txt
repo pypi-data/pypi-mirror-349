@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+fastapi_rate_limit/__init__.py
+fastapi_rate_limit/middleware.py
+fastapi_ratelimit_middleware.egg-info/PKG-INFO
+fastapi_ratelimit_middleware.egg-info/SOURCES.txt
+fastapi_ratelimit_middleware.egg-info/dependency_links.txt
+fastapi_ratelimit_middleware.egg-info/requires.txt
+fastapi_ratelimit_middleware.egg-info/top_level.txt
+tests/test_basic.py
