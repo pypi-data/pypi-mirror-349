@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+app/__init__.py
+app/__main__.py
+app/analyzer.py
+app/parser.py
+dockcheck.egg-info/PKG-INFO
+dockcheck.egg-info/SOURCES.txt
+dockcheck.egg-info/dependency_links.txt
+dockcheck.egg-info/entry_points.txt
+dockcheck.egg-info/requires.txt
+dockcheck.egg-info/top_level.txt
+tests/test_parser.py
