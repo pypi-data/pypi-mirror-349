@@ -1,0 +1,9 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.py
+lutech_quantum_cnn.egg-info/PKG-INFO
+lutech_quantum_cnn.egg-info/SOURCES.txt
+lutech_quantum_cnn.egg-info/dependency_links.txt
+lutech_quantum_cnn.egg-info/requires.txt
+lutech_quantum_cnn.egg-info/top_level.txt
