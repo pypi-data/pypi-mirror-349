@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: pystockquery
+Version: 0.1.6
+Summary: A natural language interface for stock data analysis
+Home-page: https://github.com/yourusername/pystockquery
+Author: PredictRAM
+Author-email: support@predictram.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pandas>=1.0.0
+Requires-Dist: openpyxl>=3.0.0
+Requires-Dist: matplotlib>=3.0.0
+Requires-Dist: seaborn>=0.11.0
+
+# PyStockQuery
+
+A natural language interface for stock data analysis.
+
+## Installation
+
+```bash
+pip install pystockquery
