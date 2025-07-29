@@ -1,0 +1,28 @@
+Metadata-Version: 2.3
+Name: trailbase
+Version: 0.4.0
+Summary: TrailBase client for Python
+Home-page: https://trailbase.io
+License: OSL-3.0
+Author: TrailBase
+Author-email: contact@trailbase.io
+Requires-Python: >=3.12,<4.0
+Classifier: License :: OSI Approved
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: cryptography (>=43.0.3,<44.0.0)
+Requires-Dist: httpx (>=0.27.2,<0.28.0)
+Requires-Dist: pyjwt (>=2.10.0,<3.0.0)
+Project-URL: Repository, https://github.com/trailbaseio/trailbase
+Description-Content-Type: text/markdown
+
+# TrailBase Client
+
+TrailBase is a [blazingly](https://trailbase.io/reference/benchmarks/) fast,
+open-source application server with type-safe APIs, built-in JS/ES6/TS runtime,
+realtime, auth, and admin UI built on Rust, SQLite & V8.
+
+For more context, documentation, and an online demo, check out our website:
+[trailbase.io](https://trailbase.io).
+
