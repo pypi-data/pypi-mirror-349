@@ -1,0 +1,60 @@
+Metadata-Version: 2.3
+Name: phospho
+Version: 0.3.45
+Summary: Text Analytics for LLM apps
+Keywords: LLM,Agents,gen ai,phospho,analytics,nlp
+Author: phospho
+Author-email: contact@phospho.ai
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Provides-Extra: lab
+Provides-Extra: tracing
+Requires-Dist: openai (>=1.12.0,<2.0.0) ; extra == "lab"
+Requires-Dist: opentelemetry-exporter-otlp (>=1.27.0,<2.0.0)
+Requires-Dist: opentelemetry-instrumentation-alephalpha (>=0.33.4,<0.34.0) ; extra == "tracing"
+Requires-Dist: opentelemetry-instrumentation-anthropic (>=0.33.4,<0.34.0) ; extra == "tracing"
+Requires-Dist: opentelemetry-instrumentation-bedrock (>=0.33.4,<0.34.0) ; extra == "tracing"
+Requires-Dist: opentelemetry-instrumentation-cohere (>=0.33.4,<0.34.0) ; extra == "tracing"
+Requires-Dist: opentelemetry-instrumentation-google-generativeai (>=0.33.4,<0.34.0) ; extra == "tracing"
+Requires-Dist: opentelemetry-instrumentation-groq (>=0.33.4,<0.34.0) ; extra == "tracing"
+Requires-Dist: opentelemetry-instrumentation-haystack (>=0.33.4,<0.34.0) ; extra == "tracing"
+Requires-Dist: opentelemetry-instrumentation-lancedb (>=0.33.4,<0.34.0) ; extra == "tracing"
+Requires-Dist: opentelemetry-instrumentation-llamaindex (>=0.33.4,<0.34.0) ; extra == "tracing"
+Requires-Dist: opentelemetry-instrumentation-marqo (>=0.33.4,<0.34.0) ; extra == "tracing"
+Requires-Dist: opentelemetry-instrumentation-milvus (>=0.33.4,<0.34.0) ; extra == "tracing"
+Requires-Dist: opentelemetry-instrumentation-mistralai (>=0.33.4,<0.34.0) ; extra == "tracing"
+Requires-Dist: opentelemetry-instrumentation-ollama (>=0.33.4,<0.34.0) ; extra == "tracing"
+Requires-Dist: opentelemetry-instrumentation-openai (>=0.33.4,<0.34.0) ; extra == "tracing"
+Requires-Dist: opentelemetry-instrumentation-pinecone (>=0.33.4,<0.34.0) ; extra == "tracing"
+Requires-Dist: opentelemetry-instrumentation-qdrant (>=0.33.4,<0.34.0) ; extra == "tracing"
+Requires-Dist: opentelemetry-instrumentation-replicate (>=0.33.4,<0.34.0) ; extra == "tracing"
+Requires-Dist: opentelemetry-instrumentation-sagemaker (>=0.33.4,<0.34.0) ; extra == "tracing"
+Requires-Dist: opentelemetry-instrumentation-together (>=0.33.4,<0.34.0) ; extra == "tracing"
+Requires-Dist: opentelemetry-instrumentation-transformers (>=0.33.4,<0.34.0) ; extra == "tracing"
+Requires-Dist: opentelemetry-instrumentation-vertexai (>=0.33.4,<0.34.0) ; extra == "tracing"
+Requires-Dist: opentelemetry-instrumentation-watsonx (>=0.33.4,<0.34.0) ; extra == "tracing"
+Requires-Dist: opentelemetry-instrumentation-weaviate (>=0.33.4,<0.34.0) ; extra == "tracing"
+Requires-Dist: opentelemetry-sdk (>=1.27.0,<2.0.0)
+Requires-Dist: pandas (>=2.0.3,<3.0.0) ; extra == "lab"
+Requires-Dist: pydantic (>=2.5.2,<3.0.0)
+Requires-Dist: requests (>=2.32.3,<3.0.0)
+Requires-Dist: rich (>=13.7.1,<14.0.0)
+Requires-Dist: tiktoken (>=0.8.0,<0.9.0) ; extra == "lab"
+Requires-Dist: tqdm (>=4.66.2,<5.0.0)
+Requires-Dist: typer[all] (>=0.6)
+Project-URL: Documentation, https://phospho-app.github.io/docs/
+Project-URL: Homepage, https://github.com/phospho-app/phospho
+Description-Content-Type: text/markdown
+
+# phospho legacy Python Client
+
+> _Warning_ : This python package is not used at the moment.
+
+This python package isn't currently used by phospho. You are probably looking for [phosphobot](https://pypi.org/project/phosphobot/).
+Learn more about phospho at [phospho.ai](https://phospho.ai) and about phosphobot in the [docs](https://docs.phospho.ai).
+
