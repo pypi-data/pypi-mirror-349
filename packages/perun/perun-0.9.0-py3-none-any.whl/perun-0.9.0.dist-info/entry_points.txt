@@ -1,0 +1,2 @@
+[console_scripts]
+perun = perun.api.cli:cli
