@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: brainminer
+Version: 0.1.2
+Summary: worldquant brain alpha miner
+Author: compasty
+Author-email: compasty@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: numpy (>=2.0.5,<3.0.0)
+Requires-Dist: pandas (>=2.0.3,<3.0.0)
+Requires-Dist: pymysql (>=1.1.1,<2.0.0)
+Requires-Dist: pyyaml (>=6.0.2,<7.0.0)
+Requires-Dist: requests (>=2.32.3,<3.0.0)
+Requires-Dist: sqlalchemy (>=2.0.40,<3.0.0)
+Requires-Dist: tenacity (>=9.1.2,<10.0.0)
+Description-Content-Type: text/markdown
+
+# Config.yaml Format
+
+
+
+# Changelog
+
+## 0.1.0 (2025-04-25)
+
+- Support basic operations for worldquant brain: login, alpha simulation, alpha query, dataset query
+
+## 0.1.1(2025-04-27)
+
+- Add more utility functions for alpha mining
+
+## 0.1.2(2025-05-20)
+
+- Support basic alpha miner functionality
+
+# Commands
+
++ Local debug installation：`pip install -e .`
++ Publish to pypi: `poetry publish --build`
