@@ -1,0 +1,10 @@
+optimization/QSP_solver.py,sha256=Z7-HrzyL1ZTw9UN2yS70cA-3qmtvpT-SCqKH_TdVf1g,4121
+optimization/__init__.py,sha256=hHIga6VRxuEy0pm80PaJ9ULMcKF1n-VJ-z4W4p2n5S4,509
+optimization/core.py,sha256=fHrjqc4-Qmuod5T_MSjaZrL9_wCRJEINQzzdya-S8Hw,7848
+optimization/objective.py,sha256=qrCRLS__C5IYZQ1piag0dLkhnUk2Ac9Mu_o6B5S_xoc,4550
+optimization/optimizers.py,sha256=pqtHnwceV0Gi5qhaU5yzmuo-ge2HEzUh6lfWSR5BWok,9086
+optimization/utils.py,sha256=CuIye-f7x38zU5HpiX74VAXU5MZ4SoNWt11WGGeVOpE,15650
+qsppack-0.1.0.dist-info/METADATA,sha256=v0pPfoodYS1aOONGPRSPG19ZAcxyUxbmFSW73Wa-ADA,1484
+qsppack-0.1.0.dist-info/WHEEL,sha256=Nw36Djuh_5VDukK0H78QzOX-_FQEo6V37m3nkm96gtU,91
+qsppack-0.1.0.dist-info/top_level.txt,sha256=D7HS9oMRtMUQK6kRIxQd_mgO-5CsfzYsxq7rht6vXQU,13
+qsppack-0.1.0.dist-info/RECORD,,
