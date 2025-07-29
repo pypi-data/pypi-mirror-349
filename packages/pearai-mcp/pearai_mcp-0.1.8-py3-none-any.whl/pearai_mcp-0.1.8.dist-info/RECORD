@@ -1,0 +1,11 @@
+pearai_mcp/__init__.py,sha256=KNZ1bD9ZGfyZwlv91Ueeega_1lsRDLs2fYQDgNbBdtc,212
+pearai_mcp/constants.py,sha256=x9r2PSu7CDSjm28NLR9EVUv0zcl7j8Be9wuHYMkWnfU,165
+pearai_mcp/server.py,sha256=BX7b2uAQBaa-GfxN7wuyA3fA_Nve417KGctNHmRJuHc,3077
+pearai_mcp/deploy/__init__.py,sha256=F70OSTPxXKm_fSiMGRUbEfqON_K-g01d_uRR2tidxcg,70
+pearai_mcp/deploy/deploy.py,sha256=aj45zVn5eAYEZ20h7dVNCXlMmfiOx7LFHVXg8RGQkcY,7320
+pearai_mcp/templates/__init__.py,sha256=g2dHtjRvSnqpwA8U3MWS8Ibbp9nDfKHnyX8DQp3m6lY,76
+pearai_mcp/templates/template_service.py,sha256=rbkUUTyjIw7-MOoSLGqpeqJlic7Bi9ykRpHuzMhoskU,9112
+pearai_mcp-0.1.8.dist-info/METADATA,sha256=aS5odLjyScYvg0Z94G1rV4PiBEA5eClMWg2Mivf2iQQ,3202
+pearai_mcp-0.1.8.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pearai_mcp-0.1.8.dist-info/entry_points.txt,sha256=lfqKS4_rZkb-mzZi1_cLZnIrZcEyz1sWuDhOR-ErLJc,47
+pearai_mcp-0.1.8.dist-info/RECORD,,
