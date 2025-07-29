@@ -1,0 +1,12 @@
+LICENCE.md
+README.md
+pyproject.toml
+tests/test_uvox.py
+tests/test_xontrib.py
+xontrib/uvox.py
+xontrib/uvoxapi.py
+xontrib_uvox.egg-info/PKG-INFO
+xontrib_uvox.egg-info/SOURCES.txt
+xontrib_uvox.egg-info/dependency_links.txt
+xontrib_uvox.egg-info/requires.txt
+xontrib_uvox.egg-info/top_level.txt
