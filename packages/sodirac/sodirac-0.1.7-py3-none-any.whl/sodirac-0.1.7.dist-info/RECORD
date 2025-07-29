@@ -1,0 +1,15 @@
+sodirac/__init__.py,sha256=CwamqK0ED6JoLpy58K54DYyHOLSaxJymSonLy8jVnM4,265
+sodirac/_version.py,sha256=6WmyK3PvQP5dO8pHnRM7M9Dh9y_vi2q6__2mvVHIscE,33
+sodirac/adj.py,sha256=m51gMKL4DaMYI3A2vbRSXBOddBdAnwStNxihxyJ9UIk,8746
+sodirac/dataprep.py,sha256=V96shZC1LVlihTkbqTh7rHjfanuc_GEjZWQ2KOIafsg,12978
+sodirac/hyper.py,sha256=OTAmGTtwFtGK-JvdhyslWe6k8-sjJmK639zDISqwBlg,3726
+sodirac/main.py,sha256=tgY-Kzp0DdulPr9bW1RcUSYzg44xriBUk5RegmDCmsw,24887
+sodirac/model.py,sha256=jfcsNXAbbC_dKuD2ipXh4B3gBMvVKZg9jz3qpZAu0vk,31689
+sodirac/simulations.py,sha256=ylKA4c0e4gAyf68kJhB_iPSvhK7fJO4OZxUB74CfqFc,16593
+sodirac/trainer.py,sha256=JrXA_c34qfKp-aw-_sKyCsjLLWpFAU-YrQGW3OcDiRo,60628
+sodirac/utils.py,sha256=ksFJNDHujjNiPE9vqC7olJ-08y7BDja6jp7wh1Nl-jY,32814
+sodirac-0.1.7.dist-info/licenses/LICENSE,sha256=5NqL94TijVKVxB7X_6nwYd9TPpgTkjAXpaMF15kU2Ic,1065
+sodirac-0.1.7.dist-info/METADATA,sha256=nqN10QG8LCMLboZHUhXQKOBsW3Uji83mqgmjZESsREE,5844
+sodirac-0.1.7.dist-info/WHEEL,sha256=Nw36Djuh_5VDukK0H78QzOX-_FQEo6V37m3nkm96gtU,91
+sodirac-0.1.7.dist-info/top_level.txt,sha256=2uOfjjBHtVUynbu-37ob5LhoUFCQJ2aM8cMG9_HB1oY,8
+sodirac-0.1.7.dist-info/RECORD,,
