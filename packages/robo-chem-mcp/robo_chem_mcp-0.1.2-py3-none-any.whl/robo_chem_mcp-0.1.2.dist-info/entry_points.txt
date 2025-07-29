@@ -1,0 +1,2 @@
+[console_scripts]
+robo-chem-mcp = robo_chem_mcp:main
