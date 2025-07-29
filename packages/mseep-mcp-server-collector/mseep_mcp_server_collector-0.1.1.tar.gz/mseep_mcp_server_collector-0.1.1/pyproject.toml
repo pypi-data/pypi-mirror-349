@@ -1,0 +1,30 @@
+[project]
+name = "mseep-mcp-server-collector"
+version = "0.1.1"
+description = "A MCP Server used to collect MCP Servers over the internet."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "aiohttp>=3.11.10",
+    "mcp>=1.1.0",
+    "openai>=1.57.0",
+    "python-dotenv>=1.0.1",
+    "requests>=2.32.3",
+]
+authors = [
+    { name = "mseep", email = "support@skydeck.ai" },
+]
+maintainers = [
+    { name = "mseep", email = "support@skydeck.ai" },
+]
+
+[project.scripts]
+mcp-server-collector = "mcp_server_collector:main"
+
+[build-system]
+requires = [
+    "hatchling",
+]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets]
