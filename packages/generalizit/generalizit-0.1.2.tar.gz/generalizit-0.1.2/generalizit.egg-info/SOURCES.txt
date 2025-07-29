@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+generalizit/__init__.py
+generalizit/design.py
+generalizit/design_utils.py
+generalizit/g_theory_utils.py
+generalizit/generalizit.py
+generalizit.egg-info/PKG-INFO
+generalizit.egg-info/SOURCES.txt
+generalizit.egg-info/dependency_links.txt
+generalizit.egg-info/requires.txt
+generalizit.egg-info/top_level.txt
+tests/test_design_utils.py
