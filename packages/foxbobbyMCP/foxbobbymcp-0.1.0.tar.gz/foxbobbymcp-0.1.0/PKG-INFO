@@ -1,0 +1,88 @@
+Metadata-Version: 2.4
+Name: foxbobbyMCP
+Version: 0.1.0
+Summary: 支持多种大模型对话/生图/音频的MCP服务器
+Home-page: https://github.com/yourusername/foxbobbyMCP
+Author: foxbobby
+Author-email: your.email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Intended Audience :: Developers
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: mcp>=1.6.0
+Requires-Dist: requests
+Requires-Dist: python-dotenv
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# foxbobbyMCP
+
+多模态大模型 MCP 服务器，支持对话、生图、音频等能力，自动调用 cloudAPI 支持的多种大模型。
+
+## 功能
+- fox_chat：对话（支持 OpenAI/Deepseek 等）
+- fox_image：生图（支持 OpenAI/Midjourney 等）
+- fox_audio：文本转音频（支持 OpenAI TTS）
+
+## 安装
+
+```bash
+pip install foxbobbyMCP
+```
+
+## .env 配置
+
+在项目根目录下创建 `.env` 文件，内容如下：
+
+```
+CLOUD_API_URL=https://你的cloudapi服务器地址
+CLOUD_API_KEY=你的API密钥
+PYPI_TOKEN=你的pypi token
+```
+
+## 启动 MCP 服务器
+
+```bash
+# 使用 uvx 启动
+uvx foxbobbyMCP
+
+# 或直接运行
+python -m foxbobbyMCP
+```
+
+## MCP 工具说明
+
+- `fox_chat(prompt: str, model: str = "gpt-4.1")`：对话
+- `fox_image(prompt: str, model: str = "dall-e-3", size: str = "1024x1024")`：生图
+- `fox_audio(text: str, model: str = "tts-1", voice: str = "alloy")`：文本转音频
+
+## 平台集成（如阿里云百炼）
+
+MCP服务配置示例：
+
+```json
+{
+  "mcpServers": {
+    "foxbobby-mcp": {
+      "command": "uvx",
+      "args": ["foxbobbyMCP"]
+    }
+  }
+}
+```
+
+## 许可证
+
+MIT License 

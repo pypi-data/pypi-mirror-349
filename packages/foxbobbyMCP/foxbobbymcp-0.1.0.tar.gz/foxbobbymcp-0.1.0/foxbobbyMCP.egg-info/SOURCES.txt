@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+foxbobbyMCP/__init__.py
+foxbobbyMCP/__main__.py
+foxbobbyMCP.egg-info/PKG-INFO
+foxbobbyMCP.egg-info/SOURCES.txt
+foxbobbyMCP.egg-info/dependency_links.txt
+foxbobbyMCP.egg-info/entry_points.txt
+foxbobbyMCP.egg-info/requires.txt
+foxbobbyMCP.egg-info/top_level.txt

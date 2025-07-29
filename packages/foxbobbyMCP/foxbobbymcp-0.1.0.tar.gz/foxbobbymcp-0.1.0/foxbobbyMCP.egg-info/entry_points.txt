@@ -1,0 +1,2 @@
+[console_scripts]
+foxbobbyMCP = foxbobbyMCP.__main__:main
