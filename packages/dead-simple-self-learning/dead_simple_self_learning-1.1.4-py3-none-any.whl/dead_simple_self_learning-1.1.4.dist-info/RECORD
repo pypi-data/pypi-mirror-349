@@ -1,0 +1,10 @@
+dead_simple_self_learning/__init__.py,sha256=5X9Tg-Hs1xOisaBO_VdTAoSiqC0JjsLyGXu-JKBtAC4,1013
+dead_simple_self_learning/__main__.py,sha256=TSkxUycXNC7igYTWbt_5Um4g0-jxxqrkDrqlH1RyMBA,7365
+dead_simple_self_learning/embedder.py,sha256=n3KFDYkahZUaIeV_Z_P8VMncNjtRLWLuR98qPFPr0hA,10729
+dead_simple_self_learning/learner.py,sha256=DyoSOpww6Uv7s9D_WXAb5mHYTPSzy5p8PCxbp9-DYXY,51123
+dead_simple_self_learning/memory.py,sha256=5azq3U7NoYe6m--5Zdx6biqPELQwkXy_B6VVEEJ1WYQ,14228
+dead_simple_self_learning-1.1.4.dist-info/licenses/LICENSE,sha256=QZHivtHhvWLVw8BVCHIpq6VMGcWHDpZnBVtL608jXFk,1067
+dead_simple_self_learning-1.1.4.dist-info/METADATA,sha256=FwdEYqeAXTUyOQdNx_X8tXELHsqxNdDKem0UHENpNbA,6495
+dead_simple_self_learning-1.1.4.dist-info/WHEEL,sha256=Nw36Djuh_5VDukK0H78QzOX-_FQEo6V37m3nkm96gtU,91
+dead_simple_self_learning-1.1.4.dist-info/top_level.txt,sha256=DR1yUut5OTfcyYJgyCgyDGO8DZguPJnrkvm1A9DPHgs,26
+dead_simple_self_learning-1.1.4.dist-info/RECORD,,
