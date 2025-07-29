@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: mcpf-xform
+Version: 0.1.0rc2
+Summary: Minimalist Configurable Pipelineing Framework -- Basic Transformation Functions
+Author: Karoly Bosa
+Author-email: karoly.bosa@risc-software.at
+Requires-Python: >=3.10,<3.11
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: mcpf-core (>=0.1.0rc2,<0.2.0)
