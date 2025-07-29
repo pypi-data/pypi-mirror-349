@@ -1,0 +1,32 @@
+[project]
+name = "mseep-mcp-server-vegalite"
+version = "0.0.3"
+description = "A simple Data Visualization MCP server using Vega-Lite"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp>=1.0.0",
+    "vl-convert-python",
+]
+authors = [
+    { name = "mseep", email = "support@skydeck.ai" },
+]
+maintainers = [
+    { name = "mseep", email = "support@skydeck.ai" },
+]
+
+[project.scripts]
+mcp_server_vegalite = "mcp_server_vegalite:main"
+
+[build-system]
+requires = [
+    "hatchling",
+]
+build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = [
+    "pyright>=1.1.389",
+]
+
+[tool.hatch.build.targets]
