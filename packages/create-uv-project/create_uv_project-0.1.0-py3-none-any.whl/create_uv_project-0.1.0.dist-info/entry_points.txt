@@ -1,0 +1,2 @@
+[console_scripts]
+create-uv-project = create_uv_project.app:main
