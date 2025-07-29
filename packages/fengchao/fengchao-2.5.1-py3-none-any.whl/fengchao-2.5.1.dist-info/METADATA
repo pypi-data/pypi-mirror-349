@@ -1,0 +1,85 @@
+Metadata-Version: 2.1
+Name: fengchao
+Version: 2.5.1
+Summary: 大模型框架服务调用SDK.
+Home-page: 
+Author: ijiwei
+Author-email: 
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests ==2.31.0
+Requires-Dist: pyJWT ==2.8.0
+Requires-Dist: pydantic ==2.6.1
+Requires-Dist: tenacity ==8.2.3
+Requires-Dist: loguru
+
+
+## ChangLog
+
+### v1.0.2
+* 初版
+
+### v1.1.0
+* 增加base_url自定义
+* 增加错误重试自定义
+* 优化数据结构
+
+### v2.0.0
+* 增加协程功能
+* 增加重试自定义处理模块
+
+### v2.0.1
+* bug修复
+
+### v2.0.3
+* 支持外网
+
+### v2.0.4
+* 增加花费数据
+
+### v2.1.0
+* 增加敏感词替换功能
+
+### v2.2.0
+* 增加文件上传功能
+
+### v2.2.1
+* 增加返回JSON格式功能
+
+### v2.2.2
+* 增加prompt额外参数功能
+
+### v2.3.0
+* 增加文生图功能
+  * 详见：t2i()
+
+### v2.4.0
+* 增加图文理解功能
+
+### v2.4.1
+* 修改外网端口
+
+### v2.4.2
+* 修改外网端口
+
+### v2.4.3
+* fix bug
+
+### v2.5.0
+* 增加联网搜索功能
+* 增加模型聚合功能
+
+### v2.5.1
+* 增加服务地址环境变量读取
