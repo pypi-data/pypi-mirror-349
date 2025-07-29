@@ -1,0 +1,30 @@
+Metadata-Version: 2.4
+Name: mseep-videodb_helper
+Version: 0.1.2
+Summary: Add your description here
+Home-page: 
+Author: mseep
+Author-email: mseep <support@skydeck.ai>
+Maintainer-email: mseep <support@skydeck.ai>
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: boto3>=1.37.3
+Requires-Dist: firecrawl-py>=1.14.1
+Requires-Dist: gitignore-parser>=0.1.11
+Requires-Dist: google-genai>=1.4.0
+Requires-Dist: matplotlib>=3.9.4
+Requires-Dist: myst-parser>=3.0.1
+Requires-Dist: nbconvert>=7.16.6
+Requires-Dist: numpy>=2.0.2
+Requires-Dist: openai>=1.63.2
+Requires-Dist: python-dotenv>=1.0.1
+Requires-Dist: pyyaml>=6.0.2
+Requires-Dist: rich>=13.9.4
+Requires-Dist: sphinx>=7.4.7
+Requires-Dist: sphinx-markdown-builder>=0.6.8
+Requires-Dist: tiktoken>=0.9.0
+Requires-Dist: tree-sitter-python>=0.23.0
+Dynamic: author
+Dynamic: requires-python
+
+# Package managed by MseeP.ai
