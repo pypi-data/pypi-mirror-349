@@ -1,0 +1,83 @@
+# File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
+
+from typing import List, Optional
+
+from .._models import BaseModel
+
+__all__ = ["QueryGetPaginatedSearchResponse", "Pagination", "Result", "ResultSource", "ResultSourceBucket"]
+
+
+class Pagination(BaseModel):
+    has_more: Optional[bool] = None
+    """Indicates more results available. Used for infinite scroll implementation"""
+
+    page: Optional[int] = None
+    """Current page number (1-based)"""
+
+    page_size: Optional[int] = None
+    """Results per page. May be adjusted for performance"""
+
+    total: Optional[int] = None
+    """Total number of available results"""
+
+    total_pages: Optional[int] = None
+    """Total available pages. Calculated as ceil(total/page_size)"""
+
+
+class ResultSourceBucket(BaseModel):
+    application_name: Optional[str] = None
+    """**EXAMPLE** "my-app" """
+
+    application_version_id: Optional[str] = None
+    """**EXAMPLE** "01jtryx2f2f61ryk06vd8mr91p" """
+
+    bucket_name: Optional[str] = None
+    """**EXAMPLE** "my-smartbucket" """
+
+    module_id: Optional[str] = None
+    """**EXAMPLE** "01jtryx2f2f61ryk06vd8mr91p" """
+
+
+class ResultSource(BaseModel):
+    bucket: Optional[ResultSourceBucket] = None
+    """The bucket information containing this result"""
+
+    object: Optional[str] = None
+    """The object key within the bucket"""
+
+
+class Result(BaseModel):
+    chunk_signature: Optional[str] = None
+    """Unique identifier for this text segment.
+
+    Used for deduplication and result tracking
+    """
+
+    embed: Optional[str] = None
+    """Vector representation for similarity matching.
+
+    Used in semantic search operations
+    """
+
+    payload_signature: Optional[str] = None
+    """Parent document identifier. Links related content chunks together"""
+
+    score: Optional[float] = None
+    """Relevance score (0.0 to 1.0). Higher scores indicate better matches"""
+
+    source: Optional[ResultSource] = None
+    """Source document references. Contains bucket and object information"""
+
+    text: Optional[str] = None
+    """The actual content of the result. May be a document excerpt or full content"""
+
+    type: Optional[str] = None
+    """Content MIME type. Helps with proper result rendering"""
+
+
+class QueryGetPaginatedSearchResponse(BaseModel):
+    pagination: Optional[Pagination] = None
+    """Updated pagination information"""
+
+    results: Optional[List[Result]] = None
+    """Page results with full metadata"""
