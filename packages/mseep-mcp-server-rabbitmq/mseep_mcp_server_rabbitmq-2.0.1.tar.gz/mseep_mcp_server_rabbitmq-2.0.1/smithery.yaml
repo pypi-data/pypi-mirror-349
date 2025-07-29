@@ -1,0 +1,33 @@
+# Smithery configuration file: https://smithery.ai/docs/config#smitheryyaml
+
+startCommand:
+  type: stdio
+  configSchema:
+    # JSON Schema defining the configuration options for the MCP.
+    type: object
+    required:
+      - rabbitmqHost
+      - port
+      - username
+      - password
+      - useTls
+    properties:
+      rabbitmqHost:
+        type: string
+        description: The hostname of the RabbitMQ server.
+      port:
+        type: number
+        description: The port number to connect to RabbitMQ.
+      username:
+        type: string
+        description: Username for RabbitMQ authentication.
+      password:
+        type: string
+        description: Password for RabbitMQ authentication.
+      useTls:
+        type: boolean
+        description: Use TLS for the connection (amqps if true).
+  commandFunction:
+    # A function that produces the CLI command to start the MCP on stdio.
+    |-
+    (config) => ({ command: 'mcp-server-rabbitmq', args: ['--rabbitmq-host', config.rabbitmqHost, '--port', config.port.toString(), '--username', config.username, '--password', config.password, '--use-tls', config.useTls.toString()] })
