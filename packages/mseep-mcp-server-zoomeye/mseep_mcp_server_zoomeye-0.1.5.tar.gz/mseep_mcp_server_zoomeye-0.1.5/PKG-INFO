@@ -1,0 +1,25 @@
+Metadata-Version: 2.4
+Name: mseep-mcp-server-zoomeye
+Version: 0.1.5
+Summary: A Model Context Protocol server providing tools for ZoomEye queries for LLMs
+Home-page: 
+Author: mseep
+Author-email: mseep <support@skydeck.ai>
+Maintainer-email: mseep <support@skydeck.ai>
+License: MIT
+Keywords: zoomeye,mcp,llm
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: mcp>=1.0.0
+Requires-Dist: pydantic>=2.0.0
+Requires-Dist: requests>=2.32.3
+Requires-Dist: python-dotenv>=1.0.0
+Dynamic: author
+Dynamic: requires-python
+
+# Package managed by MseeP.ai
