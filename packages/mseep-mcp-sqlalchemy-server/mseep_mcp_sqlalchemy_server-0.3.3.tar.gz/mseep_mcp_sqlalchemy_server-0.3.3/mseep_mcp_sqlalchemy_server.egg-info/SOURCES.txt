@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+mcp_sqlalchemy_server/__init__.py
+mcp_sqlalchemy_server/server.py
+mseep_mcp_sqlalchemy_server.egg-info/PKG-INFO
+mseep_mcp_sqlalchemy_server.egg-info/SOURCES.txt
+mseep_mcp_sqlalchemy_server.egg-info/dependency_links.txt
+mseep_mcp_sqlalchemy_server.egg-info/entry_points.txt
+mseep_mcp_sqlalchemy_server.egg-info/requires.txt
+mseep_mcp_sqlalchemy_server.egg-info/top_level.txt
