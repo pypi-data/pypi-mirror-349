@@ -1,0 +1,32 @@
+[project]
+name = "mseep-firstcycling"
+version = "0.1.1"
+description = "FirstCycling MCP server for accessing professional cycling data"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "httpx>=0.28.1",
+    "mcp[cli]>=1.5.0",
+    "beautifulsoup4",
+    "lxml",
+    "numpy",
+    "pandas",
+    "python-dateutil",
+    "pytz",
+    "requests",
+    "slumber",
+    "soupsieve",
+]
+authors = [
+    { name = "mseep", email = "support@skydeck.ai" },
+]
+maintainers = [
+    { name = "mseep", email = "support@skydeck.ai" },
+]
+
+[build-system]
+requires = [
+    "setuptools>=42",
+    "wheel",
+]
+build-backend = "setuptools.build_meta"
