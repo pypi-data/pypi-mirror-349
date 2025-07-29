@@ -1,0 +1,3 @@
+[console_scripts]
+fastapi_abc=fastapi_abc.__init__:start_server
+
