@@ -1,0 +1,178 @@
+Metadata-Version: 2.4
+Name: smashsend
+Version: 0.1.0
+Summary: SmashSend Python SDK - Official Python client for SmashSend API
+Project-URL: Homepage, https://smashsend.com
+Project-URL: Repository, https://github.com/smashsend/smashsend-python
+Project-URL: Issues, https://github.com/smashsend/smashsend-python/issues
+Author: SmashSend
+License-Expression: MIT
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Requires-Dist: pydantic>=2.0.0
+Requires-Dist: requests>=2.31.0
+Provides-Extra: dev
+Requires-Dist: black>=23.0.0; extra == 'dev'
+Requires-Dist: flake8>=6.0.0; extra == 'dev'
+Requires-Dist: isort>=5.0.0; extra == 'dev'
+Requires-Dist: mypy>=1.0.0; extra == 'dev'
+Requires-Dist: pytest-cov>=4.0.0; extra == 'dev'
+Requires-Dist: pytest>=7.0.0; extra == 'dev'
+Description-Content-Type: text/markdown
+
+# SmashSend Python SDK
+
+Official Python client for the SmashSend API.
+
+## Installation
+
+```bash
+pip install smashsend
+```
+
+## Usage
+
+```python
+from smashsend import SmashSend, EmailAddress, EmailSendOptions
+
+# Initialize the client
+client = SmashSend(api_key="your-api-key")
+
+# Send an email
+email = EmailSendOptions(
+    to=[EmailAddress(email="recipient@example.com", name="Recipient Name")],
+    from_=EmailAddress(email="sender@example.com", name="Sender Name"),
+    subject="Hello from SmashSend!",
+    text="This is a test email sent using the SmashSend Python SDK.",
+    html="<p>This is a test email sent using the <strong>SmashSend Python SDK</strong>.</p>"
+)
+
+response = client.emails.send(email)
+print(f"Email sent! ID: {response.id}")
+
+# List contacts
+contacts = client.contacts.list(limit=10, offset=0)
+for contact in contacts["contacts"]:
+    print(f"Contact: {contact.email}")
+print(f"Total contacts: {contacts['pagination']['total']}")
+
+# Create a webhook
+webhook = client.webhooks.create(
+    url="https://your-domain.com/webhook",
+    events=["email.sent", "email.delivered"]
+)
+print(f"Webhook created! ID: {webhook.id}")
+```
+
+## Features
+
+- Full support for SmashSend API v1
+- Type hints and validation using Pydantic
+- Automatic retries for failed requests
+- Comprehensive error handling
+- Debug mode for request/response logging
+
+## API Resources
+
+### Emails
+
+- `send(options: EmailSendOptions) -> EmailSendResponse`
+- `get(email_id: str) -> EmailSendResponse`
+- `list(page: int = 1, per_page: int = 10, status: Optional[str] = None, tag: Optional[str] = None) -> Dict[str, List[EmailSendResponse]]`
+
+### Contacts
+
+- `create(options: ContactCreateOptions) -> Contact`
+- `get(contact_id: str) -> Contact`
+- `update(contact_id: str, options: ContactCreateOptions) -> Contact`
+- `delete(contact_id: str) -> None`
+- `list(limit: int = 10, offset: int = 0) -> Dict[str, List[Contact]]`
+
+### Webhooks
+
+- `create(options: WebhookCreateOptions) -> Webhook`
+- `get(webhook_id: str) -> Webhook`
+- `update(webhook_id: str, options: WebhookCreateOptions) -> Webhook`
+- `delete(webhook_id: str) -> None`
+- `list(page: int = 1, per_page: int = 10, status: Optional[str] = None) -> Dict[str, List[Webhook]]`
+
+## Error Handling
+
+The SDK provides specific exception classes for different types of errors:
+
+```python
+from smashsend import (
+    SmashSendError,
+    APIError,
+    AuthenticationError,
+    NetworkError,
+    RateLimitError,
+    TimeoutError
+)
+
+try:
+    response = client.emails.send(email)
+except AuthenticationError as e:
+    print(f"Authentication failed: {e.message}")
+except RateLimitError as e:
+    print(f"Rate limit exceeded: {e.message}")
+except APIError as e:
+    print(f"API error: {e.message} (status: {e.status_code})")
+except NetworkError as e:
+    print(f"Network error: {e.message}")
+except TimeoutError as e:
+    print(f"Request timed out: {e.message}")
+```
+
+## Configuration
+
+The client can be configured with various options:
+
+```python
+client = SmashSend(
+    api_key="your-api-key",
+    options={
+        "base_url": "https://api.smashsend.com",
+        "max_retries": 3,
+        "timeout": 30000,  # milliseconds
+        "api_version": "v1"
+    }
+)
+
+# Set custom headers
+client.set_headers({"X-Custom-Header": "value"})
+
+# Enable debug mode
+client.set_debug_mode(True)
+
+# Change API version
+client.set_api_version("v2")
+```
+
+## Development
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/smashsend/smashsend-python.git
+cd smashsend-python
+```
+
+2. Install development dependencies:
+
+```bash
+pip install -e ".[dev]"
+```
+
+3. Run tests:
+
+```bash
+pytest
+```
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

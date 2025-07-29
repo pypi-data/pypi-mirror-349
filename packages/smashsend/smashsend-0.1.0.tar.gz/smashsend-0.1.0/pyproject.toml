@@ -1,0 +1,60 @@
+[build-system]
+requires = ["hatchling", "build", "twine"]
+build-backend = "hatchling.build"
+
+[project]
+name = "smashsend"
+version = "0.1.0"
+description = "SmashSend Python SDK - Official Python client for SmashSend API"
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+authors = [
+    { name = "SmashSend" }
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "requests>=2.31.0",
+    "pydantic>=2.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "black>=23.0.0",
+    "isort>=5.0.0",
+    "mypy>=1.0.0",
+    "flake8>=6.0.0",
+]
+
+[project.urls]
+Homepage = "https://smashsend.com"
+Repository = "https://github.com/smashsend/smashsend-python"
+Issues = "https://github.com/smashsend/smashsend-python/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["smashsend"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "--cov=smashsend --cov-report=term-missing"
+
+[tool.black]
+line-length = 88
+target-version = ["py38"]
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true 
