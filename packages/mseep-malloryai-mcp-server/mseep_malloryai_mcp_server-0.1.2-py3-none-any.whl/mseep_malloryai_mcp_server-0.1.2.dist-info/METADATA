@@ -1,0 +1,26 @@
+Metadata-Version: 2.4
+Name: mseep-malloryai-mcp-server
+Version: 0.1.2
+Summary: MalloryAI Intelligence MCP Server
+Home-page: 
+Author: mseep
+Author-email: mseep <support@skydeck.ai>
+Maintainer-email: mseep <support@skydeck.ai>
+License: MIT
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: malloryai-sdk>=0.3.2
+Requires-Dist: python-dotenv>=1.1.0
+Requires-Dist: pydantic>=2.11.0
+Requires-Dist: mcp[cli]>=1.6.0
+Provides-Extra: lint
+Requires-Dist: black>=24.10.0; extra == "lint"
+Requires-Dist: isort>=5.13.2; extra == "lint"
+Requires-Dist: flake8>=7.1.1; extra == "lint"
+Provides-Extra: tools
+Requires-Dist: bandit>=1.8.2; extra == "tools"
+Requires-Dist: pre-commit>=4.1.0; extra == "tools"
+Dynamic: author
+Dynamic: requires-python
+
+# Package managed by MseeP.ai
