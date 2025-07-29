@@ -1,0 +1,12 @@
+mcp
+httpx
+
+[dev]
+pytest>=7.0
+pytest-asyncio
+black
+isort
+flake8
+mypy
+bandit
+safety
