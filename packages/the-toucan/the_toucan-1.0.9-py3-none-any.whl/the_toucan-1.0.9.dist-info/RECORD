@@ -1,0 +1,12 @@
+toucan/__init__.py,sha256=czvNOH9-G2kwL9BX7TJyT78bXkY_xjT1Zmy2a8O7KJo,22
+toucan/FaceCan/DetectionModel.py,sha256=p8Ehj_0Fa1CaCDSOOOFfA_0QC2mVKve4whs6Hx9Wb38,6180
+toucan/FaceCan/FaceCanTest.py,sha256=ADx5UgtUWQzrAihqMuAysXybpVK2jbsCAc2fBwcF5J8,7500
+toucan/FaceCan/Tracker.py,sha256=ngTegzsXNwxKQOuSSV7Pqz7lPvWahugQvSrBqiYx52A,2333
+toucan/FaceCan/__init__.py,sha256=p-iHlk__INk1hjBvxdBYSlchIJlPGCf6KMro-EVgTzo,587
+toucan/FaceCan/utils.py,sha256=7Yj3Ur_uf84wd7CT0JVTkBLXnrS6V3QXyOeuCU9N17Y,14270
+toucan/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+toucan/models/models.py,sha256=soDlxOpNshb1QPEbeApglMKnIq2OqaQCHK8hjDDlG4M,261
+the_toucan-1.0.9.dist-info/METADATA,sha256=UWq8NmlfvT_4ccptt7230FjW94nsMSCpOadkTkXmMzk,257
+the_toucan-1.0.9.dist-info/WHEEL,sha256=DnLRTWE75wApRYVsjgc6wsVswC54sMSJhAEd4xhDpBk,91
+the_toucan-1.0.9.dist-info/top_level.txt,sha256=EzYtGGhI9WKdcYsXwTx-cxN5KdBUHI4X-9aT2LbEbgc,7
+the_toucan-1.0.9.dist-info/RECORD,,
