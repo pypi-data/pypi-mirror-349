@@ -1,0 +1,39 @@
+Metadata-Version: 2.4
+Name: wss_py
+Version: 0.0.2
+Summary: A self-playing terminal UI game.
+Author: Kenji Longid, Chris Iang, Makar Dzerushau, Youngchan Kim
+License: MIT
+License-File: LICENSE
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Requires-Dist: noise
+Requires-Dist: numpy
+Requires-Dist: rich
+Description-Content-Type: text/markdown
+
+![WSS Logo](https://raw.githubusercontent.com/kenmalik/wilderness-survival-system/main/assets/logo.png)
+
+# Wilderness Survival System
+
+## Description
+
+The Wilderness Survival System (WSS) is a "game" where players must survive in an
+unknown wilderness. Players are placed randomly on the west side of the map and
+make decisions to try and get to the east side of the map. After the players are
+placed, the game runs itself (similar to John Conway's Game of Life).
+
+## Usage
+
+Install the game using `pipx`
+
+```
+pipx install wss-py
+```
+
+To play, simply run the following command
+
+```
+wss
+```
