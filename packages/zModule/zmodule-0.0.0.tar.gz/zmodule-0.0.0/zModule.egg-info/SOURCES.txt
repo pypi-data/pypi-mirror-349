@@ -1,0 +1,8 @@
+pyproject.toml
+setup.py
+zModule.egg-info/PKG-INFO
+zModule.egg-info/SOURCES.txt
+zModule.egg-info/dependency_links.txt
+zModule.egg-info/top_level.txt
+zModules/__init__.py
+zModules/setup.py
