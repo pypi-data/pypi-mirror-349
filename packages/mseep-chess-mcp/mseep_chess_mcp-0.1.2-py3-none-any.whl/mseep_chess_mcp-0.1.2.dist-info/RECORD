@@ -1,0 +1,9 @@
+chess_mcp/__init__.py,sha256=8fXuAwMLCOa2LDBZMSWEFWyBdqmFkaQ-ublaxJ8wgc4,209
+chess_mcp/main.py,sha256=Ld8h8FNj6xPcjZjdBCUQPhwKFV4duvgd-0EztCe0qO4,623
+chess_mcp/server.py,sha256=LQmSBbLLvmWWht50SQn3PUIoRN8sTtqFE5MCTbnRr1c,8514
+mseep_chess_mcp-0.1.2.dist-info/licenses/LICENSE,sha256=6uTYyLzsfexbG0ImqbPZlrHKMcodTHDeK2YV77Fkk7U,1072
+mseep_chess_mcp-0.1.2.dist-info/METADATA,sha256=qToKD7HNzj9PJl4S_gXuBcPfriY5o8mFVdBL1NgQVps,664
+mseep_chess_mcp-0.1.2.dist-info/WHEEL,sha256=Nw36Djuh_5VDukK0H78QzOX-_FQEo6V37m3nkm96gtU,91
+mseep_chess_mcp-0.1.2.dist-info/entry_points.txt,sha256=rLYt6hyyAO5x0uwvskZ0n4No6Mgq6jURk4DntG2WVPE,56
+mseep_chess_mcp-0.1.2.dist-info/top_level.txt,sha256=12wNZHq82xnBDux_4HFpUpY-dRuu8AF75NFB6dvUU3E,10
+mseep_chess_mcp-0.1.2.dist-info/RECORD,,
