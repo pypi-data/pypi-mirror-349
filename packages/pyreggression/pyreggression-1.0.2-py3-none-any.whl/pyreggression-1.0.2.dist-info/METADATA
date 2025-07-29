@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: pyreggression
+Version: 1.0.2
+Summary: pyreggression is now reggression
+Classifier: Development Status :: 7 - Inactive
+Description-Content-Type: text/markdown
+Requires-Dist: reggression
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: requires-dist
+Dynamic: summary
+
+# pyreggression is now reggression
+
+This package has been renamed. Use `pip install reggression` instead.
+
+New package: https://pypi.org/project/reggression/
