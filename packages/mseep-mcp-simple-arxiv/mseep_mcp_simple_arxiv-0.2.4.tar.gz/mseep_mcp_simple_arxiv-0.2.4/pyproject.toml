@@ -1,0 +1,32 @@
+[build-system]
+requires = [
+    "setuptools>=61.0",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mseep-mcp-simple-arxiv"
+version = "0.2.4"
+description = "An MCP server that provides access to arXiv papers through their API."
+readme = "README.md"
+authors = [
+    { name = "mseep", email = "support@skydeck.ai" },
+]
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "mcp",
+    "feedparser",
+    "httpx",
+    "beautifulsoup4",
+]
+maintainers = [
+    { name = "mseep", email = "support@skydeck.ai" },
+]
+
+[project.scripts]
+mcp-simple-arxiv = "mcp_simple_arxiv:main"
