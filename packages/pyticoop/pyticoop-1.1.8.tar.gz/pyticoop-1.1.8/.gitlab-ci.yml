@@ -1,0 +1,95 @@
+stages:
+  - install
+  - lint
+  - test
+  - build
+  - deploy
+
+# Install Dependencies
+install_dependencies:
+  stage: install
+  image: python:3.11
+  script:
+    - python -m venv venv  # Create virtual environment
+    - source venv/bin/activate  # Activate it
+    - pip install --upgrade pip
+    - pip install rstcheck flake8 # Linting
+    - pip install .[dev]  # Install project with dev dependencies
+  cache:
+    key: "$CI_COMMIT_REF_SLUG"
+    paths:
+      - venv/  # Cache the virtual environment to speed up installs
+      - ~/.cache/pip  # Cache pip downloads
+  artifacts:
+    paths:
+      - venv/  # Persist the virtual environment for future stages
+  rules:
+    - when: always
+
+# Run Lint
+run_lint:
+  stage: lint
+  image: python:3.11
+  script:
+    - source venv/bin/activate  # Activate virtual environment
+    - pip install --upgrade pip
+    - rstcheck README.rst
+    - flake8 --ignore=E501 src/
+  dependencies:
+    - install_dependencies
+  rules:
+    - when: always
+
+# Run Tests
+run_tests:
+  stage: test
+  image: python:3.11
+  script:
+    - source venv/bin/activate  # Activate virtual environment
+    - pip install --upgrade pip
+    - pytest tests/ --maxfail=5 --disable-warnings --tb=short --junitxml=reports/report.xml  # Run tests and generate reports
+  dependencies:
+    - install_dependencies
+  artifacts:
+    paths:
+      - reports/report.xml  # Store test report
+    reports:
+      junit: reports/report.xml  # Display the test results on GitLab
+    when: always
+  rules:
+    - when: always
+
+# Build the package
+build:
+  stage: build
+  image: python:3.11
+  script:
+    - chmod +x scripts/build.sh
+    - ./scripts/build.sh
+  artifacts:
+    paths:
+      - dist/
+      - venv/
+  rules:
+    - if: '$CI_COMMIT_TAG =~ /^v\d+\.\d+\.\d+$/'
+      when: always
+    - when: never
+
+# Deploy to PyPI
+deploy:
+  stage: deploy
+  image: python:3.11
+  variables:
+    TWINE_USERNAME: "__token__"  # Default Twine username for API
+    TWINE_PASSWORD: $TWINE_PASSWORD
+  script:
+    - chmod +x scripts/deploy.sh
+    - ./scripts/deploy.sh
+  dependencies:
+    - build
+  rules:
+    - if: '$CI_COMMIT_TAG =~ /^v\d+\.\d+\.\d+$/'
+      when: always
+    - when: never
+  environment:
+    name: production
