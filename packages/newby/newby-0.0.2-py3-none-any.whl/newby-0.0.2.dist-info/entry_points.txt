@@ -1,0 +1,2 @@
+[console_scripts]
+newby = newby.newby:main
