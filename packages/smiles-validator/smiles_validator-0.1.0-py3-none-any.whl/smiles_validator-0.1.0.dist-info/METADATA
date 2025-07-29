@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: smiles-validator
+Version: 0.1.0
+Summary: Lightweight Pydantic v2 validator for RDKit SMILES: sanitizes, canonicalizes & caches results
+Author-email: Christian Tanul <contact@christiantanul.com>
+Requires-Python: >=3.12
+Requires-Dist: pydantic<3.0,>=2.11
+Requires-Dist: rdkit<2025.0,>=2024.9
