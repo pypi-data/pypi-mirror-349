@@ -1,0 +1,73 @@
+[project]
+name="PVNet_summation"
+description = "PVNet_summation"
+authors = [{name="James Fulton", email="info@openclimatefix.org"}]
+dynamic = ["version", "readme"]
+license={file="LICENCE"}
+
+dependencies = [
+    "ocf_data_sampler",
+    "pvnet>=4.1.13",
+    "numpy",
+    "pandas",
+    "matplotlib",
+    "xarray",
+    "torch>=2.0.0",
+    "lightning>=2.0.1",
+    "pytest",
+    "pytest-cov",
+    "typer",
+    "sqlalchemy",
+    "wandb",
+    "tqdm",
+    "omegaconf",
+    "hydra-core",
+]
+
+[tool.setuptools.dynamic]
+version = {attr = "pvnet_summation.__version__"}
+readme = {file = "README.md", content-type = "text/markdown"}
+
+[tool.setuptools.package-dir]
+"pvnet_summation" = "pvnet_summation"
+
+[project.optional-dependencies]
+dev=[
+    "black",
+    "flake8",
+    "isort",
+    "mypy",
+    "pre-commit",
+    "pytest",
+    "pytest-cov",
+]
+all=["PVNet[dev]"]
+
+[tool.mypy]
+exclude = [
+    "^tests/",
+]
+disallow_untyped_defs = true
+disallow_any_unimported = true
+no_implicit_optional = true
+check_untyped_defs = true
+warn_return_any = true
+warn_unused_ignores = true
+show_error_codes = true
+warn_unreachable = true
+
+[[tool.mypy.overrides]]
+module = [
+]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q"
+testpaths = [
+    "tests",
+]
+
+[tool.ruff]
+line-length = 100
+exclude = [".ipynb_checkpoints", "tests", "configs.example"]
