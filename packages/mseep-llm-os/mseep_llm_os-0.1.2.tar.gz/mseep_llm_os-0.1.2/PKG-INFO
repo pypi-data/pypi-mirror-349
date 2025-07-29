@@ -1,0 +1,42 @@
+Metadata-Version: 2.4
+Name: mseep-llm-os
+Version: 0.1.2
+Author: mseep
+Author-email: mseep <support@skydeck.ai>
+Maintainer: mseep
+Maintainer-email: mseep <support@skydeck.ai>
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: fastapi
+Requires-Dist: typer
+Requires-Dist: uvicorn
+Requires-Dist: alembic
+Requires-Dist: duckdb
+Requires-Dist: pgvector
+Requires-Dist: psycopg[binary]
+Requires-Dist: sqlalchemy
+Requires-Dist: beautifulsoup4
+Requires-Dist: bs4
+Requires-Dist: duckduckgo-search
+Requires-Dist: exa_py
+Requires-Dist: matplotlib
+Requires-Dist: nest_asyncio
+Requires-Dist: openai
+Requires-Dist: openai
+Requires-Dist: pandas
+Requires-Dist: pillow
+Requires-Dist: pypdf
+Requires-Dist: streamlit
+Requires-Dist: tiktoken
+Requires-Dist: types-beautifulsoup4
+Requires-Dist: types-Pillow
+Requires-Dist: yfinance
+Requires-Dist: mypy
+Requires-Dist: ruff
+Requires-Dist: phidata[aws]==2.4.21
+Dynamic: author
+Dynamic: license-file
+Dynamic: maintainer
+
+# Package managed by MseeP.ai
