@@ -1,0 +1,2 @@
+[console_scripts]
+luma-ai-mcp-server = luma_ai_mcp_server.__main__:main
