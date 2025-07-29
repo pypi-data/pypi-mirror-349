@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: mseep-fused-mcp
+Version: 0.1.2
+Summary: Fused MCP: Setting up MCP Servers for Data Scientists
+Home-page: 
+Author: mseep
+Author-email: mseep <support@skydeck.ai>
+Maintainer-email: mseep <support@skydeck.ai>
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: anthropic>=0.49.0
+Requires-Dist: fused[all]>=1.15.0
+Requires-Dist: jupyterlab>=4.3.6
+Requires-Dist: mcp[cli]>=1.4.1
+Requires-Dist: python-dotenv>=1.0.1
+Dynamic: author
+Dynamic: license-file
+Dynamic: requires-python
+
+# Package managed by MseeP.ai
