@@ -1,0 +1,5 @@
+[console_scripts]
+format=scripts.format:main
+lint=scripts.lint:main
+solr-mcp=solr_mcp.server:main
+
