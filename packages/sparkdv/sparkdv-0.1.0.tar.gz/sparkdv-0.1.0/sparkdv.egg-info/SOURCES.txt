@@ -1,0 +1,8 @@
+README.md
+setup.py
+sparkdv/__init__.py
+sparkdv.egg-info/PKG-INFO
+sparkdv.egg-info/SOURCES.txt
+sparkdv.egg-info/dependency_links.txt
+sparkdv.egg-info/requires.txt
+sparkdv.egg-info/top_level.txt
