@@ -1,0 +1,87 @@
+{#
+Copyright (C) 2020-2023 Graz University of Technology.
+Copyright (C) 2024 Shared RDM.
+
+invenio-override is free software; you can redistribute it and/or
+modify it under the terms of the MIT License; see LICENSE file for more
+details.
+#}
+
+{% if not config.OVERRIDE_PRODUCTION %}
+<div class="ui sticky test-instance">
+  <h4>{{_ ("Test Instance") }}</h4>
+  <p>{{_ ("This is the test instance of the Repository.") }}</p>
+</div>
+{% endif %}
+
+<div>
+  <header>
+    {%- block navbar %}
+    <nav>
+      {%- block navbar_header %}
+      {%- include "invenio_override/navbar.html" %}
+      {%- endblock navbar_header %}
+
+      <div class="ui container">
+        <div class="ui grid stackable container">
+          <div id="main-menu-container" class="three column row centered container">
+            <div class="two wide column main-menu-entry">
+              <a href="/" title="Home" class="ui item no-decoration">
+                <span class="home-inline">
+                  <i class="home icon"></i>
+                  {{_ ("Home")}}
+                </span>
+              </a>
+            </div>
+
+            <div class="two wide column main-menu-entry">
+              <a role="menuitem" href="/communities" class="no-decoration">{{ _("Communities") }}</a>
+            </div>
+            <div class="two wide column main-menu-entry">
+              <a role="menuitem" href="/me/overview" class="no-decoration">{{ _("Dashboard") }}</a>
+            </div>
+            
+            <!--Please refer to https://github.com/inveniosoftware/invenio-app-rdm/blob/master/invenio_app_rdm/theme/templates/semantic-ui/invenio_app_rdm/header_login.html
+              for future changes to the admin button.-->
+            {% set ns = namespace(admin_menu=False) %}
+            {%- for item in current_menu.submenu('profile-admin').children if item.visible %}
+              {% set ns.admin_menu = True %}
+              {% set admin_text = item.text|safe %}
+              {% if 'Administration' in item.text|safe %}
+                {% set admin_text =  _ ("Administration")%}
+              {%- endif %}
+              <div class="two wide column main-menu-entry">
+                <a role="menuitem" href="{{ item.url }}"" class="no-decoration">{{ admin_text }}</a>
+              </div>
+            {%- endfor %}
+
+            {%- for l in current_i18n.get_locales() %}
+            {%- if current_i18n.language != l.language %}
+            <div class="two wide column main-menu-entry">
+              <a class="ui item no-decoration" href="{{ url_for('invenio_i18n.set_lang', lang_code=l.language) }}">{{
+                l.get_display_name().upper() [0:2]}}</a>
+
+            </div>
+          </div>
+          <div id="margin-divider" class="ui divider main-menu-underline-line"></div>
+        </div>
+      </div>
+      {%- endif %}
+      {%- endfor %}
+      <div class="spacer"></div>
+</div>
+</nav>
+{%- endblock navbar %}
+
+{%- block flashmessages %}
+{%- from "invenio_theme/macros/messages.html" import flashed_messages with context -%}
+{{ flashed_messages() }}
+{%- endblock %}
+</header>
+
+{#
+{%- block breadcrumbs %}
+{%- include "invenio_theme/breadcrumbs.html" %}
+{%- endblock breadcrumbs %}
+#}
+</div>

@@ -1,0 +1,146 @@
+{#
+  Copyright (C) 2020-2023 Graz University of Technology.
+  Copyright (C) 2025 Shared RDM.
+
+  invenio-override is free software; you can redistribute it and/or
+  modify it under the terms of the MIT License; see LICENSE file for more
+  details.
+#}
+
+{%- block css %}
+{{ webpack['invenio-override-theme.css'] }}
+  <style>
+    .footer-bottom.sub-footer {
+     display: none !important;
+    }
+
+    #footer {
+      min-height: none;
+    }
+
+    .logos-container {
+      display: flex;
+      justify-content: start;
+      gap: 15px;
+    }
+  </style>
+{%- endblock %}
+
+{%- block javascript %}
+{{ webpack['invenio-override-js.js'] }}
+{%- endblock %}
+
+<div class="spacer"></div>
+
+<footer id="footer" class="footer-bottom">
+<div class="ui container">
+  <div class="ui grid">
+
+    <div class="doubling four column row">
+      <div class="column">
+        <h2>{{ _("Repository") }}</h2>
+        <rdiv class="ui list">
+          <div class="item">
+            <a href="https://tu-graz-library.github.io/docs-repository" title="Repository documentation" target="_blank">
+              {{ _("Documentation") }} <i class="external alternate icon"></i>
+            </a>
+          </div>
+          <div class="item">
+            <a href="#" title="Quick guide" target="_blank">
+              {{ _("Reference Guide") }} <i class="download icon"></i>
+            </a>
+          </div>
+          <div class="item">
+            <a href="#" title="Search guide">
+              {{ _("Search Guide") }} <i class="angle right icon"></i>
+            </a>
+          </div>
+          <div class="item">
+            <a href="#" title="General Data Protection Rights" target="_blank">
+              {{ _("Data Protection") }} <i class="download icon"></i>
+            </a>
+          </div>
+          <div class="item">
+            <a href="#" title="Terms and Conditions" target="_blank">
+              {{ _("Terms and Conditions") }} <i class="download icon"></i>
+            </a>
+          </div>
+        </rdiv>
+      </div>
+
+      <div class="column">
+        <h2>{{ _("Features") }}</h2>
+        <div class="ui list">
+          <div class="item">{{ _("Scalability") }}</div>
+          <div class="item">{{ _("Institutional integration") }}</div>
+          <div class="item">{{ _("Next Generation Repository") }}</div>
+          <div class="item">{{ _("Repository Profiles") }}</div>
+          <div class="item">{{ _("Resilient") }}</div>
+        </div>
+      </div>
+
+      <div class="column">
+        <h2>{{ _("Connected Services") }}</h2>
+        <div class="ui list">
+          <div class="item">
+            <a href="https://forschung.medunigraz.at/" title="PURE" target="_blank">
+              Research Portal <i class="external alternate icon"></i>
+            </a>
+          </div>
+          <div class="item">
+            <a href="https://online.medunigraz.at/" title="CAMPUS online" target="_blank">
+              MED Online <i class="external alternate icon"></i>
+            </a>
+          </div>
+          <div class="item">
+            <a href="https://muniverse.medunigraz.at/forschung/forschungsdatenmanagement/fdm-checklisten-vorlagen" title="Research Data Management" target="_blank">
+              {{ _("Research Data Management") }} <i class="external alternate icon"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <h2>{{ _("Accessibility") }}</h2>
+        <div class="ui list">
+          <div class="item">{{ _("Tipp:") }}</div>
+          <div class="item">{{ _("Use Ctrl + and Crtl -") }}</div>
+          <div class="item">{{ _("to change the font size.") }}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ui divider"></div>
+
+    <div class="doubling four column row">
+      <div class="column">
+        <div class="logos">
+          <strong>Powered by</strong>
+          <a href="http://inveniosoftware.org/products/rdm" target="_blank" title="invenioRDM">
+            <img src="{{ url_for("static", filename="images/inveniordm-tail.svg")}}"
+               alt="InvenioRDM logo"
+               style="display: block; height: 90px; margin-top: 8px;">
+          </a>
+        </div>
+      </div>
+      <div class="column">
+        <div class="logos">
+          <strong>Enabled by</strong>
+          <div class="logos-container">
+          <a href="https://forschungsdaten.at/en/fair-data-austria/" target="_blank" title="Fair Data Austria">
+            <img src="{{ url_for('invenio-override.static', filename='images/sharedRDM.png') }}"
+                 alt="Fair Data Austria"
+                 style="display: block; height: auto; margin-top: 10px; width: 200px;">
+          </a>
+          <a href="https://www.tugraz.at/home" target="_blank" title="Fair Data Austria">
+            <img src="{{ url_for('invenio-override.static', filename='images/TUGraz.png') }}"
+                 alt="TU Graz"
+                 style="display: block; height: auto; margin-top: 15px; width: 150px;">
+          </a>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</footer>

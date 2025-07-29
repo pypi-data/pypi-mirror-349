@@ -1,0 +1,17 @@
+[invenio_assets.webpack]
+invenio_override_theme = invenio_override.webpack:theme
+
+[invenio_base.apps]
+invenio_override = invenio_override:InvenioOverride
+
+[invenio_base.blueprints]
+invenio_override = invenio_override.views:blueprint
+
+[invenio_base.finalize_app]
+invenio_override = invenio_override.ext:finalize_app
+
+[invenio_config.module]
+invenio_override = invenio_override.config
+
+[invenio_i18n.translations]
+messages = invenio_override
