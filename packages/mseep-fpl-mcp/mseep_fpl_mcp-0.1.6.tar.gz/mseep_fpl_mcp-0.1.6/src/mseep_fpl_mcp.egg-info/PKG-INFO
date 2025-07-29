@@ -1,0 +1,45 @@
+Metadata-Version: 2.4
+Name: mseep-fpl-mcp
+Version: 0.1.6
+Summary: An MCP server for Fantasy Premier League data
+Home-page: https://github.com/rishijatia/fantasy-pl-mcp
+Author: mseep
+Author-email: mseep <support@skydeck.ai>
+Maintainer: mseep
+Maintainer-email: mseep <support@skydeck.ai>
+License: MIT
+Keywords: fantasy-premier-league,fpl,mcp,claude,ai,football,soccer
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: mcp>=1.2.0
+Requires-Dist: httpx>=0.24.0
+Requires-Dist: python-dotenv
+Requires-Dist: diskcache
+Requires-Dist: jsonschema
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: black>=23.0.0; extra == "dev"
+Requires-Dist: flake8>=6.0.0; extra == "dev"
+Requires-Dist: isort>=5.10.0; extra == "dev"
+Requires-Dist: mypy>=1.0.0; extra == "dev"
+Requires-Dist: build; extra == "dev"
+Requires-Dist: twine; extra == "dev"
+Requires-Dist: mcp[cli]>=1.2.0; extra == "dev"
+Dynamic: author
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: maintainer
+Dynamic: requires-python
+
+# Package managed by MseeP.ai
