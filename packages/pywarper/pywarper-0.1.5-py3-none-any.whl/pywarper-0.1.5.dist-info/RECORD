@@ -1,0 +1,10 @@
+pywarper/__init__.py,sha256=RM-UCEZbJ1s3wyMSSg4C7dz8ciuiiI-UG8VCNe3QJpQ,26
+pywarper/arbor.py,sha256=56dX9GSz6mvwRiHkOjLENUGneeIJsEPSWPPz7PKhpts,20584
+pywarper/stats.py,sha256=a0_CZ5pAh8AYiCPLCQ-sRs2Wjitm7vP-wFX72JTDWT0,10032
+pywarper/surface.py,sha256=YlT61Za7j8sM39QSSEGsN0r5uqHQf1-6cqEzBuv5Y_Y,24963
+pywarper/utils.py,sha256=nuD6a0dVzT4fDI0Y4h3ZDMUvOH_yo-zKDaAVCsHZRy8,2040
+pywarper/warper.py,sha256=HN8GjEoTdJHR4-uQ58g9ZcO4FxZ61XaJHH4luh79Qrc,8072
+pywarper-0.1.5.dist-info/METADATA,sha256=T9z0Ljl095YcH2FZZAotZdLHqMBMQzSyqf__wAwRUt4,1782
+pywarper-0.1.5.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pywarper-0.1.5.dist-info/licenses/LICENSE,sha256=kug_x3_0c4sULc38KAVDhkx79YU0DRvQWGDkk_MhugQ,1251
+pywarper-0.1.5.dist-info/RECORD,,
