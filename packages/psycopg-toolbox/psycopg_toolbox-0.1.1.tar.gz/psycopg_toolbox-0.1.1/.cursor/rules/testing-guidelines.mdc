@@ -1,0 +1,189 @@
+---
+description: Guidelines for testing in Python
+globs:
+alwaysApply: false
+---
+# Testing Guidelines
+
+This document outlines our guidelines for writing and organizing tests.
+
+## Core Principles
+
+1. Write integration tests that use real database connections
+2. Use fixtures for test setup and teardown
+3. Keep tests focused and isolated
+4. Follow consistent test organization
+5. Use descriptive test names
+
+## Test Organization
+
+### Fixtures
+
+1. Shared fixtures should be defined in `conftest.py`
+2. Test-specific fixtures should be defined in the test file
+3. Use fixtures from dependent projects when available
+4. Keep fixtures focused and reusable
+
+Example of `conftest.py`:
+```python
+"""Shared test fixtures."""
+
+import pytest
+from psycopg import AsyncConnection
+
+@pytest.fixture
+async def db_connection() -> AsyncConnection:
+    """Create a test database connection."""
+    conn = await AsyncConnection.connect(
+        "postgresql://postgres:postgres@localhost:5432/postgres"
+    )
+    try:
+        yield conn
+    finally:
+        await conn.close()
+```
+
+Example of test-specific fixture:
+```python
+"""Tests for role management functionality."""
+
+import pytest
+from psycopg import AsyncConnection
+
+@pytest.fixture
+async def test_role(db_connection: AsyncConnection) -> str:
+    """Create a test role for this specific test."""
+    role_name = "test_role"
+    await db_connection.execute(f"CREATE ROLE {role_name}")
+    try:
+        yield role_name
+    finally:
+        await db_connection.execute(f"DROP ROLE {role_name}")
+
+async def test_create_role(db_connection: AsyncConnection, test_role: str):
+    """Test role creation."""
+    # Test implementation
+```
+
+## Database Testing
+
+1. Use real database connections for tests
+2. Use fixtures for database connections
+3. Clean up after tests
+4. Use transactions to isolate tests
+5. Don't mock database functionality
+
+Example:
+```python
+"""Tests for context managers."""
+
+import pytest
+from psycopg import AsyncConnection
+
+async def test_autocommit(db_connection: AsyncConnection):
+    """Test that autocommit context manager works."""
+    async with autocommit(db_connection) as conn:
+        # Test code
+        assert conn.autocommit is True
+```
+
+## Test Structure
+
+1. Test files should mirror the structure of the source code
+2. Test files should be named `test_*.py` where `*` matches the source file name
+   - For example, `src/psycopg_toolbox/context_managers.py` should have tests in `tests/test_context_managers.py`
+   - This makes it easy to find tests for a specific source file
+3. Test functions should be named `test_*`
+4. Use descriptive test names that explain what is being tested
+5. Group related tests in classes if they share setup
+
+Example:
+```
+src/
+└── psycopg_toolbox/
+    ├── context_managers.py
+    ├── exceptions.py
+    └── logging.py
+
+tests/
+├── test_context_managers.py    # Tests for context_managers.py
+├── test_exceptions.py          # Tests for exceptions.py
+└── test_logging.py            # Tests for logging.py
+```
+
+Example test file:
+```python
+"""Tests for context managers."""
+
+import pytest
+from psycopg import AsyncConnection
+
+class TestAutocommit:
+    """Tests for autocommit context manager."""
+
+    async def test_enable_autocommit(self, db_connection: AsyncConnection):
+        """Test enabling autocommit mode."""
+        async with autocommit(db_connection) as conn:
+            assert conn.autocommit is True
+
+    async def test_restore_autocommit(self, db_connection: AsyncConnection):
+        """Test restoring original autocommit state."""
+        original_autocommit = db_connection.autocommit
+        async with autocommit(db_connection):
+            pass
+        assert db_connection.autocommit == original_autocommit
+```
+
+## Running Tests
+
+To run all tests:
+```bash
+uv run poe test
+```
+
+To run specific tests:
+```bash
+# Run a specific test file
+uv run poe test tests/test_context_managers.py
+
+# Run a specific test
+uv run poe test tests/test_context_managers.py::TestAutocommit::test_enable_autocommit
+
+# Run tests matching a pattern
+uv run poe test -k "test_autocommit"
+```
+
+## Best Practices
+
+1. Write tests that are:
+   - Fast
+   - Isolated
+   - Repeatable
+   - Self-validating
+   - Timely
+
+2. Test organization:
+   - One test file per module
+   - Clear test names
+   - Group related tests
+   - Use appropriate fixtures
+
+3. Database testing:
+   - Use real connections
+   - Clean up after tests
+   - Use transactions
+   - Don't mock database
+
+4. Fixture usage:
+   - Share common fixtures
+   - Keep test-specific fixtures local
+   - Use dependent project fixtures
+   - Keep fixtures focused
+
+## Rationale
+
+1. Integration tests with real databases catch real issues
+2. Shared fixtures reduce code duplication
+3. Clear test organization makes maintenance easier
+4. Descriptive test names serve as documentation
+5. Proper test isolation prevents test interference

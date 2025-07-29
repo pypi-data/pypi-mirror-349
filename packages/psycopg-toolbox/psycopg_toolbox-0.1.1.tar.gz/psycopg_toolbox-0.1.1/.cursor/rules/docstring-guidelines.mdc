@@ -1,0 +1,106 @@
+---
+description: Conventions for docstrings in Python files
+globs:
+alwaysApply: false
+---
+# Docstring Guidelines
+
+This document outlines our guidelines for writing docstrings in our Python codebase.
+
+## Core Principles
+
+1. All public functions, classes, and modules must have docstrings
+2. Docstrings should focus on behavior and purpose, not types
+3. Type information should be handled by type annotations
+4. Docstrings should be written in Google style format
+
+## Guidelines
+
+### Required Docstrings
+
+- All public modules must have a module-level docstring
+- All public classes must have a class-level docstring
+- All public functions and methods must have a docstring
+- Private functions/methods (starting with `_`) are exempt
+
+### What to Include in Docstrings
+
+1. A clear, concise description of what the function/class/module does
+2. Any important notes about behavior or side effects
+3. Examples when the behavior is complex or non-obvious
+4. References to related functions/classes when relevant
+
+### What to Exclude from Docstrings
+
+1. Type information (use type annotations instead)
+2. Parameter descriptions that just repeat the type
+3. Return value descriptions that just repeat the type
+
+## Examples
+
+### Good Examples
+
+```python
+async def create_database(conn: AsyncConnection, name: str, *, encoding: str = "UTF8", owner: str | None = None) -> None:
+    """Creates a new PostgreSQL database.
+
+    This function will raise AlreadyExistsError if a database with the given name
+    already exists. The database will be created with the specified encoding and
+    owner. If no owner is specified, the current user will be the owner.
+
+    Args:
+        conn: The async psycopg connection to use
+        name: The name of the database to create
+        encoding: The character encoding to use (default: UTF8)
+        owner: The role that will own the database (default: current user)
+
+    Raises:
+        AlreadyExistsError: If a database with the given name already exists
+        psycopg.Error: If there is an error creating the database
+    """
+    pass
+
+class LoggingConnection(AsyncConnection):
+    """Enhanced async psycopg connection with built-in SQL query logging.
+
+    This class extends AsyncConnection to add automatic logging of all SQL
+    queries and their parameters. It's useful for debugging and monitoring
+    database operations. The logging level can be configured when creating
+    the connection.
+    """
+    pass
+```
+
+### Bad Examples
+
+```python
+async def create_database(conn: AsyncConnection, name: str, *, encoding: str = "UTF8", owner: str | None = None) -> None:
+    """Creates a database.
+
+    Args:
+        conn: An AsyncConnection object
+        name: A string representing the database name
+        encoding: A string for the database encoding
+        owner: An optional string for the database owner
+
+    Returns:
+        None
+    """
+    pass
+
+class LoggingConnection(AsyncConnection):
+    """A connection class that logs SQL queries.
+
+    Attributes:
+        log_level: The logging level to use
+        logger: The logger instance
+    """
+    pass
+```
+
+## Rationale
+
+1. Type annotations provide better IDE support and static type checking
+2. Duplicating type information in docstrings leads to maintenance issues
+3. Docstrings should focus on behavior and purpose, which type annotations cannot express
+4. Google style docstrings are widely used and well-supported by documentation tools
