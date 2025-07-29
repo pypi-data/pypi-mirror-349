@@ -1,0 +1,1 @@
+default_app_config = "django_debug_toolbar_assistant_panel.apps.AssistantPanelConfig"
