@@ -1,0 +1,27 @@
+Metadata-Version: 2.4
+Name: rohith
+Version: 0.1.0
+Summary: CLI card for Rohit Gowda with contact, resume and meeting options.
+Home-page: https://github.com/rohithgowdax/cli-card
+Author: Rohit Gowda R
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: questionary
+Requires-Dist: rich
+Requires-Dist: requests
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary
+
+# rohith
+
+📇 A command-line interactive card for Rohit Gowda R  
+Run it instantly using:
+
