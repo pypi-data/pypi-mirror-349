@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: mseep-coin-api-mcp
+Version: 0.1.2
+Summary: the crypto api
+Author-email: mseep <support@skydeck.ai>
+Maintainer-email: mseep <support@skydeck.ai>
+Requires-Python: >=3.12
+Requires-Dist: httpx>=0.28.1
+Requires-Dist: mcp>=1.1.2
+Description-Content-Type: text/markdown
+
+# Package managed by MseeP.ai
