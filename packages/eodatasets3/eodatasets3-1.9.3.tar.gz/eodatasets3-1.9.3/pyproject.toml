@@ -1,0 +1,181 @@
+[build-system]
+requires = ["setuptools>=61.0", "setuptools-scm[git]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "eodatasets3"
+description = "Packaging, metadata and provenance for OpenDataCube EO3 datasets"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+authors = [{name = "Open Data Cube"}]
+dynamic = ["version"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    "affine",
+    "attrs>=18.1", # 18.1 adds 'factory' syntactic sugar
+    "boltons",
+    "botocore",  # missing from datacube
+    "boto3",
+    "cattrs",
+    "ciso8601",
+    "click",
+    "defusedxml",
+    "fiona",
+    "h5py",
+    "jsonschema>=4.18", # We want a Draft6Validator
+    "numpy>=1.15.4",
+    "pyproj",
+    "rasterio",
+    "ruamel.yaml",
+    "scipy",
+    "shapely",
+    "structlog",
+    "xarray",
+    "datacube>=1.9.0",
+    "pystac>=1.8.4",
+]
+
+[project.urls]
+"Bug Reports" = "https://github.com/opendatacube/eo-datasets/issues"
+"Source" = "https://github.com/opendatacube/eo-datasets"
+
+[project.scripts]
+eo3-validate = "eodatasets3.validate:run"
+eo3-prepare = "eodatasets3.scripts.prepare:run"
+eo3-recompress-tar = "eodatasets3.scripts.recompress:main"
+eo3-package-wagl = "eodatasets3.scripts.packagewagl:run"
+eo3-to-stac = "eodatasets3.scripts.tostac:run"
+
+[project.optional-dependencies]
+# Optional valid-data poly handling methods
+algorithms = ["scikit-image"]
+# The (legacy) prepare scripts
+ancillary = ["checksumdir", "netCDF4"]
+# If packaging ard/wagl.
+wagl = ["h5py"] # h5py is already in core, but list it here for clarity if needed.
+all = [
+    "checksumdir", "netCDF4", # From ancillary
+    "deepdiff>=8.0",
+    "h5py", # From wagl (and core)
+    "mock",
+    "pystac>=1.12",
+    "pytest-cov",
+    "pytest-xdist",
+    "pytest",
+    "rio_cogeo",
+    "ruff",
+    "scikit-image", # From algorithms
+    "sphinx_rtd_theme",
+    "sphinx-autodoc-typehints",
+]
+test = [
+    "checksumdir", "netCDF4", # From ancillary
+    "deepdiff>=8.0",
+    "h5py", # From wagl (and core)
+    "mock",
+    "pystac>=1.12",
+    "pytest-cov",
+    "pytest-xdist",
+    "pytest",
+    "rio_cogeo",
+    "ruff",
+    "scikit-image", # From algorithms
+    "sphinx_rtd_theme",
+    "sphinx-autodoc-typehints",
+]
+deployment = ["h5py"] # h5py is already in core, but list it here for clarity if needed.
+
+[dependency-groups]
+dev = [
+    "checksumdir>=1.2.0",
+    "deepdiff>=8.4.2",
+    "h5py>=3.13.0",
+    "mock>=5.2.0",
+    "netcdf4>=1.7.2",
+    "pytest>=8.3.5",
+    "pytest-cov>=6.1.1",
+    "python-rapidjson",
+    "pytest-xdist>=3.6.1",
+    "rio-cogeo>=5.4.1",
+    "ruff>=0.11.8",
+    "scikit-image>=0.25.2",
+]
+
+
+# IMPORTANT
+#
+# Leave Setuptools Defaults Alone to enable Automatic Discovery
+# https://setuptools.pypa.io/en/latest/userguide/package_discovery.html#automatic-discovery
+#
+# Otherwise we end up with extra unwanted files in the distribution packages.
+
+[tool.setuptools_scm]
+write_to = "eodatasets3/_version.py"
+tag_regex = "^eodatasets3-(.*)"
+
+
+[tool.coverage.run]
+source = ["eodatasets3"]
+branch = true
+
+[tool.coverage.report]
+precision = 2
+exclude_lines = [
+    "pragma: no cover",
+    "raise NotImplementedError",
+    "raise NotImplemented",
+    "if __name__ == .__main__.:",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["eodatasets3", "tests"]
+addopts = "--doctest-modules"
+filterwarnings = ["ignore::FutureWarning"]
+norecursedirs = [".*", "build", "dist", ".git", "tmp*"]
+
+[tool.ruff]
+extend-exclude = [
+    "eodatasets3/_version.py",
+]
+
+[tool.ruff.lint]
+select = [
+    "A",  # Don't shadow built-ins
+    "C4",  # Use list comprehensions etc
+    "E",  # pycodestyle
+    "EXE",  # Shebangs+Executable permisssions should match
+    "F",  # pyflakes
+    "G",  # Use logging formatter, not manual string concat
+    "I",  # Auto-sort imports
+    "ICN",  # Use standard import names, like np for numpy
+    "N",  # pep8-naming
+    "NPY",  # Numpy
+    "RUF",  # Ruff-specific python rules
+    "S",  # Bandit (security)
+    "UP"  # pyupgrade
+]
+
+ignore = [
+    # Disable these as we don't want to change old code unnecessarily.
+    "RUF013", # PEP 484 prohibits implicit `Optional`
+    "C408", # Unnecessary `dict` call (rewrite as a literal)
+    "ICN001", #  `numpy` should be imported as `np`
+    "N818", # Exception name should be named with an Error suffix
+    "S324", # SHA1 is required for compatibility.
+]
+
+# Matching old behaviour: We auto-format with the smaller line default
+# ...  but only enforce line length to be under this larger 120 limit.
+pycodestyle.max-line-length = 120
+
+[tool.ruff.lint.per-file-ignores]
+"docs/conf.py" = ["A001"] # Variable `copyright` shadowing a Python builtin (needed for api)
+"tests/*.py" = ["S101"] # Tests are supposed to assert.
