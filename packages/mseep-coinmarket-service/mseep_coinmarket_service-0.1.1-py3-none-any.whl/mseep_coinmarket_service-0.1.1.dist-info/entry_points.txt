@@ -1,0 +1,2 @@
+[console_scripts]
+coinmarket-service = coinmarket_service:main

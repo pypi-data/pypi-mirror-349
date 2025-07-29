@@ -1,0 +1,72 @@
+Metadata-Version: 2.4
+Name: mseep-coinmarket-service
+Version: 0.1.1
+Summary: Coinmarket MCP Server
+Home-page: 
+Author: mseep
+Author-email: mseep <support@skydeck.ai>
+Maintainer-email: mseep <support@skydeck.ai>
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: mcp>=1.0.0
+Requires-Dist: python-dotenv>=1.0.1
+Requires-Dist: requests>=2.32.3
+Requires-Dist: ruff>=0.8.1
+Dynamic: author
+Dynamic: license-file
+Dynamic: requires-python
+
+# Coinmarket MCP server
+
+Coinmarket MCP Server
+
+## Components
+
+### Resources
+
+The server implements a few of the [Coinmarket API](https://coinmarketcap.com/api/documentation/v1/#section/Introduction) endpoints
+- Custom coinmarket:// URI scheme for accessing individual notes
+- Each note resource has a name, description and text/plain mimetype
+
+### Tools
+
+The server implements two tools:
+- `get-currency-listings`: Get the latest currency listings
+- `get-quotes`: Get quotes for tokens
+  - Takes "slug" (example: bitcoin) or "symbol" (example: BTC) as optional string argument
+
+## Configuration
+
+Requires coinmarket API key.
+
+## Quickstart
+
+### Install
+
+#### Claude Desktop
+
+On MacOS: `~/Library/Application\ Support/Claude/claude_desktop_config.json`
+On Windows: `%APPDATA%/Claude/claude_desktop_config.json`
+
+<details>
+  <summary>Development/Unpublished Servers Configuration</summary>
+  ```
+  "mcpServers": {
+    "coinmarket_service": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "/Users/anjor/repos/anjor/coinmarket_service",
+        "run",
+        "coinmarket_service"
+      ],
+      "env": {
+        "COINMARKET_API_KEY": "<insert api key>"
+      }
+    }
+  }
+  ```
+</details>
+
+
