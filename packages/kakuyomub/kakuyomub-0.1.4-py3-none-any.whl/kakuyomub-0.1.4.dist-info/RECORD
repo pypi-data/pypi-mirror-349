@@ -1,0 +1,10 @@
+kakuyomub/__init__.py,sha256=MigXIT7A1M9YZuH2MyjKReSziFwzbZX2boVYsLosR6s,22
+kakuyomub/downloader.py,sha256=BcEkWLvDBGYSp7oYw0Tw1AxCkZS8vahSu0I-Hm_XCDI,1259
+kakuyomub/episode.py,sha256=dnOtdRFlN_ti4g5cTTxbIhMnjY506uewRlYBmZdGv4k,3037
+kakuyomub/epub_maker.py,sha256=nMsA9bL_OBSpSt-1l2aRTF4vPHy0DmykAeK8uHqNuww,2250
+kakuyomub/main.py,sha256=d1LG9p-1NonBeGgHtMIFc4L-sbQ0JT8NA76Hs5fYK00,1223
+kakuyomub/works.py,sha256=nhqCW597-OF4vYpc-RCr5p9M96IIY0ymVVs2rndWXZ8,5876
+kakuyomub-0.1.4.dist-info/METADATA,sha256=f3Yev5WFACT2XesNVZE6KPIeqE7F6ezKzeeV8765zi8,1431
+kakuyomub-0.1.4.dist-info/WHEEL,sha256=wXxTzcEDnjrTwFYjLPcsW_7_XihufBwmpiBeiXNBGEA,91
+kakuyomub-0.1.4.dist-info/top_level.txt,sha256=Femj4tmZIGx5wkZ8irqzXWBPvFnyj69hbgSsliCg0QE,10
+kakuyomub-0.1.4.dist-info/RECORD,,
