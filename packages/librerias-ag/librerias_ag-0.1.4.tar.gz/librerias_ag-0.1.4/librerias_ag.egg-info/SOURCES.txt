@@ -1,0 +1,7 @@
+README.md
+setup.py
+librerias_ag.egg-info/PKG-INFO
+librerias_ag.egg-info/SOURCES.txt
+librerias_ag.egg-info/dependency_links.txt
+librerias_ag.egg-info/requires.txt
+librerias_ag.egg-info/top_level.txt
