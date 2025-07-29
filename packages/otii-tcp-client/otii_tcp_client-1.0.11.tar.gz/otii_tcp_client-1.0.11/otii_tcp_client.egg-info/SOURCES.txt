@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+otii_tcp_client/__init__.py
+otii_tcp_client/arc.py
+otii_tcp_client/battery_emulator.py
+otii_tcp_client/otii.py
+otii_tcp_client/otii_client.py
+otii_tcp_client/otii_connection.py
+otii_tcp_client/otii_control.py
+otii_tcp_client/otii_exception.py
+otii_tcp_client/project.py
+otii_tcp_client/recording.py
+otii_tcp_client.egg-info/PKG-INFO
+otii_tcp_client.egg-info/SOURCES.txt
+otii_tcp_client.egg-info/dependency_links.txt
+otii_tcp_client.egg-info/top_level.txt
