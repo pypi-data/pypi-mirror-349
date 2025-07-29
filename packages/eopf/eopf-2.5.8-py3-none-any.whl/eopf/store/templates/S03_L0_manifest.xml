@@ -1,0 +1,238 @@
+<ns0:XFDU xmlns:ns0="urn:ccsds:schema:xfdu:1" xmlns:ns1="http://www.esa.int/safe/sentinel/1.1" xmlns:ns2="http://www.esa.int/safe/sentinel/sentinel-3/1.0" xmlns:ns3="http://www.esa.int/safe/sentinel/sentinel-3/level-0/1.0" xmlns:ns4="http://www.opengis.net/gml" version="esa/safe/sentinel/sentinel-3/level-0/1.0">Not Available<informationPackageMap>Not Available<ns0:contentUnit ID="packageUnit" unitType="Information Package" textInfo="SENTINEL-3 IPF Level 0 Product Manifest File" pdiID="processing" dmdID="acquisitionPeriod platform measurementOrbitReference measurementQualityInformation measurementFrameSet generalProductInformation">Not Available<ns0:contentUnit ID="ISPUnit" unitType="Measurement Data Unit" textInfo="ISP data as raw binary" repID="ISPDataSchema" dmdID="ISPAnnotation">Not Available<dataObjectPointer dataObjectID="ISPData" />
+      </ns0:contentUnit>
+      <ns0:contentUnit ID="ISPAnnotationUnit" unitType="Metadata Unit" textInfo="ISP Annotation data as raw binary" repID="ISPAnnotationSchema">Not Available<dataObjectPointer dataObjectID="ISPAnnotationData" />
+      </ns0:contentUnit>
+    </ns0:contentUnit>
+  </informationPackageMap>
+  <metadataSection>
+    <metadataObject ID="processing" classification="PROVENANCE" category="PDI">
+      <metadataWrap mimeType="text/xml" vocabularyName="Sentinel-SAFE" textInfo="Processing">
+        <xmlData>
+          <ns1:processing name="DataProcessing" outputLevel="0" start="2021-06-29T06:19:43.444112Z" stop="2021-06-29T06:19:53.845255Z">
+            <ns1:facility name="{{ PRODUCT['stac_discovery']['properties']['providers'][0]['name'] }}" organisation="{{ PRODUCT['stac_discovery']['properties']['providers'][1]['name'] }}" site="Cloud Service Provider" country="EU">
+              <ns1:hardware name="OPE" />
+              <ns1:software name="IPF-0" version="06.13" />
+            </ns1:facility>
+            <ns1:resource name="S3A_AX___FRO_AX_20210625T000000_20210705T000000_20210628T065158___________________EUM_O_AL_001.SEN3" role="Time Correlation File" />
+            <ns1:resource name="S3A_AX___FRO_AX_20210625T000000_20210705T000000_20210628T065158___________________EUM_O_AL_001.SEN3" role="FOS Orbit File (Restituted)">Not Available<ns1:processing name="ADC_AUX_REFORMATTER">Not Available<ns1:facility name="MAR" organisation="European Organisation for the Exploitation of Meteorological Satellites" site="Darmstadt" country="Germany">Not Available<ns1:hardware name="OPE" />
+                  <ns1:software name="ADC" version="2.0" />
+                </ns1:facility>
+              </ns1:processing>
+            </ns1:resource>
+            <ns1:resource name="S3A_AX___OSF_AX_20160216T192404_99991231T235959_20200826T081958___________________EUM_O_AL_001.SEN3" role="Reference Orbit Scenario File">Not Available<ns1:processing name="ADC_AUX_REFORMATTER">Not Available<ns1:facility name="MAR" organisation="European Organisation for the Exploitation of Meteorological Satellites" site="Darmstadt" country="Germany">Not Available<ns1:hardware name="OPE" />
+                  <ns1:software name="ADC" version="2.0" />
+                </ns1:facility>
+              </ns1:processing>
+            </ns1:resource>
+            <ns1:resource name="S3A_OL_0_EFR__G_20210629T045003_20210629T045203_20210629T061735_0120______________SVL_O_NR_OPE.ISIP" role="L0PP Granule" />
+            <ns1:resource name="S3A_TM_0_NAT____20210629T042346_20210629T060559_20210629T061722_6132_073_247______LN1_O_AL_002.SEN3" role="Orbit File" />
+            <ns1:resource name="S3A_TM_0_NAT____20210629T042346_20210629T060559_20210629T061722_6132_073_247______LN1_O_AL_002.SEN3" role="L0 Product">
+                <ns1:processing name="DataProcessing" outputLevel="0" start="2021-06-29T06:17:21.704741Z" stop="2021-06-29T06:17:30.769783Z">
+                <ns1:facility name="{{ PRODUCT['stac_discovery']['properties']['providers'][0]['name'] }}" organisation="{{ PRODUCT['stac_discovery']['properties']['providers'][1]['name'] }}" site="Cloud Service Provider" country="EU">
+                <ns1:hardware name="OPE" />
+                  <ns1:software name="IPF-0" version="06.13" />
+                </ns1:facility>
+                <ns1:resource name="S3A_AX___FRO_AX_20210625T000000_20210705T000000_20210628T065158___________________EUM_O_AL_001.SEN3" role="Time Correlation File" />
+                <ns1:resource name="S3A_AX___FRO_AX_20210625T000000_20210705T000000_20210628T065158___________________EUM_O_AL_001.SEN3" role="FOS Orbit File (Restituted)" />
+                <ns1:resource name="S3A_AX___FRO_AX_20210625T000000_20210705T000000_20210628T065158___________________EUM_O_AL_001.SEN3" role="Time Correlation File" />
+                <ns1:resource name="S3A_AX___FRO_AX_20210625T000000_20210705T000000_20210628T065158___________________EUM_O_AL_001.SEN3" role="FOS Orbit File (Restituted)" />
+                <ns1:resource name="S3A_AX___OSF_AX_20160216T192404_99991231T235959_20200826T081958___________________EUM_O_AL_001.SEN3" role="Reference Orbit Scenario File" />
+                <ns1:resource name="S3A_TM_0_NAT__G_20210629T042404_20210629T060617_20210629T061654_6133______________SVL_O_NR_OPE.ISIP" role="L0PP Granule" />
+                <ns1:resource name="S3IPF PDS 001 - i1r8 - Product Data Format Specification - Level 0" role="Product Data Format Specification - Level 0" />
+              </ns1:processing>
+            </ns1:resource>
+            <ns1:resource name="S3A_TM_0_NAT____20210629T042346_20210629T060557_20210629T060923_6130_073_247______LN1_O_AL_002.SEN3" role="L0 Product">
+              <ns1:processing name="DataProcessing" outputLevel="0" start="2021-06-29T06:09:21.517380Z" stop="2021-06-29T06:09:33.604151Z">
+                <ns1:facility name="{{ PRODUCT['stac_discovery']['properties']['providers'][0]['name'] }}" organisation="{{ PRODUCT['stac_discovery']['properties']['providers'][1]['name'] }}" site="Cloud Service Provider" country="EU">
+                  <ns1:hardware name="OPE" />
+                  <ns1:software name="IPF-0" version="06.13" />
+                </ns1:facility>
+                <ns1:resource name="S3A_AX___FRO_AX_20210625T000000_20210705T000000_20210628T065158___________________EUM_O_AL_001.SEN3" role="Time Correlation File" />
+                <ns1:resource name="S3A_AX___FRO_AX_20210625T000000_20210705T000000_20210628T065158___________________EUM_O_AL_001.SEN3" role="FOS Orbit File (Restituted)" />
+                <ns1:resource name="S3A_AX___FRO_AX_20210625T000000_20210705T000000_20210628T065158___________________EUM_O_AL_001.SEN3" role="Time Correlation File" />
+                <ns1:resource name="S3A_AX___FRO_AX_20210625T000000_20210705T000000_20210628T065158___________________EUM_O_AL_001.SEN3" role="FOS Orbit File (Restituted)" />
+                <ns1:resource name="S3A_AX___OSF_AX_20160216T192404_99991231T235959_20200826T081958___________________EUM_O_AL_001.SEN3" role="Reference Orbit Scenario File" />
+                <ns1:resource name="S3A_TM_0_NAT__G_20210629T042404_20210629T060615_20210629T060901_6131______________SVL_O_NR_OPE.ISIP" role="L0PP Granule" />
+                <ns1:resource name="S3IPF PDS 001 - i1r8 - Product Data Format Specification - Level 0" role="Product Data Format Specification - Level 0" />
+              </ns1:processing>
+            </ns1:resource>
+            <ns1:resource name="S3A_TM_0_NAT____20210629T042346_20210629T060559_20210629T061722_6132_073_247______LN1_O_AL_002.SEN3" role="Orbit File" />
+            <ns1:resource name="S3A_TM_0_NAT____20210629T042346_20210629T060559_20210629T061722_6132_073_247______LN1_O_AL_002.SEN3" role="L0 Product">
+              <ns1:processing name="DataProcessing" outputLevel="0" start="2021-06-29T06:17:21.704741Z" stop="2021-06-29T06:17:30.769783Z">
+                <ns1:facility name="{{ PRODUCT['stac_discovery']['properties']['providers'][0]['name'] }}" organisation="{{ PRODUCT['stac_discovery']['properties']['providers'][1]['name'] }}" site="Cloud Service Provider" country="EU">
+                  <ns1:hardware name="OPE" />
+                  <ns1:software name="IPF-0" version="06.13" />
+                </ns1:facility>
+                <ns1:resource name="S3A_AX___FRO_AX_20210625T000000_20210705T000000_20210628T065158___________________EUM_O_AL_001.SEN3" role="Time Correlation File" />
+                <ns1:resource name="S3A_AX___FRO_AX_20210625T000000_20210705T000000_20210628T065158___________________EUM_O_AL_001.SEN3" role="FOS Orbit File (Restituted)" />
+                <ns1:resource name="S3A_AX___FRO_AX_20210625T000000_20210705T000000_20210628T065158___________________EUM_O_AL_001.SEN3" role="Time Correlation File" />
+                <ns1:resource name="S3A_AX___FRO_AX_20210625T000000_20210705T000000_20210628T065158___________________EUM_O_AL_001.SEN3" role="FOS Orbit File (Restituted)" />
+                <ns1:resource name="S3A_AX___OSF_AX_20160216T192404_99991231T235959_20200826T081958___________________EUM_O_AL_001.SEN3" role="Reference Orbit Scenario File" />
+                <ns1:resource name="S3A_TM_0_NAT__G_20210629T042404_20210629T060617_20210629T061654_6133______________SVL_O_NR_OPE.ISIP" role="L0PP Granule" />
+                <ns1:resource name="S3IPF PDS 001 - i1r8 - Product Data Format Specification - Level 0" role="Product Data Format Specification - Level 0" />
+              </ns1:processing>
+            </ns1:resource>
+            <ns1:resource name="S3A_TM_0_NAT____20210629T042346_20210629T060557_20210629T060923_6130_073_247______LN1_O_AL_002.SEN3" role="L0 Product">
+              <ns1:processing name="DataProcessing" outputLevel="0" start="2021-06-29T06:09:21.517380Z" stop="2021-06-29T06:09:33.604151Z">
+                <ns1:facility name="{{ PRODUCT['stac_discovery']['properties']['providers'][0]['name'] }}" organisation="{{ PRODUCT['stac_discovery']['properties']['providers'][1]['name'] }}" site="Cloud Service Provider" country="EU">
+                  <ns1:hardware name="OPE" />
+                  <ns1:software name="IPF-0" version="06.13" />
+                </ns1:facility>
+                <ns1:resource name="S3A_AX___FRO_AX_20210625T000000_20210705T000000_20210628T065158___________________EUM_O_AL_001.SEN3" role="Time Correlation File" />
+                <ns1:resource name="S3A_AX___FRO_AX_20210625T000000_20210705T000000_20210628T065158___________________EUM_O_AL_001.SEN3" role="FOS Orbit File (Restituted)" />
+                <ns1:resource name="S3A_AX___FRO_AX_20210625T000000_20210705T000000_20210628T065158___________________EUM_O_AL_001.SEN3" role="Time Correlation File" />
+                <ns1:resource name="S3A_AX___FRO_AX_20210625T000000_20210705T000000_20210628T065158___________________EUM_O_AL_001.SEN3" role="FOS Orbit File (Restituted)" />
+                <ns1:resource name="S3A_AX___OSF_AX_20160216T192404_99991231T235959_20200826T081958___________________EUM_O_AL_001.SEN3" role="Reference Orbit Scenario File" />
+                <ns1:resource name="S3A_TM_0_NAT__G_20210629T042404_20210629T060615_20210629T060901_6131______________SVL_O_NR_OPE.ISIP" role="L0PP Granule" />
+                <ns1:resource name="S3IPF PDS 001 - i1r8 - Product Data Format Specification - Level 0" role="Product Data Format Specification - Level 0" />
+              </ns1:processing>
+            </ns1:resource>
+            <ns1:resource name="S3IPF PDS 001 - i1r8 - Product Data Format Specification - Level 0" role="Product Data Format Specification - Level 0" />
+          </ns1:processing>
+        </xmlData>
+      </metadataWrap>
+    </metadataObject>
+    <metadataObject ID="acquisitionPeriod" classification="DESCRIPTION" category="DMD">
+      <metadataWrap mimeType="text/xml" vocabularyName="Sentinel-SAFE" textInfo="Acquisition Period">
+        <xmlData>
+          <ns1:acquisitionPeriod><ns1:startTime>{{ PRODUCT['stac_discovery']['properties']['start_datetime'] }}</ns1:startTime>
+            <ns1:stopTime>{{ PRODUCT['stac_discovery']['properties']['end_datetime'] }}</ns1:stopTime>
+          </ns1:acquisitionPeriod>
+        </xmlData>
+      </metadataWrap>
+    </metadataObject>
+    <metadataObject ID="platform" classification="DESCRIPTION" category="DMD">
+      <metadataWrap mimeType="text/xml" vocabularyName="Sentinel-SAFE" textInfo="Platform Description">
+        <xmlData>
+          <ns1:platform>
+            <ns1:nssdcIdentifier>{{ PRODUCT['stac_discovery']['properties']['sat:platform_international_designator'] }}</ns1:nssdcIdentifier>
+            <ns1:familyName>{{ PRODUCT['stac_discovery']['properties']["platform"][:-1] }}</ns1:familyName>
+            <ns1:number>{{ PRODUCT['stac_discovery']['properties']["platform"][-1] }}</ns1:number>
+            <ns1:instrument>
+              <ns1:familyName abbreviation="{{ PRODUCT['stac_discovery']['properties']['instrument'] }}">Not Available</ns1:familyName>
+              <ns1:mode identifier="EO">{{ PRODUCT['stac_discovery']['properties']['eopf:instrument_mode'] }}</ns1:mode>
+            </ns1:instrument>
+          </ns1:platform>
+        </xmlData>
+      </metadataWrap>
+    </metadataObject>
+    <metadataObject ID="generalProductInformation" classification="DESCRIPTION" category="DMD">
+      <metadataWrap mimeType="text/xml" vocabularyName="Sentinel-SAFE" textInfo="General Product Information">
+        <xmlData>
+            <ns2:generalProductInformation>
+            <ns2:productName>{{ PRODUCT['stac_discovery']['id'] }}</ns2:productName>
+            <ns2:productType>{{ PRODUCT['stac_discovery']['properties']['product:type'] }}</ns2:productType>
+            <ns2:timeliness>{{ PRODUCT['stac_discovery']['properties']['product:timeline'] }}</ns2:timeliness>
+            <ns2:baselineCollection>{{ PRODUCT['stac_discovery']['collection'] }}</ns2:baselineCollection>
+            <ns2:creationTime>{{ PRODUCT['stac_discovery']['properties']['created'][:-1].replace('-','').replace(':','') }}</ns2:creationTime>
+            <ns2:productSize>Not Available</ns2:productSize>
+            <ns2:dumpInformation>Not Available<ns2:granuleNumber>{{ PRODUCT["other_metadata"]['dump_granule_number'] }}</ns2:granuleNumber>
+              <ns2:granulePosition>{{ PRODUCT["other_metadata"]['dump_granule_position'] }}</ns2:granulePosition>
+              <ns2:dumpStart>{{ PRODUCT["other_metadata"]['dump_start'] }}</ns2:dumpStart>
+              <ns2:receivingGroundStation>{{ PRODUCT["other_metadata"]['receiving_ground_station'] }}</ns2:receivingGroundStation>
+              <ns2:receivingStartTime>{{ PRODUCT["other_metadata"]['receiving_start_time'] }}</ns2:receivingStartTime>
+              <ns2:receivingStopTime>{{ PRODUCT["other_metadata"]['receiving_stop_time'] }}</ns2:receivingStopTime>
+            </ns2:dumpInformation>
+            <ns2:dispositionMode>Not Available</ns2:dispositionMode>
+            <ns2:productUnit>
+              <ns2:type>{{ PRODUCT['other_metadata']['product_unit']['type'] }}</ns2:type>
+              <ns2:duration>{{ PRODUCT['other_metadata']['product_unit']['duration'] }}</ns2:duration>
+            </ns2:productUnit>
+            <ns3:packetCount>{{ PRODUCT["other_metadata"]['packet_count'] }}</ns3:packetCount>
+          </ns2:generalProductInformation>
+        </xmlData>
+      </metadataWrap>
+    </metadataObject>
+    <metadataObject ID="measurementOrbitReference" classification="DESCRIPTION" category="DMD">
+      <metadataWrap mimeType="text/xml" vocabularyName="Sentinel-SAFE" textInfo="Orbit Reference">
+        <xmlData>
+          <ns1:orbitReference>
+            <ns1:orbitNumber groundTrackDirection="{{ PRODUCT['stac_discovery']['properties']['sat:orbit_state'] }}" type="start">{{ PRODUCT['stac_discovery']['properties']['sat:absolute_orbit'] }}</ns1:orbitNumber>
+            <ns1:relativeOrbitNumber groundTrackDirection="descending" type="start">{{ PRODUCT['stac_discovery']['properties']['sat:relative_orbit'] }}</ns1:relativeOrbitNumber>
+            <ns1:passNumber groundTrackDirection="descending" type="start">{{ PRODUCT['other_metadata']['absolute_pass_number'] }}</ns1:passNumber>
+            <ns1:relativePassNumber groundTrackDirection="descending" type="start">{{ PRODUCT['other_metadata']['relative_pass_number'] }}</ns1:relativePassNumber>
+            <ns1:cycleNumber>{{ PRODUCT['other_metadata']["cycle_number"] }}</ns1:cycleNumber>
+            <ns1:phaseIdentifier>{{ PRODUCT['other_metadata']['phase_identifier'] }}</ns1:phaseIdentifier>
+            <ns1:elementSet>
+              <ns1:ephemeris>
+                <ns1:epoch type="UTC">{{ PRODUCT['other_metadata']['ephemeris']['start']['UTC'] }}</ns1:epoch>
+                <ns1:epoch type="UT1">{{ PRODUCT['other_metadata']['ephemeris']['start']['UT1'] }}</ns1:epoch>
+                <ns1:epoch type="TAI">{{ PRODUCT['other_metadata']['ephemeris']['start']['TAI'] }}</ns1:epoch>
+                <ns1:position>
+                  <ns1:x>{{ PRODUCT['other_metadata']['ephemeris']['start']['position']['x'] }}</ns1:x>
+                  <ns1:y>{{ PRODUCT['other_metadata']['ephemeris']['start']['position']['y'] }}</ns1:y>
+                  <ns1:z>{{ PRODUCT['other_metadata']['ephemeris']['start']['position']['z'] }}</ns1:z>
+                </ns1:position>
+                <ns1:velocity>
+                  <ns1:x>{{ PRODUCT['other_metadata']['ephemeris']['start']['velocity']['x'] }}</ns1:x>
+                  <ns1:y>{{ PRODUCT['other_metadata']['ephemeris']['start']['velocity']['y'] }}</ns1:y>
+                  <ns1:z>{{ PRODUCT['other_metadata']['ephemeris']['start']['velocity']['z'] }}</ns1:z>
+                </ns1:velocity>
+              </ns1:ephemeris>
+              <ns1:ephemeris>
+                <ns1:epoch type="UTC">{{ PRODUCT['other_metadata']['ephemeris']['stop']['UTC'] }}</ns1:epoch>
+                <ns1:epoch type="UT1">{{ PRODUCT['other_metadata']['ephemeris']['stop']['UT1'] }}</ns1:epoch>
+                <ns1:epoch type="TAI">{{ PRODUCT['other_metadata']['ephemeris']['stop']['TAI'] }}</ns1:epoch>
+                <ns1:position>
+                  <ns1:x>{{ PRODUCT['other_metadata']['ephemeris']['stop']['position']['x'] }}</ns1:x>
+                  <ns1:y>{{ PRODUCT['other_metadata']['ephemeris']['stop']['position']['y'] }}</ns1:y>
+                  <ns1:z>{{ PRODUCT['other_metadata']['ephemeris']['stop']['position']['z'] }}</ns1:z>
+                </ns1:position>
+                <ns1:velocity>
+                  <ns1:x>{{ PRODUCT['other_metadata']['ephemeris']['stop']['velocity']['x'] }}</ns1:x>
+                  <ns1:y>{{ PRODUCT['other_metadata']['ephemeris']['stop']['velocity']['y'] }}</ns1:y>
+                  <ns1:z>{{ PRODUCT['other_metadata']['ephemeris']['stop']['velocity']['z'] }}</ns1:z>
+                </ns1:velocity>
+              </ns1:ephemeris>
+            </ns1:elementSet>
+          </ns1:orbitReference>
+        </xmlData>
+      </metadataWrap>
+    </metadataObject>
+    <metadataObject ID="measurementQualityInformation" classification="DESCRIPTION" category="DMD">
+      <metadataWrap mimeType="text/xml" vocabularyName="Sentinel-SAFE" textInfo="Quality Information">
+        <xmlData>
+          <ns1:qualityInformation>
+            <ns1:extension>
+              <ns2:productQuality>
+                <ns2:onlineQualityCheck>Not Available</ns2:onlineQualityCheck>
+                <ns3:rawDataQuality>
+                  <ns3:tooManyTransmissionErrors>Not Available</ns3:tooManyTransmissionErrors>
+                  <ns3:transmissionErrorThreshold>Not Available</ns3:transmissionErrorThreshold>
+                  <ns3:tooManyFormatErrors>Not Available</ns3:tooManyFormatErrors>
+                  <ns3:formatErrorThreshold>Not Available</ns3:formatErrorThreshold>
+                </ns3:rawDataQuality>
+              </ns2:productQuality>
+            </ns1:extension>
+          </ns1:qualityInformation>
+        </xmlData>
+      </metadataWrap>
+    </metadataObject>
+    <metadataObject ID="measurementFrameSet" classification="DESCRIPTION" category="DMD">
+      <metadataWrap mimeType="text/xml" vocabularyName="Sentinel-SAFE" textInfo="Frame Set">
+        <xmlData>
+          <ns1:frameSet>
+            <ns1:footPrint srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                <ns4:posList>{% for coord in PRODUCT['stac_discovery']['geometry']['coordinates'] %}{{ coord }} {% endfor %}</ns4:posList>
+            </ns1:footPrint>
+          </ns1:frameSet>
+        </xmlData>
+      </metadataWrap>
+    </metadataObject>
+    <metadataObject ID="ISPAnnotation" classification="DESCRIPTION" category="DMD">Not Available<dataObjectPointer dataObjectID="ISPAnnotationData" />
+    </metadataObject>
+    <metadataObject ID="ISPDataSchema" classification="SYNTAX" category="REP">Not Available<metadataReference mimeType="text/xml" vocabularyName="SDF" locatorType="URL" href="ISPData.xsd" />
+    </metadataObject>
+    <metadataObject ID="ISPAnnotationSchema" classification="SYNTAX" category="REP">Not Available<metadataReference mimeType="text/xml" vocabularyName="SDF" locatorType="URL" href="ISPAnnotation.xsd" />
+    </metadataObject>
+  </metadataSection>
+  <dataObjectSection>Not Available<dataObject ID="ISPData" repID="ISPDataSchema">Not Available<byteStream mimeType="application/octetstream" size="457890570">Not Available<fileLocation locatorType="URL" href="ISPData.dat" />
+        <checksum checksumName="MD5">Not Available</checksum>
+      </byteStream>
+    </dataObject>
+    <dataObject ID="ISPAnnotationData" repID="ISPAnnotationSchema">Not Available<byteStream mimeType="application/octetstream" size="409050">Not Available<fileLocation locatorType="URL" href="ISPAnnotation.dat" />
+        <checksum checksumName="MD5">Not Available</checksum>
+      </byteStream>
+    </dataObject>
+  </dataObjectSection>
+</ns0:XFDU>
