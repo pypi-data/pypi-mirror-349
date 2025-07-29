@@ -1,0 +1,15 @@
+src/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+src/fetch_billing.py,sha256=jKC_JWZcRbztXTIZyRmUOspmZHR0i1WLvb0-_bS2BNo,2565
+src/notification.py,sha256=T1l-1u_yN_TNDqznMaCHA2jUaPU4cEKVO7HLmG3DwKs,1416
+src/openstack_admin_script.py,sha256=TU25h4S7oO3LpWzH3_8xLOBoQbOntcnUKuNawnEE9z4,7923
+src/openstack_optimization.py,sha256=R6LRoO2x2wQYbL-Y6eNAvhccIQE2bfRCUmCPWNuYs9w,9983
+src/openstack_script.py,sha256=i8hv-PYJaEbrK2fHfbtJWzv7--LfIK_hSXJT4vE6YoA,13118
+src/openstack_summary.py,sha256=mkOmfBekRXxfx9bD6yFpIGksXJI0XNGIcKuQCk60c2E,1363
+src/secrets.json,sha256=LCZiWpi_qvm82Q7rGfLn--Xu17QgX3Wa63QHROTSfBo,198
+src/weekly_billing.py,sha256=kKlPeMYeg1erWFgM_PGKWqbn9txXFCo_Zwt_XYudM0k,1297
+src/weekly_notification_optimization.py,sha256=vjQtl4RVa2c2kwaKK2yjhd2_jFxoL0HLboUNWw6kt8I,563
+src/weekly_uses.py,sha256=DeKC_rd_ImsJVtBD1w7QYvTOsOZrbnKo6yyTFALg89k,2562
+openstack_toolbox-1.2.3.dist-info/METADATA,sha256=3nkwXdp7b33ByS-ope4ogadgUgJ4oLmKKwzobEJ6FlU,2994
+openstack_toolbox-1.2.3.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+openstack_toolbox-1.2.3.dist-info/entry_points.txt,sha256=vWt69OOTNswVhqvS1ZzEBv23f0PdJiAtbHgNkK9Zn3M,122
+openstack_toolbox-1.2.3.dist-info/RECORD,,
