@@ -1,0 +1,4 @@
+[console_scripts]
+crossfilt-filter = CrossFilt.identical_reads:main
+crossfilt-lift = CrossFilt.liftover_bam:main
+crossfilt-split = CrossFilt.split_bam:main

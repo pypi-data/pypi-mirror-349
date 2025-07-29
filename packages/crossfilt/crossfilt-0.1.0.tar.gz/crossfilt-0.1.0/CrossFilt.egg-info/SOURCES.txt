@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+CrossFilt/identical_reads.py
+CrossFilt/liftover_bam.py
+CrossFilt/split_bam.py
+CrossFilt.egg-info/PKG-INFO
+CrossFilt.egg-info/SOURCES.txt
+CrossFilt.egg-info/dependency_links.txt
+CrossFilt.egg-info/entry_points.txt
+CrossFilt.egg-info/requires.txt
+CrossFilt.egg-info/top_level.txt
+CrossFilt/lib/liftover_functions.py
