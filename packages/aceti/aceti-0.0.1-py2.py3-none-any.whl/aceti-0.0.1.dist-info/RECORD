@@ -1,0 +1,16 @@
+aceti/__init__.py,sha256=EiJ1zWHbg6iThpedJqUUl4NTA1KdkEuJeevftUWwYfE,152
+aceti/map_importer.py,sha256=zUoCFoFRuAxbssKn-0tHe_SKhcIuQbHZ14srYfqJSYY,1002
+aceti/maps/alamillo30x49latlon.npy,sha256=q7-tAL_22cm_jBjmojdB793R_HnKGxOV8NZYO6Km1S0,23648
+aceti/maps/alamillo30x49mask.npy,sha256=-0-wCEwZwUptkdpgEpWyLRKiBnxfWPoole7nJUqITP8,11888
+aceti/maps/alamilloaccess11x15latlon.npy,sha256=hvpRrc-eW9boy5126SdthWunhd6eTOoUrjNDGc5W-Qc,2768
+aceti/maps/alamilloaccess11x15mask.npy,sha256=mpCGDLS8VjBRDFbhvZyasc4wdVNVufXE8aTn8fvpilQ,1448
+aceti/old/create grid.py,sha256=WnkQblPZY8H6c7v4jzDrJyRQ-UwpUe0t-K9d-SOdHTA,21990
+aceti/old/gen_lat_lon_map.py,sha256=t_my37Bjuho9BNfkphUXHhYPBXEwKg52TYmHIVbLM8o,1139
+aceti/old/generate_map.py,sha256=k9bs495ox9ye5ChkweylO5VcQjPLSAnCODh5WGpuMT8,1129
+aceti/old/legendarium.py,sha256=qQbMdYQp3Csidw8oloSLQY_uBLWD_V4pT4ux_LLM-Jg,5670
+aceti/old/maps_utils.py,sha256=9O3VrJCWh3Zxw0KN6wNLxZDCjAb93kIj02sdm6zOuMI,4883
+aceti/old/path_planner_checker.py,sha256=ti-PkVkD0Y9Q7fRFBw8CJ8386PC5hjnZilZvwPIpv14,2628
+aceti-0.0.1.dist-info/METADATA,sha256=1AmtXqmFLyhWjuWB3Pi_Au7BMrrhBstcPQuOLxvupZE,1033
+aceti-0.0.1.dist-info/WHEEL,sha256=tkmg4JIqwd9H8mL30xA7crRmoStyCtGp0VWshokd1Jc,105
+aceti-0.0.1.dist-info/licenses/LICENSE,sha256=8-pFBirK9qdygiSMS78DtfK0jC5EPpnVAKLrBILFW1k,1067
+aceti-0.0.1.dist-info/RECORD,,
