@@ -1,0 +1,28 @@
+[project]
+name = "custa"
+version = "0.1.6"
+description = "Custom HTML generator from simple markup syntax"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{ name = "ProPandaMen", email = "propandamen@gmail.com" }]
+requires-python = ">=3.8"
+dependencies = [
+  "PyYAML>=6.0",
+  "typer>=0.15",
+]
+
+[project.scripts]
+custa = "custa.cli:app"
+
+[project.urls]
+"Homepage" = "https://github.com/ProPandaMen/custa"
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["custa", "custa.*"]
+
+[tool.setuptools]
+include-package-data = true
