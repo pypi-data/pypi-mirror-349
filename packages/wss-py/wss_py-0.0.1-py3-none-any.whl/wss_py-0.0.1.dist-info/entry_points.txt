@@ -1,0 +1,2 @@
+[console_scripts]
+wss = wss_py.main:main
