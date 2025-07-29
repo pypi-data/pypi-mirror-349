@@ -1,0 +1,6 @@
+mne>=1.7
+mne-qt-browser>=0.5.2
+click>=8.0
+
+[:sys_platform == "darwin"]
+pyqt5

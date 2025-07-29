@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+autoclean_view/__init__.py
+autoclean_view/cli.py
+autoclean_view/viewer.py
+autoclean_view.egg-info/PKG-INFO
+autoclean_view.egg-info/SOURCES.txt
+autoclean_view.egg-info/dependency_links.txt
+autoclean_view.egg-info/entry_points.txt
+autoclean_view.egg-info/requires.txt
+autoclean_view.egg-info/top_level.txt
+tests/test_cli.py
+tests/test_viewer.py
