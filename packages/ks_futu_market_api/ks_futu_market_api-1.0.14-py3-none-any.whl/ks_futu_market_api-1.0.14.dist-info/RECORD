@@ -1,0 +1,16 @@
+ks_futu_market_api/./.git,sha256=iVLhrtTO3APt8YAirtHHcumpSMTpFkVPtbaI0RJsOGo,43
+ks_futu_market_api/./.gitignore,sha256=eOt_WIh4Q7_8meDFVlUvnlCPFCSKtIOdM3LTqhqkVrM,2173
+ks_futu_market_api/./LICENSE.txt,sha256=4zOlefTQ3eDOhYSM_1aF7XuO4Eo6LqJACxQVEyxznvI,1104
+ks_futu_market_api/./README.en.md,sha256=ScY_oHLT0QW7wTixWKs55F2r4GU6zRbGJCWHCctVQKE,991
+ks_futu_market_api/./README.md,sha256=CzTXAySaC9jYQzHZFR5Mjmng66KtbgouLczC87vIp7o,978
+ks_futu_market_api/./__about__.py,sha256=TyOUjpANRlGnV3tMWefSzl-0k_Y_lOBDcDTVnM8ehLY,943
+ks_futu_market_api/./__init__.py,sha256=KQJxnOCpFQxg6N5oQ-j4l0qNXwZgsIN4S9pyoNhFgVo,47
+ks_futu_market_api/./ks_futu_market_api.py,sha256=5NcrQjc74u9I6QOgu-ghJk-aS5mXEAUlGnHlWmSklLY,31707
+ks_futu_market_api/./ks_open_quote_context.py,sha256=fteIHbxBFehmzaZN1oqGUt4Rk_chvFjRIuS9OpiNsnA,2546
+ks_futu_market_api/./pyproject.toml,sha256=S29G7o3-NteZCG5Wk0GJw2mkugo3h36hUL4jYE-Mgdc,2199
+ks_futu_market_api/./requirements.txt,sha256=FhAuU8VIaTLeYv2skB5HXytkq6ECRh5kqTDeSqmS4Ks,186
+ks_futu_market_api/./setup.py,sha256=YQ7t2PbcGICWPX79TCjzQ6yEi9pLGOxvFZGVaSpxKKQ,890
+ks_futu_market_api-1.0.14.dist-info/METADATA,sha256=y7btNJxyzetVTs5dGW_WDgynKzkl6zuKCqSNA-Lpt2U,1918
+ks_futu_market_api-1.0.14.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+ks_futu_market_api-1.0.14.dist-info/licenses/LICENSE.txt,sha256=4zOlefTQ3eDOhYSM_1aF7XuO4Eo6LqJACxQVEyxznvI,1104
+ks_futu_market_api-1.0.14.dist-info/RECORD,,
