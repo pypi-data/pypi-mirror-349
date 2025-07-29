@@ -1,0 +1,12 @@
+fputils/__init__.py,sha256=ampQYz0gJnLS2yL2FxKTr3ScadkTvQION7urdhNAQV8,161
+fputils/either.py,sha256=JneaOCnDShwOPuYLD7H9Rs2kQc3q150bRhSwEjiHzz4,4838
+fputils/either.pyi,sha256=-Rx3oXA8sGplWX0ReUaMPipP3NBeILjZ7xDhoG0dLxU,1302
+fputils/io.py,sha256=StNvpA8_d8xXaaKGP6kiDjqAYy5VI2DBUybIjlJxgWo,2601
+fputils/io.pyi,sha256=0IOKfrf0MVNKaElTM8V0mtRewOYpkLjdE0HlEwMxLtI,440
+fputils/option.py,sha256=eHsm2aJGBd9HJkyhBPi1YwJDy1zQdihyCCMfx83fJxo,7045
+fputils/option.pyi,sha256=SF4Tgrzu9cBhD-HVCFsGtdtr3TlhD6P7qa-_R44j54w,1794
+fputils_python-0.0.6.dist-info/licenses/LICENSE.txt,sha256=rKcG7MVeSh1YFrpLcKi0z4brJldDnPY1CyaGLufFEfQ,1071
+fputils_python-0.0.6.dist-info/METADATA,sha256=hBihIPza16xrRNgqkdk3vg1h6Wj-1sUOsJqwIFsyhOg,686
+fputils_python-0.0.6.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+fputils_python-0.0.6.dist-info/top_level.txt,sha256=twHkYnqGXrVSdY5-z96zCL8cABy6quakYuEQGNAajes,8
+fputils_python-0.0.6.dist-info/RECORD,,
