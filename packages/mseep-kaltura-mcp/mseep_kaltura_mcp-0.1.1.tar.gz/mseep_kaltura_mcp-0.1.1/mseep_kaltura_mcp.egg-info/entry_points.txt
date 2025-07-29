@@ -1,0 +1,2 @@
+[console_scripts]
+kaltura-mcp = kaltura_mcp.server:main
