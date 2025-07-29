@@ -1,0 +1,3 @@
+[console_scripts]
+absorb=absorb.cli:run_cli
+
