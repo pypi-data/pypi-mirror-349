@@ -1,0 +1,13 @@
+chatspec/__init__.py,sha256=eG0Af8epxuyHs-iMD1neXoTC_f9gMOHuVIPHzbUW-UA,10195
+chatspec/a2a.py,sha256=eE6Bc49_RLfHQGfonG7sTENdH5Bbyk9An5ofPrtE6w4,32890
+chatspec/markdown.py,sha256=pR2VEYjy6Ms_EWbzaRlhQjadJ-iqnEMH7FDNSVJxAyk,26191
+chatspec/mcp.py,sha256=RhD2JTBOK0ETgbX-ChYqOzlQH5DccgO3cFPEasXsRcY,35702
+chatspec/mock.py,sha256=5WHinP705N4q4iOTgsYj0i8oqs0JrIlnpNtTERsCDKk,34971
+chatspec/params.py,sha256=8U3P1LOyj29QOUHyPOZi_l15muCQWpo39aFHmaSN4tE,10434
+chatspec/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+chatspec/types.py,sha256=uyk5flAcbHVnQc247l7S6-LwCyl8vPfMkuXEmnsxIz4,17278
+chatspec/utils.py,sha256=vnciDtMCSfEENXOeD3sDYZFtpV3wRwAiaN18sjQasKY,62242
+chatspec-0.0.17.dist-info/METADATA,sha256=tR8xNjGPytyvQSFChgq4Zl2M6t3XytZtdhtKuVY6n-4,26243
+chatspec-0.0.17.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+chatspec-0.0.17.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+chatspec-0.0.17.dist-info/RECORD,,
