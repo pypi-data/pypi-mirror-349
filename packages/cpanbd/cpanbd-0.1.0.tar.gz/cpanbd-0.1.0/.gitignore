@@ -1,0 +1,16 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+tdata/
+wheels/
+*.egg-info
+图吧工具箱2409安装程序.exe
+# Virtual environments
+.venv
+tmp
+yidun.tar.gz
+*.meta
+.env
+drop
