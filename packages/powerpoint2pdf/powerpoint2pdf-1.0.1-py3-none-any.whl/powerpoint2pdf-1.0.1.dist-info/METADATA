@@ -1,0 +1,117 @@
+Metadata-Version: 2.1
+Name: powerpoint2pdf
+Version: 1.0.1
+Summary: =?unknown-8bit?b?5bCGUFBU55qE6aG16Z2i5a+85Ye65Li6UERG?=
+Home-page: https://github.com/OpenHUTB/ppt2pdf
+Author: OpenHUTB
+Author-email: 2929@hutb.edu.cn
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: comtypes
+Requires-Dist: pdfCropMargins
+
+# PPT2PDF
+
+
+PPT2PDF ������������������������������������������������ **���������������PowerPoint���������������** ���������������PDF������������������������������������������������������PPT������������������PPT���������������PDF���������������������
+
+
+
+## ������������
+
+- ������������������ PPT ��������� PDF
+- ������������ PowerPoint ������������
+- ������������ PDF ������
+- ������������������������������
+- ���������������������������������
+
+
+
+## ������������
+
+1. ������������[Releases](https://github.com/OpenHUTB/ppt2pdf/releases)������exe���������������������������
+
+2. ������������python���������������������pip������
+
+```bash
+pip install ppt2fpdf
+```
+������������
+```bash
+ppt2pdf
+```
+������
+```bash
+python -m ppt2pdf
+```
+
+## ������������
+���������������������������������������
+
+![screenshot](./assets/screenshot.png)
+
+1. ������"���PDF"������, ���������������������PowerPoint���������������
+2. ���������������������������"������", ���**���������������PPT������**������������PDF���������������������������������(���������������������������������PPT������������������)
+
+
+## ������������
+
+- Windows ������������
+- Microsoft PowerPoint
+- Python 3.8+
+
+
+## ������������
+
+- ������������������������������ PowerPoint
+- ������������ PowerPoint ���������������������������
+- ��������������������������� PowerPoint
+
+
+## ������������
+
+1. ������������
+2. ������������������������������������������������������pyinstaller
+```shell
+conda env list  # ���������������������������������
+conda create -n ppt2pdf python=3.8
+conda activate ppt2pdf
+# comtypes: ���������PowerPoint������    
+# pdfCropMargins: ������PDF������
+# tkinter: python������
+pip install comtypes pdfCropMargins pyinstaller
+```
+3. ������exe��������������������������� [������upx������](https://blog.csdn.net/JiuShu110/article/details/132625538) ������ [UPX](https://upx.github.io) ������������������������`upx.exe`������������������������������������������ 4 ���������������������
+4. ������������
+```cmd
+pyinstaller -F -w -n ppt2pdf --optimize=2 ppt2pdf/main.py  # ������������������������`dist/ppt2pdf.exe`
+```
+
+
+## ��������� [PyPi](https://pypi.org/)
+1. ������pypi���������������������
+2. ������������������whl���������������������������`ERROR    InvalidDistribution: Unknown distribution format: 'ppt2pdf.exe'`���
+```shell
+python setup.py sdist bdist_wheel
+```
+2. ���������
+```shell
+# ������������ dist/ppt2pdf.exe
+pip install twine
+twine upload dist/*
+```
+
+requests.exceptions.ProxyError: HTTPSConnectionPool(host='upload.pypi.org', port=443): Max retries exceeded with url: /_/oidc/audience (Caused by ProxyError('Unable to connect to proxy', SSLError(SSLZeroReturnError(6, 'TLS/SSL connection has been closed (EOF) (_ssl.c:1149)'))))
+
+
+
+
+
+## ������
+
+- [pyinstaller������������](https://blog.csdn.net/JiuShu110/article/details/132625538)
+- [ppt2fig](https://github.com/elliottzheng/ppt2fig)
