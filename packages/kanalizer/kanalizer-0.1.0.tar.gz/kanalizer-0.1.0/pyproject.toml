@@ -1,0 +1,25 @@
+[build-system]
+requires = ["maturin>=1.8,<2.0"]
+build-backend = "maturin"
+
+[tool.uv]
+# uvではkanalizerをビルドできないので無効化
+package = false
+
+[project]
+name = "kanalizer"
+requires-python = ">=3.9"
+classifiers = [
+  "Programming Language :: Rust",
+  "Programming Language :: Python :: Implementation :: CPython",
+]
+dynamic = ["version"]
+dependencies = []
+
+[dependency-groups]
+dev = ["maturin>=1.8.2", "pyright>=1.1.398", "pytest>=8.3.5", "ruff>=0.11.0"]
+
+[tool.maturin]
+module-name = "kanalizer._rust"
+python-source = "python"
+manifest-path = "crates/kanalizer-py/Cargo.toml"
