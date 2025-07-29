@@ -1,0 +1,230 @@
+# django-azuread-token-validator (azvalidator)
+
+Middleware Django para validação de tokens JWT emitidos pelo Azure AD e enriquecimento do objeto request com informações adicionais de perfil do usuário. Este middleware foi desenvolvido exclusivamente para uso com o Django REST Framework (DRF), com o objetivo de proteger rotas de API de forma segura e integrada.
+
+---
+
+## Instalação
+
+Você pode instalar o pacote via pip diretamente do PyPI (ou do seu repositório privado):
+
+```bash
+pip install django-azuread-token-validator
+```
+
+Ou, se preferir instalar a partir do código-fonte local:
+
+```bash
+git clone https://github.com/seu-usuario/django-azuread-token-validator.git
+cd django-azuread-token-validator
+pip install .
+```
+
+---
+
+## Configuração do Middleware
+
+### 1. Adicione o middleware no seu `settings.py`
+
+Inclua o caminho completo do middleware na lista `MIDDLEWARE`:
+
+```python
+MIDDLEWARE = [
+    # Middlewares padrão do Django...
+    'django.middleware.security.SecurityMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.common.CommonMiddleware',
+
+    # Middleware para validação do Azure AD
+    'azvalidator.middleware.AzureADTokenValidatorMiddleware',  # ajuste o caminho conforme seu pacote
+
+    # Outros middlewares...
+]
+```
+
+### 2. Variáveis de ambiente para configuração
+
+No `settings.py`, configure as variáveis abaixo:
+
+```python
+# URL do endpoint JWKS do Azure AD (para buscar chaves públicas de verificação)
+AZURE_AD_JWKS_URL = "https://login.microsoftonline.com/<tenant_id>/discovery/keys"
+
+# Tempo de cache das chaves JWKS, em segundos (padrão: 3600)
+AZURE_AD_CACHE_TIMEOUT = 3600
+
+# Ativa ou desativa a verificação de assinatura do token (padrão: True)
+AZURE_AD_VERIFY_SIGNATURE = True
+
+# Emissor esperado do token JWT (padrão: https://login.microsoftonline.com/<tenant_id>/v2.0)
+AZURE_AD_ISSUER_URL = "https://login.microsoftonline.com/<tenant_id>/v2.0"
+
+# Identificador de audiência esperado no token (geralmente o client_id ou App ID URI)
+AZURE_AD_AUDIENCE = "api://<client_id>"
+
+# Lista de algoritmos JWT aceitos (padrão: ["RS256"])
+AZURE_AD_ALGORITHMS = ["RS256"]
+
+# Nome de usuário padrão para tokens Client Credentials (app-to-app)
+AZURE_AD_DEFAULT_APP_USERNAME = "app"
+
+# Role padrão para tokens Client Credentials ()
+AZURE_AD_DEFAULT_APP_ROLE = "AppRole"
+
+# URL do serviço externo para buscar informações adicionais do usuário (opcional)
+AZURE_AD_AUX_USERINFO_SERVICE_URL = "https://api.exemplo.com/userinfo"
+
+# Token Bearer para autenticação no serviço adicional (opcional)
+AZURE_AD_AUX_USERINFO_SERVICE_TOKEN = "token-secreto"
+
+# Timeout para requisições ao serviço adicional, em segundos (padrão: 10)
+AZURE_AD_AUX_USERINFO_SERVICE_TIMEOUT = 10
+
+# Mapeamento entre campos retornados pelo serviço adicional e atributos do request
+# Formato: {"campo_no_servico": "nome_do_atributo_no_request"}
+AZURE_AD_AUX_USERINFO_MAPPING = {
+    "department": "azure_department",
+    "department_number": "azure_department_number",
+    "company": "azure_company",
+    "employee_number": "azure_employee_role",
+}
+
+```
+
+### 3. Uso nas views
+
+Para ativar a validação do token em uma view ou viewset DRF, defina o atributo azure_authentication = True na classe da view:
+
+```python
+from rest_framework import viewsets, routers
+from rest_framework.response import Response
+
+
+class DummyViewSet(viewsets.ViewSet):
+    azure_authentication = True
+
+    def list(self, request):
+        return Response(
+            {
+                "user": getattr(request, "azure_username", None),
+                "roles": getattr(request, "azure_roles", []),
+                "email": getattr(request, "azure_email", None),
+            }
+        )
+```
+
+---
+
+
+## Autenticação de Aplicações no Azure AD
+
+O pacote fornece uma função utilitária para autenticar aplicações no Azure AD utilizando o fluxo `client_credentials`. Essa função é útil para cenários onde uma aplicação precisa se comunicar com outra aplicação protegida.
+
+### Função: `generate_app_azure_token`
+
+A função `generate_app_azure_token` retorna um token de acesso válido para a aplicação. O token é armazenado em cache e renovado automaticamente quando expira.
+
+#### Exemplo de uso:
+
+```python
+from azvalidator.utils import generate_app_azure_token
+
+# Obter o token de acesso
+access_token = generate_app_azure_token()
+print(f"Token de acesso: {access_token}")
+```
+
+Certifique-se de configurar essas variáveis corretamente para que a função funcione como esperado.
+
+```python 
+# URL do endpoint de autenticação do Azure AD
+AZURE_AD_URL = "https://login.microsoftonline.com"
+
+# ID do Tenant do Azure AD
+AZURE_AD_TENANT_ID = "<tenant_id>"
+
+# Tipo de grant utilizado (deve ser "client_credentials")
+AZURE_AD_APP_SIIGO_GRANT_TYPE = "client_credentials"
+
+# ID do cliente registrado no Azure AD
+AZURE_AD_APP_SIIGO_CLIENT_ID = "<client_id>"
+
+# Segredo do cliente registrado no Azure AD
+AZURE_AD_APP_SIIGO_CLIENT_SECRET = "<client_secret>"
+
+# Escopo de acesso necessário
+AZURE_AD_APP_SIIGO_SCOPE = "https://graph.microsoft.com/.default"
+```
+
+---
+## Serviço Externo para Informações Adicionais do Usuário
+
+### Objetivo
+
+O middleware pode enriquecer o objeto `request` com dados extras obtidos de um serviço externo, além dos dados básicos do token Azure AD.
+
+### Como funciona
+
+- Após validar o token, o middleware faz uma requisição HTTP GET para:
+
+  ```
+  {AZURE_AD_AUX_USERINFO_SERVICE_URL}/{username}/
+  ```
+
+- Se configurado, envia token Bearer via header `Authorization` para autenticação.
+
+- O serviço externo deve retornar um JSON com os dados adicionais do usuário.
+
+### Especificações do serviço externo
+
+- **Endpoint:** REST, aceitando GET na URL `/username/`
+- **Autenticação:** Opcional via Bearer Token
+- **Resposta:** JSON com campos contendo dados do usuário (exemplo abaixo)
+
+Exemplo de resposta JSON:
+
+```json
+{
+  "department": "Tecnologia da Informação",
+  "department_number": "123",
+  "company": "MinhaEmpresa",
+  "employee_number": "456789",
+  "other_field": "valor"
+}
+```
+
+### Mapeamento dos dados ao `request`
+
+O dicionário `AZURE_AD_AUX_USERINFO_MAPPING` define quais campos da resposta JSON serão adicionados ao objeto `request`, e sob quais nomes, por exemplo:
+
+```python
+AZURE_AD_AUX_USERINFO_MAPPING = {
+    "department": "azure_department",
+    "department_number": "azure_department_number",
+    "company": "azure_company",
+    "employee_number": "azure_employee_role",
+}
+```
+
+### Timeout e Resiliência
+
+- Timeout da requisição configurável via `AZURE_AD_AUX_USERINFO_SERVICE_TIMEOUT` (padrão: 10 segundos).
+- Se o serviço estiver indisponível ou ocorrer erro, o middleware registra a falha e continua a requisição normalmente, sem dados adicionais.
+
+## Testes
+
+A suíte de testes do pacote cobre os principais cenários do middleware para garantir robustez:
+
+- Validação de token válido com claim `preferred_username`.
+- Rejeição de token sem o claim `preferred_username` (retorna HTTP 401).
+- Rejeição de token com assinatura inválida.
+- Rejeição de token expirado.
+- Tratamento de tokens do tipo client credentials (app-to-app).
+- Enriquecimento do request com informações adicionais via serviço externo.
+- Respostas adequadas com status 401 ou 500 conforme erro detectado.
+
+### Exemplo básico de teste:
+
+```bash
+cd tests && pip install -r requirements.txt && python manage.py test
+```
