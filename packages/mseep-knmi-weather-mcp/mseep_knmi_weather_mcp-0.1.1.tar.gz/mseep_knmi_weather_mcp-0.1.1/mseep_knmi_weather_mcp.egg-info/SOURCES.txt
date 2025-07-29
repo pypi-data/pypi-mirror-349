@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+mseep_knmi_weather_mcp.egg-info/PKG-INFO
+mseep_knmi_weather_mcp.egg-info/SOURCES.txt
+mseep_knmi_weather_mcp.egg-info/dependency_links.txt
+mseep_knmi_weather_mcp.egg-info/requires.txt
+mseep_knmi_weather_mcp.egg-info/top_level.txt
+tests/test_station.py
