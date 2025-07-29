@@ -1,0 +1,10 @@
+giftool2/__init__.py,sha256=uVyuH8O0oDiOPQXJB62VF9r3qnXt62n0BiVyCZo0yZQ,220
+giftool2/app.py,sha256=6p4oAOzi9EQrzbOR3GawVWM-81bkRE9k8jqo3VP31cU,4471
+giftool2/main.py,sha256=5l3HlWODqyOGM5ZDcDtXJY4mcV3b-e-sIvoQ3lWZg4U,116
+giftool2/static/app.js,sha256=kqEYIyNLT_YVpFIYD9yAgmsiF9eEuiAszlVNhg_54Sg,3578
+giftool2/static/style.css,sha256=0UXvHhyRBqkH7CtQ7UQv52aKt6CK-W0mviTvnKmjbQc,2514
+giftool2/templates/index.html,sha256=TCHLk2FadSnfm9R0oiyv_qWspN7RruqXiYhoo5T07xg,3193
+giftool2-0.10.0.dist-info/METADATA,sha256=QUbg6Af2x6wF1zXxFW-3ed5qVkCj4ejvlWxCKPRUQ0Q,2573
+giftool2-0.10.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+giftool2-0.10.0.dist-info/entry_points.txt,sha256=feetR_YCpo13iRk0wCz-Gim5p5pschwHGELfJ7Gnblw,48
+giftool2-0.10.0.dist-info/RECORD,,
