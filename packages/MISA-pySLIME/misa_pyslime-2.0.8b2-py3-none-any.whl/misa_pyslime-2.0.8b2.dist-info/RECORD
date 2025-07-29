@@ -1,0 +1,14 @@
+MISA_pySLIME/FILEDOWNLOAD.py,sha256=RtQkDkm8tXi22lU6PWBSdvbHTD9-47yVDPETgWSs1QY,1490
+MISA_pySLIME/MISA_pySLIME.py,sha256=2VgZRUQFP1NCfzhhcvnxHZXZ9jrHfA2zwRr7MipIDK4,9142
+MISA_pySLIME/__init__.py,sha256=yytz1O4nuHFOlP9adc9XoWihewTqzJNAhc-mWIsXB1A,453
+MISA_pySLIME/ancillary/processed_ncs/grid_ds_2.0.8.nc,sha256=TERA55lVnGUDl-NQuhrNmUX0HUxhC6DUKhHedDQuMMQ,7011160
+MISA_pySLIME/model/ne_model_2_0_5.npy,sha256=OTvk0Sj1wcf9I9P8bpEhgoEvWUobLBA_YHIhWKnzpfQ,346408
+MISA_pySLIME/model/ne_model_2_0_8.npy,sha256=wU8KQxItjsdPioecc1BF4Pd58UuqNGxkZvhnKY2AaaA,196976
+MISA_pySLIME/model/te_model_2_0_5.npy,sha256=66zHwZNhNvKBn9evDvusGew3_qSdzNRCLE4ThCZFAHs,350973
+MISA_pySLIME/model/te_model_2_0_8.npy,sha256=3FNgaUNgjTbsu9BPuMULh3Sz7trtZF80XhN4nBvxbnc,197906
+MISA_pySLIME/model/ti_model_2_0_5.npy,sha256=29OLhWXjnxbeGC5M4By6XR3JRvpQzRgEO0HBB36S0MU,350757
+MISA_pySLIME/model/ti_model_2_0_8.npy,sha256=KylfkxI8fysGOcNmnOFnzbeAq4SkRVBY_JjjZzKEgIE,197789
+misa_pyslime-2.0.8b2.dist-info/METADATA,sha256=MporlANkRhM3YFPYHPscoBg18rLfqeg-oC8-OJ7hzIk,4673
+misa_pyslime-2.0.8b2.dist-info/WHEEL,sha256=Nw36Djuh_5VDukK0H78QzOX-_FQEo6V37m3nkm96gtU,91
+misa_pyslime-2.0.8b2.dist-info/top_level.txt,sha256=mRPyASEOlKmPXNqfbJYjwIJcuXauJweQIGqZhZmJ-GI,13
+misa_pyslime-2.0.8b2.dist-info/RECORD,,
