@@ -1,0 +1,10 @@
+fastmcp
+httpx
+pydantic
+python-dotenv
+pytest
+polars
+xarray
+numpy
+netCDF4
+pydantic-settings>=2.7.1

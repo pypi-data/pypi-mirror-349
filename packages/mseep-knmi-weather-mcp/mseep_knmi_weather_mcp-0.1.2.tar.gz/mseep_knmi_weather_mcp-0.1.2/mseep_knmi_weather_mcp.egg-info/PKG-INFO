@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: mseep-knmi-weather-mcp
+Version: 0.1.2
+Summary: KNMI Weather MCP Server
+Home-page: 
+Author: mseep
+Author-email: mseep <support@skydeck.ai>
+Maintainer-email: mseep <support@skydeck.ai>
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: fastmcp
+Requires-Dist: httpx
+Requires-Dist: pydantic
+Requires-Dist: python-dotenv
+Requires-Dist: pytest
+Requires-Dist: polars
+Requires-Dist: xarray
+Requires-Dist: numpy
+Requires-Dist: netCDF4
+Requires-Dist: pydantic-settings>=2.7.1
+Dynamic: author
+Dynamic: license-file
+Dynamic: requires-python
