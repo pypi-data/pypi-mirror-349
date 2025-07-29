@@ -1,0 +1,10 @@
+tencentcloud/__init__.py,sha256=8Xmub_b-Wd19tU1pj3io4MxpRhSK2A6ny0ZQ-yYZH9I,631
+tencentcloud/hai/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tencentcloud/hai/v20230812/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tencentcloud/hai/v20230812/errorcodes.py,sha256=Qw5tm9zCcst1QkgaPSyWVhV4Ik5RXa_ijUNHTp7h-4w,6532
+tencentcloud/hai/v20230812/hai_client.py,sha256=LFx3qwZNv-96bLVvRsouOJFpl9xWpcpE2vFab2GF8JE,13933
+tencentcloud/hai/v20230812/models.py,sha256=3QgXR-5iOFYZP3Rcur114_XvmR6kihPqCOek8rTy-2s,98308
+tencentcloud_sdk_python_hai-3.0.1383.dist-info/METADATA,sha256=aQlDmOpw_9DUj6pa2NTRCXPQ1t36B92ORWwkEpGLFUM,1496
+tencentcloud_sdk_python_hai-3.0.1383.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+tencentcloud_sdk_python_hai-3.0.1383.dist-info/top_level.txt,sha256=g-8OyzoqI6O6LiS85zkeNzhB-osEnRIPZMdyRd_0eL0,13
+tencentcloud_sdk_python_hai-3.0.1383.dist-info/RECORD,,
