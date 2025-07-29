@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: mseep-arithmo_mcp_server
+Version: 0.1.2
+Summary: An MCP server providing fast arithmetic operations.
+Home-page: 
+Author: mseep
+Author-email: mseep <support@skydeck.ai>
+Maintainer-email: mseep <support@skydeck.ai>
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: mcp
+Dynamic: author
+Dynamic: license-file
+Dynamic: requires-python
+
+# Package managed by MseeP.ai
