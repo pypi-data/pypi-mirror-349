@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: polynx
+Version: 0.1.0
+Summary: String-powered Polars expression engine with extended DataFrame utilities
+Home-page: https://github.com/LowellWinston/polynx.git
+Author: Lowell Winsston
+Author-email: Lowell Winston <lowell.j.winston@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/LowellWinston/polynx.git
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: polars>=1.24
+Requires-Dist: lark>=1.2.2
+Requires-Dist: matplotlib>=3.8.2
+Requires-Dist: pandas>=2.1.4
+Requires-Dist: numpy>=1.26.2
+
+# polynx
+String-powered Polars expression engine with extended DataFrame utilities. 
