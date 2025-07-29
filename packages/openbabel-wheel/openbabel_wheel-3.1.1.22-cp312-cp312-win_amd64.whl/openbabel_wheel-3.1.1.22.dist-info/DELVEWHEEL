@@ -1,0 +1,2 @@
+Version: 1.10.1
+Arguments: ['C:\\Users\\runneradmin\\AppData\\Local\\Temp\\cibw-run-dcz5g3_q\\cp312-win_amd64\\build\\venv\\Scripts\\delvewheel', 'repair', '-w', 'C:\\Users\\runneradmin\\AppData\\Local\\Temp\\cibw-run-dcz5g3_q\\cp312-win_amd64\\repaired_wheel', 'C:\\Users\\runneradmin\\AppData\\Local\\Temp\\cibw-run-dcz5g3_q\\cp312-win_amd64\\built_wheel\\openbabel_wheel-3.1.1.22-cp312-cp312-win_amd64.whl', '--ignore-in-wheel']
