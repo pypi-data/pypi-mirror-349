@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: mseep-toast-mcp-server
+Version: 0.1.2
+Summary: A Model Context Protocol (MCP) server with Windows 10 and macOS desktop notifications support
+Author: mseep
+Author-email: mseep <support@skydeck.ai>
+Maintainer: mseep
+Maintainer-email: mseep <support@skydeck.ai>
+License: MIT
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: win10toast; platform_system == "Windows"
+Dynamic: author
+Dynamic: license-file
+Dynamic: maintainer
+Dynamic: requires-python
+
+# Package managed by MseeP.ai

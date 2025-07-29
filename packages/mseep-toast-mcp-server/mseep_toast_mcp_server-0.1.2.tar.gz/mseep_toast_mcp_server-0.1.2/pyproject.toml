@@ -1,0 +1,31 @@
+[build-system]
+requires = [
+    "setuptools>=42",
+    "wheel",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mseep-toast-mcp-server"
+version = "0.1.2"
+description = "A Model Context Protocol (MCP) server with Windows 10 and macOS desktop notifications support"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "win10toast;platform_system=='Windows'",
+]
+authors = [
+    { name = "mseep", email = "support@skydeck.ai" },
+]
+maintainers = [
+    { name = "mseep", email = "support@skydeck.ai" },
+]
+
+[project.license]
+text = "MIT"
+
+[tool.pytest.ini_options]
+testpaths = [
+    "tests",
+]
+python_files = "test_*.py"
