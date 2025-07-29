@@ -1,0 +1,5 @@
+# This file contains sensitive credentials - DO NOT commit to version control
+api_key: ''
+dark_mode: true
+endpoint: http://localhost:8000/api/tokenize
+model: gpt-4-vision

@@ -1,0 +1,6 @@
+# MANIFEST.in
+include README.md
+include LICENSE
+include config.yaml
+recursive-include token_itemize/assets *
+recursive-include token_itemize *.yaml

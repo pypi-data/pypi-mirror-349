@@ -1,0 +1,2 @@
+[console_scripts]
+token-itemize = token_itemize.main:main
