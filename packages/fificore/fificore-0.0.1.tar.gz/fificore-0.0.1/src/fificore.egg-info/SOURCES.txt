@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+src/fifi/__init__.py
+src/fifi/database/engine_base.py
+src/fifi/decorator/db_async_session_injection.py
+src/fifi/decorator/singleton.py
+src/fifi/decorator/time_log.py
+src/fificore.egg-info/PKG-INFO
+src/fificore.egg-info/SOURCES.txt
+src/fificore.egg-info/dependency_links.txt
+src/fificore.egg-info/requires.txt
+src/fificore.egg-info/top_level.txt
