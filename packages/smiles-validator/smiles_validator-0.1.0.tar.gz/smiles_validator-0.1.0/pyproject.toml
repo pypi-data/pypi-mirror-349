@@ -1,0 +1,12 @@
+[project]
+name = "smiles-validator"
+authors = [
+    { name = "Christian Tanul", email = "contact@christiantanul.com" }
+]
+version = "0.1.0"
+description = "Lightweight Pydantic v2 validator for RDKit SMILES: sanitizes, canonicalizes & caches results"
+requires-python = ">=3.12"
+dependencies = [
+  "pydantic>=2.11,<3.0",
+  "rdkit>=2024.9,<2025.0",
+]
