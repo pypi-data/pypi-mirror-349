@@ -1,0 +1,46 @@
+Metadata-Version: 2.4
+Name: mcp-server-demo2025
+Version: 0.1.0
+Summary: 一个演示用的MCP服务器2025版
+Home-page: https://github.com/yourusername/mcp-server-demo2025
+Author: Your Name
+Author-email: your@email.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Intended Audience :: Developers
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: mcp>=1.6.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# MCP Demo Server 2025
+
+这是一个演示用的MCP服务器，包含 hello 和 get_time 两个工具。
+
+## 安装
+
+```bash
+pip install mcp-server-demo2025
+```
+
+## 使用
+
+```bash
+uvx mcp-server-demo2025
+# 或
+mcp-server-demo2025
+# 或
+python -m mcp_server_demo2025
+``` 

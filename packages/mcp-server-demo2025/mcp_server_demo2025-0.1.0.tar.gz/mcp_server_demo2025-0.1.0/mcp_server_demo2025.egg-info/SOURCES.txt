@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+mcp_server_demo2025/__init__.py
+mcp_server_demo2025/__main__.py
+mcp_server_demo2025.egg-info/PKG-INFO
+mcp_server_demo2025.egg-info/SOURCES.txt
+mcp_server_demo2025.egg-info/dependency_links.txt
+mcp_server_demo2025.egg-info/entry_points.txt
+mcp_server_demo2025.egg-info/requires.txt
+mcp_server_demo2025.egg-info/top_level.txt
