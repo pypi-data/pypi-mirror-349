@@ -1,0 +1,30 @@
+Metadata-Version: 2.4
+Name: noahs_sentiment_classifier
+Version: 0.1.0
+Summary: A combination of classification implementations for finding if text is 'friendly', 'hostile', or 'neutral'
+Author-email: Noah Jones <jonesnoah45010@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/jonesnoah45010/sentiment_classifier
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: textblob
+Requires-Dist: nltk
+Requires-Dist: transformers
+Requires-Dist: torch
+Requires-Dist: accelerate
+Requires-Dist: requests
+Requires-Dist: numpy
+
+
+
+
+
+# Noah's Sentiment Classifier
+
+A simple ensemble sentiment classifier using TextBlob, VADER, and Transformers (including Roberta).
+
+## Installation
+
+```bash
+pip install noahs-sentiment-classifier
+```
