@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: ck-sso-cli
+Version: 2.0.4
+Summary: Provides a wrapper for AWS IAM Identity Center authentication to an External AWS Account
+Home-page: https://www.cloudkeeper.com/
+Author: Aditya Ajay
+Author-email: aditya.ajay@cloudkeeper.com
+License: Apache License 2.0
+License-File: LICENSE

@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+ck_sso_cli.egg-info/PKG-INFO
+ck_sso_cli.egg-info/SOURCES.txt
+ck_sso_cli.egg-info/dependency_links.txt
+ck_sso_cli.egg-info/entry_points.txt
+ck_sso_cli.egg-info/requires.txt
+ck_sso_cli.egg-info/top_level.txt
+ckssocli/__init__.py
+ckssocli/ck_configuration.py
+ckssocli/ck_help.py
+ckssocli/ck_login.py
+ckssocli/ck_sso_cli.py
+ckssocli/version.py
