@@ -1,0 +1,10 @@
+strictprotocol/__init__.py,sha256=RFlVc_yAxu8x9llwkadP05O6ALKxlB_gF1x0Og_xeP0,571
+strictprotocol/core.py,sha256=QMZGSxd9CGlWJBYagkzLTnKzU1-kJcFQrBgME30MToU,12595
+strictprotocol/core.pyi,sha256=2WlLHudUmOO2ZpzE1Rv0CMz6_P2zESdsiSIhV-AR55o,761
+strictprotocol/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+strictprotocol/safe_typing.py,sha256=xR8ZHc9l2JOy5rwAsE6PiTwCrJXRp_qdwvyTTjGk6A0,23792
+strictprotocol-0.1.12.dist-info/licenses/LICENSE,sha256=wHSV424U5csa3339dy1AZbsz2xsd0hrkMx2QK48CcUk,1062
+strictprotocol-0.1.12.dist-info/METADATA,sha256=69bGTf69Llg5Dnuc1X7ypGzDZFtJGjO4BxkrozBBQ5w,1447
+strictprotocol-0.1.12.dist-info/WHEEL,sha256=Nw36Djuh_5VDukK0H78QzOX-_FQEo6V37m3nkm96gtU,91
+strictprotocol-0.1.12.dist-info/top_level.txt,sha256=lcDfmdXM9MtXwJ-aD0xqV-blFCE6KKbt54N2-2hN4hY,15
+strictprotocol-0.1.12.dist-info/RECORD,,
