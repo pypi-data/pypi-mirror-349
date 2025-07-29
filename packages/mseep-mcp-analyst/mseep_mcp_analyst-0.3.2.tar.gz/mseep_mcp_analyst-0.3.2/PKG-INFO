@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: mseep-mcp-analyst
+Version: 0.3.2
+Summary: MCP Analyst is an MCP server that empowers claude to analyze local CSV or Parquet files.
+Home-page: 
+Author: mseep
+Author-email: mseep <support@skydeck.ai>
+Maintainer-email: mseep <support@skydeck.ai>
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: mcp[cli]>=1.6.0
+Requires-Dist: polars>=1.26.0
+Dynamic: author
+Dynamic: requires-python
+
+# Package managed by MseeP.ai
