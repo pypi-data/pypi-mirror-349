@@ -1,0 +1,2 @@
+[console_scripts]
+hefeng-weather = hefeng_weather.cli:main
