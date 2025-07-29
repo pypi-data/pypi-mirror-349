@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: mseep-mcp-pdf-tools
+Version: 0.1.2
+Summary: MCP server for PDF manipulation
+Author-email: mseep <support@skydeck.ai>
+Maintainer-email: mseep <support@skydeck.ai>
+License-Expression: MIT
+License-File: LICENSE
+Requires-Python: >=3.10
+Requires-Dist: mcp
+Requires-Dist: pypdf2
