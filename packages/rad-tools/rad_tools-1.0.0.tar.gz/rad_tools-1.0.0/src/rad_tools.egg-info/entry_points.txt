@@ -1,0 +1,6 @@
+[console_scripts]
+rad-identify-wannier-centres = radtools.score.identify_wannier_centres:main
+rad-plot-dos = radtools.score.plot_dos:main
+rad-plot-flatbands = radtools.score.plot_fatbands:main
+rad-test = radtools.score.test:main
+radtools = radtools.__main__:main
