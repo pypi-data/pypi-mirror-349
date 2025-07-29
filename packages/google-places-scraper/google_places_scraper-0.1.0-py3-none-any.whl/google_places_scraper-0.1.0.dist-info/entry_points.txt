@@ -1,0 +1,2 @@
+[console_scripts]
+google-places-scraper = google_places_scraper.cli:main
