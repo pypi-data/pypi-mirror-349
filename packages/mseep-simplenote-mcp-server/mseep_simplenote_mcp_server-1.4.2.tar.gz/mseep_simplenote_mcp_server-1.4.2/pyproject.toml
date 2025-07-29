@@ -1,0 +1,110 @@
+[project]
+name = "mseep-simplenote-mcp-server"
+version = "1.4.2"
+description = "A simple MCP Server that connects to Simplenote"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+    { name = "mseep", email = "support@skydeck.ai" },
+]
+dependencies = [
+    "mcp[cli]>=0.4.0",
+    "simplenote>=2.1.4",
+]
+maintainers = [
+    { name = "mseep", email = "support@skydeck.ai" },
+]
+
+[project.license]
+text = "MIT"
+
+[project.scripts]
+simplenote-mcp-server = "simplenote_mcp.server:run_main"
+
+[build-system]
+requires = [
+    "setuptools>=42",
+    "wheel",
+]
+build-backend = "setuptools.build_meta"
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+overrides = [
+    { module = "tests.*", disallow_untyped_defs = false },
+]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 88
+
+[tool.ruff.lint]
+select = [
+    "E",
+    "F",
+    "W",
+    "I",
+    "B",
+    "C4",
+    "ARG",
+    "SIM",
+    "S",
+    "ANN",
+    "UP",
+    "N",
+    "D",
+]
+ignore = [
+    "E203",
+    "E501",
+    "ANN101",
+    "ANN102",
+    "ANN401",
+    "D203",
+    "D212",
+    "D107",
+    "S101",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = [
+    "F401",
+    "D104",
+]
+"tests/*" = [
+    "ARG001",
+    "ARG002",
+    "S101",
+    "ANN",
+    "D",
+]
+"simplenote_mcp/tests/*" = [
+    "ARG001",
+    "ARG002",
+    "S101",
+    "ANN",
+    "D",
+    "E402",
+]
+"**/conftest.py" = [
+    "D",
+    "ANN",
+]
+
+[tool.ruff.lint.isort]
+known-first-party = [
+    "simplenote_mcp",
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.bandit]
+exclude-pathnames = [
+    "tests/*",
+    "simplenote_mcp/tests/*",
+]
