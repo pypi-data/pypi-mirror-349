@@ -1,0 +1,16 @@
+prepropy/__init__.py,sha256=LQ23zgG6sjQOxVLCisiWzncYgeVLG3ovk4n6Qpf6Ti4,927
+prepropy/cli.py,sha256=LMYVH07VrT62bOigRT7G1O3tyryytkXRakh4wWF-UB8,4768
+prepropy/duplichecker.py,sha256=yzWMmyMmA9DsOGdm-fU1yWvkkgXnCYWhI2SkqGPzfCI,3806
+prepropy/nullsense.py,sha256=UW6DW4LppRo2B69iIC-YqKHFYIwEqasskZRmD-xW7kU,3625
+prepropy/scalenpipe.py,sha256=4IYAs4a5QzkicpEirLwiLYUGTvz3lm0gC53n04DcVA0,2377
+prepropy-0.1.0.dist-info/licenses/LICENSE,sha256=byURKHbetX3ga7uqjoeOP9cgTI5eyMF3K0FhFkMi74o,1091
+tests/__init__.py,sha256=2enQeSo4kmZpt5coEzFU7fcoegBMXhwsAaAKsc_De54,39
+tests/run_tests.py,sha256=eaK9r6PAWzYbhox8IhKik_cAUlJtobFfZUincLqBkXw,1005
+tests/test_duplichecker.py,sha256=KY4rnXVDaNspSV4ZHwHrAzvgtxW7YMRk-ekMqDMAuFI,3989
+tests/test_nullsense.py,sha256=A6dgUrdVoR2lHijdRlRNby8CsgghzJAfl7E7mOKFlpE,4204
+tests/test_scalenpipe.py,sha256=dR--VGqBpBTci_Gz5c0MCB34YtZ8801PEOfpIQxuYXo,3525
+prepropy-0.1.0.dist-info/METADATA,sha256=g8bgoYEMs4en8Msd3FI3dKY-W2lN_Am2TxHWouLAzBw,4331
+prepropy-0.1.0.dist-info/WHEEL,sha256=Nw36Djuh_5VDukK0H78QzOX-_FQEo6V37m3nkm96gtU,91
+prepropy-0.1.0.dist-info/entry_points.txt,sha256=6-BcCMpLK98s1yLlAcr1MOJLQxFeIKiZG-mkLtgQicI,47
+prepropy-0.1.0.dist-info/top_level.txt,sha256=7TZM9z-yqPpEyDIayYY_oJV40zMMSsgQAB8eN4McRtI,15
+prepropy-0.1.0.dist-info/RECORD,,
