@@ -1,0 +1,17 @@
+{
+    "id": 1,
+    "name": "permission1",
+    "users": [
+        {
+            "username": "user1"
+        }
+    ],
+    "constraints": [
+        {
+            "status": "active"
+        },
+        {
+            "region__name": "Europe"
+        }
+    ]
+}
