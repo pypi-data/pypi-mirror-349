@@ -1,0 +1,11 @@
+setup.py
+LibraryBasics.egg-info/PKG-INFO
+LibraryBasics.egg-info/SOURCES.txt
+LibraryBasics.egg-info/dependency_links.txt
+LibraryBasics.egg-info/top_level.txt
+hangmansolver/__init__.py
+hangmansolver/main.py
+passcrack/__init__.py
+passcrack/main.py
+printslow/__init__.py
+printslow/main.py
