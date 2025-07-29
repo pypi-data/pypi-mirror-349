@@ -1,0 +1,53 @@
+Metadata-Version: 2.4
+Name: barecat-cython
+Version: 0.0.2
+Summary: Cython-based implementation of the Barecat archive format.
+Author-email: István Sárándi <istvan.sarandi@gmail.com>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/isarandi/barecat-cython
+Project-URL: Repository, https://github.com/isarandi/barecat-cython
+Project-URL: Issues, https://github.com/isarandi/barecat-cython/issues
+Project-URL: Author, https://istvansarandi.com
+Keywords: sqlite,dataset,storage,archive,random-access,image-dataset,filesystem,key-value-store,deep-learning,data-loader,file-indexing
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: System :: Archiving
+Classifier: Topic :: System :: Filesystems
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Cython
+Classifier: Operating System :: POSIX :: Linux
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Dynamic: license-file
+
+# Barecat-Cython
+
+A partial Cython/C implementation of the [Barecat storage file format](https://github.com/isarandi/barecat).
+ 
+Install with:
+```bash
+pip install barecat-cython
+```
+
+## Usage
+
+The classes `BarecatCython` and `BarecatMmapCython` are similar to `barecat.Barecat` but do not support writing and advanced functions such as listing directories and globbing, etc. Only retrieving file data based on a given key string (inner filepath) is supported.
+
+The difference between the two classes in `barecat_cython`` is that `BarecatCython` uses file handles and seek/read to access shard files, while `BarecatMmapCython` uses memory mapping. Depending on computer and filesystem properties, one or the other may be faster, though the difference is not large in my experience.
+
+```python
+from barecat_cython import BarecatCython, BarecatMmapCython
+
+with BarecatCython('example.barecat') as bc:
+    ...
+
+with BarecatMmapCython('example.barecat') as bc:
+    ...
+```
+
