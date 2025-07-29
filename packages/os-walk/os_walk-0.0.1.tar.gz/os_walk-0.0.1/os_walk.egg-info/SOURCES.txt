@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+setup.py
+os_walk/__init__.py
+os_walk.egg-info/PKG-INFO
+os_walk.egg-info/SOURCES.txt
+os_walk.egg-info/dependency_links.txt
+os_walk.egg-info/top_level.txt
