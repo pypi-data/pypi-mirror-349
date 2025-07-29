@@ -1,0 +1,16 @@
+[project]
+name = "templatestring"
+version = "0.1.0"
+description = "An alias for tstr"
+readme = "README.md"
+authors = [
+    { name = "ilotoki0804", email = "ilotoki0804@gmail.com" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "tstr",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

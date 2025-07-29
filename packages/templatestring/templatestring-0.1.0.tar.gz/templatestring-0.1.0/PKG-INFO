@@ -1,0 +1,7 @@
+Metadata-Version: 2.4
+Name: templatestring
+Version: 0.1.0
+Summary: An alias for tstr
+Author-email: ilotoki0804 <ilotoki0804@gmail.com>
+Requires-Python: >=3.10
+Requires-Dist: tstr

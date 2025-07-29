@@ -1,0 +1,23 @@
+version = 1
+revision = 1
+requires-python = ">=3.10"
+
+[[package]]
+name = "templatestring"
+version = "0.1.0"
+source = { editable = "." }
+dependencies = [
+    { name = "tstr" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "tstr" }]
+
+[[package]]
+name = "tstr"
+version = "0.1.1.post1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/4f/ae/5bacf3c33f17f6e58776787dd52581853b1257bf66bcb7db681431fb2339/tstr-0.1.1.post1.tar.gz", hash = "sha256:5887eddd01f6fe7864411962b0593faf8d996950b1403f0dde7110cbb065d331", size = 33734 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/5f/4d/dcdb85e444072a50c2554f5cd23814d6c980d56a30a4d0fd1e8a0294d719/tstr-0.1.1.post1-py3-none-any.whl", hash = "sha256:1900c23d68677b42224ce88b2584c954921d4bb41c84d555a52e9b5df92048c0", size = 16021 },
+]
