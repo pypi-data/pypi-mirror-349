@@ -1,0 +1,3 @@
+[console_scripts]
+nash=nash_mcp.server:main
+
