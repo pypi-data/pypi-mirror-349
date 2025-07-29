@@ -1,0 +1,15 @@
+mvkm_ed/__init__.py,sha256=idTDzA90PKz9DLOYU83vZlffoqREca-2rWVT5PFlZWs,492
+mvkm_ed/core.py,sha256=Hhw8Xxj8OLNZ5GMekXAFVVgCnazEr1USzkpyiGm1-a4,8554
+mvkm_ed/datasets.py,sha256=09Qxr0J1pnUd4XVN3YxDstaqnY0HhOYK3VM2b_rsWtA,4699
+mvkm_ed/federated.py,sha256=jUsgpMYygtWNsw8Q44eSHXbmbN3KZWL7KIDXUXrms90,13032
+mvkm_ed/mvkm_ed.py,sha256=A4Vl4CR3uAz4JnHPkWDqfN4DhCSwqgGhsHWGcNVE1OA,7230
+mvkm_ed/utils.py,sha256=jH9_urExEFHlXfuGN7hDcuRuPysa1fZ4_yjRsxOROIo,5754
+mvkm_ed-1.1.0.dist-info/licenses/LICENSE,sha256=Im-qXpAVqqwrUYKdMI5ecIVHvW3bO6rAtVw5hnsa8pI,1075
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_core.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_federated.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_utils.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mvkm_ed-1.1.0.dist-info/METADATA,sha256=Vqjw76RtHgrn6rn0eZGn298_5jlkBYZercDkxR0SFI4,3838
+mvkm_ed-1.1.0.dist-info/WHEEL,sha256=Nw36Djuh_5VDukK0H78QzOX-_FQEo6V37m3nkm96gtU,91
+mvkm_ed-1.1.0.dist-info/top_level.txt,sha256=XXUmL8ya1DXkPWMsvM2KW1AOUxvZcA60PKu8tsfGNc0,14
+mvkm_ed-1.1.0.dist-info/RECORD,,
