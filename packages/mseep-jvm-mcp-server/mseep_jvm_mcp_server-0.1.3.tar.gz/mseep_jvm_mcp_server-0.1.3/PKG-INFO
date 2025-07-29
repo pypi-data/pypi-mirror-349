@@ -1,0 +1,26 @@
+Metadata-Version: 2.4
+Name: mseep-jvm-mcp-server
+Version: 0.1.3
+Summary: 基于Arthas的JVM监控MCP服务器实现
+Author-email: mseep <support@skydeck.ai>
+Maintainer-email: mseep <support@skydeck.ai>
+License-Expression: MIT
+License-File: LICENSE
+Keywords: arthas,java,jvm,mcp,monitoring
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: System :: Monitoring
+Requires-Python: >=3.10
+Requires-Dist: mcp[cli]>=1.3.0
+Requires-Dist: paramiko>=3.5.1
+Description-Content-Type: text/markdown
+
+# Package managed by MseeP.ai
