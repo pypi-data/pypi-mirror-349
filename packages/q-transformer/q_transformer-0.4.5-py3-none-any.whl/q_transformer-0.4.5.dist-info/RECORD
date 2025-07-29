@@ -1,0 +1,11 @@
+q_transformer/__init__.py,sha256=LS1CjpTUfaYVibqyXjvbTn97P-afsBP0bNx1ShQl-uk,235
+q_transformer/agent.py,sha256=8sY23TdE0JIsy0sHmetb8R4FiEEFYWlZqo6k_78u_YM,9985
+q_transformer/mocks.py,sha256=XNHg4r8bUlDjtjtSjIUDep0la5Etg8McJgCochktZRU,2812
+q_transformer/q_learner.py,sha256=Q1NvuJTQYCQwBXv9V5bxZ3efHDk-jrl9lbpzhsZ9EHA,21812
+q_transformer/q_robotic_transformer.py,sha256=GTkBGG8cN2U8ZX-lbFV7v_spJzUVxN0_axHXfckJigM,39636
+q_transformer/tensor_typing.py,sha256=2aUeDq34TmWeurXF9E93Gj_be3houMePK1ZsJuV3-d4,447
+q_transformer-0.4.5.dist-info/licenses/LICENSE,sha256=JCo3d2HvOFPGYvaXfnYX4-qjRyQvVElop5ZRITXMg-U,1066
+q_transformer-0.4.5.dist-info/METADATA,sha256=bGgE5xF__AOGdr0B9XdhHneoiaRwF8iqMKbLqTgcU0M,1251
+q_transformer-0.4.5.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+q_transformer-0.4.5.dist-info/top_level.txt,sha256=JAJFP0S-7qqeQ4z-w24nBNqLALc1lrx3t04AObVrSS4,14
+q_transformer-0.4.5.dist-info/RECORD,,
