@@ -1,0 +1,4 @@
+certbot_deployer<3.0.0,>=2.0.0
+requests<2.33.0,>=2.32.3
+vmware_vapi_runtime<3.0.0,>=2.52.0
+vmware_vcenter<9.0.0.0,>=8.0.3.0
