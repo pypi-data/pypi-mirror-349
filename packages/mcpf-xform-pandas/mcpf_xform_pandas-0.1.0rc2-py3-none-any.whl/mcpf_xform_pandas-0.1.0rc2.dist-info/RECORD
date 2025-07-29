@@ -1,0 +1,5 @@
+mcpf_xform/pd/__init__.py,sha256=5U-kyHHGlBjdWryxyihl5TcEsZV4K_h6cHTLvcb0v5I,5023
+mcpf_xform/pd/helper.py,sha256=WV4P5xOqEJnX8Ir6tXTfh7Fgj5DICBrbhnT48kNulMU,1930
+mcpf_xform_pandas-0.1.0rc2.dist-info/METADATA,sha256=jXer6Cfs6B3Fl4vd7a29SU0xuioZ9ROLKpLXYhrW7tg,439
+mcpf_xform_pandas-0.1.0rc2.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+mcpf_xform_pandas-0.1.0rc2.dist-info/RECORD,,
