@@ -1,0 +1,8 @@
+dfembed-0.1.5.dist-info/METADATA,sha256=rVVkFW7TxH9B8R7nkCtHKIW3wlerNKKBZ1T3tff8aeY,8198
+dfembed-0.1.5.dist-info/WHEEL,sha256=ryp1uXCltaq3TPfjxhSWoam4EHMC40-Yabw-yvEW9gU,104
+dfembed-0.1.5.dist-info/licenses/LICENSE,sha256=5HAXuF72LsVGOMg5WeSWlIuVbD7DrvJ0uyTcR_vstw8,1067
+dfembed/__init__.py,sha256=_kjtw1wn0newcejzPR4UTeAj1Dt_GvZhlY52tgishu4,1867
+dfembed/core.py,sha256=Qyz49NVM4PVxhV7jvsue4maWa0oFCTh48iyPpCC1vtM,4968
+dfembed/dfembed.cpython-312-darwin.so,sha256=9t1_Z3__RMbdJTgJa_ZBB7JHtqhakTD4C6_MhWJgkFg,110436176
+dfembed/llamaindex.py,sha256=sKPONWAMr_xfFEsW4gTZJHuZdIoRDx6Nyqb80wtwO1g,6591
+dfembed-0.1.5.dist-info/RECORD,,
