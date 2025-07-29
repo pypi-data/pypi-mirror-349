@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: mcp-server-markets
+Version: 0.0.post1.dev9
+Summary: Add your description here
+Project-URL: Homepage, https://github.com/danchev/mcp-server-markets
+Project-URL: Issues, https://github.com/danchev/mcp-server-markets/issues
+Requires-Python: >=3.12
+Requires-Dist: mcp[cli]>=1.9.0
+Requires-Dist: yfinance>=0.2.61
