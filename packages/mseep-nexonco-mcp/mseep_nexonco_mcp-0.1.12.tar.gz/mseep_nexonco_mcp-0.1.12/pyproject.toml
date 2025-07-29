@@ -1,0 +1,29 @@
+[project]
+name = "mseep-nexonco-mcp"
+version = "0.1.12"
+description = "An advanced MCP Server for accessing and analyzing clinical evidence data, with flexible search options to support precision medicine and oncology research."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "mcp[cli]>=1.6.0",
+    "pandas>=2.2.3",
+    "requests>=2.32.3",
+    "starlette>=0.46.1",
+    "uvicorn>=0.34.0",
+]
+authors = [
+    { name = "mseep", email = "support@skydeck.ai" },
+]
+maintainers = [
+    { name = "mseep", email = "support@skydeck.ai" },
+]
+
+[project.scripts]
+nexonco = "nexonco.server:main"
+
+[build-system]
+requires = [
+    "setuptools>=42",
+    "wheel",
+]
+build-backend = "setuptools.build_meta"
