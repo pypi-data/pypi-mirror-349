@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: mseep-aranet4-mcp-server
+Version: 0.1.2
+Summary: Simple MCP server to manage your aranet4 device and local db.
+Home-page: 
+Author: mseep
+Author-email: mseep <support@skydeck.ai>
+Maintainer-email: mseep <support@skydeck.ai>
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: mcp[cli]>=1.6.0
+Requires-Dist: pillow>=11.1.0
+Requires-Dist: aranet4>=2.5.1
+Requires-Dist: matplotlib>=3.10.1
+Requires-Dist: pandas>=2.2.3
+Requires-Dist: tzlocal>=5.3.1
+Requires-Dist: pyyaml>=6.0.2
+Dynamic: author
+Dynamic: requires-python
+
+# Package managed by MseeP.ai
