@@ -1,0 +1,9 @@
+rawjs2dict/__init__.py,sha256=Nt5h44Dy513z_kE1tegkTRoNLbpnFcCdMxfT6rAz1Zw,73
+rawjs2dict/acorn.js,sha256=_uQYLHa7qbBIo2pTSq2VSWvZ7hZy8-T3qDXCvEOchyg,326983
+rawjs2dict/main.py,sha256=sOIQXQGkSGgKjCURdjEs3Rpn2QREqOcsjcdMPfhkqrw,588
+rawjs2dict/transformers.py,sha256=-9pnjlKFHmZRPE3VTzQ3nLRrCFtDfp1q7OgY7bP53ik,7479
+rawjs2dict/utils.py,sha256=z-PMc4XtSu9u_CyvV9NBENa1CGfNblXwH9IE57SFnag,2404
+rawjs2dict-0.0.9.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+rawjs2dict-0.0.9.dist-info/METADATA,sha256=C56qctSABjRwxQVkdrwwNl2ax_Ea3uNr3HdU3z72-rE,411
+rawjs2dict-0.0.9.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+rawjs2dict-0.0.9.dist-info/RECORD,,

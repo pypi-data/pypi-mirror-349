@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: rawjs2dict
+Version: 0.0.9
+Summary: Library that converts raw JS scripts to Python dictionaries
+Author: Blat AI
+Requires-Python: >=3.9,<3.13
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: mini-racer (>=0.12.4,<0.13)
