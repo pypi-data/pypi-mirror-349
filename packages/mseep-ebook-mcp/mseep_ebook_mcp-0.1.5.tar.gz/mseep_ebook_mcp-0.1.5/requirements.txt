@@ -1,0 +1,13 @@
+ebooklib>=0.17.1
+PyPDF2>=3.0.0
+PyMuPDF>=1.20.0
+beautifulsoup4>=4.9.3
+html2text>=2020.1.16
+pydantic<2.9,>=2.8
+fastmcp>=2.1.2
+beautifulsoup4>=4.12.0
+ebooklib>=0.17.1
+pytest==8.3.5
+pydantic>=2.0.0
+uvicorn>=0.27.0,<1.0.0
+starlette>=0.46.2
