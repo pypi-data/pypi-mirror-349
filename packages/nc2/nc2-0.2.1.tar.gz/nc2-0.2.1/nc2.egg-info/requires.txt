@@ -1,0 +1,7 @@
+numpy>=1.19.0
+netCDF4>=1.5.0
+matplotlib>=3.3.0
+cartopy>=0.18.0
+ttkbootstrap>=1.0.0
+Pillow>=8.0.0
+imageio>=2.9.0
