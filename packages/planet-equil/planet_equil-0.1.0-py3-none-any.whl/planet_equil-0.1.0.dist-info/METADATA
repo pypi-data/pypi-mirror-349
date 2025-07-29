@@ -1,0 +1,76 @@
+Metadata-Version: 2.3
+Name: planet-equil
+Version: 0.1.0
+Summary: PlaNet: reconstruction of plasma equilibrium and separatrix using convolutional physics-informed neural operator. See https://doi.org/10.1016/j.fusengdes.2024.114193
+License: MIT
+Author: Matteo Bonotto
+Author-email: m.bonotto@outlook.com
+Requires-Python: >=3.10,<3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: black (>=25.1.0,<26.0.0)
+Requires-Dist: datasets (>=3.3.2,<4.0.0)
+Requires-Dist: h5py (>=3.13.0,<4.0.0)
+Requires-Dist: ipykernel (>=6.29.5,<7.0.0)
+Requires-Dist: lightning (>=2.5.1.post0,<3.0.0)
+Requires-Dist: matplotlib (>=3.10.1,<4.0.0)
+Requires-Dist: mypy (>=1.15.0,<2.0.0)
+Requires-Dist: numpy (>=2.0.2,<3.0.0)
+Requires-Dist: pandas (>=2.2.3,<3.0.0)
+Requires-Dist: plotly (>=6.0.0,<7.0.0)
+Requires-Dist: poetry (>=2.1.1,<3.0.0)
+Requires-Dist: pytest (>=8.3.5,<9.0.0)
+Requires-Dist: scikit-learn (>=1.6.1,<2.0.0)
+Requires-Dist: scipy (>=1.15.2,<2.0.0)
+Requires-Dist: torch (>=2.7.0,<3.0.0)
+Requires-Dist: torchinfo (>=1.8.0,<2.0.0)
+Requires-Dist: tqdm (>=4.67.1,<5.0.0)
+Requires-Dist: wandb (>=0.19.10,<0.20.0)
+Description-Content-Type: text/markdown
+
+# PlaNet: plasma equilibrium reconstruction using physics-informed neural operator.
+This is the official repository if the `planet` package. It is a PyTorch implementation of PlaNet (PLAsma equilibrium reconstruction NETwork), a convolutional physics-informed neural operator for performing plasma equilibrium reconstruction using magnetic and non-magnetic measurements.
+
+For any kind of reference on the model architecture or the mathematical formulation, see [this paper](https://www.sciencedirect.com/science/article/abs/pii/S0920379624000474). The original work was developed using TensorFlow, as mentioned in the paper. This is a polished and optimized version, using modern PyTorch and PyTorch Lightning. 
+
+# Installation
+First, create a virtual environment using `venv`
+```shell
+python3.10 -m venv venv 
+source venv/bin/activate
+```
+then install the package and all the dependencies using `poetry`
+```shell
+pip3 install poetry==1.8.3
+poetry config virtualenvs.create false
+poetry install
+```
+
+## Data
+To train and test PlaNet you can use the dataset available at [this repo](https://github.com/matteobonotto/ITERlike_equilibrium_dataset.git), containing ~85k equilibria of an ITER-like devices. All the equilibria have been computed numerically using the free-boundary Grad-Shafranov solver FRIDA, which is publicly available [here](https://github.com/matteobonotto/frida).
+
+
+## Tutorials
+There are tutorial notebooks available to get started with `planet`:
+- [1_dataset_creation.ipynb](notebooks/1_dataset_creation.ipynb): show how to create and format your data to perform trainign and inference using the PlaNet model.
+- [2_model_training.ipynb](notebooks/2_model_training.ipynb): shows how to perfrom a full training of the PlaNet model using PyTorch Lightning`.
+- [3_load_pretrained_and_prediction.ipynb](notebooks/3_load_pretrained_and_prediction.ipynb): shows how to load a pretrained model and how to use if to perform reconstruction of plasma equilibrium and to estimate the Grad-Shafranov operator.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
