@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: mseep-typecast-api-mcp-server
+Version: 0.1.2
+Summary: MCP Server for typecast-api
+Author-email: mseep <support@skydeck.ai>
+Maintainer-email: mseep <support@skydeck.ai>
+Requires-Python: >=3.12
+Requires-Dist: click
+Requires-Dist: httpx
+Requires-Dist: mcp
+Requires-Dist: sounddevice
+Requires-Dist: soundfile
+Description-Content-Type: text/markdown
+
+# Package managed by MseeP.ai
