@@ -1,0 +1,13 @@
+setup.py
+Desafio_image/__init__.py
+Desafio_image.egg-info/PKG-INFO
+Desafio_image.egg-info/SOURCES.txt
+Desafio_image.egg-info/dependency_links.txt
+Desafio_image.egg-info/requires.txt
+Desafio_image.egg-info/top_level.txt
+Desafio_image/processo/__init__.py
+Desafio_image/processo/combinacao.py
+Desafio_image/processo/transformacao.py
+Desafio_image/utilidades/__init__.py
+Desafio_image/utilidades/io.py
+Desafio_image/utilidades/plot.py
