@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: comp2083
+Version: 0.0.0
+Author: Saba Arife Bozpolat
+Author-email: saba.bozpolat@gmail.com
+Requires-Dist: faker
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-dist
