@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+dependencies = ["pyyaml", "nuscenes-devkit"]
+name = "nuscenes-hacker"
+version = "0.0.3"
+description = "nuscenes-hacker"
+authors = [{ name = "windzu", email = "windzu1@gmail.com" }]
+readme = "README.md"
+license = { text = "MIT" }
+keywords = ["nuscenes"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3",
+]
+requires-python = ">=3.6,<3.8"
+
+[project.scripts]
+nuscenes-hacker = "nuscenes_hacker.main:main"
