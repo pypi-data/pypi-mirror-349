@@ -1,0 +1,10 @@
+app/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+app/__main__.py,sha256=7S6w8CryzELpQ8rc6q5_G1ZfHaa7StJNbsvNebxLLxg,1994
+app/analyzer.py,sha256=VaIAI-L4AzMyAwDdI3Zfrw-wCgYaO0rHvE5a4hQZ_G8,4987
+app/parser.py,sha256=xdna8c51PfVchMgQBHh76HACkIijRy1HqfUlhd5D_-8,1956
+dockcheck-0.1.0.dist-info/licenses/LICENSE,sha256=O-0zMbcEi6wXz1DiSdVgzMlQjJcNqNe5KDv08uYzqR0,1055
+dockcheck-0.1.0.dist-info/METADATA,sha256=nwlg2w1fKaAWsKSfr9MOaijXosK4EBEecHypMBYYhN8,813
+dockcheck-0.1.0.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+dockcheck-0.1.0.dist-info/entry_points.txt,sha256=ViPfKRUO9dZ_ulE5WxbsNAOk_XmWdiwvuYX17fCPIzI,47
+dockcheck-0.1.0.dist-info/top_level.txt,sha256=io9g7LCbfmTG1SFKgEOGXmCFB9uMP2H5lerm0HiHWQE,4
+dockcheck-0.1.0.dist-info/RECORD,,
