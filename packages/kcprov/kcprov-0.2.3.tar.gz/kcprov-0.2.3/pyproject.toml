@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling>=1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "kcprov"
+version = "0.2.3"
+description = "Utilities for provisioning Keycloak"
+readme = "README.md"
+authors = [
+    { name = "Griddot", email = "info@griddot.net" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "click"
+]
+classifiers = [
+    "Intended Audience :: Developers",
+    "Natural Language :: English"
+]
+
+[project.scripts]
+kcprov = "kcprov.main:cli"
