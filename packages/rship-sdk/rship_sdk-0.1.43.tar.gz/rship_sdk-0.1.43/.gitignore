@@ -1,0 +1,131 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+**/dist
+**/pub
+**/partial
+/tmp
+/out-tsc
+/out
+
+# dependencies
+/node_modules
+**/node_modules
+
+# python
+__pycache__
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
+/libs/rship-logging/src/logs/*
+
+/libs/generated/version.ts
+
+apps/rship/gateway/libs/rship-logging/*
+apps/rship/server/libs/rship-logging/*
+apps/rship/pixera/libs/rship-logging/*
+apps/rship/dirigera/libs/rship-logging/*
+apps/rship/ableton/libs/rship-logging/*
+apps/sherlock/server/libs/rship-logging/*
+apps/rship/ventuz/libs/rship-logging/*
+apps/testbed/libs/rship-logging/*
+
+**/dev-deploy
+**/dev-deploy**
+
+# System Files
+.DS_Store
+Thumbs.db
+
+yarn.lock
+
+# electron build files
+/out
+
+# local environment overrides
+**/environment.local.ts
+generated/version.ts
+dump/
+data/
+!**/__mocks__/*
+**/mongoReplPreset/globalConfig.json
+
+#Sherlock DB Files
+db/**/*.sherlock
+
+#Test Results and Coverage
+testResults.json
+libs/rship/metadata-core/coverage
+
+#Watson Config
+apps/sherlock/watson-cli/src/watson.config.json
+report.20200917.151057.27164.0.001.json
+
+# release test log files
+release-test_*.log
+
+#github token
+token.txt
+
+#intake config
+apps/intake/intake-config.json
+
+#heapSnapshots
+*.heapsnapshot
+
+#logs
+libs/logging/src/logs/*
+
+#intake dumps
+imports
+build/config.gypi
+.redisConsole.log
+
+# local utils
+
+.turbo
+.angular
+.env
+libs/generated/version.ts
+
+# rust
+
+/target/
+
+# pnpm-store
+
+.pnpm-store
+
+# Xcode user state
+rship-swift.xcworkspace/xcuserdata/max.xcuserdatad/UserInterfaceState.xcuserstate
+apps/rship/visionOS/src/visionOS/Packages/RealityKitContent/Package.realitycomposerpro/WorkspaceData/max.rcuserdata
+apps/rship/link-ui/src-tauri/gen/
+
+*.log
+*.log.*
+
+*.egg-info
+apps/labs/bun-webview/main
