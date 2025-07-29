@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: mseep-eclass-mcp-server
+Version: 0.1.2
+Summary: An MCP server for the Open eClass platform by GUnet
+Home-page: 
+Author: mseep
+Author-email: mseep <support@skydeck.ai>
+Maintainer-email: mseep <support@skydeck.ai>
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: mcp>=1.5.0
+Requires-Dist: requests>=2.31.0
+Requires-Dist: beautifulsoup4>=4.12.2
+Requires-Dist: python-dotenv>=1.0.0
+Dynamic: author
+Dynamic: license-file
+Dynamic: requires-python
+
+# Package managed by MseeP.ai
