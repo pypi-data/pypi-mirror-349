@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: common-etl
+Version: 0.0.1
+Summary: A package for data extraction, transformation, loading, and utilities.
+Home-page: https://your-repo-url.com
+Author: Kaoushik Kumar
+Author-email: kaoushik.kumar@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+```commandline
+# This is a simple script to run a command in a loop
+```
