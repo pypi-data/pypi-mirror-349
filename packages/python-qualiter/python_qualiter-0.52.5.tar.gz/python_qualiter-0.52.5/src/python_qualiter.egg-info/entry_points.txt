@@ -1,0 +1,2 @@
+[console_scripts]
+python-qualiter = app:cli
