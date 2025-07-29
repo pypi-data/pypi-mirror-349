@@ -1,0 +1,24 @@
+Metadata-Version: 2.4
+Name: mseep-malaysia-prayer-time
+Version: 0.2.2
+Summary: Malaysia Prayer Time MCP Server for Claude Desktop
+Home-page: 
+Author: mseep
+Author-email: mseep <support@skydeck.ai>
+Maintainer-email: mseep <support@skydeck.ai>
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: httpx>=0.27.0
+Requires-Dist: pydantic<3.0.0,>=2.0.0
+Requires-Dist: PyYAML<7.0,>=6.0
+Requires-Dist: mcp>=1.2.0
+Requires-Dist: mcp[cli]>=1.2.0
+Dynamic: author
+Dynamic: license-file
+Dynamic: requires-python
+
+# Package managed by MseeP.ai
