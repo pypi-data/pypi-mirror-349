@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+src/atchatbot/__init__.py
+src/atchatbot/chatbot.py
+src/atchatbot/core.py
+src/atchatbot/intent_detector.py
+src/atchatbot/parser.py
+src/atchatbot/response_generator.py
+src/atchatbot/utils.py
+src/atchatbot.egg-info/PKG-INFO
+src/atchatbot.egg-info/SOURCES.txt
+src/atchatbot.egg-info/dependency_links.txt
+src/atchatbot.egg-info/requires.txt
+src/atchatbot.egg-info/top_level.txt
