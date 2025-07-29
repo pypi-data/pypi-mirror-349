@@ -1,0 +1,40 @@
+# python generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# venv
+.venv
+
+# sqlite
+db.sqlite3
+
+# rmeove all .json in the tests
+*/tests/*.json
+*/tests/*.md
+*/tests/*.dot
+
+output/
+
+# .env file
+src/aiai/.env
+
+.env
+
+.DS_Store
+
+# make sure we include the people_data.json file in git
+!aiai/examples/people_data.json
+!aiai/examples/crewai/people_data.json
+
+.idea
+/docs/site/
+
+venv
+
+docs/venv/
+
+docs/docs/venv/

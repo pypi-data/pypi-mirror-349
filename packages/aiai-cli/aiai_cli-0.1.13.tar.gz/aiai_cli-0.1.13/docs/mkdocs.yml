@@ -1,0 +1,89 @@
+site_name: AIAI CLI
+site_description: Documentation for the AIAI CLI tool for agent optimization
+repo_url: https://github.com/zenbase-ai/aiai-cli
+nav:
+  - Home: index.md
+  - Getting Started: getting-started/getting-started.md
+  - User Guide:
+      - Overview: user-guide/overview.md
+      - Configuration: user-guide/configuration-reference.md
+  - Concepts:
+      - Rule Extraction: concepts/rule-extraction.md
+      - Philosophy: concepts/philosophy.md
+  - Examples:
+      - Custom Agents: examples/custom-agents.md
+      - Demo Email Agent: examples/demo-email-agent.md
+theme:
+  name: material
+  favicon: img/favicon.ico
+  logo: img/favicon-white.svg
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: black
+      accent: black
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: white
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    # Navigation
+    - navigation.tabs
+    - navigation.sections
+    - navigation.tracking
+    - navigation.expand
+    - navigation.indexes
+    - navigation.instant
+
+    # Table of contents - Right sidebar
+    - toc.integrate
+    - toc.follow
+
+    # Search
+    - search.highlight
+    - search.share
+    - search.suggest
+
+    # Content
+    - content.code.copy
+    - content.code.annotate
+
+  icon:
+    repo: fontawesome/brands/github
+  font:
+    text: Roboto
+    code: JetBrains Mono
+extra_css:
+  - stylesheets/extra.css
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - admonition
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - toc:
+      permalink: true
+      toc_depth: 3
+plugins:
+  - search
+
+# Custom homepage settings
+extra:
+  homepage: https://aiai-cli.io
