@@ -1,0 +1,17 @@
+{
+    "Plugins": [
+        {
+            "Info": {
+                "Types": {
+                    "NdrDiscoveryPlugin": {},
+                    "NdrParserPlugin": {}
+                }
+            },
+            "LibraryPath": "../../../usd_core.libs/libusd_ndr-1e10c702.so",
+            "Name": "ndr",
+            "ResourcePath": "resources",
+            "Root": "..",
+            "Type": "library"
+        }
+    ]
+}
