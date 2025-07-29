@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: dktshell
+Version: 0.0.4
+Summary: Matrix-based structural analysis module for triangulated thin shells using discrete Kirchhoff triangle (DKT) elements.
+Author: Kazuki Hayashi and Romain Mesnil
+Requires-Python: >=3.12
+Requires-Dist: numpy>=1.26
+Requires-Dist: scipy>=1.15
+Requires-Dist: numba>=0.61
