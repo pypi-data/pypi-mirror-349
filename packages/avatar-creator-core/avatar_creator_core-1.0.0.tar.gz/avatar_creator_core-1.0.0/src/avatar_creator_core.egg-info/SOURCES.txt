@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/avatar_creator/__init__.py
+src/avatar_creator/core.py
+src/avatar_creator_core.egg-info/PKG-INFO
+src/avatar_creator_core.egg-info/SOURCES.txt
+src/avatar_creator_core.egg-info/dependency_links.txt
+src/avatar_creator_core.egg-info/requires.txt
+src/avatar_creator_core.egg-info/top_level.txt
+tests/test_core.py
