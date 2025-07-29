@@ -1,0 +1,17 @@
+setup.py
+zModule.egg-info/PKG-INFO
+zModule.egg-info/SOURCES.txt
+zModule.egg-info/dependency_links.txt
+zModule.egg-info/top_level.txt
+zModules/__init__.py
+zModules/zImporter/all.py
+zModules/zImporter/console.py
+zModules/zImporter/database.py
+zModules/zImporter/gui.py
+zModules/zImporter/networking.py
+zModules/zImporter/path.py
+zModules/zImporter/rest.py
+zModules/zOs/__init__.py
+zModules/zOs/utils.py
+zModules/zSwitchCase/__init__.py
+zModules/zSwitchCase/utils.py

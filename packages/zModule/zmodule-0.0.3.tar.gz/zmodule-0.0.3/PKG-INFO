@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: zModule
+Version: 0.0.3
+Summary: Nothing at the moment.
+Author: zisia13
+Author-email: 
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Dynamic: author
+Dynamic: classifier
+Dynamic: summary
