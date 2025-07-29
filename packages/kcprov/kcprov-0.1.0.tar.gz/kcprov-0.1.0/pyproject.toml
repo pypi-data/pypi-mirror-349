@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kcprov"
+version = "0.1.0"
+description = "Utilities for provisioning Keycloak"
+readme = "README.md"
+authors = [
+    { name = "Griddot", email = "info@griddot.net" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "click"
+]
+classifiers = [
+    "Intended Audience :: Developers",
+    "Natural Language :: English"
+]
+
+[project.scripts]
+kcprov = "kcprov.cli:main"
