@@ -1,0 +1,32 @@
+Metadata-Version: 2.4
+Name: mseep-codemcp
+Version: 0.6.2
+Summary: MCP server for file operations
+Home-page: 
+Author: mseep
+Author-email: mseep <support@skydeck.ai>
+Maintainer-email: mseep <support@skydeck.ai>
+License: MIT
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: mcp[cli]>=1.2.0
+Requires-Dist: ruff>=0.9.10
+Requires-Dist: toml>=0.10.2
+Requires-Dist: tomli>=2.1.1
+Requires-Dist: anyio>=3.7.0
+Requires-Dist: pyyaml>=6.0.0
+Requires-Dist: editorconfig>=0.17.0
+Requires-Dist: click>=8.1.8
+Requires-Dist: agno>=1.2.16
+Requires-Dist: anthropic>=0.49.0
+Requires-Dist: fastapi>=0.115.12
+Requires-Dist: uvicorn>=0.28.0
+Requires-Dist: starlette>=0.35.1
+Requires-Dist: google-genai>=1.10.0
+Requires-Dist: pathspec>=0.12.1
+Dynamic: author
+Dynamic: license-file
+Dynamic: requires-python
+
+# Package managed by MseeP.ai
