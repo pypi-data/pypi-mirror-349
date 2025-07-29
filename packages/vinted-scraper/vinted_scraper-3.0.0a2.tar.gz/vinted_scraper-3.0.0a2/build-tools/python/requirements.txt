@@ -1,0 +1,6 @@
+coverage==7.6.10
+black==24.10.0
+isort==5.13.2
+pdoc==15.0.1
+build==1.2.1
+no_implicit_optional==1.4

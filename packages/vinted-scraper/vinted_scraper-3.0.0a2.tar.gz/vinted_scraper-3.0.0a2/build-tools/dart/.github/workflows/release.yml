@@ -1,0 +1,46 @@
+---
+name: Release a new APK
+
+on:
+  push:
+    tags:
+      - "*.*.*"
+
+permissions: read-all
+
+jobs:
+  build:
+    name: Release a new APK
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version: 3.24.4
+
+      - name: Build APK
+        run: make build
+
+      - name: Read pubpec.yaml to get app info
+        uses: pietrobolcato/action-read-yaml@1.1.0
+        id: pubspec
+        with:
+          config: ${{ github.workspace }}/pubspec.yaml
+
+      - name: Upload APK file to release
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: ${{ github.workspace }}/build/app/outputs/flutter-apk/app-release.apk
+          asset_name: ${{ steps.pubspec.outputs['name'] }}-${{ steps.pubspec.outputs['version'] }}.apk
+          tag: ${{ github.ref }}
+          overwrite: true
