@@ -1,0 +1,17 @@
+gr_tradinggame/__init__.py,sha256=f_XkRXIp0URwPWFmsMMKwN12zySh3mCtr55hiM3ZrYI,59
+gr_tradinggame/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gr_tradinggame/coding/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gr_tradinggame/coding/blackbox.py,sha256=tEFq4rNEvzzE_tML7tMzd4vTEKNBWpCychlov9gwZ7M,1947
+gr_tradinggame/coding/client.py,sha256=JEqs93uCQSnbF10F0uP3YDZzVHWjAO6_bruD5wviuYA,5651
+gr_tradinggame/coding/example_client.py,sha256=wkl05hpAKwpSqMwSxVjA94nfmXqzjQ1L2IV06s70s8A,911
+gr_tradinggame/coding/example_server.py,sha256=8BePiuI3Xle2pGtHL74XFb8US4K0n9mDfjPKFi_O1B4,170
+gr_tradinggame/coding/example_ui.py,sha256=GfAGe9xWteEdYwxHbrJnOm_6HnZpHzj9pm-m1D8es6E,166
+gr_tradinggame/coding/gui.py,sha256=qWlCT3UD77tWivPffGdynlxzBpIigprJy4dfSu1QHs4,5393
+gr_tradinggame/coding/server.py,sha256=Aj_vnnVioP4s6eWpoo7pwjKcOQ0DtmRJrXFj5wxjpqE,2566
+gr_tradinggame/coding/util.py,sha256=bg_RHdjimdW24yCY3wIjtJcDCL3UCX0zZPh0cS4DBog,874
+gr_tradinggame/manual/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gr_tradinggame/manual/example.py,sha256=Ig7-riKxp_a2P1zTw4-RKJFGIGuzyt0v2Sqwq1QggW8,212
+gr_tradinggame/manual/manual_game.py,sha256=C8zfIHvxU_KmqW5wWMPWLqgmmK02BZUwa2OiWHVjSos,5311
+gr_tradinggame-0.1.0.dist-info/METADATA,sha256=s_RAIw_0fObdGxBDjquRqshj1UdFLRvWPb_Xn3iIO2w,177
+gr_tradinggame-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+gr_tradinggame-0.1.0.dist-info/RECORD,,
