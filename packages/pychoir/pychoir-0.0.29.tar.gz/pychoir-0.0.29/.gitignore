@@ -1,0 +1,7 @@
+.coverage
+.idea/
+.tox
+__pycache__
+build/
+dist/
+pychoir.egg-info/
