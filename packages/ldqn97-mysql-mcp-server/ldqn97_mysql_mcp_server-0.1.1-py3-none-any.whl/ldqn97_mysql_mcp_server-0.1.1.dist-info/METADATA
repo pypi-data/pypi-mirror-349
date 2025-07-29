@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: ldqn97-mysql-mcp-server
+Version: 0.1.1
+Summary: ldqn97 MySQL MCP Server for CherryStudio
+Home-page: https://github.com/yourusername/ldqn97-mysql-mcp-server
+Author: ldqn97
+Author-email: ldqn@sina.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+ldqn97 MySQL mcp server
