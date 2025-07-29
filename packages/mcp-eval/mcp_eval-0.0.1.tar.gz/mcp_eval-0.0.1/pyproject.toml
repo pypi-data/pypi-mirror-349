@@ -1,0 +1,7 @@
+[project]
+name = "mcp-eval"
+version = "0.0.1"
+description = "Evaluate MCP models"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []

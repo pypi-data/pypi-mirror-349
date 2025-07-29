@@ -1,0 +1,8 @@
+LICENSE
+README.md
+main.py
+pyproject.toml
+mcp_eval.egg-info/PKG-INFO
+mcp_eval.egg-info/SOURCES.txt
+mcp_eval.egg-info/dependency_links.txt
+mcp_eval.egg-info/top_level.txt
