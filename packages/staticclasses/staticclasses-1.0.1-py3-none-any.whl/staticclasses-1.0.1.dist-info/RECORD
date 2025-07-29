@@ -1,0 +1,9 @@
+staticclasses/__init__.py,sha256=IWn2rDqiiuengoMhks6Qo12Udm4me4USWLufjzgxNQ0,67
+staticclasses/core/__init__.py,sha256=NGdZq0T5jqRMKkRIxIKEQDBlx2hGoRSm5F2P2fgiQBU,564
+staticclasses/tests/__init__.py,sha256=ZClL-6Cr5AL_UigTX9K3LDI33vB2QpivxWHI9zDk_c0,299
+staticclasses/tests/test_try.py,sha256=6-m-K4tW7Zrc8N3duXAFPSy_8Pts9VCiISwITxtB3zw,337
+staticclasses-1.0.1.dist-info/licenses/LICENSE.txt,sha256=QwqYepQwTN5xG57cngKt6xxYD9z9hw9d3lcI8zSLiNg,1074
+staticclasses-1.0.1.dist-info/METADATA,sha256=uqJCQcI9xz25UyZFefgq0A2sRGBo2qVx899jf0dnWEE,2420
+staticclasses-1.0.1.dist-info/WHEEL,sha256=Nw36Djuh_5VDukK0H78QzOX-_FQEo6V37m3nkm96gtU,91
+staticclasses-1.0.1.dist-info/top_level.txt,sha256=cf3_0RjWSKmmlzsR47J9-_ebphc_whGNoENZlEaOUAs,14
+staticclasses-1.0.1.dist-info/RECORD,,
