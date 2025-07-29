@@ -1,0 +1,19 @@
+aceti/__init__.py,sha256=vgppe3Td-VJNp--3IpuVz7Qr5bXHj1g76yW3McLuX1U,233
+aceti/map_creator.py,sha256=2B3rcRaeOZEIX-yiPPHgRhHCsJ8vP_r8-Kcz9Hfrwz0,11708
+aceti/map_importer.py,sha256=Cn-vhWre0HNnNohOXuBM5enzvfieyGtV7pmzWX93pe8,4112
+aceti/maps/alamillo30x49latlon.npy,sha256=q7-tAL_22cm_jBjmojdB793R_HnKGxOV8NZYO6Km1S0,23648
+aceti/maps/alamillo30x49mask.npy,sha256=-0-wCEwZwUptkdpgEpWyLRKiBnxfWPoole7nJUqITP8,11888
+aceti/maps/alamillo95x216latlon.npy,sha256=KPm5edxZ-uDxhxvFUw5H-B8-NyS1mGHHAcvH5R03FwA,323488
+aceti/maps/alamillo95x216mask.npy,sha256=91Hejv5QOPVNNCSAQHQYXYawHKeDBfXc0lkuRbt3-jo,161808
+aceti/maps/alamilloaccess11x15latlon.npy,sha256=hvpRrc-eW9boy5126SdthWunhd6eTOoUrjNDGc5W-Qc,2768
+aceti/maps/alamilloaccess11x15mask.npy,sha256=mpCGDLS8VjBRDFbhvZyasc4wdVNVufXE8aTn8fvpilQ,1448
+aceti/old/create grid.py,sha256=WnkQblPZY8H6c7v4jzDrJyRQ-UwpUe0t-K9d-SOdHTA,21990
+aceti/old/gen_lat_lon_map.py,sha256=t_my37Bjuho9BNfkphUXHhYPBXEwKg52TYmHIVbLM8o,1139
+aceti/old/generate_map.py,sha256=k9bs495ox9ye5ChkweylO5VcQjPLSAnCODh5WGpuMT8,1129
+aceti/old/legendarium.py,sha256=qQbMdYQp3Csidw8oloSLQY_uBLWD_V4pT4ux_LLM-Jg,5670
+aceti/old/maps_utils.py,sha256=zB4VvPMQPYPa293pPWTiRR_7z-wEq8_rdQVJA5Hx2zo,5083
+aceti/old/path_planner_checker.py,sha256=ti-PkVkD0Y9Q7fRFBw8CJ8386PC5hjnZilZvwPIpv14,2628
+aceti-0.0.2.dist-info/METADATA,sha256=mpHrRemdqbWg0eq42PWmKB2zH5vR67xI_tmqASHOBkQ,1123
+aceti-0.0.2.dist-info/WHEEL,sha256=tkmg4JIqwd9H8mL30xA7crRmoStyCtGp0VWshokd1Jc,105
+aceti-0.0.2.dist-info/licenses/LICENSE,sha256=8-pFBirK9qdygiSMS78DtfK0jC5EPpnVAKLrBILFW1k,1067
+aceti-0.0.2.dist-info/RECORD,,
