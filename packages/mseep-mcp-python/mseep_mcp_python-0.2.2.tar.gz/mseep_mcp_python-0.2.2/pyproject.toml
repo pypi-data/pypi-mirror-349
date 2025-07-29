@@ -1,0 +1,59 @@
+[build-system]
+requires = [
+    "hatchling",
+]
+build-backend = "hatchling.build"
+
+[project]
+name = "mseep-mcp-python"
+version = "0.2.2"
+description = "MCP server providing a Python REPL with persistent session"
+requires-python = ">=3.10"
+dependencies = [
+    "fastmcp>=2.2.0",
+    "llm-credential-manager",
+    "llm-parser-filter",
+    "mcp-gsuite",
+    "pytest>=8.3.5",
+    "python-dotenv",
+]
+authors = [
+    { name = "mseep", email = "support@skydeck.ai" },
+]
+license = "MIT"
+keywords = [
+    "mcp",
+    "repl",
+    "python",
+    "server",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+readme = "README.md"
+maintainers = [
+    { name = "mseep", email = "support@skydeck.ai" },
+]
+
+[project.scripts]
+mcp-python = "mcp_python:main"
+
+[tool.hatch.build.targets.wheel]
+packages = [
+    "src/mcp_python",
+]
+
+[tool.uv.sources.mcp-gsuite]
+path = "../mcp-gsuite"
+
+[tool.uv.sources.llm-parser-filter]
+path = "../llm-parser-filter"
+
+[tool.uv.sources.llm-credential-manager]
+path = "../llm-credential-manager"
