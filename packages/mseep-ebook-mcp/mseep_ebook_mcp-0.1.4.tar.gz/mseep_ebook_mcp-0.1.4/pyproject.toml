@@ -1,0 +1,45 @@
+[project]
+name = "mseep-ebook-mcp"
+version = "0.1.4"
+description = "An MCP server for chatting with ebooks (PDF/EPUB)."
+authors = [
+    { name = "mseep", email = "support@skydeck.ai" },
+]
+license = "Apache-2.0"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "ebooklib>=0.17.1",
+    "PyPDF2>=3.0.0",
+    "PyMuPDF>=1.20.0",
+    "beautifulsoup4>=4.12.0",
+    "html2text>=2020.1.16",
+    "pydantic>=2.8,<2.9",
+    "fastmcp>=2.1.2",
+    "typer>=0.9",
+]
+maintainers = [
+    { name = "mseep", email = "support@skydeck.ai" },
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest==8.3.5",
+    "uvicorn>=0.27.0,<1.0.0",
+    "starlette>=0.46.2",
+    "uv",
+]
+
+[project.scripts]
+ebook-mcp = "ebook_mcp.main:cli_entry"
+
+[build-system]
+requires = [
+    "hatchling",
+]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = [
+    "src/ebook_mcp",
+]
