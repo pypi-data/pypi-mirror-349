@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+src/PySAG/__init__.py
+src/PySAG/crossover.py
+src/PySAG/exceptions.py
+src/PySAG/ga.py
+src/PySAG/initialization.py
+src/PySAG/mutation.py
+src/PySAG/selection.py
+src/PySAG_UdeC.egg-info/PKG-INFO
+src/PySAG_UdeC.egg-info/SOURCES.txt
+src/PySAG_UdeC.egg-info/dependency_links.txt
+src/PySAG_UdeC.egg-info/requires.txt
+src/PySAG_UdeC.egg-info/top_level.txt
+tests/test_operators.py
