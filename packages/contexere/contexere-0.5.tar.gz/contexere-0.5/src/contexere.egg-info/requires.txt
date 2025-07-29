@@ -1,0 +1,8 @@
+pandas
+pytz
+tzlocal
+
+[testing]
+setuptools
+pytest
+pytest-cov
