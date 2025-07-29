@@ -1,0 +1,8 @@
+mseep_mcp_ical-0.1.1.dist-info/licenses/LICENSE,sha256=p7fDaIi5zPgDY53ZXXW1LHxfzWwrtOeQS95b6mwK0Oc,1064
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_calendar_manager_integration.py,sha256=8rjHmmZnyTAawcL6ONDxM8I72O-EDoRRK4ZDApHI_1g,15082
+mseep_mcp_ical-0.1.1.dist-info/METADATA,sha256=tXcjOQhg63bxQcZYQ5xG_44uw_lR58vhva2N0a2ZslY,6554
+mseep_mcp_ical-0.1.1.dist-info/WHEEL,sha256=Nw36Djuh_5VDukK0H78QzOX-_FQEo6V37m3nkm96gtU,91
+mseep_mcp_ical-0.1.1.dist-info/entry_points.txt,sha256=6FWboHfIyE5iFTXWJ7cUd4UZ_0VqlfYCYcKtIv_tk2s,50
+mseep_mcp_ical-0.1.1.dist-info/top_level.txt,sha256=EdW7283x-lr_cbuivW8Ij7ANAP-ZJ9sLtILQseEPxXg,6
+mseep_mcp_ical-0.1.1.dist-info/RECORD,,
