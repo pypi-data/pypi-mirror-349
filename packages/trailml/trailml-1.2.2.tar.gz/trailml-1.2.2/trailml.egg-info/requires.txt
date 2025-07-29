@@ -1,0 +1,9 @@
+gql
+aiohttp
+mlflow
+PyYAML
+requests-toolbelt==0.10.1
+sentry-sdk
+tqdm
+nbformat
+pydantic-settings>=2.0.0
