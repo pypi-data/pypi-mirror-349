@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: mcpf
+Version: 0.1.0rc1
+Summary: Minimalist Configurable Pipelining Framework
+Author: Karoly Bosa
+Author-email: karoly.bosa@risc-software.at
+Requires-Python: >=3.10,<3.11
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Provides-Extra: io
+Provides-Extra: xform
+Requires-Dist: mcpf-io (>=0.1.0-rc2,<0.2.0) ; extra == "io"
+Requires-Dist: mcpf-io-pandas (>=0.1.0-rc2,<0.2.0) ; extra == "io"
+Requires-Dist: mcpf-xform (>=0.1.0-rc2,<0.2.0) ; extra == "xform"
+Requires-Dist: mcpf-xform-pandas (>=0.1.0-rc2,<0.2.0) ; extra == "xform"
