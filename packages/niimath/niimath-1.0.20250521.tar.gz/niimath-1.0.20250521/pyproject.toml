@@ -1,0 +1,39 @@
+[build-system]
+requires = [
+  "setuptools>=42",
+  "wheel",
+  "setuptools_scm[toml]>=3.4",
+  "scikit-build>=0.11.0",
+  "cmake>=3.5",
+  "ninja"
+]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+write_to = "niimath/_dist_ver.py"
+write_to_template = "__version__ = '{version}'\n"
+local_scheme = "no-local-version"
+version_scheme = "no-guess-dev"
+
+[project]
+name = "niimath"
+description = "NIfTI arithmetic utilities"
+readme = "README.md"
+requires-python = ">=3.7"
+license = {file = "LICENSE"}
+authors = [
+  {name = "The niimath developers"}
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Science/Research",
+  "Topic :: Scientific/Engineering :: Medical Science Apps.",
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent"
+]
+dynamic = ["version"]
+
+[project.urls]
+"Homepage" = "https://github.com/rordenlab/niimath"
+"Documentation" = "https://github.com/rordenlab/niimath"
