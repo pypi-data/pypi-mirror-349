@@ -1,0 +1,2 @@
+ase>=3.22.1
+xlsxwriter>=3.2.0
