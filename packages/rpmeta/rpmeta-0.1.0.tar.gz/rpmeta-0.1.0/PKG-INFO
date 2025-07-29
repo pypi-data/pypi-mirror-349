@@ -1,0 +1,137 @@
+Metadata-Version: 2.4
+Name: rpmeta
+Version: 0.1.0
+Summary: Estimate duration of RPM package build
+Project-URL: Homepage, https://github.com/fedora-copr/rpmeta
+Project-URL: Repository, https://github.com/fedora-copr/rpmeta
+Project-URL: Issues, https://github.com/fedora-copr/rpmeta/issues
+Author-email: Copr Team <copr-devel@lists.fedorahosted.org>
+Maintainer-email: Copr Team <copr-devel@lists.fedorahosted.org>
+License-Expression: GPL-3.0-or-later
+License-File: LICENSE
+Keywords: ai,copr,lightgbm,machine learning,rpm,rpmeta,xgboost
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.10
+Requires-Dist: click>=8.0
+Requires-Dist: joblib>=1.0
+Requires-Dist: pandas>=2.0
+Requires-Dist: scikit-learn>=1.3.0
+Provides-Extra: dev
+Requires-Dist: mypy>=1.14.1; extra == 'dev'
+Requires-Dist: pytest-cov>=5.0.0; extra == 'dev'
+Requires-Dist: pytest>=8.3.4; extra == 'dev'
+Requires-Dist: requests>=2.30.0; extra == 'dev'
+Provides-Extra: fetcher
+Requires-Dist: copr>=2.0; extra == 'fetcher'
+Requires-Dist: fedora-distro-aliases>=1.4; extra == 'fetcher'
+Requires-Dist: koji>=1.20.0; extra == 'fetcher'
+Requires-Dist: requests>=2.30.0; extra == 'fetcher'
+Requires-Dist: tqdm>=4.0.0; extra == 'fetcher'
+Provides-Extra: server
+Requires-Dist: flask>=3.0.0; extra == 'server'
+Provides-Extra: trainer
+Requires-Dist: kaleido==0.2.1; extra == 'trainer'
+Requires-Dist: lightgbm>=4.0.0; extra == 'trainer'
+Requires-Dist: matplotlib>=3.8.0; extra == 'trainer'
+Requires-Dist: optuna>=3.4.0; extra == 'trainer'
+Requires-Dist: plotly>=5.23.0; extra == 'trainer'
+Requires-Dist: seaborn>=0.12.0; extra == 'trainer'
+Requires-Dist: xgboost>=2.0.0; extra == 'trainer'
+Description-Content-Type: text/markdown
+
+## rpmeta: RPM Estimated Time of (build) Arrival
+
+**RPMETA** is a command-line tool designed to **predict RPM build durations** and manage related
+data. It provides a set of commands for training a predictive model, making predictions,
+fetching data, and serving a REST API endpoint.
+
+---
+
+### Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+
+---
+
+### Installation
+
+#### Fedora:
+
+```bash
+dnf copr enable @copr/rpmeta
+dnf install rpmeta
+```
+
+to install the also subpackages, add `+SUBPACKAGE` to the `rpmeta`.
+
+Fedora is missing a few dependencies, so you need to install them manually:
+
+Dependencies for model training:
+
+- xgboost
+- lightgbm
+
+Dependencies for fancy graphs output from Optuna:
+
+- kaleido
+
+#### Other distributions:
+
+```bash
+pipx install rpmeta
+```
+
+to install subpackages, use `rpmeta[SUBPACKAGE1, SUBPACKAGE2, ...]` syntax
+
+Or from the source:
+
+```bash
+pipx install "rpmeta[SUBCOMMANDS] @ git+https://github.com/fedora-copr/rpmeta.git"
+```
+
+##### Dependencies
+
+In order for `rpmeta` (and all of its subpackages) installation from PyPI to work directly,
+you need to install these dependencies:
+
+- gcc
+- krb5-config
+- python3-devel
+
+##### Man pages
+
+Since pip cannot distribute UNIX manpages, if you want them available, you need
+to install them manually via:
+
+```bash
+click-man rpmeta --target <path-to-mandir>/man1
+```
+
+---
+
+#### Usage
+
+To see available commands and options, run:
+
+```bash
+rpmeta --help
+```
+
+For detailed information about a specific (sub)command, run:
+
+```bash
+rpmeta <command> --help
+```
+
+To see the whole documentation at once, use manpages:
+
+```bash
+man 1 rpmeta(-SUBCOMMANDS)?
+```

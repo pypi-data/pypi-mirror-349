@@ -1,0 +1,21 @@
+name: Tests
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install just to run tests in fedora container
+        run: |
+          sudo apt -y install just podman
+      - name: Run tests inside fedora container
+        run: |
+          just --set ci true test-everything-in-container

@@ -1,0 +1,33 @@
+FROM fedora:latest as builder
+
+RUN dnf install -y \
+    gcc \
+    krb5-config \
+    python3-devel \
+    uv \
+    clang \
+    && dnf clean all
+
+WORKDIR /build
+
+COPY pyproject.toml uv.lock* ./
+
+RUN uv sync --all-extras --all-groups
+
+
+FROM fedora:latest
+
+RUN dnf install -y \
+    gcc \
+    krb5-config \
+    python3-devel \
+    uv \
+    clang \
+    && dnf clean all
+
+ENV TERM=xterm-256color
+
+WORKDIR /app
+RUN mkdir -p /app/bind
+
+CMD ["bash"]
