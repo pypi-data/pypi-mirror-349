@@ -1,0 +1,2 @@
+[console_scripts]
+pull_pull_request = pull_pull_request.__main__:main
