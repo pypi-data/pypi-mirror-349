@@ -1,0 +1,63 @@
+name: Release on tag
+
+on:
+  push:
+    tags:
+      # After vMajor.Minor.Patch _anything_ is allowed (without "/") !
+      - v[0-9]+.[0-9]+.[0-9]+*
+
+env:
+  CIBW_BEFORE_ALL_LINUX: curl -sSf https://sh.rustup.rs | sh -s -- -y
+  CIBW_BEFORE_ALL_WINDOWS: rustup target add i686-pc-windows-msvc
+  CIBW_ENVIRONMENT_LINUX: "PATH=$HOME/.cargo/bin:$PATH"
+  MACOSX_DEPLOYMENT_TARGET: 10.12
+
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ${{ matrix.runner }}
+    if: github.repository == 'mjhong0708/ase-extension' && startsWith(github.ref, 'refs/tags/v')
+    strategy:
+      matrix:
+        runner: [ubuntu-latest, ubuntu-24.04-arm, macos-13, macos-latest]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          version: "0.7.6"
+
+      - name: Install Python
+        run: uv python install
+
+      - name: Setup project
+        run: uv sync
+
+      - name: Install cibuildwheel
+        run: uv pip install cibuildwheel
+
+      - name: Build wheels
+        run: |
+          source .venv/bin/activate
+          python -m cibuildwheel --output-dir wheelhouse
+
+      - name: Upload build results
+        uses: actions/upload-artifact@v4
+        with:
+          name: builds-${{ matrix.runner }}
+          path: wheelhouse/*
+
+      - name: Create Release
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: "wheelhouse/*"
+          draft: false
+          token: ${{ secrets.GITHUB_TOKEN }}
+          skipIfReleaseExists: false
+          allowUpdates: true

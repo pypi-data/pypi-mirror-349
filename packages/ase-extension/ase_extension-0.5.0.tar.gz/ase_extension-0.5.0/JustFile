@@ -1,0 +1,52 @@
+default:
+    @just -l
+
+clean:
+    @ruff clean
+    @find . -type d -name "__pycache__" -exec rm -rf {} +
+    @find . -type d -name ".pytest_cache" -exec rm -rf {} +
+    @find . -type d -name ".ruff_cache" -exec rm -rf {} +
+    @find . -type d -name ".mypy_cache" -exec rm -rf {} +
+    @find . -type d -name ".coverage" -exec rm -rf {} +
+    @find . -type d -name ".coverage.*" -exec rm -rf {} +
+    @find . -type f -name ".DS_Store" -exec rm {} +
+
+clean_build:
+    @find . -type d -name "build" -exec rm -rf {} +
+    @find . -type d -name "dist" -exec rm -rf {} +
+    @find . -type d -name "*.egg-info" -exec rm -rf {} +
+    @find . -type d -name "target" -exec rm -rf {} +
+    @find . -type f -name "*.lock" -exec rm -rf {} +
+    @find . -type f -name "*.so" -exec rm -rf {} +
+
+format:
+    ruff format .
+    ruff check --fix --select I src/
+    ruff check --fix --select I tests/
+    cargo fmt
+
+check:
+    ruff check src/
+    cargo clippy
+    cargo check
+
+build:
+    uv build -C release=True
+
+test:
+    @echo "=================================================="
+    @echo "               Running pytest                     "
+    @echo "=================================================="
+    pytest tests/python
+    @echo "=================================================="
+    @echo "               Finished pytest                    "
+    @echo "=================================================="
+
+    @echo "=================================================="
+    @echo "              Running cargo test                  "
+    @echo "=================================================="
+    cargo test --package ext
+    cargo test --package ext --test integration_test
+    @echo "=================================================="
+    @echo "              Finished cargo test                 "
+    @echo "=================================================="

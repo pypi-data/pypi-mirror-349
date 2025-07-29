@@ -1,0 +1,78 @@
+line-length = 120
+indent-width = 4
+target-version = "py312"
+
+[format]
+docstring-code-format = true
+
+[lint]
+select = [
+    "B",      # flake8-bugbear
+    "D",      # pydocstyle
+    "E",      # pycodestyle error
+    "EXE",    # flake8-executable
+    "F",      # pyflakes
+    "FA",     # flake8-future-annotations
+    "FLY",    # flynt
+    "I",      # isort
+    "ICN",    # flake8-import-conventions
+    "PD",     # pandas-vet
+    "PERF",   # perflint
+    "PIE",    # flake8-pie
+    "PL",     # pylint
+    "PT",     # flake8-pytest-style
+    "PYI",    # flakes8-pyi
+    "Q",      # flake8-quotes
+    "RET",    # flake8-return
+    "RSE",    # flake8-raise
+    "RUF",    # Ruff-specific rules
+    "SIM",    # flake8-simplify
+    "SLOT",   # flakes8-slot
+    "TID",    # tidy imports
+    "W",      # pycodestyle warning
+    "YTT",    # flake8-2020
+    "NPY002", # replace legacy np.random.seed
+]
+
+ignore = [
+    "ANN003",  # missing type annotations for kwargs
+    "B019",    # Use of functools.lru_cache on methods can lead to memory leaks
+    "B905",    # Use of zip without strict option
+    "C408",    # unnecessary-collection-call
+    "COM812",  # trailing comma missing
+    "D100",    # missing docstring in public module
+    "D101",    # missing docstring in public class
+    "D102",    # missing docstring in public method
+    "D103",    # missing docstring in public function
+    "D104",    # missing docstring in public package
+    "D105",    # missing docstring for magic method
+    "D107",    # missing docstring in __init__ method
+    "D205",    # 1 blank line required between summary line and description
+    "D415",    # first line of docstring must end with punctuation
+    "DTZ005",  # use of datetime.now() without timezone
+    "E731",    # do not assign a lambda expression, use a def
+    "EM",      # flake8-errmsg
+    "FBT001",  # Boolean positional argument in function
+    "FBT002",  # Boolean keyword argument in function
+    "PLR",     # pylint refactor
+    "SIM108",  # using ternary operator in simple if-else statement
+    "SIM103",
+    "PLW2901", # Outer for loop variable overwritten by inner assignment target
+    "PT006",   # pytest-parametrize-names-wrong-type
+    "PT011",   # pytest-raises-too-broad
+    "PT013",   # pytest-incorrect-pytest-import
+    "PT019",   # pytest-fixture-param-without-value
+    "PTH",     # prefer Path to os.path
+    "S301",    # pickle can be unsafe
+    "S310",    # url open functions can be unsafe
+    "TRY003",  # long exception messages not defined in the exception class itself
+    "UP015",   # unnecessary "r" in open call
+    "RET504",  # unnecessary assignment of return value
+    "RUF005",  # Use varargs instead of concatenating lists or tuples
+]
+
+[lint.pydocstyle]
+convention = "google"
+
+[lint.per-file-ignores]
+"src/**" = ["S101"]

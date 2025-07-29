@@ -1,0 +1,30 @@
+[project]
+name = "ase-extension"
+version = "0.5.0"
+description = "Extension functionalities for ASE (Atomic Simulation Environment)"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "ase>=3.24.0",
+    "numpy>=1.26.0",
+    "typing-extensions>=4.13.2",
+    "vesin",
+]
+
+[dependency-groups]
+dev = ["ipykernel>=6.29.5", "pytest>=8.3.5", "ruff>=0.11.7", "build"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+exclude = ["ext"]
+
+[[tool.setuptools-rust.ext-modules]]
+target = "ase_extension._ext"
+path = "Cargo.toml"
+
+[tool.cibuildwheel]
+skip = ["*_i686", "*_ppc64le", "*_s390x", "*_armv7l", "pp*"]
+
+[build-system]
+requires = ["setuptools", "setuptools-scm", "setuptools_rust"]
+build-backend = "setuptools.build_meta"
