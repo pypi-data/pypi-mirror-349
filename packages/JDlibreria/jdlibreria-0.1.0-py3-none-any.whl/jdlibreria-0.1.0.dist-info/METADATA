@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: JDlibreria
+Version: 0.1.0
+Summary: A test library
+Home-page: https://github.com/JSalazar17/JDlibreria
+Author: Jorge Salazar
+Author-email: jisalazar@ucundinamarca.edu.co
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+
+# JDlibreria
+
+librerias-ag es una librería de Python diseñada para experimentar con algoritmos genéticos básicos y funciones de optimización. Incluye herramientas para generar poblaciones, aplicar mutaciones simples y minimizar funciones objetivo, con soporte opcional para visualización del progreso en cada generación.
+
+Características
+
+- Definición de funciones objetivo personalizadas (ej. \( f(x) = x^2 \)).
+- Generación aleatoria de individuos y poblaciones.
+- Simulación simple de evolución por selección y mutación.
+- Visualización de la minimización de la función en gráficas.
+- Ideal para aprender conceptos básicos de optimización evolutiva.
