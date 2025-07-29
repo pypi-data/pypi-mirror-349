@@ -1,0 +1,14 @@
+class_only_design/__init__.py,sha256=eaDaj_N7d_cZUCLWfZQw5lvOwyjTVDD-u1zLZ-3MewI,340
+class_only_design/api.py,sha256=5RnwzdIDbN31i74YCD48Al4SZIv4fIU0ctbueuqDbkc,1277
+class_only_design/constants.py,sha256=t4oTJiLi1GzuXZXHpej2jeh8s9PIRZubMs-BQLjIg9E,160
+class_only_design/meta.py,sha256=_LEcMGmG5MAjiGMmVhCdLAoAGb8Ys0Se7dKYZfLimZM,2826
+class_only_design/util.py,sha256=nj2-os3aVSb6uJKkcsyEkfzGl0XLAxUECH4xOwFvU-U,1522
+class_only_design/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+class_only_design/tests/test_class_only.py,sha256=Z9iSG-h_9KV5Gz5_d-TJ4tUUB_Wf-1WKJnygsCAsqOU,5775
+class_only_design/tests/test_namespace.py,sha256=Q4VSRFnEv_U6ExBdN_3VZi8l3TCj2mywIFYaOsQQVUE,6038
+class_only_design/tests/test_util.py,sha256=0WFev6qUy1VR_vPB9h3dRE4BNcNfAfXVwji3inLmZ84,784
+class_only_design-1.0.0.dist-info/licenses/LICENSE,sha256=vpvDuZH_IlTYntLC9ZlcMl3jnoetVsccR09ww16uqGA,1071
+class_only_design-1.0.0.dist-info/METADATA,sha256=6N9ADq-jTAUGyLt24BAGlLN1R0PljF0W0Xk78s5Bbok,1016
+class_only_design-1.0.0.dist-info/WHEEL,sha256=egKm5cKfE6OqlHwodY8Jjp4yqZDBXgsj09UsV5ojd_U,109
+class_only_design-1.0.0.dist-info/top_level.txt,sha256=jmrLHRnsxB1UnF1jqDUufikvYyn1_lMNE71nXuo6v9s,18
+class_only_design-1.0.0.dist-info/RECORD,,
