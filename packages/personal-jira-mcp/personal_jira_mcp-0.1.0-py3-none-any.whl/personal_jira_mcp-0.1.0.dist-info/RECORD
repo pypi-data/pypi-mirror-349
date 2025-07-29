@@ -1,0 +1,12 @@
+jira_mcp/__init__.py,sha256=M9U8ICZvBsXpIndbuiNJHuD5UOh7Ir-PkupCCjU7wfg,56
+jira_mcp/__main__.py,sha256=vjiztBqwTLo8A8LFmZdLhpnukgH4H3I3ZZvKpmhm1fo,93
+jira_mcp/config.py,sha256=2UxkDyaY9Z4btHWvROIVl-o2hM7zqsMjtWMzU93kmf0,2496
+jira_mcp/server.py,sha256=Kma6fHYTv9c8rq8dmR8C26pnbxxuiDgRPRNuZWQhdC0,24790
+jira_mcp/scripts/__init__.py,sha256=Q4GFzHjdCshJ5YILjRzV_HfjSqS7tdGCD1ZRPLdr3GE,38
+jira_mcp/scripts/download_all_attachments.py,sha256=qaVJh50I0PZYa8bYgFh4owXvYcRzUjt6FCBMG2NPc0s,2914
+jira_mcp/scripts/extract_attachment.py,sha256=rQBMiNZLGHliNV81wfYSERVxXhNCBE4PvCFxPiFOPiA,1446
+personal_jira_mcp-0.1.0.dist-info/METADATA,sha256=cZCm_OnUaTfI6Tr0ToMN84SYPzBv401ejquDGJJwPjg,4632
+personal_jira_mcp-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+personal_jira_mcp-0.1.0.dist-info/entry_points.txt,sha256=29IgyH1AmPU4mC3QeWbMM120BefUvvj6tpZ-JQgqmeg,59
+personal_jira_mcp-0.1.0.dist-info/licenses/LICENSE,sha256=FyuBsNr3YLXHPRQfWIpCAC4brUeSdYelr01V-Fkog8U,1066
+personal_jira_mcp-0.1.0.dist-info/RECORD,,
