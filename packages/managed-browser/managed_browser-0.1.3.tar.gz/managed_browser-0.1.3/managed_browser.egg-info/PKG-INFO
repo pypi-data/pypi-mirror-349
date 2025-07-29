@@ -1,0 +1,154 @@
+Metadata-Version: 2.4
+Name: managed-browser
+Version: 0.1.3
+Summary: Allows seamless interplay between agentic browser-use and Playwright internals
+Author-email: Amrit Baveja <abaveja313@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2025 Amrit Baveja
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+Project-URL: Homepage, https://github.com/abaveja313/managed-browser
+Project-URL: Repository, https://github.com/abaveja313/managed-browser
+Keywords: playwright,browser,agent,automation,LLM
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: browser-use==0.1.48
+Requires-Dist: fake-useragent>=2.2.0
+Requires-Dist: langchain>=0.3.22
+Dynamic: license-file
+
+# managed-browser
+
+A simple wrapper to integrate language-model agents into your existing Playwright (Python) scripts via the popular `browser-use` library, with built-in Playwright tracing support.
+
+## Supports
+
+- Python 3.11+
+
+## Objective
+
+Agents are still unreliable and far from production-ready—especially web agents, given the enormous diversity and challenges of navigating real-world sites. 
+This package lets you keep your existing Playwright flows and seamlessly “drop in” agent tasks where you need them, without wrestling with a clunky API. It also exposes Playwright’s powerful tracing features around each agent run so you can debug and audit exactly what happened in the browser.
+
+## Installation
+
+Requires Python 3.11+ and a [PEP 517](https://www.python.org/dev/peps/pep-0517/)-compatible build backend.
+
+```bash
+# UV
+uv add managed-browser
+# Pip
+pip install managed-browser
+```
+
+## Usage
+
+```python
+import asyncio
+from browser_use import BrowserConfig
+from langchain_openai import ChatOpenAI
+from managed_browser import BrowserManager
+
+async def main():
+    # Initialize the manager with your Playwright config
+    bm = BrowserManager(
+        browser_config=BrowserConfig(headless=False)
+    )
+
+    # Your LLM of choice
+    llm = ChatOpenAI(model='gpt-4o')
+
+    # Create a managed context (with tracing enabled under the hood)
+    async with bm.managed_context() as session:
+        page = await session.browser_context.new_page()
+
+        # -- Your deterministic Playwright steps --
+        await page.goto("https://github.com", wait_until="domcontentloaded")
+        await page.wait_for_timeout(1_000)
+        await page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
+        await page.wait_for_timeout(1_000)
+
+        # -- Drop in an agent task --
+        agent = session.make_agent(
+            llm=llm,
+            task=(
+                "Extract the visible link text in the website's footer. "
+                "Return your answer wrapped in <result>...</result>."
+            )
+        )
+        result = await agent.run()
+        print(result)
+
+    # After exit, Playwright trace(s) for the agent run will be saved in ./playwright_traces/
+
+if __name__ == '__main__':
+    asyncio.run(main())
+```
+
+## API Reference
+
+### `BrowserManager`
+
+```python
+BrowserManager(
+    browser_config: BrowserConfig,
+    *,
+    trace_dir: Optional[str] = "./playwright_traces"
+)
+```
+- **browser_config**: your `browser-use`/Playwright settings  
+- **trace_dir**: where to dump Playwright trace ZIPs
+
+#### `.managed_context()`
+
+An async context manager yielding a `ManagedSession`:
+
+- `session.browser_context` → Playwright `BrowserContext`  
+- `session.make_agent(llm: BaseChatModel, task: str, **kwargs)` → ready-to-run agent
+
+#### `ManagedSession.make_agent(...)`
+
+Wraps `browser-use` arguments into an LLM agent. Returns an object with a `.run()` coroutine.
+
+### Tracing
+
+By default, each `agent.run()` invocation is wrapped in a Playwright trace. Trace files (ZIP) will appear under `trace_dir` with timestamps for easy playback:
+
+```bash
+# Playwright CLI
+npx playwright show-trace ./playwright_traces/<timestamp>.zip
+```
+
+## Contributing
+
+Contributions, issues, and feature requests are welcome!  
+Please fork the repo and submit a pull request, or open an issue for discussion.
+
+## License
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.  
+
