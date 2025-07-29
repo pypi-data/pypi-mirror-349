@@ -1,0 +1,29 @@
+[build-system]
+requires = [
+    "hatchling",
+]
+build-backend = "hatchling.build"
+
+[project]
+name = "mseep-mcp-twikit"
+version = "0.1.1"
+description = "Twitter search tool for FastMCP using Twikit"
+readme = "README.md"
+requires-python = ">=3.7"
+license = "MIT"
+authors = [
+    { name = "mseep", email = "support@skydeck.ai" },
+]
+dependencies = [
+    "fastmcp",
+    "twikit",
+    "requests",
+]
+maintainers = [
+    { name = "mseep", email = "support@skydeck.ai" },
+]
+
+[project.scripts]
+mcp-twikit = "mcp_twikit.twitter:mcp.run"
+
+[tool.hatch.build.targets]
