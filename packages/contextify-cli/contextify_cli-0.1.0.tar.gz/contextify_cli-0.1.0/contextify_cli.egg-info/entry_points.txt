@@ -1,0 +1,2 @@
+[console_scripts]
+contextify = contextify.cli:main
