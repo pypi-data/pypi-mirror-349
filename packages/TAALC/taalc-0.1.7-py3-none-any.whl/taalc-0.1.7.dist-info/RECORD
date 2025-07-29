@@ -1,0 +1,8 @@
+TAALC/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+TAALC/__main__.py,sha256=S5F8Va6pjmwBhIAakWUKDXCjdwb86dNMzPQCCO-wz2g,544
+TAALC/bots/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+TAALC/bots/telegram_bot.py,sha256=jpjS2dzOcu8RxsIk1keaabTF1GGa7wgMp9mXC9AkEAM,5253
+TAALC/bots/worker.py,sha256=lucEkpinr6_xETDee20gNVEP00teQF5S3J7d8nY8pJI,143
+taalc-0.1.7.dist-info/METADATA,sha256=YuMO42NGv5RQ9-ExtO4zbAenGz39SwSKxlLZNL5YnNE,721
+taalc-0.1.7.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+taalc-0.1.7.dist-info/RECORD,,
