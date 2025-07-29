@@ -1,0 +1,728 @@
+import sympy as sp
+
+from .field import R
+from . import utils as u
+from .vectorspace import VectorSpace, fn
+
+
+class LinearMapError(Exception):
+    def __init__(self, msg=''):
+        super().__init__(msg)
+
+
+class LinearMap:
+    """
+    pass
+    """
+    
+    def __init__(self, name, domain, codomain, mapping=None, matrix=None):
+        """
+        pass
+
+        Parameters
+        ----------
+        name : str
+            The name of the linear map.
+        domain : VectorSpace
+            The domain of the linear map.
+        codomain : VectorSpace
+            The codomain of the linear map.
+        mapping : callable, optional
+            A function that takes a vector in the domain and returns a 
+            vector in the codomain.
+        matrix : list of list or sympy.Matrix, optional
+            The matrix representation of the linear map with respect to 
+            the basis vectors of the domain and codomain.
+
+        Returns
+        -------
+        LinearMap
+            pass
+
+        Raises
+        ------
+        LinearMapError
+            If neither the mapping nor the matrix is provided.
+        LinearMapError
+            If the field of the domain and codomain are not the same.
+        """
+        if not isinstance(name, str):
+            raise TypeError('Name must be a string.')
+        if not isinstance(domain, VectorSpace):
+            raise TypeError('Domain must be a VectorSpace.')
+        if not isinstance(codomain, VectorSpace):
+            raise TypeError('Codomain must be a VectorSpace.')
+        if mapping is None and matrix is None:
+            raise LinearMapError('Either a matrix or mapping must be provided.')
+        if domain.field is not codomain.field:
+            raise LinearMapError(
+                'Domain and codomain must be vector spaces over the same field.'
+                )
+        
+        if mapping is None:
+            mapping = LinearMap._from_matrix(domain, codomain, matrix)
+        elif not u.of_arity(mapping, 1):
+            raise TypeError('Mapping must be a function of arity 1.')
+        if matrix is None:
+            matrix = LinearMap._to_matrix(domain, codomain, mapping)
+        else:
+            matrix = LinearMap._validate_matrix(domain, codomain, matrix)
+        
+        self.name = name
+        self._domain = domain
+        self._codomain = codomain
+        self._mapping = mapping
+        self._matrix = matrix
+    
+    @staticmethod
+    def _to_matrix(domain, codomain, mapping):
+        matrix = []
+        for vec in domain.basis:
+            mapped_vec = mapping(vec)
+            coord_vec = codomain.to_coordinate(mapped_vec)
+            matrix.append(coord_vec)
+        return sp.Matrix(matrix).T
+
+    @staticmethod
+    def _from_matrix(domain, codomain, matrix):
+        matrix = sp.Matrix(matrix)
+        def to_coord(vec): return sp.Matrix(domain.to_coordinate(vec))
+        def from_coord(vec): return codomain.from_coordinate(vec.flat())
+        return lambda vec: from_coord(matrix @ to_coord(vec))
+    
+    @staticmethod
+    def _validate_matrix(domain, codomain, matrix):
+        matrix = sp.Matrix(matrix)
+        if matrix.shape != (codomain.dim, domain.dim):
+            raise ValueError('Matrix has invalid shape.')
+        if not all(i in domain.field for i in matrix):
+            raise ValueError('Matrix entries must be in the field.')
+        return matrix
+
+    @property
+    def field(self):
+        """
+        {R, C}: The field of the domain and codomain.
+        """
+        return self.domain.field
+
+    @property
+    def domain(self):
+        """
+        VectorSpace: The domain of the linear map.
+        """
+        return self._domain
+    
+    @property
+    def codomain(self):
+        """
+        VectorSpace: The codomain of the linear map.
+        """
+        return self._codomain
+    
+    @property
+    def mapping(self):
+        """
+        callable: The function that maps vectors from the domain to the codomain.
+        """
+        return self._mapping
+    
+    @property
+    def matrix(self):
+        """
+        sympy.Matrix: The matrix representation of the linear map.
+        """
+        return self._matrix
+    
+    @property
+    def rank(self):
+        """
+        int: The dimension of the image of the linear map.
+        """
+        return self.matrix.rank()
+    
+    @property
+    def nullity(self):
+        """
+        int: The dimension of the kernel of the linear map.
+        """
+        return self.matrix.cols - self.rank
+    
+    def __repr__(self):
+        return (
+            f'LinearMap(name="{self.name}", '
+            f'domain={self.domain.name}, '
+            f'codomain={self.codomain.name}, '
+            f'mapping={self.mapping.__name__}, '
+            f'matrix={self.matrix.tolist()})'
+            )
+    
+    def __str__(self):
+        signature = f'{self.name} : {self.domain.name} -> {self.codomain.name}'
+
+        lines = [
+            signature,
+            '-' * len(signature),
+            f'Field        {self.field}',
+            f'Rank         {self.rank}',
+            f'Nullity      {self.nullity}',
+            f'Injective?   {self.is_injective()}',
+            f'Surjective?  {self.is_surjective()}',
+            f'Bijective?   {self.is_bijective()}',
+            f'Matrix       {self.matrix.tolist()}'
+            ]
+        return '\n'.join(lines)
+
+    def __eq__(self, map2):
+        if not isinstance(map2, LinearMap):
+            return False
+        if not (self.domain == map2.domain and self.codomain == map2.codomain):
+            return False
+        basis1, basis2 = map2.domain.basis, map2.codomain.basis
+        matrix, _, _ = LinearMap.change_of_basis(self, basis1, basis2)
+        return map2.matrix == matrix  # FIX: consider .equals()
+    
+    def __add__(self, map2):
+        """
+        The sum of two linear maps.
+
+        Parameters
+        ----------
+        map2 : LinearMap
+            The linear map being added.
+
+        Returns
+        -------
+        LinearMap
+            The sum of `self` and `map2`.
+
+        Examples
+        --------
+        
+        >>> R3 = fn('R3', R, 3)
+        >>> def mapping1(vec): return [2*i for i in vec]
+        >>> def mapping2(vec): return [3*i for i in vec]
+        >>> map1 = LinearMap('map1', R3, R3, mapping1)
+        >>> map2 = LinearMap('map2', R3, R3, mapping2)
+        >>> map3 = map1 + map2
+        >>> map3([1, 2, 3])
+        [5, 10, 15]
+        """
+        # FIX: Make sure the domains and codomains are equal
+        name = f'{self.name} + {map2.name}'
+        def mapping(vec):
+            vec1 = self.mapping(vec)
+            vec2 = map2.mapping(vec)
+            return self.codomain.add(vec1, vec2)
+        matrix = self.matrix + map2.matrix
+        return LinearMap(name, self.domain, self.codomain, mapping, matrix)
+    
+    def __mul__(self, scalar):
+        """
+        The product of the linear map and a scalar.
+
+        Parameters
+        ----------
+        scalar : object
+            The scalar to multiply by.
+
+        Returns
+        -------
+        LinearMap
+            The product of `self` and `scalar`.
+
+        Examples
+        --------
+        
+        >>> R3 = fn('R3', R, 3)
+        >>> def mapping(vec): return [2*i for i in vec]
+        >>> map1 = LinearMap('map1', R3, R3, mapping)
+        >>> map2 = 3 * map1
+        >>> map2([1, 2, 3])
+        [6, 12, 18]
+        """
+        if scalar not in self.field:
+            raise TypeError('Scalar must be an element of the vector space field.')
+        
+        name = f'{scalar} * {self.name}'
+        def mapping(vec):
+            return self.codomain.mul(scalar, self.mapping(vec))
+        matrix = self.matrix * scalar
+        return LinearMap(name, self.domain, self.codomain, mapping, matrix)
+    
+    def __rmul__(self, scalar):
+        return self.__mul__(scalar)
+    
+    def __call__(self, vec):
+        """
+        Apply the linear map to a vector.
+
+        Parameters
+        ----------
+        vec : object
+            The vector to map.
+
+        Returns
+        -------
+        object
+            The vector that `vec` maps to.
+
+        Examples
+        --------
+        
+        >>> R3 = fn('R3', R, 3)
+        >>> def mapping(vec): return [2*i for i in vec]
+        >>> map1 = LinearMap('map1', R3, R3, mapping)
+        >>> map1([1, 2, 3])
+        [2, 4, 6]
+        """
+        if vec not in self.domain:
+            raise TypeError(f'{vec} is not an element of the domain.')
+        return self.mapping(vec)
+    
+    def change_of_basis(self, domain_basis=None, codomain_basis=None):
+        """
+        pass
+        """
+        if domain_basis is None:
+            domain_basechange = sp.eye(self.domain.dim)
+        else:
+            domain_basechange = self.domain.change_of_basis(domain_basis)
+        if codomain_basis is None:
+            codomain_basechange = sp.eye(self.codomain.dim)
+        else:
+            codomain_basechange = self.codomain.change_of_basis(codomain_basis) 
+
+        map_matrix = codomain_basechange @ self.matrix @ domain_basechange.inv()
+        return map_matrix, domain_basechange, codomain_basechange
+
+    def inverse(self):
+        """
+        The inverse of the linear map.
+
+        Returns
+        -------
+        LinearMap
+            The inverse of `self`.
+
+        Raises
+        ------
+        LinearMapError
+            If `self` is not invertible.
+        """
+        if not self.is_bijective():
+            raise LinearMapError('Linear map is not invertible.')
+        name = f'{self.name}^-1'
+        matrix = self.matrix.inv()
+        return LinearMap(name, self.codomain, self.domain, matrix=matrix)
+
+    def composition(self, map2):
+        """
+        The composition of two linear maps.
+
+        Parameters
+        ----------
+        map2 : LinearMap
+            The linear map to compose with.
+
+        Returns
+        -------
+        LinearMap
+            The composition of `self` and `map2`.
+
+        Raises
+        ------
+        LinearMapError
+            If the domain of `self` is not equal to the codomain of `map2`.
+
+        Examples
+        --------
+        
+        >>> R3 = fn('R3', R, 3)
+        >>> def mapping1(vec): return [2*i for i in vec]
+        >>> def mapping2(vec): return [3*i for i in vec]
+        >>> map1 = LinearMap('map1', R3, R3, mapping1)
+        >>> map2 = LinearMap('map2', R3, R3, mapping2)
+        >>> map3 = map1.composition(map2)
+        >>> map3([1, 2, 3])
+        [6, 12, 18]
+        """
+        if not isinstance(map2, LinearMap):
+            raise TypeError()
+        if self.domain != map2.codomain:
+            raise LinearMapError('The linear maps are not compatible.')
+        
+        name = f'{self.name} o {map2.name}'
+        def mapping(vec):
+            return self.mapping(map2.mapping(vec))
+        matrix = self.matrix @ map2.matrix
+        return LinearMap(name, map2.domain, self.codomain, mapping, matrix)
+    
+    def image(self):
+        """
+        The image, or range, of the linear map.
+
+        Returns
+        -------
+        VectorSpace
+            The image of `self`.
+
+        See Also
+        --------
+        LinearMap.range
+        """
+        name = f'im({self.name})'
+        basis = [vec.flat() for vec in self.matrix.columnspace()]
+        basis = [self.codomain.from_coordinate(vec) for vec in basis]
+        return self.codomain.span(name, *basis)
+
+    def kernel(self):
+        """
+        The kernel, or null space, of the linear map.
+
+        Returns
+        -------
+        VectorSpace
+            The kernel of `self`.
+
+        See Also
+        --------
+        LinearMap.nullspace
+        """
+        name = f'ker({self.name})'
+        basis = [vec.flat() for vec in self.matrix.nullspace()]
+        basis = [self.domain.from_coordinate(vec) for vec in basis]
+        return self.domain.span(name, *basis)
+    
+    def adjoint(self):
+        """
+        The adjoint of the linear map.
+        """
+        raise NotImplementedError()
+    
+    def pseudoinverse(self):
+        """
+        The pseudoinverse of the linear map.
+        """
+        raise NotImplementedError()
+
+    def is_injective(self):
+        """
+        Check whether the linear map is injective.
+
+        Returns
+        -------
+        bool
+            True if the linear map is injective, otherwise False.
+
+        See Also
+        --------
+        LinearMap.is_surjective, LinearMap.is_bijective
+        """
+        return self.matrix.cols == self.rank
+
+    def is_surjective(self):
+        """
+        Check whether the linear map is surjective.
+
+        Returns
+        -------
+        bool
+            True if the linear map is surjective, otherwise False.
+
+        See Also
+        --------
+        LinearMap.is_injective, LinearMap.is_bijective
+        """
+        return self.matrix.rows == self.rank
+    
+    def is_bijective(self):
+        """
+        Check whether the linear map is bijective.
+
+        Returns
+        -------
+        bool
+            True if the linear map is bijective, otherwise False.
+
+        See Also
+        --------
+        LinearMap.is_injective, LinearMap.is_surjective
+        """
+        return u.is_invertible(self.matrix)
+
+    # Aliases
+    range = image
+    nullspace = kernel
+
+
+class LinearOperator(LinearMap):
+    """
+    pass
+    """
+
+    def __init__(self, name, vectorspace, mapping=None, matrix=None):
+        super().__init__(name, vectorspace, vectorspace, mapping, matrix)
+
+    def __repr__(self):
+        return (
+            f'LinearOperator(name="{self.name}", '
+            f'vectorspace={self.domain.name}, '
+            f'mapping={self.mapping.__name__}, '
+            f'matrix={self.matrix.tolist()})'
+            )
+    
+    def change_of_basis(self, basis):
+        """
+        pass
+        """
+        basechange = self.domain.change_of_basis(basis)
+        map_matrix = basechange @ self.matrix @ basechange.inv()
+        return map_matrix, basechange
+    
+    def inverse(self):
+        """
+        The inverse of the linear operator.
+
+        Returns
+        -------
+        LinearOperator
+            The inverse of `self`.
+
+        Raises
+        ------
+        LinearMapError
+            If `self` is not invertible.
+        """
+        if not self.is_bijective():
+            raise LinearMapError('Linear map is not invertible.')
+        name = f'{self.name}^-1'
+        matrix = self.matrix.inv()
+        return LinearOperator(name, self.domain, matrix=matrix)
+    
+    def is_symmetric(self, innerproduct):
+        """
+        Check whether the linear operator is symmetric.
+
+        Note that this method is only valid for operators defined on 
+        real vector spaces. An exception is raised otherwise.
+
+        Returns
+        -------
+        bool
+            True if `self` is symmetric, otherwise False.
+
+        Raises
+        ------
+        LinearMapError
+            If `self` is not defined on a real vector space.
+
+        See Also
+        --------
+        LinearOperator.is_hermitian
+        """
+        if self.field is not R:
+            raise LinearMapError()
+        matrix, _ = self.change_of_basis(innerproduct.orthonormal_basis)
+        return matrix.is_symmetric()
+
+    def is_hermitian(self, innerproduct):
+        """
+        Check whether the linear operator is hermitian.
+
+        Returns
+        -------
+        bool
+            True if `self` is hermitian, otherwise False.
+
+        See Also
+        --------
+        LinearOperator.is_symmetric
+        """
+        matrix, _ = self.change_of_basis(innerproduct.orthonormal_basis)
+        return matrix.is_hermitian
+
+    def is_orthogonal(self, innerproduct):
+        """
+        Check whether the linear operator is orthogonal.
+
+        Note that this method is only valid for operators defined on 
+        real vector spaces. An exception is raised otherwise.
+
+        Returns
+        -------
+        bool
+            True if `self` is orthogonal, otherwise False.
+
+        Raises
+        ------
+        LinearMapError
+            If `self` is not defined on a real vector space.
+
+        See Also
+        --------
+        LinearOperator.is_unitary
+        """
+        if self.field is not R:
+            raise LinearMapError()
+        matrix, _ = self.change_of_basis(innerproduct.orthonormal_basis)
+        return u.is_orthogonal(matrix)
+
+    def is_unitary(self, innerproduct):
+        """
+        Check whether the linear operator is unitary.
+
+        Returns
+        -------
+        bool
+            True if `self` is unitary, otherwise False.
+
+        See Also
+        --------
+        LinearOperator.is_orthogonal
+        """
+        matrix, _ = self.change_of_basis(innerproduct.orthonormal_basis)
+        return u.is_unitary(matrix)
+    
+    def is_normal(self, innerproduct):
+        """
+        Check whether the linear operator is normal.
+
+        Returns
+        -------
+        bool
+            True if `self` is normal, otherwise False.
+        """
+        matrix, _ = self.change_of_basis(innerproduct.orthonormal_basis)
+        return u.is_normal(matrix)
+
+
+class LinearFunctional(LinearMap):
+    """
+    pass
+    """
+
+    def __init__(self, name, vectorspace, mapping=None, matrix=None):
+        """
+        pass
+
+        Parameters
+        ----------
+        name : str
+            The name of the linear functional.
+        vectorspace : VectorSpace
+            The vector space the linear functional is defined on.
+        mapping : callable, optional
+            A function that takes a vector in the vector space and 
+            returns a scalar in the field.
+        matrix : list of list or sympy.Matrix, optional
+            The matrix representation of the linear functional with 
+            respect to the basis of the vector space.
+
+        Returns
+        -------
+        LinearFunctional
+            pass
+
+        Raises
+        ------
+        LinearMapError
+            If neither the mapping nor the matrix is provided.
+        """
+        field = vectorspace.field
+        codomain = fn(f'{field}', field, 1)
+        super().__init__(name, vectorspace, codomain, mapping, matrix)
+
+    def __repr__(self):
+        return (
+            f'LinearFunctional(name="{self.name}", '
+            f'vectorspace={self.domain.name}, '
+            f'mapping={self.mapping.__name__}, '
+            f'matrix={self.matrix.tolist()})'
+            )
+
+
+class Isomorphism(LinearMap):
+    """
+    pass
+    """
+
+    def __init__(self, name, domain, codomain, mapping=None, matrix=None):
+        super().__init__(name, domain, codomain, mapping, matrix)
+
+        if not self.is_bijective():
+            raise LinearMapError('Linear map is not invertible.')
+
+    def __repr__(self):
+        return super().__repr__().replace('LinearMap', 'Isomorphism')
+    
+    def __str__(self):
+        signature = f'{self.name} : {self.domain.name} -> {self.codomain.name}'
+
+        lines = [
+            signature,
+            '-' * len(signature),
+            f'Field   {self.field}',
+            f'Matrix  {self.matrix.tolist()}'
+            ]
+        return '\n'.join(lines)
+    
+    def inverse(self):
+        """
+        The inverse of the isomorphism.
+
+        Returns
+        -------
+        Isomorphism
+            The inverse of `self`.
+        """
+        name = f'{self.name}^-1'
+        matrix = self.matrix.inv()
+        return Isomorphism(name, self.codomain, self.domain, matrix=matrix)
+
+
+class IdentityMap(LinearOperator):
+    """
+    pass
+    """
+
+    def __init__(self, vectorspace):
+        """
+        pass
+
+        Parameters
+        ----------
+        vectorspace : VectorSpace
+            The vector space the identity map is defined on.
+
+        Returns
+        -------
+        IdentityMap
+            pass
+        """
+        super().__init__('Id', vectorspace, lambda vec: vec)
+
+    def __repr__(self):
+        return f'IdentityMap(vectorspace={self.domain.name})'
+    
+    def __str__(self):
+        signature = f'{self.name} : {self.domain.name} -> {self.codomain.name}'
+
+        lines = [
+            signature,
+            '-' * len(signature),
+            f'Field   {self.field}',
+            f'Matrix  {self.matrix.tolist()}'
+            ]
+        return '\n'.join(lines)
+    
+    def inverse(self):
+        """
+        The inverse of the identity map.
+
+        Returns
+        -------
+        IdentityMap
+            The inverse of `self`.
+        """
+        return self
