@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling>=1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "griddot"
+version = "0.0.1"
+description = "Griddot packages"
+readme = "README.md"
+authors = [
+    { name = "Griddot", email = "info@griddot.net" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "click"
+]
+classifiers = [
+    "Intended Audience :: Developers",
+    "Natural Language :: English"
+]
+
+[project.scripts]
+kcprov = "griddot.main:cli"
