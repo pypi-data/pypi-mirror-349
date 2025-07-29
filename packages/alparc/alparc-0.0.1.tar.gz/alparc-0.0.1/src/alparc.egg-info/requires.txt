@@ -1,0 +1,9 @@
+tyro
+tqdm
+seaborn
+ruamel_yaml
+pingouin
+pydantic
+
+[test]
+pytest
