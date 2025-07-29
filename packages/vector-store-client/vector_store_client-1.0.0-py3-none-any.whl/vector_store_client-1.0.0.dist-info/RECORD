@@ -1,0 +1,13 @@
+vector_store_client/__init__.py,sha256=LDzvCODqUUzob5Biq7MVMisKKMr3RcACYieQTgrxO1A,2186
+vector_store_client/base_client.py,sha256=V_ud1W9-xfWhdo6N-1gRD5rpMcacy1YWFF2CTNrpwIU,25035
+vector_store_client/client.py,sha256=83ztPu9e_l0hFJ4KaeQCWjHUY6M8zZte83zl7S6epT8,28304
+vector_store_client/exceptions.py,sha256=nKmZcftg0MtuJ26LkODiZoYl9R3e9KKeAZRHG39idHk,5799
+vector_store_client/models.py,sha256=38GNec0Z05ACh7zqUeHuFsRCTta0SVibsuQZCyZ8VHI,8272
+vector_store_client/types.py,sha256=lwGI9z5B1VZYZW63K7H0oKiUTsxLSf9Kf9yamBRCEpw,2886
+vector_store_client/utils.py,sha256=U8Dcknv_4RUL3FsTYU0cFr6HpnFRohJxQjBV5ysJEE8,3205
+vector_store_client/validation.py,sha256=iugwPuA3FeQ2OiBlwezQpuP2ACygj6KXyAhqMCEPXYI,3317
+vector_store_client-1.0.0.dist-info/licenses/LICENSE,sha256=A6IRRGjgn6bMNczfKfeM0CABUWU76nPteidjrPK3gjY,1071
+vector_store_client-1.0.0.dist-info/METADATA,sha256=HcMlaD2SrR7VejyKRUanW5wUERpwQ--46d03GXgCO-I,3777
+vector_store_client-1.0.0.dist-info/WHEEL,sha256=Nw36Djuh_5VDukK0H78QzOX-_FQEo6V37m3nkm96gtU,91
+vector_store_client-1.0.0.dist-info/top_level.txt,sha256=87kN-DSA6ePzm08SKlPxgZPTnpi-yaGw8Xtlr06zcjw,20
+vector_store_client-1.0.0.dist-info/RECORD,,
