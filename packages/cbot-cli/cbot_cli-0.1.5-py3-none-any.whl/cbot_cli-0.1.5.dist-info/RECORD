@@ -1,0 +1,9 @@
+cbot/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cbot/__main__.py,sha256=GSGtTLWcF2SyYX40QeuVSxq6RBN76xHMvqA5Ql701pI,119
+cbot/cbot_cli.py,sha256=QZAqijldmGOIrP_BOvYeo75wm9PuLM32AdguN5dscyo,10618
+cbot_cli-0.1.5.dist-info/licenses/LICENSE,sha256=XXEm4dWWaT3XwYnanftWWwzDwzxfvKM96Og6MwVUilk,1066
+cbot_cli-0.1.5.dist-info/METADATA,sha256=kHWtSfFg9HfGK4jiAWBphoT6KdOM-RFWQMFRgPTBqkw,3180
+cbot_cli-0.1.5.dist-info/WHEEL,sha256=Nw36Djuh_5VDukK0H78QzOX-_FQEo6V37m3nkm96gtU,91
+cbot_cli-0.1.5.dist-info/entry_points.txt,sha256=MrV3sPcD91_-vlClNLzeKnHP1aFmIwhyEIB6lyfg1eY,74
+cbot_cli-0.1.5.dist-info/top_level.txt,sha256=BixomX-fEz6lxqT09kdFeZ3Tv_rZE3YVnUrWOcgCGkA,5
+cbot_cli-0.1.5.dist-info/RECORD,,
