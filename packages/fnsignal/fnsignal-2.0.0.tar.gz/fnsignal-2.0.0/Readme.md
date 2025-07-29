@@ -1,0 +1,175 @@
+# FNSignal
+
+A powerful function signal system for Python that allows functions to communicate with each other through signals.
+
+## Features
+
+- Simple signal sending and receiving
+- Support for both synchronous and asynchronous operations
+- Advanced callback management with priority and filtering
+- Thread-safe signal handling
+- Comprehensive logging and debugging support
+- Signal statistics and monitoring
+- Stop propagation support
+- Flexible signal filtering
+
+## Installation
+
+```bash
+pip install fnsignal
+```
+
+## Usage
+
+### Basic Usage
+
+```python
+from fnsignal import send_signal, receive_signal
+
+# Send a signal
+send_signal("target_function")
+
+# Check if signal was received
+if receive_signal("target_function"):
+    print("Signal received!")
+```
+
+### Using Callbacks
+
+```python
+from fnsignal import (
+    send_signal,
+    receive_signal,
+    wait_for_signals,
+    SignalPriority
+)
+
+def my_callback(data):
+    print(f"Signal received with data: {data}")
+
+# Register callback with priority
+receive_signal(
+    "target_function",
+    callback=my_callback,
+    priority=SignalPriority.HIGH
+)
+
+# Send signal with data
+send_signal("target_function", data={"message": "Hello!"})
+
+# Wait for all signals to be processed
+wait_for_signals()
+```
+
+### Advanced Callback Management
+
+```python
+from fnsignal import (
+    register_callback,
+    unregister_callback,
+    unregister_all_callbacks,
+    SignalPriority
+)
+
+def high_priority_callback(data):
+    print("High priority callback")
+
+def normal_callback(data):
+    print("Normal priority callback")
+
+# Register callbacks with different priorities
+register_callback(
+    "my_signal",
+    high_priority_callback,
+    priority=SignalPriority.HIGH
+)
+
+register_callback(
+    "my_signal",
+    normal_callback,
+    priority=SignalPriority.NORMAL
+)
+
+# Unregister specific callback
+unregister_callback("my_signal", normal_callback)
+
+# Unregister all callbacks for a signal
+unregister_all_callbacks("my_signal")
+```
+
+### Asynchronous Usage
+
+```python
+import asyncio
+from fnsignal import send_signal, receive_signal_async
+
+async def async_callback(data):
+    print(f"Async callback received: {data}")
+    await asyncio.sleep(1)
+
+async def main():
+    # Register async callback
+    receive_signal_async(
+        "target_function",
+        callback=async_callback
+    )
+    
+    # Send signal
+    send_signal("target_function", data={"async": True})
+    
+    # Wait for processing
+    await asyncio.sleep(2)
+
+# Run async function
+asyncio.run(main())
+```
+
+### Signal Filtering
+
+```python
+from fnsignal import send_signal, receive_signal
+
+def filter_condition(data):
+    return data.get("type") == "important"
+
+# Register callback with filter
+receive_signal(
+    "target_function",
+    callback=lambda data: print("Important signal received!"),
+    filter_condition=filter_condition
+)
+
+# Send signals
+send_signal("target_function", data={"type": "important"})  # Will trigger callback
+send_signal("target_function", data={"type": "normal"})     # Won't trigger callback
+```
+
+### Logging and Monitoring
+
+```python
+from fnsignal import (
+    setup_logging,
+    get_signal_stats,
+    reset_signal_stats
+)
+
+# Configure logging
+setup_logging(
+    level=logging.DEBUG,
+    log_file="custom.log",
+    enable_console=True
+)
+
+# Get signal statistics
+stats = get_signal_stats()
+print(f"Total signals: {stats.total_signals}")
+print(f"Active callbacks: {stats.active_callbacks}")
+print(f"Signal counts: {stats.signal_counts}")
+
+# Reset statistics
+reset_signal_stats()
+```
+
+## License
+
+MIT License 
