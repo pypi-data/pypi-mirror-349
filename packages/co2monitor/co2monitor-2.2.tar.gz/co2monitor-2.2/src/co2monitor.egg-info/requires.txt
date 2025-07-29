@@ -1,0 +1,12 @@
+click>=8.1.7
+loguru>=0.6.0
+python-dotenv>=1.0.1
+requests>=2.32.2
+
+[screen]
+pillow~=9.5
+rpi.gpio>=0.7.1
+spidev>=3.6
+
+[tray]
+pyside6>=6.8.0.2
