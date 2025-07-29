@@ -1,0 +1,9 @@
+wowool/apps/phones/__init__.py,sha256=4uo3udXwNhDXsL3SiFp6yyj94XJoaf4CeKZGAez1UN4,80
+wowool/apps/phones/config.py,sha256=BmCrfY7ByvSdSz_IMV7Wh6--QVtWSH_MEKms9JcgJyM,569
+wowool/phones/__init__.py,sha256=maM9NabPFhM05aoiCZ45G5KMXPnmzZJ-4Fp6q8vDXII,40
+wowool/phones/app_id.py,sha256=Q3PvTkOMbnwHvYsn3-qNrZwcX-Sc4EaZMpdBtPBYjWo,25
+wowool/phones/phones.py,sha256=ys8wCmQpMz5jZUian8wLgAIc_zBBDBcetKJVXXQmuJk,11347
+wowool_phones-2.1.2.dev1.dist-info/METADATA,sha256=ldfFWx20AT8-ESu-o4YxPXXhfCPLsoAY8I1DiNksH5U,4973
+wowool_phones-2.1.2.dev1.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+wowool_phones-2.1.2.dev1.dist-info/top_level.txt,sha256=zerqoDN-iHSHwsS1SN2h0q4H6RI1FOVeHW8fNQC9YdU,7
+wowool_phones-2.1.2.dev1.dist-info/RECORD,,
