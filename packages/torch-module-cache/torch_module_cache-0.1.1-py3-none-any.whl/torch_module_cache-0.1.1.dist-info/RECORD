@@ -1,0 +1,9 @@
+torch_module_cache/__init__.py,sha256=6GqE5kHLpHBtyNaheG-MAKbu18d-u0B09A7grbdoDOc,413
+torch_module_cache/decorator.py,sha256=KfOccDOGOGj9in69Mz-M0TEu9TRagi-zz_2XOjAQ1_Y,24556
+torch_module_cache/utils/__init__.py,sha256=jwPzSShCfSWZRi38z4nbJFMebaxEWZjIMVBKFiMjhTE,164
+torch_module_cache/utils/cache_utils.py,sha256=0PXwiMzjB-GRkZjIpPub_dxjsSS33rLhpvFJlc557XE,3713
+torch_module_cache-0.1.1.dist-info/licenses/LICENSE,sha256=8TA2lQKxC6tRWfsGdlEDVAYruPy3rh9N2435DwP2k30,1065
+torch_module_cache-0.1.1.dist-info/METADATA,sha256=oo319-Cv-eeBeWolTwOQumTkXDo2P6zFfD6aeH1kdiA,6330
+torch_module_cache-0.1.1.dist-info/WHEEL,sha256=Nw36Djuh_5VDukK0H78QzOX-_FQEo6V37m3nkm96gtU,91
+torch_module_cache-0.1.1.dist-info/top_level.txt,sha256=WkB09E3bsvBpxhQ0S-hRTySx5E98lcIRhttTjEugJRk,19
+torch_module_cache-0.1.1.dist-info/RECORD,,
