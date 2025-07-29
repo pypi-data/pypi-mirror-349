@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: django-azuread-token-validator
+Version: 0.1.0
+Summary: Django middleware to validate Azure AD JWT tokens and enrich requests with user data
+Author: Marlon Passos
+Author-email: marlonjbpassos@gmail.com
+Classifier: Framework :: Django
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+License-File: LICENSE
+Requires-Dist: Django>=3.2
+Requires-Dist: PyJWT>=2.0
+Requires-Dist: requests>=2.25
+Requires-Dist: cryptography>=40.0.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
