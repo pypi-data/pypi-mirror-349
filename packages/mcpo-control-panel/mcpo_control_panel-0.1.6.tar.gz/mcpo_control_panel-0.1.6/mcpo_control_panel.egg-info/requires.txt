@@ -1,0 +1,4 @@
+fastapi[all]>=0.115.12
+httpx>=0.28.1
+mcpo>=0.0.14
+sqlmodel>=0.0.24
