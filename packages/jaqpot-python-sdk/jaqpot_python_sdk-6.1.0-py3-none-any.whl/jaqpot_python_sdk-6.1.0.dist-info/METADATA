@@ -1,0 +1,48 @@
+Metadata-Version: 2.4
+Name: jaqpot-python-sdk
+Version: 6.1.0
+Summary: The Jaqpot Python SDK provides an easy-to-use interface for accessing the Jaqpot API, allowing users to upload machine learning models, manage datasets, and make predictions seamlessly. It supports ONNX, fine-grained access control, and subscription-based API access for researchers and developers.
+Project-URL: Documentation, https://github.com/ntua-unit-of-control-and-informatics/jaqpot-python-sdk#readme
+Project-URL: Issues, https://github.com/ntua-unit-of-control-and-informatics/jaqpot-python-sdk/issues
+Project-URL: Source, https://github.com/ntua-unit-of-control-and-informatics/jaqpot-python-sdk
+Author-email: UPCI NTUA <upci.ntua@gmail.com>
+License-Expression: MIT
+License-File: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8
+Requires-Dist: jaqpot-api-client>=6.42.3
+Requires-Dist: polling2
+Requires-Dist: pydantic
+Requires-Dist: python-dateutil
+Requires-Dist: urllib3
+Description-Content-Type: text/markdown
+
+# jaqpot-python-sdk
+
+[![PyPI - Version](https://img.shields.io/pypi/v/jaqpot-python-sdk.svg)](https://pypi.org/project/jaqpot-python-sdk)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/jaqpot-python-sdk.svg)](https://pypi.org/project/jaqpot-python-sdk)
+
+-----
+
+## Table of Contents
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+```console
+pip install jaqpot-python-sdk
+```
+
+## License
+
+`jaqpot-python-sdk` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
