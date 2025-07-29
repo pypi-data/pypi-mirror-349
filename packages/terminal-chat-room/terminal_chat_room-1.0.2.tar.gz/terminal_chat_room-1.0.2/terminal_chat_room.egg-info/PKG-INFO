@@ -1,0 +1,35 @@
+Metadata-Version: 2.4
+Name: terminal-chat-room
+Version: 1.0.2
+Summary: A terminal-based chat client using Socket.IO
+Home-page: https://github.com/visheshj2005/text-chat-render
+Author: Vishesh Jain
+Author-email: visheshj2005@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: python-socketio
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Chat Client
+
+## Install
+
+```bash
+pip install .
+```
+
+## Usage
+
+```bash
+room join 12345 yourname
+```

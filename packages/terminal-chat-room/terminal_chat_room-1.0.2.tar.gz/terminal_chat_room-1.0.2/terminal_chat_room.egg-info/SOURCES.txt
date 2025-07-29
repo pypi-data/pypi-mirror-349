@@ -1,0 +1,11 @@
+README.md
+cli.py
+setup.py
+chat_client/__init__.py
+chat_client/client.py
+terminal_chat_room.egg-info/PKG-INFO
+terminal_chat_room.egg-info/SOURCES.txt
+terminal_chat_room.egg-info/dependency_links.txt
+terminal_chat_room.egg-info/entry_points.txt
+terminal_chat_room.egg-info/requires.txt
+terminal_chat_room.egg-info/top_level.txt
