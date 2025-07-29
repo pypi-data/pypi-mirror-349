@@ -1,0 +1,218 @@
+/*
+ *   Copyright (C) 2020-2023 Graz University of Technology.
+ *   Copyright (C) 2024 Shared RDM.
+ *
+ * invenio-override is free software; you can redistribute it and/or modify it
+ * under the terms of the MIT License; see LICENSE file for more details.
+ */
+
+/*
+section backgrounds and text colors
+login background color
+login & signup page title
+ */
+.section-content-light-bg {
+  background-color: @primaryBackground;
+}
+.section-title {
+  color: @primaryText;
+}
+.cover-page {
+  background-color: @primaryBackground;
+}
+.panel-free-title {
+  color: @primaryText;
+}
+
+/* global font styling */
+*,
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+.ui.button,
+.ui.items,
+.ui.accordion .title:not(.ui),
+.ui.items > .item > .content > .header,
+.ui.modal > .header,
+.ui.menu,
+.ui.header,
+.ui.form input[type],
+.ui.form input[type]:focus {
+  font-family: "Source Sans Pro";
+}
+
+pre {
+  font-size: 14px;
+}
+
+/* button backgrounds */
+.ui.search.button {
+  background-color: @overridePrimary;
+}
+
+/* accordion styling */
+.ui.accordion.styled {
+  .title,
+  .title.active {
+    background-color: @greyLight;
+    color: rgba(0, 0, 0, 0.6);
+  }
+}
+
+/* hover effects */
+.ui.search.button:hover {
+  background-color: @overrideSecondary;
+  color: #ffffff;
+}
+
+/* border radius reset */
+.label-keyword,
+.ui.label,
+.ui.button,
+.ui.rdm-sidebar,
+.ui.menu,
+.ui.input > input,
+.ui.segment,
+.ui.selection.dropdown,
+.ui.accordion.styled,
+.ui.card,
+.ui.cards > .card,
+.ui.basic.button,
+.ui.basic.buttons .button,
+.ui.action.input:not([class*="left action"]) > .button:last-child,
+.ui.action.input:not([class*="left action"]) > .buttons:last-child > .button,
+.ui.action.input:not([class*="left action"]) > .dropdown:last-child,
+.ui.form input[type],
+.ui.form input[type]:focus {
+  border-radius: 0;
+}
+
+/* sidebar styling */
+.ui.rdm-sidebar {
+  background-color: unset;
+  box-shadow: unset;
+}
+
+.ui.label {
+  font-weight: 400;
+}
+
+/* access badge colors */
+.ui.label.access-status {
+  &.open {
+    background-color: @accessRightOpen;
+  }
+  &.embargoed {
+    background-color: @accessRightEmbargoed;
+  }
+  &.metadata-only {
+    background-color: @accessRightMetadata;
+  }
+}
+
+/* font face definitions */
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("./fonts/SourceSansPro/SourceSansPro-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("./fonts/SourceSansPro/SourceSansPro-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+#alert-content {
+  display: block !important;
+}
+
+/* UI messages */
+.ui.success.message {
+  background-color: #f8ffff;
+  color: #0e576c;
+}
+.ui.info.message {
+  background-color: #f8ffff;
+  color: #0e576c;
+}
+
+/* accordion field titles */
+.ui.accordion.invenio-accordion-field .title {
+  background-color: @overridePrimary;
+  color: @ocerridePlabels !important;
+}
+
+/* button styling */
+.ui.positive.buttons .button,
+.ui.positive.button {
+  background-color: @overridePrimaryBt;
+  color: @greyDark;
+}
+
+.ui.positive.buttons .button:hover,
+.ui.positive.button:hover {
+  background-color: @hoverOverridePrimaryBt;
+  color: @greyDark;
+}
+
+.ui.primary.buttons .button,
+.ui.primary.button {
+  background-color: @overridePrimary;
+  color: @ocerridePlabels !important;
+  text-shadow: none;
+}
+
+.ui.primary.buttons .button:hover,
+.ui.primary.button:hover {
+  background-color: @overrideSecondary;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+.ui.primary.buttons .button:active,
+.ui.primary.button:active,
+.ui.primary.buttons .button:focus,
+.ui.primary.button:focus {
+  background-color: @overrideSecondary;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/* brand and label */
+.ui.menu .brand.active.item,
+.ui.brand.menu .active.item {
+  border-color: @overridePrimary !important;
+  background-color: @overridePrimary;
+  color: #ffffff !important;
+}
+
+.ui.primary.label {
+  background-color: @overridePrimary;
+  border-color: @overridePrimary;
+  color: @ocerridePlabels;
+}
+
+#skip-to-main {
+  display: none !important;
+}
+
+.right-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.menus {
+  font-size: 16.8px;
+}
+
