@@ -1,0 +1,11 @@
+name: Paci et al. 2014 (Ventricular)
+dois:
+  - https://doi.org/10.1007/s10439-013-0833-3
+keywords:
+  - excitable media
+  - electrophysiology
+  - heart
+  - human
+  - ventricle
+diffusivity:
+  Vm: 1.0

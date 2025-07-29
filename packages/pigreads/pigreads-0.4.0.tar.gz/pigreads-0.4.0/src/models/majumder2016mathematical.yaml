@@ -1,0 +1,11 @@
+name: Majumder et al. 2016
+dois:
+  - https://doi.org/10.1371/journal.pcbi.1004946
+keywords:
+  - excitable media
+  - electrophysiology
+  - heart
+  - rat
+  - atrial
+diffusivity:
+  V: 1.0

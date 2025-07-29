@@ -1,0 +1,695 @@
+[[model]]
+name: Majumder2016
+desc: """
+    The model described in the original publication by Majumder et al. 2016
+    [1].
+
+    [1] Majumder R, Jangsangthong W, Feola I, Ypey DL, Pijnappels DA, Panfilov
+    AV (2016) A Mathematical Model of Neonatal Rat Atrial Monolayers with
+    Constitutively Active Acetylcholine- Mediated K+ Current. PLoS Comput Biol
+    12(6): e1004946. doi:10.1371/journal.pcbi.1004946
+    """
+author: Desmond Kabus
+
+# initial values
+membrane.V = -72.3 [mV]
+intra.Ca = 0.137822 [uM]
+intra.CaNSR = 794.054383 [uM]
+intra.CaJSR = 790.502388 [uM]
+CaL_gate_d.gate = 0.000109
+CaL_gate_f.gate = 0.999929
+CaL_gate_fCa.gate = 1.001951
+CaT_gate_b.gate = 0.000708
+CaT_gate_g.gate = 0.914717
+Kr_gate_Xr.gate = 0.025742210977
+Ks_gate_Xs1.gate = 0.012668791315
+Ks_gate_Xs2.gate = 0.028399873909
+Kur_gate_ua.gate = 0.000554
+Kur_gate_ui.gate = 1.000000
+Na_gate_h.gate = 0.624946
+Na_gate_j.gate = 0.624946
+Na_gate_m.gate = 0.001729
+funny_gate_y.gate = 0.562306
+rel_gate_Po1.gate = 0.002247
+to_gate_r.gate = 0.003223
+to_gate_s.gate = 0.999969
+to_gate_s_slow.gate = 0.999969
+
+[engine]
+time = 0 [ms] bind time
+    in [ms]
+    latex: t
+pace = 0 bind pace
+
+[membrane]
+desc: membrane of the cells
+dot(V) = -(membrane.I + stimulus.I)/C : transmembrane voltage
+    in [mV]
+    latex: V
+I = Na.I + CaL.I + K1.I + to.I + CaT.I + Cab.I + NCX.I + NaK.I + funny.I + Nab.I + Ksus.I + KACh.I + Kb.I
+    in [uA/cm^2]
+    desc: total transmembrane ionic current
+    latex: I_{\text{ion}}
+C = 1.0 [uF/cm^2] : specific membrane capacitance
+    latex: C_{\text{m}}
+A = 4e-8*const.pi*radius.SL^2
+    in [cm^2]
+    desc: capacitive membrane area
+    latex: A_{\text{cap}}
+
+[stimulus]
+desc: current applied by an electrode
+I = engine.pace * amplitude
+    in [pA]
+    desc: current applied by an electrode
+    latex: I_{\text{stim}}
+amplitude = -7 [pA]
+    desc: amplitude of the applied current
+    latex: \bar I_{\text{stim}}
+
+[const]
+desc: general constants
+R = 8.314 [J/mol/K] : ideal gas constant
+    latex: R
+T = 310 [K] : temperature (can only take the values 296 or 310 K)
+    latex: T
+F = 96.5 [C/mmol] : Faraday constant
+    latex: F
+RTpF = R*T/F
+    latex: \frac{RT}{F}
+Q = if(T > 300 [K], Q10, 1)
+    desc: temperature scaling coefficient
+    latex: Q
+    Q10 = 1.8 : temperature scaling coefficient
+        latex: Q_{10}
+pi = 4*atan(1) : circle constant
+    latex: \pi
+
+[radius]
+desc: radii of a few cell parts and other things
+dish = 0.76 [cm] : radius of petridish
+    latex: r_{\text{dish}}
+nucleus = 5.7934 [um] : radius to the surface of nucleus
+    latex: r_{\text{nucleus}}
+SR = 6.0 [um] : radius to the surface of SR
+    latex: r_{\text{SR}}
+SL = 10.5 [um] : radius of the cell
+    latex: r_{\text{SL}}
+
+[volume]
+desc: volumes of a few cell parts
+SR = 0.043*1.5*1.4 [pL] : volume of sarcoplasmic reticulum
+    latex: V_{\text{SR}}
+NSR = 0.9*SR
+    in [pL]
+    desc: volume of junctional sarcoplasmic reticulum
+    latex: V_{\text{NSR}}
+JSR = SR - NSR
+    in [pL]
+    desc: volume of network sarcoplasmic reticulum
+    latex: V_{\text{JSR}}
+myo = (4e-3*const.pi)/3*(radius.SL^3 - radius.SR^3)
+    in [pL]
+    desc: volume of myoplasm
+    latex: V_{\text{myo}}
+
+[extra]
+desc: extra-cellular concentrations
+Ca = 1796 [uM] : extra-cellular calcium ion concentration
+    latex: \left[\text{Ca}\right]_{\text{o}}
+Na = 154578 [uM] : extra-cellular sodium ion concentration
+    latex: \left[\text{Na}\right]_{\text{o}}
+K = 5400 [uM] : extra-cellular potassium ion concentration
+    latex: \left[\text{K}\right]_{\text{o}}
+
+[intra]
+desc: intra-cellular concentrations
+Na = 13818.5982638 [uM] : intra-cellular sodium ion concentration
+    latex: \left[\text{Na}\right]_{\text{i}}
+K = 130953.391484 [uM] : extra-cellular potassium ion concentration
+    latex: \left[\text{K}\right]_{\text{i}}
+dot(Ca) = beta * (CaSR.J + CaSL.J)/volume.myo
+    in [uM]
+    desc: free intra-cellular calcium ion concentration
+    latex: \left[\text{Ca}\right]_{\text{i}}
+    beta = 1/(1 + TRPN*KT/(intra.Ca + KT)^2 + CMDN*KC/(intra.Ca + KC)^2)
+        latex: \beta_{\text{Cai}}
+        TRPN = 35 [uM] : total troponin concentration
+            latex: \left[\text{TRPN}\right]
+        KT = 0.5 [uM] : half-saturation for troponin
+            latex: K_{\text{mTRPN}}
+        CMDN = 50 [uM] : total calmodulin concentration
+            latex: \left[\text{CMDN}\right]
+        KC = 2.38 [uM] : half-saturation for calmodulin
+            latex: K_{\text{mCMDN}}
+dot(CaNSR) = (up.J - leak.J - tr.J)/volume.NSR
+    in [uM]
+    desc: calcium ion concentration in the network sarcoplasmic reticulum
+    latex: \left[\text{Ca}\right]_{\text{NSR}}
+dot(CaJSR) = beta * (tr.J - rel.J)/volume.JSR
+    in [uM]
+    desc: calcium ion concentration in the junctional sarcoplasmic reticulum
+    latex: \left[\text{Ca}\right]_{\text{JSR}}
+    beta = 1/(1 + CSQN*KmCSQN/(CaJSR + KmCSQN)^2)
+        desc: calcium buffering
+        latex: \beta_{\text{SR}}
+        CSQN = 24750 [uM] : total calsequestrin concentration
+            latex: \left[\text{CSQN}\right]
+        KmCSQN = 800 [uM] : half-saturation for calsequestrin
+            latex: K_{\text{mCSQN}}
+
+[Nernst]
+desc: Nernst reversal potentials
+use const.RTpF
+Na = RTpF*log(extra.Na/intra.Na)
+    desc: sodium reversal potential
+    latex: E_{\text{Na}}
+K = RTpF*log(extra.K/intra.K)
+    desc: potassium reversal potential
+    latex: E_{\text{K}}
+Ks = RTpF*log((extra.K + P_NaK*extra.Na)/(intra.K + P_NaK*intra.Na))
+    desc: slow potassium reversal potential
+    latex: E_{\text{Ks}}
+    P_NaK = 0.01833 : Na/K permeability ratio
+        latex: P_{\text{NaK}}
+Ca = RTpF/2*log(extra.Ca/intra.Ca)
+    desc: calcium reversal potential
+    latex: E_{\text{Ca}}
+
+[Na]
+desc: Fast sodium current modeled according to the three-gate formulation first.
+cite:form: @beeler1997reconstruction
+cite:data: @ramos2011longterm, @voitychuk2012modulation
+use Na_gate_m.gate as m
+use Na_gate_h.gate as h
+use Na_gate_j.gate as j
+I = G*m^3*h*j*(membrane.V - Nernst.Na)
+    in [uA/cm^2]
+    desc: fast sodium current
+    latex: I_{\text{Na}}
+G = if(const.T > 300 [K], G310, G296) : maximum conductance
+    in [mS/uF]
+    latex: G_{\text{Na}}
+    G310 = 145 [mS/uF] : maximum conductance at 310K
+        latex: G_{\text{Na,310K}}
+    G296 = G310/1.07 : maximum conductance at 296K
+        latex: G_{\text{Na,296K}}
+
+[Na_gate_m]
+use membrane.V
+dot(gate) = const.Q*(inf - gate)/tau
+    latex: m
+inf = 1/(1 + exp((37.0 + V)/-6.8))
+    latex: m_\infty
+tau = 1/(alpha + beta)
+    latex: \tau_m
+alpha = 0.32*(V + 47.13)/(1 - exp(-0.1*(V + 47.13)))
+    latex: \alpha_m
+beta = 0.056*exp(-V/11)
+    latex: \beta_m
+
+[Na_gate_h]
+use membrane.V
+dot(gate) = const.Q*(inf - gate)/tau
+    latex: h
+inf = 1/(1 + exp(arg))
+    latex: h_\infty
+    arg = if(const.T > 300 [K], (78.0 + V)/7.8, (80.0 + V)/9.2)
+        latex: v
+tau = if(V < -40[mV],
+        0.06/(alpha + beta) + 1.5,
+        0.75/(alpha + beta) + 0.15)
+    latex: \tau_h
+alpha = if(V < -40[mV],
+        0.135*exp((V + 70)/-6.8),
+        0)
+    latex: \alpha_h
+beta = if(V < -40[mV],
+        3.56*exp(0.079*V) + 3.1e5*exp(0.35*V),
+        1/(0.13*(1 + exp((V + 10.66)/-11.1))))
+    latex: \beta_h
+
+[Na_gate_j]
+use membrane.V
+dot(gate) = const.Q*(inf - gate)/tau
+    latex: j
+inf = Na_gate_h.inf
+    latex: j_\infty
+tau = 1/(alpha + beta)
+    latex: \tau_j
+alpha = if(V < -40[mV],
+        2*(-1.2714e5*exp(0.2444*V) - 3.474e-5*exp(-0.04391*V))*(V + 37.78)/(1 + exp(0.311*(V + 79.23))),
+        0)
+    latex: \alpha_j
+beta = if(V < -40[mV],
+        0.1212*exp(-0.01052*V)/(1 + exp(-0.1378*(V + 40.14))),
+        0.3*exp(-2.535e-7*V)/(1 + exp(-0.1*(V + 32.0))))
+    latex: \beta_j
+
+[CaL]
+desc: L-type calcium current
+use CaL_gate_d.gate as d
+use CaL_gate_f.gate as f
+use CaL_gate_fCa.gate as fCa
+VF2pRT = 2*membrane.V/const.RTpF
+    latex: \frac{2VF}{RT}
+# I = 3.2*G*d*f*fCa*VF2pRT*const.F*(intra.Ca*exp(VF2pRT) - 0.341*extra.Ca)/(exp(VF2pRT) - 1) # TODO: source code
+I = 2*G*d*f*fCa*VF2pRT*const.F*(intra.Ca*exp(VF2pRT) - 0.341*extra.Ca)/(exp(VF2pRT) - 1)
+    in [uA/cm^2]
+    desc: L-type calcium current
+    latex: I_{\text{CaL}}
+G = 4.8e-5 [dm^3/F/ms] : maximum conductance
+# G = 6.4e-5 [dm^3/F/ms] # (TODO source: code)
+    in [nS/pF]
+    latex: G_{\text{CaL}}
+
+[CaL_gate_d]
+use membrane.V
+dot(gate) = const.Q*(inf - gate)/tau
+    latex: d
+inf = 1/(1 + exp((V + 1.8)/-8.6))
+    latex: d_\infty
+tau = (a*b + c + 10.0)
+    latex: \tau_d
+a = 0.25 + 1.4/(1 + exp((V + 35)/-13))
+    latex: a_d
+b = 1.4/(1 + exp((V + 5)/5))
+    latex: b_d
+c = 1/(1 + exp((50 - V)/20))
+    latex: c_d
+
+[CaL_gate_f]
+use membrane.V
+dot(gate) = const.Q*(inf - gate)/tau
+    latex: f
+inf = 1/(1 + exp((22 + V)/6.1))
+    latex: f_\infty
+tau = (562.5*exp((V + 27.0)^2/-1000) + 10.0/(1 + exp(25 - V)) + 10.0)
+    latex: \tau_f
+
+[CaL_gate_fCa]
+use membrane.V
+dot(gate) = const.Q*k*(inf - gate)/tau
+    latex: f_{\text{Ca}}
+inf = (a + b + c + 0.23)/1.46
+    latex: f_{\text{Ca}\infty}
+tau = 10 [ms] : time constant for the calcium dependent inactivation
+    latex: \tau_{f_{\text{Ca}}}
+k = if(inf > gate and V > -60 [mV], 0, 1)
+    latex: k
+a = 1/(1 + (intra.Ca/0.325)^8)
+    latex: a_{\text{fCa}}
+b = 0.1/(1 + exp((intra.Ca - 0.5)/0.1))
+    latex: b_{\text{fCa}}
+c = 0.2/(1 + exp((intra.Ca - 0.75)/0.8))
+    latex: c_{\text{fCa}}
+
+[K1]
+desc: inward rectifier time-independent potassium current
+I = 0.0489*(extra.K/(extra.K + 210))*(phi - 10)/(1 + exp(0.041*(phi - 10))) + 0.01*phi # source: appendix
+# I = 0.0412*(extra.K/(extra.K + 210))*(phi - 10)/(0.5+exp(0.025*(phi - 10))) # source: code
+    in [uA/cm^2]
+    desc: inward rectifier time-independent potassium current # TODO: two very different definitions
+    latex: I_{\text{K1}}
+    phi = membrane.V - Nernst.K
+        latex: \phi
+
+[to]
+desc: transient outward potassium current
+use to_gate_r.gate as r
+use to_gate_s.gate as s
+use to_gate_s_slow.gate as s_slow
+I = G*r*(0.706*s + 0.294*s_slow)*(membrane.V - Nernst.K)
+    in [uA/cm^2]
+    desc: transient outward potassium current
+    latex: I_{\text{to}}
+G = 0.00007 [mS/uF] : maximum conductance
+    in [nS/pF]
+    latex: G_{\text{to}}
+
+[to_gate_r]
+desc: voltage-dependent activation gate
+use membrane.V
+dot(gate) = (inf - gate)/tau
+    latex: r
+    desc: voltage-dependent activation gate
+inf = 1/(1 + exp((V + 3)/-12))
+    latex: r_\infty
+tau = 1000/(45.16*exp(0.03577*(V + 50)) + 98.9*exp(-0.1*(V + 38.0)))
+    latex: \tau_{r}
+
+[to_gate_s]
+desc: voltage-dependent fast inactivation gate
+use membrane.V
+dot(gate) = (inf - gate)/tau
+    latex: s
+    desc: voltage-dependent fast inactivation gate
+inf = 1/(1 + exp((V + 31.97156)/4.64291))
+    latex: s_\infty
+tau = 1000*(0.35*exp(-((V + 70)/15)^2) + 0.035) - 26.9
+    latex: \tau_{s}
+
+[to_gate_s_slow]
+desc: voltage-dependent slow inactivation gate
+use membrane.V
+dot(gate) = (inf - gate)/tau
+    latex: s_{\text{slow}}
+    desc: voltage-dependent slow inactivation gate
+inf = to_gate_s.inf
+    latex: s_{\text{slow}\infty}
+tau = 1000*(3.7*exp(-((V + 70)/30)^2) + 0.035) + 37.4
+    latex: \tau_{s_{\text{slow}}}
+
+[CaT]
+desc: T-type calcium current
+use CaT_gate_b.gate as b
+use CaT_gate_g.gate as g
+I = G*b*g*(membrane.V - Nernst.Ca + 106.5)
+    in [uA/cm^2]
+    desc: T-type calcium current
+    latex: I_{\text{CaT}}
+G = 5.4e-3 [mS/uF] : maximum conductance
+    in [nS/pF]
+    latex: G_{\text{CaT}}
+
+[CaT_gate_b]
+use membrane.V
+dot(gate) = (inf - gate)/tau
+    latex: b
+inf = 1/(1 + exp((V + 36)/-6.1))
+    latex: b_\infty
+tau = 0.6 + 5.4/(1 + exp(0.03*(V + 100)))
+    latex: \tau_b
+
+[CaT_gate_g]
+use membrane.V
+dot(gate) = (inf - gate)/tau
+    latex: g
+inf = 1/(1 + exp((V + 66)/6))
+    latex: g_\infty
+tau = 1 + 40.0/(1 + exp(0.08*(V + 65)))
+    latex: \tau_g
+
+[Cab]
+desc: background calcium current
+I = G*(membrane.V - Nernst.Ca)
+    in [uA/cm^2]
+    desc: background calcium current
+    latex: I_{\text{Cab}}
+G = 0.0008 [mS/uF] : conductance
+    in [nS/pF]
+    latex: G_{\text{Cab}}
+
+[NCX]
+desc: sodium/calcium exchanger current
+use membrane.V
+I = k*(intra.Na^3*extra.Ca*exp(0.03743*gamma*V) - extra.Na^3*intra.Ca*exp(0.03743*(gamma - 1)*V))/(1 + d*(extra.Na^3*intra.Ca + intra.Na^3*extra.Ca))
+    in [uA/cm^2]
+    desc: sodium/calcium exchanger current
+    latex: I_{\text{NCX}}
+k = 6.804e-17 [pA/pF/uM^4] : scaling factor
+    latex: k_{\text{NCX}}
+d = 1e-16 [pA/pF/uM^4] : denominator constant
+    latex: d_{\text{NCX}}
+gamma = 0.5 : energy barrier parameter
+    latex: \gamma
+
+[NaK]
+desc: sodium/potassium pump current
+use NaK_gate_f.gate as f
+I = Imax*f/((1 + (K_Na/intra.Na)^n)*(1 + K_K/extra.K))
+    in [uA/cm^2]
+    desc: sodium/potassium pump current
+    latex: I_{\text{NaK}}
+Imax = 3.83916 [pA/pF] : maximum NaK-ATPase current # TODO?
+    latex: {\bar{I}}_{\text{NaK}}
+n = 3.2 : hill coefficiant for sodium
+    latex: n_{\text{NaK}}
+K_Na = 186000 [uM] : sodium half saturation constant
+    latex: K_{\text{mNai}}
+K_K = 1500 [uM] : potassium half saturation constant
+    latex: K_{\text{mKo}}
+
+[NaK_gate_f]
+use membrane.V
+use const.RTpF
+gate = 1/(1 + 0.1245*exp(-0.1*V/RTpF) + 0.0365*sigma*exp(-V/RTpF))
+    latex: f_{\text{NaK}}
+sigma = (exp(extra.Na/67300) - 1)/7
+    latex: \sigma
+
+[funny]
+desc: hyperpolarization activated funny current
+use membrane.V
+use funny_gate_y.gate as y
+I = IfNa + IfK
+    in [uA/cm^2]
+    desc: hyperpolarization activated funny current
+    latex: I_{\text{f}}
+G = 0.021 [mS/uF] : maximum conductance
+    in [nS/pF]
+    latex: G_{\text{f}}
+IfNa = G*y*(0.2*(V - Nernst.Na))
+    in [uA/cm^2]
+    desc: sodium hyperpolarization activated funny current
+    latex: I_{\text{fNa}}
+IfK = G*y*(0.8*(V - Nernst.K))
+    in [uA/cm^2]
+    desc: potassium hyperpolarization activated funny current
+    latex: I_{\text{fK}}
+
+[funny_gate_y]
+use membrane.V
+dot(gate) = (inf - gate)/tau
+    latex: y
+inf = 1/(1 + exp((V + 78.65)/6.33))
+    latex: y_\infty
+tau = 1000/(0.11885*exp((V + 75)/28.37) + 0.56236*exp((V + 75)/-14.19))
+    latex: \tau_y
+
+[Nab]
+desc: background sodium current
+I = G*(membrane.V - Nernst.Na)
+    in [uA/cm^2]
+    desc: background sodium current
+    latex: I_{\text{Nab}}
+G = 0.000039 [mS/uF] : conductance
+    in [nS/pF]
+    latex: G_{\text{Nab}}
+
+[Kb]
+desc: background potassium current
+I = 0.001*G*(membrane.V - Nernst.K)
+    in [uA/cm^2]
+    desc: background calcium current
+    latex: I_{\text{Kb}}
+G = 1e-6 [mS/mF] : conductance
+    in [nS/pF]
+    latex: G_{\text{Kb}}
+
+[Ksus]
+desc: sustained outward potassium current
+I = 0.001*(Kur.I + Ks.I + Kr.I)
+    in [uA/cm^2]
+    desc: sustained outward potassium current
+    latex: I_{\text{Ksus}}
+
+[Kur]
+desc: ultra-rapid outward potassium current
+use Kur_gate_ua.gate as ua
+use Kur_gate_ui.gate as ui
+I = G*ua*ui*(membrane.V - Nernst.K)
+    in [uA/cm^2]
+    desc: ultra-rapid outward potassium current
+    latex: I_{\text{Kur}}
+G = 0.02 [mS/mF] : maximum conductance
+    in [nS/pF]
+    latex: G_{\text{Kur}}
+
+[Kur_gate_ua]
+use membrane.V
+dot(gate) = const.Q*(inf - gate)/tau
+    latex: u_{\text{a}}
+inf = 1/(1 + exp((V + 12.5)/-25.0))
+    latex: u_{\text{a}\infty}
+tau = (0.493*exp(-0.0629*V) + 2.058)
+    latex: \tau_{u_{\text{a}}}
+
+[Kur_gate_ui]
+use membrane.V
+dot(gate) = const.Q*(inf - gate)/tau
+    latex: u_{\text{i}}
+inf = 1/(1 + exp((V - 100)/5.7))
+    latex: u_{\text{i}\infty}
+tau = (1200 - 170/(1 + exp((V + 45.2)/5.7)))
+    latex: \tau_{u_{\text{i}}}
+
+[Ks]
+desc: slow delayed rectifier potassium current
+use Ks_gate_Xs1.gate as Xs1
+use Ks_gate_Xs2.gate as Xs2
+I = G*Xs1*Xs2*(membrane.V - Nernst.Ks)
+    in [uA/cm^2]
+    desc: slow delayed rectifier potassium current
+    latex: I_{\text{Ks}}
+G = 0.0866*(1 + 0.6/(1 + (0.000038/intra.Ca)^1.4))
+    in [nS/pF]
+    desc: maximum conductance
+    latex: G_{\text{Ks}}
+
+[Ks_gate_Xs1]
+use membrane.V
+dot(gate) = const.Q*(inf - gate)/tau
+    latex: {Xs}_1
+inf = 1/(1 + exp(-(V - 10)/20))
+    latex: {Xs}_{1\infty}
+tau = 1/(
+        7.19e-5*phi/(1 - exp(-0.148*phi))
+        + 1.31e-4*phi/(exp(0.0687*phi) - 1)
+    )
+    latex: \tau_{{Xs}_1}
+    phi = V + 30
+        latex: \phi
+
+[Ks_gate_Xs2]
+use membrane.V
+dot(gate) = const.Q*(inf - gate)/tau
+    latex: {Xs}_2
+inf = Ks_gate_Xs1.inf
+    latex: {Xs}_{2\infty}
+tau = 4*Ks_gate_Xs1.tau
+    latex: \tau_{{Xs}_2}
+
+[Kr]
+desc: rapid delayed rectifier potassium current
+use Kr_gate_Xr.gate as Xr
+use Kr_gate_Rr.gate as Rr
+I = G*Xr*Rr*(membrane.V - Nernst.K)
+    in [uA/cm^2]
+    desc: rapid delayed rectifier potassium current
+    latex: I_{\text{Kr}}
+G = 0.0005228*sqrt(extra.K/5.4)
+    in [nS/pF]
+    desc: maximum conductance
+    latex: G_{\text{Kr}}
+
+[Kr_gate_Xr]
+use membrane.V
+dot(gate) = const.Q*(inf - gate)/tau
+    latex: {Xr}
+inf = 1/(1 + exp((V + 12.5)/-10))
+    latex: {Xr}_\infty
+tau = 1/(
+        0.00138*(V + 14.2)/(1 - exp(-0.123*(V + 14.2)))
+        + 0.00061*(V + 38.9)/(exp(0.145*(V + 38.9)) - 1)
+    )
+    latex: \tau_{Xr}
+
+[Kr_gate_Rr]
+use membrane.V
+gate = 1/(1 + exp((V + 9.0)/22.4))
+    latex: {Rr}
+
+[KACh]
+desc: constitutively active acetylcholine-mediated potassium current
+I = 0.296*(0.1 + 0.18/(1 + exp((membrane.V + 102.0)/10.0)))*(membrane.V - Nernst.K - 10)
+# I = 2*0.296*(0.1 + 0.8278202199784754/(1 + exp((membrane.V + 105.0)/17.18)))*(membrane.V - Nernst.K) # TODO: different definition in code
+    in [uA/cm^2]
+    desc: acetylcholine-mediated potassium current
+    latex: I_{\text{KACh}}
+
+[CaSR]
+desc: calcium flux TODO???
+J = rel.J - up.J + leak.J
+    desc: calcium flux TODO???
+    latex: J_{\text{CaSR}}
+
+[CaSL]
+desc: calcium flux TODO???
+J = (2*NCX.I - CaL.I - CaT.I - Cab.I)*(membrane.A*membrane.C)/(const.F*2e-6)
+    desc: calcium flux TODO???
+    latex: J_{\text{CaSL}}
+
+[rel]
+desc: calcium flux TODO???
+use rel_gate_Po1.gate as Po1
+J = nu1*Po1*(intra.CaJSR - intra.Ca)
+    desc: calcium flux TODO???
+    latex: J_{\text{rel}}
+nu1 = 0.1 [ms^-1] : scaling factor
+    latex: \nu_1
+
+[rel_gate_Po1]
+desc: ryanodine receptor gate
+dot(gate) = a*(intra.Ca^N/(intra.Ca^N + K^N))*C1 - b*gate
+    desc: ryanodine receptor gate
+    latex: P_{\text{o1}}
+C1 = 1 - gate
+    latex: P_{\text{C1}}
+a = 1 : rate constant for RyR opening
+    latex: k_a
+b = 0.16 : rate constant for RyR closing
+    latex: k_b
+N = 4 : exponent for RyR gate
+    latex: N
+K = 3.51/(1 + exp((intra.CaJSR - 530)/200)) + 0.25
+    latex: K_{\text{mRyR}}
+
+[leak]
+desc: calcium flux TODO???
+J = k*(intra.CaNSR - intra.Ca)
+    desc: calcium flux TODO???
+    latex: J_{\text{leak}}
+k = 5e-6 [ms^-1]: SR leak rate constant
+    latex: k_{\text{leak}}
+
+[tr]
+desc: calcium flux TODO???
+J = (intra.CaNSR - intra.CaJSR)/tau
+    desc: calcium flux TODO???
+    latex: J_{\text{tr}}
+tau = 200 [ms] : time constant
+    latex: \tau_{\text{tr}}
+
+[up]
+desc: calcium flux TODO???
+J = (Vmax*f - Vmax*r)/(1 + f + r)
+    desc: calcium flux TODO???
+    latex: J_{\text{up}}
+f = (intra.Ca/Kmf)^Hf
+r = (intra.CaNSR/Kmr)^Hr
+Vmax = 0.9996 [ms^-1] : maximum SERCA flux
+    latex: V_{\text{max}}
+Kmf = 0.5 [uM] : half-saturation for forward SERCA
+    latex: K_{\text{mf}}
+Kmr = 3500 [uM] : half-saturation for reverse SERCA
+    latex: K_{\text{mr}}
+Hf = 2.0 : hill coefficient for forward SERCA
+    latex: H_{\text{f}}
+Hr = 2.0 : hill coefficient for reverse SERCA
+    latex: H_{\text{r}}
+
+[[protocol]]
+# Level  Start    Length   Period   Multiplier
+1.5      10.0     5.0      300.0   0
+
+[[script]]
+import matplotlib.pyplot as plt
+import myokit
+
+# Create simulation
+m = get_model()
+p = get_protocol()
+s = myokit.Simulation(m, p)
+
+# Selected variables
+t = "engine.time"
+v = "membrane.V"
+
+# Run simulation
+d = s.run(300, log=[t, v])
+
+# Display the result
+plt.plot(d[t], d[v])
+plt.title("Membrane potential")
+plt.show()

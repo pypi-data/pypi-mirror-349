@@ -1,0 +1,11 @@
+name: Paci et al. 2014 (Atrial)
+dois:
+  - https://doi.org/10.1007/s10439-013-0833-3
+keywords:
+  - excitable media
+  - electrophysiology
+  - heart
+  - human
+  - atria
+diffusivity:
+  Vm: 1.0
