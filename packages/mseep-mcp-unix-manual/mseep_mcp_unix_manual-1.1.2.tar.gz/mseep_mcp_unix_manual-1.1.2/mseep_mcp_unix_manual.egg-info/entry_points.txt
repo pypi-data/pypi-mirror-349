@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-unix-manual = unix_manual_server:main

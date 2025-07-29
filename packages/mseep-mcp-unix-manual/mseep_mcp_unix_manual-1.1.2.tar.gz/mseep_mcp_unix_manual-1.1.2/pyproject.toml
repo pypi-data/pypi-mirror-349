@@ -1,0 +1,39 @@
+[project]
+name = "mseep-mcp-unix-manual"
+version = "1.1.2"
+description = "A MCP server for getting command help manual"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "mcp[cli]>=1.3.0",
+]
+authors = [
+    { name = "mseep", email = "support@skydeck.ai" },
+]
+maintainers = [
+    { name = "mseep", email = "support@skydeck.ai" },
+]
+
+[project.scripts]
+mcp-unix-manual = "unix_manual_server:main"
+
+[tool.uv]
+dev-dependencies = [
+    "ruff>=0.9.9",
+    "pytest>=8.0.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = [
+    "tests",
+]
+python_files = "test_*.py"
+python_classes = "Test*"
+python_functions = "test_*"
+
+[build-system]
+requires = [
+    "setuptools>=42",
+    "wheel",
+]
+build-backend = "setuptools.build_meta"
