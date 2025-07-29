@@ -1,0 +1,3 @@
+[console_scripts]
+easysweeps = easysweeps.cli:cli
+es = easysweeps.cli:cli
