@@ -1,0 +1,68 @@
+Metadata-Version: 2.4
+Name: OptimalAgents-power
+Version: 0.2.0
+Summary: A project generator for agents using FastAPI, Flask, or REST.
+Home-page: https://github.com/sandilyaKishlay
+Author: Sandilya Kishlay
+Author-email: sandilyakishlay@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: fastapi
+Requires-Dist: flask
+Requires-Dist: requests
+Requires-Dist: uvicorn
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Optimal Agents Project Generator
+
+A powerful CLI utility designed to streamline the development of AI agent-powered applications by generating comprehensive starter templates. This tool is specifically crafted for developers working with intelligent agents, language models, and AI-driven applications, supporting multiple Python web frameworks including **FastAPI**, **Flask**, and **REST-based Python servers**.
+
+
+
+## ðŸ”§ Installation
+
+```bash
+# Create a new directory
+mkdir my_agent_project
+cd my_agent_project
+
+# Create virtual environment
+python -m venv venv
+
+# Activate virtual environment
+# On Windows
+venv\Scripts\activate
+# On Unix or MacOS
+source venv/bin/activate
+
+# Install the package
+pip install OptimalAgents-power
+
+# Create your agent project
+create-agent <project-name>
+# Follow the prompts:
+# - Enter your name
+# - Enter your email
+# - Enter project description
+# - Select framework (flask/fastapi/restapi)
+```
+
+The generator creates a production-ready environment where you can:
+- Deploy multiple AI agents with different capabilities
+- Handle complex conversation flows
+- Manage agent memory and context
+- Scale your AI operations efficiently
+- Monitor agent performance and usage
+- Implement security best practices for AI endpoints
