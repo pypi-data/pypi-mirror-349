@@ -1,0 +1,10 @@
+grasp_backend/__main__.py,sha256=9NPc_vU2dKhDEm5lJMrEDiAGMinv8TCfGixL9QGgKMw,5261
+grasp_backend/org_tools.py,sha256=EZXNKjcHBeZ_wFfhMeuLhDv_52SmjonbEmCFwVuX8tM,4573
+grasp_backend/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+grasp_backend/setup.py,sha256=M-0nCZT_E04YigKPYIQkwOIdfNgqsl0--RePFWtkeCI,3605
+grasp_backend/tests/test_backend.py,sha256=9pnGWj_0GX_XrZQGgA_p7KPsBQv0zq1r7EZGkldL65Q,1372
+grasp_backend-1.0.1.dist-info/METADATA,sha256=u_NtQjc-Lr0Ee7JiRf209XbLSKJSFrHrfcY_UjPO3Ks,1539
+grasp_backend-1.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+grasp_backend-1.0.1.dist-info/entry_points.txt,sha256=rIdRcvaGxSxsLw5quUtxr5sTL83RqDOmjOSfJAdBTBA,62
+grasp_backend-1.0.1.dist-info/licenses/LICENSE.md,sha256=ofNp3jPmUxhwLgld0ZSJIaD6lFU5KhtMqP-zDzox5BE,1071
+grasp_backend-1.0.1.dist-info/RECORD,,

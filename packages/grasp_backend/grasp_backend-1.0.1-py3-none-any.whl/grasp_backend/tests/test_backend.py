@@ -1,0 +1,54 @@
+import sys
+from contextlib import contextmanager
+from pathlib import Path
+from subprocess import Popen
+from time import sleep
+
+import requests
+
+
+@contextmanager
+def grasp_test_server(*, capture_file: Path, port: str, template=None):
+    # fmt: off
+    cmdline = [
+        sys.executable, '-m', 'grasp_backend',
+        'serve',
+        '--port', port,
+        '--path', str(capture_file),
+    ]
+    # fmt: on
+    if template is not None:
+        cmdline.extend(['--template', template])
+    with Popen(cmdline) as p:
+        try:
+            yield p
+        finally:
+            p.kill()
+
+
+def test_server(tmp_path: Path) -> None:
+    cfile = tmp_path / 'test-capture.org'
+    PORT = '17890'
+
+    def send(url: str, title: str) -> None:
+        r = requests.post(
+            f'http://localhost:{PORT}',
+            json={
+                'url': url,
+                'title': title,
+                'selection': None,
+                'comment': None,
+                'tag_str': None,
+            },
+        )
+        assert r.status_code == 200, r
+
+    with grasp_test_server(capture_file=cfile, port=PORT):
+        sleep(0.5)  # startup
+
+        send(url='twitter.com', title='Twitter')
+        sleep(0.5)
+
+        assert 'twitter.com' in cfile.read_text()
+        # TODO er... wonder how nulls are converted into Nones..
+        # assert 'null' not in cfile.read_text()
