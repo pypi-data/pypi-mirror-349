@@ -1,0 +1,24 @@
+Metadata-Version: 2.4
+Name: mseep-postgres-mcp
+Version: 0.3.2
+Summary: PostgreSQL Tuning and Analysis Tool
+Home-page: 
+Author: mseep
+Author-email: mseep <support@skydeck.ai>
+Maintainer-email: mseep <support@skydeck.ai>
+License-Expression: MIT
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: mcp[cli]>=1.5.0
+Requires-Dist: psycopg[binary]>=3.2.6
+Requires-Dist: humanize>=4.8.0
+Requires-Dist: pglast==7.2.0
+Requires-Dist: attrs>=25.3.0
+Requires-Dist: psycopg-pool>=3.2.6
+Requires-Dist: instructor>=1.7.9
+Dynamic: author
+Dynamic: license-file
+Dynamic: requires-python
+
+# Package managed by MseeP.ai
