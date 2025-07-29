@@ -1,0 +1,102 @@
+# SPDX-FileCopyrightText: 2025 Broken Pen
+#
+# SPDX-License-Identifier: Parity-7.0.0
+
+[build-system]
+requires = ['setuptools>=64', 'setuptools-scm>=8']
+build-backend = 'setuptools.build_meta'
+
+[project]
+dynamic = ['version']
+name = 'headercount'
+authors = [
+    { name = 'Broken Pen', email = 'pnuuy@pm.me' },
+]
+description = 'Count directly and indirectly included headers in a C/C++ project'
+readme = 'README.md'
+license = 'Apache-2.0'
+requires-python = '>=3.4'
+keywords = ['header', 'include', 'c', 'c++', 'include']
+classifiers = [
+    'Development Status :: 5 - Production/Stable',
+    'Environment :: Console',
+    'Intended Audience :: Developers',
+    'Topic :: Software Development :: Debuggers',
+    'Natural Language :: English',
+    'Operating System :: OS Independent',
+    'Programming Language :: Python :: 3.4',
+    'Programming Language :: Python :: 3.4',
+    'Programming Language :: Python :: 3.4',
+    'Programming Language :: Python :: 3.5',
+    'Programming Language :: Python :: 3.6',
+    'Programming Language :: Python :: 3.7',
+    'Programming Language :: Python :: 3 :: Only',
+]
+dependencies = [
+    'importlib-metadata >= 4.6; python_version<"3.8"',
+    'typing-extensions >= 4.6; python_version<"3.12"',
+]
+
+[project.optional-dependencies]
+dev = [
+    'pytest >= 8',
+    'pytest-cov >= 5',
+]
+
+[project.scripts]
+headercount = "headercount.__main__:main"
+
+[project.urls]
+gitlab = 'https://git.sr.ht/~brokenpen/headercount'
+
+[tool.setuptools]
+zip-safe = true
+
+[tool.setuptools_scm]
+
+[tool.pytest.ini_options]
+addopts = '--doctest-modules --doctest-glob="*.rst"'
+testpaths = [
+    'src/',
+]
+doctest_optionflags = [
+    'ELLIPSIS',
+    'IGNORE_EXCEPTION_DETAIL',
+    'NORMALIZE_WHITESPACE',
+]
+
+
+[tool.black]
+
+[tool.isort]
+profile = 'black'
+
+[tool.ruff]
+fix = true
+
+[tool.ruff.lint]
+extend-select = ['ALL']
+ignore = [
+    'COM812',  # Trailing comma missing
+    'T201',    # `print` found
+    'D105',    # Missing docstring in magic method
+    'D107',    # Missing docstring in __init__
+    'PLW2901', # `for` loop variable overwritten by assignment target
+]
+isort.split-on-trailing-comma = true
+pycodestyle.max-doc-length = 72
+pydocstyle.convention = 'google'
+
+[tool.pylint]
+'messages control'.disable = [
+    'import-outside-toplevel',
+    'missing-module-docstring',
+    'missing-class-docstring',
+    'missing-function-docstring',
+    'too-many-return-statements',
+]
+
+[tool.mypy]
+disallow_untyped_defs = true
+explicit_package_bases = true
+mypy_path = '$MYPY_CONFIG_FILE_DIR'

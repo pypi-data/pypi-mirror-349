@@ -1,0 +1,15 @@
+.gitignore
+README.md
+pyproject.toml
+LICENSES/Apache-2.0.txt
+src/headercount/__init__.py
+src/headercount/__main__.py
+src/headercount/files.py
+src/headercount/includes.py
+src/headercount.egg-info/PKG-INFO
+src/headercount.egg-info/SOURCES.txt
+src/headercount.egg-info/dependency_links.txt
+src/headercount.egg-info/entry_points.txt
+src/headercount.egg-info/requires.txt
+src/headercount.egg-info/top_level.txt
+src/headercount.egg-info/zip-safe
