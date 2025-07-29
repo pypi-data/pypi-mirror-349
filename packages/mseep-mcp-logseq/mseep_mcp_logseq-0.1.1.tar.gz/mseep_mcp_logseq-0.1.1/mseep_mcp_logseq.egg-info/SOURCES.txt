@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.py
+mseep_mcp_logseq.egg-info/PKG-INFO
+mseep_mcp_logseq.egg-info/SOURCES.txt
+mseep_mcp_logseq.egg-info/dependency_links.txt
+mseep_mcp_logseq.egg-info/entry_points.txt
+mseep_mcp_logseq.egg-info/requires.txt
+mseep_mcp_logseq.egg-info/top_level.txt
