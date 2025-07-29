@@ -1,0 +1,10 @@
+dsmtpd/__init__.py,sha256=oM2_w-IMDex1xlPzlQUvh_BH9QGCF6Ujbcoquk7FW4U,279
+dsmtpd/__main__.py,sha256=s_5VYKBmsXHUVtvHciznotRh0v0A1XgwQJ6YHKnVXGU,56
+dsmtpd/_dsmtpd.py,sha256=NICarPrnRrAw_tYrOm9FGw3XDRx5nVilM1hEdcJbE6U,4073
+dsmtpd-1.0.dist-info/licenses/AUTHORS,sha256=t4YoSvW9vbJ-0cOgMkbz8elTKRA8HTlermtMr-rmAPQ,279
+dsmtpd-1.0.dist-info/licenses/LICENSE,sha256=vf8ib3TiyWvz9F3FQ4MgAiHdB20lQQQOB6vDFWaR8kQ,1289
+dsmtpd-1.0.dist-info/METADATA,sha256=52HhBBoTgCEUn0o2FNcejX5obVejs5u61a3f9vkXRHo,3000
+dsmtpd-1.0.dist-info/WHEEL,sha256=Nw36Djuh_5VDukK0H78QzOX-_FQEo6V37m3nkm96gtU,91
+dsmtpd-1.0.dist-info/entry_points.txt,sha256=nN5xCpR79r6oZOjybJLBUARgr7qwzrX68g4gquKWlLw,48
+dsmtpd-1.0.dist-info/top_level.txt,sha256=wTxLKcLwFJ5pwPVOtYG4XoHLf1ofbBROpGUuVS0RVLM,7
+dsmtpd-1.0.dist-info/RECORD,,
