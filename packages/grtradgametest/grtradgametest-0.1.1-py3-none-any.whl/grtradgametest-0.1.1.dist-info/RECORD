@@ -1,0 +1,12 @@
+grtradgametest/README.md,sha256=FQgGz1A7eiRIggCa8nkAS_hVeKD-t9YKYqp2v5n_p-s,17
+grtradgametest/__init__.py,sha256=Q0lhmjSxqyEpzZufi3aooWyEBIKHxbq7sWZRDYab49c,50
+grtradgametest/client.py,sha256=bcJ5ZosZfpw8ws0-mReqMpaB5B4MbcwJVIFYc_ICcSI,306
+grtradgametest/interactive_game.py,sha256=XRNLqX8m82_HPfeIbfEjHWFDcQrgpuaS4TgmqallUe4,5452
+grtradgametest/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+grtradgametest/python_game.py,sha256=k15mvh2nYYP31bMqRXdsLyuY3xCn4Dz_HMvCCEZ-bTg,4998
+grtradgametest/server.py,sha256=tql_UQK1rgllYPIplhOsmsjN_tsgr3ns-x1rgHdDKXU,1272
+grtradgametest/test.py,sha256=YqY_21p-7PHvtRtUORS_NxyvVhDQ9_b6wW5Wr7p2iG4,4929
+grtradgametest/test2.py,sha256=a-HT44CQSB5ubkALKjaoeONzVluad-ID2Cs_3Acxrr8,6767
+grtradgametest-0.1.1.dist-info/METADATA,sha256=rdvuEBKLHw7b0RgRnVL-NAkrP3Z8POztgyyJH0M_ljI,173
+grtradgametest-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+grtradgametest-0.1.1.dist-info/RECORD,,
