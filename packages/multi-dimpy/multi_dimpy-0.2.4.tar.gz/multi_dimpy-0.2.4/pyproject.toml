@@ -1,0 +1,68 @@
+[project]
+name = "multi-dimpy"
+version = "0.2.4"
+description = "NumPy-wrapper for dimensioned arrays."
+authors = [
+    {name = "Nathan Schill", email = "nateschill@gmail.com"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy (>=2.2.5,<3.0.0)"
+]
+keywords = [
+    "array",
+    "dimension",
+    "dimensional",
+    "engineering",
+    "linear algebra",
+    "mathematics",
+    "matrices",
+    "matrix",
+    "NumPy",
+    "physics",
+    "quantities",
+    "science",
+    "scientific computing",
+    "units",
+]
+classifiers = [
+  "Development Status :: 1 - Planning",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3.10",
+  "Topic :: Scientific/Engineering",
+  "Topic :: Software Development :: Build Tools",
+]
+
+[project.urls]
+repository = "https://github.com/schilln/multi-dimpy"
+"Bug Tracker" = "https://github.com/schilln/multi-dimpy/issues"
+
+[tool.poetry]
+packages = [
+    { include = "dimpy", from = "src" }
+]
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.11.8"
+pytest = "^8.3.5"
+pytest-cov = "^6.1.1"
+pre-commit = "^4.2.0"
+mkdocs-material = "^9.6.14"
+markdown-include = "^0.8.1"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+testpaths = [
+    "tests",
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.coverage.run]
+data_file = ".garbage/.coverage"
