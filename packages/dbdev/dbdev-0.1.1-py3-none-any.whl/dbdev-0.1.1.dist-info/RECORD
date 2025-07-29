@@ -1,0 +1,10 @@
+dbdev/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dbdev/cli.py,sha256=KbYcH6vBHOqJ9UH61CzJmRyb08Cugr8duHo1xdMU3kc,1253
+dbdev/config.py,sha256=7QPwRStnpRR6OuDuLnCrxmY9p7S7qb5-Fml8YCUwejE,131
+dbdev/docker_manager.py,sha256=YsbuC5PX-ZL4wexjsq5FLAxRsP4LK4uMezP_RfJrNSc,5330
+dbdev/logger.py,sha256=tPs63rL_UywCbLXS2hcYtuosEph2RrqIhwnQ4nSO2DY,379
+dbdev-0.1.1.dist-info/METADATA,sha256=gvd3kYttxGPgr_RM2ldSbeCTqN-mZs9WjFozGZqLa2E,7849
+dbdev-0.1.1.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+dbdev-0.1.1.dist-info/entry_points.txt,sha256=IXrfCnY7FuJWM7GoaSjv6LDfws7eBpzJeeCcw54SAEY,40
+dbdev-0.1.1.dist-info/top_level.txt,sha256=1YidLT6kKvVTJoA3TVO3I7WtKGvnOLtOLd3U7C7I2BQ,6
+dbdev-0.1.1.dist-info/RECORD,,
