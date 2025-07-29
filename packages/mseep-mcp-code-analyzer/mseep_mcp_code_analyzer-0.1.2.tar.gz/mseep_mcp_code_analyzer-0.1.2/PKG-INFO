@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: mseep-mcp-code-analyzer
+Version: 0.1.2
+Summary: A code analysis tool using Model Context Protocol
+Author-email: mseep <support@skydeck.ai>
+Maintainer-email: mseep <support@skydeck.ai>
+License-File: LICENCE
+Requires-Python: >=3.10
+Requires-Dist: astroid>=2.14.2
+Requires-Dist: chardet>=4.0.0
+Requires-Dist: mcp>=1.0.0
+Requires-Dist: networkx>=3.0
+Requires-Dist: radon>=5.1.0
+Description-Content-Type: text/markdown
+
+# Package managed by MseeP.ai
