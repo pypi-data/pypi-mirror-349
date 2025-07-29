@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: mseep-notion_mcp
+Version: 0.1.2
+Summary: Notion MCP integration for todo lists
+Home-page: 
+Author: mseep
+Author-email: mseep <support@skydeck.ai>
+Maintainer-email: mseep <support@skydeck.ai>
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: mcp
+Requires-Dist: httpx
+Requires-Dist: python-dotenv
+Dynamic: author
+Dynamic: license-file
+Dynamic: requires-python
