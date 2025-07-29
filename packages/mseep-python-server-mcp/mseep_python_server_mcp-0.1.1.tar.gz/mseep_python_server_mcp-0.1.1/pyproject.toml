@@ -1,0 +1,46 @@
+[build-system]
+requires = [
+    "setuptools>=42",
+    "wheel",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mseep-python-server-mcp"
+version = "0.1.1"
+description = "MCP server for cryptocurrency price information"
+readme = "README.md"
+requires-python = ">=3.12.2"
+dependencies = [
+    "httpx>=0.28.1",
+    "mcp[cli]>=1.6.0",
+    "pydantic>=2.11.1",
+    "pydantic-settings>=2.8.1",
+    "python-coinmarketcap>=0.6",
+    "python-decouple>=3.8",
+]
+authors = [
+    { name = "mseep", email = "support@skydeck.ai" },
+]
+maintainers = [
+    { name = "mseep", email = "support@skydeck.ai" },
+]
+
+[project.optional-dependencies]
+dev = [
+    "black>=25.1.0",
+    "icecream>=2.1.4",
+]
+
+[tool.setuptools]
+packages = [
+    "src",
+]
+
+[tool.black]
+line-length = 130
+target-version = [
+    "py310",
+]
+include = "\\.pyi?$"
+exclude = "/(\n    \\.eggs\n  | \\.git\n  | \\.hg\n  | \\.mypy_cache\n  | \\.tox\n  | \\.venv\n  | _build\n  | buck-out\n  | build\n  | dist\n)/\n"
