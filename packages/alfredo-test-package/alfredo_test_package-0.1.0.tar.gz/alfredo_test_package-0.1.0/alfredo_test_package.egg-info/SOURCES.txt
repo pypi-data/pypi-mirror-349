@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+alfredo_test_package/__init__.py
+alfredo_test_package.egg-info/PKG-INFO
+alfredo_test_package.egg-info/SOURCES.txt
+alfredo_test_package.egg-info/dependency_links.txt
+alfredo_test_package.egg-info/top_level.txt
+alfredo_test_package/src/__init__.py
+alfredo_test_package/src/module_dummy.py
