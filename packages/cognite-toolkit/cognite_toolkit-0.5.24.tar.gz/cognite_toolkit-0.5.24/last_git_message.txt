@@ -1,0 +1,33 @@
+[CDF-24563] Topological sort to fix dependencies between location filters (#1543)
+
+# Description
+
+Due to the Location API design, nested locations have to be created in
+hierarchical order and one by one to make sure that parent exists before
+child. Also, when retrieving locations on the list endpoint, they are
+nested. Since our lookup depended on iterating the list, we didn't find
+child locations.
+
+![Screenshot 2025-04-30 at 09 30
+49](https://github.com/user-attachments/assets/6b4e0cfa-0761-4aac-bf82-3378c63c023b)
+
+
+
+## Changelog
+
+- [x] Patch
+- [ ] Minor
+- [ ] Skip
+
+## cdf
+
+### Fixed
+
+- Creating nested LocationFilters would fail under some circumstances.
+This is now fixed.
+- The report of deployed changes would be inaccurate for nested
+LocationFilters. This is now fixed.
+
+## templates
+
+No changes.
