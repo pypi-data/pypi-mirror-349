@@ -1,0 +1,47 @@
+appdirs==1.4.4
+    # via logging-strict
+attrs==24.2.0
+    # via logging-strict
+click==8.1.7; python_version < "3.10"
+click==8.2.0; python_version >= "3.10"
+    # via
+    #   -r requirements/prod.in
+    #   pip-tools
+importlib-metadata==8.7.0
+    # via
+    #   -r requirements/prod.in
+    #   build
+logging-strict==1.6.1
+    # via -r requirements/prod.in
+packaging==25.0
+    # via
+    #   -r requirements/prod.in
+    #   build
+    #   pip-requirements-parser
+pip-requirements-parser==32.0.1
+    # via -r requirements/prod.in
+pip-tools==7.4.1
+    # via -r requirements/prod.in
+pyparsing==3.2.0
+    # via pip-requirements-parser
+pyproject-hooks==1.2.0
+    # via
+    #   build
+    #   pip-tools
+python-dateutil==2.9.0.post0
+    # via
+    #   logging-strict
+    #   strictyaml
+six==1.17.0
+    # via python-dateutil
+strictyaml==1.7.3
+    # via logging-strict
+tomli==2.2.1 ; python_version < "3.11"
+    # via
+    #   build
+    #   logging-strict
+    #   pip-tools
+typing-extensions==4.12.2 ; python_version<"3.11"
+    # via logging-strict
+zipp==3.21.0
+    # via importlib-metadata

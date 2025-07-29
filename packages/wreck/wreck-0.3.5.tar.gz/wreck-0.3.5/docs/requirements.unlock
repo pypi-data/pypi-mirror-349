@@ -1,0 +1,20 @@
+click
+importlib-metadata>=8.7.0
+interrogate
+logging-strict>=1.6.1
+packaging
+pip-requirements-parser
+pip-tools
+scriv
+sphinx-autobuild
+sphinx-copybutton
+sphinx-external-toc-strict>=2.0.3.post5
+sphinx-favicon
+sphinx-paramlinks
+sphinx-pyproject
+sphinx-tabs
+sphinx>=8
+sphinx_design
+sphobjinv
+tomli>=2.2.1; python_version<"3.11"
+typing-extensions; python_version<"3.11"

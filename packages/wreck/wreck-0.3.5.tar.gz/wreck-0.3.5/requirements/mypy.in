@@ -1,0 +1,9 @@
+# Licensed under the AGPLv3+ License: https://www.gnu.org/licenses/
+# For details: https://github.com/msftcangoblowm/wreck/blob/master/NOTICE.txt
+
+# called by tox.ini [testenv:mypy]
+
+-c pins.shared.in
+-r pins-typing.in
+
+mypy

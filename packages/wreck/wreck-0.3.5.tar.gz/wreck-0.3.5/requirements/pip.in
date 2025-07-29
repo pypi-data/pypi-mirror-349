@@ -1,0 +1,7 @@
+# Licensed under the AGPLv3+ License: https://www.gnu.org/licenses/
+# For details: https://github.com/msftcangoblowm/wreck/blob/master/NOTICE.txt
+
+-c pins.shared.in
+
+pip>=24.2
+setuptools-scm>=8.2.0

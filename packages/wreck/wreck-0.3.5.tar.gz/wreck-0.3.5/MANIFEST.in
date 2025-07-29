@@ -1,0 +1,30 @@
+# Base
+graft requirements
+include Makefile
+include CHANGES.rst
+include howto.txt
+
+# test
+graft tests
+include .pre-commit-config.yaml
+include tox-req.ini tox-test.ini tox.ini
+
+# docs
+graft docs
+graft docs/_static
+graft docs/_templates
+
+# venvs -- where to place them
+# exclude .venv/.python-version  # normal default venv location
+exclude .doc/.python-version  # Sphinx requires py310+
+exclude .tox/.python-version  # list of all available py versions, not one
+exclude docs/.python-version  # Sphinx requires py310+
+
+# caches
+prune tests/__pycache__
+
+# git repo and configs
+# include .gitignore
+# recursive-include .github *.yml
+# include codecov.yml
+# include .readthedocs.yml
