@@ -1,0 +1,213 @@
+# Microsoft TFS MCP Server
+
+[![PyPI version](https://img.shields.io/pypi/v/mistfs-mcp-server.svg)](https://pypi.org/project/mistfs-mcp-server/)
+[![Python Versions](https://img.shields.io/pypi/pyversions/mistfs-mcp-server.svg)](https://pypi.org/project/mistfs-mcp-server/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+A Model Context Protocol (MCP) server that provides secure access to Microsoft Visual Studio Team Foundation Server (TFS) repositories through authenticated PAT connections.
+
+## Features
+
+- List all available TFS projects
+- List all repositories in a TFS project using authenticated PAT connections
+- Get detailed commit history with author filtering
+- Built-in proxy support for enterprise environments
+- Comprehensive error handling and logging
+- Secure HTTPS communication with TFS REST API
+
+## Installation
+
+```bash
+pip install mistfs-mcp-server
+```
+
+### Requirements
+
+- Python 3.9 or higher
+- `mcp` package version 1.2.0 or higher
+- Access to Microsoft Visual Studio Team Foundation Server
+- Valid TFS Personal Access Token (PAT) with appropriate permissions
+- Environment variable `TFS_PAT` must be set with your TFS Personal Access Token
+- Network access (with proxy support if needed)
+
+### Environment Setup
+
+1. Set your TFS Personal Access Token:
+```bash
+set TFS_PAT=your_pat_token_here
+```
+
+2. (Optional) Configure proxy settings if required:
+```bash
+set HTTP_PROXY=http://your.proxy.server:port
+set HTTPS_PROXY=http://your.proxy.server:port
+```
+
+3. Verify your setup by starting the server and checking the logs in `mistfs_mcp_server.log`
+
+## Usage
+
+### Starting the Server
+
+```bash
+# Run as a command
+mistfs-mcp-server
+
+# Or import in your Python code
+from mistfs_tools.server import mcp
+mcp.run()
+```
+
+### Using with MCP Clients
+
+This package implements the Model Context Protocol (MCP), allowing AI assistants and other MCP-compatible clients to interact with Team Foundation Server.
+
+Example of how an MCP client might use this tool:
+
+```python
+from mcp.client import Client
+
+client = Client()
+
+# Get all available TFS projects
+projects = await client.Get_Projects()
+print(projects)  # List of all project names in TFS
+
+# Get repositories in a project
+repos = await client.Get_Project_Repositories(project_name="MyProject")
+print(repos)  # List of repository names in MyProject
+
+# Get commit history for a specific user
+commits = await client.Get_Repository_Checkins(
+    project_name="MyProject",
+    repository_name="MyRepo",
+    userupn="user@company.com"
+)
+print(commits)  # List of commits by the specified user with detailed information
+```
+
+## API Reference
+
+### Get_Projects
+
+Retrieves all available projects from Microsoft Visual Studio Team Foundation Server.
+
+**Features:**
+- Authenticates using Personal Access Token (PAT)
+- Makes HTTPS requests to TFS API
+- Supports enterprise proxy configurations
+- Includes detailed error handling and logging
+
+**Returns:**
+- List of project names in the TFS server, or an error message if the operation fails
+
+### Get_Project_Repositories
+
+Retrieves repositories from a specified Microsoft Visual Studio Team Foundation Server project.
+
+**Parameters:**
+- `project_name` (string, required): Name of the Microsoft Visual Studio Team Foundation Server project
+
+**Features:**
+- Authenticates using Personal Access Token (PAT)
+- Makes HTTPS requests to TFS API
+- Supports enterprise proxy configurations
+- Includes detailed error handling and logging
+
+**Returns:**
+- List of repository names in the specified project, or an error message if the operation fails
+
+### Get_Repository_Checkins
+
+Retrieves commit history from a specified repository in Microsoft Visual Studio Team Foundation Server.
+
+**Parameters:**
+- `project_name` (string, required): Name of the project in Microsoft Visual Studio Team Foundation Server
+- `repository_name` (string, required): Name of the repository to check
+- `userupn` (string, required): User UPN to filter commits by author
+
+**Features:**
+- Filters commits by specific user
+- Returns detailed commit information including:
+  - Commit ID
+  - Author name
+  - Commit date
+  - Commit message
+- Requires TFS_PAT environment variable for authentication
+- Supports secure HTTPS connections
+- Includes proxy support for enterprise environments
+- Comprehensive error handling and logging
+
+**Returns:**
+- List of commit details or appropriate error message
+
+---
+
+## Available Tools
+
+| Tool                    | Description                                      |
+|------------------------|--------------------------------------------------|
+| Get_Projects           | Retrieve all available projects from Microsoft Visual Studio Team Foundation Server using PAT authentication |
+| Get_Project_Repositories| Retrieve repositories from a specific TFS project using PAT authentication |
+| Get_Repository_Checkins | Retrieve detailed commit history from TFS repositories with user filtering |
+
+## Development
+
+### Project Structure
+
+```
+mistfs-mcp-server/
+├── src/
+│   └── mistfs_tools/
+│       ├── __init__.py
+│       ├── __main__.py
+│       └── server.py         # Core implementation of MCP tools
+├── LICENSE
+├── README.md
+└── pyproject.toml
+
+The `server.py` contains the following key components:
+- FastMCP server initialization
+- Proxy configuration for enterprise environments
+- Comprehensive logging setup
+- Implementation of three main tools:
+  - Get_Projects
+  - Get_Project_Repositories
+  - Get_Repository_Checkins
+```
+
+### Error Handling
+
+All tools implement comprehensive error handling for:
+- Missing PAT authentication
+- Network connectivity issues
+- Invalid project or repository names
+- API response errors
+- Proxy-related issues
+
+Errors are both logged to file (`mistfs_mcp_server.log`) and returned as meaningful error messages to the client.
+
+### Proxy Support
+
+The server includes built-in proxy support for enterprise environments. Proxy settings can be configured through environment variables or the built-in proxy configuration in the code.
+
+### Building and Publishing
+
+```bash
+python -m build
+python -m twine upload dist/*
+```
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Author
+
+- Swapnil Dagade (swapnildagade@gmail.com)
+
+## Links
+
+- [GitHub Repository](https://github.com/swapnildagade/mistfs-mcp-server)
+- [Bug Tracker](https://github.com/swapnildagade/mistfs-mcp-server/issues)
+- [Documentation](https://github.com/swapnildagade/mistfs-mcp-server#readme)
