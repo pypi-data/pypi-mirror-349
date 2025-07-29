@@ -1,0 +1,24 @@
+Metadata-Version: 2.4
+Name: mseep-rootly-mcp-server
+Version: 1.0.2
+Summary: A Model Context Protocol server for Rootly APIs using OpenAPI spec
+Author-email: mseep <support@skydeck.ai>
+Maintainer-email: mseep <support@skydeck.ai>
+License-Expression: Apache-2.0
+License-File: LICENSE
+Keywords: automation,incidents,llm,mcp,rootly
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Build Tools
+Requires-Python: >=3.12
+Requires-Dist: mcp>=1.1.2
+Requires-Dist: pydantic>=2.0.0
+Requires-Dist: requests>=2.28.0
+Provides-Extra: dev
+Requires-Dist: black>=23.0.0; extra == 'dev'
+Requires-Dist: isort>=5.0.0; extra == 'dev'
+Description-Content-Type: text/markdown
+
+# Package managed by MseeP.ai
