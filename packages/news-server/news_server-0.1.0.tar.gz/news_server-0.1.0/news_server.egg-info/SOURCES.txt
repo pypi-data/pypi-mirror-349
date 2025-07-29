@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+news_server/__init__.py
+news_server/server.py
+news_server.egg-info/PKG-INFO
+news_server.egg-info/SOURCES.txt
+news_server.egg-info/dependency_links.txt
+news_server.egg-info/requires.txt
+news_server.egg-info/top_level.txt

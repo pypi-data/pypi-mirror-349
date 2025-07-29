@@ -1,0 +1,36 @@
+# News Server
+
+A MCP server for news search and sentiment analysis with email reporting capabilities.
+
+## Features
+
+- Search Google News by keywords
+- Analyze sentiment of news content
+- Generate reports and send via email
+
+## Installation
+
+```bash
+pip install news-server
+```
+
+## Usage
+
+1. Create a `.env` file with required API keys:
+   ```
+   SERPER_API_KEY=your_serper_key
+   DASHSCOPE_API_KEY=your_dashscope_key
+   SMTP_SERVER=your_smtp_server
+   EMAIL_USER=your_email
+   EMAIL_PASS=your_password
+   ```
+
+2. Run the server:
+```bash
+python -m news_server.server
+```
+
+## Requirements
+
+- Python 3.8+
+- See pyproject.toml for dependencies
