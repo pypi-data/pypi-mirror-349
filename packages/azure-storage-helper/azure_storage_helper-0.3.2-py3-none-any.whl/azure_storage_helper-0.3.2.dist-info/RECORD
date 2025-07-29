@@ -1,0 +1,11 @@
+azure/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+azure/gen1/__init__.py,sha256=RXGZierB4UXuD0h2vf985y0LfRqNGv20CSon1Kh5ZL4,137
+azure/gen1/gen1.py,sha256=dXaME-pzcT8y0NkAuGEqdt7Y82xczXNm-mc-oO1YOd0,10363
+azure/gen1/helper.py,sha256=Xv84DWbusoffOkFIScxqjdriiEN5BhJ8by2TZjYxXvI,3168
+azure/gen2/__init__.py,sha256=g1LVwp1rCVVaMOKnN_GC7_5Nf_hr7G6i9H9o1_K58ts,177
+azure/gen2/gen2.py,sha256=0M5O3ipxsan-cYZYZeYHgCDL7UeFsQ1Rx7PH88hi4ek,17374
+azure/gen2/helper.py,sha256=TI6WX3EVp0kBcTfBAZ82YHDa5Vn1SNUi7OycZPhdlNE,3630
+azure_storage_helper-0.3.2.dist-info/METADATA,sha256=m1yczvGCm-jkdPO_kCXvfnizxN8y4iur2mc-P9YyXiw,9788
+azure_storage_helper-0.3.2.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+azure_storage_helper-0.3.2.dist-info/licenses/LICENSE.txt,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+azure_storage_helper-0.3.2.dist-info/RECORD,,
