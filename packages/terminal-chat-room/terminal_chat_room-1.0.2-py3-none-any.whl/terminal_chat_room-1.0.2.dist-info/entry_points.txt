@@ -1,0 +1,2 @@
+[console_scripts]
+room = cli:main
