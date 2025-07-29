@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: mseep-mcp-server-starrocks
+Version: 0.1.4
+Summary: official MCP server for StarRocks
+Home-page: 
+Author: mseep
+Author-email: mseep <support@skydeck.ai>
+Maintainer-email: mseep <support@skydeck.ai>
+License: Apache-2.0
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: kaleido==0.2.1
+Requires-Dist: mcp>=1.0.0
+Requires-Dist: mysql-connector-python>=9.2.0
+Requires-Dist: pandas>=2.2.3
+Requires-Dist: plotly>=6.0.1
+Dynamic: author
+Dynamic: license-file
+Dynamic: requires-python
+
+# Package managed by MseeP.ai
