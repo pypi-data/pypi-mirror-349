@@ -1,0 +1,2 @@
+[console_scripts]
+osm-mcp-server = osm_mcp_server:main
