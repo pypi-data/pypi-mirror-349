@@ -1,0 +1,13 @@
+docrawl/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+docrawl/docrawl_client.py,sha256=lV3eUukwje1xePx8RPuKVM9L5YwAEG2K4DNtlUp5Qi4,15080
+docrawl/docrawl_core.py,sha256=wc6cIGEYQTKMX_OUvv6df8axop5FProgrN6kCl8fg6Q,46841
+docrawl/docrawl_launcher.py,sha256=6_ikHYPSYKGRBgpRtlRTE_tCufpTJNsZ1bzedUfsJqo,6847
+docrawl/docrawl_logger.py,sha256=QCpzFf31atxtHbyUTncNYssNak5gKvzyY3b7iR6TZ8g,1108
+docrawl/elements.py,sha256=r2-lONXlpuwPfPKVvdIyAovLGGfIrkju_hUq6Je0T-o,2763
+docrawl/errors.py,sha256=5NWRZqE00IJU71FYqxzLWksRQYLLoQ2JtmRLbI5KWDc,100
+docrawl/utils.py,sha256=RxOr1wTDybIDFJ7e_RRGRWY9JcnK62tLHuQkky9ow1I,1750
+docrawl-1.4.1.dist-info/LICENSE,sha256=4_RTPHOB-HN5pmpzc9rFvlkp_Vg_pDW_q5QE5k6-sLo,1090
+docrawl-1.4.1.dist-info/METADATA,sha256=94fJYsioI5U1l4Ak_4ozBsj3nc7QMD98cz_IhjMKnnY,766
+docrawl-1.4.1.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+docrawl-1.4.1.dist-info/top_level.txt,sha256=rhNzoYH1NLIe4eh23_glXjJjyLxzo8jJMXomRVKCu4s,8
+docrawl-1.4.1.dist-info/RECORD,,
