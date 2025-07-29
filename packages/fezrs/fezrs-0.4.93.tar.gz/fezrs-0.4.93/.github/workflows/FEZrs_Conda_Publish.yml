@@ -1,0 +1,54 @@
+name: Conda Publish
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build-conda:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Miniconda
+        uses: conda-incubator/setup-miniconda@v2
+        with:
+          python-version: "3.10"
+          auto-update-conda: true
+          mamba: true
+
+      - name: Install dependencies
+        shell: bash -l {0}
+        run: |
+          mamba install -y conda-build anaconda-client
+
+      - name: Extract version and sha256
+        shell: bash -l {0}
+        run: |
+          VERSION=$(python -c "from configparser import ConfigParser; cfg=ConfigParser(); cfg.read('.bumpversion.cfg'); print(cfg['bumpversion']['current_version'])")
+          SHA256=$(curl -sL https://pypi.io/packages/source/f/fezrs/fezrs-${VERSION}.tar.gz | sha256sum | awk '{print $1}')
+          echo "FEZRS_VERSION=${VERSION}" >> $GITHUB_ENV
+          echo "SHA256_HASH=${SHA256}" >> $GITHUB_ENV
+
+      - name: Build conda package
+        shell: bash -l {0}
+        run: |
+          conda-build recip/
+
+      - name: Authenticate with Anaconda
+        shell: bash -l {0}
+        env:
+          ANACONDA_API_KEY: ${{ secrets.ANACONDA_API_KEY }}
+        run: |
+          mkdir -p ~/.conda
+          echo -e "channels:\n  - defaults\nanaconda_upload: true" > ~/.condarc
+          mkdir -p ~/.binstar
+          echo "{ \"token\": \"$ANACONDA_API_KEY\" }" > ~/.binstar/credentials
+
+      - name: Upload to Anaconda Cloud
+        shell: bash -l {0}
+        run: |
+          anaconda upload $(conda-build recip/ --output) --force
