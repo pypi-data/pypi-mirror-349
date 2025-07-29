@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-server-tos = mcp_server_tos.main:main
