@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: robo-chem-mcp
+Version: 0.1.0
+Summary: MCP to control a local robot arm to perform chemical synthesis
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: mcp[cli]>=1.9.0
+Requires-Dist: openai>=1.79.0

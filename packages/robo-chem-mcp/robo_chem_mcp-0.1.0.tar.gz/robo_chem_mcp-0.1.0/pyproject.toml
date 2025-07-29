@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "robo-chem-mcp"
+version = "0.1.0"
+description = "MCP to control a local robot arm to perform chemical synthesis"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp[cli]>=1.9.0",
+    "openai>=1.79.0",
+]
+
+[project.scripts]
+robo-chem-mcp = "robo_chem_mcp:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
