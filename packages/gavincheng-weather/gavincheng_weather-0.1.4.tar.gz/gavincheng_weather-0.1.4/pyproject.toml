@@ -1,0 +1,17 @@
+[project]
+name = "gavincheng-weather"
+version = "0.1.4"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "httpx>=0.28.1",
+    "mcp[cli]>=1.6.0",
+]
+
+[project.scripts]
+weather-cli = "gavincheng_weather.weather:main"
+
+[[tool.uv.index]]
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+default = true
