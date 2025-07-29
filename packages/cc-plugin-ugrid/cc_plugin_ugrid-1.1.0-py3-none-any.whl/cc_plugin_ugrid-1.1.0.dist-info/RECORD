@@ -1,0 +1,10 @@
+cc_plugin_ugrid/__init__.py,sha256=7UJs5A69va3Rp8hDgb6Ph1beu97cPsNU54vq9xVCAb8,2643
+cc_plugin_ugrid/_version.py,sha256=XIz3qAg9G9YysQi3Ryp0CN3rtc_JiecHZ9L2vEzcM6s,21
+cc_plugin_ugrid/checker.py,sha256=ctqJGxfFvs9Czy64lN2tpUO43LzOSraC5ychMi_-H_w,22012
+cc_plugin_ugrid/tests/test_checker.py,sha256=P4qUAJg2i7Zzui63ob3GSz8I9ndRrybJE2tPj3OF-4Y,6826
+cc_plugin_ugrid-1.1.0.dist-info/licenses/LICENSE.txt,sha256=4DukHX-rIHAHaf5BGLq1DYAMt0-ZA1OgXS9f_xwig2M,11558
+cc_plugin_ugrid-1.1.0.dist-info/METADATA,sha256=JW0B6WYB6w0tGL9-MZpQbPdeh8yvZUSBjXGq4_oY6eM,2697
+cc_plugin_ugrid-1.1.0.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+cc_plugin_ugrid-1.1.0.dist-info/entry_points.txt,sha256=DGmeWgotWNEaQlQmowMU0jhfH_ZqpHHE3M3nIZAVEek,73
+cc_plugin_ugrid-1.1.0.dist-info/top_level.txt,sha256=ZaOdOaO57kfl2iEsK99HNW5jkH3upl0wkbwxUcEPjCk,16
+cc_plugin_ugrid-1.1.0.dist-info/RECORD,,
