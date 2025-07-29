@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: mcp-studio
+Version: 0.0.0
+Summary: MCP Studio
+Home-page: https://github.com/wangxingjun778/mcp-studio
+Author: wangxingjun778
+Author-email: wangxingjun778@163.com
+License: Apache License 2.0
+Keywords: MCP,Agent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: mcp
+
+# MCP-Studio
+
