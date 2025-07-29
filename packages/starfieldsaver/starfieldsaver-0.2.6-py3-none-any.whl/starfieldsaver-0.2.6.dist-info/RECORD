@@ -1,0 +1,15 @@
+starfieldsaver/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+starfieldsaver/config_loader.py,sha256=1px_gIs4GqQW6q-kKVawMI9-LUhlFyCZVWW9ytIkBBA,8303
+starfieldsaver/main.py,sha256=APNu347bbnJn-LcnvprpMUka98lOA-aJghS9jHgFSGw,576
+starfieldsaver/process_monitor.py,sha256=RH0u3njXNPAyoycrotypYg2snGy3hdxIuhZY12gYR2A,7575
+starfieldsaver/quicksaver.py,sha256=BejInK53h8D0mPwxQ39Ada_quQSO8_eREEix4uDRm4U,11199
+starfieldsaver/save_cleaner.py,sha256=wdTj-AUYDAKe9xe4PMeMxFcF3xAol1z84iV19VPZYCc,7018
+starfieldsaver/sound_player.py,sha256=rJbnGIrtCEJH3eudWUxHxznmQqT3LV6aLj1QTEWE3p8,3902
+starfieldsaver/tools/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+starfieldsaver/tools/renumber_saves.py,sha256=MkFTke5ZrFYiO84o4qhHVnfnlcjEZLW_2Ldy3BKIT-k,3590
+starfieldsaver/types.py,sha256=5le0zuDGDWhOTp3TSZojqLkV801h9Z4r9KUVka1AxjQ,2381
+starfieldsaver-0.2.6.dist-info/LICENSE,sha256=61YZatIAr3Zh_GyMzZmVpnkIoBaLqzezIw8Q4t2jNnI,1070
+starfieldsaver-0.2.6.dist-info/METADATA,sha256=o88GCmhn2uSoxprkqhngI7cLaGLx10JNEJ4jKXeTGXM,5015
+starfieldsaver-0.2.6.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+starfieldsaver-0.2.6.dist-info/entry_points.txt,sha256=5G_-zbWjZQriF4CITHVq10zjs88Z2vxLKDSLajkowyg,59
+starfieldsaver-0.2.6.dist-info/RECORD,,
