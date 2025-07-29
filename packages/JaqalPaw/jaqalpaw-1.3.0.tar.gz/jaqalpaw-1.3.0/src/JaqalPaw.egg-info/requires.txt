@@ -1,0 +1,9 @@
+numpy
+scipy
+jaqalpaq>=1.3.0
+
+[emulator]
+matplotlib
+
+[tests]
+pytest
