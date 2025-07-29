@@ -1,0 +1,19 @@
+version: "2"
+
+build:
+  os: "ubuntu-lts-latest"
+  tools:
+    python: "3.12"
+  jobs:
+    post_install:
+      - pip install uv
+      - UV_PROJECT_ENVIRONMENT=$READTHEDOCS_VIRTUALENV_PATH uv sync --all-extras --dev --link-mode=copy
+
+
+sphinx:
+  configuration: docs/source/conf.py
+
+
+formats:
+   - pdf
+   - epub

@@ -1,0 +1,19 @@
+
+quickie.code-workspace
+
+.coverage
+.DS_Store
+htmlcov/
+
+## Python ##
+# Byte-compiled / optimized / DLL files
+__pycache__/
+
+### VisualStudioCode ###
+.vscode/*
+build/
+dist/
+*.egg-info
+
+# Ignore .log, .log1, etc files
+*.log

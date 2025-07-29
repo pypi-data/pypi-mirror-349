@@ -1,0 +1,57 @@
+API
+===
+
+.. autosummary::
+   :toctree: generated
+   :nosignatures:
+   :recursive:
+
+    quickie
+    quickie.task
+    quickie.script
+    quickie.command
+    quickie.Arg
+    quickie.Namespace
+    quickie.task_factory_helper
+    quickie.group
+    quickie.thread_group
+    quickie.tasks.Task
+    quickie.tasks.Script
+    quickie.tasks.Command
+    quickie.tasks.Group
+    quickie.tasks.ThreadGroup
+    quickie.completion
+    quickie.completion.BaseCompleter
+    quickie.completion.PathCompleter
+    quickie.completion.python
+    quickie.completion.python.PytestCompleter
+    quickie.conditions
+    quickie.conditions.condition
+    quickie.conditions.FilesModified
+    quickie.conditions.FirstRun
+    quickie.conditions.PathsExist
+    quickie.conditions.base
+    quickie.conditions.base.BaseCondition
+    quickie.config
+    quickie.config.App
+    quickie.context
+    quickie.context.Context
+    quickie.errors
+    quickie.errors.QuickieError
+    quickie.errors.Stop
+    quickie.errors.TaskNotFoundError
+    quickie.errors.TasksModuleNotFoundError
+    quickie.factories
+    quickie.factories.command
+    quickie.factories.task_factory_helper
+    quickie.factories.group
+    quickie.factories.script
+    quickie.factories.task
+    quickie.factories.thread_group
+    quickie.utils
+    quickie.utils.argparser
+    quickie.utils.argparser.Arg
+    quickie.utils.console
+    quickie.utils.console.QkConsole
+    quickie.utils.imports
+    quickie.utils.imports.import_from_path
