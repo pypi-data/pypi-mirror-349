@@ -1,0 +1,2 @@
+[console_scripts]
+build = mountaineer_exceptions.cli:build
