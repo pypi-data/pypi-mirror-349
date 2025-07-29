@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.py
+pamphlet_detector/__init__.py
+pamphlet_detector/main.py
+pamphlet_detector.egg-info/PKG-INFO
+pamphlet_detector.egg-info/SOURCES.txt
+pamphlet_detector.egg-info/dependency_links.txt
+pamphlet_detector.egg-info/entry_points.txt
+pamphlet_detector.egg-info/requires.txt
+pamphlet_detector.egg-info/top_level.txt

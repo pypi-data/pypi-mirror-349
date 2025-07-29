@@ -1,0 +1,31 @@
+Metadata-Version: 2.4
+Name: pamphlet_detector
+Version: 1.0.0
+Summary: FastAPI app with YOLOv5 model inference
+Author: Bhargo Innovations
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: Framework :: FastAPI
+Description-Content-Type: text/markdown
+Requires-Dist: fastapi
+Requires-Dist: uvicorn
+Requires-Dist: pillow
+Requires-Dist: torch
+Requires-Dist: pandas
+Requires-Dist: requests
+Requires-Dist: yolov5
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: summary
+
+# pamphlet_detector
+
+A FastAPI app that detects persons and pamphlets using YOLOv5. Models are downloaded automatically at runtime.
+
+## Endpoints
+
+- `POST /detect` â€” Upload an image for detection.
