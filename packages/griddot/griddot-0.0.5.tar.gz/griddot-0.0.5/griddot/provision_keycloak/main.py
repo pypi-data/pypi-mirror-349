@@ -1,0 +1,87 @@
+﻿import json
+import sys
+import time
+import requests
+import urllib3
+
+# Disable warnings for self-signed certs
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
+
+def provision_keycloak(
+        realm_json_path: str,
+        password: str,
+        url: str = "https://localhost:8443",
+        username: str = "temp-admin"
+):
+    print(f'Provisioning Keycloak at {url}')
+    wait_for_keycloak_to_start(url)
+
+    token = get_access_token(url, username, password)
+    realm = json.load(open(realm_json_path, "r", encoding="utf-8"))
+    import_realm_users_if_they_dont_exist(url, token, realm)
+
+
+def wait_for_keycloak_to_start(url):
+    retries = 10
+    while retries > 0:
+        try:
+            response = requests.get(url, verify=False)
+            if response.status_code == 200:
+                print("Keycloak is up and running.", flush=True)
+                break
+            else:
+                print(f"Keycloak is not ready yet. Status code: {response.status_code}")
+        except requests.exceptions.RequestException:
+            print(f"Keycloak is not ready yet ...", flush=True)
+        time.sleep(5)
+        retries -= 1
+    else:
+        print("Keycloak did not start in time.", flush=True)
+        sys.exit(1)
+
+
+def get_access_token(url, username, password):
+    token_url = f"{url}/realms/master/protocol/openid-connect/token"
+    data = {
+        "client_id": "admin-cli",
+        "username": username,
+        "password": password,
+        "grant_type": "password"
+    }
+    response = requests.post(token_url, data=data, verify=False)
+    if response.status_code != 200:
+        print("Failed to get access token:", response.text)
+        sys.exit(1)
+    return response.json()["access_token"]
+
+
+def import_realm_users_if_they_dont_exist(url, token, realm):
+    users_url = f"{url}/admin/realms/master/users"
+    users = realm["users"]
+
+    for user in users:
+        # Check if the user already exists
+        response = requests.get(users_url, headers={
+            "Authorization": f"Bearer {token}",
+            "Accept": "application/json"
+        }, params={"username": user["username"]}, verify=False)
+
+        if response.status_code == 200 and len(response.json()) > 0:
+            print(f"User {user['username']} already exists. Skipping.")
+            continue
+
+        # Create the user
+        create_response = requests.post(users_url, headers={
+            "Authorization": f"Bearer {token}",
+            "Content-Type": "application/json"
+        }, data=json.dumps(user), verify=False)
+
+        if create_response.status_code == 201:
+            print(f"User {user['username']} created successfully.")
+        else:
+            print(f"Failed to create user {user['username']}: {create_response.text}")
+
+
+if __name__ == "__main__":
+    provision_keycloak("../../../containers/keycloak/realms/master-realm.json", "admin")
