@@ -1,0 +1,11 @@
+codet/__init__.py,sha256=rDhrMC_fMUXsNfhis9LnU7U7NjwEDVfiUb9Fmq-PSnU,85
+codet/cli.py,sha256=5o0L6dA69AhG2pL1bp8i_PIkxqSAgPunzgjbkGgKFxs,6220
+codet/clog.py,sha256=wVCOX6Xf9Sz--bQqtklrgHlxjSsDVze0w1CIGKdOBvY,3462
+codet/codet.py,sha256=AgSYdpgY0AlXQ5ZiHhtwUx1q6DmMLyDjASepSNBEbFs,22681
+codet/git_compoent.py,sha256=feh8SC_Prdr3vty78H2FUsmJIAvqcVEOQzVThNeHjJg,12472
+codet-0.9.9.dist-info/licenses/LICENSE,sha256=niL3YSMREUKcnqeX5sXdVZdnJ1yZW9gZC4qEzMFIeME,1066
+codet-0.9.9.dist-info/METADATA,sha256=LkQGjHGsT9gX1fp7RrV-JSq2r_8SBb0TD8KGoJpulkw,83317
+codet-0.9.9.dist-info/WHEEL,sha256=Nw36Djuh_5VDukK0H78QzOX-_FQEo6V37m3nkm96gtU,91
+codet-0.9.9.dist-info/entry_points.txt,sha256=sGsY5A-er12LQsL3NE5a_jHvMwvPcypdYiO2gAQT9JY,41
+codet-0.9.9.dist-info/top_level.txt,sha256=4ynSFIw0FHDghYyssBoCeH4V_BaM1FshbBEfg9nJj7s,6
+codet-0.9.9.dist-info/RECORD,,
