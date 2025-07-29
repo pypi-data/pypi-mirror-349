@@ -1,0 +1,45 @@
+Making .env override default True (#1579)
+
+# Description
+
+### If the user has a .env file, its content takes precendence by
+default.
+
+There have been multiple cases where the default behaviour of
+load_dotenv() has confused users and caused problems because ordinary
+environment variables take precedence over the .env file, for example
+`CDF_PROJECT`:
+
+What the user expects the Toolkit to use: 
+```.env
+CDF_PROJECT=my_dev_project 
+CDF_CLUSTER=westeurope-1
+...
+```
+
+What the Toolkit uses (default load_dotenv())
+```
+echo $CDF_PROJECT
+my_prod_project  
+```
+
+The `override_env` flag is designed to avoid that, but most users are
+unaware of it. We think it is unlikely that users want to mix and match.
+
+
+## Changelog
+
+- [x] Patch
+- [ ] Minor
+- [ ] Skip
+
+## cdf
+
+### Changed
+
+- If the user uses a .env file, it takes precedence over local
+environment variables
+
+## templates
+
+No changes.
