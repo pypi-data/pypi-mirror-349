@@ -1,0 +1,33 @@
+Metadata-Version: 2.4
+Name: mseep-product-hunt-mcp
+Version: 0.1.2
+Summary: Product Hunt MCP Server - A FastMCP implementation for the Product Hunt API
+Home-page: 
+Author: mseep
+Author-email: mseep <support@skydeck.ai>
+Maintainer-email: mseep <support@skydeck.ai>
+License: MIT
+Keywords: mcp,product-hunt,fastmcp,api,ai
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Natural Language :: English
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: fastmcp>=0.3.0
+Requires-Dist: requests>=2.31.0
+Provides-Extra: dev
+Requires-Dist: ruff>=0.0.270; extra == "dev"
+Requires-Dist: black>=23.0.0; extra == "dev"
+Dynamic: author
+Dynamic: requires-python
+
+# Package managed by MseeP.ai
