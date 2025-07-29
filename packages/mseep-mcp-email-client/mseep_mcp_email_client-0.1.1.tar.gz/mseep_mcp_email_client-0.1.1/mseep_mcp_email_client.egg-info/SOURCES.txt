@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+setup.py
+mseep_mcp_email_client.egg-info/PKG-INFO
+mseep_mcp_email_client.egg-info/SOURCES.txt
+mseep_mcp_email_client.egg-info/dependency_links.txt
+mseep_mcp_email_client.egg-info/entry_points.txt
+mseep_mcp_email_client.egg-info/requires.txt
+mseep_mcp_email_client.egg-info/top_level.txt
+tests/test_db.py
+tests/test_mail.py
+tests/test_mcp_server.py
+tests/test_semantic.py
