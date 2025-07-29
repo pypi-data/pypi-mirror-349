@@ -1,0 +1,15 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+pyproject.toml
+setup.cfg
+src/norming/__init__.py
+src/norming/_utils.py
+src/norming.egg-info/PKG-INFO
+src/norming.egg-info/SOURCES.txt
+src/norming.egg-info/dependency_links.txt
+src/norming.egg-info/top_level.txt
+src/norming/core/__init__.py
+src/norming/tests/__init__.py
+src/norming/tests/test_tuple_0.py
+src/norming/tests/test_tuple_qual.py
