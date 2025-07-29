@@ -1,0 +1,17 @@
+gapstop/__init__.py,sha256=iC8QsttT9TYCExLS6RxbE2nRah-SAtFNCF4Fa1xD5Lk,5829
+gapstop/bibtex.py,sha256=wd3Nc6AMzSIRRH8h1Z1LpranpttK8sYjviwBNyQr15E,387
+gapstop/constants.py,sha256=tVaaPbzbtoYh7ZTgUtFxwQ3IQlx_-S-9zLedeF07ug8,2316
+gapstop/objects.py,sha256=nIMXbDuv3MCTUGw6q4X7v0xKRkE_IxEDvPnnzt6jSJ4,2558
+gapstop/protocols.conf,sha256=MTyjuj-uRODXc_YLe79aNOxTs0jeImw2GX-g0XA2IBk,410
+gapstop/protocols/__init__.py,sha256=2UfBklKGKZKsFxEkLxk9psmbTNc_RbQ56re0nZWiJ0g,1280
+gapstop/protocols/protocol_base.py,sha256=RETQrmtNgxSwrlU2HHzNUPX_2FykzLU6LlN1Vuzyazg,2256
+gapstop/protocols/protocol_extract_coordinates.py,sha256=QDLks5M1Ex6BkexGg6tke2EwaK2b3w76LhExncP74nk,14039
+gapstop/protocols/protocol_gapstop_tm.py,sha256=sHv6IGJdWLu-7Fd8-wZAGNqBRhvVMpXW7K58Pn9CiJ4,25191
+gapstop/tests/__init__.py,sha256=zLGteFuZlfdGJTDAdliYmpML-tfnaGF9WTKM0H5-Xas,1117
+gapstop/tests/tests_gapstop_tm.py,sha256=0E7YYjnhWwGk5DTA3z52QnVnk1pz7eYLzxQ5CihncYY,9846
+scipion_em_gapstop-3.0.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+scipion_em_gapstop-3.0.0.dist-info/METADATA,sha256=nwH-QALPy9CrzGca7XJZ20U3FiaUE_jUEUU2ugz38Tw,3386
+scipion_em_gapstop-3.0.0.dist-info/WHEEL,sha256=iAkIy5fosb7FzIOwONchHf19Qu7_1wCWyFNR5gu9nU0,91
+scipion_em_gapstop-3.0.0.dist-info/entry_points.txt,sha256=x9WYNljXin6kDwAgjWFN7abTvyehxrJ9warqGSPEzMg,38
+scipion_em_gapstop-3.0.0.dist-info/top_level.txt,sha256=ojhN_s2a2zG9p1Px4gYSEmeokZqf1UCNUxT-SntSfXg,8
+scipion_em_gapstop-3.0.0.dist-info/RECORD,,
