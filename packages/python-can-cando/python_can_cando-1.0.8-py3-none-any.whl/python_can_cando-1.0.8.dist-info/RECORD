@@ -1,0 +1,11 @@
+can_cando/CANdo.py,sha256=Lx1KqkYvC5QcQcev0JHVm8jkbGv84muU0JuEfUuc91I,44585
+can_cando/CANdoImport.py,sha256=L5GBT7YDOO_i74LQzB0Fl0kcpvdSg-BRdQpEp6Un_Y8,22573
+can_cando/CANdoTest.py,sha256=SLAKLfWwO5eYTUpaTbG98xQIdTquZsWozpIBkZaBqXA,1617
+can_cando/__init__.py,sha256=yP7ik0Uft73DN5TRnwu3nKj-p2Jea4fKpZMS-EgRPvE,245
+can_cando/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+python_can_cando-1.0.8.dist-info/licenses/LICENSE.txt,sha256=6n0EnHcF3BOvwgLdGOGCfzSE-CEv0_p7gvxKDDY0Msk,7816
+python_can_cando-1.0.8.dist-info/METADATA,sha256=N_fuDwzObgvoxQpJ5K72xFLYIUAudXePypAsurOjDd8,5312
+python_can_cando-1.0.8.dist-info/WHEEL,sha256=Nw36Djuh_5VDukK0H78QzOX-_FQEo6V37m3nkm96gtU,91
+python_can_cando-1.0.8.dist-info/entry_points.txt,sha256=QZKlumgw4lo84GdfaRzdhGeit8Go8URRADn5alRpdGc,49
+python_can_cando-1.0.8.dist-info/top_level.txt,sha256=WQS1UH3-PsY2gy5F2vAwClO6wdfM4ngBw8a_USBpR80,10
+python_can_cando-1.0.8.dist-info/RECORD,,
