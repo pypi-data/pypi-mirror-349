@@ -1,0 +1,26 @@
+[project]
+name = "mseep-mcp-allthetools"
+version = "0.1.2"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "mseep", email = "support@skydeck.ai" },
+]
+requires-python = ">=3.13"
+dependencies = [
+    "mcp>=1.6.0",
+]
+maintainers = [
+    { name = "mseep", email = "support@skydeck.ai" },
+]
+
+[project.scripts]
+mcp-allthetools = "mcp_allthetools:main"
+
+[build-system]
+requires = [
+    "hatchling",
+]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets]
