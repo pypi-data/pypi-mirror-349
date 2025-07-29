@@ -1,0 +1,6 @@
+[console_scripts]
+prompt-hub = app.main:main
+prompt-hub-ui = app.streamlit_app:main
+
+[post_install]
+copy_env = scripts.post_install:copy_env_file
