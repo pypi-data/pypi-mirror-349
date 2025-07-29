@@ -1,0 +1,32 @@
+[build-system]
+requires = [
+    "setuptools>=61.0",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mseep-mcp-simple-pubmed"
+version = "0.1.13"
+description = "An MCP server that provides access to PubMed articles through Entrez API."
+readme = "README.md"
+authors = [
+    { name = "mseep", email = "support@skydeck.ai" },
+]
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "mcp",
+    "biopython",
+    "metapub",
+    "httpx",
+]
+maintainers = [
+    { name = "mseep", email = "support@skydeck.ai" },
+]
+
+[project.scripts]
+mcp-simple-pubmed = "mcp_simple_pubmed:main"
