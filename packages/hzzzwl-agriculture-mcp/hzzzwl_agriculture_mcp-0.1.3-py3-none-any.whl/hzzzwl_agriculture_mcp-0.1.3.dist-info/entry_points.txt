@@ -1,0 +1,2 @@
+[console_scripts]
+hzzzwl-agriculture-mcp = hzzzwl_agriculture_mcp.server:main
