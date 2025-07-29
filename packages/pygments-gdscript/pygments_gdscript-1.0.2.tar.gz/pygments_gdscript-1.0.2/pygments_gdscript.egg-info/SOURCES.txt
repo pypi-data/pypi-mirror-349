@@ -1,0 +1,6 @@
+README.md
+setup.py
+pygments_gdscript.egg-info/PKG-INFO
+pygments_gdscript.egg-info/SOURCES.txt
+pygments_gdscript.egg-info/dependency_links.txt
+pygments_gdscript.egg-info/top_level.txt
