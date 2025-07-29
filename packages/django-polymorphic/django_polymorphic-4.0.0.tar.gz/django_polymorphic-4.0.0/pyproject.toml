@@ -1,0 +1,38 @@
+[build-system]
+requires = [
+    "setuptools",
+    # TODO: look into using python-babel instead of requiring django at build time
+    "django>=3.2",  # for makemessages
+]
+
+[tool.ruff]
+line-length = 99
+
+extend-ignore = [
+    "E501",
+]
+select = [
+    "E",
+    "F",
+    "I",
+    "W",
+]
+
+[tool.ruff.per-file-ignores]
+"example/**" = [
+    "F401",
+    "F403",
+    "F405",
+    "F841",
+    "I",
+]
+"polymorphic/tests/**" = [
+    "F401",
+    "F403",
+    "F405",
+    "F841",
+    "I",
+]
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "polymorphic_test_settings"
