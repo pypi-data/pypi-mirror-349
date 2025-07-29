@@ -1,0 +1,40 @@
+from copy import copy
+from pweb_cli.common.pweb_cli_named import UIType, ActionStatus
+from pweb_cli.data.pweb_cli_pwebsm import PWebSM, PWebSMClone, PWebSMRepo, PWebSMDependency, PWebSMModule, \
+    PWebSMDirectory
+
+
+class PWebCLIInitData:
+
+    @staticmethod
+    def get_default_pwebsm(name, ui_type):
+        pweb_sm = PWebSM(name=name)
+
+        pweb_sm.start_script = [
+            "python --version",
+            "python -m pip install --upgrade pip",
+        ]
+
+        pweb_sm.end_script = [
+            "pip install -e .",
+        ]
+
+        if ui_type == UIType.react:
+            pweb_sm.start_script.append("npm install -g yarn")
+            pweb_sm.end_script.append("yarn install")
+
+        clone: PWebSMClone = PWebSMClone(status=ActionStatus.inactive, branch="dev")
+        clone.add_repo(PWebSMRepo(url="https://github.com/problemfighter/pweb.git", script=["pip install -e ."]))
+
+        source_dependency: PWebSMDependency = PWebSMDependency(name="Source Development", status=ActionStatus.inactive, dir="dependencies")
+        source_dependency.clone = clone
+        pweb_sm.add_dependency(source_dependency)
+
+        module: PWebSMModule = PWebSMModule(status=ActionStatus.active, script=["pip install -e ."])
+        module.add_subdir(PWebSMDirectory(name="boot"))
+
+        app_dependency: PWebSMDependency = PWebSMDependency(name="Application", status=ActionStatus.active, dir="application")
+        app_dependency.module = module
+        pweb_sm.add_dependency(app_dependency)
+
+        return copy(pweb_sm)

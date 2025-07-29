@@ -1,0 +1,38 @@
+name: "This is the Project Name"
+
+start_script:
+  - script 1
+  - script 2
+
+dependencies:
+  - name: "app-base-dependencies"
+    dir: "dependencies"
+    status: "active"
+
+    module:
+      status: "inactive"
+      script:
+        - pip install -e .
+      subdir:
+        - name: "example-module"
+          script:
+            - pip install -e .
+
+    clone:
+      branch: "dev"
+      status: "active"
+      source: code # binary
+      script:
+        - pip install -e .
+      repo:
+        - url: "https://example.com/example.git"
+          name: "project-name"
+          branch: "pre-release"
+          source: code # binary
+          script:
+            - python --version
+
+
+end_script:
+  - script 1
+  - script 2
