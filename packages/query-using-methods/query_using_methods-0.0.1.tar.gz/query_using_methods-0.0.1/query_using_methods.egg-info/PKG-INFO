@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: query_using_methods
+Version: 0.0.1
+Summary: Build your queries using methods (works like LINQ)
+Author-email: Buzurgmexr Sultonaliyev <buzurgmexrubon@gmail.com>
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: loguru>=0.7.3
+Requires-Dist: asyncpg>=0.30.0
+Requires-Dist: pytz>=2025.2
+
+# Query Using Methods
