@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: mseep-sefaria_jewish_library
+Version: 0.1.2
+Summary: the jewish library, accessible to LLMs 
+Home-page: 
+Author: mseep
+Author-email: mseep <support@skydeck.ai>
+Maintainer-email: mseep <support@skydeck.ai>
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: mcp>=1.3.0
+Requires-Dist: requests
+Dynamic: author
+Dynamic: license-file
+Dynamic: requires-python
+
+# Package managed by MseeP.ai
