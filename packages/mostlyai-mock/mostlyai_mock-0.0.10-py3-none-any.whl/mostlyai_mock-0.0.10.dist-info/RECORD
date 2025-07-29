@@ -1,0 +1,8 @@
+mostlyai/mock/__init__.py,sha256=grEzN1CxhOdKf-ow8fWVNTzUrB2Ogg8IBQIKqyaOc7I,715
+mostlyai/mock/core.py,sha256=p5VAsRppzAc4P8FqKEunfQ3cPjImUU2cEc6yqHJVhMg,29884
+mostlyai/mock/mcp_server.py,sha256=juy5n6-Xo-ZVC3u5o2zylLgN1CaAwzIaS_bk2qXxpcU,2439
+mostlyai_mock-0.0.10.dist-info/METADATA,sha256=OHHgoJQ6_RL20Ze5ofFvMscXK5oBOXTfYyEYy0XwsCU,12443
+mostlyai_mock-0.0.10.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+mostlyai_mock-0.0.10.dist-info/entry_points.txt,sha256=XDbppUIAaCWW0nresVep8zb71pkzZuFA16jCBHq8CU8,61
+mostlyai_mock-0.0.10.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+mostlyai_mock-0.0.10.dist-info/RECORD,,
