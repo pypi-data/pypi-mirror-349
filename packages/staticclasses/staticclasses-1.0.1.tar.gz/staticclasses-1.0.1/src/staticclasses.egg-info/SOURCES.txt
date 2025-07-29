@@ -1,0 +1,13 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+pyproject.toml
+setup.cfg
+src/staticclasses/__init__.py
+src/staticclasses.egg-info/PKG-INFO
+src/staticclasses.egg-info/SOURCES.txt
+src/staticclasses.egg-info/dependency_links.txt
+src/staticclasses.egg-info/top_level.txt
+src/staticclasses/core/__init__.py
+src/staticclasses/tests/__init__.py
+src/staticclasses/tests/test_try.py
