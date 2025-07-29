@@ -1,0 +1,58 @@
+Metadata-Version: 2.4
+Name: pycombb
+Version: 1.0
+Summary: A Python Library For BitBlock (COM)
+Home-page: http://www.moyalab.com
+Download-URL: https://www.moyalab.com
+Author: devdio
+Author-email: devdio.kei@gmail.com
+License: GNU GPLv3
+Keywords: Bitblock,Cocoboard,BBCar,Cocotics
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Education
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: bleak==0.22.3
+Requires-Dist: nest-asyncio==1.6.0
+Requires-Dist: termcolor
+Requires-Dist: pyserial==3.5
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: download-url
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Python Library for Bitblock Board
+`카미봇 동글`을 사용해서 BitBlock 보드와 연결해서 사용할 수 있도록 한다.  
+  
+
+```python
+from bitblock import *
+
+# 카미봇동글의 포트번호 
+port = "COM8"
+board = Bitblock(port)
+ret = board.connect()
+
+
+rccar = board.rccar_init()
+
+for i in range(10):
+    rccar.move_forward(100)
+    wait(1000)
+    rccar.stop()
+    rccar.move_backward(100)
+    wait(1000)
+    rccar.stop()
+```
