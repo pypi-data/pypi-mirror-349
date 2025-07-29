@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: mseep-mcp-applemusic
+Version: 0.1.7
+Summary: A simple Apple Music API client for MCP
+Home-page: 
+Author: mseep
+Author-email: mseep <support@skydeck.ai>
+Maintainer-email: mseep <support@skydeck.ai>
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: mcp>=1.2.1
+Dynamic: author
+Dynamic: license-file
+Dynamic: requires-python
+
+# Package managed by MseeP.ai
