@@ -1,0 +1,6 @@
+Metadata-Version: 2.4
+Name: jsontoqt
+Version: 0.1.0
+Summary: Convert JSON schema into PySide6 GUI forms
+Author-email: Jupiter Dev <thatgeometrydude@gmail.com>
+Requires-Dist: PySide6
