@@ -1,0 +1,84 @@
+Metadata-Version: 2.4
+Name: mseep-mcp-data-wrangler
+Version: 0.1.1
+Summary: Add your description here
+Author-email: mseep <support@skydeck.ai>
+Maintainer-email: mseep <support@skydeck.ai>
+License-File: LICENSE
+Requires-Python: >=3.11.8
+Requires-Dist: aiofiles>=24.1.0
+Requires-Dist: mcp[cli]>=1.6.0
+Requires-Dist: numpy>=2.2.4
+Requires-Dist: polars>=1.26.0
+Requires-Dist: pydantic-settings>=2.8.1
+Requires-Dist: pydantic>=2.11.1
+Requires-Dist: python-dotenv>=1.1.0
+Requires-Dist: scikit-learn>=1.6.1
+Description-Content-Type: text/markdown
+
+# mcp-data-wrangler: MCP server for Data Wrangling
+
+## Overview
+
+This is a Model Context Protocol server for Data Wrangling, providing a standardized interface for data preprocessing, transformation, and analysis tasks. It enables seamless integration of data wrangling operations into the MCP ecosystem.
+
+## Features
+
+* Data aggregation
+* Descriptive statistics
+
+## Run this project locally
+
+This project is not yet set up for ephemeral environments (e.g. `uvx` usage). Run this project locally by cloning this repo:
+
+```bash
+git clone https://github.com/yourusername/mcp-data-wrangler.git
+cd mcp-data-wrangler
+```
+
+You can launch the MCP inspector via npm:
+
+```bash
+npx @modelcontextprotocol/inspector uv --directory=src/mcp_data_wrangler run mcp-data-wrangler
+```
+
+Upon launching, the Inspector will display a URL that you can access in your browser to begin debugging.
+
+OR Add this tool as a MCP server:
+
+```json
+{
+  "data-wrangler": {
+    "command": "uv",
+    "args": [
+      "--directory",
+      "/path/to/mcp-data-wrangler",
+      "run",
+      "mcp-data-wrangler"
+    ]
+  }
+}
+```
+
+## Development
+
+1. Create and activate a virtual environment:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+```
+
+2. Install dependencies:
+
+```bash
+pip install -e ".[dev]"
+```
+
+3. Run tests:
+
+```bash
+pytest -s -v tests/
+```
+
+## [License](LICENSE)
