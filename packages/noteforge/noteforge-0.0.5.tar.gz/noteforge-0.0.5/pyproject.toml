@@ -1,0 +1,26 @@
+[build-system]
+requires = ["hatchling >= 1.26"]
+build-backend = "hatchling.build"
+[project]
+name = "noteforge"
+version = "0.0.5"
+authors = [
+  { name="Radras44", email="radrastreyarch@gmail.com" },
+]
+description = "A Python library for implementing music theory in data structures, facilitating the management of relationships between notes and the retrieval of specific information about them."
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+
+[tool.setuptools]
+packages = ["./noteforge"] 
+
+[project.urls]
+Homepage = "https://github.com/radras44/NoteForge"
+Issues = "https://github.com/radras44/NoteForge/issues"
+

@@ -1,0 +1,138 @@
+Metadata-Version: 2.4
+Name: noteforge
+Version: 0.0.5
+Summary: A Python library for implementing music theory in data structures, facilitating the management of relationships between notes and the retrieval of specific information about them.
+Project-URL: Homepage, https://github.com/radras44/NoteForge
+Project-URL: Issues, https://github.com/radras44/NoteForge/issues
+Author-email: Radras44 <radrastreyarch@gmail.com>
+License-Expression: MIT
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# How to use
+
+## Note object
+The `Note` object is a core component of this package. A note, such as "A", requires detailed context about its properties to be truly useful, including pitch, position, alteration, octave, and other relevant information. The `Note` object provides access to this information for user reference or for use by other objects and functions within the package.
+```py
+import noteforge as nf
+
+note = nf.Note("C#") # => C#3, by default, the octave is 3
+note_2 = nf.Note("C#",4) # => C4
+```
+
+The note range is from A0 to C8, based on the standard piano keyboard
+```py
+note = nf.Note("D",8) # this throws an error
+```
+
+### Note name
+you can get basic information if needed, the note name consists of three parts: `[proper name|alteration|octave]`, each part can be accessed separately
+```py
+note = nf.Note("C#") # => C#3, by default, the octave is 3
+note_proper_name = note.proper_name # => C
+name = note.get_name() # => C#
+full_name = note.get_full_name() # => C#3
+```
+
+### Note position 
+Use the provided methods to access positional information. There are three positional values: `[natural|chromatic|absolute]`
+* `chromatic` : the chromatic index of the note, based on the 12 standard music notes
+* `natural` : the natural index of the note, based on the 7 natural note names that have a proper name `C, D, E, F, G, A, B`
+* `absolute` : a unique value for each note with the same properties, values range from `9`(A0) to `96`(C8), so you can use it as a kind of id
+```py
+import noteforge as nf
+
+note = nf.Note("A",0)
+
+print(note.get_chromatic_position())
+print(note.get_natural_position())
+print(note.get_absolute_position())   
+
+```
+
+### Another useful properties are:
+* `alteration contribution` : the semitone value of the alteration -- if it is 0 the note not has alteration
+* `frequency` : the fundamental frequency of the note in Hz
+
+```py
+print(note.get_freq()) # get frequency of note, in this case : 27.5 Hz
+print(note.get_alteration_contribution())
+```
+
+
+## Intervals
+musical intervals are represented by two set of strings
+
+* Intervaldegree : a `str` that represent a valid interval degree, for example `[b5,5,#5]` has the same degree which `5`
+* IntervalSymbol : a `str` that represent a valid interval with quality (minor, major, perfect, etc...) such as `[b5,5,#5]`
+
+### Get interval
+This package works with standard intervals. You can use functions to retrieve any of them, but if the interval between notes is non-conventional, it returns None
+```py
+root = nf.Note("C")
+interval_1 = nf.get_interval_between_notes(root,nf.Note("E")) # = 3 as <str> IntervalSymbol
+interval_2 = nf.get_interval_between_notes(root,nf.Note("Fb")) # = None because b4 is not and standard interval
+
+interval_3 = nf.get_interval_between_notes(root,nf.Note("Db")) # = b2 as <str> IntervalSymbol
+interval_4 = nf.get_interval_between_notes(root,nf.Note("C#")) # = None because #1 or #15 is not and standard interval
+```
+
+### Get interval degree
+`IntervalSymbol` can share the same `Intervaldegree`
+```py
+interval = nf.get_interval_between_notes(nf.Note("C"), nf.Note("E")) # = 3 as <str> and IntervalSymbol
+interval_2 = nf.get_interval_between_notes(nf.Note("C"), nf.Note("Eb")) # = b3 as <str> and IntervalSymbol
+degree = nf.get_interval_degree(interval) # = 3 as <str> Intervaldegree
+degree_2 = nf.get_interval_degree(interval_2) # = 3 as <str> Intervaldegree
+```
+
+You can get the value of an Intervaldegree. Some Intervaldegrees are extensions of others, so their degree value can be used to relate them.
+```py
+print(nf.get_interval_degree_value("2")) # = 2
+print(nf.get_interval_degree_value("9")) # = 2
+```
+
+### Get Note by interval
+You can also use interval to get a `note_name` or directly a `Note` object — in the latter case, the octave is calculated automatically
+```py
+root = nf.Note("A",3)
+note_name = nf.get_note_name_by_interval(root,"5") # = E as <str>
+note = nf.get_note_by_interval(root,"2") # = E4 as <Note>
+```
+
+
+## Transpositions
+you can transpose a note by semitones or interval  
+* `Semitone transpose` : uses the chromatic scale to transpose without altering the interval degree  
+```py
+note = nf.Note("C", 3)
+
+transposed_note = nf.transpose_note(note, 6)
+print(transposed_note.get_full_name()) # F#3
+```
+
+* `Interval transpose`: This prioritizes the interval's degree, then finds a note or note name matching its semitone distance. Applies to any method using intervals to calculate note distance, like `nf.get_note_name_by_interval` or `nf.get_note_by_interval`
+```py
+note = nf.Note("C",3)
+
+transposed_note_2 = nf.get_note_by_interval(note, "#4")
+print(transposed_note_2.get_full_name()) # = F#3
+transposed_note_3 = nf.get_note_by_interval(note, "b5")
+print(transposed_note_3.get_full_name()) # = Gb3
+```
+
+* `Interval degree transposition`: try transform the interval degree while maintaining the interval quality, throw `None` if the result don't exist in standard intervals
+```py
+interval = "b3"
+transposed = nf.transpose_interval_degree(interval,"9") # = b9 as <str> IntervalSymbol
+transposed_2 = nf.transpose_interval_degree(interval,"4") # = None, because 'b4' is not an standard interval
+```
+
+
+
+
+
+
+

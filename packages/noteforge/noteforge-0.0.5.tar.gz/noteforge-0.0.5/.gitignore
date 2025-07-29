@@ -1,0 +1,11 @@
+
+deducers
+
+
+test.py
+main.py
+doc.py
+
+#pypi
+/dist/
+.pypirc
