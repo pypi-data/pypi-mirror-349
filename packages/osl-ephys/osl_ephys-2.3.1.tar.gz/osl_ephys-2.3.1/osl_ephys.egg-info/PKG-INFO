@@ -1,0 +1,170 @@
+Metadata-Version: 2.4
+Name: osl-ephys
+Version: 2.3.1
+Summary: OHBA Software Library for the analysis of electrophysiological data
+Author: OHBA Analysis Group
+License: MIT
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: matplotlib
+Requires-Dist: mne
+Requires-Dist: scikit-learn
+Requires-Dist: fslpy
+Requires-Dist: sails
+Requires-Dist: tabulate
+Requires-Dist: pyyaml
+Requires-Dist: neurokit2
+Requires-Dist: jinja2
+Requires-Dist: glmtools
+Requires-Dist: numba
+Requires-Dist: nilearn
+Requires-Dist: dask
+Requires-Dist: distributed
+Requires-Dist: parse
+Requires-Dist: opencv-python
+Requires-Dist: panel
+Requires-Dist: h5io
+Provides-Extra: dev
+Requires-Dist: setuptools; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: coverage; extra == "dev"
+Requires-Dist: flake8; extra == "dev"
+Provides-Extra: doc
+Requires-Dist: sphinx; extra == "doc"
+Requires-Dist: numpydoc; extra == "doc"
+Requires-Dist: sphinx_gallery; extra == "doc"
+Requires-Dist: pydata-sphinx-theme; extra == "doc"
+Provides-Extra: full
+Requires-Dist: setuptools; extra == "full"
+Requires-Dist: pytest; extra == "full"
+Requires-Dist: pytest-cov; extra == "full"
+Requires-Dist: coverage; extra == "full"
+Requires-Dist: flake8; extra == "full"
+Requires-Dist: sphinx; extra == "full"
+Requires-Dist: numpydoc; extra == "full"
+Requires-Dist: sphinx_gallery; extra == "full"
+Requires-Dist: pydata-sphinx-theme; extra == "full"
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license
+Dynamic: license-file
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# OSL: Electrophysiological Data Analysis Toolbox
+
+Tools for analysing electrophysiological (M/EEG) data.
+
+Documentation: https://osl-ephys.readthedocs.io/en/latest/.
+
+## Installation
+
+We recommend installing osl-ephys in a conda environment.
+
+### Conda / mamba
+
+Miniforge (`conda`) can be installed with:
+```
+wget "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
+bash Miniforge3-$(uname)-$(uname -m).sh
+rm Miniforge3-$(uname)-$(uname -m).sh
+```
+
+Mamba (`mamba`) can be installed with:
+```
+conda install -n base -c conda-forge mamba
+```
+
+### osl-ephys
+
+osl-ephys can be installed from source code in a conda environment using the following.
+
+```
+git clone https://github.com/OHBA-analysis/osl-ephys.git
+cd osl-ephys
+mamba env create -f envs/osle.yml
+conda activate osle
+pip install -e .
+```
+
+Note, on a headless server you may need to set the following environment variable:
+```
+export PYVISTA_OFF_SCREEN=true
+```
+
+### Oxford-specific computers
+
+If you are installing on an OHBA workstation computer (hbaws) use:
+```
+git clone https://github.com/OHBA-analysis/osl-ephys.git
+cd osl-ephys
+mamba env create -f envs/hbaws.yml
+conda activate osle
+pip install -e .
+```
+
+Or on the BMRC cluster:
+```
+git clone https://github.com/OHBA-analysis/osl-ephys.git
+cd osl-ephys
+mamba env create -f envs/bmrc.yml
+conda activate osle
+pip install -e .
+```
+
+Remember to set the following environment variable:
+```
+export PYVISTA_OFF_SCREEN=true
+```
+
+## Removing osl-ephys
+
+Simply remove the conda environment and delete the repository:
+```
+conda env remove -n osle
+rm -rf osl-ephys
+```
+
+## For developers
+
+Install all the requirements:
+```
+pip install -r requirements.txt
+```
+
+Run tests:
+```
+cd osl_ephys
+pytest tests
+```
+or to run a specific test:
+```
+cd osl_ephys/tests
+pytest test_file_handling.py
+```
+
+Build documentation locally:
+```
+sphinx-build -b html doc/source build
+```
+Compiled docs can be found in `doc/build/html/index.html`.
