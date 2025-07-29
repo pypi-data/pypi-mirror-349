@@ -1,0 +1,10 @@
+importlib-metadata==8.7.0
+    # via build
+packaging==25.0
+    # via build
+pyproject-hooks==1.2.0
+    # via build
+tomli==2.2.1 ; python_version < "3.11"
+    # via build
+zipp==3.21.0
+    # via importlib-metadata
