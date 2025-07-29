@@ -1,0 +1,13 @@
+mc_remote/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mc_remote/block_id.py,sha256=UQO5DaGRqi4Z2gBsS0YM4yAVVIZIhNPUgb6QCTuWDfc,40892
+mc_remote/connection.py,sha256=8gp00ETgbpzba4Co9W1K4U1ti2eZ79udjiJ7l38oM-8,3461
+mc_remote/entity_id.py,sha256=weWFsnzP0hX7-FLv39UliZXZvBwok0mSQ0lfyWzdlU8,1867
+mc_remote/event.py,sha256=rrdvTt8BmIQx_1z7-9DoEWFg8dnYtYv5LxTrc7saMzQ,1972
+mc_remote/minecraft.py,sha256=32-mTuplLRAYVQ-3S201IQ__wKHICmjiIF2CdrAw_yg,11555
+mc_remote/particle_id.py,sha256=hWxBZ4zyljhVohrRZvk0PBhHseaU6QOtr_C4DNq1q9U,3071
+mc_remote/util.py,sha256=dc3-5kzTKoDrhoCd1OPqwIxYLxy1BJ8L6xGf3sv-sWs,587
+mc_remote/vec3.py,sha256=fMrvltaDyOGQq3q0sAKspAcMHWSPdZBWaMm-o3JQoKs,2892
+minecraft_remote_api-1214.10.13.dist-info/LICENSE,sha256=eeeikFwxo_lxwSRh1cBXnRxrxw2qtZSy76fG7HHx1EE,1070
+minecraft_remote_api-1214.10.13.dist-info/METADATA,sha256=2CdnlbOaJaVfGnpYiVXxdDRh0ZgyNhhZNtMRErvQNjU,12828
+minecraft_remote_api-1214.10.13.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+minecraft_remote_api-1214.10.13.dist-info/RECORD,,
