@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+mcp_video2text.egg-info/PKG-INFO
+mcp_video2text.egg-info/SOURCES.txt
+mcp_video2text.egg-info/dependency_links.txt
+mcp_video2text.egg-info/entry_points.txt
+mcp_video2text.egg-info/requires.txt
+mcp_video2text.egg-info/top_level.txt
+src/__init__.py
