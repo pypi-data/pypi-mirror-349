@@ -1,0 +1,2 @@
+[console_scripts]
+progress-tracker = progtrack.cli:main
