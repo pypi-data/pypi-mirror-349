@@ -1,0 +1,23 @@
+[project]
+name = "mseep-whereami-mcp"
+version = "0.1.2"
+description = "A lightweight mcp server that tells you exactly where you are."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "httpx>=0.28.1",
+    "mcp[cli]>=1.4.1",
+]
+authors = [
+    { name = "mseep", email = "support@skydeck.ai" },
+]
+maintainers = [
+    { name = "mseep", email = "support@skydeck.ai" },
+]
+
+[build-system]
+requires = [
+    "setuptools>=42",
+    "wheel",
+]
+build-backend = "setuptools.build_meta"
