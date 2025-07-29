@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+src/pydrodynamics/__init__.py
+src/pydrodynamics/dynamics.py
+src/pydrodynamics/environment.py
+src/pydrodynamics/params.py
+src/pydrodynamics/thrusters.py
+src/pydrodynamics/utils.py
+src/pydrodynamics/vehicle.py
+src/pydrodynamics.egg-info/PKG-INFO
+src/pydrodynamics.egg-info/SOURCES.txt
+src/pydrodynamics.egg-info/dependency_links.txt
+src/pydrodynamics.egg-info/requires.txt
+src/pydrodynamics.egg-info/top_level.txt
