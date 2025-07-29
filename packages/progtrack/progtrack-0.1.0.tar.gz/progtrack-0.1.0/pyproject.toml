@@ -1,0 +1,11 @@
+[project]
+name = "progtrack"
+version = "0.1.0"
+description = "Track @progress comments across source code files"
+authors = [{ name = "Shao Wang" }]
+readme = "README.md"
+license = {text = "MIT"}
+dependencies = ["tabulate"]
+
+[project.scripts]
+progress-tracker = "progtrack.cli:main"

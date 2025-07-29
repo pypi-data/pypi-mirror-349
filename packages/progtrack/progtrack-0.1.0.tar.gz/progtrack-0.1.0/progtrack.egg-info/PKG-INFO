@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: progtrack
+Version: 0.1.0
+Summary: Track @progress comments across source code files
+Author: Shao Wang
+License: MIT
+Description-Content-Type: text/markdown
+Requires-Dist: tabulate
