@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+languages/__init__.py
+languages/english.py
+languages/hindi.py
+languages/marathi.py
+word2num_convert.egg-info/PKG-INFO
+word2num_convert.egg-info/SOURCES.txt
+word2num_convert.egg-info/dependency_links.txt
+word2num_convert.egg-info/top_level.txt
