@@ -1,0 +1,17 @@
+AUTHORS.md
+CHANGELOG.md
+CONTRIBUTING.md
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+france_connect/__init__.py
+france_connect/clients.py
+france_connect/enums.py
+france_connect_py.egg-info/PKG-INFO
+france_connect_py.egg-info/SOURCES.txt
+france_connect_py.egg-info/dependency_links.txt
+france_connect_py.egg-info/requires.txt
+france_connect_py.egg-info/top_level.txt
+tests/test_france_connect_client.py
