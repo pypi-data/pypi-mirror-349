@@ -1,0 +1,3 @@
+[console_scripts]
+p_queuing-service = p_queuing.app:main
+p_queuing-worker = p_queuing.worker:main

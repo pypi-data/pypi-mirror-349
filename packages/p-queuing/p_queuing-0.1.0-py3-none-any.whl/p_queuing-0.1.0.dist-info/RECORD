@@ -1,0 +1,10 @@
+p_queue/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+p_queue/app.py,sha256=a_XR6IsdO9ZGox76lDuQGH0mzgPfy_Ni9tTTGE3tqP8,2784
+p_queue/utils.py,sha256=sJvPAnNKhTFaRb05uZQoKAQKIr5jwVwrPjGh1cDyxRs,2266
+p_queue/worker.py,sha256=ZHee-wf137MI9uWpXaGBcdUIXgxY-NpA1qUx8TH9Tdk,2278
+p_queuing-0.1.0.dist-info/licenses/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+p_queuing-0.1.0.dist-info/METADATA,sha256=uknwdpmMpxFraXfO9rZE5RRsQmxC00IpJvmqFPlyB2M,571
+p_queuing-0.1.0.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+p_queuing-0.1.0.dist-info/entry_points.txt,sha256=EoQmPd8u2GW_jDJngNT_TFQgq6WfQL8W7JpZ0ddjnwI,98
+p_queuing-0.1.0.dist-info/top_level.txt,sha256=xE2E8GJm0YWB3L-gEZdvz1-ffsfYxz77_5B9B4LotOI,8
+p_queuing-0.1.0.dist-info/RECORD,,
