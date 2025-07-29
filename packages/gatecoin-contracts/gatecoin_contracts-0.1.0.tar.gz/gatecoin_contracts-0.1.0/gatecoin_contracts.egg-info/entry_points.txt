@@ -1,0 +1,2 @@
+[console_scripts]
+deploy = gatecoin_contracts.deploy.__main__:main
