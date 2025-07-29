@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: nunchaku-kaggle
+Version: 0.2.0
+Requires-Python: >=3.10
+Requires-Dist: diffusers (>=0.32.2)
+Requires-Dist: transformers
+Requires-Dist: accelerate
+Requires-Dist: sentencepiece
+Requires-Dist: protobuf
+Requires-Dist: huggingface-hub
