@@ -1,0 +1,9 @@
+spark_sink_connector/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spark_sink_connector/enums.py,sha256=fsMYCyKRV_i0cmDzjv87oJYYsIHik_HYGIYWKh5FhjA,425
+spark_sink_connector/schema_helper.py,sha256=XAJfMu31_iGIJpQ0iXfb29sZ0aqgLGb8RBbshXn4o7Q,3399
+spark_sink_connector/spark_sink_config.py,sha256=TlZpvNREWA42S9JbPNFPwPZVrpHaIsQLDC6KYOxbGO4,8254
+spark_sink_connector/spark_sink_connector.py,sha256=8V33f0qbUFTcrLecyGWfUsuM5XP_NNBAREbeR2FEgl0,19573
+spark_sink_connector-0.10.7.dist-info/METADATA,sha256=-5ia2jkyWdeRYis7ApWZJaSadHaZqicyZ9QQEegHNoM,401
+spark_sink_connector-0.10.7.dist-info/WHEEL,sha256=Nw36Djuh_5VDukK0H78QzOX-_FQEo6V37m3nkm96gtU,91
+spark_sink_connector-0.10.7.dist-info/top_level.txt,sha256=KnjFkAxEC6-oYbaAePEn9pbnHFMnW1-m5REUtk9Wie8,21
+spark_sink_connector-0.10.7.dist-info/RECORD,,
