@@ -1,0 +1,2 @@
+[console_scripts]
+pygithub-mcp-server = pygithub_mcp_server.__main__:main
