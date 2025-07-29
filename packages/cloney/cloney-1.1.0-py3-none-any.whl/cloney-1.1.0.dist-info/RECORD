@@ -1,0 +1,13 @@
+cloney/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cloney/check_buckets.py,sha256=eRY63mBahPQizpsp9SVNfOhG1TEQKvrsnEgewy-h_Sg,7694
+cloney/logger.py,sha256=RFXhfQ5lsSwkshZgncrfkVBU8WqKvCWhVHjbfwtzshU,318
+cloney/main.py,sha256=LPQvegI9yU37ffgYo_yxsdCPi3c7rOkiR7L2JnemkdM,2660
+cloney/storage.py,sha256=5Fwb-Q7Q0SpbjKQ2laBu6woswz1i0OKos3G_O3EEjKY,15812
+cloney/utils.py,sha256=gArHpc7iDpzMzD64VwRDVTD-Df7rcBGX2MdNMHKgs9k,820
+cloney/verify.py,sha256=UsaTacHOtLAd0BDJQttq6JOgvtOTzJdowswrvqb67DQ,6374
+cloney-1.1.0.dist-info/licenses/LICENSE,sha256=FFjiDH2nYBmnpDQ8rDPdIK58iW5dEiOJUV0kv27Q5NE,1087
+cloney-1.1.0.dist-info/METADATA,sha256=LjE4lXJstZKh8mE2o3EkW7k8v-ybTRFS5Sae63RXCx4,4244
+cloney-1.1.0.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+cloney-1.1.0.dist-info/entry_points.txt,sha256=sjECqHsdBemt0hYpAzqLfxgiLkEyJ39IIFSN6geHWWA,44
+cloney-1.1.0.dist-info/top_level.txt,sha256=2mPnJW1XTUNpFcDhUxqp2ZUaoOEOVkiZP60MwlefOpk,7
+cloney-1.1.0.dist-info/RECORD,,
