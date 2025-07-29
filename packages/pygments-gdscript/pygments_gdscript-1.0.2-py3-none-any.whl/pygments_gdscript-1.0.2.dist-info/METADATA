@@ -1,0 +1,27 @@
+Metadata-Version: 2.4
+Name: pygments_gdscript
+Version: 1.0.2
+Summary: A small example package
+Home-page: https://github.com/ZackeryRSmith/pygments-gdscript
+Author: ZackeryRSmith
+Author-email: zackery.smith82307@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: summary
+
+# Pygments GDScript Lexer
+This lexer was made to fill in the holes [pygments/lexers/gdscript.py](https://github.com/pygments/pygments/blob/master/pygments/lexers/gdscript.py) left.
+A pull request is in the works, but for us, the long wait for the dependency chain is not worth it.
+As such, this is the home of the "better lexer" for use in the [GMLWiki](https://github.com/GodotModding/gmlwiki) until further notice.
+
+To test the highlighting independantly; because let's be real rebuilding the GMLWiki to test it would be overkill.
+You may run [test.py](https://github.com/GodotModding/pygments-gdscript/test.py), which will export a `test.html`.
+Note that you **must** install `pygments` through pip to run the test.
