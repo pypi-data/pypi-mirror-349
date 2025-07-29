@@ -1,0 +1,22 @@
+[project]
+name = "dpgmagictag"
+version = "0.1.0"
+description = "A composable tag system for use with DearPyGUI"
+readme = "README.md"
+authors = [
+    { name = "Zachary Parmley", email = "zachary.parmley@gmail.com" }
+]
+requires-python = ">=3.10"
+dependencies = []
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICENSE*"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+
