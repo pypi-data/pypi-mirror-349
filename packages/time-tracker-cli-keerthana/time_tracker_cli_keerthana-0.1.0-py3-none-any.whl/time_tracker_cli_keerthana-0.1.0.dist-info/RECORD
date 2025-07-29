@@ -1,0 +1,9 @@
+time_tracker/__init__.py,sha256=kUR5RAFc7HCeiqdlX36dZOHkUI5wI6V_43RpEcD8b-0,22
+time_tracker/cli.py,sha256=tsRoffgRvdHrzbISQX_EiuKeFNBMnbls_lyR42AYscI,1076
+time_tracker/tracker.py,sha256=PUtXZQHD1p6Al2Hzbw3mKFBHMDl9z48DcaxCtz2vUWw,5547
+time_tracker_cli_keerthana-0.1.0.dist-info/LICENSE,sha256=PRwKTDFucsGEsJ3ZoFj8GBIBrqw_6azy_sz83g9Um28,1173
+time_tracker_cli_keerthana-0.1.0.dist-info/METADATA,sha256=G7yXOboj6eT2zd_SujerZXsR4eJ2yaLGGn-8g51xdoc,909
+time_tracker_cli_keerthana-0.1.0.dist-info/WHEEL,sha256=iAkIy5fosb7FzIOwONchHf19Qu7_1wCWyFNR5gu9nU0,91
+time_tracker_cli_keerthana-0.1.0.dist-info/entry_points.txt,sha256=sFiq_nmr4q8bT8OIgzouKuPaf_qskXEe1UJUIQL3m1U,55
+time_tracker_cli_keerthana-0.1.0.dist-info/top_level.txt,sha256=w1AbSyggILk70aObWQFMqOtm5s4et42cdLN9jj9zY1E,13
+time_tracker_cli_keerthana-0.1.0.dist-info/RECORD,,
