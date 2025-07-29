@@ -1,0 +1,7 @@
+.vscode
+*.tif
+*.tiff
+*/__pycache__/
+/.conda/
+/out/
+.mypy_cache/

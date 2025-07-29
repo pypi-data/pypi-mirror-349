@@ -1,0 +1,8 @@
+Location, Lat, Lon, [Radius(m)], [AtmosphereHeight (m)]
+Helgoland left of island, 54.183267, 7.786874, 20000, 10000
+Helgoland below island, 54.124459, 7.888723, 20000, 10000
+Helgoland right of island, 54.181588, 7.992707, 20000, 10000
+Helgoland top of island, 54.240333, 7.891469, 20000, 10000
+Heppenheim, 49.643836, 8.624884, 35000, 10000
+Netherland west coast, 51.724054, 3.706882, 65000, 10000
+Hut in Austria, 46.995698, 13.575762, 50000, 10000

@@ -1,0 +1,8 @@
+General language: english
+
+Minimal code style guide:
+- class names should be written in CamelCase beginning with an uppercase letter
+- variable and function names should be written in camelCase beginning with a lowercase letter
+- constants should be written in UPPER_CASE_SNAKE_CASE
+- functions should include type hints
+- function should have docstring documentation to describe the units of parameters in case this is applicable

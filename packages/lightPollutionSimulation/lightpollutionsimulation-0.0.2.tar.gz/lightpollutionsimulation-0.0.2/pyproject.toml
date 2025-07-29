@@ -1,0 +1,35 @@
+[build-system]
+requires = ["hatchling >= 1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "lightPollutionSimulation"
+license = {text = "CC BY-NC 4.0"}
+readme = "README.md"
+description = "Simulates the night sky brightness"
+requires-python = ">=3.12"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+authors = [
+  { name="Thore Schoeller"},
+  { name="Gerrit Erdt"},
+  { name="Fabian Baeumer"},
+]
+version = "0.0.2"
+
+dependencies = [
+  "numpy",
+  "matplotlib",
+  "rasterio",
+  "geopy",
+  "numba",
+  "psutil",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pre-commit",
+    "pytest",
+]

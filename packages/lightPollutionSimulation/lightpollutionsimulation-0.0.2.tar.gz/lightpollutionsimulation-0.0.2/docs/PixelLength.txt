@@ -1,0 +1,4 @@
+To validate the calculated average length of a pixel in a given square on the map, the Software QGIS was used. 
+A random starting point (e.g. the runway of the airport frankfurt) and a random length for edge of the square (e.g. 100km) was chosen. 
+The Result of the calculation was validated by taking a random pixel within the given square on the map and looking up the coordinates of the edges and using an online distance calculator to compare length and height of the pixel with the calculated values.
+If the difference between the two values is small enough (<2m) the calculation is correct. 

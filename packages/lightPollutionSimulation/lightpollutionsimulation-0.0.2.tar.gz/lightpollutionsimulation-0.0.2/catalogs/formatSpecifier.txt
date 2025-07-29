@@ -1,0 +1,19 @@
+This is a brief description of the format expected from the catalog files. 
+
+Filename:
+    - Example: "CATALOGNAME.ocat"
+    - The file name is expected to be contain the name of the catalog followed by the extension ".ocat"
+    - The name of the catalog should be in all caps and should not contain any spaces or special characters.
+    - The extension ".ocat" is used to identify the file as a catalog file.
+    
+File Format:
+    - The file should be a plain text file.
+    - Comments are allowed and should be preceded by a "#" symbol.
+    - All non-comment lines are expected to contain valid catalog information in the format: "RA|DEC|IDENTIFIER"
+    - The RA and DEC values should be in decimal degrees without the '°' symbol.
+    - The identifier should be a string that uniquely identifies the object.
+    - Example: "001.6711| +8.3558|7834"
+
+To add more catalogs, just add them in the "catalogs" directory and they will be automatically loaded by the program.
+
+Catalogs can be downloaded from: vizier.cds.unistra.fr
