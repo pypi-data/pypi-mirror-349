@@ -1,0 +1,48 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "tcuni-bio-utils"
+version = "0.1.1"
+description = "scripts collection for tcuni bio data process"
+authors = [{ name = "brightrock", email = "ricekent@163.com" }]
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.12"
+dependencies = [
+    "typer>=0.15.0",
+    "pandas>=2.2.2",
+    "tqdm>=4",
+    "pydantic>=2",
+    "matplotlib>=3.6.3",
+    "pysam>=0.23.0",
+]
+
+[project.urls]
+Repository = "https://github.com/username/tc-utils"
+
+[project.scripts]
+tc-bio-utils = "tc_utils.cli.commands:app"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/tc_utils"]
+
+[tool.pytest.ini_options]
+addopts = "-ra -q --cov=src/tc_utils --cov-report=term-missing"
+testpaths = ["src/tests"]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.2",
+    "pytest-cov>=4.0.0",
+    "isort>=5.13.2",
+    "pytest-mock>=3.12.0",
+    "pre-commit>=4.1.0",
+    "hypothesis>=6.131.20",
+]
+
+
+[[tool.uv.index]]
+# Required URL for the index.
+url = "https://mirrors.aliyun.com/pypi/simple "
