@@ -1,0 +1,12 @@
+omni_storage/__init__.py,sha256=aRaDd3ZlSjgyngA979OJtI_aRIzbtNY4viYoUTvw6nU,37
+omni_storage/base.py,sha256=jvxbqXww7Fc-qmbw6z9yk5jXTzqMUCWNrz8YjkVYHx0,1903
+omni_storage/factory.py,sha256=DUWKwVQg8SJPIAiFX-7PuD334If--A9Zk1qNmcfrMRY,3225
+omni_storage/gcs.py,sha256=-B05laEsbIEWXNHSAsLBnEyvaOdUfCv5Bkh0xq9vSTo,2404
+omni_storage/local.py,sha256=kW12CDUoA0UsBMczM1uUkhgSptWa12dimFWPU8Osl-w,2594
+omni_storage/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+omni_storage/s3.py,sha256=AjmlHG8fLBC03Sw7ZrWiEBbe47yf430pSt3rECqVXRI,2601
+omni_storage-0.2.1.dist-info/METADATA,sha256=Z6ur07Z32v-LlTafE7y0ZPj6SXw8Fgm3bkucQXhZTbk,6079
+omni_storage-0.2.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+omni_storage-0.2.1.dist-info/entry_points.txt,sha256=rVk8aITUTykaJM1ovz4p2lY25SXVs-xAG-h4oUNmwU0,51
+omni_storage-0.2.1.dist-info/licenses/LICENSE,sha256=5MfgQnuuXWOy4xtCV0XWWPDIQ9gG_aA7zYI_mhtndwc,1066
+omni_storage-0.2.1.dist-info/RECORD,,
