@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: test-valkey-glide
+Version: 0.1.1
+Summary: Meta client for test-glide-meta, combining sync and async clients
+Provides-Extra: sync
+Requires-Dist: test-valkey-glide-sync; extra == "sync"
+Provides-Extra: async
+Requires-Dist: test-valkey-glide-async; extra == "async"
+Provides-Extra: full
+Requires-Dist: test-valkey-glide-async; extra == "full"
+Requires-Dist: test-valkey-glide-sync; extra == "full"
