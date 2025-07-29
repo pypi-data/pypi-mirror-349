@@ -1,0 +1,28 @@
+[project]
+name = "mseep-moodle-mcp"
+version = "0.1.1"
+description = "A Model Context Protocol (MCP) server implementation that provides capabilities to interact with Moodle LMS."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "glom>=24.11.0",
+    "mcp[cli]>=1.6.0",
+    "python-dotenv>=1.1.0",
+    "requests>=2.32.3",
+]
+authors = [
+    { name = "mseep", email = "support@skydeck.ai" },
+]
+maintainers = [
+    { name = "mseep", email = "support@skydeck.ai" },
+]
+
+[project.scripts]
+moodle-mcp = "moodle_mcp.server:main"
+
+[build-system]
+requires = [
+    "setuptools>=42",
+    "wheel",
+]
+build-backend = "setuptools.build_meta"
