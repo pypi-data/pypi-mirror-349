@@ -1,0 +1,9 @@
+KeyFrameDetector/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+KeyFrameDetector/key_frame_detector.py,sha256=kUoQhcFVbU2CgpI7uJSiCLD9qm05pVw_zOvNuycZYMM,2252
+KeyFrameDetector/utils.py,sha256=SO19kBkN_cHEw4RBvuh96S5_ltYN69fgUQ8jMrzJpYk,1851
+video_keyframe_detector-0.1.0.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+video_keyframe_detector-0.1.0.dist-info/METADATA,sha256=7mgb_lLcE7JiHLzHkomvuLdrvhMwGZC6Ha-4Qdm8O9g,1186
+video_keyframe_detector-0.1.0.dist-info/WHEEL,sha256=Nw36Djuh_5VDukK0H78QzOX-_FQEo6V37m3nkm96gtU,91
+video_keyframe_detector-0.1.0.dist-info/entry_points.txt,sha256=WD-DwoIsLk0pWnvuVlvZD3q7ABzbE1fYZEfUzcNSJu4,53
+video_keyframe_detector-0.1.0.dist-info/top_level.txt,sha256=CuqhScSOaWpP0gDkdf0nOE4VfSfGREAiVLQh5uMeYrc,17
+video_keyframe_detector-0.1.0.dist-info/RECORD,,
