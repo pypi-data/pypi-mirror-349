@@ -1,0 +1,10 @@
+#安装工具
+python -m pip install --upgrade setuptools
+python -m pip install --upgrade build
+python -m pip install --upgrade twine
+
+#构建
+py -m build --sdist
+
+#上传
+twine upload dist/*
