@@ -1,0 +1,15 @@
+keplertools-1.4.0.dist-info/RECORD,,
+keplertools-1.4.0.dist-info/WHEEL,sha256=dMo0Aea1J_cdUvY_QTSIdHfxvMnhl_BpZ4tMYTGbqgI,136
+keplertools-1.4.0.dist-info/top_level.txt,sha256=Pqf1pdICh9rrFzMp_fSvclTq25UyeGihupTHd5-CLB4,12
+keplertools-1.4.0.dist-info/METADATA,sha256=cJleuMZYHSdtiZr-ciBlCDOm8wjfdn6Ah35hRN52m7A,1983
+keplertools-1.4.0.dist-info/licenses/LICENSE,sha256=XwdoMWPurLWLaqy3DT_e-hRNmwoUH9zsfj6Kkahbsfg,1558
+keplertools/CyRV.cpython-312-darwin.so,sha256=l4s9exieirputX76HpC10M7FA3pLtC_8s31vabJLiQo,119464
+keplertools/keplerSTM.py,sha256=wvRte4WVzWaslBIesr0xGe5yoewpNsMOkdW_B4yVJ-0,12251
+keplertools/CyKeplerSTM.cpython-312-darwin.so,sha256=DY9zLWEBJyi5lOlClCoRjbSLJolCfVbJlDt2o8JdfSc,101792
+keplertools/fun.py,sha256=1VKxyIp_o_ouXh4r-skkDq-OYVA9UjQpMc5ENcA1f40,49526
+keplertools/Cyeccanom.cpython-312-darwin.so,sha256=dM5kjkRF6zHZClzmfUC_jSKoSYisMV6AYc6v2x7WtWY,101248
+keplertools/angutils.py,sha256=CSj1jokWqMRmu0MxVEmX5SGno4mQHwuqITiubBUKjkE,9346
+keplertools/__init__.py,sha256=q-L0zcyvQrfMMcblQPj7flDJhdAuuESHikW8lpyfgWk,43
+keplertools/RV_C/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+keplertools/KeplerSTM_C/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+keplertools/eccanom_C/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
