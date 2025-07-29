@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: mseep-surveymars-mcp
+Version: 0.1.3
+Summary: SurveyMars MCP server
+Home-page: 
+Author: mseep
+Author-email: mseep <support@skydeck.ai>
+Maintainer-email: mseep <support@skydeck.ai>
+Keywords: SurveyMars,mcp,Survey
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: mcp>=1.6.0
+Dynamic: author
+Dynamic: requires-python
+
+# Package managed by MseeP.ai
