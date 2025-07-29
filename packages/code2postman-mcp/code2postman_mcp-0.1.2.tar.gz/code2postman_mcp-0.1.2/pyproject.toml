@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "code2postman-mcp"
+version = "0.1.2"
+description = "MCP server for converting code to Postman collections"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp[cli]>=1.9.0",
+    "pytest-asyncio>=0.26.0",
+    "pytest>=8.3.5",
+    "loguru>=0.7.3",
+]
+authors = [
+    { name="Mario Toribio", email="zen-krypton-derail@duck.com" }
+]
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.scripts]
+code2postman-mcp = "code2postman_mcp.server:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = ["code2postman_mcp", "code2postman_mcp.consts", "code2postman_mcp.tools", "code2postman_mcp.utils"]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.20.0",
+    "pytest-cov>=4.0.0",
+]
+
+[tool.pytest]
+testpaths = ["tests"]
+python_files = "test_*.py"
+python_functions = "test_*"
+asyncio_mode = "auto"
+
+[tool.pytest.ini_options]
+asyncio_default_fixture_loop_scope = "function"
