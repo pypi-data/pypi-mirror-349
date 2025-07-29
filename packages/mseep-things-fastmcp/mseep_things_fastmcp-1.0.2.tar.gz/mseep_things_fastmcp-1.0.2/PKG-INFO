@@ -1,0 +1,28 @@
+Metadata-Version: 2.4
+Name: mseep-things-fastmcp
+Version: 1.0.2
+Summary: Things app Model Context Protocol (MCP) server for Claude and Anthropic Windsurf
+Author-email: mseep <support@skydeck.ai>
+Maintainer-email: mseep <support@skydeck.ai>
+License: MIT License
+Keywords: anthropic,claude,mcp,productivity,task-management,things
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Office/Business :: Scheduling
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Requires-Python: >=3.12
+Requires-Dist: httpx>=0.28.1
+Requires-Dist: mcp[cli]>=1.2.0
+Requires-Dist: things-py>=0.0.15
+Provides-Extra: dev
+Requires-Dist: build>=0.10.0; extra == 'dev'
+Requires-Dist: pytest-cov>=4.0.0; extra == 'dev'
+Requires-Dist: pytest>=7.0.0; extra == 'dev'
+Requires-Dist: ruff>=0.1.0; extra == 'dev'
+Requires-Dist: twine>=4.0.0; extra == 'dev'
+Description-Content-Type: text/markdown
+
+# Package managed by MseeP.ai
