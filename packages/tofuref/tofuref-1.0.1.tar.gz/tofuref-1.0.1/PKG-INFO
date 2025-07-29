@@ -1,0 +1,82 @@
+Metadata-Version: 2.4
+Name: tofuref
+Version: 1.0.1
+Summary: TUI for OpenTofu provider registry.
+Project-URL: Homepage, https://github.com/DJetelina/tofuref
+Project-URL: Repository, https://github.com/DJetelina/tofuref.git
+Project-URL: Issues, https://github.com/DJetelina/tofuref/issues
+Author: David Jetelina
+License-Expression: MIT
+Keywords: infra,opentofu,platform,sre,terraform,tofu,tool,tui
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3.14
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Documentation
+Classifier: Topic :: Software Development :: User Interfaces
+Classifier: Topic :: System :: Installation/Setup
+Classifier: Topic :: System :: Systems Administration
+Classifier: Topic :: Utilities
+Requires-Python: >=3.9
+Requires-Dist: async-lru>=2.0.5
+Requires-Dist: httpx>=0.28.1
+Requires-Dist: pyyaml>=6.0.2
+Requires-Dist: textual>=3.1.1
+Description-Content-Type: text/markdown
+
+# tofuref
+
+[![PyPI - Version](https://img.shields.io/pypi/v/tofuref)](https://pypi.org/project/tofuref/)
+![PyPI - License](https://img.shields.io/pypi/l/tofuref)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/tofuref)
+![GitHub Repo stars](https://img.shields.io/github/stars/DJetelina/tofuref?style=flat&logo=github)
+
+TUI for OpenTofu provider registry.
+
+![Screenshot](https://github.com/djetelina/tofuref/blob/main/screenshots/welcome.svg?raw=true)
+
+## Installation
+
+```bash
+pipx install tofuref
+```
+
+## Usage
+
+Run the application:
+
+```bash
+tofuref
+```
+
+### Controls
+Navigate with arrows/page up/page down/home/end or your mouse.
+
+| keybindings   | action                                               |
+|---------------|------------------------------------------------------|
+| `tab`         | focus next window                                    |
+| `shift+tab`   | focus previous window                                |
+| `enter`       | choose selected or finish search                     |
+| `q`, `ctrl+q` | **quit** tofuref                                     |
+| `s`, `/`      | **search** in the context of providers and resources |
+| `v`           | change active provider **version**                   |
+| `p`           | focus **providers** window                           |
+| `u`, `y`      | copy ready-to-**use** provider version constraint    |
+| `r`           | focus **resources** window                           |
+| `c`           | focus **content** window                             |
+| `f`           | toggle **fullscreen** mode                           |
+| `l`           | display **log** window                               |
+
+## Upgrade
+
+```bash
+pipx upgrade tofuref
+```
