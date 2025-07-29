@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: mseep-mcp-llms-txt
+Version: 0.1.2
+Summary: MCP Server for llms.txt
+Home-page: 
+Author: mseep
+Author-email: mseep <support@skydeck.ai>
+Maintainer-email: mseep <support@skydeck.ai>
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: httpx
+Requires-Dist: mcp[cli]
+Requires-Dist: claudette
+Dynamic: author
+Dynamic: requires-python
+
+# Package managed by MseeP.ai
