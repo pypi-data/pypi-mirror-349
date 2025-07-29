@@ -1,0 +1,54 @@
+[tool.poetry]
+name = "unity-sds-client"
+version = "0.10.1"
+
+description = "Unity-Py is a Python client to simplify interactions with NASA's Unity Platform."
+authors = ["Anil Natha, Mike Gangl"]
+readme = "README.md"
+license = "Apache-2.0"
+repository = "https://github.com/unity-sds/unity-py"
+exclude = ['img', 'tests']
+packages = [
+    { include = "unity_sds_client" },
+]
+
+[tool.poetry-monorepo-dependency-plugin]
+enable = true
+
+#Used to fix path dependencies referencing develop=true (e.g. within the mono-repo)
+[tool.poetry-monorepo.deps]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+requests = "^2.28.0"
+tenacity = "^8.0.1"
+giturlparse = "^0.10.0"
+pystac = "^1.7.3"
+unity-sps-ogc-processes-api-python-client ="^2.0.1"
+unity-sds-apgs-client = {path = "../app-package-build-client", develop = true}
+jsonschema = "^4.22.0"
+
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.1.2"
+flake8 = "^4.0.1"
+pytest-mock = "^3.8.2"
+coverage = "^7.3.1"
+pytest-cov = "^4.1.0"
+
+[tool.poetry.group.docs]
+optional = true
+
+[tool.poetry.group.docs.dependencies]
+python = "^3.10"
+sphinx = "*"
+sphinx-markdown-builder = "*"
+
+[tool.pytest.ini_options]
+markers = [
+    "regression: marks a test as a regression, requires netrc file (deselect with '-m \"not regresion\"')"
+]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
