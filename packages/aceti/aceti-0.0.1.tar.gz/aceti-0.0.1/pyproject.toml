@@ -1,0 +1,28 @@
+[build-system]
+requires = ["hatchling >= 1.26"]
+build-backend = "hatchling.build"
+[project]
+name = "aceti"
+version = "0.0.1"
+authors = [
+  { name="Alejandro Casado", email="acasado4@us.es" },
+]
+description = "A simple package to store and create maps for an experiment"
+readme = "README_LEG.md"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Education",
+    "Programming Language :: Python :: 2",
+    "Programming Language :: Python :: 3",
+    "Operating System :: MacOS :: MacOS X",
+    "Operating System :: Microsoft :: Windows",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+dependencies = [
+  "numpy",
+]
+
+[project.urls]
+Homepage = "https://github.com/aceti-pub/common_maps"
+Issues = "https://github.com/aceti-pub/common_maps/issues"
