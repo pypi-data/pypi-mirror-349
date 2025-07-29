@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools >= 77.0.3", "requests"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "ScientificMicroservices"
+version = "1.0.2"
+authors = [{ name="Jegar Pitchforth", email="jegar@scientificmicroservices.com"}, { name="Jac Davis", email="jac@scientificmicroservices.com"}]
+maintainers = [{ name="Jegar Pitchforth", email="jegar@scientificmicroservices.com"}]
+description = "Easily call the APIs by Scientific Microservices. Requires an API key to be registered (currently via RapidAPI)"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+
+[project.urls]
+Homepage = "https://github.com/jegar-p/py-ScientificMicroservices"
+Issues = "https://github.com/jegar-p/py-ScientificMicroservices/issues"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
