@@ -1,0 +1,5 @@
+[console_scripts]
+mllam_data_prep = mllam_data_prep:cli.call
+
+[gui_scripts]
+
