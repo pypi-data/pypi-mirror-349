@@ -1,0 +1,23 @@
+[project]
+name = "basic-calculator-pkg"  # This must be unique on PyPI
+version = "0.1.0"
+description = "A basic Python package for simple arithmetic operations."
+authors = [
+    { name = "Your Name", email = "your.email@example.com" }
+]
+readme = "README.md"
+requires-python = ">=3.7"
+license = { text = "MIT" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+
+[project.urls]
+"Homepage" = "https://pypi.org/project/basic-calculator-pkg/"
+"Source" = "https://github.com/yourusername/basic-calculator-pkg"  # optional
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
