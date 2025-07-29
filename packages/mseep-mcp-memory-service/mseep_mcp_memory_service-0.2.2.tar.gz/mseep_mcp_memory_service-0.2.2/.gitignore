@@ -1,0 +1,85 @@
+# Aider files
+.aider.*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Python environment & build artifacts
+.Python
+env/
+.venv/
+venv/
+py310_venv/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Python project tools
+pip-wheel-metadata/
+__pypackages__/
+
+# Virtual Environment activation files (redundant due to .venv/ but explicit if needed)
+.env
+.env.*
+
+# IDEs & Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS-specific files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# CodeGPT / Extensions
+.codegpt/
+
+# ChromaDB artifacts
+chroma_db/
+tests/test_db/chroma.sqlite3
+
+# Project-specific artifacts
+backups/
+test_output.txt
+dxdiag_output.txt
+dxdiag.txt
+claude_desktop_config_updated.json
+claude_config/claude_desktop_config.json
+
+# Remove these if mistakenly included
+=1.0.0,
+=11.0.3
+
+# Logs and debugging
+*.log
+*.bak
+*.tmp
+*.old
+
+# Optional: VSCode debugging & Python caches
+*.coverage
+coverage.*
+.cache/
+.pytest_cache/
+.tox/
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
