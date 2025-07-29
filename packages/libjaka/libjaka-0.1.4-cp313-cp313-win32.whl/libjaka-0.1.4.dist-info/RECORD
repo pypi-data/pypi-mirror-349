@@ -1,0 +1,7 @@
+libjaka-0.1.4.dist-info/METADATA,sha256=Ylb_ooaigaD6Obu2fx0r1wch-GnowEovU7SHDoYBiyI,840
+libjaka-0.1.4.dist-info/WHEEL,sha256=5zJUAvrwfUbVFx6pqssfG4NOmnNrTmyrbjZ6Af_c5Ow,92
+libjaka/__init__.py,sha256=92cRdeZCJO93IiScxHJcZPhqetnoNMvntGM3LHY4D9g,111
+libjaka/__init__.pyi,sha256=mbFv3Gj_KkRELLK_uavYW9Nf-vALtLIBlzHv4lsX0zA,195
+libjaka/libjaka.cp313-win32.pyd,sha256=It4TwEU1sxVCJWuV_g73qOyGKymmp1oVNfXccOMIfIA,355840
+libjaka/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+libjaka-0.1.4.dist-info/RECORD,,
