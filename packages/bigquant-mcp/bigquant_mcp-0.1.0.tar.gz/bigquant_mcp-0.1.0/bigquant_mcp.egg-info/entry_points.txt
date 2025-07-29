@@ -1,0 +1,2 @@
+[console_scripts]
+bigquant-mcp-server = bigquant_mcp.main:main
