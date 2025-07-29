@@ -1,0 +1,33 @@
+[project]
+name = "mseep-mcp-obsidian"
+version = "0.2.2"
+description = "MCP server to work with Obsidian via the remote REST plugin"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "mcp>=1.1.0",
+    "python-dotenv>=1.0.1",
+    "requests>=2.32.3",
+]
+authors = [
+    { name = "mseep", email = "support@skydeck.ai" },
+]
+maintainers = [
+    { name = "mseep", email = "support@skydeck.ai" },
+]
+
+[project.scripts]
+mcp-obsidian = "mcp_obsidian:main"
+
+[build-system]
+requires = [
+    "hatchling",
+]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "pyright>=1.1.389",
+]
+
+[tool.hatch.build.targets]
