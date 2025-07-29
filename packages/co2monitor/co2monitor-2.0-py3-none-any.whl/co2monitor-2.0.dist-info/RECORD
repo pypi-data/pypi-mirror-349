@@ -1,0 +1,17 @@
+__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+api.py,sha256=et0576MEgDNawb5SwzMgRdRoW6lxQPPrbxIMnMOaCSQ,2896
+cliprinter.py,sha256=L6MbSOr85Q-JSTPsw6nL6FOjaHncJ4GRmLkOnkoZuaM,256
+handler.py,sha256=5pVFwYOSrc0fGC9XiRuIGa8gB7wrCzjexvuBKGoQvPU,391
+main.py,sha256=0u-vjPXgd7nDgRTMJLjbylnoezsKYsBdh4mFCRWOU2Y,2639
+poller.py,sha256=uzaLxTGnr1lztLxHm3Wo5kdR_9kk0z1Q2ix9B0dV3q0,946
+screenupdater.py,sha256=4tamd5NTmLUkjb19AqdTDrbPrC6EeuPB3AEuHPtFA98,1060
+tray.py,sha256=Ob0C5E8c1t1M5zQyFq-VETVVtgGnGc6rtu1YRDvTro4,1767
+screen/__init__.py,sha256=YYH44otFFFyIoyUPQiVzMn0kgAPDJW3roobUwkVkmts,55
+screen/epd2in9b_V3.py,sha256=Cras893nR3w_8_ZbqDw2-UUcaLw4BFeW8js8HUjMhkc,6026
+screen/epdconfig.py,sha256=2Fp2ZdIgXDXPxBs6sqSc97yFCKgH3R0mSCBW71MZAQ4,5224
+screen/screen.py,sha256=xK03b0kkMUq_jWb7aOzah7D9kZ7goKNCgFkpen82Wd4,2243
+co2monitor-2.0.dist-info/METADATA,sha256=LDrOVQHxm9eLYfDjg6HLuTzdnWCcUcqBEJM3Rp6u9uE,6566
+co2monitor-2.0.dist-info/WHEEL,sha256=Nw36Djuh_5VDukK0H78QzOX-_FQEo6V37m3nkm96gtU,91
+co2monitor-2.0.dist-info/entry_points.txt,sha256=rtXRwjfH8mKBuXB6qGm2kc-10lj7H5hB-2zKfv2cURc,40
+co2monitor-2.0.dist-info/top_level.txt,sha256=MvD_W7dicfTCA_locgLU-pO2bMYGfAAv7BCXh_auSI8,70
+co2monitor-2.0.dist-info/RECORD,,
