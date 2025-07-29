@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-server-demo2025 = mcp_server_demo2025.__main__:main
