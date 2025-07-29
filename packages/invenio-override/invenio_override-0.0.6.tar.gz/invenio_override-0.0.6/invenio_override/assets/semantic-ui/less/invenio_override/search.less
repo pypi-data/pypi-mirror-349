@@ -1,0 +1,42 @@
+/*
+ * copyright (c) 2020-2023 graz university of technology.
+ * copyright (c) 2024 shared rdm
+ *
+ * invenio-override is free software; you can redistribute it and/or modify
+ * it under the terms of the mit license; see license file for more details.
+ */
+
+/* creators styling */
+.creators {
+  margin: 0 0 1em;
+}
+
+.creators span {
+  margin-left: 2px;
+}
+
+.creator:not(:last-child):after {
+  color: @greyDark;
+  content: ";";
+}
+
+.creator {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+/* identifiers styling */
+.identifiers {
+  display: inline;
+}
+
+/* labels actions styling */
+.ui.items > .item .extra.labels-actions {
+  float: right;
+  width: auto;
+}
+
+/* remove action buttons from search results */
+// .ui.small.compact.right.floated.button {
+//   display: none;
+// }

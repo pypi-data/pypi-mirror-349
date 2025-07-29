@@ -1,0 +1,102 @@
+/*
+ *   Copyright (C) 2020-2023 Graz University of Technology.
+ *   Copyright (C) 2025 Shared RDM.
+ *
+ * invenio-override is free software; you can redistribute it and/or modify it
+ * under the terms of the MIT License; see LICENSE file for more details.
+ */
+
+/* ======================================
+   Default Colors
+====================================== */
+
+/* Accessibility-related badge colors */
+@accessRight             : #e9711c;
+@accessRightOpen         : @accessRight;
+@accessRightRestricted   : #fbbd08;
+@accessRightEmbargoed    : #db2828;
+@accessRightClosed       : @accessRightEmbargoed;
+@accessRightMetadata     : #2185D0;
+
+/* Primary colors */
+@overridePrimary         : #0377CD;  /* Primary color */
+@overrideSecondary       : #058af0;  /* Secondary color */
+@ocerridePlabels         : #ffffff;  /* Label color */
+@overridePrimaryBt       : #dbdce0;  /* Primary button color */
+@hoverOverridePrimaryBt  : #bfc0c2;  /* Hover state for primary button */
+
+/* General colors */
+@primaryBackground       : #ffffff;
+@primaryText             : #000000;
+
+/* Accent colors */
+@greyDark                : #393b41;
+@greyLight               : #e0e1e2;
+@labelKeywordBackground  : #e8e8e8;
+
+/* MUG-specific palette */
+@mugSearch               : @overridePrimary;  /* Search bar color */
+@outlineRecord           : @accessRightMetadata;
+@recordText              : #6b6d74;
+@recordLightText         : #94959a;
+
+/* ======================================
+   UI-specific Colors
+====================================== */
+
+/* Message styling */
+@uiMsgBc                 : #fcfff5;
+@uiMsgGc                 : @overridePrimary;
+
+/* Link and button colors */
+@primaryLink                   : @primaryBackground;
+@primaryLinkHoverBackground    : @primaryText;
+@primaryLinkInverted           : @primaryText;
+@primaryLinkBackgroundInverted : @primaryBackground;
+@primaryButton                 : @primaryBackground;
+@primaryButtonHoverBackground  : @primaryText;
+@primaryButtonInverted         : @primaryText;
+
+/* Account-specific styling (signin, signup) */
+@primaryFormAccounts           : @primaryBackground;
+@formAccountsInputPlaceholder  : silver;
+@fieldInputSelectionBackground : #50A2CE;
+@signInBackground              : #6b6d74;
+/* Footer-specific styling */
+@footerGrey                    : #5e5e5e;
+@footerBottomBackground        : #f2f2f2;
+
+/* Record-specific styling */
+@recordVersionBackground       : #f2f2f2;
+@randomRecordsFrontpageArticle : rgba(34, 36, 38, 0.15);
+
+/* ======================================
+   Input and Notification Styling
+====================================== */
+
+@outlineColor                  : #85B7D9;
+@notificationBackground        : #fffaf3;
+@notificationBorder            : #e2d5c2;
+
+/* ======================================
+   Specific Component Styling
+====================================== */
+
+/* Home stroke SVG styling */
+.home-stroke polyline {
+  stroke: @overridePrimary;
+  stroke-linecap: square;
+  stroke-width: 4;
+  fill: none;
+}
+
+/* ======================================
+   Hyperlink Styling
+====================================== */
+
+/* Hyperlink hover and focus */
+a:focus,
+a:hover {
+  color: @recordText;
+  text-decoration: underline;
+}

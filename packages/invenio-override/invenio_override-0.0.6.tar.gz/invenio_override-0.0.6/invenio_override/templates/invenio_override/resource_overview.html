@@ -1,0 +1,51 @@
+{# This file contains the resource overview block content. #}
+
+{% set show_publications = config.OVERRIDE_SHOW_PUBLICATIONS_SEARCH %}
+{% set show_educational = config.OVERRIDE_SHOW_EDUCATIONAL_RESOURCES %}
+
+{% set active_sections = [show_publications, show_educational] | select | list %}
+{% set columns = active_sections | length + 1 %} {# +1 for Research Results, always shown #}
+
+{% if columns > 0 %}
+  <div class="ui container">
+    <div class="ui divider hidden"></div>
+    <div class="sixteen wide column random-records-frontpage">
+    <div class="center aligned ui equal height stretched grid resource-container resource-columns-{{ columns }}">
+
+        <div class="left aligned column">
+          <div class="ui segment image">
+            <h2>{{ _("Research Results") }}</h2>
+            <p>{{_("Research results is the collective term for all the results of a research project. They describe the data, source code and all digital objects on which publication results are based. These include the tools used to collect and process the research data. The following links offer the possibility to add research results to the repository, but also to search for the results of other people.")}}</p>
+            <ul>
+              <li><a href="records/search">{{ _("Search for research results") }}</a></li>
+              <li><a href="me/uploads">{{ _("Upload research results") }}</a></li>
+            </ul>
+          </div>
+        </div>
+
+        {%- if show_publications %}
+        <div class="left aligned column">
+          <div class="ui segment image">
+            <h2>{{ _("Publications") }}</h2>
+            <p>{{_("The section of publications covers citations from several areas. Open Access papers are imported from Pure. Publications from Open Access publishers are shared. Digital copies are offered. University publications are made available to a wide range of people. The following link offers the possibility to search among publications.")}}</p>
+            <ul>
+              <li><a href="publications/search">{{ _("Search for publications") }}</a></li>
+            </ul>
+          </div>
+        </div>
+        {%- endif %}
+
+        {%- if show_educational %}
+        <div class="left aligned column">
+          <div class="ui segment image">
+            <h2>{{ _("Educational Resources") }}</h2>
+              <p>{{ _("In this area, you can upload your openly licensed educational content (OER, Open Educational Resources) and search for educational resources uploaded by others. Your uploaded content will be automatically transferred to the <a href=\"https://oerhub.at/en\" target=\"_blank\">OERhub.at</a>. To upload something in this area, an OER certificate and activation of your account is required.") | safe }}</p>              <li><a href="oer/search">{{ _("Search for educational resources") }}</a></li>
+              <li><a href="oer/uploads">{{ _("Upload educational resources") }}</a></li>
+            </ul>
+          </div>
+        </div>
+        {%- endif %}
+      </div>
+    </div>
+  </div>
+{% endif %}

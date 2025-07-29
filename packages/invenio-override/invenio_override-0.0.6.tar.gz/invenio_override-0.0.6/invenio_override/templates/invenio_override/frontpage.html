@@ -1,0 +1,58 @@
+{#
+  Copyright (C) 2020-2023 Graz University of Technology.
+  Copyright (C) 2024 Shared RDM.
+
+  invenio-override is free software; you can redistribute it and/or
+  modify it under the terms of the MIT License; see LICENSE file for more
+  details.
+
+  overriden grid_section from original:
+  https://github.com/inveniosoftware/invenio-app-rdm/blob/master/invenio_app_rdm/theme/templates/semantic-ui/invenio_app_rdm/frontpage.html
+
+  and overriden page_header:
+  header_frontpage.html
+
+#}
+
+{%- set main_column_width = "ten" if config.OVERRIDE_FRONTPAGE_RIGHT else "fifteen" %}
+
+{%- block javascript %}
+{{ webpack['invenio-override-js.js'] }}
+{%- endblock javascript %}
+
+{%- from "invenio_override/macros/authors.html" import creators -%}
+
+{%- extends "invenio_app_rdm/frontpage.html" %}
+
+{%- block page_header%} {%- include "invenio_override/header_frontpage.html" %}
+{%- endblock page_header %}
+
+{%- block grid_section %}
+<div class="ui container">
+  {%- if config.OVERRIDE_RESOURCE_OVERVIEW %}
+    {% include "invenio_override/resource_overview.html" %}
+  {%- endif %}
+
+  <div class="ui hidden divider" style="margin-top: 2em;"></div>
+
+  <div class="ui stackable grid">
+    {% block main_column %}
+
+    <div class="{{ main_column_width }} wide column">
+      {% block main_column_content %}
+      {% include "invenio_override/recent_uploads.html" %}
+      {% endblock main_column_content %}
+    </div>
+    {% endblock main_column %}
+
+    {%- if config.OVERRIDE_FRONTPAGE_RIGHT %}
+
+    <div class="six wide column">
+      {% include "invenio_override/contact_us.html" %}
+      {% include "invenio_override/benefits.html" %}
+    </div>
+  </div>
+  {%- endif %}
+
+</div>
+{%- endblock grid_section %}
