@@ -1,0 +1,7 @@
+grequests
+loguru
+bs4
+jinja2
+requests
+ebooklib
+PrettyPrintTree

@@ -1,0 +1,12 @@
+setup.py
+kakuyomub/__init__.py
+kakuyomub/downloader.py
+kakuyomub/episode.py
+kakuyomub/epub_maker.py
+kakuyomub/main.py
+kakuyomub/works.py
+kakuyomub.egg-info/PKG-INFO
+kakuyomub.egg-info/SOURCES.txt
+kakuyomub.egg-info/dependency_links.txt
+kakuyomub.egg-info/requires.txt
+kakuyomub.egg-info/top_level.txt
