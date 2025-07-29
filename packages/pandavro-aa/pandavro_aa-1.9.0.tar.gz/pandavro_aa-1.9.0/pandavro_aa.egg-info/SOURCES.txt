@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+pandavro/__init__.py
+pandavro_aa.egg-info/PKG-INFO
+pandavro_aa.egg-info/SOURCES.txt
+pandavro_aa.egg-info/dependency_links.txt
+pandavro_aa.egg-info/requires.txt
+pandavro_aa.egg-info/top_level.txt
