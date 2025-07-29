@@ -1,0 +1,2 @@
+[console_scripts]
+package = package:hello
