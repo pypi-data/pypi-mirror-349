@@ -1,0 +1,62 @@
+Metadata-Version: 2.4
+Name: keep_gpu
+Version: 0.1.0.post2
+Summary: Keep GPU is a simple cli app that keep your gpus running
+Author-email: Siyuan Wang <sywang0227@gmail.com>
+Maintainer-email: Siyuan Wang <sywang0227@gmail.com>
+License: MIT license
+Project-URL: bugs, https://github.com/Wangmerlyn/keep_gpu/issues
+Project-URL: changelog, https://github.com/Wangmerlyn/keep_gpu/blob/master/changelog.md
+Project-URL: homepage, https://github.com/Wangmerlyn/keep_gpu
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+License-File: AUTHORS.rst
+Requires-Dist: typer
+Provides-Extra: dev
+Requires-Dist: coverage; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
+Dynamic: license-file
+
+========
+Keep GPU
+========
+
+
+.. image:: https://img.shields.io/pypi/v/keep_gpu.svg
+        :target: https://pypi.python.org/pypi/keep_gpu
+
+.. image:: https://img.shields.io/travis/Wangmerlyn/KeepGPU.svg
+        :target: https://travis-ci.com/Wangmerlyn/KeepGPU
+
+.. image:: https://readthedocs.org/projects/keep-gpu/badge/?version=latest
+        :target: https://keep-gpu.readthedocs.io/en/latest/?version=latest
+        :alt: Documentation Status
+
+
+.. image:: https://pyup.io/repos/github/Wangmerlyn/keep_gpu/shield.svg
+     :target: https://pyup.io/repos/github/Wangmerlyn/keep_gpu/
+     :alt: Updates
+
+
+
+Keep GPU is a simple cli app that keep your gpus running
+
+
+* Free software: MIT license
+* Documentation: https://keep-gpu.readthedocs.io.
+
+
+Features
+--------
+
+* TODO
+
+Credits
+-------
+
+This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
