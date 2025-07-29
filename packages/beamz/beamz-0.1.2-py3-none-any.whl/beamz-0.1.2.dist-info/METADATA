@@ -1,0 +1,42 @@
+Metadata-Version: 2.4
+Name: beamz
+Version: 0.1.2
+Summary: EM package to create inverse / generative designs for your photonic devices with ease and efficiency.
+Home-page: https://github.com/QuentinWach/beamz
+Author: Quentin Wach
+Author-email: quentin.wach+beamz@gmail.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Scientific/Engineering :: Physics
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: numpy>=1.20.0
+Requires-Dist: matplotlib>=3.4.0
+Requires-Dist: gdspy>=1.6.0
+Requires-Dist: scipy>=1.10.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: pytest-cov>=4.0.0; extra == "dev"
+Requires-Dist: black>=22.0.0; extra == "dev"
+Requires-Dist: isort>=5.0.0; extra == "dev"
+Requires-Dist: flake8>=4.0.0; extra == "dev"
+Requires-Dist: myst-parser>=2.0.0; extra == "dev"
+Provides-Extra: gpu
+Requires-Dist: torch>=2.0.0; extra == "gpu"
+<div align="left">
+<img src="docs/head_icon.png" alt="HEADER" width="150" align="left" hspace="15" vspace="0"/>
+
+BEAMZ is a **GPU-accelerated** electromagnetic simulation and **inverse / generative design** package with support for multiple backends. It features a **high-level API** that enables fast prototyping and  design with just a few lines of code, ideal for engineers. For researchers, BEAMZ also exposes low-level functionality, making it a flexible playground for developing and testing novel simulation and optimization methods.
+</div>
+
+```bash
+pip install beamz
+```
+
+> **Note**: _BEAMZ is currently in a premature state and not publically advertised. If you're a friend of Quentin Wach, feel free to get a first peek, otherwise, consider this package yet to be released._
