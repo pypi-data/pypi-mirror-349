@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: mseep-mcp-discord-chat
+Version: 0.1.2
+Summary: A MCP server project
+Home-page: 
+Author: mseep
+Author-email: mseep <support@skydeck.ai>
+Maintainer-email: mseep <support@skydeck.ai>
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: discord.py>=2.3.0
+Requires-Dist: mcp>=1.2.1
+Requires-Dist: audioop-lts; python_version >= "3.13"
+Dynamic: author
+Dynamic: requires-python
+
+# Package managed by MseeP.ai
