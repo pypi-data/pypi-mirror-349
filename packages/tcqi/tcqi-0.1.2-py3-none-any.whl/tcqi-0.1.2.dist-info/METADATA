@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: tcqi
+Version: 0.1.2
+Description-Content-Type: text/markdown
+Requires-Dist: numpy >=2.2.0
+Requires-Dist: pandas >=2.2.3
+Requires-Dist: plotly >=6.1.0
+
+# LibrerÃ­a TCQi
+
+---
+
+Esta librerÃ­a tiene como propÃ³sito facilitar la modificaciÃ³n de archivos TCQi,
+descomprimiendo y guardando las tablas en formato Excel y/o DataFrame, y la consiguiente
+compresiÃ³n y guardado en formato TCQi, al finalizar.
+
+---
+
+## Estructura
+
+Para utilizar esta librerÃ­a, se debe crear en el directorio del proyecto, una carpeta "Data":
+
+```
+proyecto-tcqi/
+â”œâ”€ Data/
+â”‚   â””â”€ archivo.tcqi
+â””â”€ main.py
+```
+
+## UtilizaciÃ³n
+
+Para instalar la librerÃ­a, se utiliza el paquete recopilado mediante el comando 'pip':
+
+```
+!pip install tcqi
+```
+
+A continuaciÃ³n, se debe importar en el archivo Python que lo requiera:
+
+```
+from tcqi import TCQi
+```
+
+Y para finalizar, se debe inicializar un objeto TCQi, para poder llamar las funciones
+que contiene la librerÃ­a:
+
+```
+tcqi = TCQi()
+```
+
+Ejemplo:
+
+```
+from tcqi import TCQi
+
+# Inicializar el objeto TCQi
+tcqi = TCQi()
+# Localizar archivo tcqi a modificar
+file = 'filename.tcqi'
+# Ejecutar una funciÃ³n de la librerÃ­a con formato 'tcqi.funcion_x()'
+table_files = tcqi.read_and_split_TCQi_file(
+    tcqi.unpack_file('.//Data//' + file)
+)
+```
