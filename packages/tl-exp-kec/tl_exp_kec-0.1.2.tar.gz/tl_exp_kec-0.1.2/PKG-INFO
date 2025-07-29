@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: tl_exp_kec
+Version: 0.1.2
+Summary: A package to run 10 experiments via tl.exp(n)
+Home-page: https://example.com
+Author: TVKVIJAYCM
+Author-email: tvkvijay0333@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# TL Package
+
+Run experiments via:
+
+```python
+from tl import exp
+exp(1)
