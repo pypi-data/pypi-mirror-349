@@ -1,0 +1,14 @@
+numpy
+opencv-python
+scikit-image
+sphinx>=4.0.0
+sphinx_rtd_theme>=0.5.2
+sphinx-autodoc-typehints>=1.12.0
+
+[dev]
+pytest>=6.0.0
+flake8>=4.0.0
+black>=22.0.0
+build
+twine
+pre-commit>=3.0.0
