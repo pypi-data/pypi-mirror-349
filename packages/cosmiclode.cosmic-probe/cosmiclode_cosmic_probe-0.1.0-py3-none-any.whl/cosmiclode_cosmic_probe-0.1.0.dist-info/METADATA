@@ -1,0 +1,131 @@
+Metadata-Version: 2.3
+Name: cosmiclode.cosmic-probe
+Version: 0.1.0
+Summary: A flexible pandas DataFrame profiling package for dataset exploration and history management.
+License: MIT License
+         
+         Copyright (c) 2025 Celestial Four
+         
+         Permission is hereby granted, free of charge, to any person obtaining a copy
+         of this software and associated documentation files (the "Software"), to deal
+         in the Software without restriction, including without limitation the rights
+         to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+         copies of the Software, and to permit persons to whom the Software is
+         furnished to do so, subject to the following conditions:
+         
+         The above copyright notice and this permission notice shall be included in all
+         copies or substantial portions of the Software.
+         
+         THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+         IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+         FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+         AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+         LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+         OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+         SOFTWARE.
+Keywords: database,SQL,PostgreSQL,MySQL,SQL Server,connector
+Author: vinod901
+Author-email: yerrapureddyvinodreddy@gmail.com
+Requires-Python: >=3.7
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Database :: Front-Ends
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: pandas
+Requires-Dist: sqlalchemy
+Description-Content-Type: text/markdown
+
+# cosmic-probe
+
+**cosmic-probe** is a flexible Python package for profiling pandas DataFrames, supporting quick data exploration and storing profiling history with metadata. It’s designed to be simple to use yet powerful enough to handle data from databases, files, or queries.
+
+---
+
+## Features
+
+- Profile any pandas DataFrame with detailed column statistics
+- Summarize anomalies like high null percentages, low uniqueness, and constant columns
+- Store profiling reports with metadata to SQLite by default (extensible to other databases)
+- Designed as part of the cosmiclode ecosystem, easy to integrate with other cosmic packages
+
+---
+
+## Installation
+
+```bash
+pip install cosmic-probe
+```
+
+## Quickstart
+
+```python
+import pandas as pd
+from cosmic_probe import ProbeManager
+
+# Sample DataFrame
+data = {
+    "age": [25, 30, 22, None, 40],
+    "salary": [50000, 60000, 52000, 58000, None],
+    "department": ["HR", "IT", "IT", "HR", "Finance"],
+}
+
+df = pd.DataFrame(data)
+
+# Initialize ProbeManager
+probe = ProbeManager()
+
+# Profile the DataFrame
+profile_df = probe.profile(df)
+print(profile_df)
+
+# Summarize anomalies
+summary_df = probe.summarize()
+print(summary_df)
+
+# Store profiling results
+probe.store_to_sqlite(database="csv", schema="csv", table="sample_data")
+```
+
+## API
+
+### ProbeManager
+
+- `profile(df: pd.DataFrame) -> pd.DataFrame`: Profiles the DataFrame and stores the result internally.
+
+- `summarize(null_threshold=20.0, unique_threshold=5) -> pd.DataFrame`: Summarizes anomalies from the last profile.
+
+- `store_to_sqlite(database: str, schema: str, table: str, db_path: str = "profiles.db")`: Stores the latest profile to SQLite with metadata.
+
+### Profiler
+
+- `profile(df: pd.DataFrame) -> pd.DataFrame`: Core method to generate profile for each column.
+
+- `summarize(profile_df: pd.DataFrame, null_threshold=20.0, unique_threshold=5) -> pd.DataFrame`: Summarizes anomalies in a given profile DataFrame.
+
+## Contribution
+
+Contributions and suggestions are welcome! Please open issues or pull requests on the GitHub repo.
+
+## 📝 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## ✨ Author
+
+**Vinod Yerrapureddy**  
+📧 [yerrapureddyvinodreddy@gmail.com](mailto:yerrapureddyvinodreddy@gmail.com)  
+🌐 [vinodreddy.netlify.app](https://vinodreddy.netlify.app)  
+🔗 [LinkedIn](https://www.linkedin.com/in/vinod-yerrapureddy-264938161/)  
+🍥 Anime fan | 💻 Data engineer | 🛠️ Systems hacker
+
