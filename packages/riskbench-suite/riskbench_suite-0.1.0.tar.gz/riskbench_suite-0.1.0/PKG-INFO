@@ -1,0 +1,114 @@
+Metadata-Version: 2.3
+Name: riskbench-suite
+Version: 0.1.0
+Summary: A comprehensive toolkit for end-to-end risk-aware benchmarking of autonomous agents
+License: MIT
+Keywords: risk,benchmark,autonomous-agents,testing,monitoring
+Author: Ansh Tiwari
+Author-email: ansh@caltech.edu
+Requires-Python: >=3.11,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development :: Testing
+Requires-Dist: PyYAML (>=6.0.1,<7.0.0)
+Requires-Dist: click (>=8.1.7,<9.0.0)
+Requires-Dist: fastapi (>=0.100.0,<0.101.0)
+Requires-Dist: importlib-metadata (>=6.0,<7.0) ; python_version < "3.10"
+Requires-Dist: matplotlib (>=3.7,<4.0)
+Requires-Dist: pandas (>=2.0,<3.0)
+Requires-Dist: pydantic (>=2.6.3,<3.0.0)
+Requires-Dist: python-multipart (>=0.0.6,<0.0.7)
+Requires-Dist: selenium (>=4.10.0,<5.0.0)
+Requires-Dist: tabulate (>=0.9.0,<0.10.0)
+Requires-Dist: uvicorn[standard] (>=0.22.0,<0.23.0)
+Project-URL: Documentation, https://github.com/ansschh/riskbench-suite/tree/main/docs
+Project-URL: Homepage, https://github.com/ansschh/riskbench-suite
+Project-URL: Repository, https://github.com/ansschh/riskbench-suite
+Description-Content-Type: text/markdown
+
+# RiskBench Suite
+
+A comprehensive toolkit for end-to-end risk-aware benchmarking of autonomous agents.
+
+## Features
+
+- 🔍 Task specification and execution
+- 📊 Risk metrics calculation and monitoring
+- 🌐 Interactive web dashboard
+- 🐳 Docker support
+- 📈 Prometheus metrics integration
+
+## Quick Start
+
+```bash
+# Install from PyPI
+pip install riskbench-suite
+
+# Or with Poetry
+poetry add riskbench-suite
+```
+
+## Usage
+
+1. Define a task:
+
+```yaml
+name: MyTask
+description: A sample task
+environment:
+  type: SeleniumEnv
+  config:
+    url: https://example.com
+success_criteria:
+  - type: ElementPresent
+    selector: "#success-message"
+risk_metrics:
+  - type: CVaR
+    alpha: 0.9
+    threshold: 100.0
+```
+
+2. Run the task:
+
+```bash
+riskbench run task.yaml
+```
+
+3. View results in the dashboard:
+
+```bash
+riskbench dashboard
+# Open http://localhost:8000
+```
+
+## Documentation
+
+Full documentation is available at [docs/](docs/).
+
+## Contributing
+
+We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md).
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Citation
+
+If you use RiskBench Suite in your research, please cite:
+
+```bibtex
+@software{riskbench_suite,
+  title = {RiskBench Suite},
+  author = {Your Name},
+  year = {2025},
+  url = {https://github.com/yourusername/riskbench-suite}
+}
+```
+
