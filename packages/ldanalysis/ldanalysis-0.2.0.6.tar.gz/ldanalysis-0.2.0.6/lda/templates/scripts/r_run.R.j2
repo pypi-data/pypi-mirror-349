@@ -1,0 +1,60 @@
+#!/usr/bin/env Rscript
+# Section {{ section_name }} Analysis Script
+# Project: {{ project_name }}
+# Created: {{ creation_time }}
+
+# Load required packages
+library(tidyverse)
+library(lubridate)
+library(here)
+
+# Set up logging
+log_dir <- file.path(dirname(sys.frame(0)$ofile), "logs")
+dir.create(log_dir, showWarnings = FALSE, recursive = TRUE)
+log_file <- file.path(log_dir, paste0("run_", format(Sys.time(), "%Y%m%d_%H%M%S"), ".log"))
+
+# Function to log messages
+log_message <- function(msg, level = "INFO") {
+  timestamp <- format(Sys.time(), "%Y-%m-%d %H:%M:%S")
+  full_msg <- paste0(timestamp, " - ", level, " - ", msg)
+  
+  # Write to log file
+  write(full_msg, file = log_file, append = TRUE)
+  
+  # Also print to console
+  if (level == "INFO") {
+    cat(full_msg, "\n")
+  } else if (level == "WARNING") {
+    warning(msg)
+  } else if (level == "ERROR") {
+    stop(msg)
+  }
+}
+
+# Main analysis function
+main <- function() {
+  log_message("Starting analysis for Section {{ section_name }}")
+  
+  # Define paths
+  script_dir <- dirname(sys.frame(0)$ofile)
+  inputs_dir <- file.path(script_dir, "inputs")
+  outputs_dir <- file.path(script_dir, "outputs")
+  dir.create(outputs_dir, showWarnings = FALSE, recursive = TRUE)
+  
+  # TODO: Add your analysis code here
+  log_message("Analysis placeholder - add your code here")
+  
+  # Example: List input files
+  if (dir.exists(inputs_dir)) {
+    input_files <- list.files(inputs_dir)
+    log_message(paste0("Found ", length(input_files), " input files"))
+    for (f in input_files) {
+      log_message(paste0("  - ", f))
+    }
+  }
+  
+  log_message("Analysis complete")
+}
+
+# Run main function
+main()

@@ -1,0 +1,383 @@
+/* LDA Documentation - Clean, Professional Theme */
+
+/* Import Inter font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Override MkDocs Material defaults with a clean, minimal approach */
+:root {
+  --lda-font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Light mode - Keep it simple and readable */
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #2563eb;  /* Blue 600 */
+  --md-primary-fg-color--light: #60a5fa;  /* Blue 400 */
+  --md-primary-fg-color--dark: #1d4ed8;  /* Blue 700 */
+  
+  --md-accent-fg-color: #dc2626;  /* Red accent for better contrast */
+  
+  /* Custom properties for our components */
+  --lda-hero-bg: #f8fafc;
+  --lda-card-bg: #ffffff;
+  --lda-terminal-bg: #1e293b;
+  --lda-border: #e2e8f0;
+  --lda-text-primary: #0f172a;
+  --lda-text-secondary: #475569;
+  --lda-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+  --lda-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+}
+
+/* Dark mode - High contrast, easy on the eyes */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #3b82f6;  /* Blue 500 for dark mode */
+  --md-primary-fg-color--light: #60a5fa;  /* Blue 400 */
+  --md-primary-fg-color--dark: #2563eb;  /* Blue 600 */
+  
+  --md-accent-fg-color: #ef4444;  /* Red 500 for dark mode */
+  
+  /* Custom properties for dark mode */
+  --lda-hero-bg: #0f172a;
+  --lda-card-bg: #1e293b;
+  --lda-terminal-bg: #020617;
+  --lda-border: #334155;
+  --lda-text-primary: #f1f5f9;
+  --lda-text-secondary: #cbd5e1;
+  --lda-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.3);
+  --lda-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.3);
+}
+
+/* Global typography improvements */
+body {
+  font-family: var(--lda-font-family);
+}
+
+.md-typeset {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3 {
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--lda-text-primary);
+}
+
+/* Fix button contrast issues */
+.md-button {
+  font-weight: 500;
+  text-transform: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+}
+
+.md-button--primary {
+  background-color: var(--md-primary-fg-color);
+  color: white;
+  border: none;
+}
+
+.md-button--primary:hover {
+  background-color: var(--md-primary-fg-color--dark);
+  color: white;
+}
+
+/* Navigation improvements */
+.md-nav__link {
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.md-nav__link:hover {
+  background-color: var(--md-primary-fg-color--light);
+  background-color: rgba(30, 58, 138, 0.1);
+}
+
+[data-md-color-scheme="slate"] .md-nav__link:hover {
+  background-color: rgba(96, 165, 250, 0.1);
+}
+
+/* Clean up code blocks */
+.md-typeset pre {
+  border: 1px solid var(--lda-border);
+  border-radius: 6px;
+}
+
+.md-typeset code {
+  font-size: 0.875em;
+  padding: 0.125rem 0.25rem;
+  border-radius: 3px;
+}
+
+/* Tables with better contrast */
+.md-typeset table {
+  border: 1px solid var(--lda-border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.md-typeset table th {
+  background-color: var(--md-primary-fg-color);
+  color: white;
+  font-weight: 600;
+}
+
+.md-typeset table td {
+  border-color: var(--lda-border);
+}
+
+/* Custom components for landing page */
+.hero-section {
+  background-color: var(--lda-hero-bg);
+  padding: 4rem 2rem;
+  text-align: center;
+  border-bottom: 1px solid var(--lda-border);
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--md-primary-fg-color);
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: var(--lda-text-secondary);
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+/* UNIFIED BUTTON STYLES - NO MORE INCONSISTENCIES! */
+.primary-button,
+.secondary-button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none !important;
+  font-weight: 600;
+  transition: all 0.15s ease;
+  display: inline-block;
+  border: 2px solid transparent;
+}
+
+/* Primary button - solid background */
+.primary-button {
+  background-color: var(--md-primary-fg-color);
+  color: white !important;
+  border-color: var(--md-primary-fg-color);
+}
+
+/* Secondary button - outline style */
+.secondary-button,
+a.secondary-button,
+.md-typeset a.secondary-button {
+  background-color: transparent !important;
+  color: var(--md-primary-fg-color) !important;
+  border-color: var(--md-primary-fg-color) !important;
+}
+
+/* IDENTICAL HOVER BEHAVIOR FOR BOTH BUTTONS */
+.primary-button:hover,
+.primary-button:focus,
+.secondary-button:hover,
+.secondary-button:focus,
+a.secondary-button:hover,
+a.secondary-button:focus {
+  transform: translateY(-2px) !important;
+  box-shadow: var(--lda-shadow-lg) !important;
+}
+
+.primary-button:hover,
+.primary-button:focus {
+  background-color: var(--md-primary-fg-color--dark);
+  border-color: var(--md-primary-fg-color--dark);
+  color: white !important;
+}
+
+.secondary-button:hover,
+.secondary-button:focus,
+a.secondary-button:hover,
+a.secondary-button:focus,
+.md-typeset a.secondary-button:hover,
+.md-typeset a.secondary-button:focus {
+  background-color: rgba(37, 99, 235, 0.1) !important;  /* Light blue background */
+  border-color: var(--md-primary-fg-color--dark) !important;
+  color: var(--md-primary-fg-color--dark) !important;  /* Darker blue text */
+}
+
+/* Active state */
+.primary-button:active,
+.secondary-button:active {
+  transform: translateY(0);
+  box-shadow: var(--lda-shadow);
+}
+
+/* Visited state */
+.primary-button:visited {
+  color: white !important;
+}
+
+.secondary-button:visited {
+  color: var(--md-primary-fg-color) !important;
+}
+
+/* Inverted primary button for use on colored backgrounds */
+.primary-button-inverted {
+  background-color: white !important;
+  color: var(--md-primary-fg-color) !important;
+  border-color: white;
+}
+
+.primary-button-inverted:hover,
+.primary-button-inverted:focus {
+  background-color: var(--lda-hero-bg) !important;
+  color: var(--md-primary-fg-color) !important;
+  border-color: var(--lda-hero-bg);
+  transform: translateY(-2px);
+  box-shadow: var(--lda-shadow-lg);
+}
+
+.terminal-block {
+  background-color: var(--lda-terminal-bg);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 2rem auto;
+  max-width: 600px;
+  font-family: 'Roboto Mono', monospace;
+  box-shadow: var(--lda-shadow-lg);
+}
+
+.terminal-line {
+  margin: 0.5rem 0;
+  color: #a8b2c7;
+}
+
+.terminal-prompt {
+  color: #10b981;
+  font-weight: bold;
+}
+
+.terminal-command {
+  color: #f3f4f6;
+}
+
+.terminal-output {
+  color: #6b7280;
+  margin-left: 1rem;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  background-color: var(--lda-card-bg);
+  border: 1px solid var(--lda-border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.feature-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--lda-shadow-lg);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.feature-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--lda-text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.feature-description {
+  color: var(--lda-text-secondary);
+  line-height: 1.6;
+}
+
+/* Remove problematic animations and scroll behaviors */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-in;
+}
+
+/* Fix for MkDocs Material header */
+.md-header {
+  background-color: var(--md-primary-fg-color);
+}
+
+.md-header-nav__title {
+  font-weight: 700;
+}
+
+/* Footer adjustments */
+.md-footer {
+  background-color: var(--md-primary-fg-color--dark);
+}
+
+[data-md-color-scheme="slate"] .md-footer {
+  background-color: #0f172a;
+  border-top: 1px solid var(--lda-border);
+}
+
+/* Remove any forced scrolling or problematic positioning */
+html {
+  scroll-behavior: auto; /* Let browser handle scrolling naturally */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .feature-grid {
+    grid-template-columns: 1fr;
+    padding: 2rem 1rem;
+  }
+  
+  .button-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .primary-button,
+  .secondary-button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Print styles */
+@media print {
+  .md-header,
+  .md-footer,
+  .md-sidebar,
+  .md-content__button {
+    display: none;
+  }
+}

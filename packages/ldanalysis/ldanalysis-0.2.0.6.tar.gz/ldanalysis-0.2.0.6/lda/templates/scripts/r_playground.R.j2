@@ -1,0 +1,35 @@
+#!/usr/bin/env Rscript
+# Example R script for playground data exploration
+# Project: {{ project_name }}
+# Created: {{ creation_time }}
+
+# Load common packages
+library(ggplot2)
+library(dplyr)
+library(readr)
+
+# Example exploration function
+explore_data <- function() {
+  # Simulated data for example
+  data <- data.frame(
+    x = rnorm(100),
+    y = rnorm(100),
+    group = sample(LETTERS[1:4], 100, replace = TRUE)
+  )
+  
+  # Quick plot
+  ggplot(data, aes(x = x, y = y, color = group)) +
+    geom_point() +
+    ggtitle("Example Exploration Plot") +
+    theme_minimal()
+  
+  # Return data for further analysis
+  return(data)
+}
+
+# Run exploration if script is executed directly
+if (!interactive()) {
+  cat("Running playground exploration...\n")
+  data <- explore_data()
+  cat("Done!\n")
+}

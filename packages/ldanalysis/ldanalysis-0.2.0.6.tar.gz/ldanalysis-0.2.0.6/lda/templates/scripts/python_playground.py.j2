@@ -1,0 +1,50 @@
+#!/usr/bin/env python3
+"""
+Example playground script for exploring data and testing ideas
+Project: {{ project_name }}
+Created: {{ creation_time }}
+"""
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from pathlib import Path
+
+# Example: Load some data and explore
+def explore_data():
+    """Example function to explore data."""
+    # Find project root by looking for manifest
+    current = Path(__file__).resolve()
+    while current.parent != current:
+        if (current / 'lda_manifest.csv').exists():
+            project_root = current
+            break
+        current = current.parent
+    
+    # Create some example data
+    data = pd.DataFrame({
+        'x': np.random.normal(0, 1, 100),
+        'y': np.random.normal(0, 1, 100),
+        'group': np.random.choice(['A', 'B', 'C', 'D'], 100)
+    })
+    
+    # Quick visualization
+    plt.figure(figsize=(10, 6))
+    for group, subset in data.groupby('group'):
+        plt.scatter(subset['x'], subset['y'], label=group)
+    plt.legend()
+    plt.title('Example Exploration')
+    plt.xlabel('X')
+    plt.ylabel('Y')
+    
+    # Save figure to playground
+    output_dir = Path(__file__).parent / 'outputs'
+    output_dir.mkdir(exist_ok=True)
+    plt.savefig(output_dir / 'example_plot.png')
+    
+    return data
+
+if __name__ == "__main__":
+    print("Running playground exploration...")
+    data = explore_data()
+    print("Done!")
