@@ -1,0 +1,10 @@
+base_common_voc/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+base_common_voc/apps.py,sha256=KpsCWRxMpR1K3zqeSxENoO7cyqG8AiA4RW01DyyQyzo,187
+base_common_voc/skosmos_client.py,sha256=4kNK31mz6NusPKfT9Ld1-ZEPTdW9M-1pndY89Zl49Rc,11886
+base_common_voc/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+base_common_voc-0.1.dist-info/licenses/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+base_common_voc-0.1.dist-info/licenses/NOTICE,sha256=8FJcDCOivgvEzMn-oS9U12LwpKVy_HmlAu0q-JiTKr4,258
+base_common_voc-0.1.dist-info/METADATA,sha256=2UMOt5V36Lfm7GTznVws41lXJVOwf8gb2wOtjnfaqiI,875
+base_common_voc-0.1.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+base_common_voc-0.1.dist-info/top_level.txt,sha256=op_SbHmtFeXr9g48-JEMuC3FQNHOH5-aSJhBAwaQG9M,16
+base_common_voc-0.1.dist-info/RECORD,,
