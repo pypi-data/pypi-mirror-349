@@ -1,0 +1,2 @@
+[console_scripts]
+sqlparse = tableau_sql_parser.cli:main
