@@ -1,0 +1,12 @@
+pyaro<0.3,>=0.1.1
+geocoder_reverse_natural_earth>=0.0.2
+netCDF4
+requests
+tqdm
+numpy
+xarray
+cf-units
+polars[pyarrow]
+
+[:python_version < "3.11"]
+tomli>=2.0.1
