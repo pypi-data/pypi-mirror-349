@@ -1,0 +1,3 @@
+[console_scripts]
+jsonsplitter = crawler.json_splitter:main
+mdcrawler = crawler.main:main
