@@ -1,0 +1,17 @@
+slippi/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+slippi/custom_logging.py,sha256=GIC3MSgwEb58gCEUtyHyBZ2hXZ9UcXEdP4g8ec15JZ8,1357
+slippi/main.py,sha256=BGzaJSEZwHBywvtoO1XMRPU6IApDmGG0vYjZfmdRYAQ,501
+slippi/slippi_api.py,sha256=KqZo2lxQ9e4t3TzmTyBEvn1_qQg6I7h0xu0f6g1Q-Kk,5501
+slippi/slippi_characters.py,sha256=ITEMMFVvs5YZrPnT7IItYWQiYd4D9e2pHOIFbHB-s0k,3047
+slippi/slippi_ranks.py,sha256=JDAzvkUoEfxlV7X7fNK8ktewuAh7jvMWklcCBhmU2cg,1981
+slippi/slippi_user.py,sha256=v0_QGfTk9SRyp0Zdde42fjZkkuV902LRbmZUXwqzHHM,5304
+slippi/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+slippi/tests/test_slippi_api.py,sha256=3ekoP5n8sLdEHcoLGi8jtDO-riwMtHMcjP6iBiI3Cxw,1969
+slippi/tests/test_slippi_characters.py,sha256=GGRAlbNsyM53HcKfRbfSURKNIg6yMWn9fqSBjvvqV5o,650
+slippi/tests/test_slippi_ranks.py,sha256=Lk0W3bncaBa7QX-_VjTV72eqZg3qBBH2wM4RjPOfqH0,859
+slippi/tests/test_slippi_user.py,sha256=g_zmXT1bEFq3WD5kKexivQs65wm1ZxiD-Vl6fX3OSe8,4495
+slippy_api-1.9.dist-info/licenses/LICENSE,sha256=pAZXnNE2dxxwXFIduGyn1gpvPefJtUYOYZOi3yeGG94,1068
+slippy_api-1.9.dist-info/METADATA,sha256=NKJEn9QOG9paEg_8HxMCSpaDSG8hrV-nBFllWGY06AQ,1307
+slippy_api-1.9.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+slippy_api-1.9.dist-info/top_level.txt,sha256=1tRkE7ps_u2BRDMJx4HtcvlDDe7Il8g9nJ4oFkYA8vs,7
+slippy_api-1.9.dist-info/RECORD,,
