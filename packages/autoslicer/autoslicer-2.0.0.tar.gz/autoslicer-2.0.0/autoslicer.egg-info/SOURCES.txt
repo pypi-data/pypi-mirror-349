@@ -1,0 +1,10 @@
+README.md
+setup.py
+autoslicer/AutoSlicer.py
+autoslicer/__init__.py
+autoslicer.egg-info/PKG-INFO
+autoslicer.egg-info/SOURCES.txt
+autoslicer.egg-info/dependency_links.txt
+autoslicer.egg-info/requires.txt
+autoslicer.egg-info/top_level.txt
+tests/test_autoslicer.py
