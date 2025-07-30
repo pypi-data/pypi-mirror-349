@@ -1,0 +1,2 @@
+[console_scripts]
+librepythonista-cell-edit = librepythonista_py_edit.cell_edit:main
