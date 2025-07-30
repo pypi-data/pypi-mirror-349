@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+src/colordoll.egg-info/PKG-INFO
+src/colordoll.egg-info/SOURCES.txt
+src/colordoll.egg-info/dependency_links.txt
+src/colordoll.egg-info/requires.txt
+src/colordoll.egg-info/top_level.txt
