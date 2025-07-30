@@ -1,0 +1,12 @@
+Mylib/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+Mylib/myclasses.py,sha256=c_rASr4GIHdJT8fTPOyzIK4pJvkL4GGsuJXmRUFt4Kc,25018
+Mylib/myfuncs.py,sha256=JNwiWWYIfHnGUXhshZ1HVJEBPTBNlE0CX7UNo1rOXHc,38737
+Mylib/stringToObjectConverter.py,sha256=KEXulI4lod_Y8zea1eqkS0bO30n-RUIW52J8OUJVTAY,4118
+Mylib/tf_myclasses.py,sha256=NS11pM3yuiwuTsrs8WLmN7XVpbnL4JwSIYxpYN4a57w,33311
+Mylib/tf_myfuncs.py,sha256=0r4JtKCFZGwKFIVXlTtPRnflos_5hU7-IeeDz6MQ1D4,8199
+Mylib/tf_stringToObjectConverter.py,sha256=k-QUqU41mNTta1qtrWoYIVPps2f-e5C4vmCNJvW6zxI,3969
+Mylib/yaml_funcs.py,sha256=U422YjJmlHrgShlUYaw0rWwmZKMqn3hJV-j2gj_2L-M,3412
+zzzz_mylib_23_4-0.97.dist-info/METADATA,sha256=kxjPxzSMHv3wWyM6ylOwj8W5FiITX4AZYffO35T4W9E,137
+zzzz_mylib_23_4-0.97.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+zzzz_mylib_23_4-0.97.dist-info/top_level.txt,sha256=8ddpd31TMkC7G74n45AmtRUCm9E4_5Eo5Dt7p2Ud-ag,6
+zzzz_mylib_23_4-0.97.dist-info/RECORD,,
