@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fsd-heroku"
+version = "0.0.1"
+description = "A plugin for flask-simple-deploy, supporting deployments to Heroku."
+readme = "README.md"
+
+authors = [
+    {name = "Eric Matthes", email = "ehmatthes@gmail.com" },
+]
+
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+
+keywords = ["flask", "deployment"]
+
+requires-python = ">=3.9"
+
+dependencies = [
+    "flask>=3.0",
+    "pluggy>=1.5.0",
+    "toml>=0.10.2",
+    "requests>=2.32.2",
+    "flask-simple-deploy>=0.0.1"
+]
+
+[project.optional-dependencies]
+dev = [
+    "black>=24.1.0",
+    "build>=1.2.1",
+    "pytest>=8.3.0",
+    "twine>=5.1.1",
+]
+
+[tool.setuptools]
+packages = [
+    "fsd_heroku",
+]
+include-package-data = true
