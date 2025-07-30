@@ -1,0 +1,14 @@
+README.md
+setup.py
+test/test_losses/__init__.py
+test/test_losses/test_cluster_loss.py
+test/test_losses/test_sparsity_loss.py
+torch_deeptype/__init__.py
+torch_deeptype/deeptype_model.py
+torch_deeptype/deeptype_trainer.py
+torch_deeptype/losses.py
+torch_deeptype.egg-info/PKG-INFO
+torch_deeptype.egg-info/SOURCES.txt
+torch_deeptype.egg-info/dependency_links.txt
+torch_deeptype.egg-info/requires.txt
+torch_deeptype.egg-info/top_level.txt
