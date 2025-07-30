@@ -1,0 +1,9 @@
+django_restframework_extended/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_restframework_extended/views/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_restframework_extended/views/cerberus.py,sha256=iPbFKPyFhhxPKz7TTEjwq_1U5W4yY0wofIU7kk50uwM,15172
+views/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+views/cerberus.py,sha256=5GPSaHaiX9CI_ETo_oWqc2SpiZoq9VoVdiiADKsfR6E,15197
+django_restframework_extended-0.0.4.dist-info/METADATA,sha256=BVl35d8ngwj98CRo8YHELX_wJTOp0H8tEhEG1z9Wv_k,695
+django_restframework_extended-0.0.4.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+django_restframework_extended-0.0.4.dist-info/top_level.txt,sha256=_6haKAI7x5JedVrmY2KwglOKEc1xi-rsPbX3o9FzaDg,30
+django_restframework_extended-0.0.4.dist-info/RECORD,,
