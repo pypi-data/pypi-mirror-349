@@ -1,0 +1,7 @@
+[pygments.lexers]
+AnyScript=pygments_anyscript:AnyScriptLexer
+AnyScriptDoc=pygments_anyscript:AnyScriptDocLexer
+
+[pygments.styles]
+AnyScript=pygments_anyscript:AnyScriptStyle
+
