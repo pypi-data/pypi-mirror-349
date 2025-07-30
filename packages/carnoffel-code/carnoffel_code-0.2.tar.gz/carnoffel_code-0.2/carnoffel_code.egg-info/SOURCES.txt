@@ -1,0 +1,11 @@
+setup.cfg
+setup.py
+carnoffel_code/__init__.py
+carnoffel_code/Проверка_элементов.py
+carnoffel_code/Работа_с_файлами.py
+carnoffel_code/Терминал.py
+carnoffel_code.egg-info/PKG-INFO
+carnoffel_code.egg-info/SOURCES.txt
+carnoffel_code.egg-info/dependency_links.txt
+carnoffel_code.egg-info/not-zip-safe
+carnoffel_code.egg-info/top_level.txt
