@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: atomix_base
+Version: 0.1.5
+Summary: atomics for pyatomix
+Home-page: https://github.com/electroglyph/pyatomix
+Author: electroglyph
+Author-email: admin@terminoid.com
+Requires-Python: >=3.7
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+Dynamic: summary
