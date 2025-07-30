@@ -1,0 +1,29 @@
+Metadata-Version: 2.4
+Name: veranda
+Version: 1.3.0
+Summary: veranda is a place for IO related classes and operations dealing with multi-dimensional vector and raster data.
+Home-page: https://github.com/TUW-GEO/veranda
+Author: Research Unit Remote Sensing at GEO Department
+Author-email: remote.sensing@geo.tuwien.ac.at
+License: MIT
+Project-URL: Documentation, https://pyscaffold.org/
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Description-Content-Type: text/x-rst; charset=UTF-8
+License-File: LICENSE.txt
+Requires-Dist: importlib-metadata; python_version < "3.8"
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: pyproj
+Requires-Dist: netCDF4
+Requires-Dist: xarray
+Requires-Dist: rioxarray
+Requires-Dist: toolz
+Requires-Dist: dask
+Requires-Dist: geospade
+Provides-Extra: testing
+Requires-Dist: setuptools; extra == "testing"
+Requires-Dist: pytest; extra == "testing"
+Requires-Dist: pytest-cov; extra == "testing"
+Dynamic: license-file
