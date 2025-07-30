@@ -1,0 +1,9 @@
+mutation csvImport($input: ImportMutationInput!) {
+  csvImport(input: $input) {
+    taskId
+    errors {
+      field
+      messages
+    }
+  }
+}
