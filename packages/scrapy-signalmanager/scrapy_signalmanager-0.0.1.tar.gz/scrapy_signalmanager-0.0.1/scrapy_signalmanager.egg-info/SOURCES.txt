@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+setup.py
+scrapy_signalmanager/__init__.py
+scrapy_signalmanager.egg-info/PKG-INFO
+scrapy_signalmanager.egg-info/SOURCES.txt
+scrapy_signalmanager.egg-info/dependency_links.txt
+scrapy_signalmanager.egg-info/top_level.txt
