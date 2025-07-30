@@ -1,0 +1,2 @@
+recursive-include prune_captcha/templates *
+recursive-include prune_captcha/static *
