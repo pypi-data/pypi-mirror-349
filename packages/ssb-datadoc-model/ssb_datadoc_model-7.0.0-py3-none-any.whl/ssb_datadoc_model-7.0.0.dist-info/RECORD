@@ -1,0 +1,13 @@
+datadoc_model/__init__.py,sha256=_v7aZPF2GCCWmi7wmLQ3Z8l549XVa-VlGEBg_ot-pBw,141
+datadoc_model/datadoc_base_model.py,sha256=RTAvaGOYzLkw_LhhM_EoG3MW-h7Y0VFeLycvp48qFcY,266
+datadoc_model/model.py,sha256=TwA_Ge9rliqke4bfUhMcea1Cca7yXsE9kdUIrrKyRBA,421
+datadoc_model/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+datadoc_model/all_optional/__init__.py,sha256=wjXFbiwuN1WR_y_cawebsKutGQ_86Ko3gF27DI9RVA4,161
+datadoc_model/all_optional/model.py,sha256=YTgH5330J-tWE5JoSZvagCGxPP993fK2sK3rbpjS1eA,15984
+datadoc_model/all_optional/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+datadoc_model/required/__init__.py,sha256=Bjc22GLtFuIAIvw20DwDLzdGYC8MZC8px7OHeEigPwM,150
+datadoc_model/required/model.py,sha256=rS-3NhId1FI-dJ2cs9jthPfpDOsJHHX__0_lk6YUFCk,15559
+datadoc_model/required/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ssb_datadoc_model-7.0.0.dist-info/METADATA,sha256=-pChQO8_kYSVEDIYmjAz7sKiAfsf6FB5DEQn_-6axm8,1172
+ssb_datadoc_model-7.0.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+ssb_datadoc_model-7.0.0.dist-info/RECORD,,
