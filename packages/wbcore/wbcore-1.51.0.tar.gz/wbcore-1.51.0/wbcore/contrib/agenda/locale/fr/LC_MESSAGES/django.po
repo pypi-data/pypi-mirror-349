@@ -1,0 +1,201 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-20 09:30+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+#: wbcore/contrib/agenda/filters/calendar_item.py:15
+#: wbcore/contrib/agenda/viewsets/menu/conference_room.py:24
+#: wbcore/contrib/agenda/viewsets/titles/conference_room.py:22
+msgid "Conference Rooms"
+msgstr ""
+
+#: wbcore/contrib/agenda/filters/calendar_item.py:22
+msgid "Inside Conference Room"
+msgstr ""
+
+#: wbcore/contrib/agenda/filters/calendar_item.py:52
+#: wbcore/contrib/agenda/models/calendar_item.py:48
+msgid "Type"
+msgstr ""
+
+#: wbcore/contrib/agenda/filters/calendar_item.py:55
+msgid "Calendar Regarding"
+msgstr ""
+
+#: wbcore/contrib/agenda/filters/conference_room.py:10
+#: wbcore/contrib/agenda/viewsets/menu/conference_room.py:7
+#: wbcore/contrib/agenda/viewsets/titles/conference_room.py:11
+msgid "Buildings"
+msgstr ""
+
+#: wbcore/contrib/agenda/filters/conference_room.py:30
+msgid "Addresses"
+msgstr ""
+
+#: wbcore/contrib/agenda/models/calendar_item.py:24
+msgid "Public"
+msgstr ""
+
+#: wbcore/contrib/agenda/models/calendar_item.py:25
+msgid "Private"
+msgstr ""
+
+#: wbcore/contrib/agenda/models/calendar_item.py:26
+msgid "Confidential"
+msgstr ""
+
+#: wbcore/contrib/agenda/models/calendar_item.py:33
+msgid "Entities"
+msgstr ""
+
+#: wbcore/contrib/agenda/models/calendar_item.py:38
+msgid "Icon"
+msgstr ""
+
+#: wbcore/contrib/agenda/models/calendar_item.py:45
+msgid "Visibility"
+msgstr ""
+
+#: wbcore/contrib/agenda/models/calendar_item.py:54
+msgid "Period"
+msgstr ""
+
+#: wbcore/contrib/agenda/models/calendar_item.py:56
+msgid "Title"
+msgstr ""
+
+#: wbcore/contrib/agenda/models/calendar_item.py:59
+#: wbcore/contrib/agenda/models/conference_room.py:90
+msgid "Conference Room"
+msgstr ""
+
+#: wbcore/contrib/agenda/models/calendar_item.py:66
+msgid "All Day"
+msgstr ""
+
+#: wbcore/contrib/agenda/models/calendar_item.py:66
+msgid "Check this if the activity spans throughout the day"
+msgstr ""
+
+#: wbcore/contrib/agenda/models/calendar_item.py:68
+msgid "Is Cancelled"
+msgstr ""
+
+#: wbcore/contrib/agenda/models/calendar_item.py:69
+msgid "Is Deletable"
+msgstr ""
+
+#: wbcore/contrib/agenda/models/calendar_item.py:208
+msgid "Calendar Item"
+msgstr ""
+
+#: wbcore/contrib/agenda/models/calendar_item.py:209
+msgid "Calendar Items"
+msgstr ""
+
+#: wbcore/contrib/agenda/models/conference_room.py:9
+#: wbcore/contrib/agenda/models/conference_room.py:49
+#: wbcore/contrib/agenda/viewsets/display/conference_room.py:18
+#: wbcore/contrib/agenda/viewsets/display/conference_room.py:31
+msgid "Name"
+msgstr ""
+
+#: wbcore/contrib/agenda/models/conference_room.py:13
+#: wbcore/contrib/agenda/viewsets/display/conference_room.py:19
+msgid "Address"
+msgstr ""
+
+#: wbcore/contrib/agenda/models/conference_room.py:39
+#: wbcore/contrib/agenda/models/conference_room.py:54
+#: wbcore/contrib/agenda/viewsets/display/conference_room.py:33
+msgid "Building"
+msgstr ""
+
+#: wbcore/contrib/agenda/models/conference_room.py:50
+msgid "Email Address"
+msgstr ""
+
+#: wbcore/contrib/agenda/models/conference_room.py:57
+#: wbcore/contrib/agenda/viewsets/display/conference_room.py:34
+msgid "Capacity"
+msgstr ""
+
+#: wbcore/contrib/agenda/models/conference_room.py:58
+#: wbcore/contrib/agenda/viewsets/display/conference_room.py:35
+msgid "Capable of Videoconferencing"
+msgstr ""
+
+#: wbcore/contrib/agenda/serializers/calendar_item.py:46
+msgid "Item"
+msgstr ""
+
+#: wbcore/contrib/agenda/serializers/calendar_item.py:48
+msgid "Private {}"
+msgstr ""
+
+#: wbcore/contrib/agenda/serializers/calendar_item.py:48
+msgid "Confidential {}"
+msgstr ""
+
+#: wbcore/contrib/agenda/serializers/conference_room.py:66
+msgid "A building with this name and address already exists."
+msgstr ""
+
+#: wbcore/contrib/agenda/serializers/conference_room.py:96
+msgid "A conference room with this email address already exists."
+msgstr ""
+
+#: wbcore/contrib/agenda/serializers/conference_room.py:98
+msgid "A conference room with this name already exists in this building."
+msgstr ""
+
+#: wbcore/contrib/agenda/viewsets/buttons/conference_room.py:16
+msgid "New Address"
+msgstr ""
+
+#: wbcore/contrib/agenda/viewsets/display/conference_room.py:32
+msgid "E-Mail-Address"
+msgstr ""
+
+#: wbcore/contrib/agenda/viewsets/menu/calendar_items.py:12
+#: wbcore/contrib/agenda/viewsets/titles/calendar_items.py:8
+msgid "Calendar"
+msgstr ""
+
+#: wbcore/contrib/agenda/viewsets/menu/conference_room.py:14
+msgid "Create Building"
+msgstr ""
+
+#: wbcore/contrib/agenda/viewsets/menu/conference_room.py:31
+msgid "Create Conference Room"
+msgstr ""
+
+#: wbcore/contrib/agenda/viewsets/titles/conference_room.py:8
+msgid "Building: {{name}}"
+msgstr ""
+
+#: wbcore/contrib/agenda/viewsets/titles/conference_room.py:14
+msgid "New Building"
+msgstr ""
+
+#: wbcore/contrib/agenda/viewsets/titles/conference_room.py:19
+msgid "Conference Room: {{name}}"
+msgstr ""
+
+#: wbcore/contrib/agenda/viewsets/titles/conference_room.py:25
+msgid "New Conference Room"
+msgstr ""
