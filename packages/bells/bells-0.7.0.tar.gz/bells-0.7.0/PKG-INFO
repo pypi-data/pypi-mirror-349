@@ -1,0 +1,26 @@
+Metadata-Version: 2.3
+Name: bells
+Version: 0.7.0
+Summary: Bells is a program for keeping track of sound recordings.
+License: GPL-3.0
+Author: Ceda EI
+Author-email: ceda_ei@webionite.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: click (>=8.2.1,<9.0.0)
+Requires-Dist: numpy (>=2.2.6,<3.0.0)
+Requires-Dist: questionary (>=2.1.0,<3.0.0)
+Requires-Dist: sounddevice (>=0.5.2,<0.6.0)
+Requires-Dist: soundfile (>=0.13.1,<0.14.0)
+Project-URL: Homepage, https://gitlab.com/ceda_ei/bells.git
+Project-URL: Repository, https://gitlab.com/ceda_ei/bells.git
+Description-Content-Type: text/markdown
+
+# Bells
+
+Bells is a program for keeping track of sound recordings.

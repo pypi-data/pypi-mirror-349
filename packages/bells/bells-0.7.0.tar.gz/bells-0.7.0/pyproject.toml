@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "bells"
+version = "0.7.0"
+description = "Bells is a program for keeping track of sound recordings."
+authors = ["Ceda EI <ceda_ei@webionite.com>"]
+license = "GPL-3.0"
+readme = "README.md"
+homepage = "https://gitlab.com/ceda_ei/bells.git"
+repository = "https://gitlab.com/ceda_ei/bells.git"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<4.0"
+click = "^8.2.1"
+questionary = "^2.1.0"
+sounddevice = "^0.5.2"
+soundfile = "^0.13.1"
+numpy = "^2.2.6"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+bells = "bells.__main__:main"
