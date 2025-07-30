@@ -1,0 +1,36 @@
+[project]
+name = "astro-observe-sdk"
+version = "0.0.8"
+description = "An Airflow and Python SDK for working with the Astro Observe platform"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+  "apache-airflow-providers-openlineage>=1.11.0",
+  "apache-airflow>=2.9.0",
+  "attr",
+]
+
+[tool.uv]
+dev-dependencies = [
+  "pytest>=7.2.0",
+  "mypy>=1.11.0",
+  "types-requests>=2.26.0",
+  "pytest-mock",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["test"]
+
+[tool.mypy]
+files = ["src"]
+disallow_untyped_defs = true
+disallow_any_unimported = true
+no_implicit_optional = true
+check_untyped_defs = true
+warn_return_any = true
+warn_unused_ignores = true
+show_error_codes = true
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
