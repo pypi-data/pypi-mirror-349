@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.cfg
+typing_extensions.py
+typing_extensions_qpython.egg-info/PKG-INFO
+typing_extensions_qpython.egg-info/SOURCES.txt
+typing_extensions_qpython.egg-info/dependency_links.txt
+typing_extensions_qpython.egg-info/requires.txt
+typing_extensions_qpython.egg-info/top_level.txt

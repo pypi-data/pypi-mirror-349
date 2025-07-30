@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools", "wheel", "twine>=6.1.0", "packaging>=24.2", "pkginfo>=1.12.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "typing-extensions-qpython"
+version = "4.12.2"
+description = "Backported and Experimental Type Hints for Python 3.8+"
+readme = "README.md"
+license = {text = "Python Software Foundation License"}
+requires-python = ">=3.8"
+authors = [
+    { name = "The QPYPI Team", email = "qpypi@qpython.org" },
+]
+classifiers = [
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: Android",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development",
+]
+dependencies = [
+    "greenlet-qpython>=3.1.1",
+]
+
+[project.urls]
+Homepage = "https://qpypi.qpython.org/project/typing-extensions-qpython/"
