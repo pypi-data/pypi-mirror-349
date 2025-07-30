@@ -1,0 +1,10 @@
+/.pytest_cache
+/.vscode
+/dist
+__pycache__
+
+
+
+# pixi environments
+.pixi
+*.egg-info

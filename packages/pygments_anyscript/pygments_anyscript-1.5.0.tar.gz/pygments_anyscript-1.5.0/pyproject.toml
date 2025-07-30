@@ -1,0 +1,55 @@
+[build-system]
+requires = ["flit_core >=3.4,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "pygments_anyscript"
+authors = [{name = "Morten Enemark Lund", email = "mel@anybodytech.com"}]
+readme = "README.md"
+requires-python = ">=3.7"
+license = {file = "LICENSE"}
+classifiers = ["License :: OSI Approved :: MIT License"]
+dynamic = ["version", "description"]
+dependencies = [
+    "pygments",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+]
+
+[project.entry-points."pygments.lexers"]
+AnyScript = "pygments_anyscript:AnyScriptLexer"
+AnyScriptDoc = "pygments_anyscript:AnyScriptDocLexer"
+
+[project.entry-points."pygments.styles"]
+AnyScript = "pygments_anyscript:AnyScriptStyle"
+
+
+[project.urls]
+Home = "https://github.com/AnyBody/pygments-anyscript"
+
+[tool.pixi.project]
+channels = ["conda-forge"]
+platforms = ["win-64"]
+
+[tool.pixi.pypi-dependencies]
+pygments_anyscript = { path = ".", editable = true }
+
+[tool.pixi.environments]
+default = { solve-group = "default" }
+test = { features = ["test"], solve-group = "default" }
+build = { features = ["build"], solve-group = "default" }
+
+[tool.pixi.feature.build.dependencies]
+flit = ">=3.11.0,<4"
+twine = ">=6.1.0,<7"
+
+[tool.pixi.feature.build.tasks]
+clean-build = "rm -rf build dist"
+publish = {cmd="op run --env-file=upload.env -- flit publish "}
+build = {cmd="flit build --format=sdist", depends-on=["clean-build"]}
+
+
+[tool.pixi.tasks]
