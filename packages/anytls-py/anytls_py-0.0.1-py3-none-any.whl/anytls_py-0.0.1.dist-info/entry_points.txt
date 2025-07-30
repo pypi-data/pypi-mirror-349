@@ -1,0 +1,2 @@
+[console_scripts]
+anytls = anytls.cli.main:main
