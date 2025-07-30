@@ -1,0 +1,13 @@
+LICENCE.txt
+MANIFEST.in
+README.md
+setup.py
+src/app/__init__.py
+src/app/util/__init__.py
+src/app/util/log_util/__init__.py
+src/app/util/log_util/log_util.py
+src/resource/log-config.json
+src/sit_timeline_logging.egg-info/PKG-INFO
+src/sit_timeline_logging.egg-info/SOURCES.txt
+src/sit_timeline_logging.egg-info/dependency_links.txt
+src/sit_timeline_logging.egg-info/top_level.txt

@@ -1,0 +1,31 @@
+Metadata-Version: 2.4
+Name: sit-timeline-logging
+Version: 0.0.4
+Summary: SIT timeline logging package
+Author: anusorn.l
+Author-email: anusorn.l@somapait.com
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENCE.txt
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license-file
+Dynamic: summary
+
+## Pre-requisite
+- Python >= 3.8
+- virtualenv
+
+## Create environments (venv) 
+```
+git clone https://git.dev.somapait.com/ai-chatbot/project-template/ai-api-python.git
+cd ai-api-python
+python -m virtualenv venv
+.\venv\scripts\activate
+pip install -r requirements.txt
+```
