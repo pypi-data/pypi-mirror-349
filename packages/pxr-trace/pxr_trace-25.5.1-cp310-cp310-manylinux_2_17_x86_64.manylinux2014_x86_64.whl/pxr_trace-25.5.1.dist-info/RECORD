@@ -1,0 +1,9 @@
+pxr/.libs/libPxrTrace.so,sha256=VPyEfTFysESp3UKqL72s716VzMDWV1RdZ1OGNm3ZxNs,535880
+pxr/Trace/__init__.py,sha256=y_njgGMbGoLj5tBTzvjaYPnSZ3CaDy74edW-eUiySHM,1968
+pxr/Trace/__main__.py,sha256=EOquBVE3-MeeFFaSX0m7oH592AeIN4HLoS3kwBh1xiA,1686
+pxr/Trace/_trace.so,sha256=ZHaLldS-KAlYvStu3OGHo4t6cWvddrrZNPSieah1FR8,395352
+pxr_trace-25.5.1.dist-info/METADATA,sha256=JG7Ql2iJw3-rhY5zwT3K0mXgsBz9ZsbhbswWksCiw60,2109
+pxr_trace-25.5.1.dist-info/WHEEL,sha256=cwpNPA0t9aVpRxxbTANLUCh9PJ9ird9e2bvj5KqKrRg,156
+pxr_trace-25.5.1.dist-info/RECORD,,
+pxr_trace-25.5.1.dist-info/licenses/LICENSE.txt,sha256=IZywhnQfpZSF2wtKxwwO_xlFJCCnZJeZXBumMDQlIjQ,10316
+pxr_trace-25.5.1.dist-info/licenses/NOTICE.txt,sha256=k6ldE5TIDcCuglcT9C5Yod0oPtv0Ta_x8-h6HZ3y3n4,149
