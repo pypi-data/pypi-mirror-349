@@ -1,0 +1,93 @@
+Metadata-Version: 2.3
+Name: ftm-assets
+Version: 0.0.4
+Summary: Assets (image) resolver for FollowTheMoney data
+License: AGPLv3+
+Author: Simon Wörpel
+Author-email: simon.woerpel@pm.me
+Requires-Python: >=3.11,<4
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Provides-Extra: openaleph
+Requires-Dist: anystore (>=0.3.4,<0.4.0)
+Requires-Dist: fastapi (>=0.115.12,<0.116.0)
+Requires-Dist: ftmq (>=0.8.4,<0.9.0)
+Requires-Dist: httpx (>=0.28.1,<0.29.0)
+Requires-Dist: openaleph-procrastinate (>=0.0.1,<0.0.2) ; extra == "openaleph"
+Requires-Dist: pillow (>=11.2.1,<12.0.0)
+Project-URL: Documentation, https://github.com/dataresearchcenter/ftm-assets
+Project-URL: Homepage, https://github.com/dataresearchcenter/ftm-assets
+Project-URL: Issues, https://github.com/dataresearchcenter/ftm-assets/issues
+Project-URL: Repository, https://github.com/dataresearchcenter/ftm-assets
+Description-Content-Type: text/markdown
+
+[![ftm-assets on pypi](https://img.shields.io/pypi/v/ftm-assets)](https://pypi.org/project/ftm-assets/)
+[![Python test and package](https://github.com/dataresearchcenter/ftm-assets/actions/workflows/python.yml/badge.svg)](https://github.com/dataresearchcenter/ftm-assets/actions/workflows/python.yml)
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit)
+[![Coverage Status](https://coveralls.io/repos/github/dataresearchcenter/ftm-assets/badge.svg?branch=main)](https://coveralls.io/github/dataresearchcenter/ftm-assets?branch=main)
+[![AGPLv3+ License](https://img.shields.io/pypi/l/ftm-assets)](./LICENSE)
+
+# ftm-assets
+
+Resolve assets (currently images) related to [FollowTheMoney](https://followthemoney.tech) entities.
+
+## Get images based on qid
+
+```bash
+cat entities.ftm.json | ftm-assets load-entities
+```
+
+## Run api server
+
+```bash
+uvicorn --port 8000 ftm_assets.api:app --workers 4
+```
+
+## Get asset metadata
+
+For images:
+
+```bash
+curl https://localhost:8000/img/<entity_id>
+```
+
+```json
+{
+    "id": "<entity_id>",
+    "url": "...",
+    "alt": "...",
+    "attribution": {
+        "author": "...",
+        "license": "...",
+    }
+}
+```
+
+## Run as an OpenAleph worker service
+
+    pip install ftm-assets[openaleph]
+
+To ingreate `ftm-assets` into the [OpenAleph](https://openaleph.org) ecosystem as a worker that processes entities, start the worker queue like this:
+
+    PROCRASTINATE_APP=ftm_assets.tasks.app procrastinate worker -q ftm-assets
+
+To defer tasks from other places, use `ftm-assets` as queue name and `ftm_assets.tasks.resolve_image` as the task identifier.
+
+### Docker
+
+Run the queue worker with changing the entrypoint to `procrastinate`:
+
+    docker run ghcr.io/dataresearchcenter/ftm-asstets --entrypoint procrastinate worker -q ftm-assets
+
+## License and Copyright
+
+`ftm-assets`, (C) 2025 [Data and Research Center – DARC](https://dataresearchcenter.org)
+
+`ftm-assets` is licensed under the AGPLv3 or later license.
+
+see [NOTICE](./NOTICE) and [LICENSE](./LICENSE)
+
