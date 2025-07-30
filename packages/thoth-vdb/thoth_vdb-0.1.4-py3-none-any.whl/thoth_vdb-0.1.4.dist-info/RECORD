@@ -1,0 +1,9 @@
+vdbmanager/ThothHaystackVectorStore.py,sha256=Zd3msXikylrP9cHhl2CxWw8MWFhhpORbASrMPBStXq4,23225
+vdbmanager/ThothVectorStore.py,sha256=60ustIITyXrOBBfsQ7hsG56F7EKf7ba_S_hFQ3li7mQ,5682
+vdbmanager/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vdbmanager/impl/QdrantHaystackStore.py,sha256=dN_WKiAqjffKdZLnEjX6u--AnGW4RiioQ0Q1_rIZxKU,5942
+vdbmanager/impl/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+thoth_vdb-0.1.4.dist-info/METADATA,sha256=aRVHfZq9Q_Nug9JxVQ5SxKN-R1g_2UG86nje6HmpG3Q,7367
+thoth_vdb-0.1.4.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+thoth_vdb-0.1.4.dist-info/top_level.txt,sha256=vdL57ngj9gl3OmCT4KtruyJTLemwFOsZS5A7r-FvTHA,11
+thoth_vdb-0.1.4.dist-info/RECORD,,
