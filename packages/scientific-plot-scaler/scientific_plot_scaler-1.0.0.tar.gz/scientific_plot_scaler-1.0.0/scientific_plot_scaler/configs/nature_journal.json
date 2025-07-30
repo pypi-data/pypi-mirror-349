@@ -1,0 +1,15 @@
+{
+  "layout_type": "single",
+  "latex_column_width": 3.27,
+  "latex_text_width": 6.69,
+  "base_font_size": 8,
+  "title_scale": 1.25,
+  "label_scale": 1.0,
+  "tick_scale": 0.9,
+  "legend_scale": 0.9,
+  "format": "pdf",
+  "dpi": 600,
+  "style": "seaborn-v0_8-white",
+  "grid": false,
+  "spine_style": "minimal"
+}

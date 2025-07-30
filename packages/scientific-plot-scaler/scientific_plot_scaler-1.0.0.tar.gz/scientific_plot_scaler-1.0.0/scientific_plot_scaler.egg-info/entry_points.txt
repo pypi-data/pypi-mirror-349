@@ -1,0 +1,2 @@
+[console_scripts]
+plot-scaler = scientific_plot_scaler.plot_scaler:main
