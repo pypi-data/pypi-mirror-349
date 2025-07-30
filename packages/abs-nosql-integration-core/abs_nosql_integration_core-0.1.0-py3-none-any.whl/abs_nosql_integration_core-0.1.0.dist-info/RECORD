@@ -1,0 +1,12 @@
+abs_nosql_integration_core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+abs_nosql_integration_core/model/__init__.py,sha256=ZwodbieuCYiAAkrR67tG5Rxse_6D-60UyBf1lUmX4K0,85
+abs_nosql_integration_core/model/integration_model.py,sha256=xJf7FtUmk5QKj9Di7xldWJoJtwhNv4UR-TdYlQqy6YE,489
+abs_nosql_integration_core/repository/__init__.py,sha256=BwvErM8XHimT14pi6PKV1YI_rft_D7H6xsULwIvZ4W4,95
+abs_nosql_integration_core/repository/integration_repository.py,sha256=9zc5-V5RXyEnyahPeIAWOnvRt86JJMNqxDhylnDVkms,1932
+abs_nosql_integration_core/schema/__init__.py,sha256=Z7sj-eLQ3vi4E6LQQBKj0JQWlE99D0I0MmYMBuD0g94,387
+abs_nosql_integration_core/service/__init__.py,sha256=VRvnPq9wpCMgU0uK-WrJekZiYiZfTmW_48I_qyj1sz0,100
+abs_nosql_integration_core/service/nosql_integration_service.py,sha256=rJgSS7BRtn63dCyc748-jssuvAbcNIUr_LbbWYARwuM,2384
+abs_nosql_integration_core/utils/__init__.py,sha256=eQPB2y-DTAykPI9DtY_z3GUCegDompmOG4EkCFIqaa4,86
+abs_nosql_integration_core-0.1.0.dist-info/METADATA,sha256=T5qDlvnOYhcq4z3LY8BPXSHZ24bdrQYG54lnvCqj7Qk,6279
+abs_nosql_integration_core-0.1.0.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+abs_nosql_integration_core-0.1.0.dist-info/RECORD,,
