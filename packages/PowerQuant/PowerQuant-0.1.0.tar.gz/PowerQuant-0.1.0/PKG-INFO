@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: PowerQuant
+Version: 0.1.0
+Summary: Quantitative analysis for power markets
+Author: Jean Bertin
+Author-email: <jeanbertin.ensam@gmail.com>
+Keywords: python,quantitative,risk,power,quant
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+
+# PowerQuant
+
+
+[![PyPI version](https://badge.fury.io/py/[your_package_name_on_pypi].svg)](https://pypi.org/project/[your_package_name_on_pypi]/)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![Python Versions](https://img.shields.io/pypi/pyversions/[your_package_name_on_pypi])
+
+**PowerQuant** is a Python package providing tools for the quantitative analysis of the electricity sector. It offers methods to explore data, perform calculations, and gain crucial insights into energy markets.
+
+## Installation
+
+You can install PowerQuant using pip:
+
+```bash
+pip install PowerQuant
+```
+
+
+<p align="center">
+  <img src="images/logo_PowerQuant.png" width="200"/>
+</p>
