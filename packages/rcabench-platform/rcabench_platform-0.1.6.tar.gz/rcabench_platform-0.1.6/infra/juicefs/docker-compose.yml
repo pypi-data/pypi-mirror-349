@@ -1,0 +1,42 @@
+services:
+  minio:
+    image: minio/minio
+    environment:
+      MINIO_PROMETHEUS_AUTH_TYPE: public
+    volumes:
+      - /srv/juicefs/minio/data:/data
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    command: server /data --console-address ":9001"
+    restart: always
+
+  prometheus:
+    image: prom/prometheus
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    ports:
+      - "9090:9090"
+    restart: always
+
+  grafana:
+    image: grafana/grafana
+    volumes:
+      - ./grafana/provisioning:/etc/grafana/provisioning
+      - ./grafana/grafana.ini:/etc/grafana/grafana.ini
+    ports:
+      - "3000:3000"
+    restart: always
+
+  redis:
+    image: redis
+    volumes:
+      - /srv/juicefs/redis/data:/data
+    ports:
+      - "6379:6379"
+    command: redis-server --appendonly yes
+    restart: always
+
+networks:
+  default:
+    driver: bridge
