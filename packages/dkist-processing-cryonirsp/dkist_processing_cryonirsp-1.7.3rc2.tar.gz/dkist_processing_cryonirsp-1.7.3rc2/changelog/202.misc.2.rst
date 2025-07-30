@@ -1,0 +1,1 @@
+Explicitly specify types on beam boundary values due to type issues with the `largestinteriorrectangle` package.
