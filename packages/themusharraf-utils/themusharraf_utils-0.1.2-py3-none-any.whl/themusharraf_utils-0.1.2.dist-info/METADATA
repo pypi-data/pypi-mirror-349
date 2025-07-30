@@ -1,0 +1,28 @@
+Metadata-Version: 2.4
+Name: themusharraf-utils
+Version: 0.1.2
+Summary: A collection of useful Python utilities by Musharraf
+Author-email: Musharraf Ibragimov <meibrohimov@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/themusharraf/themusharraf-utils
+Project-URL: Issues, https://github.com/themusharraf/themusharraf-utils/issues
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# themusharraf-utils
+
+Foydali Python utility funksiyalar to‘plami.
+
+## 🧰 Funksiyalar
+
+- `slugify(text)` — matndan URL-friendly slug yaratadi
+- `chunk_list(lst, size)` — listni bo‘laklarga ajratadi
+- `is_valid_email(email)` — emailni validatsiya qiladi
+
+## 📦 O‘rnatish
+
+```bash
+pip install themusharraf-utils
+```
