@@ -1,0 +1,37 @@
+Metadata-Version: 2.4
+Name: prgen
+Version: 0.0.3
+Summary: CLI tool to autogenerate GitHub PRs
+Author-email: lugen4ro <lugen4ro@gmail.com>
+License-Expression: MIT
+Project-URL: source, https://github.com/lugen4ro/prgen
+Project-URL: issues, https://github.com/lugen4ro/prgen/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+
+> [!CAUTION]
+> This tool is still under development. It is not in a usable state yet.
+
+A CLI tool for generating GitHub PR titles & bodies with LLMs.
+
+Setup your own templates & give custom directions to customize the generated PRs.
+
+# Installation
+
+Distributed over PyPI. Can be installed with pip.
+
+```sh
+pip install prgen
+```
+
+
+# Usage
+
+Execute `prgen` inside the target git repository having the feature branch checked out.
+
+This will create a PR on GitHub directed towards the default branch in origin.
