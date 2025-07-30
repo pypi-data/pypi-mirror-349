@@ -1,0 +1,11 @@
+access_intake_utils/__init__.py,sha256=jMVE6eKegndV9O0lmGwPddirpw8Rn7Pdlqw5tyj2c4w,73
+access_intake_utils/_version.py,sha256=5D5y79MlqBE1v60ie-ApMZMLXacayzmC6z0Y2XnLvYY,497
+access_intake_utils/ard.py,sha256=Z8NY-cQeiTwxCMIqUbn8VnG37qp8OQuiBZYKsWg6k6w,15646
+access_intake_utils/util.py,sha256=3Ou1ksOv2-acwMgrgyG7SfbUun1yRyp6taVOfDluyrY,8175
+access_intake_utils/chunking/__init__.py,sha256=XZpbNAQ-wlvCN6N_qG4-3aIDK2AGtr1PuIxFExxKx40,228
+access_intake_utils/chunking/_chunking.py,sha256=D34P7vJmdb3IWtbawYh_dJl-nFn8AFI6OcVXHNgrQQg,10093
+access_intake_utils-0.1.7.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+access_intake_utils-0.1.7.dist-info/METADATA,sha256=8rh6DlMPa40ydD8wU6z2mjehrCt3YfTj-kvGd3R5fzE,2241
+access_intake_utils-0.1.7.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+access_intake_utils-0.1.7.dist-info/top_level.txt,sha256=XdyhHPDIPiv6qIt4kk7Ko5wNMBiUlOVD_TWoGvjD6Bc,20
+access_intake_utils-0.1.7.dist-info/RECORD,,
