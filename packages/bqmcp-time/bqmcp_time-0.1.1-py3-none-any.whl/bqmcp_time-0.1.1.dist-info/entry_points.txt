@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-server-time = mcp_server_bqmcp_time:main
