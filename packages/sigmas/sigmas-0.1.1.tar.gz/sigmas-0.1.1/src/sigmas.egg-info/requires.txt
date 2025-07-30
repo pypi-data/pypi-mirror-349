@@ -1,0 +1,8 @@
+flask
+scopesim
+scopesim_templates
+astropy
+numpy
+click
+sphinx
+astrodonut
