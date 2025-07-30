@@ -1,0 +1,514 @@
+Metadata-Version: 2.3
+Name: mapbiomas-downloader
+Version: 2.1.0
+Summary: Ferramenta para download de arquivos GeoTIFF do MapBiomas para municípios ou estados brasileiros
+License: MIT
+Author: Ricardo Malnati
+Requires-Python: >=3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: aiohttp (>=3.8.0)
+Requires-Dist: geopandas (>=0.14.0)
+Requires-Dist: importlib-resources (>=5.12.0)
+Requires-Dist: pandas (>=2.0.0)
+Requires-Dist: playwright (>=1.40.0)
+Requires-Dist: rasterio (>=1.3.7)
+Project-URL: Repository, https://github.com/malnati/mapbiomas-downloader
+Description-Content-Type: text/markdown
+
+# MapBiomas Downloader
+
+[![GitHub license](https://img.shields.io/github/license/malnati/mapbiomas-downloader)](https://github.com/malnati/mapbiomas-downloader/blob/main/LICENSE)
+[![Python Version](https://img.shields.io/badge/python-3.12-blue.svg)](https://www.python.org/downloads/release/python-3120/)
+[![Version](https://img.shields.io/badge/version-2.0.0-green.svg)](https://github.com/malnati/mapbiomas-downloader/releases)
+[![PyPI version](https://badge.fury.io/py/mapbiomas-downloader.svg)](https://pypi.org/project/mapbiomas-downloader/)
+[![Downloads](https://static.pepy.tech/badge/mapbiomas-downloader)](https://pepy.tech/project/mapbiomas-downloader)
+[![GitHub issues](https://img.shields.io/github/issues/malnati/mapbiomas-downloader)](https://github.com/malnati/mapbiomas-downloader/issues)
+[![Docker](https://img.shields.io/badge/docker-supported-blue.svg)](https://github.com/malnati/mapbiomas-downloader/tree/main/.docker)
+
+Ferramenta para download e recorte de arquivos GeoTIFF do MapBiomas utilizando shapefile.
+
+## 🚀 Novidades
+
+- **Scripts para todos os estados**: Agora temos scripts específicos para todos os 27 estados/UF do Brasil
+- **Limpeza automática**: Remoção automática de diretórios vazios após cada processamento
+- **Suporte a Docker**: Execução em contêiner Docker sem precisar configurar o ambiente localmente
+- **Melhorias no Makefile**: Comandos para Docker para todos os 27 estados brasileiros
+- **Docker All-States**: Comando para processar todos os estados automaticamente via Docker
+
+## Requisitos de Acesso
+
+### Conexões Externas
+
+O MapBiomas Downloader realiza as seguintes conexões externas durante sua execução:
+
+- **Servidores do MapBiomas**: Para download dos arquivos raster GeoTIFF da coleção nacional
+  - URL base: `https://storage.googleapis.com/mapbiomas-public/` 
+  - Protocolo: HTTPS (porta 443)
+  - Frequência: Uma conexão por ano solicitado para download
+  - Dados trafegados: Arquivos GeoTIFF de grande tamanho (podem chegar a vários GB por ano)
+
+- **Google Cloud Storage**: Os dados do MapBiomas são hospedados no Google Cloud Storage
+  - Este acesso é transparente para o usuário, pois é tratado pelos servidores do MapBiomas
+
+- **PyPI (durante a instalação)**: Para download de dependências Python
+  - URL: `https://pypi.org`
+  - Protocolo: HTTPS (porta 443)
+  - Frequência: Apenas durante instalação inicial ou atualizações
+
+### Acessos ao Sistema de Arquivos
+
+A ferramenta realiza os seguintes acessos ao sistema de arquivos:
+
+#### Modo Local
+
+- **Leitura**:
+  - Diretório `shape/`: Leitura dos arquivos shapefile (.shp, .dbf, .prj, etc.)
+  - Arquivos de configuração e scripts
+
+- **Escrita**:
+  - Diretório `downloads_mapbiomas/`: Armazenamento dos arquivos GeoTIFF baixados e recortados
+  - Criação de subdiretórios por ano
+  - Remoção automática de diretórios vazios
+
+#### Modo Docker
+
+- **Volumes Mapeados**:
+  - `/app/downloads_mapbiomas`: Mapeado para o diretório local `./downloads_mapbiomas`
+  - `/app/shape`: Mapeado para o diretório local `./shape`
+  
+- **Permissões**:
+  - O contêiner precisa de permissões de leitura/escrita nos volumes mapeados
+  - Os arquivos criados pelo contêiner terão o proprietário definido como o usuário que executa o Docker
+
+#### Biblioteca Python (import)
+
+Quando importado como uma biblioteca Python:
+
+- A função `baixar_e_recortar_por_shapefile()` precisa de:
+  - Permissões de leitura nos arquivos shapefile
+  - Permissões de escrita no diretório de saída especificado
+  - Acesso à internet para download dos rasters nacionais
+
+- A função `limpar_diretorios_vazios()` precisa de:
+  - Permissões para remover diretórios no caminho especificado
+
+### Requisitos de Firewall
+
+Para uso completo da ferramenta, o firewall deve permitir:
+
+- Conexões HTTPS de saída (porta 443) para os domínios:
+  - `storage.googleapis.com`
+  - `pypi.org` (apenas durante instalação)
+
+### Considerações para Ambientes Restritos
+
+Em ambientes com políticas de segurança rigorosas:
+
+- Considere pré-baixar os rasters nacionais e usar a ferramenta apenas para o recorte
+- Arquivos baixados são armazenados localmente e reusados, minimizando downloads redundantes
+- Para total isolamento, todos os dados necessários podem ser obtidos previamente e a ferramenta pode operar offline para recortes
+
+## Instalação
+
+### Requisitos
+
+- Python 3.12+
+- Poetry
+- Dependências: geopandas, rasterio (instaladas automaticamente)
+
+### Configuração do ambiente
+
+1. Clone o repositório:
+```bash
+git clone https://github.com/malnati/mapbiomas-downloader.git
+cd mapbiomas-downloader
+```
+
+2. Configure o ambiente Python com pyenv (recomendado):
+```bash
+pyenv install 3.12
+pyenv local 3.12
+```
+
+3. Instale as dependências com Poetry:
+```bash
+poetry install
+```
+
+## Uso do downloader
+
+O downloader pode ser executado através de scripts específicos para cada estado ou usando o script genérico:
+
+### Scripts por estado
+
+O projeto disponibiliza scripts específicos para todos os estados brasileiros:
+
+```bash
+# Exemplo para o Distrito Federal
+./BRDF.sh
+
+# Exemplo para São Paulo
+./BRSP.sh 
+
+# Exemplo para Sergipe
+./BRSE.sh
+```
+
+Os scripts disponíveis contemplam todos os 27 estados/UF brasileiros:
+- `BRAC.sh` - Acre
+- `BRAL.sh` - Alagoas
+- `BRAM.sh` - Amazonas
+- `BRAP.sh` - Amapá
+- `BRBA.sh` - Bahia
+- `BRCE.sh` - Ceará
+- `BRDF.sh` - Distrito Federal
+- `BRES.sh` - Espírito Santo
+- `BRGO.sh` - Goiás
+- `BRMA.sh` - Maranhão
+- `BRMG.sh` - Minas Gerais
+- `BRMS.sh` - Mato Grosso do Sul
+- `BRMT.sh` - Mato Grosso
+- `BRPA.sh` - Pará
+- `BRPB.sh` - Paraíba
+- `BRPE.sh` - Pernambuco
+- `BRPI.sh` - Piauí
+- `BRPR.sh` - Paraná
+- `BRRJ.sh` - Rio de Janeiro
+- `BRRN.sh` - Rio Grande do Norte
+- `BRRO.sh` - Rondônia
+- `BRRR.sh` - Roraima
+- `BRRS.sh` - Rio Grande do Sul
+- `BRSC.sh` - Santa Catarina
+- `BRSE.sh` - Sergipe
+- `BRSP.sh` - São Paulo
+- `BRTO.sh` - Tocantins
+
+Cada script está configurado com o shapefile específico do estado e o código IBGE do município da capital para o modo de teste.
+
+### Baixar e recortar usando o script genérico
+
+Também é possível usar o script genérico, especificando manualmente o shapefile:
+
+```bash
+./downloader.sh --shapefile shape/DF/APPS_1.shp --ano-inicio 2020 --ano-fim 2021
+```
+
+**Nota importante:** Os arquivos shape não estão incluídos no repositório. Você deve baixar os shapefiles separadamente e salvá-los no diretório `shape`. Exemplo de estrutura:
+```
+shape/
+  DF/
+    seu_shapefile.shp
+    seu_shapefile.dbf
+    seu_shapefile.prj
+    ...
+  SE/
+    outro_shapefile.shp
+    ...
+```
+
+O shapefile deve conter uma das seguintes opções:
+- O campo `CD_MUN` com códigos IBGE (7 dígitos) dos municípios
+- O campo `cod_imovel` com valor no formato "UF-CODIGO-XXXX" (ex: "DF-5300108-XXXX")
+
+Os arquivos recortados serão salvos em pastas por ano, cada um com o nome do código do município:
+```
+downloads_mapbiomas/
+  2020/
+    5300108.tif
+  2021/
+    5300108.tif
+```
+
+### Limpeza de diretórios vazios
+
+O sistema agora inclui uma funcionalidade para remover diretórios vazios automaticamente após cada processamento. Esta funcionalidade:
+
+- Remove subdiretórios vazios em `downloads_mapbiomas`
+- É executada automaticamente após cada processamento
+- Mantém sua estrutura de diretórios organizada
+- Implementada tanto na função `baixar_e_recortar_por_shapefile` quanto no bloco `finally` da função `main`
+
+Para executar esta limpeza manualmente, use:
+```bash
+make clean-empty-dirs
+```
+
+### Modo de teste
+
+O downloader pode ser executado em modo de teste, sem baixar ou processar arquivos reais:
+
+```bash
+./downloader.sh --shapefile shape/DF/APPS_1.shp --teste
+
+# Ou, para o script específico do DF:
+./BRDF.sh --teste
+```
+
+No modo de teste:
+- O shapefile não precisa existir fisicamente
+- Os diretórios são criados, mas os arquivos .tif não são gerados
+- A simulação usa o código do município da capital do estado como exemplo
+- Útil para testar a configuração sem consumir recursos
+
+### Docker
+
+O projeto suporta execução em Docker, o que elimina a necessidade de configurar o ambiente Python e dependências localmente.
+
+#### Configuração do Docker
+
+Os arquivos de configuração Docker estão na pasta `.docker/`:
+- `Dockerfile`: Define a imagem com Python 3.12 e todas as dependências necessárias
+- `docker-compose.yaml`: Configura os serviços, volumes e comandos para execução
+
+#### Construir a imagem Docker
+
+```bash
+make docker-build
+```
+
+#### Executar no Docker
+
+O projeto oferece comandos Docker para todos os 27 estados brasileiros:
+
+```bash
+# Executar download para um estado específico no Docker
+make docker-df    # Distrito Federal
+make docker-sp    # São Paulo 
+make docker-rj    # Rio de Janeiro
+make docker-mg    # Minas Gerais
+make docker-ba    # Bahia
+# ... e assim por diante para todos os estados
+
+# Executar download para todos os estados de uma vez
+make docker-all-states
+
+# Limpar diretórios vazios 
+make docker-clean
+
+# Executar comando personalizado
+make docker-custom CMD="python -m src.downloader.downloader --shapefile /app/shape/DF/APPS_1.shp"
+```
+
+Lista completa de comandos Docker disponíveis:
+- `docker-ac` - Acre
+- `docker-al` - Alagoas
+- `docker-am` - Amazonas
+- `docker-ap` - Amapá
+- `docker-ba` - Bahia
+- `docker-ce` - Ceará
+- `docker-df` - Distrito Federal
+- `docker-es` - Espírito Santo
+- `docker-go` - Goiás
+- `docker-ma` - Maranhão
+- `docker-mg` - Minas Gerais
+- `docker-ms` - Mato Grosso do Sul
+- `docker-mt` - Mato Grosso
+- `docker-pa` - Pará
+- `docker-pb` - Paraíba
+- `docker-pe` - Pernambuco
+- `docker-pi` - Piauí
+- `docker-pr` - Paraná
+- `docker-rj` - Rio de Janeiro
+- `docker-rn` - Rio Grande do Norte
+- `docker-ro` - Rondônia
+- `docker-rr` - Roraima
+- `docker-rs` - Rio Grande do Sul
+- `docker-sc` - Santa Catarina
+- `docker-se` - Sergipe
+- `docker-sp` - São Paulo
+- `docker-to` - Tocantins
+- `docker-all-states` - Todos os estados
+
+Você também pode modificar o arquivo `.docker/docker-compose.yaml` para personalizar a execução ou executar diretamente com docker-compose:
+
+```bash
+cd .docker
+docker-compose run --rm downloader-df      # Para o DF
+docker-compose run --rm downloader-sp      # Para São Paulo
+docker-compose run --rm downloader-all-states  # Para todos os estados
+```
+
+#### Volumes no Docker
+
+Os seguintes volumes são mapeados automaticamente:
+- `./downloads_mapbiomas` → `/app/downloads_mapbiomas` (para os arquivos baixados)
+- `./shape` → `/app/shape` (para os arquivos shapefile)
+
+#### Variáveis de ambiente no Docker
+
+O Docker está configurado com algumas variáveis de ambiente importantes:
+- `PYTHONPATH=/app`: Define o caminho para importação dos módulos Python
+- `V_MAPBIOMAS_REPLACE=1`: Controla se arquivos existentes serão substituídos (0) ou mantidos (1)
+- `SHAPEFILE_DIR=/app/shape`: Diretório onde os shapefiles devem ser colocados
+- `DOWNLOAD_DIR=/app/downloads_mapbiomas`: Diretório onde os arquivos baixados serão salvos
+
+### Onde obter shapefiles
+
+#### Fontes de shapefiles
+
+1. **Shapefiles oficiais do IBGE**:
+   - [Portal de Mapas do IBGE](https://portaldemapas.ibge.gov.br/portal.php#mapa222579)
+   - [Download de malhas municipais](https://www.ibge.gov.br/geociencias/organizacao-do-territorio/malhas_territoriais/15774-malhas.html)
+
+2. **Portais de dados abertos**:
+   - [Infraestrutura Nacional de Dados Espaciais (INDE)](https://www.inde.gov.br/)
+   - [Portal Brasileiro de Dados Abertos](https://dados.gov.br/)
+
+3. **Outros recursos regionais**:
+   - [Geoportal SEDUH-DF](https://www.geoportal.seduh.df.gov.br/geoportal/)
+   - [DataGEO São Paulo](https://datageo.ambiente.sp.gov.br/)
+
+#### Exemplo prático: Baixando e usando shapefile do IBGE
+
+```bash
+# Criar diretório para shapefiles do Brasil
+mkdir -p shape/BR
+cd shape/BR
+
+# Baixar shapefile dos municípios do Brasil (2020)
+wget https://geoftp.ibge.gov.br/organizacao_do_territorio/malhas_territoriais/malhas_municipais/municipio_2020/Brasil/BR/BR_Municipios_2020.zip
+unzip BR_Municipios_2020.zip
+cd ../..
+
+# Executar o downloader com este shapefile
+./downloader.sh --shapefile shape/BR/BR_Municipios_2020.shp --ano-inicio 2020 --ano-fim 2020
+```
+
+**Observação importante**: Os shapefiles não estão incluídos neste repositório devido ao tamanho dos arquivos e questões de licenciamento. Cada usuário deve baixar os shapefiles desejados de fontes oficiais.
+
+### Execução sem parâmetros
+
+Se o script for executado sem o parâmetro `--shapefile`, será exibida uma mensagem de erro.
+
+```bash
+./downloader.sh
+# Mostrará mensagem de erro e pedirá para especificar um shapefile
+```
+
+### Opções disponíveis
+
+- `--shapefile` ou `-s`: Caminho para shapefile com limites municipais (obrigatório)
+- `--ano-inicio` ou `-i`: Ano inicial para download (padrão: 1985)
+- `--ano-fim` ou `-f`: Ano final para download (padrão: 2023)
+- `--diretorio` ou `-d`: Diretório base para salvar os arquivos (padrão: downloads_mapbiomas)
+- `--teste` ou `-t`: Executa em modo de teste (sem download real)
+- `--limite-feicoes` ou `-l`: Limita o número de feições processadas (útil para shapefiles grandes)
+- `--substituir` ou `-r`: Substitui arquivos existentes sem perguntar
+- `--manter` ou `--usar-existentes`: Mantém arquivos existentes sem perguntar
+- `--help` ou `-h`: Exibe mensagem de ajuda
+
+**Anos disponíveis no MapBiomas**:
+Atualmente, o MapBiomas disponibiliza dados apenas para os seguintes anos:
+1985, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2023
+
+Se você especificar anos fora desta lista, o aplicativo automaticamente processará apenas os anos disponíveis dentro do intervalo solicitado.
+
+## Uso com Makefile
+
+O projeto fornece um Makefile completo para facilitar a execução de todas as tarefas:
+
+```bash
+# Comandos para ambiente local
+make setup                    # Configura o ambiente de desenvolvimento
+make install-deps             # Instala dependências necessárias
+make build                    # Constrói o pacote para distribuição
+make clean                    # Remove arquivos gerados automaticamente
+make publish VERSION=patch    # Incrementa versão (patch) e publica no PyPI
+
+# Comandos para download e processamento
+make download-shapefile SHAPEFILE=shape/DF/APPS_1.shp ANO_INICIO=2020 ANO_FIM=2021
+make clean-empty-dirs         # Remove diretórios vazios em downloads_mapbiomas
+
+# Comandos para estados específicos
+make df                       # Executar download para o Distrito Federal
+make sp                       # Executar download para São Paulo
+make se                       # Executar download para Sergipe
+make all-states               # Executar download para todos os estados
+
+# Comandos Docker para estados específicos
+make docker-df                # Executa o download para o DF no Docker
+make docker-sp                # Executa o download para São Paulo no Docker
+make docker-all-states        # Executa o download para todos os estados no Docker
+
+# Outros comandos Docker
+make docker-build             # Constrói a imagem Docker
+make docker-help              # Exibe ajuda do downloader no Docker
+make docker-clean             # Remove diretórios vazios via Docker
+make docker-custom CMD="cmd"  # Executa comando personalizado no Docker
+```
+
+Para ver a lista completa de comandos disponíveis:
+```bash
+make help
+```
+
+## Funcionamento interno
+
+O downloader opera da seguinte forma:
+
+1. Baixa o raster nacional completo do MapBiomas para cada ano solicitado
+2. Verifica se o shapefile contém o campo `CD_MUN` ou `cod_imovel` para identificar municípios
+3. Para cada geometria no shapefile, recorta o raster nacional usando a biblioteca `rasterio`
+4. Salva os rasters recortados em diretórios organizados por ano
+5. Remove automaticamente diretórios vazios após o processamento
+
+Isso permite processar grandes volumes de dados sem precisar baixar múltiplos arquivos menores.
+
+### Função de limpeza de diretórios vazios
+
+A nova função `limpar_diretorios_vazios` implementada no módulo `downloader.py`:
+- Percorre recursivamente o diretório base
+- Identifica subdiretórios que não contêm arquivos nem outros diretórios
+- Remove diretórios vazios de baixo para cima (bottom-up)
+- Preserva o diretório base mesmo que vazio
+
+## Uso da Biblioteca
+
+```python
+from src.downloader import verificar_cd_mun, extrair_cd_mun, baixar_e_recortar_por_shapefile, limpar_diretorios_vazios
+import asyncio
+
+# Verificar se shapefile tem campo CD_MUN
+info = verificar_cd_mun("caminho/para/shapefile.shp")
+
+# Extrair código de município de string formatada
+codigo = extrair_cd_mun("DF-5300108-XYZ123")  # "5300108"
+
+# Baixar e recortar
+async def download():
+    resultados = await baixar_e_recortar_por_shapefile(
+        shapefile_path="caminho/para/shapefile.shp",
+        ano_inicio=2020,
+        ano_fim=2021,
+        diretorio_base="downloads"
+    )
+    print(f"Municípios processados: {len(resultados)}")
+    
+    # Limpar diretórios vazios após processamento
+    limpar_diretorios_vazios("downloads")
+
+# Executar função assíncrona
+asyncio.run(download())
+```
+
+## Contribuição
+
+1. Sempre crie e ative um ambiente virtual antes de trabalhar no projeto
+2. Execute os testes antes de enviar suas alterações
+3. Mantenha a documentação atualizada
+
+## Licença
+
+Este projeto está licenciado sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
+
+## Créditos
+
+**Autor:** Ricardo Malnati
+
+**Repositório:** [https://github.com/malnati/mapbiomas-downloader](https://github.com/malnati/mapbiomas-downloader)
+
+**Contribuições:** Pull requests são bem-vindos. Para alterações importantes, abra primeiro uma issue para discutir o que você gostaria de mudar.
+
