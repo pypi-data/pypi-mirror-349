@@ -1,0 +1,37 @@
+Metadata-Version: 2.2
+Name: hk_ai_common
+Version: 1.0.1
+Summary: ai common toolo of hk
+Author: hk_common
+Author-email: hk@qq.com
+License: BSD License
+Platform: all
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: Chinese (Simplified)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Software Development :: Libraries
+License-File: LICENSE.txt
+Requires-Dist: fastapi
+Requires-Dist: uvicorn
+Requires-Dist: loguru
+Requires-Dist: pytz
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: license
+Dynamic: platform
+Dynamic: requires-dist
+Dynamic: summary
+
+# Example Package
+This is a simple example package. You can use
