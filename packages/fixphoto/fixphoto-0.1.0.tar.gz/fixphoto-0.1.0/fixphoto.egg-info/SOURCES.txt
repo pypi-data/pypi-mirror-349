@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.py
+fixphoto.egg-info/PKG-INFO
+fixphoto.egg-info/SOURCES.txt
+fixphoto.egg-info/dependency_links.txt
+fixphoto.egg-info/entry_points.txt
+fixphoto.egg-info/requires.txt
+fixphoto.egg-info/top_level.txt
