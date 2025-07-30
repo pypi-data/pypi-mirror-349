@@ -1,0 +1,22 @@
+Metadata-Version: 2.3
+Name: macrostrat.package_tools
+Version: 1.1.1
+Summary: Tools for managing Python packages in a monorepo
+Author: Daven Quinn
+Author-email: dev@davenquinn.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: macrostrat.utils (>=1.0.0,<2.0.0)
+Requires-Dist: requests (>=2.30.0,<3.0.0)
+Requires-Dist: rich (>=13.3.5,<14.0.0)
+Requires-Dist: toml (>=0.10.2,<0.11.0)
+Requires-Dist: typer (>=0.12.0,<0.13.0)
+Description-Content-Type: text/markdown
+
+# Macrostrat Package Tools
+
+Tools for managing a Python monorepo.
