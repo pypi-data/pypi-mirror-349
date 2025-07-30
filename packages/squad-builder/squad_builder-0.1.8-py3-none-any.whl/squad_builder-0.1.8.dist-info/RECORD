@@ -1,0 +1,15 @@
+squad_builder/__init__.py,sha256=90qxuy-VEPL6TVucJEgxz77Yw7hW0b8XpLsmWxz-6lk,160
+squad_builder/api/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+squad_builder/api/cli.py,sha256=WiAzKBauMRtLx-ezETYUq-VAboC0FbFxtnjz0g3r6yU,1525
+squad_builder/api/decorators.py,sha256=CntIitJjQQYjTVcnKo2t1czbdNi_YBE2NHmNm1kvOe0,1519
+squad_builder/data_client/__init__.py,sha256=5aE2HDS-lqQUMvtnH7-6ysjrrNmYB_CcxVrWcHnSD4o,134
+squad_builder/data_client/client.py,sha256=Q5ZfE9akYVU1GJJGNCrN3wi61959pDoF27lsFjoSQ4s,11272
+squad_builder/tasks/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+squad_builder/tasks/local_registry.py,sha256=e5DnOj0jakXESbNkcgN3A4McXhFAxH_GL9LD2KrijKE,1015
+tests/__init__.py,sha256=9CT63cEvu5xrKRYBx9JGxB_9ckxGePtcBUZs4S1FXF0,39
+tests/test_data_client.py,sha256=yJZaADT2gCaMxpve6mJuhCPHo9GtMe9peJ3VuO21nyY,7052
+squad_builder-0.1.8.dist-info/LICENSE,sha256=SpDh3KFOxtg7M5lBaebbqgB9suxUJMbtjv_q-elZQoc,1075
+squad_builder-0.1.8.dist-info/METADATA,sha256=Nty7pI3Bq3n3ttOYnCAgJEqgk0_k32ApgTbKwjm85AQ,6199
+squad_builder-0.1.8.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+squad_builder-0.1.8.dist-info/top_level.txt,sha256=mvPbbrTl22Hzhjlxe3iSLuJvxs7lG7NuaJgtAGxVs3M,20
+squad_builder-0.1.8.dist-info/RECORD,,
