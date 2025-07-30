@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Belgium (be) &#8212; django-localflavor 4.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=2bf1fcf8" />
+    
+    <script src="../_static/documentation_options.js?v=9f5556dd"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Bulgaria (bg)" href="bg.html" />
+    <link rel="prev" title="Australia (au)" href="au.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="bg.html" title="Bulgaria (bg)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="au.html" title="Australia (au)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Belgium (<code class="docutils literal notranslate"><span class="pre">be</span></code>)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="belgium-be">
+<h1>Belgium (<code class="docutils literal notranslate"><span class="pre">be</span></code>)<a class="headerlink" href="#belgium-be" title="Link to this heading">¶</a></h1>
+<section id="module-localflavor.be.forms">
+<span id="forms"></span><h2>Forms<a class="headerlink" href="#module-localflavor.be.forms" title="Link to this heading">¶</a></h2>
+<p>Belgium-specific Form helpers.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.be.forms.BEPostalCodeField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.be.forms.</span></span><span class="sig-name descname"><span class="pre">BEPostalCodeField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/be/forms.html#BEPostalCodeField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.be.forms.BEPostalCodeField" title="Link to this definition">¶</a></dt>
+<dd><p>A form field that validates its input as a belgium postal code.</p>
+<p>Belgium postal code is a 4 digits string. The first digit indicates
+the province (except for the 3ddd numbers that are shared by the
+eastern part of Flemish Brabant and Limburg and the and 1ddd that
+are shared by the Brussels Capital Region, the western part of
+Flemish Brabant and Walloon Brabant)</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.be.forms.BEProvinceSelect">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.be.forms.</span></span><span class="sig-name descname"><span class="pre">BEProvinceSelect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attrs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/be/forms.html#BEProvinceSelect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.be.forms.BEProvinceSelect" title="Link to this definition">¶</a></dt>
+<dd><p>A Select widget that uses a list of belgium provinces as its choices.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.be.forms.BERegionSelect">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.be.forms.</span></span><span class="sig-name descname"><span class="pre">BERegionSelect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attrs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/be/forms.html#BERegionSelect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.be.forms.BERegionSelect" title="Link to this definition">¶</a></dt>
+<dd><p>A Select widget that uses a list of belgium regions as its choices.</p>
+</dd></dl>
+
+</section>
+<section id="data">
+<h2>Data<a class="headerlink" href="#data" title="Link to this heading">¶</a></h2>
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.be.be_provinces.PROVINCE_CHOICES">
+<span class="sig-prename descclassname"><span class="pre">localflavor.be.be_provinces.</span></span><span class="sig-name descname"><span class="pre">PROVINCE_CHOICES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(('VAN',</span> <span class="pre">'Antwerp'),</span> <span class="pre">('BRU',</span> <span class="pre">'Brussels'),</span> <span class="pre">('VOV',</span> <span class="pre">'East</span> <span class="pre">Flanders'),</span> <span class="pre">('VBR',</span> <span class="pre">'Flemish</span> <span class="pre">Brabant'),</span> <span class="pre">('WHT',</span> <span class="pre">'Hainaut'),</span> <span class="pre">('WLG',</span> <span class="pre">'Liege'),</span> <span class="pre">('VLI',</span> <span class="pre">'Limburg'),</span> <span class="pre">('WLX',</span> <span class="pre">'Luxembourg'),</span> <span class="pre">('WNA',</span> <span class="pre">'Namur'),</span> <span class="pre">('WBR',</span> <span class="pre">'Walloon</span> <span class="pre">Brabant'),</span> <span class="pre">('VWV',</span> <span class="pre">'West</span> <span class="pre">Flanders'))</span></em><a class="headerlink" href="#localflavor.be.be_provinces.PROVINCE_CHOICES" title="Link to this definition">¶</a></dt>
+<dd><p>ISO codes</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.be.be_regions.REGION_CHOICES">
+<span class="sig-prename descclassname"><span class="pre">localflavor.be.be_regions.</span></span><span class="sig-name descname"><span class="pre">REGION_CHOICES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(('BRU',</span> <span class="pre">'Brussels</span> <span class="pre">Capital</span> <span class="pre">Region'),</span> <span class="pre">('VLG',</span> <span class="pre">'Flemish</span> <span class="pre">Region'),</span> <span class="pre">('WAL',</span> <span class="pre">'Wallonia'))</span></em><a class="headerlink" href="#localflavor.be.be_regions.REGION_CHOICES" title="Link to this definition">¶</a></dt>
+<dd><p>ISO codes</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Belgium (<code class="docutils literal notranslate"><span class="pre">be</span></code>)</a><ul>
+<li><a class="reference internal" href="#module-localflavor.be.forms">Forms</a><ul>
+<li><a class="reference internal" href="#localflavor.be.forms.BEPostalCodeField"><code class="docutils literal notranslate"><span class="pre">BEPostalCodeField</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.be.forms.BEProvinceSelect"><code class="docutils literal notranslate"><span class="pre">BEProvinceSelect</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.be.forms.BERegionSelect"><code class="docutils literal notranslate"><span class="pre">BERegionSelect</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data">Data</a><ul>
+<li><a class="reference internal" href="#localflavor.be.be_provinces.PROVINCE_CHOICES"><code class="docutils literal notranslate"><span class="pre">PROVINCE_CHOICES</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.be.be_regions.REGION_CHOICES"><code class="docutils literal notranslate"><span class="pre">REGION_CHOICES</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="au.html"
+                          title="previous chapter">Australia (<code class="docutils literal notranslate"><span class="pre">au</span></code>)</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="bg.html"
+                          title="next chapter">Bulgaria (<code class="docutils literal notranslate"><span class="pre">bg</span></code>)</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/localflavor/be.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="bg.html" title="Bulgaria (bg)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="au.html" title="Australia (au)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Belgium (<code class="docutils literal notranslate"><span class="pre">be</span></code>)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright Django Software Foundation and individual contributors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+  </body>
+</html>

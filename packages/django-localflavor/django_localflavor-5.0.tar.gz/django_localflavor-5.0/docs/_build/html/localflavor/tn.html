@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Tunisia (tn) &#8212; django-localflavor 4.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=2bf1fcf8" />
+    
+    <script src="../_static/documentation_options.js?v=9f5556dd"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Turkey (tr)" href="tr.html" />
+    <link rel="prev" title="Slovakia (sk)" href="sk.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="tr.html" title="Turkey (tr)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sk.html" title="Slovakia (sk)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Tunisia (<code class="docutils literal notranslate"><span class="pre">tn</span></code>)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-localflavor.tn.forms">
+<span id="tunisia-tn"></span><h1>Tunisia (<code class="docutils literal notranslate"><span class="pre">tn</span></code>)<a class="headerlink" href="#module-localflavor.tn.forms" title="Link to this heading">¶</a></h1>
+<p>Tunisia-specific Form helpers.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.tn.forms.TNGovernorateSelect">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.tn.forms.</span></span><span class="sig-name descname"><span class="pre">TNGovernorateSelect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attrs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/tn/forms.html#TNGovernorateSelect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.tn.forms.TNGovernorateSelect" title="Link to this definition">¶</a></dt>
+<dd><p>A Select widget that uses a list of the Tunisian governorates as its choices.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.tn.tn_governorates.GOVERNORATE_CHOICES">
+<span class="sig-prename descclassname"><span class="pre">localflavor.tn.tn_governorates.</span></span><span class="sig-name descname"><span class="pre">GOVERNORATE_CHOICES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(('ariana',</span> <span class="pre">'Ariana'),</span> <span class="pre">('beja',</span> <span class="pre">'Beja'),</span> <span class="pre">('ben</span> <span class="pre">arous',</span> <span class="pre">'Ben</span> <span class="pre">Arous'),</span> <span class="pre">('bizert',</span> <span class="pre">'Bizert'),</span> <span class="pre">('gabes',</span> <span class="pre">'Gabes'),</span> <span class="pre">('gafsa',</span> <span class="pre">'Gafsa'),</span> <span class="pre">('jendouba',</span> <span class="pre">'Jendouba'),</span> <span class="pre">('kairouan',</span> <span class="pre">'Kairouan'),</span> <span class="pre">('kasserine',</span> <span class="pre">'Kasserine'),</span> <span class="pre">('kebili',</span> <span class="pre">'Kebili'),</span> <span class="pre">('kef',</span> <span class="pre">'Kef'),</span> <span class="pre">('mahdia',</span> <span class="pre">'Mahdia'),</span> <span class="pre">('manouba',</span> <span class="pre">'Manouba'),</span> <span class="pre">('medenine',</span> <span class="pre">'Medenine'),</span> <span class="pre">('monastir',</span> <span class="pre">'Monastir'),</span> <span class="pre">('nabeul',</span> <span class="pre">'Nabeul'),</span> <span class="pre">('sfax',</span> <span class="pre">'Sfax'),</span> <span class="pre">('sidi</span> <span class="pre">bouzid',</span> <span class="pre">'Sidi</span> <span class="pre">Bouzid'),</span> <span class="pre">('siliana',</span> <span class="pre">'Siliana'),</span> <span class="pre">('sousse',</span> <span class="pre">'Sousse'),</span> <span class="pre">('tataouine',</span> <span class="pre">'Tataouine'),</span> <span class="pre">('tozeur',</span> <span class="pre">'Tozeur'),</span> <span class="pre">('tunis',</span> <span class="pre">'Tunis'),</span> <span class="pre">('zaghouan',</span> <span class="pre">'Zaghouan'))</span></em><a class="headerlink" href="#localflavor.tn.tn_governorates.GOVERNORATE_CHOICES" title="Link to this definition">¶</a></dt>
+<dd><p>All the 24 Tunisian Governorates
+<a class="reference external" href="http://en.wikipedia.org/wiki/Governorates_of_Tunisia">http://en.wikipedia.org/wiki/Governorates_of_Tunisia</a></p>
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Tunisia (<code class="docutils literal notranslate"><span class="pre">tn</span></code>)</a><ul>
+<li><a class="reference internal" href="#localflavor.tn.forms.TNGovernorateSelect"><code class="docutils literal notranslate"><span class="pre">TNGovernorateSelect</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.tn.tn_governorates.GOVERNORATE_CHOICES"><code class="docutils literal notranslate"><span class="pre">GOVERNORATE_CHOICES</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="sk.html"
+                          title="previous chapter">Slovakia (<code class="docutils literal notranslate"><span class="pre">sk</span></code>)</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="tr.html"
+                          title="next chapter">Turkey (<code class="docutils literal notranslate"><span class="pre">tr</span></code>)</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/localflavor/tn.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="tr.html" title="Turkey (tr)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sk.html" title="Slovakia (sk)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Tunisia (<code class="docutils literal notranslate"><span class="pre">tn</span></code>)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright Django Software Foundation and individual contributors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+  </body>
+</html>

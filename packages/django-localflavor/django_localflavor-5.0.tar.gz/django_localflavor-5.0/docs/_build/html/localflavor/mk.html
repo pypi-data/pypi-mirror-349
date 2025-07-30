@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Macedonia (mk) &#8212; django-localflavor 4.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=2bf1fcf8" />
+    
+    <script src="../_static/documentation_options.js?v=9f5556dd"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Malta (mt)" href="mt.html" />
+    <link rel="prev" title="Moldova (md)" href="md.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="mt.html" title="Malta (mt)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="md.html" title="Moldova (md)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Macedonia (<code class="docutils literal notranslate"><span class="pre">mk</span></code>)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="macedonia-mk">
+<h1>Macedonia (<code class="docutils literal notranslate"><span class="pre">mk</span></code>)<a class="headerlink" href="#macedonia-mk" title="Link to this heading">¶</a></h1>
+<section id="module-localflavor.mk.forms">
+<span id="forms"></span><h2>Forms<a class="headerlink" href="#module-localflavor.mk.forms" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.mk.forms.MKIdentityCardNumberField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.mk.forms.</span></span><span class="sig-name descname"><span class="pre">MKIdentityCardNumberField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/mk/forms.html#MKIdentityCardNumberField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.mk.forms.MKIdentityCardNumberField" title="Link to this definition">¶</a></dt>
+<dd><p>A Macedonian ID card number.</p>
+<p>Accepts both old and new format.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.mk.forms.MKMunicipalitySelect">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.mk.forms.</span></span><span class="sig-name descname"><span class="pre">MKMunicipalitySelect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attrs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/mk/forms.html#MKMunicipalitySelect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.mk.forms.MKMunicipalitySelect" title="Link to this definition">¶</a></dt>
+<dd><p>A form <code class="docutils literal notranslate"><span class="pre">Select</span></code> widget that uses a list of Macedonian municipalities as choices.</p>
+<p>The label is the name of the municipality and the value is a 2 character code for the municipality.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.mk.forms.UMCNField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.mk.forms.</span></span><span class="sig-name descname"><span class="pre">UMCNField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/mk/forms.html#UMCNField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.mk.forms.UMCNField" title="Link to this definition">¶</a></dt>
+<dd><p>A form field that validates input as a unique master citizen number.</p>
+<p>The format of the unique master citizen number has been kept the same from
+Yugoslavia. It is still in use in other countries as well, it is not applicable
+solely in Macedonia. For more information see:
+<a class="reference external" href="https://secure.wikimedia.org/wikipedia/en/wiki/Unique_Master_Citizen_Number">https://secure.wikimedia.org/wikipedia/en/wiki/Unique_Master_Citizen_Number</a></p>
+<p>A value will pass validation if it complies to the following rules:</p>
+<ul class="simple">
+<li><p>Consists of exactly 13 digits</p></li>
+<li><p>The first 7 digits represent a valid past date in the format DDMMYYY</p></li>
+<li><p>The last digit of the UMCN passes a checksum test</p></li>
+</ul>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.mk.forms.UMCNField.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/mk/forms.html#UMCNField.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.mk.forms.UMCNField.clean" title="Link to this definition">¶</a></dt>
+<dd><p>Validate the given value and return its “cleaned” value as an
+appropriate Python object. Raise ValidationError for any errors.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-localflavor.mk.models">
+<span id="models"></span><h2>Models<a class="headerlink" href="#module-localflavor.mk.models" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.mk.models.MKIdentityCardNumberField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.mk.models.</span></span><span class="sig-name descname"><span class="pre">MKIdentityCardNumberField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/mk/models.html#MKIdentityCardNumberField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.mk.models.MKIdentityCardNumberField" title="Link to this definition">¶</a></dt>
+<dd><p>A form field that validates input as a Macedonian identity card number.</p>
+<p>Both old and new identity card numbers are supported.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.mk.models.MKIdentityCardNumberField.formfield">
+<span class="sig-name descname"><span class="pre">formfield</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/mk/models.html#MKIdentityCardNumberField.formfield"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.mk.models.MKIdentityCardNumberField.formfield" title="Link to this definition">¶</a></dt>
+<dd><p>Return a django.forms.Field instance for this field.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.mk.models.MKMunicipalityField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.mk.models.</span></span><span class="sig-name descname"><span class="pre">MKMunicipalityField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/mk/models.html#MKMunicipalityField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.mk.models.MKMunicipalityField" title="Link to this definition">¶</a></dt>
+<dd><p>A form field that validates input as a Macedonian identity card number.</p>
+<p>Both old and new identity card numbers are supported.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.mk.models.MKMunicipalityField.deconstruct">
+<span class="sig-name descname"><span class="pre">deconstruct</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/mk/models.html#MKMunicipalityField.deconstruct"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.mk.models.MKMunicipalityField.deconstruct" title="Link to this definition">¶</a></dt>
+<dd><p>Return enough information to recreate the field as a 4-tuple:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>The name of the field on the model, if contribute_to_class() has
+been run.</p></li>
+<li><p>The import path of the field, including the class, e.g.
+django.db.models.IntegerField. This should be the most portable
+version, so less specific may be better.</p></li>
+<li><p>A list of positional arguments.</p></li>
+<li><p>A dict of keyword arguments.</p></li>
+</ul>
+</div></blockquote>
+<p>Note that the positional or keyword arguments must contain values of
+the following types (including inner values of collection types):</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>None, bool, str, int, float, complex, set, frozenset, list, tuple,
+dict</p></li>
+<li><p>UUID</p></li>
+<li><p>datetime.datetime (naive), datetime.date</p></li>
+<li><p>top-level classes, top-level functions - will be referenced by their
+full import path</p></li>
+<li><p>Storage instances - these have their own deconstruct() method</p></li>
+</ul>
+</div></blockquote>
+<p>This is because the values here must be serialized into a text format
+(possibly new Python code, possibly JSON) and these are the only types
+with encoding handlers defined.</p>
+<p>There’s no need to return the exact way the field was instantiated this
+time, just ensure that the resulting field is the same - prefer keyword
+arguments over positional ones, and omit parameters with their default
+values.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.mk.models.UMCNField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.mk.models.</span></span><span class="sig-name descname"><span class="pre">UMCNField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/mk/models.html#UMCNField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.mk.models.UMCNField" title="Link to this definition">¶</a></dt>
+<dd><p>A form field that validates input as a unique master citizen number.</p>
+<p>The format of the unique master citizen number is not unique
+to Macedonia. For more information see:
+<a class="reference external" href="https://secure.wikimedia.org/wikipedia/en/wiki/Unique_Master_Citizen_Number">https://secure.wikimedia.org/wikipedia/en/wiki/Unique_Master_Citizen_Number</a></p>
+<p>A value will pass validation if it complies to the following rules:</p>
+<ul class="simple">
+<li><p>Consists of exactly 13 digits</p></li>
+<li><p>The first 7 digits represent a valid past date in the format DDMMYYY</p></li>
+<li><p>The last digit of the UMCN passes a checksum test</p></li>
+</ul>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.mk.models.UMCNField.formfield">
+<span class="sig-name descname"><span class="pre">formfield</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/mk/models.html#UMCNField.formfield"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.mk.models.UMCNField.formfield" title="Link to this definition">¶</a></dt>
+<dd><p>Return a django.forms.Field instance for this field.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="data">
+<h2>Data<a class="headerlink" href="#data" title="Link to this heading">¶</a></h2>
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.mk.mk_choices.MK_MUNICIPALITIES">
+<span class="sig-prename descclassname"><span class="pre">localflavor.mk.mk_choices.</span></span><span class="sig-name descname"><span class="pre">MK_MUNICIPALITIES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(('AD',</span> <span class="pre">'Aerodrom'),</span> <span class="pre">('AR',</span> <span class="pre">'Aračinovo'),</span> <span class="pre">('BR',</span> <span class="pre">'Berovo'),</span> <span class="pre">('TL',</span> <span class="pre">'Bitola'),</span> <span class="pre">('BG',</span> <span class="pre">'Bogdanci'),</span> <span class="pre">('VJ',</span> <span class="pre">'Bogovinje'),</span> <span class="pre">('BS',</span> <span class="pre">'Bosilovo'),</span> <span class="pre">('BN',</span> <span class="pre">'Brvenica'),</span> <span class="pre">('BU',</span> <span class="pre">'Butel'),</span> <span class="pre">('VA',</span> <span class="pre">'Valandovo'),</span> <span class="pre">('VL',</span> <span class="pre">'Vasilevo'),</span> <span class="pre">('VV',</span> <span class="pre">'Vevčani'),</span> <span class="pre">('VE',</span> <span class="pre">'Veles'),</span> <span class="pre">('NI',</span> <span class="pre">'Vinica'),</span> <span class="pre">('VC',</span> <span class="pre">'Vraneštica'),</span> <span class="pre">('VH',</span> <span class="pre">'Vrapčište'),</span> <span class="pre">('GB',</span> <span class="pre">'Gazi</span> <span class="pre">Baba'),</span> <span class="pre">('GV',</span> <span class="pre">'Gevgelija'),</span> <span class="pre">('GT',</span> <span class="pre">'Gostivar'),</span> <span class="pre">('GR',</span> <span class="pre">'Gradsko'),</span> <span class="pre">('DB',</span> <span class="pre">'Debar'),</span> <span class="pre">('DA',</span> <span class="pre">'Debarca'),</span> <span class="pre">('DL',</span> <span class="pre">'Delčevo'),</span> <span class="pre">('DK',</span> <span class="pre">'Demir</span> <span class="pre">Kapija'),</span> <span class="pre">('DM',</span> <span class="pre">'Demir</span> <span class="pre">Hisar'),</span> <span class="pre">('DE',</span> <span class="pre">'Dolneni'),</span> <span class="pre">('DR',</span> <span class="pre">'Drugovo'),</span> <span class="pre">('GP',</span> <span class="pre">'Gjorče</span> <span class="pre">Petrov'),</span> <span class="pre">('ZE',</span> <span class="pre">'Želino'),</span> <span class="pre">('ZA',</span> <span class="pre">'Zajas'),</span> <span class="pre">('ZK',</span> <span class="pre">'Zelenikovo'),</span> <span class="pre">('ZR',</span> <span class="pre">'Zrnovci'),</span> <span class="pre">('IL',</span> <span class="pre">'Ilinden'),</span> <span class="pre">('JG',</span> <span class="pre">'Jegunovce'),</span> <span class="pre">('AV',</span> <span class="pre">'Kavadarci'),</span> <span class="pre">('KB',</span> <span class="pre">'Karbinci'),</span> <span class="pre">('KX',</span> <span class="pre">'Karpoš'),</span> <span class="pre">('VD',</span> <span class="pre">'Kisela</span> <span class="pre">Voda'),</span> <span class="pre">('KH',</span> <span class="pre">'Kičevo'),</span> <span class="pre">('KN',</span> <span class="pre">'Konče'),</span> <span class="pre">('OC',</span> <span class="pre">'Koćani'),</span> <span class="pre">('KY',</span> <span class="pre">'Kratovo'),</span> <span class="pre">('KZ',</span> <span class="pre">'Kriva</span> <span class="pre">Palanka'),</span> <span class="pre">('KG',</span> <span class="pre">'Krivogaštani'),</span> <span class="pre">('KS',</span> <span class="pre">'Kruševo'),</span> <span class="pre">('UM',</span> <span class="pre">'Kumanovo'),</span> <span class="pre">('LI',</span> <span class="pre">'Lipkovo'),</span> <span class="pre">('LO',</span> <span class="pre">'Lozovo'),</span> <span class="pre">('MR',</span> <span class="pre">'Mavrovo</span> <span class="pre">i</span> <span class="pre">Rostuša'),</span> <span class="pre">('MK',</span> <span class="pre">'Makedonska</span> <span class="pre">Kamenica'),</span> <span class="pre">('MD',</span> <span class="pre">'Makedonski</span> <span class="pre">Brod'),</span> <span class="pre">('MG',</span> <span class="pre">'Mogila'),</span> <span class="pre">('NG',</span> <span class="pre">'Negotino'),</span> <span class="pre">('NV',</span> <span class="pre">'Novaci'),</span> <span class="pre">('NS',</span> <span class="pre">'Novo</span> <span class="pre">Selo'),</span> <span class="pre">('OS',</span> <span class="pre">'Oslomej'),</span> <span class="pre">('OD',</span> <span class="pre">'Ohrid'),</span> <span class="pre">('PE',</span> <span class="pre">'Petrovec'),</span> <span class="pre">('PH',</span> <span class="pre">'Pehčevo'),</span> <span class="pre">('PN',</span> <span class="pre">'Plasnica'),</span> <span class="pre">('PP',</span> <span class="pre">'Prilep'),</span> <span class="pre">('PT',</span> <span class="pre">'Probištip'),</span> <span class="pre">('RV',</span> <span class="pre">'Radoviš'),</span> <span class="pre">('RN',</span> <span class="pre">'Rankovce'),</span> <span class="pre">('RE',</span> <span class="pre">'Resen'),</span> <span class="pre">('RO',</span> <span class="pre">'Rosoman'),</span> <span class="pre">('AJ',</span> <span class="pre">'Saraj'),</span> <span class="pre">('SL',</span> <span class="pre">'Sveti</span> <span class="pre">Nikole'),</span> <span class="pre">('SS',</span> <span class="pre">'Sopište'),</span> <span class="pre">('SD',</span> <span class="pre">'Star</span> <span class="pre">Dojran'),</span> <span class="pre">('NA',</span> <span class="pre">'Staro</span> <span class="pre">Nagoričane'),</span> <span class="pre">('UG',</span> <span class="pre">'Struga'),</span> <span class="pre">('RU',</span> <span class="pre">'Strumica'),</span> <span class="pre">('SU',</span> <span class="pre">'Studeničani'),</span> <span class="pre">('TR',</span> <span class="pre">'Tearce'),</span> <span class="pre">('ET',</span> <span class="pre">'Tetovo'),</span> <span class="pre">('CE',</span> <span class="pre">'Centar'),</span> <span class="pre">('CZ',</span> <span class="pre">'Centar-Župa'),</span> <span class="pre">('CI',</span> <span class="pre">'Čair'),</span> <span class="pre">('CA',</span> <span class="pre">'Čaška'),</span> <span class="pre">('CH',</span> <span class="pre">'Češinovo-Obleševo'),</span> <span class="pre">('CS',</span> <span class="pre">'Čučer-Sandevo'),</span> <span class="pre">('ST',</span> <span class="pre">'Štip'),</span> <span class="pre">('SO',</span> <span class="pre">'Šuto</span> <span class="pre">Orizari'))</span></em><a class="headerlink" href="#localflavor.mk.mk_choices.MK_MUNICIPALITIES" title="Link to this definition">¶</a></dt>
+<dd><p>Macedonian municipalities per the reorganization from 2004.</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Macedonia (<code class="docutils literal notranslate"><span class="pre">mk</span></code>)</a><ul>
+<li><a class="reference internal" href="#module-localflavor.mk.forms">Forms</a><ul>
+<li><a class="reference internal" href="#localflavor.mk.forms.MKIdentityCardNumberField"><code class="docutils literal notranslate"><span class="pre">MKIdentityCardNumberField</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.mk.forms.MKMunicipalitySelect"><code class="docutils literal notranslate"><span class="pre">MKMunicipalitySelect</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.mk.forms.UMCNField"><code class="docutils literal notranslate"><span class="pre">UMCNField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.mk.forms.UMCNField.clean"><code class="docutils literal notranslate"><span class="pre">UMCNField.clean()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-localflavor.mk.models">Models</a><ul>
+<li><a class="reference internal" href="#localflavor.mk.models.MKIdentityCardNumberField"><code class="docutils literal notranslate"><span class="pre">MKIdentityCardNumberField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.mk.models.MKIdentityCardNumberField.formfield"><code class="docutils literal notranslate"><span class="pre">MKIdentityCardNumberField.formfield()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.mk.models.MKMunicipalityField"><code class="docutils literal notranslate"><span class="pre">MKMunicipalityField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.mk.models.MKMunicipalityField.deconstruct"><code class="docutils literal notranslate"><span class="pre">MKMunicipalityField.deconstruct()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.mk.models.UMCNField"><code class="docutils literal notranslate"><span class="pre">UMCNField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.mk.models.UMCNField.formfield"><code class="docutils literal notranslate"><span class="pre">UMCNField.formfield()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data">Data</a><ul>
+<li><a class="reference internal" href="#localflavor.mk.mk_choices.MK_MUNICIPALITIES"><code class="docutils literal notranslate"><span class="pre">MK_MUNICIPALITIES</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="md.html"
+                          title="previous chapter">Moldova (<code class="docutils literal notranslate"><span class="pre">md</span></code>)</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="mt.html"
+                          title="next chapter">Malta (<code class="docutils literal notranslate"><span class="pre">mt</span></code>)</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/localflavor/mk.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="mt.html" title="Malta (mt)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="md.html" title="Moldova (md)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Macedonia (<code class="docutils literal notranslate"><span class="pre">mk</span></code>)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright Django Software Foundation and individual contributors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+  </body>
+</html>

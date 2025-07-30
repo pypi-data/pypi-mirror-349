@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Czech Republic (cz) &#8212; django-localflavor 4.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=2bf1fcf8" />
+    
+    <script src="../_static/documentation_options.js?v=9f5556dd"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Germany (de)" href="de.html" />
+    <link rel="prev" title="Colombia (co)" href="co.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="de.html" title="Germany (de)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="co.html" title="Colombia (co)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Czech Republic (<code class="docutils literal notranslate"><span class="pre">cz</span></code>)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="czech-republic-cz">
+<h1>Czech Republic (<code class="docutils literal notranslate"><span class="pre">cz</span></code>)<a class="headerlink" href="#czech-republic-cz" title="Link to this heading">¶</a></h1>
+<section id="module-localflavor.cz.forms">
+<span id="forms"></span><h2>Forms<a class="headerlink" href="#module-localflavor.cz.forms" title="Link to this heading">¶</a></h2>
+<p>Czech-specific form helpers.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.cz.forms.CZBirthNumberField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.cz.forms.</span></span><span class="sig-name descname"><span class="pre">CZBirthNumberField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/cz/forms.html#CZBirthNumberField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.cz.forms.CZBirthNumberField" title="Link to this definition">¶</a></dt>
+<dd><p>Czech birth number form field.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.cz.forms.CZBirthNumberField.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/cz/forms.html#CZBirthNumberField.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.cz.forms.CZBirthNumberField.clean" title="Link to this definition">¶</a></dt>
+<dd><p>Validate the given value and return its “cleaned” value as an
+appropriate Python object. Raise ValidationError for any errors.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.cz.forms.CZICNumberField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.cz.forms.</span></span><span class="sig-name descname"><span class="pre">CZICNumberField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/cz/forms.html#CZICNumberField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.cz.forms.CZICNumberField" title="Link to this definition">¶</a></dt>
+<dd><p>Czech IC number form field.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.cz.forms.CZICNumberField.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/cz/forms.html#CZICNumberField.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.cz.forms.CZICNumberField.clean" title="Link to this definition">¶</a></dt>
+<dd><p>Validate the given value and return its “cleaned” value as an
+appropriate Python object. Raise ValidationError for any errors.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.cz.forms.CZPostalCodeField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.cz.forms.</span></span><span class="sig-name descname"><span class="pre">CZPostalCodeField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/cz/forms.html#CZPostalCodeField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.cz.forms.CZPostalCodeField" title="Link to this definition">¶</a></dt>
+<dd><p>A form field that validates its input as Czech postal code.</p>
+<p>Valid form is XXXXX or XXX XX, where X represents integer.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.cz.forms.CZPostalCodeField.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/cz/forms.html#CZPostalCodeField.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.cz.forms.CZPostalCodeField.clean" title="Link to this definition">¶</a></dt>
+<dd><p>Validates the input and returns a string that contains only numbers.</p>
+<p>Returns an empty string for empty values.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.cz.forms.CZRegionSelect">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.cz.forms.</span></span><span class="sig-name descname"><span class="pre">CZRegionSelect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attrs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/cz/forms.html#CZRegionSelect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.cz.forms.CZRegionSelect" title="Link to this definition">¶</a></dt>
+<dd><p>A select widget widget with list of Czech regions as choices.</p>
+</dd></dl>
+
+</section>
+<section id="data">
+<h2>Data<a class="headerlink" href="#data" title="Link to this heading">¶</a></h2>
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.cz.cz_regions.REGION_CHOICES">
+<span class="sig-prename descclassname"><span class="pre">localflavor.cz.cz_regions.</span></span><span class="sig-name descname"><span class="pre">REGION_CHOICES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(('PR',</span> <span class="pre">'Prague'),</span> <span class="pre">('CE',</span> <span class="pre">'Central</span> <span class="pre">Bohemian</span> <span class="pre">Region'),</span> <span class="pre">('SO',</span> <span class="pre">'South</span> <span class="pre">Bohemian</span> <span class="pre">Region'),</span> <span class="pre">('PI',</span> <span class="pre">'Pilsen</span> <span class="pre">Region'),</span> <span class="pre">('CA',</span> <span class="pre">'Carlsbad</span> <span class="pre">Region'),</span> <span class="pre">('US',</span> <span class="pre">'Usti</span> <span class="pre">Region'),</span> <span class="pre">('LB',</span> <span class="pre">'Liberec</span> <span class="pre">Region'),</span> <span class="pre">('HK',</span> <span class="pre">'Hradec</span> <span class="pre">Region'),</span> <span class="pre">('PA',</span> <span class="pre">'Pardubice</span> <span class="pre">Region'),</span> <span class="pre">('VY',</span> <span class="pre">'Vysocina</span> <span class="pre">Region'),</span> <span class="pre">('SM',</span> <span class="pre">'South</span> <span class="pre">Moravian</span> <span class="pre">Region'),</span> <span class="pre">('OL',</span> <span class="pre">'Olomouc</span> <span class="pre">Region'),</span> <span class="pre">('ZL',</span> <span class="pre">'Zlin</span> <span class="pre">Region'),</span> <span class="pre">('MS',</span> <span class="pre">'Moravian-Silesian</span> <span class="pre">Region'))</span></em><a class="headerlink" href="#localflavor.cz.cz_regions.REGION_CHOICES" title="Link to this definition">¶</a></dt>
+<dd><p>Czech regions, translations get from <a class="reference external" href="http://www.crwflags.com/fotw/Flags/cz-re.html">http://www.crwflags.com/fotw/Flags/cz-re.html</a></p>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Czech Republic (<code class="docutils literal notranslate"><span class="pre">cz</span></code>)</a><ul>
+<li><a class="reference internal" href="#module-localflavor.cz.forms">Forms</a><ul>
+<li><a class="reference internal" href="#localflavor.cz.forms.CZBirthNumberField"><code class="docutils literal notranslate"><span class="pre">CZBirthNumberField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.cz.forms.CZBirthNumberField.clean"><code class="docutils literal notranslate"><span class="pre">CZBirthNumberField.clean()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.cz.forms.CZICNumberField"><code class="docutils literal notranslate"><span class="pre">CZICNumberField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.cz.forms.CZICNumberField.clean"><code class="docutils literal notranslate"><span class="pre">CZICNumberField.clean()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.cz.forms.CZPostalCodeField"><code class="docutils literal notranslate"><span class="pre">CZPostalCodeField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.cz.forms.CZPostalCodeField.clean"><code class="docutils literal notranslate"><span class="pre">CZPostalCodeField.clean()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.cz.forms.CZRegionSelect"><code class="docutils literal notranslate"><span class="pre">CZRegionSelect</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data">Data</a><ul>
+<li><a class="reference internal" href="#localflavor.cz.cz_regions.REGION_CHOICES"><code class="docutils literal notranslate"><span class="pre">REGION_CHOICES</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="co.html"
+                          title="previous chapter">Colombia (<code class="docutils literal notranslate"><span class="pre">co</span></code>)</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="de.html"
+                          title="next chapter">Germany (<code class="docutils literal notranslate"><span class="pre">de</span></code>)</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/localflavor/cz.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="de.html" title="Germany (de)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="co.html" title="Colombia (co)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Czech Republic (<code class="docutils literal notranslate"><span class="pre">cz</span></code>)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright Django Software Foundation and individual contributors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+  </body>
+</html>

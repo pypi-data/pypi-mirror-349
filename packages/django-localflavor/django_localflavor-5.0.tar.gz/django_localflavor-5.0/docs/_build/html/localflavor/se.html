@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Sweden (se) &#8212; django-localflavor 4.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=2bf1fcf8" />
+    
+    <script src="../_static/documentation_options.js?v=9f5556dd"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Singapore (sg)" href="sg.html" />
+    <link rel="prev" title="Russia (ru)" href="ru.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="sg.html" title="Singapore (sg)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="ru.html" title="Russia (ru)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Sweden (<code class="docutils literal notranslate"><span class="pre">se</span></code>)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="sweden-se">
+<h1>Sweden (<code class="docutils literal notranslate"><span class="pre">se</span></code>)<a class="headerlink" href="#sweden-se" title="Link to this heading">¶</a></h1>
+<section id="module-localflavor.se.forms">
+<span id="forms"></span><h2>Forms<a class="headerlink" href="#module-localflavor.se.forms" title="Link to this heading">¶</a></h2>
+<p>Swedish specific Form helpers.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.se.forms.SECountySelect">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.se.forms.</span></span><span class="sig-name descname"><span class="pre">SECountySelect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attrs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/se/forms.html#SECountySelect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.se.forms.SECountySelect" title="Link to this definition">¶</a></dt>
+<dd><p>A Select form widget that uses a list of the Swedish counties (län) as its choices.</p>
+<p>The cleaned value is the official county code – see
+<a class="reference external" href="http://en.wikipedia.org/wiki/Counties_of_Sweden">http://en.wikipedia.org/wiki/Counties_of_Sweden</a> for a list.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.se.forms.SEOrganisationNumberField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.se.forms.</span></span><span class="sig-name descname"><span class="pre">SEOrganisationNumberField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/se/forms.html#SEOrganisationNumberField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.se.forms.SEOrganisationNumberField" title="Link to this definition">¶</a></dt>
+<dd><p>A form field that validates input as a Swedish organisation number (organisationsnummer).</p>
+<p>It accepts the same input as SEPersonalIdentityField (for sole
+proprietorships (enskild firma). However, co-ordination numbers are not
+accepted.</p>
+<p>It also accepts ordinary Swedish organisation numbers with the format
+NNNNNNNNNN.</p>
+<p>The return value will be YYYYMMDDXXXX for sole proprietors, and NNNNNNNNNN
+for other organisations.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.se.forms.SEOrganisationNumberField.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/se/forms.html#SEOrganisationNumberField.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.se.forms.SEOrganisationNumberField.clean" title="Link to this definition">¶</a></dt>
+<dd><p>Validate the given value and return its “cleaned” value as an
+appropriate Python object. Raise ValidationError for any errors.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.se.forms.SEPersonalIdentityNumberField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.se.forms.</span></span><span class="sig-name descname"><span class="pre">SEPersonalIdentityNumberField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coordination_number</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interim_number</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/se/forms.html#SEPersonalIdentityNumberField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.se.forms.SEPersonalIdentityNumberField" title="Link to this definition">¶</a></dt>
+<dd><p>A form field that validates input as a Swedish personal identity number (personnummer).</p>
+<p>The correct formats are YYYYMMDD-XXXX, YYYYMMDDXXXX, YYMMDD-XXXX,
+YYMMDDXXXX and YYMMDD+XXXX.</p>
+<p>A + indicates that the person is older than 100 years, which will be taken
+into consideration when the date is validated.</p>
+<p>The checksum will be calculated and checked. The birth date is checked to
+be a valid date.</p>
+<p>By default, co-ordination numbers (samordningsnummer) will be accepted. To
+only allow real personal identity numbers, pass the keyword argument
+coordination_number=False to the constructor.</p>
+<p>Interim numbers (interimspersonnummer), used by educational institutions
+within the Ladok system, are supported but not accepted by default, since
+they are not considered valid outside Ladok. They have the same format and
+semantics as real personal identity numbers, except that the first control
+digit is replaced by a letter (A-Z). To allow the use of interim numbers,
+pass the keyword argument interim_numbers=True to the constructor.</p>
+<p>The cleaned value will always have the format YYYYMMDDXXXX.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.se.forms.SEPersonalIdentityNumberField.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/se/forms.html#SEPersonalIdentityNumberField.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.se.forms.SEPersonalIdentityNumberField.clean" title="Link to this definition">¶</a></dt>
+<dd><p>Validate the given value and return its “cleaned” value as an
+appropriate Python object. Raise ValidationError for any errors.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.se.forms.SEPostalCodeField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.se.forms.</span></span><span class="sig-name descname"><span class="pre">SEPostalCodeField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/se/forms.html#SEPostalCodeField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.se.forms.SEPostalCodeField" title="Link to this definition">¶</a></dt>
+<dd><p>A form field that validates input as a Swedish postal code (postnummer).</p>
+<p>Valid codes consist of five digits (XXXXX). The number can optionally be
+formatted with a space after the third digit (XXX XX).</p>
+<p>The cleaned value will never contain the space.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.se.forms.SEPostalCodeField.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/se/forms.html#SEPostalCodeField.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.se.forms.SEPostalCodeField.clean" title="Link to this definition">¶</a></dt>
+<dd><p>Validate the given value and return its “cleaned” value as an
+appropriate Python object. Raise ValidationError for any errors.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-localflavor.se.utils">
+<span id="utilities"></span><h2>Utilities<a class="headerlink" href="#module-localflavor.se.utils" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="localflavor.se.utils.id_number_checksum">
+<span class="sig-prename descclassname"><span class="pre">localflavor.se.utils.</span></span><span class="sig-name descname"><span class="pre">id_number_checksum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gd</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/se/utils.html#id_number_checksum"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.se.utils.id_number_checksum" title="Link to this definition">¶</a></dt>
+<dd><p>Calculates a Swedish ID number checksum, using the “Luhn”-algoritm.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="localflavor.se.utils.validate_id_birthday">
+<span class="sig-prename descclassname"><span class="pre">localflavor.se.utils.</span></span><span class="sig-name descname"><span class="pre">validate_id_birthday</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gd</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fix_coordination_number_day</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/se/utils.html#validate_id_birthday"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.se.utils.validate_id_birthday" title="Link to this definition">¶</a></dt>
+<dd><p>Validates the birth_day and returns the datetime.date object for the birth_day.</p>
+<p>If the date is an invalid birth day, a ValueError will be raised.</p>
+</dd></dl>
+
+</section>
+<section id="data">
+<h2>Data<a class="headerlink" href="#data" title="Link to this heading">¶</a></h2>
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.se.se_counties.COUNTY_CHOICES">
+<span class="sig-prename descclassname"><span class="pre">localflavor.se.se_counties.</span></span><span class="sig-name descname"><span class="pre">COUNTY_CHOICES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(('AB',</span> <span class="pre">'Stockholm'),</span> <span class="pre">('AC',</span> <span class="pre">'Västerbotten'),</span> <span class="pre">('BD',</span> <span class="pre">'Norrbotten'),</span> <span class="pre">('C',</span> <span class="pre">'Uppsala'),</span> <span class="pre">('D',</span> <span class="pre">'Södermanland'),</span> <span class="pre">('E',</span> <span class="pre">'Östergötland'),</span> <span class="pre">('F',</span> <span class="pre">'Jönköping'),</span> <span class="pre">('G',</span> <span class="pre">'Kronoberg'),</span> <span class="pre">('H',</span> <span class="pre">'Kalmar'),</span> <span class="pre">('I',</span> <span class="pre">'Gotland'),</span> <span class="pre">('K',</span> <span class="pre">'Blekinge'),</span> <span class="pre">('M',</span> <span class="pre">'Skåne'),</span> <span class="pre">('N',</span> <span class="pre">'Halland'),</span> <span class="pre">('O',</span> <span class="pre">'Västra</span> <span class="pre">Götaland'),</span> <span class="pre">('S',</span> <span class="pre">'Värmland'),</span> <span class="pre">('T',</span> <span class="pre">'Örebro'),</span> <span class="pre">('U',</span> <span class="pre">'Västmanland'),</span> <span class="pre">('W',</span> <span class="pre">'Dalarna'),</span> <span class="pre">('X',</span> <span class="pre">'Gävleborg'),</span> <span class="pre">('Y',</span> <span class="pre">'Västernorrland'),</span> <span class="pre">('Z',</span> <span class="pre">'Jämtland'))</span></em><a class="headerlink" href="#localflavor.se.se_counties.COUNTY_CHOICES" title="Link to this definition">¶</a></dt>
+<dd><p>An alphabetical list of Swedish counties, sorted by codes.
+<a class="reference external" href="http://en.wikipedia.org/wiki/Counties_of_Sweden">http://en.wikipedia.org/wiki/Counties_of_Sweden</a></p>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Sweden (<code class="docutils literal notranslate"><span class="pre">se</span></code>)</a><ul>
+<li><a class="reference internal" href="#module-localflavor.se.forms">Forms</a><ul>
+<li><a class="reference internal" href="#localflavor.se.forms.SECountySelect"><code class="docutils literal notranslate"><span class="pre">SECountySelect</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.se.forms.SEOrganisationNumberField"><code class="docutils literal notranslate"><span class="pre">SEOrganisationNumberField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.se.forms.SEOrganisationNumberField.clean"><code class="docutils literal notranslate"><span class="pre">SEOrganisationNumberField.clean()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.se.forms.SEPersonalIdentityNumberField"><code class="docutils literal notranslate"><span class="pre">SEPersonalIdentityNumberField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.se.forms.SEPersonalIdentityNumberField.clean"><code class="docutils literal notranslate"><span class="pre">SEPersonalIdentityNumberField.clean()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.se.forms.SEPostalCodeField"><code class="docutils literal notranslate"><span class="pre">SEPostalCodeField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.se.forms.SEPostalCodeField.clean"><code class="docutils literal notranslate"><span class="pre">SEPostalCodeField.clean()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-localflavor.se.utils">Utilities</a><ul>
+<li><a class="reference internal" href="#localflavor.se.utils.id_number_checksum"><code class="docutils literal notranslate"><span class="pre">id_number_checksum()</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.se.utils.validate_id_birthday"><code class="docutils literal notranslate"><span class="pre">validate_id_birthday()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data">Data</a><ul>
+<li><a class="reference internal" href="#localflavor.se.se_counties.COUNTY_CHOICES"><code class="docutils literal notranslate"><span class="pre">COUNTY_CHOICES</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="ru.html"
+                          title="previous chapter">Russia (<code class="docutils literal notranslate"><span class="pre">ru</span></code>)</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="sg.html"
+                          title="next chapter">Singapore (<code class="docutils literal notranslate"><span class="pre">sg</span></code>)</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/localflavor/se.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="sg.html" title="Singapore (sg)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="ru.html" title="Russia (ru)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Sweden (<code class="docutils literal notranslate"><span class="pre">se</span></code>)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright Django Software Foundation and individual contributors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>South Africa (za) &#8212; django-localflavor 4.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=2bf1fcf8" />
+    
+    <script src="../_static/documentation_options.js?v=9f5556dd"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Generic helpers" href="../generic.html" />
+    <link rel="prev" title="Uruguay (uy)" href="uy.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../generic.html" title="Generic helpers"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="uy.html" title="Uruguay (uy)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">South Africa (<code class="docutils literal notranslate"><span class="pre">za</span></code>)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="south-africa-za">
+<h1>South Africa (<code class="docutils literal notranslate"><span class="pre">za</span></code>)<a class="headerlink" href="#south-africa-za" title="Link to this heading">¶</a></h1>
+<section id="module-localflavor.za.forms">
+<span id="forms"></span><h2>Forms<a class="headerlink" href="#module-localflavor.za.forms" title="Link to this heading">¶</a></h2>
+<p>South Africa-specific Form helpers.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.za.forms.ZAIDField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.za.forms.</span></span><span class="sig-name descname"><span class="pre">ZAIDField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/za/forms.html#ZAIDField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.za.forms.ZAIDField" title="Link to this definition">¶</a></dt>
+<dd><p>A form field for South African ID numbers.</p>
+<p>The checksum is validated using the Luhn checksum, and uses a simplistic (read: not entirely accurate)
+check for the birth date.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.za.forms.ZAIDField.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/za/forms.html#ZAIDField.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.za.forms.ZAIDField.clean" title="Link to this definition">¶</a></dt>
+<dd><p>Validate the given value and return its “cleaned” value as an
+appropriate Python object. Raise ValidationError for any errors.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.za.forms.ZAPostCodeField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.za.forms.</span></span><span class="sig-name descname"><span class="pre">ZAPostCodeField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/za/forms.html#ZAPostCodeField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.za.forms.ZAPostCodeField" title="Link to this definition">¶</a></dt>
+<dd><p>A form field that validates input as a South African postcode.</p>
+<p>Valid postcodes must have four digits.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.za.forms.ZAProvinceSelect">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.za.forms.</span></span><span class="sig-name descname"><span class="pre">ZAProvinceSelect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attrs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/za/forms.html#ZAProvinceSelect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.za.forms.ZAProvinceSelect" title="Link to this definition">¶</a></dt>
+<dd><p>A Select widget that uses a list of South African Provinces as its choices.</p>
+</dd></dl>
+
+</section>
+<section id="data">
+<h2>Data<a class="headerlink" href="#data" title="Link to this heading">¶</a></h2>
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.za.za_provinces.PROVINCE_CHOICES">
+<span class="sig-prename descclassname"><span class="pre">localflavor.za.za_provinces.</span></span><span class="sig-name descname"><span class="pre">PROVINCE_CHOICES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(('EC',</span> <span class="pre">'Eastern</span> <span class="pre">Cape'),</span> <span class="pre">('FS',</span> <span class="pre">'Free</span> <span class="pre">State'),</span> <span class="pre">('GP',</span> <span class="pre">'Gauteng'),</span> <span class="pre">('KN',</span> <span class="pre">'KwaZulu-Natal'),</span> <span class="pre">('LP',</span> <span class="pre">'Limpopo'),</span> <span class="pre">('MP',</span> <span class="pre">'Mpumalanga'),</span> <span class="pre">('NC',</span> <span class="pre">'Northern</span> <span class="pre">Cape'),</span> <span class="pre">('NW',</span> <span class="pre">'North</span> <span class="pre">West'),</span> <span class="pre">('WC',</span> <span class="pre">'Western</span> <span class="pre">Cape'))</span></em><a class="headerlink" href="#localflavor.za.za_provinces.PROVINCE_CHOICES" title="Link to this definition">¶</a></dt>
+<dd><p>A list of South African provinces as <cite>choices</cite> in a formfield.</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">South Africa (<code class="docutils literal notranslate"><span class="pre">za</span></code>)</a><ul>
+<li><a class="reference internal" href="#module-localflavor.za.forms">Forms</a><ul>
+<li><a class="reference internal" href="#localflavor.za.forms.ZAIDField"><code class="docutils literal notranslate"><span class="pre">ZAIDField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.za.forms.ZAIDField.clean"><code class="docutils literal notranslate"><span class="pre">ZAIDField.clean()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.za.forms.ZAPostCodeField"><code class="docutils literal notranslate"><span class="pre">ZAPostCodeField</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.za.forms.ZAProvinceSelect"><code class="docutils literal notranslate"><span class="pre">ZAProvinceSelect</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data">Data</a><ul>
+<li><a class="reference internal" href="#localflavor.za.za_provinces.PROVINCE_CHOICES"><code class="docutils literal notranslate"><span class="pre">PROVINCE_CHOICES</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="uy.html"
+                          title="previous chapter">Uruguay (<code class="docutils literal notranslate"><span class="pre">uy</span></code>)</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="../generic.html"
+                          title="next chapter">Generic helpers</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/localflavor/za.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../generic.html" title="Generic helpers"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="uy.html" title="Uruguay (uy)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">South Africa (<code class="docutils literal notranslate"><span class="pre">za</span></code>)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright Django Software Foundation and individual contributors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+  </body>
+</html>

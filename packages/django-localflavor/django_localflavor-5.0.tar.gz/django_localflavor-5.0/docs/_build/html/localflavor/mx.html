@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Mexico (mx) &#8212; django-localflavor 4.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=2bf1fcf8" />
+    
+    <script src="../_static/documentation_options.js?v=9f5556dd"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Malaysia (my)" href="my.html" />
+    <link rel="prev" title="Malta (mt)" href="mt.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="my.html" title="Malaysia (my)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="mt.html" title="Malta (mt)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Mexico (<code class="docutils literal notranslate"><span class="pre">mx</span></code>)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="mexico-mx">
+<h1>Mexico (<code class="docutils literal notranslate"><span class="pre">mx</span></code>)<a class="headerlink" href="#mexico-mx" title="Link to this heading">¶</a></h1>
+<section id="module-localflavor.mx.forms">
+<span id="forms"></span><h2>Forms<a class="headerlink" href="#module-localflavor.mx.forms" title="Link to this heading">¶</a></h2>
+<p>Mexican-specific form helpers.</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.mx.forms.CURP_INCONVENIENT_WORDS">
+<span class="sig-prename descclassname"><span class="pre">localflavor.mx.forms.</span></span><span class="sig-name descname"><span class="pre">CURP_INCONVENIENT_WORDS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['BACA',</span> <span class="pre">'BAKA',</span> <span class="pre">'BUEI',</span> <span class="pre">'BUEY',</span> <span class="pre">'CACA',</span> <span class="pre">'CACO',</span> <span class="pre">'CAGA',</span> <span class="pre">'CAGO',</span> <span class="pre">'CAKA',</span> <span class="pre">'CAKO',</span> <span class="pre">'COGE',</span> <span class="pre">'COGI',</span> <span class="pre">'COJA',</span> <span class="pre">'COJE',</span> <span class="pre">'COJI',</span> <span class="pre">'COJO',</span> <span class="pre">'COLA',</span> <span class="pre">'CULO',</span> <span class="pre">'FALO',</span> <span class="pre">'FETO',</span> <span class="pre">'GETA',</span> <span class="pre">'GUEI',</span> <span class="pre">'GUEY',</span> <span class="pre">'JETA',</span> <span class="pre">'JOTO',</span> <span class="pre">'KACA',</span> <span class="pre">'KACO',</span> <span class="pre">'KAGA',</span> <span class="pre">'KAGO',</span> <span class="pre">'KAKA',</span> <span class="pre">'KAKO',</span> <span class="pre">'KOGE',</span> <span class="pre">'KOGI',</span> <span class="pre">'KOJA',</span> <span class="pre">'KOJE',</span> <span class="pre">'KOJI',</span> <span class="pre">'KOJO',</span> <span class="pre">'KOLA',</span> <span class="pre">'KULO',</span> <span class="pre">'LILO',</span> <span class="pre">'LOCA',</span> <span class="pre">'LOCO',</span> <span class="pre">'LOKA',</span> <span class="pre">'LOKO',</span> <span class="pre">'MAME',</span> <span class="pre">'MAMO',</span> <span class="pre">'MEAR',</span> <span class="pre">'MEAS',</span> <span class="pre">'MEON',</span> <span class="pre">'MIAR',</span> <span class="pre">'MION',</span> <span class="pre">'MOCO',</span> <span class="pre">'MOKO',</span> <span class="pre">'MULA',</span> <span class="pre">'MULO',</span> <span class="pre">'NACA',</span> <span class="pre">'NACO',</span> <span class="pre">'PEDA',</span> <span class="pre">'PEDO',</span> <span class="pre">'PENE',</span> <span class="pre">'PIPI',</span> <span class="pre">'PITO',</span> <span class="pre">'POPO',</span> <span class="pre">'PUTA',</span> <span class="pre">'PUTO',</span> <span class="pre">'QULO',</span> <span class="pre">'RATA',</span> <span class="pre">'ROBA',</span> <span class="pre">'ROBE',</span> <span class="pre">'ROBO',</span> <span class="pre">'RUIN',</span> <span class="pre">'SENO',</span> <span class="pre">'TETA',</span> <span class="pre">'VAGA',</span> <span class="pre">'VAGO',</span> <span class="pre">'VAKA',</span> <span class="pre">'VUEI',</span> <span class="pre">'VUEY',</span> <span class="pre">'WUEI',</span> <span class="pre">'WUEY']</span></em><a class="headerlink" href="#localflavor.mx.forms.CURP_INCONVENIENT_WORDS" title="Link to this definition">¶</a></dt>
+<dd><p>This is the list of inconvenient words according to the <cite>Anexo 2</cite> of the
+document described in the next link:
+<a class="reference external" href="http://portal.veracruz.gob.mx/pls/portal/url/ITEM/444112558A57C6E0E040A8C02E00695C">http://portal.veracruz.gob.mx/pls/portal/url/ITEM/444112558A57C6E0E040A8C02E00695C</a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.mx.forms.MXCLABEField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.mx.forms.</span></span><span class="sig-name descname"><span class="pre">MXCLABEField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">min_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">18</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">18</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/mx/forms.html#MXCLABEField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.mx.forms.MXCLABEField" title="Link to this definition">¶</a></dt>
+<dd><p>This field validates a CLABE (Clave Bancaria Estandarizada).</p>
+<p>A CLABE is a 18-digits long number. The first 6 digits denote bank and branch number.
+The remaining 12 digits denote an account number, plus a verifying digit.</p>
+<p>More info:
+<a class="reference external" href="https://en.wikipedia.org/wiki/CLABE">https://en.wikipedia.org/wiki/CLABE</a></p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 1.4.</span></p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.mx.forms.MXCLABEField.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/mx/forms.html#MXCLABEField.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.mx.forms.MXCLABEField.clean" title="Link to this definition">¶</a></dt>
+<dd><p>Validate the given value and return its “cleaned” value as an
+appropriate Python object. Raise ValidationError for any errors.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.mx.forms.MXCURPField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.mx.forms.</span></span><span class="sig-name descname"><span class="pre">MXCURPField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">min_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">18</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">18</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/mx/forms.html#MXCURPField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.mx.forms.MXCURPField" title="Link to this definition">¶</a></dt>
+<dd><p>A field that validates a Mexican Clave Única de Registro de Población.</p>
+<p>The CURP is integrated by a juxtaposition of characters following the next
+pattern:</p>
+<blockquote>
+<div><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Index</p></th>
+<th class="head"><p>Format</p></th>
+<th class="head"><p>Accepted Characters</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>X</p></td>
+<td><p>Any letter</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>X</p></td>
+<td><p>Any vowel</p></td>
+</tr>
+<tr class="row-even"><td><p>3-4</p></td>
+<td><p>XX</p></td>
+<td><p>Any letter</p></td>
+</tr>
+<tr class="row-odd"><td><p>5-10</p></td>
+<td><p>YYMMDD</p></td>
+<td><p>Any valid date</p></td>
+</tr>
+<tr class="row-even"><td><p>11</p></td>
+<td><p>X</p></td>
+<td><p>Either <cite>H</cite> or <cite>M</cite>, depending on the person’s gender</p></td>
+</tr>
+<tr class="row-odd"><td><p>12-13</p></td>
+<td><p>XX</p></td>
+<td><p>Any valid acronym for a state in Mexico</p></td>
+</tr>
+<tr class="row-even"><td><p>14-16</p></td>
+<td><p>XXX</p></td>
+<td><p>Any consonant</p></td>
+</tr>
+<tr class="row-odd"><td><p>17</p></td>
+<td><p>X</p></td>
+<td><p>Any number between 0 and 9 or any letter</p></td>
+</tr>
+<tr class="row-even"><td><p>18</p></td>
+<td><p>X</p></td>
+<td><p>Any number between 0 and 9</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<dl class="simple">
+<dt>More info about this:</dt><dd><p><a class="reference external" href="http://www.condusef.gob.mx/index.php/clave-unica-de-registro-de-poblacion-curp">http://www.condusef.gob.mx/index.php/clave-unica-de-registro-de-poblacion-curp</a></p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.mx.forms.MXCURPField.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/mx/forms.html#MXCURPField.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.mx.forms.MXCURPField.clean" title="Link to this definition">¶</a></dt>
+<dd><p>Validate the given value and return its “cleaned” value as an
+appropriate Python object. Raise ValidationError for any errors.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.mx.forms.MXRFCField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.mx.forms.</span></span><span class="sig-name descname"><span class="pre">MXRFCField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">min_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">12</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">13</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/mx/forms.html#MXRFCField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.mx.forms.MXRFCField" title="Link to this definition">¶</a></dt>
+<dd><p>A form field that validates a Mexican <em>Registro Federal de Contribuyentes</em>.</p>
+<p>Validates either <cite>Persona física</cite> or <cite>Persona moral</cite>.
+The Persona física RFC string is integrated by a juxtaposition of
+characters following the next pattern:</p>
+<blockquote>
+<div><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Index</p></th>
+<th class="head"><p>Format</p></th>
+<th class="head"><p>Accepted Characters</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>X</p></td>
+<td><p>Any letter</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>X</p></td>
+<td><p>Any vowel</p></td>
+</tr>
+<tr class="row-even"><td><p>3-4</p></td>
+<td><p>XX</p></td>
+<td><p>Any letter</p></td>
+</tr>
+<tr class="row-odd"><td><p>5-10</p></td>
+<td><p>YYMMDD</p></td>
+<td><p>Any valid date</p></td>
+</tr>
+<tr class="row-even"><td><p>11-12</p></td>
+<td><p>XX</p></td>
+<td><p>Any letter or number between 0 and 9</p></td>
+</tr>
+<tr class="row-odd"><td><p>13</p></td>
+<td><p>X</p></td>
+<td><p>Any digit between 0 and 9 or the letter <em>A</em></p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>The Persona moral RFC string is integrated by a juxtaposition of
+characters following the next pattern:</p>
+<blockquote>
+<div><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Index</p></th>
+<th class="head"><p>Format</p></th>
+<th class="head"><p>Accepted Characters</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1-3</p></td>
+<td><p>XXX</p></td>
+<td><p>Any letter including <em>&amp;</em> and <em>Ñ</em> chars</p></td>
+</tr>
+<tr class="row-odd"><td><p>4-9</p></td>
+<td><p>YYMMDD</p></td>
+<td><p>Any valid date</p></td>
+</tr>
+<tr class="row-even"><td><p>10-11</p></td>
+<td><p>XX</p></td>
+<td><p>Any letter or number between 0 and 9</p></td>
+</tr>
+<tr class="row-odd"><td><p>12</p></td>
+<td><p>X</p></td>
+<td><p>Any number between 0 and 9 or the letter <em>A</em></p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<dl class="simple">
+<dt>More info about this:</dt><dd><p><a class="reference external" href="http://es.wikipedia.org/wiki/Registro_Federal_de_Contribuyentes_(M%C3%A9xico">http://es.wikipedia.org/wiki/Registro_Federal_de_Contribuyentes_(M%C3%A9xico</a>)</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.mx.forms.MXRFCField.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/mx/forms.html#MXRFCField.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.mx.forms.MXRFCField.clean" title="Link to this definition">¶</a></dt>
+<dd><p>Validate the given value and return its “cleaned” value as an
+appropriate Python object. Raise ValidationError for any errors.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.mx.forms.MXSocialSecurityNumberField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.mx.forms.</span></span><span class="sig-name descname"><span class="pre">MXSocialSecurityNumberField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">min_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">11</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">11</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/mx/forms.html#MXSocialSecurityNumberField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.mx.forms.MXSocialSecurityNumberField" title="Link to this definition">¶</a></dt>
+<dd><p>A field that validates a Mexican Social Security Number.</p>
+<p>The Social Security Number is integrated by a juxtaposition of digits
+following the next pattern:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Index</p></th>
+<th class="head"><p>Required numbers</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1-2</p></td>
+<td><p>The number of the branch office where the Social Security Number
+was designated.</p></td>
+</tr>
+<tr class="row-odd"><td><p>3-4</p></td>
+<td><p>The year of inscription to the Social Security.</p></td>
+</tr>
+<tr class="row-even"><td><p>5-6</p></td>
+<td><p>The year of birth of the Social Security Number owner.</p></td>
+</tr>
+<tr class="row-odd"><td><p>7-10</p></td>
+<td><p>The progressive number of procedure for the IMSS.
+(This digit is provided exclusively by the Institute as it regards
+the Folio number of such procedure).</p></td>
+</tr>
+<tr class="row-even"><td><p>11</p></td>
+<td><p>The verification digit.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.mx.forms.MXSocialSecurityNumberField.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/mx/forms.html#MXSocialSecurityNumberField.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.mx.forms.MXSocialSecurityNumberField.clean" title="Link to this definition">¶</a></dt>
+<dd><p>Validate the given value and return its “cleaned” value as an
+appropriate Python object. Raise ValidationError for any errors.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.mx.forms.MXStateSelect">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.mx.forms.</span></span><span class="sig-name descname"><span class="pre">MXStateSelect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attrs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/mx/forms.html#MXStateSelect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.mx.forms.MXStateSelect" title="Link to this definition">¶</a></dt>
+<dd><p>A Select widget that uses a list of Mexican states as its choices.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.mx.forms.MXZipCodeField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.mx.forms.</span></span><span class="sig-name descname"><span class="pre">MXZipCodeField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/mx/forms.html#MXZipCodeField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.mx.forms.MXZipCodeField" title="Link to this definition">¶</a></dt>
+<dd><p>A form field that accepts a Mexican Zip Code.</p>
+<dl class="simple">
+<dt>More info about this:</dt><dd><p><a class="reference external" href="http://en.wikipedia.org/wiki/List_of_postal_codes_in_Mexico">http://en.wikipedia.org/wiki/List_of_postal_codes_in_Mexico</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.mx.forms.RFC_INCONVENIENT_WORDS">
+<span class="sig-prename descclassname"><span class="pre">localflavor.mx.forms.</span></span><span class="sig-name descname"><span class="pre">RFC_INCONVENIENT_WORDS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['BUEI',</span> <span class="pre">'BUEY',</span> <span class="pre">'CACA',</span> <span class="pre">'CACO',</span> <span class="pre">'CAGA',</span> <span class="pre">'CAGO',</span> <span class="pre">'CAKA',</span> <span class="pre">'CAKO',</span> <span class="pre">'COGE',</span> <span class="pre">'COJA',</span> <span class="pre">'COJE',</span> <span class="pre">'COJI',</span> <span class="pre">'COJO',</span> <span class="pre">'CULO',</span> <span class="pre">'FETO',</span> <span class="pre">'GUEY',</span> <span class="pre">'JOTO',</span> <span class="pre">'KACA',</span> <span class="pre">'KACO',</span> <span class="pre">'KAGA',</span> <span class="pre">'KAGO',</span> <span class="pre">'KOGE',</span> <span class="pre">'KOJO',</span> <span class="pre">'KAKA',</span> <span class="pre">'KULO',</span> <span class="pre">'MAME',</span> <span class="pre">'MAMO',</span> <span class="pre">'MEAR',</span> <span class="pre">'MEAS',</span> <span class="pre">'MEON',</span> <span class="pre">'MION',</span> <span class="pre">'MOCO',</span> <span class="pre">'MULA',</span> <span class="pre">'PEDA',</span> <span class="pre">'PEDO',</span> <span class="pre">'PENE',</span> <span class="pre">'PUTA',</span> <span class="pre">'PUTO',</span> <span class="pre">'QULO',</span> <span class="pre">'RATA',</span> <span class="pre">'RUIN']</span></em><a class="headerlink" href="#localflavor.mx.forms.RFC_INCONVENIENT_WORDS" title="Link to this definition">¶</a></dt>
+<dd><p>This is the list of inconvenient words according to the <cite>Anexo IV</cite> of the
+document described in the next link:
+<a class="reference external" href="http://www.sisi.org.mx/jspsi/documentos/2005/seguimiento/06101/0610100162005_065.doc">http://www.sisi.org.mx/jspsi/documentos/2005/seguimiento/06101/0610100162005_065.doc</a></p>
+</dd></dl>
+
+</section>
+<section id="module-localflavor.mx.models">
+<span id="models"></span><h2>Models<a class="headerlink" href="#module-localflavor.mx.models" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.mx.models.MXCLABEField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.mx.models.</span></span><span class="sig-name descname"><span class="pre">MXCLABEField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/mx/models.html#MXCLABEField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.mx.models.MXCLABEField" title="Link to this definition">¶</a></dt>
+<dd><p>A model field that forms represent as a forms.MXCURPField field and stores the value of a valid Mexican CLABE.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 1.4.</span></p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.mx.models.MXCLABEField.formfield">
+<span class="sig-name descname"><span class="pre">formfield</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/mx/models.html#MXCLABEField.formfield"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.mx.models.MXCLABEField.formfield" title="Link to this definition">¶</a></dt>
+<dd><p>Return a django.forms.Field instance for this field.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.mx.models.MXCURPField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.mx.models.</span></span><span class="sig-name descname"><span class="pre">MXCURPField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/mx/models.html#MXCURPField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.mx.models.MXCURPField" title="Link to this definition">¶</a></dt>
+<dd><p>A model field that forms represent as a forms.MXCURPField field and stores the value of a valid Mexican CURP.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.mx.models.MXCURPField.formfield">
+<span class="sig-name descname"><span class="pre">formfield</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/mx/models.html#MXCURPField.formfield"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.mx.models.MXCURPField.formfield" title="Link to this definition">¶</a></dt>
+<dd><p>Return a django.forms.Field instance for this field.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.mx.models.MXRFCField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.mx.models.</span></span><span class="sig-name descname"><span class="pre">MXRFCField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/mx/models.html#MXRFCField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.mx.models.MXRFCField" title="Link to this definition">¶</a></dt>
+<dd><p>A model field that forms represent as a forms.MXRFCField field and stores the value of a valid Mexican RFC.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.mx.models.MXRFCField.formfield">
+<span class="sig-name descname"><span class="pre">formfield</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/mx/models.html#MXRFCField.formfield"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.mx.models.MXRFCField.formfield" title="Link to this definition">¶</a></dt>
+<dd><p>Return a django.forms.Field instance for this field.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.mx.models.MXSocialSecurityNumberField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.mx.models.</span></span><span class="sig-name descname"><span class="pre">MXSocialSecurityNumberField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/mx/models.html#MXSocialSecurityNumberField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.mx.models.MXSocialSecurityNumberField" title="Link to this definition">¶</a></dt>
+<dd><p>A model field that forms represent as a forms.MXSocialSecurityNumberField field.</p>
+<p>It stores the value of a valid Mexican Social Security Number.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.mx.models.MXSocialSecurityNumberField.formfield">
+<span class="sig-name descname"><span class="pre">formfield</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/mx/models.html#MXSocialSecurityNumberField.formfield"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.mx.models.MXSocialSecurityNumberField.formfield" title="Link to this definition">¶</a></dt>
+<dd><p>Return a django.forms.Field instance for this field.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.mx.models.MXStateField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.mx.models.</span></span><span class="sig-name descname"><span class="pre">MXStateField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/mx/models.html#MXStateField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.mx.models.MXStateField" title="Link to this definition">¶</a></dt>
+<dd><p>A model field that stores the three or four letter Mexican state abbreviation in the database.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.mx.models.MXStateField.deconstruct">
+<span class="sig-name descname"><span class="pre">deconstruct</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/mx/models.html#MXStateField.deconstruct"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.mx.models.MXStateField.deconstruct" title="Link to this definition">¶</a></dt>
+<dd><p>Return enough information to recreate the field as a 4-tuple:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>The name of the field on the model, if contribute_to_class() has
+been run.</p></li>
+<li><p>The import path of the field, including the class, e.g.
+django.db.models.IntegerField. This should be the most portable
+version, so less specific may be better.</p></li>
+<li><p>A list of positional arguments.</p></li>
+<li><p>A dict of keyword arguments.</p></li>
+</ul>
+</div></blockquote>
+<p>Note that the positional or keyword arguments must contain values of
+the following types (including inner values of collection types):</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>None, bool, str, int, float, complex, set, frozenset, list, tuple,
+dict</p></li>
+<li><p>UUID</p></li>
+<li><p>datetime.datetime (naive), datetime.date</p></li>
+<li><p>top-level classes, top-level functions - will be referenced by their
+full import path</p></li>
+<li><p>Storage instances - these have their own deconstruct() method</p></li>
+</ul>
+</div></blockquote>
+<p>This is because the values here must be serialized into a text format
+(possibly new Python code, possibly JSON) and these are the only types
+with encoding handlers defined.</p>
+<p>There’s no need to return the exact way the field was instantiated this
+time, just ensure that the resulting field is the same - prefer keyword
+arguments over positional ones, and omit parameters with their default
+values.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.mx.models.MXZipCodeField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.mx.models.</span></span><span class="sig-name descname"><span class="pre">MXZipCodeField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/mx/models.html#MXZipCodeField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.mx.models.MXZipCodeField" title="Link to this definition">¶</a></dt>
+<dd><p>A model field that forms represent as a forms.MXZipCodeField field and stores the five-digit Mexican zip code.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.mx.models.MXZipCodeField.formfield">
+<span class="sig-name descname"><span class="pre">formfield</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/mx/models.html#MXZipCodeField.formfield"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.mx.models.MXZipCodeField.formfield" title="Link to this definition">¶</a></dt>
+<dd><p>Return a django.forms.Field instance for this field.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="data">
+<h2>Data<a class="headerlink" href="#data" title="Link to this heading">¶</a></h2>
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.mx.mx_states.STATE_CHOICES">
+<span class="sig-prename descclassname"><span class="pre">localflavor.mx.mx_states.</span></span><span class="sig-name descname"><span class="pre">STATE_CHOICES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(('AGU',</span> <span class="pre">'Aguascalientes'),</span> <span class="pre">('BCN',</span> <span class="pre">'Baja</span> <span class="pre">California'),</span> <span class="pre">('BCS',</span> <span class="pre">'Baja</span> <span class="pre">California</span> <span class="pre">Sur'),</span> <span class="pre">('CAM',</span> <span class="pre">'Campeche'),</span> <span class="pre">('CDMX',</span> <span class="pre">'Ciudad</span> <span class="pre">de</span> <span class="pre">México'),</span> <span class="pre">('CHH',</span> <span class="pre">'Chihuahua'),</span> <span class="pre">('CHP',</span> <span class="pre">'Chiapas'),</span> <span class="pre">('COA',</span> <span class="pre">'Coahuila'),</span> <span class="pre">('COL',</span> <span class="pre">'Colima'),</span> <span class="pre">('DUR',</span> <span class="pre">'Durango'),</span> <span class="pre">('GRO',</span> <span class="pre">'Guerrero'),</span> <span class="pre">('GUA',</span> <span class="pre">'Guanajuato'),</span> <span class="pre">('HID',</span> <span class="pre">'Hidalgo'),</span> <span class="pre">('JAL',</span> <span class="pre">'Jalisco'),</span> <span class="pre">('MEX',</span> <span class="pre">'Estado</span> <span class="pre">de</span> <span class="pre">México'),</span> <span class="pre">('MIC',</span> <span class="pre">'Michoacán'),</span> <span class="pre">('MOR',</span> <span class="pre">'Morelos'),</span> <span class="pre">('NAY',</span> <span class="pre">'Nayarit'),</span> <span class="pre">('NLE',</span> <span class="pre">'Nuevo</span> <span class="pre">León'),</span> <span class="pre">('OAX',</span> <span class="pre">'Oaxaca'),</span> <span class="pre">('PUE',</span> <span class="pre">'Puebla'),</span> <span class="pre">('QUE',</span> <span class="pre">'Querétaro'),</span> <span class="pre">('ROO',</span> <span class="pre">'Quintana</span> <span class="pre">Roo'),</span> <span class="pre">('SIN',</span> <span class="pre">'Sinaloa'),</span> <span class="pre">('SLP',</span> <span class="pre">'San</span> <span class="pre">Luis</span> <span class="pre">Potosí'),</span> <span class="pre">('SON',</span> <span class="pre">'Sonora'),</span> <span class="pre">('TAB',</span> <span class="pre">'Tabasco'),</span> <span class="pre">('TAM',</span> <span class="pre">'Tamaulipas'),</span> <span class="pre">('TLA',</span> <span class="pre">'Tlaxcala'),</span> <span class="pre">('VER',</span> <span class="pre">'Veracruz'),</span> <span class="pre">('YUC',</span> <span class="pre">'Yucatán'),</span> <span class="pre">('ZAC',</span> <span class="pre">'Zacatecas'))</span></em><a class="headerlink" href="#localflavor.mx.mx_states.STATE_CHOICES" title="Link to this definition">¶</a></dt>
+<dd><p>All 31 states, plus the <cite>Ciudad de México</cite>.</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Mexico (<code class="docutils literal notranslate"><span class="pre">mx</span></code>)</a><ul>
+<li><a class="reference internal" href="#module-localflavor.mx.forms">Forms</a><ul>
+<li><a class="reference internal" href="#localflavor.mx.forms.CURP_INCONVENIENT_WORDS"><code class="docutils literal notranslate"><span class="pre">CURP_INCONVENIENT_WORDS</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.mx.forms.MXCLABEField"><code class="docutils literal notranslate"><span class="pre">MXCLABEField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.mx.forms.MXCLABEField.clean"><code class="docutils literal notranslate"><span class="pre">MXCLABEField.clean()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.mx.forms.MXCURPField"><code class="docutils literal notranslate"><span class="pre">MXCURPField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.mx.forms.MXCURPField.clean"><code class="docutils literal notranslate"><span class="pre">MXCURPField.clean()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.mx.forms.MXRFCField"><code class="docutils literal notranslate"><span class="pre">MXRFCField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.mx.forms.MXRFCField.clean"><code class="docutils literal notranslate"><span class="pre">MXRFCField.clean()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.mx.forms.MXSocialSecurityNumberField"><code class="docutils literal notranslate"><span class="pre">MXSocialSecurityNumberField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.mx.forms.MXSocialSecurityNumberField.clean"><code class="docutils literal notranslate"><span class="pre">MXSocialSecurityNumberField.clean()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.mx.forms.MXStateSelect"><code class="docutils literal notranslate"><span class="pre">MXStateSelect</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.mx.forms.MXZipCodeField"><code class="docutils literal notranslate"><span class="pre">MXZipCodeField</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.mx.forms.RFC_INCONVENIENT_WORDS"><code class="docutils literal notranslate"><span class="pre">RFC_INCONVENIENT_WORDS</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-localflavor.mx.models">Models</a><ul>
+<li><a class="reference internal" href="#localflavor.mx.models.MXCLABEField"><code class="docutils literal notranslate"><span class="pre">MXCLABEField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.mx.models.MXCLABEField.formfield"><code class="docutils literal notranslate"><span class="pre">MXCLABEField.formfield()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.mx.models.MXCURPField"><code class="docutils literal notranslate"><span class="pre">MXCURPField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.mx.models.MXCURPField.formfield"><code class="docutils literal notranslate"><span class="pre">MXCURPField.formfield()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.mx.models.MXRFCField"><code class="docutils literal notranslate"><span class="pre">MXRFCField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.mx.models.MXRFCField.formfield"><code class="docutils literal notranslate"><span class="pre">MXRFCField.formfield()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.mx.models.MXSocialSecurityNumberField"><code class="docutils literal notranslate"><span class="pre">MXSocialSecurityNumberField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.mx.models.MXSocialSecurityNumberField.formfield"><code class="docutils literal notranslate"><span class="pre">MXSocialSecurityNumberField.formfield()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.mx.models.MXStateField"><code class="docutils literal notranslate"><span class="pre">MXStateField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.mx.models.MXStateField.deconstruct"><code class="docutils literal notranslate"><span class="pre">MXStateField.deconstruct()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.mx.models.MXZipCodeField"><code class="docutils literal notranslate"><span class="pre">MXZipCodeField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.mx.models.MXZipCodeField.formfield"><code class="docutils literal notranslate"><span class="pre">MXZipCodeField.formfield()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data">Data</a><ul>
+<li><a class="reference internal" href="#localflavor.mx.mx_states.STATE_CHOICES"><code class="docutils literal notranslate"><span class="pre">STATE_CHOICES</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="mt.html"
+                          title="previous chapter">Malta (<code class="docutils literal notranslate"><span class="pre">mt</span></code>)</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="my.html"
+                          title="next chapter">Malaysia (<code class="docutils literal notranslate"><span class="pre">my</span></code>)</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/localflavor/mx.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="my.html" title="Malaysia (my)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="mt.html" title="Malta (mt)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Mexico (<code class="docutils literal notranslate"><span class="pre">mx</span></code>)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright Django Software Foundation and individual contributors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+  </body>
+</html>

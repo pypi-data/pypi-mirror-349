@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>New Zealand (nz) &#8212; django-localflavor 4.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=2bf1fcf8" />
+    
+    <script src="../_static/documentation_options.js?v=9f5556dd"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Peru (pe)" href="pe.html" />
+    <link rel="prev" title="Nepal (np)" href="np.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pe.html" title="Peru (pe)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="np.html" title="Nepal (np)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">New Zealand (<code class="docutils literal notranslate"><span class="pre">nz</span></code>)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="new-zealand-nz">
+<h1>New Zealand (<code class="docutils literal notranslate"><span class="pre">nz</span></code>)<a class="headerlink" href="#new-zealand-nz" title="Link to this heading">¶</a></h1>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 1.1.</span></p>
+</div>
+<section id="module-localflavor.nz.forms">
+<span id="forms"></span><h2>Forms<a class="headerlink" href="#module-localflavor.nz.forms" title="Link to this heading">¶</a></h2>
+<p>New Zealand specific form helpers.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.nz.forms.NZBankAccountNumberField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.nz.forms.</span></span><span class="sig-name descname"><span class="pre">NZBankAccountNumberField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/nz/forms.html#NZBankAccountNumberField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.nz.forms.NZBankAccountNumberField" title="Link to this definition">¶</a></dt>
+<dd><p>A form field that validates its input as New Zealand bank account number.</p>
+<p>Formats:</p>
+<blockquote>
+<div><p>XX-XXXX-XXXXXXX-XX</p>
+<p>XX-XXXX-XXXXXXX-XXX</p>
+</div></blockquote>
+<p>Where:</p>
+<ul class="simple">
+<li><p>the first two digits is the bank ID</p></li>
+<li><p>the next four digits are the branch number where the account was opened</p></li>
+<li><p>the next 7 digits are the account numbers</p></li>
+<li><p>the last two or three digits define type of the account.</p></li>
+</ul>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.nz.forms.NZBankAccountNumberField.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/nz/forms.html#NZBankAccountNumberField.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.nz.forms.NZBankAccountNumberField.clean" title="Link to this definition">¶</a></dt>
+<dd><p>Validate the given value and return its “cleaned” value as an
+appropriate Python object. Raise ValidationError for any errors.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.nz.forms.NZNorthIslandCouncilSelect">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.nz.forms.</span></span><span class="sig-name descname"><span class="pre">NZNorthIslandCouncilSelect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attrs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/nz/forms.html#NZNorthIslandCouncilSelect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.nz.forms.NZNorthIslandCouncilSelect" title="Link to this definition">¶</a></dt>
+<dd><p>A select widget with list of New Zealand North Island city and district councils as its choices.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.nz.forms.NZPostCodeField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.nz.forms.</span></span><span class="sig-name descname"><span class="pre">NZPostCodeField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/nz/forms.html#NZPostCodeField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.nz.forms.NZPostCodeField" title="Link to this definition">¶</a></dt>
+<dd><p>A form field that validates its input as New Zealand postal code.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.nz.forms.NZProvinceSelect">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.nz.forms.</span></span><span class="sig-name descname"><span class="pre">NZProvinceSelect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attrs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/nz/forms.html#NZProvinceSelect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.nz.forms.NZProvinceSelect" title="Link to this definition">¶</a></dt>
+<dd><p>A select widget with list of New Zealand provinces as its choices.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.nz.forms.NZRegionSelect">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.nz.forms.</span></span><span class="sig-name descname"><span class="pre">NZRegionSelect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attrs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/nz/forms.html#NZRegionSelect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.nz.forms.NZRegionSelect" title="Link to this definition">¶</a></dt>
+<dd><p>A select widget with list of New Zealand regions as its choices.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.nz.forms.NZSouthIslandCouncilSelect">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.nz.forms.</span></span><span class="sig-name descname"><span class="pre">NZSouthIslandCouncilSelect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attrs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/nz/forms.html#NZSouthIslandCouncilSelect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.nz.forms.NZSouthIslandCouncilSelect" title="Link to this definition">¶</a></dt>
+<dd><p>A select widget with list of New Zealand South Island city and district councils as its choices.</p>
+</dd></dl>
+
+</section>
+<section id="data">
+<h2>Data<a class="headerlink" href="#data" title="Link to this heading">¶</a></h2>
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.nz.nz_regions.REGION_CHOICES">
+<span class="sig-prename descclassname"><span class="pre">localflavor.nz.nz_regions.</span></span><span class="sig-name descname"><span class="pre">REGION_CHOICES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(('NZ-NTL',</span> <span class="pre">'Northland'),</span> <span class="pre">('NZ-AUK',</span> <span class="pre">'Auckland'),</span> <span class="pre">('NZ-WKO',</span> <span class="pre">'Waikato'),</span> <span class="pre">('NZ-BOP',</span> <span class="pre">'Bay</span> <span class="pre">of</span> <span class="pre">Plenty'),</span> <span class="pre">('NZ-GIS',</span> <span class="pre">'Gisborne'),</span> <span class="pre">('NZ-HKB',</span> <span class="pre">&quot;Hawke's</span> <span class="pre">Bay&quot;),</span> <span class="pre">('NZ-TKI',</span> <span class="pre">'Taranaki'),</span> <span class="pre">('NZ-MWT',</span> <span class="pre">'Manawatu-Wanganui'),</span> <span class="pre">('NZ-WGN',</span> <span class="pre">'Wellington'),</span> <span class="pre">('NZ-TAS',</span> <span class="pre">'Tasman'),</span> <span class="pre">('NZ-NSN',</span> <span class="pre">'Nelson'),</span> <span class="pre">('NZ-MBH',</span> <span class="pre">'Marlborough'),</span> <span class="pre">('NZ-WTC',</span> <span class="pre">'West</span> <span class="pre">Coast'),</span> <span class="pre">('NZ-CAN',</span> <span class="pre">'Canterbury'),</span> <span class="pre">('NZ-OTA',</span> <span class="pre">'Otago'),</span> <span class="pre">('NZ-STL',</span> <span class="pre">'Southland'))</span></em><a class="headerlink" href="#localflavor.nz.nz_regions.REGION_CHOICES" title="Link to this definition">¶</a></dt>
+<dd><p>A list of regions</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.nz.nz_provinces.PROVINCE_CHOICES">
+<span class="sig-prename descclassname"><span class="pre">localflavor.nz.nz_provinces.</span></span><span class="sig-name descname"><span class="pre">PROVINCE_CHOICES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(('Auckland',</span> <span class="pre">'Auckland'),</span> <span class="pre">('Taranaki',</span> <span class="pre">'Taranaki'),</span> <span class="pre">(&quot;Hawke's</span> <span class="pre">Bay&quot;,</span> <span class="pre">&quot;Hawke's</span> <span class="pre">Bay&quot;),</span> <span class="pre">('Wellington',</span> <span class="pre">'Wellington'),</span> <span class="pre">('Marlborough',</span> <span class="pre">'Marlborough'),</span> <span class="pre">('Nelson',</span> <span class="pre">'Nelson'),</span> <span class="pre">('Canterbury',</span> <span class="pre">'Canterbury'),</span> <span class="pre">('South</span> <span class="pre">Canterbury',</span> <span class="pre">'South</span> <span class="pre">Canterbury'),</span> <span class="pre">('Westland',</span> <span class="pre">'Westland'),</span> <span class="pre">('Otago',</span> <span class="pre">'Otago'),</span> <span class="pre">('Southland',</span> <span class="pre">'Southland'),</span> <span class="pre">('Chatham</span> <span class="pre">Islands',</span> <span class="pre">'Chatham</span> <span class="pre">Islands'))</span></em><a class="headerlink" href="#localflavor.nz.nz_provinces.PROVINCE_CHOICES" title="Link to this definition">¶</a></dt>
+<dd><p>A list of provinces (abolished in 1876, use regions instead)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.nz.nz_councils.NORTH_ISLAND_COUNCIL_CHOICES">
+<span class="sig-prename descclassname"><span class="pre">localflavor.nz.nz_councils.</span></span><span class="sig-name descname"><span class="pre">NORTH_ISLAND_COUNCIL_CHOICES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(('Far</span> <span class="pre">North',</span> <span class="pre">'Far</span> <span class="pre">North</span> <span class="pre">District'),</span> <span class="pre">('Whangarei',</span> <span class="pre">'Whangarei</span> <span class="pre">District'),</span> <span class="pre">('Kaipara',</span> <span class="pre">'Kaipara</span> <span class="pre">District'),</span> <span class="pre">('Auckland',</span> <span class="pre">'Auckland'),</span> <span class="pre">('Thames-Coromandel',</span> <span class="pre">'Thames-Coromandel</span> <span class="pre">District'),</span> <span class="pre">('Hauraki',</span> <span class="pre">'Hauraki</span> <span class="pre">District'),</span> <span class="pre">('Waikato',</span> <span class="pre">'Waikato</span> <span class="pre">District'),</span> <span class="pre">('Matamata-Piako',</span> <span class="pre">'Matamata-Piako</span> <span class="pre">District'),</span> <span class="pre">('Hamilton',</span> <span class="pre">'Hamilton'),</span> <span class="pre">('Waipa',</span> <span class="pre">'Waipa</span> <span class="pre">District'),</span> <span class="pre">('South</span> <span class="pre">Waikato',</span> <span class="pre">'South</span> <span class="pre">Waikato</span> <span class="pre">District'),</span> <span class="pre">('Otorohanga',</span> <span class="pre">'Otorohanga</span> <span class="pre">District'),</span> <span class="pre">('Waitomo',</span> <span class="pre">'Waitomo</span> <span class="pre">District'),</span> <span class="pre">('Taupo',</span> <span class="pre">'Taupo</span> <span class="pre">District'),</span> <span class="pre">('Western</span> <span class="pre">Bay</span> <span class="pre">of</span> <span class="pre">Plenty',</span> <span class="pre">'Western</span> <span class="pre">Bay</span> <span class="pre">of</span> <span class="pre">Plenty</span> <span class="pre">District'),</span> <span class="pre">('Tauranga',</span> <span class="pre">'Tauranga'),</span> <span class="pre">('Opotiki',</span> <span class="pre">'Opotiki</span> <span class="pre">District'),</span> <span class="pre">('Whakatane',</span> <span class="pre">'Whakatane</span> <span class="pre">District'),</span> <span class="pre">('Rotorua\t',</span> <span class="pre">'Rotorua</span> <span class="pre">District'),</span> <span class="pre">('Kawerau',</span> <span class="pre">'Kawerau</span> <span class="pre">District'),</span> <span class="pre">('Gisborne',</span> <span class="pre">'Gisborne</span> <span class="pre">District'),</span> <span class="pre">('Wairoa',</span> <span class="pre">'Wairoa</span> <span class="pre">District'),</span> <span class="pre">('Hastings',</span> <span class="pre">'Hastings</span> <span class="pre">District'),</span> <span class="pre">('Napier',</span> <span class="pre">'Napier'),</span> <span class="pre">(&quot;Central</span> <span class="pre">Hawke's</span> <span class="pre">Bay&quot;,</span> <span class="pre">&quot;Central</span> <span class="pre">Hawke's</span> <span class="pre">Bay</span> <span class="pre">District&quot;),</span> <span class="pre">('New</span> <span class="pre">Plymouth',</span> <span class="pre">'New</span> <span class="pre">Plymouth</span> <span class="pre">District'),</span> <span class="pre">('Stratford',</span> <span class="pre">'Stratford</span> <span class="pre">District'),</span> <span class="pre">('South</span> <span class="pre">Taranaki',</span> <span class="pre">'South</span> <span class="pre">Taranaki</span> <span class="pre">District'),</span> <span class="pre">('Ruapehu',</span> <span class="pre">'Ruapehu</span> <span class="pre">District'),</span> <span class="pre">('Rangitikei',</span> <span class="pre">'Rangitikei</span> <span class="pre">District'),</span> <span class="pre">('Wanganui',</span> <span class="pre">'Wanganui</span> <span class="pre">District'),</span> <span class="pre">('Manawatu',</span> <span class="pre">'Manawatu</span> <span class="pre">District'),</span> <span class="pre">('Palmerston</span> <span class="pre">North',</span> <span class="pre">'Palmerston</span> <span class="pre">North'),</span> <span class="pre">('Tararua',</span> <span class="pre">'Tararua</span> <span class="pre">District'),</span> <span class="pre">('Horowhenua',</span> <span class="pre">'Horowhenua</span> <span class="pre">District'),</span> <span class="pre">('Masterton',</span> <span class="pre">'Masterton</span> <span class="pre">District'),</span> <span class="pre">('Kapiti</span> <span class="pre">Coast',</span> <span class="pre">'Kapiti</span> <span class="pre">Coast</span> <span class="pre">District'),</span> <span class="pre">('Carterton',</span> <span class="pre">'Carterton</span> <span class="pre">District'),</span> <span class="pre">('South</span> <span class="pre">Wairarapa',</span> <span class="pre">'South</span> <span class="pre">Wairarapa</span> <span class="pre">District'),</span> <span class="pre">('Upper</span> <span class="pre">Hutt',</span> <span class="pre">'Upper</span> <span class="pre">Hutt'),</span> <span class="pre">('Porirua',</span> <span class="pre">'Porirua'),</span> <span class="pre">('Hutt',</span> <span class="pre">'Hutt'),</span> <span class="pre">('Wellington',</span> <span class="pre">'Wellington'))</span></em><a class="headerlink" href="#localflavor.nz.nz_councils.NORTH_ISLAND_COUNCIL_CHOICES" title="Link to this definition">¶</a></dt>
+<dd><p>A list of North Island city and district councils</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.nz.nz_councils.SOUTH_ISLAND_COUNCIL_CHOICES">
+<span class="sig-prename descclassname"><span class="pre">localflavor.nz.nz_councils.</span></span><span class="sig-name descname"><span class="pre">SOUTH_ISLAND_COUNCIL_CHOICES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(('Tasman',</span> <span class="pre">'Tasman</span> <span class="pre">District'),</span> <span class="pre">('Nelson',</span> <span class="pre">'Nelson'),</span> <span class="pre">('Marlborough',</span> <span class="pre">'Marlborough</span> <span class="pre">District'),</span> <span class="pre">('Buller',</span> <span class="pre">'Buller</span> <span class="pre">District'),</span> <span class="pre">('Grey',</span> <span class="pre">'Grey</span> <span class="pre">District'),</span> <span class="pre">('Westland',</span> <span class="pre">'Westland</span> <span class="pre">District'),</span> <span class="pre">('Kaikoura',</span> <span class="pre">'Kaikoura</span> <span class="pre">District'),</span> <span class="pre">('Hurunui',</span> <span class="pre">'Hurunui</span> <span class="pre">District'),</span> <span class="pre">('Selwyn',</span> <span class="pre">'Selwyn</span> <span class="pre">District'),</span> <span class="pre">('Waimakariri',</span> <span class="pre">'Waimakariri</span> <span class="pre">District'),</span> <span class="pre">('Christchurch',</span> <span class="pre">'Christchurch'),</span> <span class="pre">('Ashburton',</span> <span class="pre">'Ashburton</span> <span class="pre">District'),</span> <span class="pre">('Mackenzie',</span> <span class="pre">'Mackenzie</span> <span class="pre">District'),</span> <span class="pre">('Timaru',</span> <span class="pre">'Timaru</span> <span class="pre">District'),</span> <span class="pre">('Waimate',</span> <span class="pre">'Waimate</span> <span class="pre">District'),</span> <span class="pre">('Waitaki',</span> <span class="pre">'Waitaki</span> <span class="pre">District'),</span> <span class="pre">('Queenstown-Lakes',</span> <span class="pre">'Queenstown-Lakes</span> <span class="pre">District'),</span> <span class="pre">('Central</span> <span class="pre">Otago',</span> <span class="pre">'Central</span> <span class="pre">Otago</span> <span class="pre">District'),</span> <span class="pre">('Dunedin',</span> <span class="pre">'Dunedin'),</span> <span class="pre">('Clutha',</span> <span class="pre">'Clutha</span> <span class="pre">District'),</span> <span class="pre">('Southland',</span> <span class="pre">'Southland</span> <span class="pre">District'),</span> <span class="pre">('Gore',</span> <span class="pre">'Gore</span> <span class="pre">District'),</span> <span class="pre">('Invercargill',</span> <span class="pre">'Invercargill'))</span></em><a class="headerlink" href="#localflavor.nz.nz_councils.SOUTH_ISLAND_COUNCIL_CHOICES" title="Link to this definition">¶</a></dt>
+<dd><p>A list of South Island city and district councils</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">New Zealand (<code class="docutils literal notranslate"><span class="pre">nz</span></code>)</a><ul>
+<li><a class="reference internal" href="#module-localflavor.nz.forms">Forms</a><ul>
+<li><a class="reference internal" href="#localflavor.nz.forms.NZBankAccountNumberField"><code class="docutils literal notranslate"><span class="pre">NZBankAccountNumberField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.nz.forms.NZBankAccountNumberField.clean"><code class="docutils literal notranslate"><span class="pre">NZBankAccountNumberField.clean()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.nz.forms.NZNorthIslandCouncilSelect"><code class="docutils literal notranslate"><span class="pre">NZNorthIslandCouncilSelect</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.nz.forms.NZPostCodeField"><code class="docutils literal notranslate"><span class="pre">NZPostCodeField</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.nz.forms.NZProvinceSelect"><code class="docutils literal notranslate"><span class="pre">NZProvinceSelect</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.nz.forms.NZRegionSelect"><code class="docutils literal notranslate"><span class="pre">NZRegionSelect</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.nz.forms.NZSouthIslandCouncilSelect"><code class="docutils literal notranslate"><span class="pre">NZSouthIslandCouncilSelect</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data">Data</a><ul>
+<li><a class="reference internal" href="#localflavor.nz.nz_regions.REGION_CHOICES"><code class="docutils literal notranslate"><span class="pre">REGION_CHOICES</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.nz.nz_provinces.PROVINCE_CHOICES"><code class="docutils literal notranslate"><span class="pre">PROVINCE_CHOICES</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.nz.nz_councils.NORTH_ISLAND_COUNCIL_CHOICES"><code class="docutils literal notranslate"><span class="pre">NORTH_ISLAND_COUNCIL_CHOICES</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.nz.nz_councils.SOUTH_ISLAND_COUNCIL_CHOICES"><code class="docutils literal notranslate"><span class="pre">SOUTH_ISLAND_COUNCIL_CHOICES</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="np.html"
+                          title="previous chapter">Nepal (<code class="docutils literal notranslate"><span class="pre">np</span></code>)</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="pe.html"
+                          title="next chapter">Peru (<code class="docutils literal notranslate"><span class="pre">pe</span></code>)</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/localflavor/nz.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pe.html" title="Peru (pe)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="np.html" title="Nepal (np)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">New Zealand (<code class="docutils literal notranslate"><span class="pre">nz</span></code>)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright Django Software Foundation and individual contributors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+  </body>
+</html>

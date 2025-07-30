@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Ecuador (ec) &#8212; django-localflavor 4.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=2bf1fcf8" />
+    
+    <script src="../_static/documentation_options.js?v=9f5556dd"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Estonia (ee)" href="ee.html" />
+    <link rel="prev" title="Denmark (dk)" href="dk.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="ee.html" title="Estonia (ee)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="dk.html" title="Denmark (dk)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Ecuador (<code class="docutils literal notranslate"><span class="pre">ec</span></code>)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="ecuador-ec">
+<h1>Ecuador (<code class="docutils literal notranslate"><span class="pre">ec</span></code>)<a class="headerlink" href="#ecuador-ec" title="Link to this heading">¶</a></h1>
+<section id="module-localflavor.ec.forms">
+<span id="forms"></span><h2>Forms<a class="headerlink" href="#module-localflavor.ec.forms" title="Link to this heading">¶</a></h2>
+<p>Ecuador-specific form helpers.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.ec.forms.ECProvinceSelect">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.ec.forms.</span></span><span class="sig-name descname"><span class="pre">ECProvinceSelect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attrs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/ec/forms.html#ECProvinceSelect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.ec.forms.ECProvinceSelect" title="Link to this definition">¶</a></dt>
+<dd><p>A Select widget that uses a list of Ecuador provinces as its choices.</p>
+</dd></dl>
+
+</section>
+<section id="data">
+<h2>Data<a class="headerlink" href="#data" title="Link to this heading">¶</a></h2>
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.ec.ec_provinces.PROVINCE_CHOICES">
+<span class="sig-prename descclassname"><span class="pre">localflavor.ec.ec_provinces.</span></span><span class="sig-name descname"><span class="pre">PROVINCE_CHOICES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(('A',</span> <span class="pre">'Azuay'),</span> <span class="pre">('B',</span> <span class="pre">'Bolívar'),</span> <span class="pre">('F',</span> <span class="pre">'Cañar'),</span> <span class="pre">('C',</span> <span class="pre">'Carchi'),</span> <span class="pre">('H',</span> <span class="pre">'Chimborazo'),</span> <span class="pre">('X',</span> <span class="pre">'Cotopaxi'),</span> <span class="pre">('O',</span> <span class="pre">'El</span> <span class="pre">Oro'),</span> <span class="pre">('E',</span> <span class="pre">'Esmeraldas'),</span> <span class="pre">('W',</span> <span class="pre">'Galápagos'),</span> <span class="pre">('G',</span> <span class="pre">'Guayas'),</span> <span class="pre">('I',</span> <span class="pre">'Imbabura'),</span> <span class="pre">('L',</span> <span class="pre">'Loja'),</span> <span class="pre">('R',</span> <span class="pre">'Los</span> <span class="pre">Ríos'),</span> <span class="pre">('M',</span> <span class="pre">'Manabí'),</span> <span class="pre">('S',</span> <span class="pre">'Morona</span> <span class="pre">Santiago'),</span> <span class="pre">('N',</span> <span class="pre">'Napo'),</span> <span class="pre">('D',</span> <span class="pre">'Orellana'),</span> <span class="pre">('Y',</span> <span class="pre">'Pastaza'),</span> <span class="pre">('P',</span> <span class="pre">'Pichincha'),</span> <span class="pre">('SE',</span> <span class="pre">'Santa</span> <span class="pre">Elena'),</span> <span class="pre">('SD',</span> <span class="pre">'Santo</span> <span class="pre">Domingo</span> <span class="pre">de</span> <span class="pre">los</span> <span class="pre">Tsáchilas'),</span> <span class="pre">('U',</span> <span class="pre">'Sucumbíos'),</span> <span class="pre">('T',</span> <span class="pre">'Tungurahua'),</span> <span class="pre">('Z',</span> <span class="pre">'Zamora</span> <span class="pre">Chinchipe'))</span></em><a class="headerlink" href="#localflavor.ec.ec_provinces.PROVINCE_CHOICES" title="Link to this definition">¶</a></dt>
+<dd><p>A list of Ecuador provinces as <cite>choices</cite> in a formfield.</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Ecuador (<code class="docutils literal notranslate"><span class="pre">ec</span></code>)</a><ul>
+<li><a class="reference internal" href="#module-localflavor.ec.forms">Forms</a><ul>
+<li><a class="reference internal" href="#localflavor.ec.forms.ECProvinceSelect"><code class="docutils literal notranslate"><span class="pre">ECProvinceSelect</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data">Data</a><ul>
+<li><a class="reference internal" href="#localflavor.ec.ec_provinces.PROVINCE_CHOICES"><code class="docutils literal notranslate"><span class="pre">PROVINCE_CHOICES</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="dk.html"
+                          title="previous chapter">Denmark (<code class="docutils literal notranslate"><span class="pre">dk</span></code>)</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="ee.html"
+                          title="next chapter">Estonia (<code class="docutils literal notranslate"><span class="pre">ee</span></code>)</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/localflavor/ec.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="ee.html" title="Estonia (ee)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="dk.html" title="Denmark (dk)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Ecuador (<code class="docutils literal notranslate"><span class="pre">ec</span></code>)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright Django Software Foundation and individual contributors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+  </body>
+</html>

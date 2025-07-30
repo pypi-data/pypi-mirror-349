@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Slovakia (sk) &#8212; django-localflavor 4.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=2bf1fcf8" />
+    
+    <script src="../_static/documentation_options.js?v=9f5556dd"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Tunisia (tn)" href="tn.html" />
+    <link rel="prev" title="Slovenia (si)" href="si.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="tn.html" title="Tunisia (tn)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="si.html" title="Slovenia (si)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Slovakia (<code class="docutils literal notranslate"><span class="pre">sk</span></code>)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="slovakia-sk">
+<h1>Slovakia (<code class="docutils literal notranslate"><span class="pre">sk</span></code>)<a class="headerlink" href="#slovakia-sk" title="Link to this heading">¶</a></h1>
+<section id="module-localflavor.sk.forms">
+<span id="forms"></span><h2>Forms<a class="headerlink" href="#module-localflavor.sk.forms" title="Link to this heading">¶</a></h2>
+<p>Slovak-specific form helpers.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.sk.forms.SKDistrictSelect">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.sk.forms.</span></span><span class="sig-name descname"><span class="pre">SKDistrictSelect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attrs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/sk/forms.html#SKDistrictSelect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.sk.forms.SKDistrictSelect" title="Link to this definition">¶</a></dt>
+<dd><p>A select widget with list of Slovak districts as choices.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.sk.forms.SKPostalCodeField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.sk.forms.</span></span><span class="sig-name descname"><span class="pre">SKPostalCodeField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/sk/forms.html#SKPostalCodeField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.sk.forms.SKPostalCodeField" title="Link to this definition">¶</a></dt>
+<dd><p>A form field that validates its input as Slovak postal code.</p>
+<p>Valid form is XXXXX or XXX XX, where X represents integer.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.sk.forms.SKPostalCodeField.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/sk/forms.html#SKPostalCodeField.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.sk.forms.SKPostalCodeField.clean" title="Link to this definition">¶</a></dt>
+<dd><p>Validates the input and returns a string that contains only numbers.</p>
+<p>Returns an empty string for empty values.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.sk.forms.SKRegionSelect">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.sk.forms.</span></span><span class="sig-name descname"><span class="pre">SKRegionSelect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attrs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/sk/forms.html#SKRegionSelect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.sk.forms.SKRegionSelect" title="Link to this definition">¶</a></dt>
+<dd><p>A select widget widget with list of Slovak regions as choices.</p>
+</dd></dl>
+
+</section>
+<section id="data">
+<h2>Data<a class="headerlink" href="#data" title="Link to this heading">¶</a></h2>
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.sk.sk_districts.DISTRICT_CHOICES">
+<span class="sig-prename descclassname"><span class="pre">localflavor.sk.sk_districts.</span></span><span class="sig-name descname"><span class="pre">DISTRICT_CHOICES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(('BB',</span> <span class="pre">'Banska</span> <span class="pre">Bystrica'),</span> <span class="pre">('BS',</span> <span class="pre">'Banska</span> <span class="pre">Stiavnica'),</span> <span class="pre">('BJ',</span> <span class="pre">'Bardejov'),</span> <span class="pre">('BN',</span> <span class="pre">'Banovce</span> <span class="pre">nad</span> <span class="pre">Bebravou'),</span> <span class="pre">('BR',</span> <span class="pre">'Brezno'),</span> <span class="pre">('BA1',</span> <span class="pre">'Bratislava</span> <span class="pre">I'),</span> <span class="pre">('BA2',</span> <span class="pre">'Bratislava</span> <span class="pre">II'),</span> <span class="pre">('BA3',</span> <span class="pre">'Bratislava</span> <span class="pre">III'),</span> <span class="pre">('BA4',</span> <span class="pre">'Bratislava</span> <span class="pre">IV'),</span> <span class="pre">('BA5',</span> <span class="pre">'Bratislava</span> <span class="pre">V'),</span> <span class="pre">('BY',</span> <span class="pre">'Bytca'),</span> <span class="pre">('CA',</span> <span class="pre">'Cadca'),</span> <span class="pre">('DT',</span> <span class="pre">'Detva'),</span> <span class="pre">('DK',</span> <span class="pre">'Dolny</span> <span class="pre">Kubin'),</span> <span class="pre">('DS',</span> <span class="pre">'Dunajska</span> <span class="pre">Streda'),</span> <span class="pre">('GA',</span> <span class="pre">'Galanta'),</span> <span class="pre">('GL',</span> <span class="pre">'Gelnica'),</span> <span class="pre">('HC',</span> <span class="pre">'Hlohovec'),</span> <span class="pre">('HE',</span> <span class="pre">'Humenne'),</span> <span class="pre">('IL',</span> <span class="pre">'Ilava'),</span> <span class="pre">('KK',</span> <span class="pre">'Kezmarok'),</span> <span class="pre">('KN',</span> <span class="pre">'Komarno'),</span> <span class="pre">('KE1',</span> <span class="pre">'Kosice</span> <span class="pre">I'),</span> <span class="pre">('KE2',</span> <span class="pre">'Kosice</span> <span class="pre">II'),</span> <span class="pre">('KE3',</span> <span class="pre">'Kosice</span> <span class="pre">III'),</span> <span class="pre">('KE4',</span> <span class="pre">'Kosice</span> <span class="pre">IV'),</span> <span class="pre">('KEO',</span> <span class="pre">'Kosice</span> <span class="pre">-</span> <span class="pre">okolie'),</span> <span class="pre">('KA',</span> <span class="pre">'Krupina'),</span> <span class="pre">('KM',</span> <span class="pre">'Kysucke</span> <span class="pre">Nove</span> <span class="pre">Mesto'),</span> <span class="pre">('LV',</span> <span class="pre">'Levice'),</span> <span class="pre">('LE',</span> <span class="pre">'Levoca'),</span> <span class="pre">('LM',</span> <span class="pre">'Liptovsky</span> <span class="pre">Mikulas'),</span> <span class="pre">('LC',</span> <span class="pre">'Lucenec'),</span> <span class="pre">('MA',</span> <span class="pre">'Malacky'),</span> <span class="pre">('MT',</span> <span class="pre">'Martin'),</span> <span class="pre">('ML',</span> <span class="pre">'Medzilaborce'),</span> <span class="pre">('MI',</span> <span class="pre">'Michalovce'),</span> <span class="pre">('MY',</span> <span class="pre">'Myjava'),</span> <span class="pre">('NO',</span> <span class="pre">'Namestovo'),</span> <span class="pre">('NR',</span> <span class="pre">'Nitra'),</span> <span class="pre">('NM',</span> <span class="pre">'Nove</span> <span class="pre">Mesto</span> <span class="pre">nad</span> <span class="pre">Vahom'),</span> <span class="pre">('NZ',</span> <span class="pre">'Nove</span> <span class="pre">Zamky'),</span> <span class="pre">('PE',</span> <span class="pre">'Partizanske'),</span> <span class="pre">('PK',</span> <span class="pre">'Pezinok'),</span> <span class="pre">('PN',</span> <span class="pre">'Piestany'),</span> <span class="pre">('PT',</span> <span class="pre">'Poltar'),</span> <span class="pre">('PP',</span> <span class="pre">'Poprad'),</span> <span class="pre">('PB',</span> <span class="pre">'Povazska</span> <span class="pre">Bystrica'),</span> <span class="pre">('PO',</span> <span class="pre">'Presov'),</span> <span class="pre">('PD',</span> <span class="pre">'Prievidza'),</span> <span class="pre">('PU',</span> <span class="pre">'Puchov'),</span> <span class="pre">('RA',</span> <span class="pre">'Revuca'),</span> <span class="pre">('RS',</span> <span class="pre">'Rimavska</span> <span class="pre">Sobota'),</span> <span class="pre">('RV',</span> <span class="pre">'Roznava'),</span> <span class="pre">('RK',</span> <span class="pre">'Ruzomberok'),</span> <span class="pre">('SB',</span> <span class="pre">'Sabinov'),</span> <span class="pre">('SC',</span> <span class="pre">'Senec'),</span> <span class="pre">('SE',</span> <span class="pre">'Senica'),</span> <span class="pre">('SI',</span> <span class="pre">'Skalica'),</span> <span class="pre">('SV',</span> <span class="pre">'Snina'),</span> <span class="pre">('SO',</span> <span class="pre">'Sobrance'),</span> <span class="pre">('SN',</span> <span class="pre">'Spisska</span> <span class="pre">Nova</span> <span class="pre">Ves'),</span> <span class="pre">('SL',</span> <span class="pre">'Stara</span> <span class="pre">Lubovna'),</span> <span class="pre">('SP',</span> <span class="pre">'Stropkov'),</span> <span class="pre">('SK',</span> <span class="pre">'Svidnik'),</span> <span class="pre">('SA',</span> <span class="pre">'Sala'),</span> <span class="pre">('TO',</span> <span class="pre">'Topolcany'),</span> <span class="pre">('TV',</span> <span class="pre">'Trebisov'),</span> <span class="pre">('TN',</span> <span class="pre">'Trencin'),</span> <span class="pre">('TT',</span> <span class="pre">'Trnava'),</span> <span class="pre">('TR',</span> <span class="pre">'Turcianske</span> <span class="pre">Teplice'),</span> <span class="pre">('TS',</span> <span class="pre">'Tvrdosin'),</span> <span class="pre">('VK',</span> <span class="pre">'Velky</span> <span class="pre">Krtis'),</span> <span class="pre">('VT',</span> <span class="pre">'Vranov</span> <span class="pre">nad</span> <span class="pre">Toplou'),</span> <span class="pre">('ZM',</span> <span class="pre">'Zlate</span> <span class="pre">Moravce'),</span> <span class="pre">('ZV',</span> <span class="pre">'Zvolen'),</span> <span class="pre">('ZC',</span> <span class="pre">'Zarnovica'),</span> <span class="pre">('ZH',</span> <span class="pre">'Ziar</span> <span class="pre">nad</span> <span class="pre">Hronom'),</span> <span class="pre">('ZA',</span> <span class="pre">'Zilina'))</span></em><a class="headerlink" href="#localflavor.sk.sk_districts.DISTRICT_CHOICES" title="Link to this definition">¶</a></dt>
+<dd><p><a class="reference external" href="http://sk.wikipedia.org/wiki/Administrat%C3%ADvne_%C4%8Dlenenie_Slovenska">http://sk.wikipedia.org/wiki/Administrat%C3%ADvne_%C4%8Dlenenie_Slovenska</a></p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.sk.sk_regions.REGION_CHOICES">
+<span class="sig-prename descclassname"><span class="pre">localflavor.sk.sk_regions.</span></span><span class="sig-name descname"><span class="pre">REGION_CHOICES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(('BB',</span> <span class="pre">'Banska</span> <span class="pre">Bystrica</span> <span class="pre">region'),</span> <span class="pre">('BA',</span> <span class="pre">'Bratislava</span> <span class="pre">region'),</span> <span class="pre">('KE',</span> <span class="pre">'Kosice</span> <span class="pre">region'),</span> <span class="pre">('NR',</span> <span class="pre">'Nitra</span> <span class="pre">region'),</span> <span class="pre">('PO',</span> <span class="pre">'Presov</span> <span class="pre">region'),</span> <span class="pre">('TN',</span> <span class="pre">'Trencin</span> <span class="pre">region'),</span> <span class="pre">('TT',</span> <span class="pre">'Trnava</span> <span class="pre">region'),</span> <span class="pre">('ZA',</span> <span class="pre">'Zilina</span> <span class="pre">region'))</span></em><a class="headerlink" href="#localflavor.sk.sk_regions.REGION_CHOICES" title="Link to this definition">¶</a></dt>
+<dd><p><a class="reference external" href="http://sk.wikipedia.org/wiki/Administrat%C3%ADvne_%C4%8Dlenenie_Slovenska">http://sk.wikipedia.org/wiki/Administrat%C3%ADvne_%C4%8Dlenenie_Slovenska</a></p>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Slovakia (<code class="docutils literal notranslate"><span class="pre">sk</span></code>)</a><ul>
+<li><a class="reference internal" href="#module-localflavor.sk.forms">Forms</a><ul>
+<li><a class="reference internal" href="#localflavor.sk.forms.SKDistrictSelect"><code class="docutils literal notranslate"><span class="pre">SKDistrictSelect</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.sk.forms.SKPostalCodeField"><code class="docutils literal notranslate"><span class="pre">SKPostalCodeField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.sk.forms.SKPostalCodeField.clean"><code class="docutils literal notranslate"><span class="pre">SKPostalCodeField.clean()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.sk.forms.SKRegionSelect"><code class="docutils literal notranslate"><span class="pre">SKRegionSelect</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data">Data</a><ul>
+<li><a class="reference internal" href="#localflavor.sk.sk_districts.DISTRICT_CHOICES"><code class="docutils literal notranslate"><span class="pre">DISTRICT_CHOICES</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.sk.sk_regions.REGION_CHOICES"><code class="docutils literal notranslate"><span class="pre">REGION_CHOICES</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="si.html"
+                          title="previous chapter">Slovenia (<code class="docutils literal notranslate"><span class="pre">si</span></code>)</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="tn.html"
+                          title="next chapter">Tunisia (<code class="docutils literal notranslate"><span class="pre">tn</span></code>)</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/localflavor/sk.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="tn.html" title="Tunisia (tn)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="si.html" title="Slovenia (si)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Slovakia (<code class="docutils literal notranslate"><span class="pre">sk</span></code>)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright Django Software Foundation and individual contributors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+  </body>
+</html>

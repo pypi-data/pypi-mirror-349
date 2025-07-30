@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Pakistan (pk) &#8212; django-localflavor 4.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=2bf1fcf8" />
+    
+    <script src="../_static/documentation_options.js?v=9f5556dd"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Poland (pl)" href="pl.html" />
+    <link rel="prev" title="Peru (pe)" href="pe.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pl.html" title="Poland (pl)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pe.html" title="Peru (pe)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Pakistan (<code class="docutils literal notranslate"><span class="pre">pk</span></code>)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="pakistan-pk">
+<h1>Pakistan (<code class="docutils literal notranslate"><span class="pre">pk</span></code>)<a class="headerlink" href="#pakistan-pk" title="Link to this heading">¶</a></h1>
+<section id="module-localflavor.pk.forms">
+<span id="forms"></span><h2>Forms<a class="headerlink" href="#module-localflavor.pk.forms" title="Link to this heading">¶</a></h2>
+<p>Pakistani-specific Form helpers.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.pk.forms.PKPostCodeField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.pk.forms.</span></span><span class="sig-name descname"><span class="pre">PKPostCodeField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/pk/forms.html#PKPostCodeField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.pk.forms.PKPostCodeField" title="Link to this definition">¶</a></dt>
+<dd><p>Pakistani post code field.</p>
+<p>Assumed to be 5 digits.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.pk.forms.PKStateSelect">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.pk.forms.</span></span><span class="sig-name descname"><span class="pre">PKStateSelect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attrs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/pk/forms.html#PKStateSelect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.pk.forms.PKStateSelect" title="Link to this definition">¶</a></dt>
+<dd><p>A Select widget that uses a list of Pakistani states/territories as its choices.</p>
+</dd></dl>
+
+</section>
+<section id="module-localflavor.pk.models">
+<span id="models"></span><h2>Models<a class="headerlink" href="#module-localflavor.pk.models" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.pk.models.PKPostCodeField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.pk.models.</span></span><span class="sig-name descname"><span class="pre">PKPostCodeField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/pk/models.html#PKPostCodeField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.pk.models.PKPostCodeField" title="Link to this definition">¶</a></dt>
+<dd><p>A model field that stores the five-digit Pakistani postcode in the database</p>
+<p>Forms represent it as a <a class="reference internal" href="#localflavor.pk.forms.PKPostCodeField" title="localflavor.pk.forms.PKPostCodeField"><code class="xref py py-class docutils literal notranslate"><span class="pre">PKPostCodeField</span></code></a> field.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="localflavor.pk.models.PKPostCodeField.description">
+<span class="sig-name descname"><span class="pre">description</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Pakistani</span> <span class="pre">Postcode'</span></em><a class="headerlink" href="#localflavor.pk.models.PKPostCodeField.description" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.pk.models.PKPostCodeField.formfield">
+<span class="sig-name descname"><span class="pre">formfield</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/pk/models.html#PKPostCodeField.formfield"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.pk.models.PKPostCodeField.formfield" title="Link to this definition">¶</a></dt>
+<dd><p>Return a django.forms.Field instance for this field.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.pk.models.PKStateField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.pk.models.</span></span><span class="sig-name descname"><span class="pre">PKStateField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/pk/models.html#PKStateField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.pk.models.PKStateField" title="Link to this definition">¶</a></dt>
+<dd><p>A model field that stores the five-letter Pakistani state abbreviation in the database.</p>
+<p>It is represented with <code class="xref py py-data docutils literal notranslate"><span class="pre">STATE_CHOICES`</span></code> choices.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.pk.models.PKStateField.deconstruct">
+<span class="sig-name descname"><span class="pre">deconstruct</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/pk/models.html#PKStateField.deconstruct"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.pk.models.PKStateField.deconstruct" title="Link to this definition">¶</a></dt>
+<dd><p>Return enough information to recreate the field as a 4-tuple:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>The name of the field on the model, if contribute_to_class() has
+been run.</p></li>
+<li><p>The import path of the field, including the class, e.g.
+django.db.models.IntegerField. This should be the most portable
+version, so less specific may be better.</p></li>
+<li><p>A list of positional arguments.</p></li>
+<li><p>A dict of keyword arguments.</p></li>
+</ul>
+</div></blockquote>
+<p>Note that the positional or keyword arguments must contain values of
+the following types (including inner values of collection types):</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>None, bool, str, int, float, complex, set, frozenset, list, tuple,
+dict</p></li>
+<li><p>UUID</p></li>
+<li><p>datetime.datetime (naive), datetime.date</p></li>
+<li><p>top-level classes, top-level functions - will be referenced by their
+full import path</p></li>
+<li><p>Storage instances - these have their own deconstruct() method</p></li>
+</ul>
+</div></blockquote>
+<p>This is because the values here must be serialized into a text format
+(possibly new Python code, possibly JSON) and these are the only types
+with encoding handlers defined.</p>
+<p>There’s no need to return the exact way the field was instantiated this
+time, just ensure that the resulting field is the same - prefer keyword
+arguments over positional ones, and omit parameters with their default
+values.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="localflavor.pk.models.PKStateField.description">
+<span class="sig-name descname"><span class="pre">description</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Pakistani</span> <span class="pre">State'</span></em><a class="headerlink" href="#localflavor.pk.models.PKStateField.description" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="data">
+<h2>Data<a class="headerlink" href="#data" title="Link to this heading">¶</a></h2>
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.pk.pk_states.STATE_CHOICES">
+<span class="sig-prename descclassname"><span class="pre">localflavor.pk.pk_states.</span></span><span class="sig-name descname"><span class="pre">STATE_CHOICES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(('PK-JK',</span> <span class="pre">'Azad</span> <span class="pre">Jammu</span> <span class="pre">&amp;</span> <span class="pre">Kashmir'),</span> <span class="pre">('PK-BA',</span> <span class="pre">'Balochistan'),</span> <span class="pre">('PK-TA',</span> <span class="pre">'Federally</span> <span class="pre">Administered</span> <span class="pre">Tribal</span> <span class="pre">Areas'),</span> <span class="pre">('PK-GB',</span> <span class="pre">'Gilgit-Baltistan'),</span> <span class="pre">('PK-IS',</span> <span class="pre">'Islamabad'),</span> <span class="pre">('PK-KP',</span> <span class="pre">'Khyber</span> <span class="pre">Pakhtunkhwa'),</span> <span class="pre">('PK-PB',</span> <span class="pre">'Punjab'),</span> <span class="pre">('PK-SD',</span> <span class="pre">'Sindh'))</span></em><a class="headerlink" href="#localflavor.pk.pk_states.STATE_CHOICES" title="Link to this definition">¶</a></dt>
+<dd><p>Built-in immutable sequence.</p>
+<p>If no argument is given, the constructor returns an empty tuple.
+If iterable is specified the tuple is initialized from iterable’s items.</p>
+<p>If the argument is a tuple, the return value is the same object.</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Pakistan (<code class="docutils literal notranslate"><span class="pre">pk</span></code>)</a><ul>
+<li><a class="reference internal" href="#module-localflavor.pk.forms">Forms</a><ul>
+<li><a class="reference internal" href="#localflavor.pk.forms.PKPostCodeField"><code class="docutils literal notranslate"><span class="pre">PKPostCodeField</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.pk.forms.PKStateSelect"><code class="docutils literal notranslate"><span class="pre">PKStateSelect</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-localflavor.pk.models">Models</a><ul>
+<li><a class="reference internal" href="#localflavor.pk.models.PKPostCodeField"><code class="docutils literal notranslate"><span class="pre">PKPostCodeField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.pk.models.PKPostCodeField.description"><code class="docutils literal notranslate"><span class="pre">PKPostCodeField.description</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.pk.models.PKPostCodeField.formfield"><code class="docutils literal notranslate"><span class="pre">PKPostCodeField.formfield()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.pk.models.PKStateField"><code class="docutils literal notranslate"><span class="pre">PKStateField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.pk.models.PKStateField.deconstruct"><code class="docutils literal notranslate"><span class="pre">PKStateField.deconstruct()</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.pk.models.PKStateField.description"><code class="docutils literal notranslate"><span class="pre">PKStateField.description</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data">Data</a><ul>
+<li><a class="reference internal" href="#localflavor.pk.pk_states.STATE_CHOICES"><code class="docutils literal notranslate"><span class="pre">STATE_CHOICES</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="pe.html"
+                          title="previous chapter">Peru (<code class="docutils literal notranslate"><span class="pre">pe</span></code>)</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="pl.html"
+                          title="next chapter">Poland (<code class="docutils literal notranslate"><span class="pre">pl</span></code>)</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/localflavor/pk.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pl.html" title="Poland (pl)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pe.html" title="Peru (pe)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Pakistan (<code class="docutils literal notranslate"><span class="pre">pk</span></code>)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright Django Software Foundation and individual contributors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+  </body>
+</html>

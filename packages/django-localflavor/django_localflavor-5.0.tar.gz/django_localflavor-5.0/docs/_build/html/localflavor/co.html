@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Colombia (co) &#8212; django-localflavor 4.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=2bf1fcf8" />
+    
+    <script src="../_static/documentation_options.js?v=9f5556dd"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Czech Republic (cz)" href="cz.html" />
+    <link rel="prev" title="China (cn)" href="cn.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="cz.html" title="Czech Republic (cz)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="cn.html" title="China (cn)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Colombia (<code class="docutils literal notranslate"><span class="pre">co</span></code>)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="colombia-co">
+<h1>Colombia (<code class="docutils literal notranslate"><span class="pre">co</span></code>)<a class="headerlink" href="#colombia-co" title="Link to this heading">¶</a></h1>
+<section id="module-localflavor.co.forms">
+<span id="forms"></span><h2>Forms<a class="headerlink" href="#module-localflavor.co.forms" title="Link to this heading">¶</a></h2>
+<p>Colombian-specific form helpers.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.co.forms.CODepartmentSelect">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.co.forms.</span></span><span class="sig-name descname"><span class="pre">CODepartmentSelect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attrs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/co/forms.html#CODepartmentSelect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.co.forms.CODepartmentSelect" title="Link to this definition">¶</a></dt>
+<dd><p>A Select widget that uses a list of Colombian states as its choices.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.co.forms.CONITField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.co.forms.</span></span><span class="sig-name descname"><span class="pre">CONITField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/co/forms.html#CONITField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.co.forms.CONITField" title="Link to this definition">¶</a></dt>
+<dd><p>This field validates a NIT (NUmero de IdentificaciOn Tributaria). A
+NIT is of the form XXXXXXXXXX-V. The last digit is a check digit. This
+field can be used for people and companies.</p>
+<p>More info:
+<a class="reference external" href="http://es.wikipedia.org/wiki/N%C3%BAmero_de_Identificaci%C3%B3n_Tributaria">http://es.wikipedia.org/wiki/N%C3%BAmero_de_Identificaci%C3%B3n_Tributaria</a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.co.forms.CONITField.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/co/forms.html#CONITField.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.co.forms.CONITField.clean" title="Link to this definition">¶</a></dt>
+<dd><p>Value can be either a string in the format XXXXXXXXXX-Y or
+XXXXXXXXXXY.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="data">
+<h2>Data<a class="headerlink" href="#data" title="Link to this heading">¶</a></h2>
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.co.co_departments.DEPARTMENT_CHOICES">
+<span class="sig-prename descclassname"><span class="pre">localflavor.co.co_departments.</span></span><span class="sig-name descname"><span class="pre">DEPARTMENT_CHOICES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(('AMA',</span> <span class="pre">'Amazonas'),</span> <span class="pre">('ANT',</span> <span class="pre">'Antioquia'),</span> <span class="pre">('ARA',</span> <span class="pre">'Arauca'),</span> <span class="pre">('ATL',</span> <span class="pre">'Atlántico'),</span> <span class="pre">('DC',</span> <span class="pre">'Bogotá'),</span> <span class="pre">('BOL',</span> <span class="pre">'Bolívar'),</span> <span class="pre">('BOY',</span> <span class="pre">'Boyacá'),</span> <span class="pre">('CAL',</span> <span class="pre">'Caldas'),</span> <span class="pre">('CAQ',</span> <span class="pre">'Caquetá'),</span> <span class="pre">('CAS',</span> <span class="pre">'Casanare'),</span> <span class="pre">('CAU',</span> <span class="pre">'Cauca'),</span> <span class="pre">('CES',</span> <span class="pre">'Cesar'),</span> <span class="pre">('CHO',</span> <span class="pre">'Chocó'),</span> <span class="pre">('COR',</span> <span class="pre">'Córdoba'),</span> <span class="pre">('CUN',</span> <span class="pre">'Cundinamarca'),</span> <span class="pre">('GUA',</span> <span class="pre">'Guainía'),</span> <span class="pre">('GUV',</span> <span class="pre">'Guaviare'),</span> <span class="pre">('HUI',</span> <span class="pre">'Huila'),</span> <span class="pre">('LAG',</span> <span class="pre">'La</span> <span class="pre">Guajira'),</span> <span class="pre">('MAG',</span> <span class="pre">'Magdalena'),</span> <span class="pre">('MET',</span> <span class="pre">'Meta'),</span> <span class="pre">('NAR',</span> <span class="pre">'Nariño'),</span> <span class="pre">('NSA',</span> <span class="pre">'Norte</span> <span class="pre">de</span> <span class="pre">Santander'),</span> <span class="pre">('PUT',</span> <span class="pre">'Putumayo'),</span> <span class="pre">('QUI',</span> <span class="pre">'Quindío'),</span> <span class="pre">('RIS',</span> <span class="pre">'Risaralda'),</span> <span class="pre">('SAP',</span> <span class="pre">'San</span> <span class="pre">Andrés</span> <span class="pre">and</span> <span class="pre">Providencia'),</span> <span class="pre">('SAN',</span> <span class="pre">'Santander'),</span> <span class="pre">('SUC',</span> <span class="pre">'Sucre'),</span> <span class="pre">('TOL',</span> <span class="pre">'Tolima'),</span> <span class="pre">('VAC',</span> <span class="pre">'Valle</span> <span class="pre">del</span> <span class="pre">Cauca'),</span> <span class="pre">('VAU',</span> <span class="pre">'Vaupés'),</span> <span class="pre">('VID',</span> <span class="pre">'Vichada'))</span></em><a class="headerlink" href="#localflavor.co.co_departments.DEPARTMENT_CHOICES" title="Link to this definition">¶</a></dt>
+<dd><p>A list of Colombian departaments as <cite>choices</cite> in a
+formfield.</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Colombia (<code class="docutils literal notranslate"><span class="pre">co</span></code>)</a><ul>
+<li><a class="reference internal" href="#module-localflavor.co.forms">Forms</a><ul>
+<li><a class="reference internal" href="#localflavor.co.forms.CODepartmentSelect"><code class="docutils literal notranslate"><span class="pre">CODepartmentSelect</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.co.forms.CONITField"><code class="docutils literal notranslate"><span class="pre">CONITField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.co.forms.CONITField.clean"><code class="docutils literal notranslate"><span class="pre">CONITField.clean()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data">Data</a><ul>
+<li><a class="reference internal" href="#localflavor.co.co_departments.DEPARTMENT_CHOICES"><code class="docutils literal notranslate"><span class="pre">DEPARTMENT_CHOICES</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="cn.html"
+                          title="previous chapter">China (<code class="docutils literal notranslate"><span class="pre">cn</span></code>)</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="cz.html"
+                          title="next chapter">Czech Republic (<code class="docutils literal notranslate"><span class="pre">cz</span></code>)</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/localflavor/co.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="cz.html" title="Czech Republic (cz)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="cn.html" title="China (cn)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Colombia (<code class="docutils literal notranslate"><span class="pre">co</span></code>)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright Django Software Foundation and individual contributors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+  </body>
+</html>

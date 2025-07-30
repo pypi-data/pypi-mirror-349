@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>United States of America (us) &#8212; django-localflavor 4.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=2bf1fcf8" />
+    
+    <script src="../_static/documentation_options.js?v=9f5556dd"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Uruguay (uy)" href="uy.html" />
+    <link rel="prev" title="Ukraine (ua)" href="ua.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="uy.html" title="Uruguay (uy)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="ua.html" title="Ukraine (ua)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">United States of America (<code class="docutils literal notranslate"><span class="pre">us</span></code>)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="united-states-of-america-us">
+<h1>United States of America (<code class="docutils literal notranslate"><span class="pre">us</span></code>)<a class="headerlink" href="#united-states-of-america-us" title="Link to this heading">¶</a></h1>
+<section id="module-localflavor.us.forms">
+<span id="forms"></span><h2>Forms<a class="headerlink" href="#module-localflavor.us.forms" title="Link to this heading">¶</a></h2>
+<p>USA-specific Form helpers.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.us.forms.USPSSelect">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.us.forms.</span></span><span class="sig-name descname"><span class="pre">USPSSelect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attrs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/us/forms.html#USPSSelect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.us.forms.USPSSelect" title="Link to this definition">¶</a></dt>
+<dd><p>A Select widget that uses a list of US Postal Service codes as its choices.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you are looking for a form field that validates U.S. ZIP codes
+please use <a class="reference internal" href="#localflavor.us.forms.USZipCodeField" title="localflavor.us.forms.USZipCodeField"><code class="xref py py-class docutils literal notranslate"><span class="pre">USZipCodeField</span></code></a>.</p>
+</div>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.us.forms.USSocialSecurityNumberField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.us.forms.</span></span><span class="sig-name descname"><span class="pre">USSocialSecurityNumberField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/us/forms.html#USSocialSecurityNumberField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.us.forms.USSocialSecurityNumberField" title="Link to this definition">¶</a></dt>
+<dd><p>A United States Social Security number.</p>
+<p>Checks the following rules to determine whether the number is valid:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Conforms to the XXX-XX-XXXX format.</p></li>
+<li><p>No group consists entirely of zeroes.</p></li>
+<li><p>The leading group is not “666” (block “666” will never be allocated).</p></li>
+<li><p>The number is not in the promotional block 987-65-4320 through
+987-65-4329, which are permanently invalid.</p></li>
+<li><p>The number is not one known to be invalid due to otherwise widespread
+promotional use or distribution (e.g., the Woolworth’s number or the
+1962 promotional number).</p></li>
+</ul>
+</div></blockquote>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 1.1.</span></p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.us.forms.USSocialSecurityNumberField.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/us/forms.html#USSocialSecurityNumberField.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.us.forms.USSocialSecurityNumberField.clean" title="Link to this definition">¶</a></dt>
+<dd><p>Validate the given value and return its “cleaned” value as an
+appropriate Python object. Raise ValidationError for any errors.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.us.forms.USStateField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.us.forms.</span></span><span class="sig-name descname"><span class="pre">USStateField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/us/forms.html#USStateField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.us.forms.USStateField" title="Link to this definition">¶</a></dt>
+<dd><p>A form field that validates its input is a U.S. state, territory, or COFA territory.
+The input is validated against a dictionary which includes names and abbreviations.</p>
+<p>It normalizes the input to the standard two-letter postal service
+abbreviation for the given state.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.us.forms.USStateField.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/us/forms.html#USStateField.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.us.forms.USStateField.clean" title="Link to this definition">¶</a></dt>
+<dd><p>Validate the given value and return its “cleaned” value as an
+appropriate Python object. Raise ValidationError for any errors.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.us.forms.USStateSelect">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.us.forms.</span></span><span class="sig-name descname"><span class="pre">USStateSelect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attrs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/us/forms.html#USStateSelect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.us.forms.USStateSelect" title="Link to this definition">¶</a></dt>
+<dd><p>A Select widget that uses a list of U.S. states/territories as its choices.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.us.forms.USZipCodeField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.us.forms.</span></span><span class="sig-name descname"><span class="pre">USZipCodeField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/us/forms.html#USZipCodeField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.us.forms.USZipCodeField" title="Link to this definition">¶</a></dt>
+<dd><p>A form field that validates input as a U.S. ZIP code.</p>
+<p>Valid formats are XXXXX or XXXXX-XXXX.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you are looking for a form field with a list of U.S. Postal Service
+locations please use <a class="reference internal" href="#localflavor.us.forms.USPSSelect" title="localflavor.us.forms.USPSSelect"><code class="xref py py-class docutils literal notranslate"><span class="pre">USPSSelect</span></code></a>.</p>
+</div>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 1.1.</span></p>
+</div>
+<p>Whitespace around the ZIP code is accepted and automatically trimmed.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.us.forms.USZipCodeField.to_python">
+<span class="sig-name descname"><span class="pre">to_python</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/us/forms.html#USZipCodeField.to_python"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.us.forms.USZipCodeField.to_python" title="Link to this definition">¶</a></dt>
+<dd><p>Return a string.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-localflavor.us.models">
+<span id="models"></span><h2>Models<a class="headerlink" href="#module-localflavor.us.models" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.us.models.USPostalCodeField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.us.models.</span></span><span class="sig-name descname"><span class="pre">USPostalCodeField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/us/models.html#USPostalCodeField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.us.models.USPostalCodeField" title="Link to this definition">¶</a></dt>
+<dd><p>A model field that stores the two-letter U.S. Postal Service abbreviation in the database.</p>
+<p>Forms represent it as a <code class="xref py py-class docutils literal notranslate"><span class="pre">USPSSelect`</span></code> field.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you are looking for a model field that validates U.S. ZIP codes
+please use <a class="reference internal" href="#localflavor.us.models.USZipCodeField" title="localflavor.us.models.USZipCodeField"><code class="xref py py-class docutils literal notranslate"><span class="pre">USZipCodeField</span></code></a>.</p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.us.models.USPostalCodeField.deconstruct">
+<span class="sig-name descname"><span class="pre">deconstruct</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/us/models.html#USPostalCodeField.deconstruct"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.us.models.USPostalCodeField.deconstruct" title="Link to this definition">¶</a></dt>
+<dd><p>Return enough information to recreate the field as a 4-tuple:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>The name of the field on the model, if contribute_to_class() has
+been run.</p></li>
+<li><p>The import path of the field, including the class, e.g.
+django.db.models.IntegerField. This should be the most portable
+version, so less specific may be better.</p></li>
+<li><p>A list of positional arguments.</p></li>
+<li><p>A dict of keyword arguments.</p></li>
+</ul>
+</div></blockquote>
+<p>Note that the positional or keyword arguments must contain values of
+the following types (including inner values of collection types):</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>None, bool, str, int, float, complex, set, frozenset, list, tuple,
+dict</p></li>
+<li><p>UUID</p></li>
+<li><p>datetime.datetime (naive), datetime.date</p></li>
+<li><p>top-level classes, top-level functions - will be referenced by their
+full import path</p></li>
+<li><p>Storage instances - these have their own deconstruct() method</p></li>
+</ul>
+</div></blockquote>
+<p>This is because the values here must be serialized into a text format
+(possibly new Python code, possibly JSON) and these are the only types
+with encoding handlers defined.</p>
+<p>There’s no need to return the exact way the field was instantiated this
+time, just ensure that the resulting field is the same - prefer keyword
+arguments over positional ones, and omit parameters with their default
+values.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.us.models.USSocialSecurityNumberField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.us.models.</span></span><span class="sig-name descname"><span class="pre">USSocialSecurityNumberField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/us/models.html#USSocialSecurityNumberField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.us.models.USSocialSecurityNumberField" title="Link to this definition">¶</a></dt>
+<dd><p>A model field that stores  the security number in the format <code class="docutils literal notranslate"><span class="pre">XXX-XX-XXXX</span></code>.</p>
+<p>Forms represent it as <code class="docutils literal notranslate"><span class="pre">forms.USSocialSecurityNumberField</span></code> field.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 1.1.</span></p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.us.models.USSocialSecurityNumberField.formfield">
+<span class="sig-name descname"><span class="pre">formfield</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/us/models.html#USSocialSecurityNumberField.formfield"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.us.models.USSocialSecurityNumberField.formfield" title="Link to this definition">¶</a></dt>
+<dd><p>Return a django.forms.Field instance for this field.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.us.models.USStateField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.us.models.</span></span><span class="sig-name descname"><span class="pre">USStateField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/us/models.html#USStateField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.us.models.USStateField" title="Link to this definition">¶</a></dt>
+<dd><p>A model field that stores the two-letter U.S. state abbreviation in the database.</p>
+<p>Forms represent it as a <code class="docutils literal notranslate"><span class="pre">forms.USStateField</span></code> field.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.us.models.USStateField.deconstruct">
+<span class="sig-name descname"><span class="pre">deconstruct</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/us/models.html#USStateField.deconstruct"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.us.models.USStateField.deconstruct" title="Link to this definition">¶</a></dt>
+<dd><p>Return enough information to recreate the field as a 4-tuple:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>The name of the field on the model, if contribute_to_class() has
+been run.</p></li>
+<li><p>The import path of the field, including the class, e.g.
+django.db.models.IntegerField. This should be the most portable
+version, so less specific may be better.</p></li>
+<li><p>A list of positional arguments.</p></li>
+<li><p>A dict of keyword arguments.</p></li>
+</ul>
+</div></blockquote>
+<p>Note that the positional or keyword arguments must contain values of
+the following types (including inner values of collection types):</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>None, bool, str, int, float, complex, set, frozenset, list, tuple,
+dict</p></li>
+<li><p>UUID</p></li>
+<li><p>datetime.datetime (naive), datetime.date</p></li>
+<li><p>top-level classes, top-level functions - will be referenced by their
+full import path</p></li>
+<li><p>Storage instances - these have their own deconstruct() method</p></li>
+</ul>
+</div></blockquote>
+<p>This is because the values here must be serialized into a text format
+(possibly new Python code, possibly JSON) and these are the only types
+with encoding handlers defined.</p>
+<p>There’s no need to return the exact way the field was instantiated this
+time, just ensure that the resulting field is the same - prefer keyword
+arguments over positional ones, and omit parameters with their default
+values.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.us.models.USZipCodeField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.us.models.</span></span><span class="sig-name descname"><span class="pre">USZipCodeField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/us/models.html#USZipCodeField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.us.models.USZipCodeField" title="Link to this definition">¶</a></dt>
+<dd><p>A model field that stores the U.S. ZIP code in the database.</p>
+<p>Forms represent it as a <a class="reference internal" href="#localflavor.us.forms.USZipCodeField" title="localflavor.us.forms.USZipCodeField"><code class="xref py py-class docutils literal notranslate"><span class="pre">USZipCodeField</span></code></a> field.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you are looking for a model field with a list of U.S. Postal Service
+locations please use <a class="reference internal" href="#localflavor.us.models.USPostalCodeField" title="localflavor.us.models.USPostalCodeField"><code class="xref py py-class docutils literal notranslate"><span class="pre">USPostalCodeField</span></code></a>.</p>
+</div>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 1.1.</span></p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.us.models.USZipCodeField.formfield">
+<span class="sig-name descname"><span class="pre">formfield</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/us/models.html#USZipCodeField.formfield"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.us.models.USZipCodeField.formfield" title="Link to this definition">¶</a></dt>
+<dd><p>Return a django.forms.Field instance for this field.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="data">
+<h2>Data<a class="headerlink" href="#data" title="Link to this heading">¶</a></h2>
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.us.us_states.CONTIGUOUS_STATES">
+<span class="sig-prename descclassname"><span class="pre">localflavor.us.us_states.</span></span><span class="sig-name descname"><span class="pre">CONTIGUOUS_STATES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(('AL',</span> <span class="pre">'Alabama'),</span> <span class="pre">('AZ',</span> <span class="pre">'Arizona'),</span> <span class="pre">('AR',</span> <span class="pre">'Arkansas'),</span> <span class="pre">('CA',</span> <span class="pre">'California'),</span> <span class="pre">('CO',</span> <span class="pre">'Colorado'),</span> <span class="pre">('CT',</span> <span class="pre">'Connecticut'),</span> <span class="pre">('DE',</span> <span class="pre">'Delaware'),</span> <span class="pre">('DC',</span> <span class="pre">'District</span> <span class="pre">of</span> <span class="pre">Columbia'),</span> <span class="pre">('FL',</span> <span class="pre">'Florida'),</span> <span class="pre">('GA',</span> <span class="pre">'Georgia'),</span> <span class="pre">('ID',</span> <span class="pre">'Idaho'),</span> <span class="pre">('IL',</span> <span class="pre">'Illinois'),</span> <span class="pre">('IN',</span> <span class="pre">'Indiana'),</span> <span class="pre">('IA',</span> <span class="pre">'Iowa'),</span> <span class="pre">('KS',</span> <span class="pre">'Kansas'),</span> <span class="pre">('KY',</span> <span class="pre">'Kentucky'),</span> <span class="pre">('LA',</span> <span class="pre">'Louisiana'),</span> <span class="pre">('ME',</span> <span class="pre">'Maine'),</span> <span class="pre">('MD',</span> <span class="pre">'Maryland'),</span> <span class="pre">('MA',</span> <span class="pre">'Massachusetts'),</span> <span class="pre">('MI',</span> <span class="pre">'Michigan'),</span> <span class="pre">('MN',</span> <span class="pre">'Minnesota'),</span> <span class="pre">('MS',</span> <span class="pre">'Mississippi'),</span> <span class="pre">('MO',</span> <span class="pre">'Missouri'),</span> <span class="pre">('MT',</span> <span class="pre">'Montana'),</span> <span class="pre">('NE',</span> <span class="pre">'Nebraska'),</span> <span class="pre">('NV',</span> <span class="pre">'Nevada'),</span> <span class="pre">('NH',</span> <span class="pre">'New</span> <span class="pre">Hampshire'),</span> <span class="pre">('NJ',</span> <span class="pre">'New</span> <span class="pre">Jersey'),</span> <span class="pre">('NM',</span> <span class="pre">'New</span> <span class="pre">Mexico'),</span> <span class="pre">('NY',</span> <span class="pre">'New</span> <span class="pre">York'),</span> <span class="pre">('NC',</span> <span class="pre">'North</span> <span class="pre">Carolina'),</span> <span class="pre">('ND',</span> <span class="pre">'North</span> <span class="pre">Dakota'),</span> <span class="pre">('OH',</span> <span class="pre">'Ohio'),</span> <span class="pre">('OK',</span> <span class="pre">'Oklahoma'),</span> <span class="pre">('OR',</span> <span class="pre">'Oregon'),</span> <span class="pre">('PA',</span> <span class="pre">'Pennsylvania'),</span> <span class="pre">('RI',</span> <span class="pre">'Rhode</span> <span class="pre">Island'),</span> <span class="pre">('SC',</span> <span class="pre">'South</span> <span class="pre">Carolina'),</span> <span class="pre">('SD',</span> <span class="pre">'South</span> <span class="pre">Dakota'),</span> <span class="pre">('TN',</span> <span class="pre">'Tennessee'),</span> <span class="pre">('TX',</span> <span class="pre">'Texas'),</span> <span class="pre">('UT',</span> <span class="pre">'Utah'),</span> <span class="pre">('VT',</span> <span class="pre">'Vermont'),</span> <span class="pre">('VA',</span> <span class="pre">'Virginia'),</span> <span class="pre">('WA',</span> <span class="pre">'Washington'),</span> <span class="pre">('WV',</span> <span class="pre">'West</span> <span class="pre">Virginia'),</span> <span class="pre">('WI',</span> <span class="pre">'Wisconsin'),</span> <span class="pre">('WY',</span> <span class="pre">'Wyoming'))</span></em><a class="headerlink" href="#localflavor.us.us_states.CONTIGUOUS_STATES" title="Link to this definition">¶</a></dt>
+<dd><p>The 48 contiguous states, plus the District of Columbia.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.us.us_states.NON_CONTIGUOUS_STATES">
+<span class="sig-prename descclassname"><span class="pre">localflavor.us.us_states.</span></span><span class="sig-name descname"><span class="pre">NON_CONTIGUOUS_STATES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(('AK',</span> <span class="pre">'Alaska'),</span> <span class="pre">('HI',</span> <span class="pre">'Hawaii'))</span></em><a class="headerlink" href="#localflavor.us.us_states.NON_CONTIGUOUS_STATES" title="Link to this definition">¶</a></dt>
+<dd><p>Non contiguous states (Not connected to mainland USA)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.us.us_states.US_TERRITORIES">
+<span class="sig-prename descclassname"><span class="pre">localflavor.us.us_states.</span></span><span class="sig-name descname"><span class="pre">US_TERRITORIES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(('AS',</span> <span class="pre">'American</span> <span class="pre">Samoa'),</span> <span class="pre">('GU',</span> <span class="pre">'Guam'),</span> <span class="pre">('MP',</span> <span class="pre">'Northern</span> <span class="pre">Mariana</span> <span class="pre">Islands'),</span> <span class="pre">('PR',</span> <span class="pre">'Puerto</span> <span class="pre">Rico'),</span> <span class="pre">('VI',</span> <span class="pre">'Virgin</span> <span class="pre">Islands'))</span></em><a class="headerlink" href="#localflavor.us.us_states.US_TERRITORIES" title="Link to this definition">¶</a></dt>
+<dd><p>Non-state territories.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.us.us_states.ARMED_FORCES_STATES">
+<span class="sig-prename descclassname"><span class="pre">localflavor.us.us_states.</span></span><span class="sig-name descname"><span class="pre">ARMED_FORCES_STATES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(('AA',</span> <span class="pre">'Armed</span> <span class="pre">Forces</span> <span class="pre">Americas'),</span> <span class="pre">('AE',</span> <span class="pre">'Armed</span> <span class="pre">Forces</span> <span class="pre">Europe'),</span> <span class="pre">('AP',</span> <span class="pre">'Armed</span> <span class="pre">Forces</span> <span class="pre">Pacific'))</span></em><a class="headerlink" href="#localflavor.us.us_states.ARMED_FORCES_STATES" title="Link to this definition">¶</a></dt>
+<dd><p>Military postal “states”. Note that ‘AE’ actually encompasses
+Europe, Canada, Africa and the Middle East.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.us.us_states.COFA_STATES">
+<span class="sig-prename descclassname"><span class="pre">localflavor.us.us_states.</span></span><span class="sig-name descname"><span class="pre">COFA_STATES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(('FM',</span> <span class="pre">'Federated</span> <span class="pre">States</span> <span class="pre">of</span> <span class="pre">Micronesia'),</span> <span class="pre">('MH',</span> <span class="pre">'Marshall</span> <span class="pre">Islands'),</span> <span class="pre">('PW',</span> <span class="pre">'Palau'))</span></em><a class="headerlink" href="#localflavor.us.us_states.COFA_STATES" title="Link to this definition">¶</a></dt>
+<dd><p>Non-US locations serviced by USPS (under Compact of Free
+Association).</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.us.us_states.OBSOLETE_STATES">
+<span class="sig-prename descclassname"><span class="pre">localflavor.us.us_states.</span></span><span class="sig-name descname"><span class="pre">OBSOLETE_STATES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(('CM',</span> <span class="pre">'Commonwealth</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">Northern</span> <span class="pre">Mariana</span> <span class="pre">Islands'),</span> <span class="pre">('CZ',</span> <span class="pre">'Panama</span> <span class="pre">Canal</span> <span class="pre">Zone'),</span> <span class="pre">('PI',</span> <span class="pre">'Philippine</span> <span class="pre">Islands'),</span> <span class="pre">('TT',</span> <span class="pre">'Trust</span> <span class="pre">Territory</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">Pacific</span> <span class="pre">Islands'))</span></em><a class="headerlink" href="#localflavor.us.us_states.OBSOLETE_STATES" title="Link to this definition">¶</a></dt>
+<dd><p>Obsolete abbreviations (no longer US territories/USPS service, or
+code changed).</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.us.models.localflavor.us.us_states.US_STATES">
+<span class="sig-prename descclassname"><span class="pre">localflavor.us.us_states.</span></span><span class="sig-name descname"><span class="pre">US_STATES</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">CONTIGUOUS_STATES</span> <span class="pre">+</span> <span class="pre">NON_CONTIGUOUS_STATES</span></em><a class="headerlink" href="#localflavor.us.models.localflavor.us.us_states.US_STATES" title="Link to this definition">¶</a></dt>
+<dd><p>All US states.</p>
+<p>This tuple is lazily generated and may not work as expected in all cases due
+to tuple optimizations in the Python interpreter which do not account for
+lazily generated tuples.  For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">US_STATES</span> <span class="o">+</span> <span class="p">(</span><span class="s1">&#39;XX&#39;</span><span class="p">,</span> <span class="n">_</span><span class="p">(</span><span class="s1">&#39;Select a State&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>should work as expected, but:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="s1">&#39;XX&#39;</span><span class="p">,</span> <span class="n">_</span><span class="p">(</span><span class="s1">&#39;Select a State&#39;</span><span class="p">))</span> <span class="o">+</span> <span class="n">US_STATES</span>
+</pre></div>
+</div>
+<p>may throw:</p>
+<p><code class="docutils literal notranslate"><span class="pre">TypeError:</span> <span class="pre">can</span> <span class="pre">only</span> <span class="pre">concatenate</span> <span class="pre">tuple</span> <span class="pre">(not</span> <span class="pre">&quot;proxy&quot;)</span> <span class="pre">to</span> <span class="pre">tuple</span></code></p>
+<p>due to a Python optimization that causes the concatenation to occur before
+US_STATES has been lazily generated.  To work around these issues, you
+can use a slice index (<code class="docutils literal notranslate"><span class="pre">[:]</span></code>) to force the generation of US_STATES
+before any other operations are processed by the Python interpreter:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="s1">&#39;XX&#39;</span><span class="p">,</span> <span class="n">_</span><span class="p">(</span><span class="s1">&#39;Select a State&#39;</span><span class="p">))</span> <span class="o">+</span> <span class="n">US_STATES</span><span class="p">[:]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.us.models.localflavor.us.us_states.STATE_CHOICES">
+<span class="sig-prename descclassname"><span class="pre">localflavor.us.us_states.</span></span><span class="sig-name descname"><span class="pre">STATE_CHOICES</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">CONTIGUOUS_STATES</span> <span class="pre">+</span> <span class="pre">NON_CONTIGUOUS_STATES</span> <span class="pre">+</span> <span class="pre">US_TERRITORIES</span> <span class="pre">+</span> <span class="pre">ARMED_FORCES_STATES</span></em><a class="headerlink" href="#localflavor.us.models.localflavor.us.us_states.STATE_CHOICES" title="Link to this definition">¶</a></dt>
+<dd><p>All US states and territories plus DC and military mail.</p>
+<p>This tuple is lazily generated and may not work as expected in all cases due
+to tuple optimizations in the Python interpreter which do not account for
+lazily generated tuples.  For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">STATE_CHOICES</span> <span class="o">+</span> <span class="p">(</span><span class="s1">&#39;XX&#39;</span><span class="p">,</span> <span class="n">_</span><span class="p">(</span><span class="s1">&#39;Select a State&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>should work as expected, but:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="s1">&#39;XX&#39;</span><span class="p">,</span> <span class="n">_</span><span class="p">(</span><span class="s1">&#39;Select a State&#39;</span><span class="p">))</span> <span class="o">+</span> <span class="n">STATE_CHOICES</span>
+</pre></div>
+</div>
+<p>may throw:</p>
+<p><code class="docutils literal notranslate"><span class="pre">TypeError:</span> <span class="pre">can</span> <span class="pre">only</span> <span class="pre">concatenate</span> <span class="pre">tuple</span> <span class="pre">(not</span> <span class="pre">&quot;proxy&quot;)</span> <span class="pre">to</span> <span class="pre">tuple</span></code></p>
+<p>due to a Python optimization that causes the concatenation to occur before
+STATE_CHOICES has been lazily generated.  To work around these issues, you
+can use a slice index (<code class="docutils literal notranslate"><span class="pre">[:]</span></code>) to force the generation of STATE_CHOICES
+before any other operations are processed by the Python interpreter:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="s1">&#39;XX&#39;</span><span class="p">,</span> <span class="n">_</span><span class="p">(</span><span class="s1">&#39;Select a State&#39;</span><span class="p">))</span> <span class="o">+</span> <span class="n">STATE_CHOICES</span><span class="p">[:]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.us.models.localflavor.us.us_states.USPS_CHOICES">
+<span class="sig-prename descclassname"><span class="pre">localflavor.us.us_states.</span></span><span class="sig-name descname"><span class="pre">USPS_CHOICES</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">CONTIGUOUS_STATES</span> <span class="pre">+</span> <span class="pre">NON_CONTIGUOUS_STATES</span> <span class="pre">+</span> <span class="pre">US_TERRITORIES</span> <span class="pre">+</span> <span class="pre">ARMED_FORCES_STATES</span> <span class="pre">+</span> <span class="pre">COFA_STATES</span></em><a class="headerlink" href="#localflavor.us.models.localflavor.us.us_states.USPS_CHOICES" title="Link to this definition">¶</a></dt>
+<dd><p>All US Postal Service locations.</p>
+<p>This tuple is lazily generated and may not work as expected in all cases due
+to tuple optimizations in the Python interpreter which do not account for
+lazily generated tuples.  For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">USPS_CHOICES</span> <span class="o">+</span> <span class="p">(</span><span class="s1">&#39;XX&#39;</span><span class="p">,</span> <span class="n">_</span><span class="p">(</span><span class="s1">&#39;Select a State&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>should work as expected, but:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="s1">&#39;XX&#39;</span><span class="p">,</span> <span class="n">_</span><span class="p">(</span><span class="s1">&#39;Select a State&#39;</span><span class="p">))</span> <span class="o">+</span> <span class="n">USPS_CHOICES</span>
+</pre></div>
+</div>
+<p>may throw:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">TypeError:</span> <span class="pre">can</span> <span class="pre">only</span> <span class="pre">concatenate</span> <span class="pre">tuple</span> <span class="pre">(not</span> <span class="pre">&quot;proxy&quot;)</span> <span class="pre">to</span> <span class="pre">tuple</span></code></p>
+</div></blockquote>
+<p>due to a Python optimization that causes the concatenation to occur before
+USPS_CHOICES has been lazily generated.  To work around these issues, you
+can use a slice index (<code class="docutils literal notranslate"><span class="pre">[:]</span></code>) to force the generation of USPS_CHOICES
+before any other operations are processed by the Python interpreter:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="s1">&#39;XX&#39;</span><span class="p">,</span> <span class="n">_</span><span class="p">(</span><span class="s1">&#39;Select a State&#39;</span><span class="p">))</span> <span class="o">+</span> <span class="n">USPS_CHOICES</span><span class="p">[:]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.us.us_states.STATES_NORMALIZED">
+<span class="sig-prename descclassname"><span class="pre">localflavor.us.us_states.</span></span><span class="sig-name descname"><span class="pre">STATES_NORMALIZED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'aa':</span> <span class="pre">'AA',</span> <span class="pre">'ae':</span> <span class="pre">'AE',</span> <span class="pre">'ak':</span> <span class="pre">'AK',</span> <span class="pre">'al':</span> <span class="pre">'AL',</span> <span class="pre">'ala':</span> <span class="pre">'AL',</span> <span class="pre">'alabama':</span> <span class="pre">'AL',</span> <span class="pre">'alaska':</span> <span class="pre">'AK',</span> <span class="pre">'american</span> <span class="pre">samao':</span> <span class="pre">'AS',</span> <span class="pre">'american</span> <span class="pre">samoa':</span> <span class="pre">'AS',</span> <span class="pre">'ap':</span> <span class="pre">'AP',</span> <span class="pre">'ar':</span> <span class="pre">'AR',</span> <span class="pre">'ariz':</span> <span class="pre">'AZ',</span> <span class="pre">'arizona':</span> <span class="pre">'AZ',</span> <span class="pre">'ark':</span> <span class="pre">'AR',</span> <span class="pre">'arkansas':</span> <span class="pre">'AR',</span> <span class="pre">'as':</span> <span class="pre">'AS',</span> <span class="pre">'az':</span> <span class="pre">'AZ',</span> <span class="pre">'ca':</span> <span class="pre">'CA',</span> <span class="pre">'calf':</span> <span class="pre">'CA',</span> <span class="pre">'calif':</span> <span class="pre">'CA',</span> <span class="pre">'california':</span> <span class="pre">'CA',</span> <span class="pre">'co':</span> <span class="pre">'CO',</span> <span class="pre">'colo':</span> <span class="pre">'CO',</span> <span class="pre">'colorado':</span> <span class="pre">'CO',</span> <span class="pre">'conn':</span> <span class="pre">'CT',</span> <span class="pre">'connecticut':</span> <span class="pre">'CT',</span> <span class="pre">'ct':</span> <span class="pre">'CT',</span> <span class="pre">'dc':</span> <span class="pre">'DC',</span> <span class="pre">'de':</span> <span class="pre">'DE',</span> <span class="pre">'del':</span> <span class="pre">'DE',</span> <span class="pre">'delaware':</span> <span class="pre">'DE',</span> <span class="pre">'deleware':</span> <span class="pre">'DE',</span> <span class="pre">'district</span> <span class="pre">of</span> <span class="pre">columbia':</span> <span class="pre">'DC',</span> <span class="pre">'federated</span> <span class="pre">states</span> <span class="pre">of</span> <span class="pre">micronesia':</span> <span class="pre">'FM',</span> <span class="pre">'fl':</span> <span class="pre">'FL',</span> <span class="pre">'fla':</span> <span class="pre">'FL',</span> <span class="pre">'florida':</span> <span class="pre">'FL',</span> <span class="pre">'fm':</span> <span class="pre">'FM',</span> <span class="pre">'fsm':</span> <span class="pre">'FM',</span> <span class="pre">'ga':</span> <span class="pre">'GA',</span> <span class="pre">'georgia':</span> <span class="pre">'GA',</span> <span class="pre">'gu':</span> <span class="pre">'GU',</span> <span class="pre">'guam':</span> <span class="pre">'GU',</span> <span class="pre">'hawaii':</span> <span class="pre">'HI',</span> <span class="pre">'hi':</span> <span class="pre">'HI',</span> <span class="pre">'ia':</span> <span class="pre">'IA',</span> <span class="pre">'id':</span> <span class="pre">'ID',</span> <span class="pre">'idaho':</span> <span class="pre">'ID',</span> <span class="pre">'il':</span> <span class="pre">'IL',</span> <span class="pre">'ill':</span> <span class="pre">'IL',</span> <span class="pre">'illinois':</span> <span class="pre">'IL',</span> <span class="pre">'in':</span> <span class="pre">'IN',</span> <span class="pre">'ind':</span> <span class="pre">'IN',</span> <span class="pre">'indiana':</span> <span class="pre">'IN',</span> <span class="pre">'iowa':</span> <span class="pre">'IA',</span> <span class="pre">'kan':</span> <span class="pre">'KS',</span> <span class="pre">'kans':</span> <span class="pre">'KS',</span> <span class="pre">'kansas':</span> <span class="pre">'KS',</span> <span class="pre">'kentucky':</span> <span class="pre">'KY',</span> <span class="pre">'ks':</span> <span class="pre">'KS',</span> <span class="pre">'ky':</span> <span class="pre">'KY',</span> <span class="pre">'la':</span> <span class="pre">'LA',</span> <span class="pre">'louisiana':</span> <span class="pre">'LA',</span> <span class="pre">'ma':</span> <span class="pre">'MA',</span> <span class="pre">'maine':</span> <span class="pre">'ME',</span> <span class="pre">'marianas</span> <span class="pre">islands':</span> <span class="pre">'MP',</span> <span class="pre">'marianas</span> <span class="pre">islands</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">pacific':</span> <span class="pre">'MP',</span> <span class="pre">'marinas</span> <span class="pre">islands</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">pacific':</span> <span class="pre">'MP',</span> <span class="pre">'marshall</span> <span class="pre">islands':</span> <span class="pre">'MH',</span> <span class="pre">'maryland':</span> <span class="pre">'MD',</span> <span class="pre">'mass':</span> <span class="pre">'MA',</span> <span class="pre">'massachusetts':</span> <span class="pre">'MA',</span> <span class="pre">'massachussetts':</span> <span class="pre">'MA',</span> <span class="pre">'md':</span> <span class="pre">'MD',</span> <span class="pre">'me':</span> <span class="pre">'ME',</span> <span class="pre">'mh':</span> <span class="pre">'MH',</span> <span class="pre">'mi':</span> <span class="pre">'MI',</span> <span class="pre">'mich':</span> <span class="pre">'MI',</span> <span class="pre">'michigan':</span> <span class="pre">'MI',</span> <span class="pre">'micronesia':</span> <span class="pre">'FM',</span> <span class="pre">'minn':</span> <span class="pre">'MN',</span> <span class="pre">'minnesota':</span> <span class="pre">'MN',</span> <span class="pre">'miss':</span> <span class="pre">'MS',</span> <span class="pre">'mississippi':</span> <span class="pre">'MS',</span> <span class="pre">'missouri':</span> <span class="pre">'MO',</span> <span class="pre">'mn':</span> <span class="pre">'MN',</span> <span class="pre">'mo':</span> <span class="pre">'MO',</span> <span class="pre">'mont':</span> <span class="pre">'MT',</span> <span class="pre">'montana':</span> <span class="pre">'MT',</span> <span class="pre">'mp':</span> <span class="pre">'MP',</span> <span class="pre">'ms':</span> <span class="pre">'MS',</span> <span class="pre">'mt':</span> <span class="pre">'MT',</span> <span class="pre">'n</span> <span class="pre">d':</span> <span class="pre">'ND',</span> <span class="pre">'n</span> <span class="pre">dak':</span> <span class="pre">'ND',</span> <span class="pre">'n</span> <span class="pre">h':</span> <span class="pre">'NH',</span> <span class="pre">'n</span> <span class="pre">j':</span> <span class="pre">'NJ',</span> <span class="pre">'n</span> <span class="pre">m':</span> <span class="pre">'NM',</span> <span class="pre">'n</span> <span class="pre">mex':</span> <span class="pre">'NM',</span> <span class="pre">'nc':</span> <span class="pre">'NC',</span> <span class="pre">'nd':</span> <span class="pre">'ND',</span> <span class="pre">'ne':</span> <span class="pre">'NE',</span> <span class="pre">'neb':</span> <span class="pre">'NE',</span> <span class="pre">'nebr':</span> <span class="pre">'NE',</span> <span class="pre">'nebraska':</span> <span class="pre">'NE',</span> <span class="pre">'nev':</span> <span class="pre">'NV',</span> <span class="pre">'nevada':</span> <span class="pre">'NV',</span> <span class="pre">'new</span> <span class="pre">hampshire':</span> <span class="pre">'NH',</span> <span class="pre">'new</span> <span class="pre">jersey':</span> <span class="pre">'NJ',</span> <span class="pre">'new</span> <span class="pre">mexico':</span> <span class="pre">'NM',</span> <span class="pre">'new</span> <span class="pre">york':</span> <span class="pre">'NY',</span> <span class="pre">'nh':</span> <span class="pre">'NH',</span> <span class="pre">'nj':</span> <span class="pre">'NJ',</span> <span class="pre">'nm':</span> <span class="pre">'NM',</span> <span class="pre">'nmex':</span> <span class="pre">'NM',</span> <span class="pre">'north</span> <span class="pre">carolina':</span> <span class="pre">'NC',</span> <span class="pre">'north</span> <span class="pre">dakota':</span> <span class="pre">'ND',</span> <span class="pre">'northern</span> <span class="pre">mariana</span> <span class="pre">islands':</span> <span class="pre">'MP',</span> <span class="pre">'nv':</span> <span class="pre">'NV',</span> <span class="pre">'ny':</span> <span class="pre">'NY',</span> <span class="pre">'oh':</span> <span class="pre">'OH',</span> <span class="pre">'ohio':</span> <span class="pre">'OH',</span> <span class="pre">'ok':</span> <span class="pre">'OK',</span> <span class="pre">'okla':</span> <span class="pre">'OK',</span> <span class="pre">'oklahoma':</span> <span class="pre">'OK',</span> <span class="pre">'or':</span> <span class="pre">'OR',</span> <span class="pre">'ore':</span> <span class="pre">'OR',</span> <span class="pre">'oreg':</span> <span class="pre">'OR',</span> <span class="pre">'oregon':</span> <span class="pre">'OR',</span> <span class="pre">'pa':</span> <span class="pre">'PA',</span> <span class="pre">'palau':</span> <span class="pre">'PW',</span> <span class="pre">'penn':</span> <span class="pre">'PA',</span> <span class="pre">'pennsylvania':</span> <span class="pre">'PA',</span> <span class="pre">'pr':</span> <span class="pre">'PR',</span> <span class="pre">'puerto</span> <span class="pre">rico':</span> <span class="pre">'PR',</span> <span class="pre">'pw':</span> <span class="pre">'PW',</span> <span class="pre">'republic</span> <span class="pre">of</span> <span class="pre">palau':</span> <span class="pre">'PW',</span> <span class="pre">'republic</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">marshall</span> <span class="pre">islands':</span> <span class="pre">'MH',</span> <span class="pre">'rhode</span> <span class="pre">island':</span> <span class="pre">'RI',</span> <span class="pre">'ri':</span> <span class="pre">'RI',</span> <span class="pre">'s</span> <span class="pre">dak':</span> <span class="pre">'SD',</span> <span class="pre">'sc':</span> <span class="pre">'SC',</span> <span class="pre">'sd':</span> <span class="pre">'SD',</span> <span class="pre">'sdak':</span> <span class="pre">'SD',</span> <span class="pre">'south</span> <span class="pre">carolina':</span> <span class="pre">'SC',</span> <span class="pre">'south</span> <span class="pre">dakota':</span> <span class="pre">'SD',</span> <span class="pre">'tenn':</span> <span class="pre">'TN',</span> <span class="pre">'tennessee':</span> <span class="pre">'TN',</span> <span class="pre">'territory</span> <span class="pre">of</span> <span class="pre">hawaii':</span> <span class="pre">'HI',</span> <span class="pre">'tex':</span> <span class="pre">'TX',</span> <span class="pre">'texas':</span> <span class="pre">'TX',</span> <span class="pre">'tn':</span> <span class="pre">'TN',</span> <span class="pre">'tx':</span> <span class="pre">'TX',</span> <span class="pre">'us</span> <span class="pre">virgin</span> <span class="pre">islands':</span> <span class="pre">'VI',</span> <span class="pre">'usvi':</span> <span class="pre">'VI',</span> <span class="pre">'ut':</span> <span class="pre">'UT',</span> <span class="pre">'utah':</span> <span class="pre">'UT',</span> <span class="pre">'va':</span> <span class="pre">'VA',</span> <span class="pre">'vermont':</span> <span class="pre">'VT',</span> <span class="pre">'vi':</span> <span class="pre">'VI',</span> <span class="pre">'viginia':</span> <span class="pre">'VA',</span> <span class="pre">'virgin</span> <span class="pre">islands':</span> <span class="pre">'VI',</span> <span class="pre">'virgina':</span> <span class="pre">'VA',</span> <span class="pre">'virginia':</span> <span class="pre">'VA',</span> <span class="pre">'vt':</span> <span class="pre">'VT',</span> <span class="pre">'w</span> <span class="pre">va':</span> <span class="pre">'WV',</span> <span class="pre">'wa':</span> <span class="pre">'WA',</span> <span class="pre">'wash':</span> <span class="pre">'WA',</span> <span class="pre">'washington':</span> <span class="pre">'WA',</span> <span class="pre">'west</span> <span class="pre">virginia':</span> <span class="pre">'WV',</span> <span class="pre">'wi':</span> <span class="pre">'WI',</span> <span class="pre">'wis':</span> <span class="pre">'WI',</span> <span class="pre">'wisc':</span> <span class="pre">'WI',</span> <span class="pre">'wisconsin':</span> <span class="pre">'WI',</span> <span class="pre">'wv':</span> <span class="pre">'WV',</span> <span class="pre">'wva':</span> <span class="pre">'WV',</span> <span class="pre">'wy':</span> <span class="pre">'WY',</span> <span class="pre">'wyo':</span> <span class="pre">'WY',</span> <span class="pre">'wyoming':</span> <span class="pre">'WY'}</span></em><a class="headerlink" href="#localflavor.us.us_states.STATES_NORMALIZED" title="Link to this definition">¶</a></dt>
+<dd><p>Normalized versions of state names</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">United States of America (<code class="docutils literal notranslate"><span class="pre">us</span></code>)</a><ul>
+<li><a class="reference internal" href="#module-localflavor.us.forms">Forms</a><ul>
+<li><a class="reference internal" href="#localflavor.us.forms.USPSSelect"><code class="docutils literal notranslate"><span class="pre">USPSSelect</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.us.forms.USSocialSecurityNumberField"><code class="docutils literal notranslate"><span class="pre">USSocialSecurityNumberField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.us.forms.USSocialSecurityNumberField.clean"><code class="docutils literal notranslate"><span class="pre">USSocialSecurityNumberField.clean()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.us.forms.USStateField"><code class="docutils literal notranslate"><span class="pre">USStateField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.us.forms.USStateField.clean"><code class="docutils literal notranslate"><span class="pre">USStateField.clean()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.us.forms.USStateSelect"><code class="docutils literal notranslate"><span class="pre">USStateSelect</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.us.forms.USZipCodeField"><code class="docutils literal notranslate"><span class="pre">USZipCodeField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.us.forms.USZipCodeField.to_python"><code class="docutils literal notranslate"><span class="pre">USZipCodeField.to_python()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-localflavor.us.models">Models</a><ul>
+<li><a class="reference internal" href="#localflavor.us.models.USPostalCodeField"><code class="docutils literal notranslate"><span class="pre">USPostalCodeField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.us.models.USPostalCodeField.deconstruct"><code class="docutils literal notranslate"><span class="pre">USPostalCodeField.deconstruct()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.us.models.USSocialSecurityNumberField"><code class="docutils literal notranslate"><span class="pre">USSocialSecurityNumberField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.us.models.USSocialSecurityNumberField.formfield"><code class="docutils literal notranslate"><span class="pre">USSocialSecurityNumberField.formfield()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.us.models.USStateField"><code class="docutils literal notranslate"><span class="pre">USStateField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.us.models.USStateField.deconstruct"><code class="docutils literal notranslate"><span class="pre">USStateField.deconstruct()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.us.models.USZipCodeField"><code class="docutils literal notranslate"><span class="pre">USZipCodeField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.us.models.USZipCodeField.formfield"><code class="docutils literal notranslate"><span class="pre">USZipCodeField.formfield()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data">Data</a><ul>
+<li><a class="reference internal" href="#localflavor.us.us_states.CONTIGUOUS_STATES"><code class="docutils literal notranslate"><span class="pre">CONTIGUOUS_STATES</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.us.us_states.NON_CONTIGUOUS_STATES"><code class="docutils literal notranslate"><span class="pre">NON_CONTIGUOUS_STATES</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.us.us_states.US_TERRITORIES"><code class="docutils literal notranslate"><span class="pre">US_TERRITORIES</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.us.us_states.ARMED_FORCES_STATES"><code class="docutils literal notranslate"><span class="pre">ARMED_FORCES_STATES</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.us.us_states.COFA_STATES"><code class="docutils literal notranslate"><span class="pre">COFA_STATES</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.us.us_states.OBSOLETE_STATES"><code class="docutils literal notranslate"><span class="pre">OBSOLETE_STATES</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.us.models.localflavor.us.us_states.US_STATES"><code class="docutils literal notranslate"><span class="pre">localflavor.us.us_states.US_STATES</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.us.models.localflavor.us.us_states.STATE_CHOICES"><code class="docutils literal notranslate"><span class="pre">localflavor.us.us_states.STATE_CHOICES</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.us.models.localflavor.us.us_states.USPS_CHOICES"><code class="docutils literal notranslate"><span class="pre">localflavor.us.us_states.USPS_CHOICES</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.us.us_states.STATES_NORMALIZED"><code class="docutils literal notranslate"><span class="pre">STATES_NORMALIZED</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="ua.html"
+                          title="previous chapter">Ukraine (<code class="docutils literal notranslate"><span class="pre">ua</span></code>)</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="uy.html"
+                          title="next chapter">Uruguay (<code class="docutils literal notranslate"><span class="pre">uy</span></code>)</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/localflavor/us.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="uy.html" title="Uruguay (uy)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="ua.html" title="Ukraine (ua)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">United States of America (<code class="docutils literal notranslate"><span class="pre">us</span></code>)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright Django Software Foundation and individual contributors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+  </body>
+</html>

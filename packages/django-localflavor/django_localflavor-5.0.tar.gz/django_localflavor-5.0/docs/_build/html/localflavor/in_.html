@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>India (in) &#8212; django-localflavor 4.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=2bf1fcf8" />
+    
+    <script src="../_static/documentation_options.js?v=9f5556dd"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Iran (ir)" href="ir.html" />
+    <link rel="prev" title="Israel (il)" href="il.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="ir.html" title="Iran (ir)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="il.html" title="Israel (il)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">India (<code class="docutils literal notranslate"><span class="pre">in</span></code>)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="india-in">
+<h1>India (<code class="docutils literal notranslate"><span class="pre">in</span></code>)<a class="headerlink" href="#india-in" title="Link to this heading">¶</a></h1>
+<section id="module-localflavor.in_.forms">
+<span id="forms"></span><h2>Forms<a class="headerlink" href="#module-localflavor.in_.forms" title="Link to this heading">¶</a></h2>
+<p>India-specific Form helpers.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.in_.forms.INAadhaarNumberField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.in_.forms.</span></span><span class="sig-name descname"><span class="pre">INAadhaarNumberField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/in_/forms.html#INAadhaarNumberField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.in_.forms.INAadhaarNumberField" title="Link to this definition">¶</a></dt>
+<dd><p>A form field for Aadhaar number issued by Unique Identification Authority of India (UIDAI).</p>
+<p>Checks the following rules to determine whether the number is valid:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Conforms to the XXXX XXXX XXXX format.</p></li>
+<li><p>No group consists entirely of zeroes.</p></li>
+</ul>
+</div></blockquote>
+<p>Important information:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Aadhaar number is a proof of identity but not of citizenship.</p></li>
+<li><p>Aadhaar number is issued to every resident of India including
+foreign citizens.</p></li>
+<li><p>Aadhaar number is not mandatory.</p></li>
+</ul>
+</div></blockquote>
+<p>More information can be found at
+<a class="reference external" href="http://uidai.gov.in/what-is-aadhaar-number.html">http://uidai.gov.in/what-is-aadhaar-number.html</a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.in_.forms.INAadhaarNumberField.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/in_/forms.html#INAadhaarNumberField.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.in_.forms.INAadhaarNumberField.clean" title="Link to this definition">¶</a></dt>
+<dd><p>Validate the given value and return its “cleaned” value as an
+appropriate Python object. Raise ValidationError for any errors.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.in_.forms.INPANCardNumberFormField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.in_.forms.</span></span><span class="sig-name descname"><span class="pre">INPANCardNumberFormField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/in_/forms.html#INPANCardNumberFormField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.in_.forms.INPANCardNumberFormField" title="Link to this definition">¶</a></dt>
+<dd><p>A form field that accepts Indian Permanent account number(PAN) Card Number.</p>
+<dl class="simple">
+<dt>Rules:</dt><dd><ol class="arabic simple">
+<li><p>It should be ten characters long.</p></li>
+<li><p>The first three characters must be any upper case alphabets.</p></li>
+<li><dl class="simple">
+<dt>The fourth character of PAN must be one of the following characters.</dt><dd><p>A — Association of persons (AOP)
+B — Body of individuals (BOI)
+C — Company
+F — Firm
+G — Government
+H — HUF (Hindu undivided family)
+L — Local authority
+J — Artificial juridical person
+P — Person (Individual)
+T — Trust (AOP)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>The fifth character is first letter of lastname of the PAN Card holder in case of Individual</dt><dd><p>or the first letter of first name in case of non-individual.</p>
+</dd>
+</dl>
+</li>
+<li><p>The next four-characters must be any number from 0000 to 9999.</p></li>
+<li><p>The last(tenth) character which is a check-sum character must be any upper case alphabet.</p></li>
+</ol>
+</dd>
+<dt>Note:</dt><dd><ol class="arabic simple">
+<li><dl class="simple">
+<dt>The validation of the fifth character must be done by the developer themselves,</dt><dd><p>as this validation is out of the scope of this project.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>The validation for the last digit (i.e check-sum character) is not available</dt><dd><p>in public domain, hence it is not implemented.</p>
+</dd>
+</dl>
+</li>
+</ol>
+</dd>
+<dt>More Information at:</dt><dd><ol class="arabic simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Permanent_account_number">https://en.wikipedia.org/wiki/Permanent_account_number</a></p></li>
+<li><p><a class="reference external" href="https://www.incometaxindia.gov.in/tutorials/1.permanent%20account%20number%20(pan).pdf">https://www.incometaxindia.gov.in/tutorials/1.permanent%20account%20number%20(pan).pdf</a></p></li>
+</ol>
+</dd>
+</dl>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 4.0.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.in_.forms.INStateField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.in_.forms.</span></span><span class="sig-name descname"><span class="pre">INStateField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/in_/forms.html#INStateField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.in_.forms.INStateField" title="Link to this definition">¶</a></dt>
+<dd><p>A form field that validates its input is a Indian state name or abbreviation.</p>
+<p>It normalizes the input to the standard two-letter vehicle
+registration abbreviation for the given state or union territory</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 1.1: </span>Added Telangana to list of states. More details at
+<a class="reference external" href="https://en.wikipedia.org/wiki/Telangana#Bifurcation_of_Andhra_Pradesh">https://en.wikipedia.org/wiki/Telangana#Bifurcation_of_Andhra_Pradesh</a></p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.in_.forms.INStateField.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/in_/forms.html#INStateField.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.in_.forms.INStateField.clean" title="Link to this definition">¶</a></dt>
+<dd><p>Validate the given value and return its “cleaned” value as an
+appropriate Python object. Raise ValidationError for any errors.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.in_.forms.INStateSelect">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.in_.forms.</span></span><span class="sig-name descname"><span class="pre">INStateSelect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attrs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/in_/forms.html#INStateSelect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.in_.forms.INStateSelect" title="Link to this definition">¶</a></dt>
+<dd><p>A Select widget that uses a list of Indian states/territories as its choices.</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 1.1: </span>Added Telangana to list of states. More details at
+<a class="reference external" href="https://en.wikipedia.org/wiki/Telangana#Bifurcation_of_Andhra_Pradesh">https://en.wikipedia.org/wiki/Telangana#Bifurcation_of_Andhra_Pradesh</a></p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 3.1: </span>Updated Indian states and union territories names and code as per iso 3166
+(<a class="reference external" href="https://www.iso.org/obp/ui/#iso:code:3166:IN">https://www.iso.org/obp/ui/#iso:code:3166:IN</a>)</p>
+</div>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.in_.forms.INZipCodeField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.in_.forms.</span></span><span class="sig-name descname"><span class="pre">INZipCodeField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/in_/forms.html#INZipCodeField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.in_.forms.INZipCodeField" title="Link to this definition">¶</a></dt>
+<dd><p>A form field that validates input as an Indian zip code, with the format XXXXXXX.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.in_.forms.INZipCodeField.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/in_/forms.html#INZipCodeField.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.in_.forms.INZipCodeField.clean" title="Link to this definition">¶</a></dt>
+<dd><p>Validate the given value and return its “cleaned” value as an
+appropriate Python object. Raise ValidationError for any errors.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="data">
+<h2>Data<a class="headerlink" href="#data" title="Link to this heading">¶</a></h2>
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.in_.in_states.STATE_CHOICES">
+<span class="sig-prename descclassname"><span class="pre">localflavor.in_.in_states.</span></span><span class="sig-name descname"><span class="pre">STATE_CHOICES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(('KA',</span> <span class="pre">'Karnataka'),</span> <span class="pre">('AP',</span> <span class="pre">'Andhra</span> <span class="pre">Pradesh'),</span> <span class="pre">('KL',</span> <span class="pre">'Kerala'),</span> <span class="pre">('TN',</span> <span class="pre">'Tamil</span> <span class="pre">Nadu'),</span> <span class="pre">('MH',</span> <span class="pre">'Maharashtra'),</span> <span class="pre">('UP',</span> <span class="pre">'Uttar</span> <span class="pre">Pradesh'),</span> <span class="pre">('GA',</span> <span class="pre">'Goa'),</span> <span class="pre">('GJ',</span> <span class="pre">'Gujarat'),</span> <span class="pre">('RJ',</span> <span class="pre">'Rajasthan'),</span> <span class="pre">('HP',</span> <span class="pre">'Himachal</span> <span class="pre">Pradesh'),</span> <span class="pre">('TG',</span> <span class="pre">'Telangana'),</span> <span class="pre">('AR',</span> <span class="pre">'Arunachal</span> <span class="pre">Pradesh'),</span> <span class="pre">('AS',</span> <span class="pre">'Assam'),</span> <span class="pre">('BR',</span> <span class="pre">'Bihar'),</span> <span class="pre">('CT',</span> <span class="pre">'Chhattisgarh'),</span> <span class="pre">('HR',</span> <span class="pre">'Haryana'),</span> <span class="pre">('JH',</span> <span class="pre">'Jharkhand'),</span> <span class="pre">('MP',</span> <span class="pre">'Madhya</span> <span class="pre">Pradesh'),</span> <span class="pre">('MN',</span> <span class="pre">'Manipur'),</span> <span class="pre">('ML',</span> <span class="pre">'Meghalaya'),</span> <span class="pre">('MZ',</span> <span class="pre">'Mizoram'),</span> <span class="pre">('NL',</span> <span class="pre">'Nagaland'),</span> <span class="pre">('OR',</span> <span class="pre">'Odisha'),</span> <span class="pre">('PB',</span> <span class="pre">'Punjab'),</span> <span class="pre">('SK',</span> <span class="pre">'Sikkim'),</span> <span class="pre">('TR',</span> <span class="pre">'Tripura'),</span> <span class="pre">('UT',</span> <span class="pre">'Uttarakhand'),</span> <span class="pre">('WB',</span> <span class="pre">'West</span> <span class="pre">Bengal'),</span> <span class="pre">('AN',</span> <span class="pre">'Andaman</span> <span class="pre">and</span> <span class="pre">Nicobar</span> <span class="pre">Islands'),</span> <span class="pre">('CH',</span> <span class="pre">'Chandigarh'),</span> <span class="pre">('DH',</span> <span class="pre">'Dadra</span> <span class="pre">and</span> <span class="pre">Nagar</span> <span class="pre">Haveli</span> <span class="pre">and</span> <span class="pre">Daman</span> <span class="pre">and</span> <span class="pre">Diu'),</span> <span class="pre">('DL',</span> <span class="pre">'Delhi'),</span> <span class="pre">('JK',</span> <span class="pre">'Jammu</span> <span class="pre">and</span> <span class="pre">Kashmir'),</span> <span class="pre">('LD',</span> <span class="pre">'Lakshadweep'),</span> <span class="pre">('LA',</span> <span class="pre">'Ladakh'),</span> <span class="pre">('PY',</span> <span class="pre">'Puducherry'))</span></em><a class="headerlink" href="#localflavor.in_.in_states.STATE_CHOICES" title="Link to this definition">¶</a></dt>
+<dd><p>A list of states</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.in_.in_states.STATES_NORMALIZED">
+<span class="sig-prename descclassname"><span class="pre">localflavor.in_.in_states.</span></span><span class="sig-name descname"><span class="pre">STATES_NORMALIZED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'an':</span> <span class="pre">'AN',</span> <span class="pre">'andaman</span> <span class="pre">and</span> <span class="pre">nicobar':</span> <span class="pre">'AN',</span> <span class="pre">'andhra</span> <span class="pre">pradesh':</span> <span class="pre">'AP',</span> <span class="pre">'andhrapradesh':</span> <span class="pre">'AP',</span> <span class="pre">'andra</span> <span class="pre">pradesh':</span> <span class="pre">'AP',</span> <span class="pre">'andrapradesh':</span> <span class="pre">'AP',</span> <span class="pre">'ap':</span> <span class="pre">'AP',</span> <span class="pre">'ar':</span> <span class="pre">'AR',</span> <span class="pre">'arunachal</span> <span class="pre">pradesh':</span> <span class="pre">'AR',</span> <span class="pre">'as':</span> <span class="pre">'AS',</span> <span class="pre">'assam':</span> <span class="pre">'AS',</span> <span class="pre">'bengal':</span> <span class="pre">'WB',</span> <span class="pre">'bihar':</span> <span class="pre">'BR',</span> <span class="pre">'br':</span> <span class="pre">'BR',</span> <span class="pre">'cg':</span> <span class="pre">'CG',</span> <span class="pre">'ch':</span> <span class="pre">'CH',</span> <span class="pre">'chandigarh':</span> <span class="pre">'CH',</span> <span class="pre">'chhattisgarh':</span> <span class="pre">'CG',</span> <span class="pre">'dadra</span> <span class="pre">and</span> <span class="pre">nagar</span> <span class="pre">haveli':</span> <span class="pre">'DN',</span> <span class="pre">'daman</span> <span class="pre">and</span> <span class="pre">diu':</span> <span class="pre">'DD',</span> <span class="pre">'dd':</span> <span class="pre">'DD',</span> <span class="pre">'delhi':</span> <span class="pre">'DL',</span> <span class="pre">'dl':</span> <span class="pre">'DL',</span> <span class="pre">'dn':</span> <span class="pre">'DN',</span> <span class="pre">'ga':</span> <span class="pre">'GA',</span> <span class="pre">'gj':</span> <span class="pre">'GJ',</span> <span class="pre">'goa':</span> <span class="pre">'GA',</span> <span class="pre">'gujarat':</span> <span class="pre">'GJ',</span> <span class="pre">'haryana':</span> <span class="pre">'HR',</span> <span class="pre">'himachal</span> <span class="pre">pradesh':</span> <span class="pre">'HP',</span> <span class="pre">'hp':</span> <span class="pre">'HP',</span> <span class="pre">'hr':</span> <span class="pre">'HR',</span> <span class="pre">'jammu</span> <span class="pre">and</span> <span class="pre">kashmir':</span> <span class="pre">'JK',</span> <span class="pre">'jh':</span> <span class="pre">'JH',</span> <span class="pre">'jharkhand':</span> <span class="pre">'JH',</span> <span class="pre">'jk':</span> <span class="pre">'JK',</span> <span class="pre">'ka':</span> <span class="pre">'KA',</span> <span class="pre">'karnataka':</span> <span class="pre">'KA',</span> <span class="pre">'karnatka':</span> <span class="pre">'KA',</span> <span class="pre">'kerala':</span> <span class="pre">'KL',</span> <span class="pre">'kl':</span> <span class="pre">'KL',</span> <span class="pre">'lakshadweep':</span> <span class="pre">'LD',</span> <span class="pre">'ld':</span> <span class="pre">'LD',</span> <span class="pre">'madhya</span> <span class="pre">pradesh':</span> <span class="pre">'MP',</span> <span class="pre">'maharashtra':</span> <span class="pre">'MH',</span> <span class="pre">'maharastra':</span> <span class="pre">'MH',</span> <span class="pre">'manipur':</span> <span class="pre">'MN',</span> <span class="pre">'meghalaya':</span> <span class="pre">'ML',</span> <span class="pre">'mh':</span> <span class="pre">'MH',</span> <span class="pre">'mizo':</span> <span class="pre">'MZ',</span> <span class="pre">'mizoram':</span> <span class="pre">'MZ',</span> <span class="pre">'ml':</span> <span class="pre">'ML',</span> <span class="pre">'mn':</span> <span class="pre">'MN',</span> <span class="pre">'mp':</span> <span class="pre">'MP',</span> <span class="pre">'mz':</span> <span class="pre">'MZ',</span> <span class="pre">'nagaland':</span> <span class="pre">'NL',</span> <span class="pre">'nl':</span> <span class="pre">'NL',</span> <span class="pre">'odisa':</span> <span class="pre">'OR',</span> <span class="pre">'or':</span> <span class="pre">'OR',</span> <span class="pre">'orisa':</span> <span class="pre">'OR',</span> <span class="pre">'orissa':</span> <span class="pre">'OR',</span> <span class="pre">'pb':</span> <span class="pre">'PB',</span> <span class="pre">'pondicherry':</span> <span class="pre">'PY',</span> <span class="pre">'punjab':</span> <span class="pre">'PB',</span> <span class="pre">'py':</span> <span class="pre">'PY',</span> <span class="pre">'rajastan':</span> <span class="pre">'RJ',</span> <span class="pre">'rajasthan':</span> <span class="pre">'RJ',</span> <span class="pre">'rj':</span> <span class="pre">'RJ',</span> <span class="pre">'sikkim':</span> <span class="pre">'SK',</span> <span class="pre">'sk':</span> <span class="pre">'SK',</span> <span class="pre">'tamil</span> <span class="pre">nadu':</span> <span class="pre">'TN',</span> <span class="pre">'tamilnad':</span> <span class="pre">'TN',</span> <span class="pre">'tamilnadu':</span> <span class="pre">'TN',</span> <span class="pre">'telangana':</span> <span class="pre">'TG',</span> <span class="pre">'tg':</span> <span class="pre">'TG',</span> <span class="pre">'tn':</span> <span class="pre">'TN',</span> <span class="pre">'tr':</span> <span class="pre">'TR',</span> <span class="pre">'tripura':</span> <span class="pre">'TR',</span> <span class="pre">'ua':</span> <span class="pre">'UA',</span> <span class="pre">'up':</span> <span class="pre">'UP',</span> <span class="pre">'uttar</span> <span class="pre">pradesh':</span> <span class="pre">'UP',</span> <span class="pre">'uttarakhand':</span> <span class="pre">'UA',</span> <span class="pre">'wb':</span> <span class="pre">'WB',</span> <span class="pre">'west</span> <span class="pre">bengal':</span> <span class="pre">'WB',</span> <span class="pre">'westbengal':</span> <span class="pre">'WB'}</span></em><a class="headerlink" href="#localflavor.in_.in_states.STATES_NORMALIZED" title="Link to this definition">¶</a></dt>
+<dd><p>Normalized state names</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">India (<code class="docutils literal notranslate"><span class="pre">in</span></code>)</a><ul>
+<li><a class="reference internal" href="#module-localflavor.in_.forms">Forms</a><ul>
+<li><a class="reference internal" href="#localflavor.in_.forms.INAadhaarNumberField"><code class="docutils literal notranslate"><span class="pre">INAadhaarNumberField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.in_.forms.INAadhaarNumberField.clean"><code class="docutils literal notranslate"><span class="pre">INAadhaarNumberField.clean()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.in_.forms.INPANCardNumberFormField"><code class="docutils literal notranslate"><span class="pre">INPANCardNumberFormField</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.in_.forms.INStateField"><code class="docutils literal notranslate"><span class="pre">INStateField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.in_.forms.INStateField.clean"><code class="docutils literal notranslate"><span class="pre">INStateField.clean()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.in_.forms.INStateSelect"><code class="docutils literal notranslate"><span class="pre">INStateSelect</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.in_.forms.INZipCodeField"><code class="docutils literal notranslate"><span class="pre">INZipCodeField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.in_.forms.INZipCodeField.clean"><code class="docutils literal notranslate"><span class="pre">INZipCodeField.clean()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data">Data</a><ul>
+<li><a class="reference internal" href="#localflavor.in_.in_states.STATE_CHOICES"><code class="docutils literal notranslate"><span class="pre">STATE_CHOICES</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.in_.in_states.STATES_NORMALIZED"><code class="docutils literal notranslate"><span class="pre">STATES_NORMALIZED</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="il.html"
+                          title="previous chapter">Israel (<code class="docutils literal notranslate"><span class="pre">il</span></code>)</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="ir.html"
+                          title="next chapter">Iran (<code class="docutils literal notranslate"><span class="pre">ir</span></code>)</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/localflavor/in_.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="ir.html" title="Iran (ir)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="il.html" title="Israel (il)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">India (<code class="docutils literal notranslate"><span class="pre">in</span></code>)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright Django Software Foundation and individual contributors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Croatia (hr) &#8212; django-localflavor 4.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=2bf1fcf8" />
+    
+    <script src="../_static/documentation_options.js?v=9f5556dd"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Hungary (hu)" href="hu.html" />
+    <link rel="prev" title="Greece (gr)" href="gr.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="hu.html" title="Hungary (hu)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="gr.html" title="Greece (gr)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Croatia (<code class="docutils literal notranslate"><span class="pre">hr</span></code>)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="croatia-hr">
+<h1>Croatia (<code class="docutils literal notranslate"><span class="pre">hr</span></code>)<a class="headerlink" href="#croatia-hr" title="Link to this heading">¶</a></h1>
+<section id="module-localflavor.hr.forms">
+<span id="forms"></span><h2>Forms<a class="headerlink" href="#module-localflavor.hr.forms" title="Link to this heading">¶</a></h2>
+<p>HR-specific Form helpers.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.hr.forms.HRCountySelect">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.hr.forms.</span></span><span class="sig-name descname"><span class="pre">HRCountySelect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attrs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/hr/forms.html#HRCountySelect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.hr.forms.HRCountySelect" title="Link to this definition">¶</a></dt>
+<dd><p>A Select widget that uses a list of counties of Croatia as its choices.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.hr.forms.HRJMBAGField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.hr.forms.</span></span><span class="sig-name descname"><span class="pre">HRJMBAGField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/hr/forms.html#HRJMBAGField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.hr.forms.HRJMBAGField" title="Link to this definition">¶</a></dt>
+<dd><p>Unique Master Academic Citizen Number of Croatia (JMBAG) field.</p>
+<p>This number is used by college students and professors in Croatia.</p>
+<p><a class="reference external" href="http://www.cap.srce.hr/IzgledX.aspx">http://www.cap.srce.hr/IzgledX.aspx</a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.hr.forms.HRJMBAGField.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/hr/forms.html#HRJMBAGField.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.hr.forms.HRJMBAGField.clean" title="Link to this definition">¶</a></dt>
+<dd><p>Validate the given value and return its “cleaned” value as an
+appropriate Python object. Raise ValidationError for any errors.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.hr.forms.HRJMBGField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.hr.forms.</span></span><span class="sig-name descname"><span class="pre">HRJMBGField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/hr/forms.html#HRJMBGField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.hr.forms.HRJMBGField" title="Link to this definition">¶</a></dt>
+<dd><p>Unique Master Citizen Number (JMBG) field.</p>
+<p>The number is still in use in Croatia, but it is being replaced by OIB.</p>
+<p>Source: <a class="reference external" href="http://en.wikipedia.org/wiki/Unique_Master_Citizen_Number">http://en.wikipedia.org/wiki/Unique_Master_Citizen_Number</a></p>
+<p>For who might be reimplementing:
+The “area” regular expression group is used to calculate the region where a
+person was registered. Additional validation can be implemented in
+accordance with it, however this could result in exclusion of legit
+immigrated citizens. Therefore, this field works for any ex-Yugoslavia
+country.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.hr.forms.HRJMBGField.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/hr/forms.html#HRJMBGField.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.hr.forms.HRJMBGField.clean" title="Link to this definition">¶</a></dt>
+<dd><p>Validate the given value and return its “cleaned” value as an
+appropriate Python object. Raise ValidationError for any errors.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.hr.forms.HRLicensePlateField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.hr.forms.</span></span><span class="sig-name descname"><span class="pre">HRLicensePlateField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/hr/forms.html#HRLicensePlateField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.hr.forms.HRLicensePlateField" title="Link to this definition">¶</a></dt>
+<dd><p>Vehicle license plate of Croatia field.</p>
+<p>Normalizes to the specific format
+below. Suffix is constructed from the shared letters of the Croatian and
+English alphabets.</p>
+<dl class="simple">
+<dt>Format examples:</dt><dd><p>SB 123-A
+(but also supports more characters)
+ZG 1234-AA</p>
+</dd>
+</dl>
+<p>Used for standardized license plates only.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.hr.forms.HRLicensePlateField.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/hr/forms.html#HRLicensePlateField.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.hr.forms.HRLicensePlateField.clean" title="Link to this definition">¶</a></dt>
+<dd><p>Validate the given value and return its “cleaned” value as an
+appropriate Python object. Raise ValidationError for any errors.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.hr.forms.HRLicensePlatePrefixSelect">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.hr.forms.</span></span><span class="sig-name descname"><span class="pre">HRLicensePlatePrefixSelect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attrs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/hr/forms.html#HRLicensePlatePrefixSelect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.hr.forms.HRLicensePlatePrefixSelect" title="Link to this definition">¶</a></dt>
+<dd><p>A Select widget that uses a list of vehicle license plate prefixes of Croatia as its choices.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.hr.forms.HROIBField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.hr.forms.</span></span><span class="sig-name descname"><span class="pre">HROIBField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">min_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">11</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">11</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/hr/forms.html#HROIBField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.hr.forms.HROIBField" title="Link to this definition">¶</a></dt>
+<dd><p>Personal Identification Number of Croatia (OIB) field.</p>
+<p><a class="reference external" href="http://www.oib.hr/">http://www.oib.hr/</a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.hr.forms.HROIBField.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/hr/forms.html#HROIBField.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.hr.forms.HROIBField.clean" title="Link to this definition">¶</a></dt>
+<dd><p>Validate the given value and return its “cleaned” value as an
+appropriate Python object. Raise ValidationError for any errors.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.hr.forms.HRPostalCodeField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.hr.forms.</span></span><span class="sig-name descname"><span class="pre">HRPostalCodeField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/hr/forms.html#HRPostalCodeField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.hr.forms.HRPostalCodeField" title="Link to this definition">¶</a></dt>
+<dd><p>Postal code of Croatia field.</p>
+<p>It consists of exactly five digits ranging from 10000 to possibly less than 60000.</p>
+<p><a class="reference external" href="http://www.posta.hr/main.aspx?id=66">http://www.posta.hr/main.aspx?id=66</a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.hr.forms.HRPostalCodeField.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/hr/forms.html#HRPostalCodeField.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.hr.forms.HRPostalCodeField.clean" title="Link to this definition">¶</a></dt>
+<dd><p>Validate the given value and return its “cleaned” value as an
+appropriate Python object. Raise ValidationError for any errors.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="data">
+<h2>Data<a class="headerlink" href="#data" title="Link to this heading">¶</a></h2>
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.hr.hr_choices.HR_COUNTY_CHOICES">
+<span class="sig-prename descclassname"><span class="pre">localflavor.hr.hr_choices.</span></span><span class="sig-name descname"><span class="pre">HR_COUNTY_CHOICES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(('GZG',</span> <span class="pre">'Grad</span> <span class="pre">Zagreb'),</span> <span class="pre">('BBŽ',</span> <span class="pre">'Bjelovarsko-bilogorska</span> <span class="pre">županija'),</span> <span class="pre">('BPŽ',</span> <span class="pre">'Brodsko-posavska</span> <span class="pre">županija'),</span> <span class="pre">('DNŽ',</span> <span class="pre">'Dubrovačko-neretvanska</span> <span class="pre">županija'),</span> <span class="pre">('IŽ',</span> <span class="pre">'Istarska</span> <span class="pre">županija'),</span> <span class="pre">('KŽ',</span> <span class="pre">'Karlovačka</span> <span class="pre">županija'),</span> <span class="pre">('KKŽ',</span> <span class="pre">'Koprivničko-križevačka</span> <span class="pre">županija'),</span> <span class="pre">('KZŽ',</span> <span class="pre">'Krapinsko-zagorska</span> <span class="pre">županija'),</span> <span class="pre">('LSŽ',</span> <span class="pre">'Ličko-senjska</span> <span class="pre">županija'),</span> <span class="pre">('MŽ',</span> <span class="pre">'Međimurska</span> <span class="pre">županija'),</span> <span class="pre">('OBŽ',</span> <span class="pre">'Osječko-baranjska</span> <span class="pre">županija'),</span> <span class="pre">('PSŽ',</span> <span class="pre">'Požeško-slavonska</span> <span class="pre">županija'),</span> <span class="pre">('PGŽ',</span> <span class="pre">'Primorsko-goranska</span> <span class="pre">županija'),</span> <span class="pre">('SMŽ',</span> <span class="pre">'Sisačko-moslavačka</span> <span class="pre">županija'),</span> <span class="pre">('SDŽ',</span> <span class="pre">'Splitsko-dalmatinska</span> <span class="pre">županija'),</span> <span class="pre">('ŠKŽ',</span> <span class="pre">'Šibensko-kninska</span> <span class="pre">županija'),</span> <span class="pre">('VŽ',</span> <span class="pre">'Varaždinska</span> <span class="pre">županija'),</span> <span class="pre">('VPŽ',</span> <span class="pre">'Virovitičko-podravska</span> <span class="pre">županija'),</span> <span class="pre">('VSŽ',</span> <span class="pre">'Vukovarsko-srijemska</span> <span class="pre">županija'),</span> <span class="pre">('ZDŽ',</span> <span class="pre">'Zadarska</span> <span class="pre">županija'),</span> <span class="pre">('ZGŽ',</span> <span class="pre">'Zagrebačka</span> <span class="pre">županija'))</span></em><a class="headerlink" href="#localflavor.hr.hr_choices.HR_COUNTY_CHOICES" title="Link to this definition">¶</a></dt>
+<dd><p>Croatian Counties: <a class="reference external" href="http://en.wikipedia.org/wiki/ISO_3166-2:HR">http://en.wikipedia.org/wiki/ISO_3166-2:HR</a>
+Croatia doesn’t have official abbreviations for counties. The ones provided are in common use.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.hr.hr_choices.HR_LICENSE_PLATE_PREFIX_CHOICES">
+<span class="sig-prename descclassname"><span class="pre">localflavor.hr.hr_choices.</span></span><span class="sig-name descname"><span class="pre">HR_LICENSE_PLATE_PREFIX_CHOICES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(('BJ',</span> <span class="pre">'BJ'),</span> <span class="pre">('BM',</span> <span class="pre">'BM'),</span> <span class="pre">('ČK',</span> <span class="pre">'ČK'),</span> <span class="pre">('DA',</span> <span class="pre">'DA'),</span> <span class="pre">('DE',</span> <span class="pre">'DE'),</span> <span class="pre">('DJ',</span> <span class="pre">'DJ'),</span> <span class="pre">('DU',</span> <span class="pre">'DU'),</span> <span class="pre">('GS',</span> <span class="pre">'GS'),</span> <span class="pre">('IM',</span> <span class="pre">'IM'),</span> <span class="pre">('KA',</span> <span class="pre">'KA'),</span> <span class="pre">('KC',</span> <span class="pre">'KC'),</span> <span class="pre">('KR',</span> <span class="pre">'KR'),</span> <span class="pre">('KT',</span> <span class="pre">'KT'),</span> <span class="pre">('KŽ',</span> <span class="pre">'KŽ'),</span> <span class="pre">('MA',</span> <span class="pre">'MA'),</span> <span class="pre">('NA',</span> <span class="pre">'NA'),</span> <span class="pre">('NG',</span> <span class="pre">'NG'),</span> <span class="pre">('OG',</span> <span class="pre">'OG'),</span> <span class="pre">('OS',</span> <span class="pre">'OS'),</span> <span class="pre">('PU',</span> <span class="pre">'PU'),</span> <span class="pre">('PŽ',</span> <span class="pre">'PŽ'),</span> <span class="pre">('RI',</span> <span class="pre">'RI'),</span> <span class="pre">('SB',</span> <span class="pre">'SB'),</span> <span class="pre">('SK',</span> <span class="pre">'SK'),</span> <span class="pre">('SL',</span> <span class="pre">'SL'),</span> <span class="pre">('ST',</span> <span class="pre">'ST'),</span> <span class="pre">('ŠI',</span> <span class="pre">'ŠI'),</span> <span class="pre">('VK',</span> <span class="pre">'VK'),</span> <span class="pre">('VT',</span> <span class="pre">'VT'),</span> <span class="pre">('VU',</span> <span class="pre">'VU'),</span> <span class="pre">('VŽ',</span> <span class="pre">'VŽ'),</span> <span class="pre">('ZD',</span> <span class="pre">'ZD'),</span> <span class="pre">('ZG',</span> <span class="pre">'ZG'),</span> <span class="pre">('ŽU',</span> <span class="pre">'ŽU'))</span></em><a class="headerlink" href="#localflavor.hr.hr_choices.HR_LICENSE_PLATE_PREFIX_CHOICES" title="Link to this definition">¶</a></dt>
+<dd><p>Only common license plate prefixes are provided. Special cases and obsolete prefixes are omitted.
+<a class="reference external" href="http://hr.wikipedia.org/wiki/Dodatak:Popis_registracijskih_oznaka_za_cestovna_vozila_u_Hrvatskoj">http://hr.wikipedia.org/wiki/Dodatak:Popis_registracijskih_oznaka_za_cestovna_vozila_u_Hrvatskoj</a></p>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Croatia (<code class="docutils literal notranslate"><span class="pre">hr</span></code>)</a><ul>
+<li><a class="reference internal" href="#module-localflavor.hr.forms">Forms</a><ul>
+<li><a class="reference internal" href="#localflavor.hr.forms.HRCountySelect"><code class="docutils literal notranslate"><span class="pre">HRCountySelect</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.hr.forms.HRJMBAGField"><code class="docutils literal notranslate"><span class="pre">HRJMBAGField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.hr.forms.HRJMBAGField.clean"><code class="docutils literal notranslate"><span class="pre">HRJMBAGField.clean()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.hr.forms.HRJMBGField"><code class="docutils literal notranslate"><span class="pre">HRJMBGField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.hr.forms.HRJMBGField.clean"><code class="docutils literal notranslate"><span class="pre">HRJMBGField.clean()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.hr.forms.HRLicensePlateField"><code class="docutils literal notranslate"><span class="pre">HRLicensePlateField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.hr.forms.HRLicensePlateField.clean"><code class="docutils literal notranslate"><span class="pre">HRLicensePlateField.clean()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.hr.forms.HRLicensePlatePrefixSelect"><code class="docutils literal notranslate"><span class="pre">HRLicensePlatePrefixSelect</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.hr.forms.HROIBField"><code class="docutils literal notranslate"><span class="pre">HROIBField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.hr.forms.HROIBField.clean"><code class="docutils literal notranslate"><span class="pre">HROIBField.clean()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.hr.forms.HRPostalCodeField"><code class="docutils literal notranslate"><span class="pre">HRPostalCodeField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.hr.forms.HRPostalCodeField.clean"><code class="docutils literal notranslate"><span class="pre">HRPostalCodeField.clean()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data">Data</a><ul>
+<li><a class="reference internal" href="#localflavor.hr.hr_choices.HR_COUNTY_CHOICES"><code class="docutils literal notranslate"><span class="pre">HR_COUNTY_CHOICES</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.hr.hr_choices.HR_LICENSE_PLATE_PREFIX_CHOICES"><code class="docutils literal notranslate"><span class="pre">HR_LICENSE_PLATE_PREFIX_CHOICES</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="gr.html"
+                          title="previous chapter">Greece (<code class="docutils literal notranslate"><span class="pre">gr</span></code>)</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="hu.html"
+                          title="next chapter">Hungary (<code class="docutils literal notranslate"><span class="pre">hu</span></code>)</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/localflavor/hr.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="hu.html" title="Hungary (hu)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="gr.html" title="Greece (gr)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Croatia (<code class="docutils literal notranslate"><span class="pre">hr</span></code>)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright Django Software Foundation and individual contributors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+  </body>
+</html>

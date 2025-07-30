@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>The Netherlands (nl) &#8212; django-localflavor 4.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=2bf1fcf8" />
+    
+    <script src="../_static/documentation_options.js?v=9f5556dd"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Norway (no)" href="no.html" />
+    <link rel="prev" title="Malaysia (my)" href="my.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="no.html" title="Norway (no)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="my.html" title="Malaysia (my)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">The Netherlands (<code class="docutils literal notranslate"><span class="pre">nl</span></code>)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="the-netherlands-nl">
+<h1>The Netherlands (<code class="docutils literal notranslate"><span class="pre">nl</span></code>)<a class="headerlink" href="#the-netherlands-nl" title="Link to this heading">¶</a></h1>
+<section id="module-localflavor.nl.forms">
+<span id="forms"></span><h2>Forms<a class="headerlink" href="#module-localflavor.nl.forms" title="Link to this heading">¶</a></h2>
+<p>NL-specific Form helpers.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.nl.forms.NLBSNFormField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.nl.forms.</span></span><span class="sig-name descname"><span class="pre">NLBSNFormField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/nl/forms.html#NLBSNFormField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.nl.forms.NLBSNFormField" title="Link to this definition">¶</a></dt>
+<dd><p>A Dutch social security number (BSN) field.</p>
+<p><a class="reference external" href="https://nl.wikipedia.org/wiki/Burgerservicenummer">https://nl.wikipedia.org/wiki/Burgerservicenummer</a></p>
+<p>Note that you may only process the BSN if you have a legal basis to do so!</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 1.6.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.nl.forms.NLLicensePlateFormField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.nl.forms.</span></span><span class="sig-name descname"><span class="pre">NLLicensePlateFormField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/nl/forms.html#NLLicensePlateFormField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.nl.forms.NLLicensePlateFormField" title="Link to this definition">¶</a></dt>
+<dd><p>A Dutch license plate field.</p>
+<p><a class="reference external" href="https://www.rdw.nl/">https://www.rdw.nl/</a>
+<a class="reference external" href="https://nl.wikipedia.org/wiki/Nederlands_kenteken">https://nl.wikipedia.org/wiki/Nederlands_kenteken</a></p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.1.</span></p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.nl.forms.NLLicensePlateFormField.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/nl/forms.html#NLLicensePlateFormField.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.nl.forms.NLLicensePlateFormField.clean" title="Link to this definition">¶</a></dt>
+<dd><p>Validate the given value and return its “cleaned” value as an
+appropriate Python object. Raise ValidationError for any errors.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.nl.forms.NLProvinceSelect">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.nl.forms.</span></span><span class="sig-name descname"><span class="pre">NLProvinceSelect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attrs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/nl/forms.html#NLProvinceSelect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.nl.forms.NLProvinceSelect" title="Link to this definition">¶</a></dt>
+<dd><p>A Select widget that uses a list of provinces of the Netherlands as it’s choices.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.nl.forms.NLZipCodeField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.nl.forms.</span></span><span class="sig-name descname"><span class="pre">NLZipCodeField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/nl/forms.html#NLZipCodeField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.nl.forms.NLZipCodeField" title="Link to this definition">¶</a></dt>
+<dd><p>A Dutch zip code field.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.nl.forms.NLZipCodeField.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/nl/forms.html#NLZipCodeField.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.nl.forms.NLZipCodeField.clean" title="Link to this definition">¶</a></dt>
+<dd><p>Validate the given value and return its “cleaned” value as an
+appropriate Python object. Raise ValidationError for any errors.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-localflavor.nl.models">
+<span id="models"></span><h2>Models<a class="headerlink" href="#module-localflavor.nl.models" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.nl.models.NLBSNField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.nl.models.</span></span><span class="sig-name descname"><span class="pre">NLBSNField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/nl/models.html#NLBSNField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.nl.models.NLBSNField" title="Link to this definition">¶</a></dt>
+<dd><p>A Dutch social security number (BSN).</p>
+<p>This model field uses <code class="xref py py-class docutils literal notranslate"><span class="pre">validators.NLBSNFieldValidator</span></code> for validation.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 1.6.</span></p>
+</div>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="localflavor.nl.models.NLBSNField.description">
+<span class="sig-name descname"><span class="pre">description</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Dutch</span> <span class="pre">social</span> <span class="pre">security</span> <span class="pre">number</span> <span class="pre">(BSN)'</span></em><a class="headerlink" href="#localflavor.nl.models.NLBSNField.description" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.nl.models.NLBSNField.formfield">
+<span class="sig-name descname"><span class="pre">formfield</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/nl/models.html#NLBSNField.formfield"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.nl.models.NLBSNField.formfield" title="Link to this definition">¶</a></dt>
+<dd><p>Return a django.forms.Field instance for this field.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="localflavor.nl.models.NLBSNField.validators">
+<span class="sig-name descname"><span class="pre">validators</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;localflavor.nl.validators.NLBSNFieldValidator</span> <span class="pre">object&gt;]</span></em><a class="headerlink" href="#localflavor.nl.models.NLBSNField.validators" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.nl.models.NLLicensePlateField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.nl.models.</span></span><span class="sig-name descname"><span class="pre">NLLicensePlateField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/nl/models.html#NLLicensePlateField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.nl.models.NLLicensePlateField" title="Link to this definition">¶</a></dt>
+<dd><p>A Dutch license plate.</p>
+<p>This model field uses <code class="xref py py-class docutils literal notranslate"><span class="pre">validators.NLLicensePlateFieldValidator</span></code> for validation.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.1.</span></p>
+</div>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="localflavor.nl.models.NLLicensePlateField.default_form_field">
+<span class="sig-name descname"><span class="pre">default_form_field</span></span><a class="headerlink" href="#localflavor.nl.models.NLLicensePlateField.default_form_field" title="Link to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#localflavor.nl.forms.NLLicensePlateFormField" title="localflavor.nl.forms.NLLicensePlateFormField"><code class="xref py py-class docutils literal notranslate"><span class="pre">NLLicensePlateFormField</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="localflavor.nl.models.NLLicensePlateField.description">
+<span class="sig-name descname"><span class="pre">description</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Dutch</span> <span class="pre">license</span> <span class="pre">plate'</span></em><a class="headerlink" href="#localflavor.nl.models.NLLicensePlateField.description" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.nl.models.NLLicensePlateField.formfield">
+<span class="sig-name descname"><span class="pre">formfield</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/nl/models.html#NLLicensePlateField.formfield"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.nl.models.NLLicensePlateField.formfield" title="Link to this definition">¶</a></dt>
+<dd><p>Return a django.forms.Field instance for this field.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="localflavor.nl.models.NLLicensePlateField.validators">
+<span class="sig-name descname"><span class="pre">validators</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;localflavor.nl.validators.NLLicensePlateFieldValidator</span> <span class="pre">object&gt;]</span></em><a class="headerlink" href="#localflavor.nl.models.NLLicensePlateField.validators" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.nl.models.NLProvinceField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.nl.models.</span></span><span class="sig-name descname"><span class="pre">NLProvinceField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/nl/models.html#NLProvinceField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.nl.models.NLProvinceField" title="Link to this definition">¶</a></dt>
+<dd><p>A Dutch Province field.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 1.3.</span></p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.nl.models.NLProvinceField.deconstruct">
+<span class="sig-name descname"><span class="pre">deconstruct</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/nl/models.html#NLProvinceField.deconstruct"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.nl.models.NLProvinceField.deconstruct" title="Link to this definition">¶</a></dt>
+<dd><p>Return enough information to recreate the field as a 4-tuple:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>The name of the field on the model, if contribute_to_class() has
+been run.</p></li>
+<li><p>The import path of the field, including the class, e.g.
+django.db.models.IntegerField. This should be the most portable
+version, so less specific may be better.</p></li>
+<li><p>A list of positional arguments.</p></li>
+<li><p>A dict of keyword arguments.</p></li>
+</ul>
+</div></blockquote>
+<p>Note that the positional or keyword arguments must contain values of
+the following types (including inner values of collection types):</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>None, bool, str, int, float, complex, set, frozenset, list, tuple,
+dict</p></li>
+<li><p>UUID</p></li>
+<li><p>datetime.datetime (naive), datetime.date</p></li>
+<li><p>top-level classes, top-level functions - will be referenced by their
+full import path</p></li>
+<li><p>Storage instances - these have their own deconstruct() method</p></li>
+</ul>
+</div></blockquote>
+<p>This is because the values here must be serialized into a text format
+(possibly new Python code, possibly JSON) and these are the only types
+with encoding handlers defined.</p>
+<p>There’s no need to return the exact way the field was instantiated this
+time, just ensure that the resulting field is the same - prefer keyword
+arguments over positional ones, and omit parameters with their default
+values.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="localflavor.nl.models.NLProvinceField.description">
+<span class="sig-name descname"><span class="pre">description</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Dutch</span> <span class="pre">province'</span></em><a class="headerlink" href="#localflavor.nl.models.NLProvinceField.description" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.nl.models.NLZipCodeField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.nl.models.</span></span><span class="sig-name descname"><span class="pre">NLZipCodeField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/nl/models.html#NLZipCodeField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.nl.models.NLZipCodeField" title="Link to this definition">¶</a></dt>
+<dd><p>A Dutch zip code model field.</p>
+<p>This model field uses <code class="xref py py-class docutils literal notranslate"><span class="pre">validators.NLZipCodeFieldValidator</span></code> for validation.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 1.3.</span></p>
+</div>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="localflavor.nl.models.NLZipCodeField.description">
+<span class="sig-name descname"><span class="pre">description</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Dutch</span> <span class="pre">zipcode'</span></em><a class="headerlink" href="#localflavor.nl.models.NLZipCodeField.description" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.nl.models.NLZipCodeField.formfield">
+<span class="sig-name descname"><span class="pre">formfield</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/nl/models.html#NLZipCodeField.formfield"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.nl.models.NLZipCodeField.formfield" title="Link to this definition">¶</a></dt>
+<dd><p>Return a django.forms.Field instance for this field.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.nl.models.NLZipCodeField.to_python">
+<span class="sig-name descname"><span class="pre">to_python</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/nl/models.html#NLZipCodeField.to_python"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.nl.models.NLZipCodeField.to_python" title="Link to this definition">¶</a></dt>
+<dd><p>Convert the input value into the expected Python data type, raising
+django.core.exceptions.ValidationError if the data can’t be converted.
+Return the converted value. Subclasses should override this.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="localflavor.nl.models.NLZipCodeField.validators">
+<span class="sig-name descname"><span class="pre">validators</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;localflavor.nl.validators.NLZipCodeFieldValidator</span> <span class="pre">object&gt;]</span></em><a class="headerlink" href="#localflavor.nl.models.NLZipCodeField.validators" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="data">
+<h2>Data<a class="headerlink" href="#data" title="Link to this heading">¶</a></h2>
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.nl.nl_provinces.PROVINCE_CHOICES">
+<span class="sig-prename descclassname"><span class="pre">localflavor.nl.nl_provinces.</span></span><span class="sig-name descname"><span class="pre">PROVINCE_CHOICES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(('DR',</span> <span class="pre">'Drenthe'),</span> <span class="pre">('FL',</span> <span class="pre">'Flevoland'),</span> <span class="pre">('FR',</span> <span class="pre">'Fryslân'),</span> <span class="pre">('GL',</span> <span class="pre">'Gelderland'),</span> <span class="pre">('GR',</span> <span class="pre">'Groningen'),</span> <span class="pre">('LB',</span> <span class="pre">'Limburg'),</span> <span class="pre">('NB',</span> <span class="pre">'Noord-Brabant'),</span> <span class="pre">('NH',</span> <span class="pre">'Noord-Holland'),</span> <span class="pre">('OV',</span> <span class="pre">'Overijssel'),</span> <span class="pre">('UT',</span> <span class="pre">'Utrecht'),</span> <span class="pre">('ZE',</span> <span class="pre">'Zeeland'),</span> <span class="pre">('ZH',</span> <span class="pre">'Zuid-Holland'))</span></em><a class="headerlink" href="#localflavor.nl.nl_provinces.PROVINCE_CHOICES" title="Link to this definition">¶</a></dt>
+<dd><p>An alphabetical list of provinces</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">The Netherlands (<code class="docutils literal notranslate"><span class="pre">nl</span></code>)</a><ul>
+<li><a class="reference internal" href="#module-localflavor.nl.forms">Forms</a><ul>
+<li><a class="reference internal" href="#localflavor.nl.forms.NLBSNFormField"><code class="docutils literal notranslate"><span class="pre">NLBSNFormField</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.nl.forms.NLLicensePlateFormField"><code class="docutils literal notranslate"><span class="pre">NLLicensePlateFormField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.nl.forms.NLLicensePlateFormField.clean"><code class="docutils literal notranslate"><span class="pre">NLLicensePlateFormField.clean()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.nl.forms.NLProvinceSelect"><code class="docutils literal notranslate"><span class="pre">NLProvinceSelect</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.nl.forms.NLZipCodeField"><code class="docutils literal notranslate"><span class="pre">NLZipCodeField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.nl.forms.NLZipCodeField.clean"><code class="docutils literal notranslate"><span class="pre">NLZipCodeField.clean()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-localflavor.nl.models">Models</a><ul>
+<li><a class="reference internal" href="#localflavor.nl.models.NLBSNField"><code class="docutils literal notranslate"><span class="pre">NLBSNField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.nl.models.NLBSNField.description"><code class="docutils literal notranslate"><span class="pre">NLBSNField.description</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.nl.models.NLBSNField.formfield"><code class="docutils literal notranslate"><span class="pre">NLBSNField.formfield()</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.nl.models.NLBSNField.validators"><code class="docutils literal notranslate"><span class="pre">NLBSNField.validators</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.nl.models.NLLicensePlateField"><code class="docutils literal notranslate"><span class="pre">NLLicensePlateField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.nl.models.NLLicensePlateField.default_form_field"><code class="docutils literal notranslate"><span class="pre">NLLicensePlateField.default_form_field</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.nl.models.NLLicensePlateField.description"><code class="docutils literal notranslate"><span class="pre">NLLicensePlateField.description</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.nl.models.NLLicensePlateField.formfield"><code class="docutils literal notranslate"><span class="pre">NLLicensePlateField.formfield()</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.nl.models.NLLicensePlateField.validators"><code class="docutils literal notranslate"><span class="pre">NLLicensePlateField.validators</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.nl.models.NLProvinceField"><code class="docutils literal notranslate"><span class="pre">NLProvinceField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.nl.models.NLProvinceField.deconstruct"><code class="docutils literal notranslate"><span class="pre">NLProvinceField.deconstruct()</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.nl.models.NLProvinceField.description"><code class="docutils literal notranslate"><span class="pre">NLProvinceField.description</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.nl.models.NLZipCodeField"><code class="docutils literal notranslate"><span class="pre">NLZipCodeField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.nl.models.NLZipCodeField.description"><code class="docutils literal notranslate"><span class="pre">NLZipCodeField.description</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.nl.models.NLZipCodeField.formfield"><code class="docutils literal notranslate"><span class="pre">NLZipCodeField.formfield()</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.nl.models.NLZipCodeField.to_python"><code class="docutils literal notranslate"><span class="pre">NLZipCodeField.to_python()</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.nl.models.NLZipCodeField.validators"><code class="docutils literal notranslate"><span class="pre">NLZipCodeField.validators</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data">Data</a><ul>
+<li><a class="reference internal" href="#localflavor.nl.nl_provinces.PROVINCE_CHOICES"><code class="docutils literal notranslate"><span class="pre">PROVINCE_CHOICES</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="my.html"
+                          title="previous chapter">Malaysia (<code class="docutils literal notranslate"><span class="pre">my</span></code>)</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="no.html"
+                          title="next chapter">Norway (<code class="docutils literal notranslate"><span class="pre">no</span></code>)</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/localflavor/nl.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="no.html" title="Norway (no)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="my.html" title="Malaysia (my)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">The Netherlands (<code class="docutils literal notranslate"><span class="pre">nl</span></code>)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright Django Software Foundation and individual contributors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+  </body>
+</html>

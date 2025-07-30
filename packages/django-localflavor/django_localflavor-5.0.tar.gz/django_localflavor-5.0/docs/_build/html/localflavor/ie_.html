@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Ireland (ie) &#8212; django-localflavor 4.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=2bf1fcf8" />
+    
+    <script src="../_static/documentation_options.js?v=9f5556dd"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Israel (il)" href="il.html" />
+    <link rel="prev" title="Indonesia (id)" href="id_.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="il.html" title="Israel (il)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="id_.html" title="Indonesia (id)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Ireland (<code class="docutils literal notranslate"><span class="pre">ie</span></code>)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="ireland-ie">
+<h1>Ireland (<code class="docutils literal notranslate"><span class="pre">ie</span></code>)<a class="headerlink" href="#ireland-ie" title="Link to this heading">¶</a></h1>
+<section id="module-localflavor.ie.forms">
+<span id="forms"></span><h2>Forms<a class="headerlink" href="#module-localflavor.ie.forms" title="Link to this heading">¶</a></h2>
+<p>IE-specific Form helpers.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.ie.forms.EircodeField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.ie.forms.</span></span><span class="sig-name descname"><span class="pre">EircodeField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/ie/forms.html#EircodeField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.ie.forms.EircodeField" title="Link to this definition">¶</a></dt>
+<dd><p>A form field that validates its input is a valid Eircode (Irish postcode).</p>
+<p>The value is uppercased and has the internal space removed, if any.</p>
+<p>See page 12 for the validation syntax:
+<a class="reference external" href="https://www.eircode.ie/docs/default-source/Common/prepareyourbusinessforeircode-edition3published.pdf?sfvrsn=2">https://www.eircode.ie/docs/default-source/Common/prepareyourbusinessforeircode-edition3published.pdf?sfvrsn=2</a></p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.2.</span></p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.ie.forms.EircodeField.to_python">
+<span class="sig-name descname"><span class="pre">to_python</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/ie/forms.html#EircodeField.to_python"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.ie.forms.EircodeField.to_python" title="Link to this definition">¶</a></dt>
+<dd><p>Return a string.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.ie.forms.IECountySelect">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.ie.forms.</span></span><span class="sig-name descname"><span class="pre">IECountySelect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attrs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/ie/forms.html#IECountySelect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.ie.forms.IECountySelect" title="Link to this definition">¶</a></dt>
+<dd><p>A Select widget that uses a list of Irish Counties as its choices.</p>
+</dd></dl>
+
+</section>
+<section id="data">
+<h2>Data<a class="headerlink" href="#data" title="Link to this heading">¶</a></h2>
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.ie.ie_counties.IE_COUNTY_CHOICES">
+<span class="sig-prename descclassname"><span class="pre">localflavor.ie.ie_counties.</span></span><span class="sig-name descname"><span class="pre">IE_COUNTY_CHOICES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(('carlow',</span> <span class="pre">'Carlow'),</span> <span class="pre">('cavan',</span> <span class="pre">'Cavan'),</span> <span class="pre">('clare',</span> <span class="pre">'Clare'),</span> <span class="pre">('cork',</span> <span class="pre">'Cork'),</span> <span class="pre">('donegal',</span> <span class="pre">'Donegal'),</span> <span class="pre">('dublin',</span> <span class="pre">'Dublin'),</span> <span class="pre">('galway',</span> <span class="pre">'Galway'),</span> <span class="pre">('kerry',</span> <span class="pre">'Kerry'),</span> <span class="pre">('kildare',</span> <span class="pre">'Kildare'),</span> <span class="pre">('kilkenny',</span> <span class="pre">'Kilkenny'),</span> <span class="pre">('laois',</span> <span class="pre">'Laois'),</span> <span class="pre">('leitrim',</span> <span class="pre">'Leitrim'),</span> <span class="pre">('limerick',</span> <span class="pre">'Limerick'),</span> <span class="pre">('longford',</span> <span class="pre">'Longford'),</span> <span class="pre">('louth',</span> <span class="pre">'Louth'),</span> <span class="pre">('mayo',</span> <span class="pre">'Mayo'),</span> <span class="pre">('meath',</span> <span class="pre">'Meath'),</span> <span class="pre">('monaghan',</span> <span class="pre">'Monaghan'),</span> <span class="pre">('offaly',</span> <span class="pre">'Offaly'),</span> <span class="pre">('roscommon',</span> <span class="pre">'Roscommon'),</span> <span class="pre">('sligo',</span> <span class="pre">'Sligo'),</span> <span class="pre">('tipperary',</span> <span class="pre">'Tipperary'),</span> <span class="pre">('waterford',</span> <span class="pre">'Waterford'),</span> <span class="pre">('westmeath',</span> <span class="pre">'Westmeath'),</span> <span class="pre">('wexford',</span> <span class="pre">'Wexford'),</span> <span class="pre">('wicklow',</span> <span class="pre">'Wicklow'))</span></em><a class="headerlink" href="#localflavor.ie.ie_counties.IE_COUNTY_CHOICES" title="Link to this definition">¶</a></dt>
+<dd><p>Irish Counties: <a class="reference external" href="http://en.wikipedia.org/wiki/Counties_of_Ireland">http://en.wikipedia.org/wiki/Counties_of_Ireland</a></p>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Ireland (<code class="docutils literal notranslate"><span class="pre">ie</span></code>)</a><ul>
+<li><a class="reference internal" href="#module-localflavor.ie.forms">Forms</a><ul>
+<li><a class="reference internal" href="#localflavor.ie.forms.EircodeField"><code class="docutils literal notranslate"><span class="pre">EircodeField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.ie.forms.EircodeField.to_python"><code class="docutils literal notranslate"><span class="pre">EircodeField.to_python()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.ie.forms.IECountySelect"><code class="docutils literal notranslate"><span class="pre">IECountySelect</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data">Data</a><ul>
+<li><a class="reference internal" href="#localflavor.ie.ie_counties.IE_COUNTY_CHOICES"><code class="docutils literal notranslate"><span class="pre">IE_COUNTY_CHOICES</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="id_.html"
+                          title="previous chapter">Indonesia (<code class="docutils literal notranslate"><span class="pre">id</span></code>)</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="il.html"
+                          title="next chapter">Israel (<code class="docutils literal notranslate"><span class="pre">il</span></code>)</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/localflavor/ie_.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="il.html" title="Israel (il)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="id_.html" title="Indonesia (id)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Ireland (<code class="docutils literal notranslate"><span class="pre">ie</span></code>)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright Django Software Foundation and individual contributors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+  </body>
+</html>

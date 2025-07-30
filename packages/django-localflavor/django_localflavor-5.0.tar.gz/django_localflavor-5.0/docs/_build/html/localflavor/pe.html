@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Peru (pe) &#8212; django-localflavor 4.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=2bf1fcf8" />
+    
+    <script src="../_static/documentation_options.js?v=9f5556dd"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Pakistan (pk)" href="pk.html" />
+    <link rel="prev" title="New Zealand (nz)" href="nz.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pk.html" title="Pakistan (pk)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="nz.html" title="New Zealand (nz)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Peru (<code class="docutils literal notranslate"><span class="pre">pe</span></code>)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="peru-pe">
+<h1>Peru (<code class="docutils literal notranslate"><span class="pre">pe</span></code>)<a class="headerlink" href="#peru-pe" title="Link to this heading">¶</a></h1>
+<section id="module-localflavor.pe.forms">
+<span id="forms"></span><h2>Forms<a class="headerlink" href="#module-localflavor.pe.forms" title="Link to this heading">¶</a></h2>
+<p>PE-specific Form helpers.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.pe.forms.PEDNIField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.pe.forms.</span></span><span class="sig-name descname"><span class="pre">PEDNIField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">8</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/pe/forms.html#PEDNIField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.pe.forms.PEDNIField" title="Link to this definition">¶</a></dt>
+<dd><p>A field that validates Documento Nacional de Identidad (DNI) numbers.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.pe.forms.PEDNIField.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/pe/forms.html#PEDNIField.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.pe.forms.PEDNIField.clean" title="Link to this definition">¶</a></dt>
+<dd><p>Value must be a string in the XXXXXXXX formats.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.pe.forms.PERUCField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.pe.forms.</span></span><span class="sig-name descname"><span class="pre">PERUCField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">11</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">11</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/pe/forms.html#PERUCField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.pe.forms.PERUCField" title="Link to this definition">¶</a></dt>
+<dd><p>This field validates a RUC (Registro Unico de Contribuyentes).</p>
+<p>A RUC is of the form XXXXXXXXXXX.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.pe.forms.PERUCField.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/pe/forms.html#PERUCField.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.pe.forms.PERUCField.clean" title="Link to this definition">¶</a></dt>
+<dd><p>Value must be an 11-digit number.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.pe.forms.PERegionSelect">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.pe.forms.</span></span><span class="sig-name descname"><span class="pre">PERegionSelect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attrs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/pe/forms.html#PERegionSelect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.pe.forms.PERegionSelect" title="Link to this definition">¶</a></dt>
+<dd><p>A Select widget that uses a list of Peruvian Regions as its choices.</p>
+</dd></dl>
+
+</section>
+<section id="data">
+<h2>Data<a class="headerlink" href="#data" title="Link to this heading">¶</a></h2>
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.pe.pe_region.REGION_CHOICES">
+<span class="sig-prename descclassname"><span class="pre">localflavor.pe.pe_region.</span></span><span class="sig-name descname"><span class="pre">REGION_CHOICES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(('AMA',</span> <span class="pre">'Amazonas'),</span> <span class="pre">('ANC',</span> <span class="pre">'Ancash'),</span> <span class="pre">('APU',</span> <span class="pre">'Apurímac'),</span> <span class="pre">('ARE',</span> <span class="pre">'Arequipa'),</span> <span class="pre">('AYA',</span> <span class="pre">'Ayacucho'),</span> <span class="pre">('CAJ',</span> <span class="pre">'Cajamarca'),</span> <span class="pre">('CAL',</span> <span class="pre">'Callao'),</span> <span class="pre">('CUS',</span> <span class="pre">'Cusco'),</span> <span class="pre">('HUV',</span> <span class="pre">'Huancavelica'),</span> <span class="pre">('HUC',</span> <span class="pre">'Huánuco'),</span> <span class="pre">('ICA',</span> <span class="pre">'Ica'),</span> <span class="pre">('JUN',</span> <span class="pre">'Junín'),</span> <span class="pre">('LAL',</span> <span class="pre">'La</span> <span class="pre">Libertad'),</span> <span class="pre">('LAM',</span> <span class="pre">'Lambayeque'),</span> <span class="pre">('LIM',</span> <span class="pre">'Lima'),</span> <span class="pre">('LOR',</span> <span class="pre">'Loreto'),</span> <span class="pre">('MDD',</span> <span class="pre">'Madre</span> <span class="pre">de</span> <span class="pre">Dios'),</span> <span class="pre">('MOQ',</span> <span class="pre">'Moquegua'),</span> <span class="pre">('PAS',</span> <span class="pre">'Pasco'),</span> <span class="pre">('PIU',</span> <span class="pre">'Piura'),</span> <span class="pre">('PUN',</span> <span class="pre">'Puno'),</span> <span class="pre">('SAM',</span> <span class="pre">'San</span> <span class="pre">Martín'),</span> <span class="pre">('TAC',</span> <span class="pre">'Tacna'),</span> <span class="pre">('TUM',</span> <span class="pre">'Tumbes'),</span> <span class="pre">('UCA',</span> <span class="pre">'Ucayali'))</span></em><a class="headerlink" href="#localflavor.pe.pe_region.REGION_CHOICES" title="Link to this definition">¶</a></dt>
+<dd><p>A list of Peru regions as <cite>choices</cite> in a formfield.</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Peru (<code class="docutils literal notranslate"><span class="pre">pe</span></code>)</a><ul>
+<li><a class="reference internal" href="#module-localflavor.pe.forms">Forms</a><ul>
+<li><a class="reference internal" href="#localflavor.pe.forms.PEDNIField"><code class="docutils literal notranslate"><span class="pre">PEDNIField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.pe.forms.PEDNIField.clean"><code class="docutils literal notranslate"><span class="pre">PEDNIField.clean()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.pe.forms.PERUCField"><code class="docutils literal notranslate"><span class="pre">PERUCField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.pe.forms.PERUCField.clean"><code class="docutils literal notranslate"><span class="pre">PERUCField.clean()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.pe.forms.PERegionSelect"><code class="docutils literal notranslate"><span class="pre">PERegionSelect</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data">Data</a><ul>
+<li><a class="reference internal" href="#localflavor.pe.pe_region.REGION_CHOICES"><code class="docutils literal notranslate"><span class="pre">REGION_CHOICES</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="nz.html"
+                          title="previous chapter">New Zealand (<code class="docutils literal notranslate"><span class="pre">nz</span></code>)</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="pk.html"
+                          title="next chapter">Pakistan (<code class="docutils literal notranslate"><span class="pre">pk</span></code>)</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/localflavor/pe.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pk.html" title="Pakistan (pk)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="nz.html" title="New Zealand (nz)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Peru (<code class="docutils literal notranslate"><span class="pre">pe</span></code>)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright Django Software Foundation and individual contributors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Uruguay (uy) &#8212; django-localflavor 4.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=2bf1fcf8" />
+    
+    <script src="../_static/documentation_options.js?v=9f5556dd"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="South Africa (za)" href="za.html" />
+    <link rel="prev" title="United States of America (us)" href="us.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="za.html" title="South Africa (za)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="us.html" title="United States of America (us)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Uruguay (<code class="docutils literal notranslate"><span class="pre">uy</span></code>)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="uruguay-uy">
+<h1>Uruguay (<code class="docutils literal notranslate"><span class="pre">uy</span></code>)<a class="headerlink" href="#uruguay-uy" title="Link to this heading">¶</a></h1>
+<section id="module-localflavor.uy.forms">
+<span id="forms"></span><h2>Forms<a class="headerlink" href="#module-localflavor.uy.forms" title="Link to this heading">¶</a></h2>
+<p>UY-specific form helpers.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.uy.forms.UYCIField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.uy.forms.</span></span><span class="sig-name descname"><span class="pre">UYCIField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/uy/forms.html#UYCIField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.uy.forms.UYCIField" title="Link to this definition">¶</a></dt>
+<dd><p>A field that validates Uruguayan ‘Cedula de identidad’ (CI) numbers.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.uy.forms.UYCIField.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/uy/forms.html#UYCIField.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.uy.forms.UYCIField.clean" title="Link to this definition">¶</a></dt>
+<dd><p>Validates format and validation digit.</p>
+<p>The official format is [X.]XXX.XXX-X but usually dots and/or slash are
+omitted so, when validating, those characters are ignored if found in
+the correct place. The three typically used formats are supported:
+[X]XXXXXXX, [X]XXXXXX-X and [X.]XXX.XXX-X.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.uy.forms.UYDepartmentSelect">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.uy.forms.</span></span><span class="sig-name descname"><span class="pre">UYDepartmentSelect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attrs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/uy/forms.html#UYDepartmentSelect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.uy.forms.UYDepartmentSelect" title="Link to this definition">¶</a></dt>
+<dd><p>A Select widget that uses a list of Uruguayan departments as its choices.</p>
+</dd></dl>
+
+</section>
+<section id="module-localflavor.uy.util">
+<span id="utilities"></span><h2>Utilities<a class="headerlink" href="#module-localflavor.uy.util" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="localflavor.uy.util.get_validation_digit">
+<span class="sig-prename descclassname"><span class="pre">localflavor.uy.util.</span></span><span class="sig-name descname"><span class="pre">get_validation_digit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/uy/util.html#get_validation_digit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.uy.util.get_validation_digit" title="Link to this definition">¶</a></dt>
+<dd><p>Calculates the validation digit for the given number.</p>
+</dd></dl>
+
+</section>
+<section id="data">
+<h2>Data<a class="headerlink" href="#data" title="Link to this heading">¶</a></h2>
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.uy.uy_departments.DEPARTMENT_CHOICES">
+<span class="sig-prename descclassname"><span class="pre">localflavor.uy.uy_departments.</span></span><span class="sig-name descname"><span class="pre">DEPARTMENT_CHOICES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(('G',</span> <span class="pre">'Artigas'),</span> <span class="pre">('A',</span> <span class="pre">'Canelones'),</span> <span class="pre">('E',</span> <span class="pre">'Cerro</span> <span class="pre">Largo'),</span> <span class="pre">('L',</span> <span class="pre">'Colonia'),</span> <span class="pre">('Q',</span> <span class="pre">'Durazno'),</span> <span class="pre">('N',</span> <span class="pre">'Flores'),</span> <span class="pre">('O',</span> <span class="pre">'Florida'),</span> <span class="pre">('P',</span> <span class="pre">'Lavalleja'),</span> <span class="pre">('B',</span> <span class="pre">'Maldonado'),</span> <span class="pre">('S',</span> <span class="pre">'Montevideo'),</span> <span class="pre">('I',</span> <span class="pre">'Paysandú'),</span> <span class="pre">('J',</span> <span class="pre">'Río</span> <span class="pre">Negro'),</span> <span class="pre">('F',</span> <span class="pre">'Rivera'),</span> <span class="pre">('C',</span> <span class="pre">'Rocha'),</span> <span class="pre">('H',</span> <span class="pre">'Salto'),</span> <span class="pre">('M',</span> <span class="pre">'San</span> <span class="pre">José'),</span> <span class="pre">('K',</span> <span class="pre">'Soriano'),</span> <span class="pre">('R',</span> <span class="pre">'Tacuarembó'),</span> <span class="pre">('D',</span> <span class="pre">'Treinta</span> <span class="pre">y</span> <span class="pre">Tres'))</span></em><a class="headerlink" href="#localflavor.uy.uy_departments.DEPARTMENT_CHOICES" title="Link to this definition">¶</a></dt>
+<dd><p>A list of Uruguayan departments as <cite>choices</cite> in a formfield.</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Uruguay (<code class="docutils literal notranslate"><span class="pre">uy</span></code>)</a><ul>
+<li><a class="reference internal" href="#module-localflavor.uy.forms">Forms</a><ul>
+<li><a class="reference internal" href="#localflavor.uy.forms.UYCIField"><code class="docutils literal notranslate"><span class="pre">UYCIField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.uy.forms.UYCIField.clean"><code class="docutils literal notranslate"><span class="pre">UYCIField.clean()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.uy.forms.UYDepartmentSelect"><code class="docutils literal notranslate"><span class="pre">UYDepartmentSelect</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-localflavor.uy.util">Utilities</a><ul>
+<li><a class="reference internal" href="#localflavor.uy.util.get_validation_digit"><code class="docutils literal notranslate"><span class="pre">get_validation_digit()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data">Data</a><ul>
+<li><a class="reference internal" href="#localflavor.uy.uy_departments.DEPARTMENT_CHOICES"><code class="docutils literal notranslate"><span class="pre">DEPARTMENT_CHOICES</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="us.html"
+                          title="previous chapter">United States of America (<code class="docutils literal notranslate"><span class="pre">us</span></code>)</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="za.html"
+                          title="next chapter">South Africa (<code class="docutils literal notranslate"><span class="pre">za</span></code>)</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/localflavor/uy.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="za.html" title="South Africa (za)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="us.html" title="United States of America (us)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Uruguay (<code class="docutils literal notranslate"><span class="pre">uy</span></code>)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright Django Software Foundation and individual contributors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+  </body>
+</html>

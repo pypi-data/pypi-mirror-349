@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Estonia (ee) &#8212; django-localflavor 4.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=2bf1fcf8" />
+    
+    <script src="../_static/documentation_options.js?v=9f5556dd"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Egypt (eg)" href="eg.html" />
+    <link rel="prev" title="Ecuador (ec)" href="ec.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="eg.html" title="Egypt (eg)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="ec.html" title="Ecuador (ec)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Estonia (<code class="docutils literal notranslate"><span class="pre">ee</span></code>)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="estonia-ee">
+<h1>Estonia (<code class="docutils literal notranslate"><span class="pre">ee</span></code>)<a class="headerlink" href="#estonia-ee" title="Link to this heading">¶</a></h1>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 1.1.</span></p>
+</div>
+<section id="module-localflavor.ee.forms">
+<span id="forms"></span><h2>Forms<a class="headerlink" href="#module-localflavor.ee.forms" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.ee.forms.EEBusinessRegistryCode">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.ee.forms.</span></span><span class="sig-name descname"><span class="pre">EEBusinessRegistryCode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/ee/forms.html#EEBusinessRegistryCode"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.ee.forms.EEBusinessRegistryCode" title="Link to this definition">¶</a></dt>
+<dd><p>A form field that validates input as an Estonian business registration code.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 1.2.</span></p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.ee.forms.EEBusinessRegistryCode.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/ee/forms.html#EEBusinessRegistryCode.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.ee.forms.EEBusinessRegistryCode.clean" title="Link to this definition">¶</a></dt>
+<dd><p>Validate the given value and return its “cleaned” value as an
+appropriate Python object. Raise ValidationError for any errors.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.ee.forms.EECountySelect">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.ee.forms.</span></span><span class="sig-name descname"><span class="pre">EECountySelect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attrs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/ee/forms.html#EECountySelect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.ee.forms.EECountySelect" title="Link to this definition">¶</a></dt>
+<dd><p>A Select widget that uses a list of Estonian counties as its choices.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.ee.forms.EEPersonalIdentificationCode">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.ee.forms.</span></span><span class="sig-name descname"><span class="pre">EEPersonalIdentificationCode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/ee/forms.html#EEPersonalIdentificationCode"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.ee.forms.EEPersonalIdentificationCode" title="Link to this definition">¶</a></dt>
+<dd><p>A form field that validates input as an Estonian personal identification code.</p>
+<p>See: <a class="reference external" href="https://www.riigiteataja.ee/akt/106032012004">https://www.riigiteataja.ee/akt/106032012004</a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.ee.forms.EEPersonalIdentificationCode.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/ee/forms.html#EEPersonalIdentificationCode.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.ee.forms.EEPersonalIdentificationCode.clean" title="Link to this definition">¶</a></dt>
+<dd><p>Validate the given value and return its “cleaned” value as an
+appropriate Python object. Raise ValidationError for any errors.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.ee.forms.EEPersonalIdentificationCode.ee_checksum">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ee_checksum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/ee/forms.html#EEPersonalIdentificationCode.ee_checksum"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.ee.forms.EEPersonalIdentificationCode.ee_checksum" title="Link to this definition">¶</a></dt>
+<dd><p>Takes a string of digits as input, returns check digit.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.ee.forms.EEZipCodeField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.ee.forms.</span></span><span class="sig-name descname"><span class="pre">EEZipCodeField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/ee/forms.html#EEZipCodeField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.ee.forms.EEZipCodeField" title="Link to this definition">¶</a></dt>
+<dd><p>A form field that validates input as a Estonian zip code.</p>
+<p>Valid codes consist of five digits; first digit cannot be 0.</p>
+</dd></dl>
+
+</section>
+<section id="data">
+<h2>Data<a class="headerlink" href="#data" title="Link to this heading">¶</a></h2>
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.ee.ee_counties.COUNTY_CHOICES">
+<span class="sig-prename descclassname"><span class="pre">localflavor.ee.ee_counties.</span></span><span class="sig-name descname"><span class="pre">COUNTY_CHOICES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(('37',</span> <span class="pre">'Harju</span> <span class="pre">County'),</span> <span class="pre">('39',</span> <span class="pre">'Hiiu</span> <span class="pre">County'),</span> <span class="pre">('44',</span> <span class="pre">'Ida-Viru</span> <span class="pre">County'),</span> <span class="pre">('49',</span> <span class="pre">'Jõgeva</span> <span class="pre">County'),</span> <span class="pre">('51',</span> <span class="pre">'Järva</span> <span class="pre">County'),</span> <span class="pre">('57',</span> <span class="pre">'Lääne</span> <span class="pre">County'),</span> <span class="pre">('59',</span> <span class="pre">'Lääne-Viru</span> <span class="pre">County'),</span> <span class="pre">('65',</span> <span class="pre">'Põlva</span> <span class="pre">County'),</span> <span class="pre">('67',</span> <span class="pre">'Pärnu</span> <span class="pre">County'),</span> <span class="pre">('70',</span> <span class="pre">'Rapla</span> <span class="pre">County'),</span> <span class="pre">('74',</span> <span class="pre">'Saare</span> <span class="pre">County'),</span> <span class="pre">('78',</span> <span class="pre">'Tartu</span> <span class="pre">County'),</span> <span class="pre">('82',</span> <span class="pre">'Valga</span> <span class="pre">County'),</span> <span class="pre">('84',</span> <span class="pre">'Viljandi</span> <span class="pre">County'),</span> <span class="pre">('86',</span> <span class="pre">'Võru</span> <span class="pre">County'))</span></em><a class="headerlink" href="#localflavor.ee.ee_counties.COUNTY_CHOICES" title="Link to this definition">¶</a></dt>
+<dd><p>A list of Estonian counties as <cite>choices</cite> in a formfield.
+Identifiers based on ISO 3166-2:EE. <a class="reference external" href="https://en.wikipedia.org/wiki/ISO_3166-2:EE">https://en.wikipedia.org/wiki/ISO_3166-2:EE</a></p>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Estonia (<code class="docutils literal notranslate"><span class="pre">ee</span></code>)</a><ul>
+<li><a class="reference internal" href="#module-localflavor.ee.forms">Forms</a><ul>
+<li><a class="reference internal" href="#localflavor.ee.forms.EEBusinessRegistryCode"><code class="docutils literal notranslate"><span class="pre">EEBusinessRegistryCode</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.ee.forms.EEBusinessRegistryCode.clean"><code class="docutils literal notranslate"><span class="pre">EEBusinessRegistryCode.clean()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.ee.forms.EECountySelect"><code class="docutils literal notranslate"><span class="pre">EECountySelect</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.ee.forms.EEPersonalIdentificationCode"><code class="docutils literal notranslate"><span class="pre">EEPersonalIdentificationCode</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.ee.forms.EEPersonalIdentificationCode.clean"><code class="docutils literal notranslate"><span class="pre">EEPersonalIdentificationCode.clean()</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.ee.forms.EEPersonalIdentificationCode.ee_checksum"><code class="docutils literal notranslate"><span class="pre">EEPersonalIdentificationCode.ee_checksum()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.ee.forms.EEZipCodeField"><code class="docutils literal notranslate"><span class="pre">EEZipCodeField</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data">Data</a><ul>
+<li><a class="reference internal" href="#localflavor.ee.ee_counties.COUNTY_CHOICES"><code class="docutils literal notranslate"><span class="pre">COUNTY_CHOICES</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="ec.html"
+                          title="previous chapter">Ecuador (<code class="docutils literal notranslate"><span class="pre">ec</span></code>)</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="eg.html"
+                          title="next chapter">Egypt (<code class="docutils literal notranslate"><span class="pre">eg</span></code>)</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/localflavor/ee.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="eg.html" title="Egypt (eg)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="ec.html" title="Ecuador (ec)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Estonia (<code class="docutils literal notranslate"><span class="pre">ee</span></code>)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright Django Software Foundation and individual contributors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+  </body>
+</html>

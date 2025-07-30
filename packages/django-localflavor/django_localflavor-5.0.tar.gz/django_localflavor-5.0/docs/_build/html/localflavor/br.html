@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Brazil (br) &#8212; django-localflavor 4.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=2bf1fcf8" />
+    
+    <script src="../_static/documentation_options.js?v=9f5556dd"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Canada (ca)" href="ca.html" />
+    <link rel="prev" title="Bulgaria (bg)" href="bg.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="ca.html" title="Canada (ca)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="bg.html" title="Bulgaria (bg)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Brazil (<code class="docutils literal notranslate"><span class="pre">br</span></code>)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="brazil-br">
+<h1>Brazil (<code class="docutils literal notranslate"><span class="pre">br</span></code>)<a class="headerlink" href="#brazil-br" title="Link to this heading">¶</a></h1>
+<section id="module-localflavor.br.forms">
+<span id="forms"></span><h2>Forms<a class="headerlink" href="#module-localflavor.br.forms" title="Link to this heading">¶</a></h2>
+<p>BR-specific Form helpers.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.br.forms.BRCNPJField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.br.forms.</span></span><span class="sig-name descname"><span class="pre">BRCNPJField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">min_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">14</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">18</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/br/forms.html#BRCNPJField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.br.forms.BRCNPJField" title="Link to this definition">¶</a></dt>
+<dd><p>A form field that validates input as <a class="reference external" href="http://en.wikipedia.org/wiki/National_identification_number#Brazil">Brazilian CNPJ</a>.</p>
+<p>Input can either be of the format XX.XXX.XXX/XXXX-XX or be a group of 14
+digits.</p>
+<dl class="simple">
+<dt>If you want to use the long format only, you can specify:</dt><dd><p>brcnpj_field = BRCNPJField(min_length=16)</p>
+</dd>
+<dt>If you want to use the short format, you can specify:</dt><dd><p>brcnpj_field = BRCNPJField(max_length=14)</p>
+</dd>
+</dl>
+<p>Otherwise both formats will be valid.</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 1.4.</span></p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 2.2: </span>Use BRCNPJValidator to centralize validation logic and share with equivalent model field.
+More details at: <a class="reference external" href="https://github.com/django/django-localflavor/issues/334">https://github.com/django/django-localflavor/issues/334</a></p>
+</div>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.br.forms.BRCPFField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.br.forms.</span></span><span class="sig-name descname"><span class="pre">BRCPFField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">14</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">11</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/br/forms.html#BRCPFField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.br.forms.BRCPFField" title="Link to this definition">¶</a></dt>
+<dd><p>A form field that validates a CPF number or a CPF string.</p>
+<p>A CPF number is compounded by XXX.XXX.XXX-VD. The two last digits are check digits.</p>
+<p>More information:
+<a class="reference external" href="http://en.wikipedia.org/wiki/Cadastro_de_Pessoas_F%C3%ADsicas">http://en.wikipedia.org/wiki/Cadastro_de_Pessoas_F%C3%ADsicas</a></p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 2.2: </span>Use BRCPFValidator to centralize validation logic and share with equivalent model field.
+More details at: <a class="reference external" href="https://github.com/django/django-localflavor/issues/334">https://github.com/django/django-localflavor/issues/334</a></p>
+</div>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.br.forms.BRProcessoField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.br.forms.</span></span><span class="sig-name descname"><span class="pre">BRProcessoField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">25</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/br/forms.html#BRProcessoField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.br.forms.BRProcessoField" title="Link to this definition">¶</a></dt>
+<dd><p>A form field that validates a Legal Process(Processo) number or a Legal Process string.</p>
+<p>A Processo number is compounded by NNNNNNN-DD.AAAA.J.TR.OOOO. The two DD digits are check digits.
+More information:
+<a class="reference external" href="http://www.cnj.jus.br/busca-atos-adm?documento=2748">http://www.cnj.jus.br/busca-atos-adm?documento=2748</a></p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 1.2.</span></p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.br.forms.BRProcessoField.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/br/forms.html#BRProcessoField.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.br.forms.BRProcessoField.clean" title="Link to this definition">¶</a></dt>
+<dd><p>Value can be either a string in the format NNNNNNN-DD.AAAA.J.TR.OOOO or an 20-digit number.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.br.forms.BRStateChoiceField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.br.forms.</span></span><span class="sig-name descname"><span class="pre">BRStateChoiceField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/br/forms.html#BRStateChoiceField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.br.forms.BRStateChoiceField" title="Link to this definition">¶</a></dt>
+<dd><p>A choice field that uses a list of Brazilian states as its choices.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.br.forms.BRStateChoiceField.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/br/forms.html#BRStateChoiceField.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.br.forms.BRStateChoiceField.clean" title="Link to this definition">¶</a></dt>
+<dd><p>Validate the given value and return its “cleaned” value as an
+appropriate Python object. Raise ValidationError for any errors.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="localflavor.br.forms.BRStateChoiceField.widget">
+<span class="sig-name descname"><span class="pre">widget</span></span><a class="headerlink" href="#localflavor.br.forms.BRStateChoiceField.widget" title="Link to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">Select</span></code></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.br.forms.BRStateSelect">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.br.forms.</span></span><span class="sig-name descname"><span class="pre">BRStateSelect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attrs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/br/forms.html#BRStateSelect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.br.forms.BRStateSelect" title="Link to this definition">¶</a></dt>
+<dd><p>A Select widget that uses a list of Brazilian states/territories as its choices.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.br.forms.BRZipCodeField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.br.forms.</span></span><span class="sig-name descname"><span class="pre">BRZipCodeField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">9</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">8</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/br/forms.html#BRZipCodeField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.br.forms.BRZipCodeField" title="Link to this definition">¶</a></dt>
+<dd><p>A form field that validates input as a Brazilian zip code, with the format 00000-000.</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 2.2: </span>Use BRPostalCodeValidator to centralize validation logic and share with equivalent model field.
+More details at: <a class="reference external" href="https://github.com/django/django-localflavor/issues/334">https://github.com/django/django-localflavor/issues/334</a></p>
+</div>
+</dd></dl>
+
+</section>
+<section id="module-localflavor.br.models">
+<span id="models"></span><h2>Models<a class="headerlink" href="#module-localflavor.br.models" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.br.models.BRCNPJField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.br.models.</span></span><span class="sig-name descname"><span class="pre">BRCNPJField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/br/models.html#BRCNPJField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.br.models.BRCNPJField" title="Link to this definition">¶</a></dt>
+<dd><p>A model field for the brazilian document named of CNPJ (Cadastro Nacional de Pessoa Jurídica)</p>
+<p>Forms represent it as a <a class="reference internal" href="#localflavor.br.forms.BRCNPJField" title="localflavor.br.forms.BRCNPJField"><code class="xref py py-class docutils literal notranslate"><span class="pre">BRCNPJField</span></code></a> field.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.2.</span></p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.br.models.BRCNPJField.formfield">
+<span class="sig-name descname"><span class="pre">formfield</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/br/models.html#BRCNPJField.formfield"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.br.models.BRCNPJField.formfield" title="Link to this definition">¶</a></dt>
+<dd><p>Return a django.forms.Field instance for this field.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.br.models.BRCPFField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.br.models.</span></span><span class="sig-name descname"><span class="pre">BRCPFField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/br/models.html#BRCPFField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.br.models.BRCPFField" title="Link to this definition">¶</a></dt>
+<dd><p>A model field for the brazilian document named of CPF (Cadastro de Pessoa Física)</p>
+<p>Forms represent it as a <a class="reference internal" href="#localflavor.br.forms.BRCPFField" title="localflavor.br.forms.BRCPFField"><code class="xref py py-class docutils literal notranslate"><span class="pre">BRCPFField</span></code></a> field.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.2.</span></p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.br.models.BRCPFField.formfield">
+<span class="sig-name descname"><span class="pre">formfield</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/br/models.html#BRCPFField.formfield"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.br.models.BRCPFField.formfield" title="Link to this definition">¶</a></dt>
+<dd><p>Return a django.forms.Field instance for this field.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.br.models.BRPostalCodeField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.br.models.</span></span><span class="sig-name descname"><span class="pre">BRPostalCodeField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/br/models.html#BRPostalCodeField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.br.models.BRPostalCodeField" title="Link to this definition">¶</a></dt>
+<dd><p>A model field for the brazilian zip code</p>
+<p>Forms represent it as a <code class="xref py py-class docutils literal notranslate"><span class="pre">BRZipCOdeField</span></code> field.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.2.</span></p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.br.models.BRPostalCodeField.formfield">
+<span class="sig-name descname"><span class="pre">formfield</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/br/models.html#BRPostalCodeField.formfield"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.br.models.BRPostalCodeField.formfield" title="Link to this definition">¶</a></dt>
+<dd><p>Return a django.forms.Field instance for this field.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.br.models.BRStateField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.br.models.</span></span><span class="sig-name descname"><span class="pre">BRStateField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/br/models.html#BRStateField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.br.models.BRStateField" title="Link to this definition">¶</a></dt>
+<dd><p>A model field for states of Brazil.</p>
+<p>Forms represent it as a <a class="reference internal" href="#localflavor.br.forms.BRStateSelect" title="localflavor.br.forms.BRStateSelect"><code class="xref py py-class docutils literal notranslate"><span class="pre">BRStateSelect</span></code></a> field.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.br.models.BRStateField.deconstruct">
+<span class="sig-name descname"><span class="pre">deconstruct</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/br/models.html#BRStateField.deconstruct"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.br.models.BRStateField.deconstruct" title="Link to this definition">¶</a></dt>
+<dd><p>Return enough information to recreate the field as a 4-tuple:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>The name of the field on the model, if contribute_to_class() has
+been run.</p></li>
+<li><p>The import path of the field, including the class, e.g.
+django.db.models.IntegerField. This should be the most portable
+version, so less specific may be better.</p></li>
+<li><p>A list of positional arguments.</p></li>
+<li><p>A dict of keyword arguments.</p></li>
+</ul>
+</div></blockquote>
+<p>Note that the positional or keyword arguments must contain values of
+the following types (including inner values of collection types):</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>None, bool, str, int, float, complex, set, frozenset, list, tuple,
+dict</p></li>
+<li><p>UUID</p></li>
+<li><p>datetime.datetime (naive), datetime.date</p></li>
+<li><p>top-level classes, top-level functions - will be referenced by their
+full import path</p></li>
+<li><p>Storage instances - these have their own deconstruct() method</p></li>
+</ul>
+</div></blockquote>
+<p>This is because the values here must be serialized into a text format
+(possibly new Python code, possibly JSON) and these are the only types
+with encoding handlers defined.</p>
+<p>There’s no need to return the exact way the field was instantiated this
+time, just ensure that the resulting field is the same - prefer keyword
+arguments over positional ones, and omit parameters with their default
+values.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="data">
+<h2>Data<a class="headerlink" href="#data" title="Link to this heading">¶</a></h2>
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.br.br_states.STATE_CHOICES">
+<span class="sig-prename descclassname"><span class="pre">localflavor.br.br_states.</span></span><span class="sig-name descname"><span class="pre">STATE_CHOICES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(('AC',</span> <span class="pre">'Acre'),</span> <span class="pre">('AL',</span> <span class="pre">'Alagoas'),</span> <span class="pre">('AP',</span> <span class="pre">'Amapá'),</span> <span class="pre">('AM',</span> <span class="pre">'Amazonas'),</span> <span class="pre">('BA',</span> <span class="pre">'Bahia'),</span> <span class="pre">('CE',</span> <span class="pre">'Ceará'),</span> <span class="pre">('DF',</span> <span class="pre">'Distrito</span> <span class="pre">Federal'),</span> <span class="pre">('ES',</span> <span class="pre">'Espírito</span> <span class="pre">Santo'),</span> <span class="pre">('GO',</span> <span class="pre">'Goiás'),</span> <span class="pre">('MA',</span> <span class="pre">'Maranhão'),</span> <span class="pre">('MT',</span> <span class="pre">'Mato</span> <span class="pre">Grosso'),</span> <span class="pre">('MS',</span> <span class="pre">'Mato</span> <span class="pre">Grosso</span> <span class="pre">do</span> <span class="pre">Sul'),</span> <span class="pre">('MG',</span> <span class="pre">'Minas</span> <span class="pre">Gerais'),</span> <span class="pre">('PA',</span> <span class="pre">'Pará'),</span> <span class="pre">('PB',</span> <span class="pre">'Paraíba'),</span> <span class="pre">('PR',</span> <span class="pre">'Paraná'),</span> <span class="pre">('PE',</span> <span class="pre">'Pernambuco'),</span> <span class="pre">('PI',</span> <span class="pre">'Piauí'),</span> <span class="pre">('RJ',</span> <span class="pre">'Rio</span> <span class="pre">de</span> <span class="pre">Janeiro'),</span> <span class="pre">('RN',</span> <span class="pre">'Rio</span> <span class="pre">Grande</span> <span class="pre">do</span> <span class="pre">Norte'),</span> <span class="pre">('RS',</span> <span class="pre">'Rio</span> <span class="pre">Grande</span> <span class="pre">do</span> <span class="pre">Sul'),</span> <span class="pre">('RO',</span> <span class="pre">'Rondônia'),</span> <span class="pre">('RR',</span> <span class="pre">'Roraima'),</span> <span class="pre">('SC',</span> <span class="pre">'Santa</span> <span class="pre">Catarina'),</span> <span class="pre">('SP',</span> <span class="pre">'São</span> <span class="pre">Paulo'),</span> <span class="pre">('SE',</span> <span class="pre">'Sergipe'),</span> <span class="pre">('TO',</span> <span class="pre">'Tocantins'))</span></em><a class="headerlink" href="#localflavor.br.br_states.STATE_CHOICES" title="Link to this definition">¶</a></dt>
+<dd><p>An alphabetical list of Brazilian states for use as <cite>choices</cite> in a formfield</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Brazil (<code class="docutils literal notranslate"><span class="pre">br</span></code>)</a><ul>
+<li><a class="reference internal" href="#module-localflavor.br.forms">Forms</a><ul>
+<li><a class="reference internal" href="#localflavor.br.forms.BRCNPJField"><code class="docutils literal notranslate"><span class="pre">BRCNPJField</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.br.forms.BRCPFField"><code class="docutils literal notranslate"><span class="pre">BRCPFField</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.br.forms.BRProcessoField"><code class="docutils literal notranslate"><span class="pre">BRProcessoField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.br.forms.BRProcessoField.clean"><code class="docutils literal notranslate"><span class="pre">BRProcessoField.clean()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.br.forms.BRStateChoiceField"><code class="docutils literal notranslate"><span class="pre">BRStateChoiceField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.br.forms.BRStateChoiceField.clean"><code class="docutils literal notranslate"><span class="pre">BRStateChoiceField.clean()</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.br.forms.BRStateChoiceField.widget"><code class="docutils literal notranslate"><span class="pre">BRStateChoiceField.widget</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.br.forms.BRStateSelect"><code class="docutils literal notranslate"><span class="pre">BRStateSelect</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.br.forms.BRZipCodeField"><code class="docutils literal notranslate"><span class="pre">BRZipCodeField</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-localflavor.br.models">Models</a><ul>
+<li><a class="reference internal" href="#localflavor.br.models.BRCNPJField"><code class="docutils literal notranslate"><span class="pre">BRCNPJField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.br.models.BRCNPJField.formfield"><code class="docutils literal notranslate"><span class="pre">BRCNPJField.formfield()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.br.models.BRCPFField"><code class="docutils literal notranslate"><span class="pre">BRCPFField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.br.models.BRCPFField.formfield"><code class="docutils literal notranslate"><span class="pre">BRCPFField.formfield()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.br.models.BRPostalCodeField"><code class="docutils literal notranslate"><span class="pre">BRPostalCodeField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.br.models.BRPostalCodeField.formfield"><code class="docutils literal notranslate"><span class="pre">BRPostalCodeField.formfield()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.br.models.BRStateField"><code class="docutils literal notranslate"><span class="pre">BRStateField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.br.models.BRStateField.deconstruct"><code class="docutils literal notranslate"><span class="pre">BRStateField.deconstruct()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data">Data</a><ul>
+<li><a class="reference internal" href="#localflavor.br.br_states.STATE_CHOICES"><code class="docutils literal notranslate"><span class="pre">STATE_CHOICES</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="bg.html"
+                          title="previous chapter">Bulgaria (<code class="docutils literal notranslate"><span class="pre">bg</span></code>)</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="ca.html"
+                          title="next chapter">Canada (<code class="docutils literal notranslate"><span class="pre">ca</span></code>)</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/localflavor/br.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="ca.html" title="Canada (ca)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="bg.html" title="Bulgaria (bg)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Brazil (<code class="docutils literal notranslate"><span class="pre">br</span></code>)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright Django Software Foundation and individual contributors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+  </body>
+</html>

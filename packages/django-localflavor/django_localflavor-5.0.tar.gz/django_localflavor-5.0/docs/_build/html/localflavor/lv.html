@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Latvia (lv) &#8212; django-localflavor 4.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=2bf1fcf8" />
+    
+    <script src="../_static/documentation_options.js?v=9f5556dd"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Moldova (md)" href="md.html" />
+    <link rel="prev" title="Lithuania (lt)" href="lt.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="md.html" title="Moldova (md)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="lt.html" title="Lithuania (lt)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Latvia (<code class="docutils literal notranslate"><span class="pre">lv</span></code>)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="latvia-lv">
+<h1>Latvia (<code class="docutils literal notranslate"><span class="pre">lv</span></code>)<a class="headerlink" href="#latvia-lv" title="Link to this heading">¶</a></h1>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 1.1.</span></p>
+</div>
+<section id="module-localflavor.lv.forms">
+<span id="forms"></span><h2>Forms<a class="headerlink" href="#module-localflavor.lv.forms" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.lv.forms.LVMunicipalitySelect">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.lv.forms.</span></span><span class="sig-name descname"><span class="pre">LVMunicipalitySelect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attrs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/lv/forms.html#LVMunicipalitySelect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.lv.forms.LVMunicipalitySelect" title="Link to this definition">¶</a></dt>
+<dd><p>A select field of Latvian municipalities.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.lv.forms.LVPersonalCodeField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.lv.forms.</span></span><span class="sig-name descname"><span class="pre">LVPersonalCodeField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/lv/forms.html#LVPersonalCodeField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.lv.forms.LVPersonalCodeField" title="Link to this definition">¶</a></dt>
+<dd><p>A form field that validates input as a Latvian personal code.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.lv.forms.LVPersonalCodeField.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/lv/forms.html#LVPersonalCodeField.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.lv.forms.LVPersonalCodeField.clean" title="Link to this definition">¶</a></dt>
+<dd><p>Validate the given value and return its “cleaned” value as an
+appropriate Python object. Raise ValidationError for any errors.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.lv.forms.LVPersonalCodeField.lv_checksum">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">lv_checksum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/lv/forms.html#LVPersonalCodeField.lv_checksum"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.lv.forms.LVPersonalCodeField.lv_checksum" title="Link to this definition">¶</a></dt>
+<dd><p>Takes a string of 10 digits as input, returns check digit.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.lv.forms.LVPostalCodeField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.lv.forms.</span></span><span class="sig-name descname"><span class="pre">LVPostalCodeField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/lv/forms.html#LVPostalCodeField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.lv.forms.LVPostalCodeField" title="Link to this definition">¶</a></dt>
+<dd><p>A form field that validates and normalizes Latvian postal codes.</p>
+<dl class="simple">
+<dt>Latvian postal codes in following forms accepted:</dt><dd><ul class="simple">
+<li><p>XXXX</p></li>
+<li><p>LV-XXXX</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.lv.forms.LVPostalCodeField.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/lv/forms.html#LVPostalCodeField.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.lv.forms.LVPostalCodeField.clean" title="Link to this definition">¶</a></dt>
+<dd><p>Validate the given value and return its “cleaned” value as an
+appropriate Python object. Raise ValidationError for any errors.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="data">
+<h2>Data<a class="headerlink" href="#data" title="Link to this heading">¶</a></h2>
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.lv.lv_choices.MUNICIPALITY_CHOICES">
+<span class="sig-prename descclassname"><span class="pre">localflavor.lv.lv_choices.</span></span><span class="sig-name descname"><span class="pre">MUNICIPALITY_CHOICES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(('DGV',</span> <span class="pre">'Daugavpils'),</span> <span class="pre">('JEL',</span> <span class="pre">'Jelgava'),</span> <span class="pre">('JUR',</span> <span class="pre">'Jūrmala'),</span> <span class="pre">('LPX',</span> <span class="pre">'Liepāja'),</span> <span class="pre">('REZ',</span> <span class="pre">'Rēzekne'),</span> <span class="pre">('RIX',</span> <span class="pre">'Riga'),</span> <span class="pre">('VEN',</span> <span class="pre">'Ventspils'),</span> <span class="pre">('002',</span> <span class="pre">'Aizkraukle</span> <span class="pre">municipality'),</span> <span class="pre">('007',</span> <span class="pre">'Alūksne</span> <span class="pre">municipality'),</span> <span class="pre">('011',</span> <span class="pre">'Ādaži</span> <span class="pre">municipality'),</span> <span class="pre">('015',</span> <span class="pre">'Balvi</span> <span class="pre">municipality'),</span> <span class="pre">('016',</span> <span class="pre">'Bauska</span> <span class="pre">municipality'),</span> <span class="pre">('022',</span> <span class="pre">'Cēsis</span> <span class="pre">municipality'),</span> <span class="pre">('026',</span> <span class="pre">'Dobele</span> <span class="pre">municipality'),</span> <span class="pre">('033',</span> <span class="pre">'Gulbene</span> <span class="pre">municipality'),</span> <span class="pre">('041',</span> <span class="pre">'Jelgava</span> <span class="pre">municipality'),</span> <span class="pre">('042',</span> <span class="pre">'Jēkabpils</span> <span class="pre">municipality'),</span> <span class="pre">('047',</span> <span class="pre">'Krāslava</span> <span class="pre">municipality'),</span> <span class="pre">('050',</span> <span class="pre">'Kuldīga</span> <span class="pre">municipality'),</span> <span class="pre">('052',</span> <span class="pre">'Ķekava</span> <span class="pre">municipality'),</span> <span class="pre">('054',</span> <span class="pre">'Limbaži</span> <span class="pre">municipality'),</span> <span class="pre">('056',</span> <span class="pre">'Līvāni</span> <span class="pre">municipality'),</span> <span class="pre">('058',</span> <span class="pre">'Ludza</span> <span class="pre">municipality'),</span> <span class="pre">('059',</span> <span class="pre">'Madona</span> <span class="pre">municipality'),</span> <span class="pre">('062',</span> <span class="pre">'Mārupe</span> <span class="pre">municipality'),</span> <span class="pre">('067',</span> <span class="pre">'Ogre</span> <span class="pre">municipality'),</span> <span class="pre">('068',</span> <span class="pre">'Olaine</span> <span class="pre">municipality'),</span> <span class="pre">('073',</span> <span class="pre">'Preiļi</span> <span class="pre">municipality'),</span> <span class="pre">('077',</span> <span class="pre">'Rēzekne</span> <span class="pre">municipality'),</span> <span class="pre">('080',</span> <span class="pre">'Ropaži</span> <span class="pre">municipality'),</span> <span class="pre">('087',</span> <span class="pre">'Salaspils</span> <span class="pre">municipality'),</span> <span class="pre">('088',</span> <span class="pre">'Saldus</span> <span class="pre">municipality'),</span> <span class="pre">('089',</span> <span class="pre">'Saulkrasti</span> <span class="pre">municipality'),</span> <span class="pre">('091',</span> <span class="pre">'Sigulda</span> <span class="pre">municipality'),</span> <span class="pre">('094',</span> <span class="pre">'Smiltene</span> <span class="pre">municipality'),</span> <span class="pre">('097',</span> <span class="pre">'Talsi</span> <span class="pre">municipality'),</span> <span class="pre">('099',</span> <span class="pre">'Tukums</span> <span class="pre">municipality'),</span> <span class="pre">('101',</span> <span class="pre">'Valka</span> <span class="pre">municipality'),</span> <span class="pre">('102',</span> <span class="pre">'Varakļāni</span> <span class="pre">municipality'),</span> <span class="pre">('106',</span> <span class="pre">'Ventspils</span> <span class="pre">municipality'),</span> <span class="pre">('111',</span> <span class="pre">'Augšdaugava</span> <span class="pre">municipality'),</span> <span class="pre">('112',</span> <span class="pre">'Dienvidkurzeme</span> <span class="pre">municipality'),</span> <span class="pre">('113',</span> <span class="pre">'Valmiera</span> <span class="pre">municipality'))</span></em><a class="headerlink" href="#localflavor.lv.lv_choices.MUNICIPALITY_CHOICES" title="Link to this definition">¶</a></dt>
+<dd><p>A list of Latvian municipalities and republican cities.
+Identifiers based on ISO 3166-2:LV. <a class="reference external" href="https://en.wikipedia.org/wiki/ISO_3166-2:LV">https://en.wikipedia.org/wiki/ISO_3166-2:LV</a></p>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Latvia (<code class="docutils literal notranslate"><span class="pre">lv</span></code>)</a><ul>
+<li><a class="reference internal" href="#module-localflavor.lv.forms">Forms</a><ul>
+<li><a class="reference internal" href="#localflavor.lv.forms.LVMunicipalitySelect"><code class="docutils literal notranslate"><span class="pre">LVMunicipalitySelect</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.lv.forms.LVPersonalCodeField"><code class="docutils literal notranslate"><span class="pre">LVPersonalCodeField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.lv.forms.LVPersonalCodeField.clean"><code class="docutils literal notranslate"><span class="pre">LVPersonalCodeField.clean()</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.lv.forms.LVPersonalCodeField.lv_checksum"><code class="docutils literal notranslate"><span class="pre">LVPersonalCodeField.lv_checksum()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.lv.forms.LVPostalCodeField"><code class="docutils literal notranslate"><span class="pre">LVPostalCodeField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.lv.forms.LVPostalCodeField.clean"><code class="docutils literal notranslate"><span class="pre">LVPostalCodeField.clean()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data">Data</a><ul>
+<li><a class="reference internal" href="#localflavor.lv.lv_choices.MUNICIPALITY_CHOICES"><code class="docutils literal notranslate"><span class="pre">MUNICIPALITY_CHOICES</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="lt.html"
+                          title="previous chapter">Lithuania (<code class="docutils literal notranslate"><span class="pre">lt</span></code>)</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="md.html"
+                          title="next chapter">Moldova (<code class="docutils literal notranslate"><span class="pre">md</span></code>)</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/localflavor/lv.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="md.html" title="Moldova (md)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="lt.html" title="Lithuania (lt)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Latvia (<code class="docutils literal notranslate"><span class="pre">lv</span></code>)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright Django Software Foundation and individual contributors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Ukraine (ua) &#8212; django-localflavor 4.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=2bf1fcf8" />
+    
+    <script src="../_static/documentation_options.js?v=9f5556dd"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="United States of America (us)" href="us.html" />
+    <link rel="prev" title="Turkey (tr)" href="tr.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="us.html" title="United States of America (us)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="tr.html" title="Turkey (tr)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Ukraine (<code class="docutils literal notranslate"><span class="pre">ua</span></code>)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="ukraine-ua">
+<h1>Ukraine (<code class="docutils literal notranslate"><span class="pre">ua</span></code>)<a class="headerlink" href="#ukraine-ua" title="Link to this heading">¶</a></h1>
+<section id="module-localflavor.ua.forms">
+<span id="forms"></span><h2>Forms<a class="headerlink" href="#module-localflavor.ua.forms" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.ua.forms.UAPostalCodeField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.ua.forms.</span></span><span class="sig-name descname"><span class="pre">UAPostalCodeField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/ua/forms.html#UAPostalCodeField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.ua.forms.UAPostalCodeField" title="Link to this definition">¶</a></dt>
+<dd><p>A form field that validates input as a Ukrainian postal code.</p>
+<p>Valid format is XXXXX. Note: first two numbers cannot be ‘00’.</p>
+<p>Whitespace around a postal code is accepted and automatically trimmed.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 1.5.</span></p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.ua.forms.UAPostalCodeField.to_python">
+<span class="sig-name descname"><span class="pre">to_python</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/ua/forms.html#UAPostalCodeField.to_python"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.ua.forms.UAPostalCodeField.to_python" title="Link to this definition">¶</a></dt>
+<dd><p>Return a string.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.ua.forms.UARegionSelect">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.ua.forms.</span></span><span class="sig-name descname"><span class="pre">UARegionSelect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/ua/forms.html#UARegionSelect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.ua.forms.UARegionSelect" title="Link to this definition">¶</a></dt>
+<dd><p>A Select widget that uses a list of Ukrainian regions as its choices.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 1.5.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.ua.forms.UAVatNumberField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.ua.forms.</span></span><span class="sig-name descname"><span class="pre">UAVatNumberField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/ua/forms.html#UAVatNumberField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.ua.forms.UAVatNumberField" title="Link to this definition">¶</a></dt>
+<dd><p>A form field that validates input as a Ukrainian analog of a VAT number.</p>
+<p>Valid format is XXXXXXXXXX.</p>
+<p>Whitespace around a VAT number is accepted and automatically trimmed.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 1.5.</span></p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.ua.forms.UAVatNumberField.to_python">
+<span class="sig-name descname"><span class="pre">to_python</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/ua/forms.html#UAVatNumberField.to_python"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.ua.forms.UAVatNumberField.to_python" title="Link to this definition">¶</a></dt>
+<dd><p>Return a string.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-localflavor.ua.models">
+<span id="models"></span><h2>Models<a class="headerlink" href="#module-localflavor.ua.models" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.ua.models.UAPostalCodeField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.ua.models.</span></span><span class="sig-name descname"><span class="pre">UAPostalCodeField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/ua/models.html#UAPostalCodeField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.ua.models.UAPostalCodeField" title="Link to this definition">¶</a></dt>
+<dd><p>A model field which stores a Ukrainian postal code.</p>
+<p>This field is represented by forms as
+a <a class="reference internal" href="#localflavor.ua.forms.UAPostalCodeField" title="localflavor.ua.forms.UAPostalCodeField"><code class="xref py py-class docutils literal notranslate"><span class="pre">UAPostalCodeField</span></code></a> field.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 1.5.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.ua.models.UARegionField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.ua.models.</span></span><span class="sig-name descname"><span class="pre">UARegionField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/ua/models.html#UARegionField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.ua.models.UARegionField" title="Link to this definition">¶</a></dt>
+<dd><p>A model field which stores a Ukrainian region.</p>
+<p>This field is represented by forms as
+a <a class="reference internal" href="#localflavor.ua.forms.UARegionSelect" title="localflavor.ua.forms.UARegionSelect"><code class="xref py py-class docutils literal notranslate"><span class="pre">UARegionSelect</span></code></a> field.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 1.5.</span></p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.ua.models.UARegionField.deconstruct">
+<span class="sig-name descname"><span class="pre">deconstruct</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/ua/models.html#UARegionField.deconstruct"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.ua.models.UARegionField.deconstruct" title="Link to this definition">¶</a></dt>
+<dd><p>Return enough information to recreate the field as a 4-tuple:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>The name of the field on the model, if contribute_to_class() has
+been run.</p></li>
+<li><p>The import path of the field, including the class, e.g.
+django.db.models.IntegerField. This should be the most portable
+version, so less specific may be better.</p></li>
+<li><p>A list of positional arguments.</p></li>
+<li><p>A dict of keyword arguments.</p></li>
+</ul>
+</div></blockquote>
+<p>Note that the positional or keyword arguments must contain values of
+the following types (including inner values of collection types):</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>None, bool, str, int, float, complex, set, frozenset, list, tuple,
+dict</p></li>
+<li><p>UUID</p></li>
+<li><p>datetime.datetime (naive), datetime.date</p></li>
+<li><p>top-level classes, top-level functions - will be referenced by their
+full import path</p></li>
+<li><p>Storage instances - these have their own deconstruct() method</p></li>
+</ul>
+</div></blockquote>
+<p>This is because the values here must be serialized into a text format
+(possibly new Python code, possibly JSON) and these are the only types
+with encoding handlers defined.</p>
+<p>There’s no need to return the exact way the field was instantiated this
+time, just ensure that the resulting field is the same - prefer keyword
+arguments over positional ones, and omit parameters with their default
+values.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.ua.models.UAVatNumberField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.ua.models.</span></span><span class="sig-name descname"><span class="pre">UAVatNumberField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/ua/models.html#UAVatNumberField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.ua.models.UAVatNumberField" title="Link to this definition">¶</a></dt>
+<dd><p>A model field which stores a Ukrainian analog of a VAT number.</p>
+<p>This field is represented by forms as
+a <a class="reference internal" href="#localflavor.ua.forms.UAVatNumberField" title="localflavor.ua.forms.UAVatNumberField"><code class="xref py py-class docutils literal notranslate"><span class="pre">UAVatNumberField</span></code></a> field.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 1.5.</span></p>
+</div>
+</dd></dl>
+
+</section>
+<section id="data">
+<h2>Data<a class="headerlink" href="#data" title="Link to this heading">¶</a></h2>
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.ua.ua_regions.UA_REGION_CHOICES">
+<span class="sig-prename descclassname"><span class="pre">localflavor.ua.ua_regions.</span></span><span class="sig-name descname"><span class="pre">UA_REGION_CHOICES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(('UA-71',</span> <span class="pre">'Cherkasy</span> <span class="pre">Oblast'),</span> <span class="pre">('UA-74',</span> <span class="pre">'Chernihiv</span> <span class="pre">Oblast'),</span> <span class="pre">('UA-77',</span> <span class="pre">'Chernivtsi</span> <span class="pre">Oblast'),</span> <span class="pre">('UA-12',</span> <span class="pre">'Dnipropetrovsk</span> <span class="pre">Oblast'),</span> <span class="pre">('UA-14',</span> <span class="pre">'Donetsk</span> <span class="pre">Oblast'),</span> <span class="pre">('UA-26',</span> <span class="pre">'Ivano-Frankivsk</span> <span class="pre">Oblast'),</span> <span class="pre">('UA-63',</span> <span class="pre">'Kharkiv</span> <span class="pre">Oblast'),</span> <span class="pre">('UA-65',</span> <span class="pre">'Kherson</span> <span class="pre">Oblast'),</span> <span class="pre">('UA-68',</span> <span class="pre">'Khmelnytskyi</span> <span class="pre">Oblast'),</span> <span class="pre">('UA-35',</span> <span class="pre">'Kirovohrad</span> <span class="pre">Oblast'),</span> <span class="pre">('UA-32',</span> <span class="pre">'Kyiv</span> <span class="pre">Oblast'),</span> <span class="pre">('UA-09',</span> <span class="pre">'Luhansk</span> <span class="pre">Oblast'),</span> <span class="pre">('UA-46',</span> <span class="pre">'Lviv</span> <span class="pre">Oblast'),</span> <span class="pre">('UA-48',</span> <span class="pre">'Mykolaiv</span> <span class="pre">Oblast'),</span> <span class="pre">('UA-51',</span> <span class="pre">'Odessa</span> <span class="pre">Oblast'),</span> <span class="pre">('UA-53',</span> <span class="pre">'Poltava</span> <span class="pre">Oblast'),</span> <span class="pre">('UA-56',</span> <span class="pre">'Rivne</span> <span class="pre">Oblast'),</span> <span class="pre">('UA-59',</span> <span class="pre">'Sumy</span> <span class="pre">Oblast'),</span> <span class="pre">('UA-61',</span> <span class="pre">'Ternopil</span> <span class="pre">Oblast'),</span> <span class="pre">('UA-05',</span> <span class="pre">'Vinnytsia</span> <span class="pre">Oblast'),</span> <span class="pre">('UA-07',</span> <span class="pre">'Volyn</span> <span class="pre">Oblast'),</span> <span class="pre">('UA-21',</span> <span class="pre">'Zakarpattia</span> <span class="pre">Oblast'),</span> <span class="pre">('UA-23',</span> <span class="pre">'Zaporizhia</span> <span class="pre">Oblast'),</span> <span class="pre">('UA-18',</span> <span class="pre">'Zhytomyr</span> <span class="pre">Oblast'),</span> <span class="pre">('UA-43',</span> <span class="pre">'Autonomous</span> <span class="pre">Republic</span> <span class="pre">of</span> <span class="pre">Crimea'),</span> <span class="pre">('UA-30',</span> <span class="pre">'Kyiv'),</span> <span class="pre">('UA-40',</span> <span class="pre">'Sevastopol'))</span></em><a class="headerlink" href="#localflavor.ua.ua_regions.UA_REGION_CHOICES" title="Link to this definition">¶</a></dt>
+<dd><p>Built-in immutable sequence.</p>
+<p>If no argument is given, the constructor returns an empty tuple.
+If iterable is specified the tuple is initialized from iterable’s items.</p>
+<p>If the argument is a tuple, the return value is the same object.</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Ukraine (<code class="docutils literal notranslate"><span class="pre">ua</span></code>)</a><ul>
+<li><a class="reference internal" href="#module-localflavor.ua.forms">Forms</a><ul>
+<li><a class="reference internal" href="#localflavor.ua.forms.UAPostalCodeField"><code class="docutils literal notranslate"><span class="pre">UAPostalCodeField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.ua.forms.UAPostalCodeField.to_python"><code class="docutils literal notranslate"><span class="pre">UAPostalCodeField.to_python()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.ua.forms.UARegionSelect"><code class="docutils literal notranslate"><span class="pre">UARegionSelect</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.ua.forms.UAVatNumberField"><code class="docutils literal notranslate"><span class="pre">UAVatNumberField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.ua.forms.UAVatNumberField.to_python"><code class="docutils literal notranslate"><span class="pre">UAVatNumberField.to_python()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-localflavor.ua.models">Models</a><ul>
+<li><a class="reference internal" href="#localflavor.ua.models.UAPostalCodeField"><code class="docutils literal notranslate"><span class="pre">UAPostalCodeField</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.ua.models.UARegionField"><code class="docutils literal notranslate"><span class="pre">UARegionField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.ua.models.UARegionField.deconstruct"><code class="docutils literal notranslate"><span class="pre">UARegionField.deconstruct()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.ua.models.UAVatNumberField"><code class="docutils literal notranslate"><span class="pre">UAVatNumberField</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data">Data</a><ul>
+<li><a class="reference internal" href="#localflavor.ua.ua_regions.UA_REGION_CHOICES"><code class="docutils literal notranslate"><span class="pre">UA_REGION_CHOICES</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="tr.html"
+                          title="previous chapter">Turkey (<code class="docutils literal notranslate"><span class="pre">tr</span></code>)</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="us.html"
+                          title="next chapter">United States of America (<code class="docutils literal notranslate"><span class="pre">us</span></code>)</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/localflavor/ua.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="us.html" title="United States of America (us)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="tr.html" title="Turkey (tr)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Ukraine (<code class="docutils literal notranslate"><span class="pre">ua</span></code>)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright Django Software Foundation and individual contributors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+  </body>
+</html>

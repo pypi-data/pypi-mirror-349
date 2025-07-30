@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Germany (de) &#8212; django-localflavor 4.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=2bf1fcf8" />
+    
+    <script src="../_static/documentation_options.js?v=9f5556dd"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Denmark (dk)" href="dk.html" />
+    <link rel="prev" title="Czech Republic (cz)" href="cz.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="dk.html" title="Denmark (dk)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="cz.html" title="Czech Republic (cz)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Germany (<code class="docutils literal notranslate"><span class="pre">de</span></code>)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="germany-de">
+<h1>Germany (<code class="docutils literal notranslate"><span class="pre">de</span></code>)<a class="headerlink" href="#germany-de" title="Link to this heading">¶</a></h1>
+<section id="module-localflavor.de.forms">
+<span id="forms"></span><h2>Forms<a class="headerlink" href="#module-localflavor.de.forms" title="Link to this heading">¶</a></h2>
+<p>DE-specific Form helpers.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.de.forms.DEIdentityCardNumberField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.de.forms.</span></span><span class="sig-name descname"><span class="pre">DEIdentityCardNumberField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/de/forms.html#DEIdentityCardNumberField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.de.forms.DEIdentityCardNumberField" title="Link to this definition">¶</a></dt>
+<dd><p>A German identity card number.</p>
+<p>Checks the following rules to determine whether the number is valid:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Conforms to the XXXXXXXXXXX-XXXXXXX-XXXXXXX-X format.</p></li>
+<li><p>No group consists entirely of zeroes.</p></li>
+<li><p>Included checksums match calculated checksums</p></li>
+</ul>
+</div></blockquote>
+<p>Algorithm is documented at <a class="reference external" href="http://de.wikipedia.org/wiki/Personalausweis">http://de.wikipedia.org/wiki/Personalausweis</a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.de.forms.DEIdentityCardNumberField.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/de/forms.html#DEIdentityCardNumberField.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.de.forms.DEIdentityCardNumberField.clean" title="Link to this definition">¶</a></dt>
+<dd><p>Validate the given value and return its “cleaned” value as an
+appropriate Python object. Raise ValidationError for any errors.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.de.forms.DEStateSelect">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.de.forms.</span></span><span class="sig-name descname"><span class="pre">DEStateSelect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attrs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/de/forms.html#DEStateSelect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.de.forms.DEStateSelect" title="Link to this definition">¶</a></dt>
+<dd><p>A Select widget that uses a list of DE states as its choices.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.de.forms.DEZipCodeField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.de.forms.</span></span><span class="sig-name descname"><span class="pre">DEZipCodeField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/de/forms.html#DEZipCodeField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.de.forms.DEZipCodeField" title="Link to this definition">¶</a></dt>
+<dd><p>A form field that validates input as a German zip code.</p>
+<p>Valid zip codes consist of five digits.</p>
+</dd></dl>
+
+</section>
+<section id="data">
+<h2>Data<a class="headerlink" href="#data" title="Link to this heading">¶</a></h2>
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.de.de_states.STATE_CHOICES">
+<span class="sig-prename descclassname"><span class="pre">localflavor.de.de_states.</span></span><span class="sig-name descname"><span class="pre">STATE_CHOICES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(('BW',</span> <span class="pre">'Baden-Wuerttemberg'),</span> <span class="pre">('BY',</span> <span class="pre">'Bavaria'),</span> <span class="pre">('BE',</span> <span class="pre">'Berlin'),</span> <span class="pre">('BB',</span> <span class="pre">'Brandenburg'),</span> <span class="pre">('HB',</span> <span class="pre">'Bremen'),</span> <span class="pre">('HH',</span> <span class="pre">'Hamburg'),</span> <span class="pre">('HE',</span> <span class="pre">'Hessen'),</span> <span class="pre">('MV',</span> <span class="pre">'Mecklenburg-Western</span> <span class="pre">Pomerania'),</span> <span class="pre">('NI',</span> <span class="pre">'Lower</span> <span class="pre">Saxony'),</span> <span class="pre">('NW',</span> <span class="pre">'North</span> <span class="pre">Rhine-Westphalia'),</span> <span class="pre">('RP',</span> <span class="pre">'Rhineland-Palatinate'),</span> <span class="pre">('SL',</span> <span class="pre">'Saarland'),</span> <span class="pre">('SN',</span> <span class="pre">'Saxony'),</span> <span class="pre">('ST',</span> <span class="pre">'Saxony-Anhalt'),</span> <span class="pre">('SH',</span> <span class="pre">'Schleswig-Holstein'),</span> <span class="pre">('TH',</span> <span class="pre">'Thuringia'))</span></em><a class="headerlink" href="#localflavor.de.de_states.STATE_CHOICES" title="Link to this definition">¶</a></dt>
+<dd><p>An alphabetical list of states</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Germany (<code class="docutils literal notranslate"><span class="pre">de</span></code>)</a><ul>
+<li><a class="reference internal" href="#module-localflavor.de.forms">Forms</a><ul>
+<li><a class="reference internal" href="#localflavor.de.forms.DEIdentityCardNumberField"><code class="docutils literal notranslate"><span class="pre">DEIdentityCardNumberField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.de.forms.DEIdentityCardNumberField.clean"><code class="docutils literal notranslate"><span class="pre">DEIdentityCardNumberField.clean()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.de.forms.DEStateSelect"><code class="docutils literal notranslate"><span class="pre">DEStateSelect</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.de.forms.DEZipCodeField"><code class="docutils literal notranslate"><span class="pre">DEZipCodeField</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data">Data</a><ul>
+<li><a class="reference internal" href="#localflavor.de.de_states.STATE_CHOICES"><code class="docutils literal notranslate"><span class="pre">STATE_CHOICES</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="cz.html"
+                          title="previous chapter">Czech Republic (<code class="docutils literal notranslate"><span class="pre">cz</span></code>)</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="dk.html"
+                          title="next chapter">Denmark (<code class="docutils literal notranslate"><span class="pre">dk</span></code>)</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/localflavor/de.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="dk.html" title="Denmark (dk)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="cz.html" title="Czech Republic (cz)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Germany (<code class="docutils literal notranslate"><span class="pre">de</span></code>)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright Django Software Foundation and individual contributors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+  </body>
+</html>

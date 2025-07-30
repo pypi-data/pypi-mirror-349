@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Bulgaria (bg) &#8212; django-localflavor 4.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=2bf1fcf8" />
+    
+    <script src="../_static/documentation_options.js?v=9f5556dd"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Brazil (br)" href="br.html" />
+    <link rel="prev" title="Belgium (be)" href="be.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="br.html" title="Brazil (br)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="be.html" title="Belgium (be)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Bulgaria (<code class="docutils literal notranslate"><span class="pre">bg</span></code>)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="bulgaria-bg">
+<h1>Bulgaria (<code class="docutils literal notranslate"><span class="pre">bg</span></code>)<a class="headerlink" href="#bulgaria-bg" title="Link to this heading">¶</a></h1>
+<section id="module-localflavor.bg.validators">
+<span id="validators"></span><h2>Validators<a class="headerlink" href="#module-localflavor.bg.validators" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.bg.validators.EGNValidator">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.bg.validators.</span></span><span class="sig-name descname"><span class="pre">EGNValidator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/bg/validators.html#EGNValidator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.bg.validators.EGNValidator" title="Link to this definition">¶</a></dt>
+<dd><p>Check Bulgarian unique citizenship number (EGN) for validity.</p>
+<p>More details <a class="reference external" href="https://en.wikipedia.org/wiki/Unique_citizenship_number">https://en.wikipedia.org/wiki/Unique_citizenship_number</a>
+Full information in Bulgarian about algorithm is available here
+<a class="reference external" href="http://www.grao.bg/esgraon.html#section2">http://www.grao.bg/esgraon.html#section2</a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.bg.validators.EGNValidator.deconstruct">
+<span class="sig-name descname"><span class="pre">deconstruct</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#localflavor.bg.validators.EGNValidator.deconstruct" title="Link to this definition">¶</a></dt>
+<dd><p>Return a 3-tuple of class import path, positional arguments,
+and keyword arguments.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.bg.validators.EIKValidator">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.bg.validators.</span></span><span class="sig-name descname"><span class="pre">EIKValidator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/bg/validators.html#EIKValidator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.bg.validators.EIKValidator" title="Link to this definition">¶</a></dt>
+<dd><p>Check Bulgarian EIK/BULSTAT codes for validity.</p>
+<p>Full information in Bulgarian about algorithm is available here
+<a class="reference external" href="http://bulstat.registryagency.bg/About.html">http://bulstat.registryagency.bg/About.html</a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.bg.validators.EIKValidator.deconstruct">
+<span class="sig-name descname"><span class="pre">deconstruct</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#localflavor.bg.validators.EIKValidator.deconstruct" title="Link to this definition">¶</a></dt>
+<dd><p>Return a 3-tuple of class import path, positional arguments,
+and keyword arguments.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-localflavor.bg.models">
+<span id="model-fields"></span><h2>Model Fields<a class="headerlink" href="#module-localflavor.bg.models" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.bg.models.BGEGNField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.bg.models.</span></span><span class="sig-name descname"><span class="pre">BGEGNField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/bg/models.html#BGEGNField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.bg.models.BGEGNField" title="Link to this definition">¶</a></dt>
+<dd><p>Field that stores Bulgarian unique citizenship number (EGN).</p>
+<p>This is shortcut for:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">validators</span><span class="o">=</span><span class="p">[</span><span class="n">localflavor</span><span class="o">.</span><span class="n">bg</span><span class="o">.</span><span class="n">validators</span><span class="o">.</span><span class="n">egn_validator</span><span class="p">])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.bg.models.BGEIKField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.bg.models.</span></span><span class="sig-name descname"><span class="pre">BGEIKField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/bg/models.html#BGEIKField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.bg.models.BGEIKField" title="Link to this definition">¶</a></dt>
+<dd><p>Field that stores Bulgarian EIK/BULSTAT codes.</p>
+<p>This is shortcut for:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">13</span><span class="p">,</span> <span class="n">validators</span><span class="o">=</span><span class="p">[</span><span class="n">localflavor</span><span class="o">.</span><span class="n">bg</span><span class="o">.</span><span class="n">validators</span><span class="o">.</span><span class="n">eik_validator</span><span class="p">])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+<section id="module-localflavor.bg.utils">
+<span id="utils"></span><h2>Utils<a class="headerlink" href="#module-localflavor.bg.utils" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="localflavor.bg.utils.get_egn_birth_date">
+<span class="sig-prename descclassname"><span class="pre">localflavor.bg.utils.</span></span><span class="sig-name descname"><span class="pre">get_egn_birth_date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">egn</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/bg/utils.html#get_egn_birth_date"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.bg.utils.get_egn_birth_date" title="Link to this definition">¶</a></dt>
+<dd><p>Extract birth date from Bulgarian unique citizenship number (EGN).</p>
+<p>More details <a class="reference external" href="https://en.wikipedia.org/wiki/Unique_citizenship_number">https://en.wikipedia.org/wiki/Unique_citizenship_number</a>
+Information in Bulgarian for this can be found here
+<a class="reference external" href="http://www.grao.bg/esgraon.html#section2">http://www.grao.bg/esgraon.html#section2</a></p>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Bulgaria (<code class="docutils literal notranslate"><span class="pre">bg</span></code>)</a><ul>
+<li><a class="reference internal" href="#module-localflavor.bg.validators">Validators</a><ul>
+<li><a class="reference internal" href="#localflavor.bg.validators.EGNValidator"><code class="docutils literal notranslate"><span class="pre">EGNValidator</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.bg.validators.EGNValidator.deconstruct"><code class="docutils literal notranslate"><span class="pre">EGNValidator.deconstruct()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.bg.validators.EIKValidator"><code class="docutils literal notranslate"><span class="pre">EIKValidator</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.bg.validators.EIKValidator.deconstruct"><code class="docutils literal notranslate"><span class="pre">EIKValidator.deconstruct()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-localflavor.bg.models">Model Fields</a><ul>
+<li><a class="reference internal" href="#localflavor.bg.models.BGEGNField"><code class="docutils literal notranslate"><span class="pre">BGEGNField</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.bg.models.BGEIKField"><code class="docutils literal notranslate"><span class="pre">BGEIKField</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-localflavor.bg.utils">Utils</a><ul>
+<li><a class="reference internal" href="#localflavor.bg.utils.get_egn_birth_date"><code class="docutils literal notranslate"><span class="pre">get_egn_birth_date()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="be.html"
+                          title="previous chapter">Belgium (<code class="docutils literal notranslate"><span class="pre">be</span></code>)</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="br.html"
+                          title="next chapter">Brazil (<code class="docutils literal notranslate"><span class="pre">br</span></code>)</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/localflavor/bg.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="br.html" title="Brazil (br)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="be.html" title="Belgium (be)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Bulgaria (<code class="docutils literal notranslate"><span class="pre">bg</span></code>)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright Django Software Foundation and individual contributors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+  </body>
+</html>

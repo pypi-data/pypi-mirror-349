@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Changelog &#8212; django-localflavor 4.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=2bf1fcf8" />
+    
+    <script src="_static/documentation_options.js?v=9f5556dd"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Argentina (ar)" href="localflavor/ar.html" />
+    <link rel="prev" title="Authors" href="authors.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="localflavor/ar.html" title="Argentina (ar)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="authors.html" title="Authors"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Changelog</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="changelog">
+<h1>Changelog<a class="headerlink" href="#changelog" title="Link to this heading">¶</a></h1>
+<section id="unreleased">
+<h2>5.0   (unreleased)<a class="headerlink" href="#unreleased" title="Link to this heading">¶</a></h2>
+<p>Breaking data changes:</p>
+<ul>
+<li><p>NP: A data migration is required for users of <cite>np.forms.NPProvinceSelect</cite> and <cite>np.forms.NPZoneSelect</cite>. The following was
+changed:</p>
+<ul class="simple">
+<li><p><cite>NPProvinceSelect</cite>: province1 and province2 were removed and replaced with koshi and madhesh.</p></li>
+<li><p><cite>NPZoneSelect</cite>: dandaki was corrected to gandaki (fixed typo).</p></li>
+</ul>
+</li>
+<li><p>NO: A data migration is required for users of <cite>no.forms.NOMunicipalitySelect</cite>. <cite>MUNICIPALITY_CHOICES</cite> was updated to the
+values in the 2024 update:</p>
+<ul class="simple">
+<li><p>austagder and vestagder have been removed and combined into agder.</p></li>
+<li><p>hordaland and sognogfjordane have been removed and combined into vestland.</p></li>
+<li><p>nordtrondelag and sortrondelag have been removed and combined into trondelag.</p></li>
+<li><p>hedmark and oppland have been removed and combined into innlandet.</p></li>
+</ul>
+</li>
+<li><p>LV: A data migration is required for users of <cite>lv.forms.LVMunicipalitySelect</cite>. <cite>MUNICIPALITY_CHOICES</cite> was updated to the
+values in the 2021 municipal reform. Details of this change can be found here:</p>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/ISO_3166-2:LV#Changes">https://en.wikipedia.org/wiki/ISO_3166-2:LV#Changes</a></p>
+</li>
+</ul>
+<p>A warning message will be displayed when <cite>lv.forms.LVMunicipalitySelect</cite> or <cite>nl.forms.NOMunicipalitySelect</cite> are used.
+See the <a class="reference external" href="https://django-localflavor.readthedocs.io/en/latest/#backwards-compatibility">localflavor online docs</a> for
+instructions on how to suppress this warning once the migration has been completed.</p>
+<p>New flavors:</p>
+<ul class="simple">
+<li><p>Sri Lanka LocalFlavor: Support for Sri Lanka added
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/493">gh-493</a>).</p></li>
+</ul>
+<p>New fields for existing flavors:</p>
+<ul class="simple">
+<li><p>Added CIN Number field in Morocco flavor
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/507">gh-705</a>).</p></li>
+</ul>
+<p>Modifications to existing flavors:</p>
+<ul>
+<li><p>Fix Belarus passport field description punctuation
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/484">gh-484</a>).</p></li>
+<li><p>Change <cite>Kiev</cite> to <cite>Kyiv</cite> 🇺🇦 according to ISO_3166-2:UA</p></li>
+<li><p>Accept French Postal Services identifiers in forms
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/505">gh-505</a>).</p></li>
+<li><p>Extended validation of Kuwaiti Civil ID to avoid allowing invalid century Civil IDs
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/511">gh-511</a>).</p></li>
+<li><p>Added birthdate extraction function from Kuwaiti Civil ID
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/511">gh-511</a>).</p></li>
+<li><p>Deprecated <cite>kw.forms.is_valid_kw_civilid_checksum</cite> in favor of <cite>kw.utils.is_valid_civil_id</cite>
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/511">gh-511</a>).</p></li>
+<li><p>Fix validation of the Romanian CNP for years ending with <cite>00</cite>
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/515">gh-515</a>).</p></li>
+<li><p>Allow formatted values in <cite>FRSIRENField</cite> and <cite>FRSIRETField</cite> to be saved
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/518">gh-518</a>),
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/520">gh-520</a>).</p></li>
+<li><p>Add min and max length to brazilian Postal Code form field
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/490">gh-490</a>).</p></li>
+<li><p>Brazilian model fields CPF, CNPJ and PostalCode create correct form
+field when used by DjangoModelForm
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/490">gh-490</a>).</p></li>
+<li><p>Update list of Latvia municipalities after municipal reform from 2021
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/519">gh-519</a>).</p></li>
+<li><p>Update list of Norwegian counties(fylker) <a class="reference external" href="https://en.wikipedia.org/wiki/Counties_of_Norway#List_of_counties">according to changes at the start of 2024</a>
+The changed counties are as follows:</p>
+<ul class="simple">
+<li><p>austagder and vestagder have been removed and combined into agder.</p></li>
+<li><p>hordaland and sognogfjordane have been removed and combined into vestland.</p></li>
+<li><p>nordtrondelag and sortrondelag have been removed and combined into trondelag.</p></li>
+<li><p>hedmark and oppland have been removed and combined into innlandet.</p></li>
+</ul>
+<p>(<a class="reference external" href="https://github.com/django/django-localflavor/pull/509/files">gh-509</a>).</p>
+</li>
+<li><p>Corrections in Nepal localflavor:</p>
+<ul class="simple">
+<li><p><cite>NPProvinceSelect</cite>: province1 and province2 were removed and replaced with koshi and madhesh.</p></li>
+<li><p><cite>NPZoneSelect</cite>: dandaki was corrected to gandaki (fixed typo).</p></li>
+</ul>
+<p>(<a class="reference external" href="https://github.com/django/django-localflavor/pull/506/files">gh-506</a>).</p>
+</li>
+<li><p>Allow formatted IBANs longer than 26 chars to be saved in <cite>IBANField</cite>
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/522">gh-522</a>).</p></li>
+</ul>
+<p>Other changes:</p>
+<ul class="simple">
+<li><p>Dropped support for Python &lt; 3.9.</p></li>
+<li><p>Dropped support for Django &lt; 4.2.</p></li>
+<li><p>Added support for Python 3.12 and 3.13.</p></li>
+<li><p>Added support for Django 5.0, 5.1, and 5.2.</p></li>
+</ul>
+</section>
+<section id="id4">
+<h2>4.0   (2023-04-22)<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h2>
+<p>New flavors:</p>
+<ul class="simple">
+<li><p>Nepal LocalFlavor: Support for Nepal added
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/451">gh-451</a>).</p></li>
+<li><p>Belarus localflavor
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/422">gh-422</a>,
+<a class="reference external" href="https://github.com/django/django-localflavor/pull/442">gh-442</a>).</p></li>
+<li><p>Ghana localflavor
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/460">gh-460</a>).</p></li>
+</ul>
+<p>New fields for existing flavors:</p>
+<ul class="simple">
+<li><p>Added <cite>fr.forms.FRRNAField</cite> models field
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/443">gh-443</a>).</p></li>
+<li><p>Added permanent account number(PAN) field in Indian flavor.
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/457">gh-457</a>).</p></li>
+<li><p>Added the Canadian Models fields.
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/465">gh-465</a>).</p></li>
+</ul>
+<p>Modifications to existing flavors:</p>
+<ul class="simple">
+<li><p>Properly validate IBANs using BBAN to ensure invalid IBANs cannot be entered,
+updated IBAN_SEPA_COUNTRIES and IBAN_COUNTRY_CODE_LENGTH to latest data
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/486">gh-486</a>).</p></li>
+<li><p>Fix typo in Marijampolė county name in LTCountySelect
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/480">gh-480</a>).</p></li>
+<li><p>Add support for new Finnish identity codes
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/478">gh-478</a>).</p></li>
+<li><p>CIF spanish starting with ‘U’ bug resolved
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/469">gh-469</a>).</p></li>
+<li><p>Fix error code for BRPostalCodeValidator
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/448">gh-448</a>).</p></li>
+<li><p>Fix spelling of the India state of Chhattisgarh
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/444">gh-444</a>).</p></li>
+<li><p>Fix CURP regex for MX flavor
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/449">gh-449</a>).</p></li>
+<li><p>Change text based fields that inherited from <cite>django.forms.Field</cite> to inherit from <cite>django.forms.CharField</cite>. The
+following fields have been updated
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/446">gh-446</a>):</p>
+<ul>
+<li><p><cite>at.forms.ATSocialSecurityNumberField</cite></p></li>
+<li><p><cite>br.forms.BRStateChoiceField</cite></p></li>
+<li><p><cite>ca.forms.CAProvinceField</cite></p></li>
+<li><p><cite>ca.forms.CASocialInsuranceNumberField</cite></p></li>
+<li><p><cite>ch.forms.CHIdentityCardNumberField</cite></p></li>
+<li><p><cite>cu.forms.CUProvinceField</cite></p></li>
+<li><p><cite>cu.forms.CURegionField</cite></p></li>
+<li><p><cite>cz.forms.CZBirthNumberField</cite></p></li>
+<li><p><cite>cz.forms.CZICNumberField</cite></p></li>
+<li><p><cite>de.forms.DEIdentityCardNumberField</cite></p></li>
+<li><p><cite>ee.forms.EEBusinessRegistryCode</cite></p></li>
+<li><p><cite>ee.forms.EEPersonalIdentificationCode</cite></p></li>
+<li><p><cite>fi.forms.FISocialSecurityNumber</cite></p></li>
+<li><p><cite>gr.forms.GRTaxNumberCodeField</cite></p></li>
+<li><p><cite>hr.forms.HRJMBAGField</cite></p></li>
+<li><p><cite>hr.forms.HRJMBGField</cite></p></li>
+<li><p><cite>hr.forms.HRLicensePlateField</cite></p></li>
+<li><p><cite>hr.forms.HRPostalCodeField</cite></p></li>
+<li><p><cite>id_.forms.IDLicensePlateField</cite></p></li>
+<li><p><cite>id_.forms.IDNationalIdentityNumberField</cite></p></li>
+<li><p><cite>id_.forms.IDPostCodeField</cite></p></li>
+<li><p><cite>il.forms.ILIDNumberField</cite></p></li>
+<li><p><cite>in_.forms.INAadhaarNumberField</cite></p></li>
+<li><p><cite>in_.forms.INStateField</cite></p></li>
+<li><p><cite>ir.forms.IRIDNumberField</cite></p></li>
+<li><p><cite>it.forms.ITVatNumberField</cite></p></li>
+<li><p><cite>lt.forms.LTPostalCodeField</cite></p></li>
+<li><p><cite>lv.forms.LVPersonalCodeField</cite></p></li>
+<li><p><cite>lv.forms.LVPostalCodeField</cite></p></li>
+<li><p><cite>no.forms.NOSocialSecurityNumber</cite></p></li>
+<li><p><cite>nz.forms.NZBankAccountNumberField</cite></p></li>
+<li><p><cite>pt.forms.PTCitizenCardNumberField</cite></p></li>
+<li><p><cite>pt.forms.PTSocialSecurityNumberField</cite></p></li>
+<li><p><cite>ro.forms.ROCountyField</cite></p></li>
+<li><p><cite>tr.forms.TRIdentificationNumberField</cite></p></li>
+<li><p><cite>us.forms.USStateField</cite></p></li>
+</ul>
+</li>
+<li><p>Removed inconvenient word VACA from CURP_INCONVENIENT_WORDS for MX flavor</p></li>
+</ul>
+<p>Other changes:</p>
+<ul class="simple">
+<li><p>Use ‘return value’ when value is in the empty_values list
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/461">gh-461</a>).</p></li>
+<li><p>Dropped support for Django 2.2, 3.0 and 3.1.</p></li>
+<li><p>Dropped support for Python 3.5.</p></li>
+<li><p>Added support for Python 3.10 and 3.11.</p></li>
+</ul>
+</section>
+<section id="id5">
+<h2>3.1   (2021-05-28)<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h2>
+<p>Breaking data changes:</p>
+<p>A schema and data migration are required for users of <cite>mx.models.MXStateField</cite> and <cite>mx.forms.MXStateSelect</cite>. The
+following steps are required:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>run <cite>manage.py makemigrations</cite> to generate a schema migration</p></li>
+<li><p>migrate <cite>DIF</cite> to <cite>CDMX</cite> with a data migration</p></li>
+</ul>
+</div></blockquote>
+<p>A data migration is required for users of <cite>in_.models.INStateField</cite> and <cite>in_.forms.INStateSelect</cite>. The following data
+migrations are required:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Migrate <cite>CG</cite> to <cite>CT</cite> for Chattisgarh</p></li>
+<li><p>Migrate <cite>UA</cite> to <cite>UT</cite> for Uttarakhand</p></li>
+<li><p>Migrate <cite>DD</cite> and <cite>DN</cite> to <cite>DH</cite> for Dadra and Nagar Haveli and Daman and Diu</p></li>
+</ul>
+</div></blockquote>
+<p>A warning message will be displayed when <cite>mx.models.MXStateField</cite>, <cite>mx.forms.MXStateSelect</cite>, <cite>in_.models.INStateField</cite>
+or <cite>in_.forms.INStateSelect</cite> are used. See the
+<a class="reference external" href="https://django-localflavor.readthedocs.io/en/latest/#backwards-compatibility">localflavor online docs</a> for
+instructions on how to suppress this warning once the migration has been completed.</p>
+<p>New flavors:</p>
+<ul class="simple">
+<li><p>None</p></li>
+</ul>
+<p>New fields for existing flavors:</p>
+<ul class="simple">
+<li><p>None</p></li>
+</ul>
+<p>Modifications to existing flavors:</p>
+<ul class="simple">
+<li><p>Fix <cite>fr.forms.FRNationalIdentificationNumber</cite> validation for people born overseas
+(<a class="reference external" href="https://github.com/django/django-localflavor/issues/415">gh-415</a>).</p></li>
+<li><p>Breaking data change: Updated Indian states and union territories names and code as per iso 3166
+(<a class="reference external" href="https://www.iso.org/obp/ui/#iso:code:3166:IN">https://www.iso.org/obp/ui/#iso:code:3166:IN</a>). The key for Chattisgarh has been changed from CG to CT, the key for
+Uttarakhand has been changed from UA to UT, and the keys DD (Dadra and Nagar Haveli) and DN (Daman and Diu) have been
+removed and combined into DH (Dadra and Nagar Haveli and Daman and Diu). Ladakh (LA) is the new addition in the Union
+Territories. There are also a few modifications in the States and Union Territories names: Orissa (OR) is now Odisha
+(OR), Pondicherry (PY) is now Puducherry (PY) Andaman and Nicobar (AN) is now Andaman and Nicobar Islands (AN).
+(<a class="reference external" href="https://github.com/django/django-localflavor/issues/427">gh-427</a>).</p></li>
+<li><p>Correct sorting of US_STATES to sort by full name rather than code
+(<a class="reference external" href="https://github.com/django/django-localflavor/issues/424">gh-424</a>
+<a class="reference external" href="https://github.com/django/django-localflavor/pull/428">gh-428</a>).</p></li>
+<li><p>Added new region for CL
+(<a class="reference external" href="https://github.com/django/django-localflavor/issues/432">gh-432</a>,
+<a class="reference external" href="https://github.com/django/django-localflavor/pull/433">gh-433</a>).</p></li>
+<li><p>Updated IBAN validation for changes in IBAN Registry release 89, March 2021
+(<a class="reference external" href="https://github.com/django/django-localflavor/issues/436">gh-436</a>).</p></li>
+<li><p>Breaking data change: <cite>mx.mx_states.STATE_CHOICES</cite> has been updated to change DIF/Distrito Federal to CDMX/Ciudad de
+México, the legal name for this state as of 29 January 2016
+(<a class="reference external" href="https://github.com/django/django-localflavor/issues/235">gh-235</a>,
+<a class="reference external" href="https://github.com/django/django-localflavor/issues/400">gh-400</a>,
+<a class="reference external" href="https://github.com/django/django-localflavor/issues/438">gh-438</a>).</p></li>
+</ul>
+<p>Other changes:</p>
+<ul class="simple">
+<li><p>Extended validation of BICs to match official SEPA regulations
+(<a class="reference external" href="https://github.com/django/django-localflavor/issues/418">gh-418</a>).</p></li>
+<li><p>Removed positional arguments (<cite>*args</cite>) from form fields that inherit from Django’s
+<cite>forms.CharField</cite> and <cite>forms.Field</cite>. Positional arguments are not supported in the
+the parent form and did not work
+<a class="reference external" href="https://github.com/django/django-localflavor/pull/421">gh-421</a>).</p></li>
+<li><p>Added error codes to all <a class="reference external" href="https://docs.djangoproject.com/en/stable/ref/forms/validation/#raising-validationerror">ValidationError`s as recommended by
+`Django’s form validation documentation</a>
+(<a class="reference external" href="https://github.com/django/django-localflavor/issues/440">gh-440</a>).</p></li>
+<li><p>Renamed zh_CN and zh_TW locales to zh_Hans and zh_Hant respectively to match
+the Django locale names.</p></li>
+</ul>
+</section>
+<section id="id7">
+<h2>3.0   (2020-02-19)<a class="headerlink" href="#id7" title="Link to this heading">¶</a></h2>
+<p>Breaking changes:</p>
+<p>Dropped support for Django &lt; 2.2.</p>
+<p>The deprecated <cite>generic.checksums.luhn</cite> and <cite>generic.checksums.ean</cite> functions have been removed in this release. Please
+use <a class="reference external" href="https://arthurdejong.org/python-stdnum/">python-stdnum</a> instead.</p>
+<p>Some Icelandic postcodes in <cite>IS_POSTALCODES</cite> have had their spelling updated, and some entries have been removed
+entirely. A warning message will be displayed when <cite>is_.forms.ISPostalCodeSelect</cite> is used. See the
+<a class="reference external" href="https://django-localflavor.readthedocs.io/en/latest/#backwards-compatibility">localflavor online docs</a> for
+instructions on how to suppress this warning once any incompatibilities have been dealt with.</p>
+<p>A data migration is required for users of <cite>it.forms.ITRegionProvinceSelect</cite>. The <cite>CI</cite>, <cite>VS</cite>, <cite>OG</cite>, and <cite>OT</cite> keys need to
+be migrated to <cite>SU</cite> to account for the 2016 Italian provincial changes. Users wishing to maintain compatibility with the
+old provincial structure will need to create a custom version of <cite>it.forms.ITRegionProvinceSelect</cite>. A warning message
+will be displayed when <cite>it.forms.ITRegionProvinceSelect</cite> is used. See the
+<a class="reference external" href="https://django-localflavor.readthedocs.io/en/latest/#backwards-compatibility">localflavor online docs</a> for
+instructions on how to suppress this warning once the migration has been completed.</p>
+<p>Using positional arguments with fields that inherit from Django’s <cite>forms.RegexField</cite> previously only worked with Django
+1.11 but were ignored with Django &gt;= 2.0. Positional arguments have now been removed from all fields that inherit from
+Django’s <cite>forms.RegexField</cite>. Any options needed on the parent <cite>forms.RegexField</cite>, <cite>forms.CharField</cite> or <cite>forms.Field</cite>
+must now be set with keyword arguments.</p>
+<p>New flavors:</p>
+<ul class="simple">
+<li><p>Egypt local flavor</p></li>
+<li><p>Malaysia local flavor</p></li>
+</ul>
+<p>New fields for existing flavors:</p>
+<ul class="simple">
+<li><p>None</p></li>
+</ul>
+<p>Modifications to existing flavors:</p>
+<ul class="simple">
+<li><p>Extended Danish <cite>DK_POSTALCODES</cite> with small Danish islands getting independent post code since 2017
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/380">gh-380</a>).</p></li>
+<li><p>Switched incorrect <cite>ar.forms.ARCBUField</cite> implementation to use
+<a class="reference external" href="https://arthurdejong.org/python-stdnum/">python-stdnum</a> instead
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/391">gh-391</a>).</p></li>
+<li><p>Use set value of <cite>strip</cite> in fields that inherit from <cite>django.forms.CharField</cite>
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/392">gh-392</a>):</p>
+<ul>
+<li><p><cite>gb.forms.GBPostcodeField</cite></p></li>
+<li><p><cite>si.forms.SIEMSOField</cite></p></li>
+<li><p><cite>si.forms.SITaxNumberField</cite></p></li>
+<li><p><cite>za.forms.ZAIDField</cite></p></li>
+</ul>
+</li>
+<li><p>Updated Icelandic <cite>IS_POSTALCODES</cite> with missing entries, updated spelling of entries, and removed non-existing ones.
+See breaking changes notice above (<a class="reference external" href="https://github.com/django/django-localflavor/pull/394">gh-394</a>).</p></li>
+<li><p>Add Kalimantan Utara in  <cite>PROVINCE_CHOICES</cite> for Indonesia local flavor
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/385">gh-385</a>).</p></li>
+<li><p>Add validation for women National identity number for Indonesia localflavor
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/386">gh-386</a>).</p></li>
+<li><p>Updated <cite>ITRegionProvinceSelect</cite> for 2016 Italian provincial changes. See breaking changes notice above
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/378">gh-378</a>,
+<a class="reference external" href="https://github.com/django/django-localflavor/pull/402">gh-402</a>).</p></li>
+<li><p>Use the value returned by clean() in the following fields
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/401">gh-401</a>,
+<a class="reference external" href="https://github.com/django/django-localflavor/pull/403">gh-403</a>):</p>
+<ul>
+<li><p><cite>ca.forms.CAProvinceField</cite></p></li>
+<li><p><cite>ca.forms.CASocialInsuranceNumberField</cite></p></li>
+<li><p><cite>ch.forms.CHIdentityCardNumberField</cite></p></li>
+<li><p><cite>cl.forms.CLRutField</cite></p></li>
+<li><p><cite>cn.forms.CNIDCardField</cite></p></li>
+<li><p><cite>cu.forms.CURegionField</cite></p></li>
+<li><p><cite>cu.forms.CUProvinceField</cite></p></li>
+<li><p><cite>cz.forms.CZBirthNumberField</cite></p></li>
+<li><p><cite>cz.forms.CZICNumberField</cite></p></li>
+<li><p><cite>de.forms.DEIdentityCardNumberField</cite></p></li>
+<li><p><cite>ee.forms.EEPersonalIdentificationCode</cite></p></li>
+<li><p><cite>eg.forms.EGNationalIDNumberField</cite></p></li>
+<li><p><cite>es.forms.ESIdentityCardNumberField</cite></p></li>
+<li><p><cite>es.forms.ESCCCField</cite></p></li>
+<li><p><cite>fi.forms.FISocialSecurityNumber</cite></p></li>
+<li><p><cite>fr.forms.FRNationalIdentificationNumber</cite></p></li>
+<li><p><cite>fr.forms.FRSIRENField</cite></p></li>
+<li><p><cite>fr.forms.FRSIRETField</cite></p></li>
+<li><p><cite>gr.forms.GRTaxNumberCodeField</cite></p></li>
+<li><p><cite>gr.forms.GRSocialSecurityNumberCodeField</cite></p></li>
+<li><p><cite>hr.forms.HRJMBGField</cite></p></li>
+<li><p><cite>hr.forms.HROIBField</cite></p></li>
+<li><p><cite>hr.forms.HRLicensePlateField</cite></p></li>
+<li><p><cite>hr.forms.HRPostalCodeField</cite></p></li>
+<li><p><cite>hr.forms.HRJMBAGField</cite></p></li>
+<li><p><cite>id.forms.IDPostCodeField</cite></p></li>
+<li><p><cite>id.forms.IDLicensePlateField</cite></p></li>
+<li><p><cite>id.forms.IDNationalIdentityNumberField</cite></p></li>
+<li><p><cite>kw.forms.KWCivilIDNumberField</cite></p></li>
+<li><p><cite>lt.forms.LTIDCodeField</cite></p></li>
+<li><p><cite>lv.forms.LVPersonalCodeField</cite></p></li>
+<li><p><cite>no.forms.NOSocialSecurityNumber</cite></p></li>
+<li><p><cite>nz.forms.NZBankAccountNumberField</cite></p></li>
+<li><p><cite>pl.forms.PLPESELField</cite></p></li>
+<li><p><cite>pl.forms.PLNationalIDCardNumberField</cite></p></li>
+<li><p><cite>pl.forms.PLNIPField</cite></p></li>
+<li><p><cite>pl.forms.PLREGONField</cite></p></li>
+<li><p><cite>pt.forms.PTCitizenCardNumberField</cite></p></li>
+<li><p><cite>pt.forms.PTSocialSecurityNumberField</cite></p></li>
+<li><p><cite>ro.forms.ROCountyField</cite></p></li>
+<li><p><cite>sg.forms.SGNRICFINField</cite></p></li>
+<li><p><cite>si.forms.SIEMSOField</cite></p></li>
+<li><p><cite>si.forms.SITaxNumberField</cite></p></li>
+<li><p><cite>tr.forms.TRIdentificationNumberField</cite></p></li>
+<li><p><cite>us.forms.USSocialSecurityNumberField</cite></p></li>
+<li><p><cite>us.forms.USStateField</cite></p></li>
+<li><p><cite>za.forms.ZAIDField</cite></p></li>
+</ul>
+</li>
+<li><p>Removed unused positional arguments from fields that inherit from <cite>forms.RegexField</cite>
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/405">gh-405</a>).</p></li>
+</ul>
+<p>Other changes:</p>
+<ul class="simple">
+<li><p>Removed deprecated <cite>generic.checksums.luhn</cite> and <cite>generic.checksums.ean</cite> functions
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/379">gh-379</a>).</p></li>
+</ul>
+</section>
+<section id="id11">
+<h2>2.2   (2019-05-07)<a class="headerlink" href="#id11" title="Link to this heading">¶</a></h2>
+<p>All deprecated code will be removed in the next release (3.0). Please run you project’s tests using <cite>python -Wd</cite> so that
+deprecation warnings appear and can be addressed.</p>
+<p>New flavors:</p>
+<ul class="simple">
+<li><p>Added local flavor for Iran
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/359">gh-359</a>).</p></li>
+</ul>
+<p>New fields for existing flavors:</p>
+<ul class="simple">
+<li><p>Added <cite>BRPostalCodeField</cite>, <cite>BRCPFField</cite> and <cite>BRCNPJField</cite> models fields
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/365">gh-365</a>).</p></li>
+<li><p>Added <cite>EircodeField</cite> in IE flavor
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/360">gh-360</a>)
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/366">gh-366</a>).</p></li>
+<li><p>Added Models for Spain (<cite>ESPostalCodeField</cite> and <cite>ESIdentityCardNumberField</cite>)
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/357">gh-357</a>)
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/372">gh-372</a>).</p></li>
+</ul>
+<p>Modifications to existing flavors:</p>
+<ul class="simple">
+<li><p>Deprecated <cite>generic.checksums.luhn</cite> and <cite>generic.checksums.ean</cite>. Please use the python-stdnum library instead.
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/370">gh-370</a>).</p></li>
+</ul>
+<p>Other changes:</p>
+<ul class="simple">
+<li><p>Added dependency on python-stdnum which is currently used for Luhn and EAN validation in several local-flavors
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/370">gh-370</a>).</p></li>
+<li><p>Added support for Vatican IBAN
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/355">gh-355</a>).</p></li>
+<li><p>Extended validation of BICs to check for the correct character set
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/364">gh-364</a>).</p></li>
+<li><p>Run tests for Django 2.2 and Python 3.5, 3.6 and 3.7
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/368">gh-368</a>).</p></li>
+<li><p>Run tests for Django 2.0 and Python 3.7
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/368">gh-368</a>).</p></li>
+</ul>
+</section>
+<section id="id14">
+<h2>2.1   (2018-08-24)<a class="headerlink" href="#id14" title="Link to this heading">¶</a></h2>
+<p>New flavors:</p>
+<ul class="simple">
+<li><p>Added local flavor for Moldova
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/309">gh-309</a>).</p></li>
+</ul>
+<p>New fields for existing flavors:</p>
+<ul class="simple">
+<li><p><cite>NLLicensePlateField</cite> in NL flavor
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/327">gh-327</a>).</p></li>
+<li><p><cite>GRSocialSecurityNumberField</cite> (AMKA) in GR flavor
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/337">gh-337</a>).</p></li>
+</ul>
+<p>Modifications to existing flavors:</p>
+<ul class="simple">
+<li><p>Allowed invalid message to be overridden in ESIdentityCardNumberField
+(<a class="reference external" href="https://github.com/django/django-localflavor/issues/339">gh-339</a>).</p></li>
+<li><p>Fix COFA validation for USStateField
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/303">gh-303</a>)</p></li>
+</ul>
+<p>Other changes:</p>
+<ul class="simple">
+<li><p>Added VAT identification number validator for all EU locales
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/324">gh-324</a>).</p></li>
+<li><p>Fix EAN validation when intermediate checksum is 10
+(<a class="reference external" href="https://github.com/django/django-localflavor/issues/331">gh-331</a>).</p></li>
+<li><p>Confirmed support for Django 2.1.</p></li>
+<li><p>Added 34 as a valid CUIT prefix value for <cite>ARCUITField</cite>
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/342">gh-342</a>).</p></li>
+</ul>
+</section>
+<section id="id15">
+<h2>2.0   (2017-12-30)<a class="headerlink" href="#id15" title="Link to this heading">¶</a></h2>
+<p>All deprecated code has been removed in this release. Specifically, all of the phone number fields have been removed
+and we recommend that you use <a class="reference external" href="https://github.com/stefanfoulis/django-phonenumber-field">django-phonenumber-field</a>
+instead. If you need to use django-phonenumber-field with Django 2.0, you will need to use the version from the
+<a class="reference external" href="https://github.com/stefanfoulis/django-phonenumber-field/pull/196">Django 2.0 support pull request</a> until this pull
+request is merged.</p>
+<p>A full list of the removed classes and functions is the “Other changes” section below.</p>
+<p>New flavors:</p>
+<ul class="simple">
+<li><p>None</p></li>
+</ul>
+<p>New fields for existing flavors:</p>
+<ul class="simple">
+<li><p>None</p></li>
+</ul>
+<p>Modifications to existing flavors:</p>
+<ul class="simple">
+<li><p>Changed RUT to NIT in CONITField form field error message.</p></li>
+<li><p>Fixed validation of Czech birth numbers for birth dates after 1st January 1954
+(<a class="reference external" href="https://github.com/django/django-localflavor/issues/315">gh-315</a>).</p></li>
+</ul>
+<p>Other changes:</p>
+<ul class="simple">
+<li><p>Added support for Django 2.0 and dropped support for Django &lt; 1.11
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/310">gh-310</a>).</p></li>
+<li><p>Fixed README and changelog documentation about dropping Python 2 and Django 1.11.</p></li>
+<li><p>Removed all deprecated classes, functions and associated data / regular expressions.
+These are the classes and functions that have been removed
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/321">gh-321</a>):</p>
+<ul>
+<li><p><cite>au.forms.AUPhoneNumberField</cite></p></li>
+<li><p><cite>au.models.AUPhoneNumberField</cite></p></li>
+<li><p><cite>be.forms.BEPhoneNumberField</cite></p></li>
+<li><p><cite>br.forms.BRPhoneNumberField</cite></p></li>
+<li><p><cite>br.forms.DV_maker</cite></p></li>
+<li><p><cite>ca.forms.CAPhoneNumberField</cite></p></li>
+<li><p><cite>ch.forms.CHPhoneNumberField</cite></p></li>
+<li><p><cite>cn.forms.CNPhoneNumberField</cite></p></li>
+<li><p><cite>cn.forms.CNCellNumberField</cite></p></li>
+<li><p><cite>dk.forms.DKPhoneNumberField</cite></p></li>
+<li><p><cite>es.forms.ESPhoneNumberField</cite></p></li>
+<li><p><cite>fr.forms.FRPhoneNumberField</cite></p></li>
+<li><p><cite>gr.forms.GRPhoneNumberField</cite></p></li>
+<li><p><cite>gr.forms.GRMobilePhoneNumberField</cite></p></li>
+<li><p><cite>hk.forms.HKPhoneNumberField</cite> (<cite>localflavor.hk</cite> has been removed because it only contained this field)</p></li>
+<li><p><cite>hr.forms.HRPhoneNumberField</cite></p></li>
+<li><p><cite>hr.forms.HRPhoneNumberPrefixSelect</cite></p></li>
+<li><p><cite>id_.forms.IDPhoneNumberField</cite></p></li>
+<li><p><cite>il.forms.ILMobilePhoneNumberField</cite></p></li>
+<li><p><cite>in.forms.INPhoneNumberField</cite></p></li>
+<li><p><cite>is_.forms.ISPhoneNumberField</cite></p></li>
+<li><p><cite>it.forms.ITPhoneNumberField</cite></p></li>
+<li><p><cite>lt.forms.LTPhoneField</cite></p></li>
+<li><p><cite>nl.forms.NLPhoneNumberField</cite></p></li>
+<li><p><cite>nl.forms.NLSoFiNumberField</cite></p></li>
+<li><p><cite>nl.models.NLBankAccountNumberField</cite></p></li>
+<li><p><cite>nl.models.NLPhoneNumberField</cite></p></li>
+<li><p><cite>nl.models.NLSoFiNumberField</cite></p></li>
+<li><p><cite>nl.validators.NLBankAccountNumberFieldValidator</cite></p></li>
+<li><p><cite>nl.validators.NLPhoneNumberFieldValidator</cite></p></li>
+<li><p><cite>nl.validators.NLSoFiNumberFieldValidator</cite></p></li>
+<li><p><cite>no.forms.NOPhoneNumberField</cite></p></li>
+<li><p><cite>nz.forms.NZPhoneNumberField</cite></p></li>
+<li><p><cite>pk.forms.PKPhoneNumberField</cite></p></li>
+<li><p><cite>pk.models.PKPhoneNumberField</cite></p></li>
+<li><p><cite>pt.forms.PTPhoneNumberField</cite></p></li>
+<li><p><cite>ro.forms.ROIBANField</cite></p></li>
+<li><p><cite>ro.forms.ROPhoneNumberField</cite></p></li>
+<li><p><cite>sg.forms.SGPhoneNumberField</cite></p></li>
+<li><p><cite>sg.forms.SGNRIC_FINField</cite></p></li>
+<li><p><cite>si.forms.SIPhoneNumberField</cite></p></li>
+<li><p><cite>tr.forms.TRPhoneNumberField</cite></p></li>
+<li><p><cite>us.forms.USPhoneNumberField</cite></p></li>
+<li><p><cite>us.models.PhoneNumberField</cite></p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="id16">
+<h2>1.6   (2017-11-22)<a class="headerlink" href="#id16" title="Link to this heading">¶</a></h2>
+<p>All deprecated code will be removed in the next release. Please run you project’s tests using <cite>python -Wd</cite> so that
+deprecation warnings appear and can be addressed.</p>
+<p>New flavors:</p>
+<ul class="simple">
+<li><p>Added local flavor for Cuba
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/292">gh-292</a>).</p></li>
+</ul>
+<p>New fields for existing flavors:</p>
+<ul class="simple">
+<li><p>Added KWAreaSelect form field
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/296">gh-296</a>).</p></li>
+<li><p>Added CONITField form field
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/145">gh-145</a>).</p></li>
+<li><p>Added <cite>nl.models.NLBSNField</cite>, <cite>nl.forms.NLBSNFormField</cite> and <cite>nl.validators.NLBSNFieldValidator</cite>
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/314">gh-314</a>).</p></li>
+</ul>
+<p>Modifications to existing flavors:</p>
+<ul class="simple">
+<li><p>Fixed crash with USZipCodeField form validation when null=True is allowed
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/295">gh-295</a>).</p></li>
+<li><p>Deprecated br.forms.DV_maker, sg.forms.SGNRIC_FINField, lt.forms.LTPhoneField
+and ro.forms.ROIBANField
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/305">gh-305</a>).</p></li>
+<li><p>Added support for Swedish interim personal identity numbers
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/308">gh-308</a>).</p></li>
+<li><p>Deprecated <cite>nl.models.NLBankAccountNumberField</cite>
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/307">gh-307</a>).</p></li>
+<li><p>Updated IBANField to support the latest additions to the IBAN Registry (version 78 / August 2017).</p></li>
+<li><p>Deprecated <cite>nl.models.NLSoFiNumberField</cite>, <cite>nl.forms.NLSoFiNumberField</cite> and <cite>nl.validators.NLSoFiNumberFieldValidator</cite>
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/314">gh-314</a>).</p></li>
+<li><p>Fixes issue with <cite>no.forms.NOBankAccountNumber</cite> unclean data
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/311">gh-311</a>).</p></li>
+</ul>
+<p>Other changes:</p>
+<ul class="simple">
+<li><p>Added support for empty_value kwarg in Django &gt;= 1.11
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/298">gh-298</a>).</p></li>
+<li><p>Dropped support for Python 3.2.</p></li>
+</ul>
+</section>
+<section id="id18">
+<h2>1.5   (2017-05-26)<a class="headerlink" href="#id18" title="Link to this heading">¶</a></h2>
+<p>New flavors:</p>
+<ul class="simple">
+<li><p>Added local flavor for Ukraine
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/273">gh-273</a>).</p></li>
+</ul>
+<p>New fields for existing flavors:</p>
+<ul class="simple">
+<li><p>Added NOBankAccountNumber form field
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/275">gh-275</a>).</p></li>
+<li><p>Added AUCompanyNumberField model and form field
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/278">gh-278</a>).</p></li>
+</ul>
+<p>Modifications to existing flavors:</p>
+<ul class="simple">
+<li><p>Added normalized versions of COFA state names for US
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/277">gh-277</a>).</p></li>
+<li><p>Fixed Dutch NLZipCodeField field not to store empty value as a single space
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/280">gh-280</a>).</p></li>
+<li><p>Fixed validation for old Australian tax file numbers
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/284">gh-284</a>).</p></li>
+</ul>
+<p>Other changes:</p>
+<ul class="simple">
+<li><p>None</p></li>
+</ul>
+</section>
+<section id="id19">
+<h2>1.4   (2017-01-03)<a class="headerlink" href="#id19" title="Link to this heading">¶</a></h2>
+<p>New flavors:</p>
+<ul class="simple">
+<li><p>Added local flavor for Venezuela
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/245">gh-245</a>).</p></li>
+<li><p>Added local flavor for Morocco
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/270">gh-270</a>).</p></li>
+</ul>
+<p>New fields for existing flavors:</p>
+<ul class="simple">
+<li><p>Added MXCLABEField model and form fields
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/227">gh-227</a>).</p></li>
+<li><p>Added AUTaxFileNumberField model and form fields
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/238">gh-238</a>).</p></li>
+<li><p>Added KWGovernorateSelect field to easily select Kuwait governorates.
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/231">gh-231</a>).</p></li>
+<li><p>Added FRRegion2016Select field to stick to current legislation
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/260">gh-260</a>).
+and (<a class="reference external" href="https://github.com/django/django-localflavor/pull/268">gh-268</a>).</p></li>
+</ul>
+<p>Modifications to existing flavors:</p>
+<ul class="simple">
+<li><p>Enhancements of localflavor.br.forms.BRCNPJField
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/240">gh-240</a>
+<a class="reference external" href="https://github.com/django/django-localflavor/pull/254">gh-254</a>).</p></li>
+<li><p>Fixed century bug with Kuwait Civil ID verification localflavor.kw.forms
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/195">gh-195</a>).</p></li>
+<li><p>Allow passing field name as first positional argument of IBANField
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/236">gh-236</a>).</p></li>
+<li><p>Fixed French FRNationalIdentificationNumber bug with imaginary birth month values
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/242">gh-242</a>).</p></li>
+<li><p>Fixed French FRNationalIdentificationNumber bug with corsican people born after 2000
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/242">gh-242</a>).</p></li>
+<li><p>Fixed the translation for US state ‘Georgia’ from colliding with the country ‘Georgia’
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/250">gh-250</a>).</p></li>
+<li><p>Fixed the styling errors and enabled prospector
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/259">gh-259</a>).</p></li>
+<li><p>Allow AU ABN value with spaces to validate
+(<a class="reference external" href="https://github.com/django/django-localflavor/issues/266">gh-266</a>
+<a class="reference external" href="https://github.com/django/django-localflavor/pull/267">gh-267</a>).</p></li>
+</ul>
+<p>Other changes:</p>
+<ul class="simple">
+<li><p>Drop support for Django 1.7
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/218">gh-218</a>).</p></li>
+<li><p>Ensure the migration framework generates schema migrations for model fields that change the max_length
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/257">gh-257</a>). Users will need to generate migrations for any
+model fields they use with ‘makemigrations’.</p></li>
+<li><p>Lazily generate US_STATES, STATE_CHOICES, and USPS_CHOICES
+(<a class="reference external" href="https://github.com/django/django-localflavor/issues/203">gh-203</a>
+<a class="reference external" href="https://github.com/django/django-localflavor/pull/272">gh-272</a>).</p></li>
+<li><p>Deprecated Phone Number fields
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/262">gh-262</a>).</p></li>
+<li><p>Bumped versions of requirements for testing
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/274">gh-274</a>).</p></li>
+</ul>
+</section>
+<section id="id21">
+<h2>1.3   (2016-05-06)<a class="headerlink" href="#id21" title="Link to this heading">¶</a></h2>
+<p>New flavors:</p>
+<ul class="simple">
+<li><p>Added local flavor for Bulgaria
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/191">gh-191</a>).</p></li>
+<li><p>Added local flavor for Tunisia
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/141">gh-141</a>).</p></li>
+<li><p>Added local flavor for Hungary
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/213">gh-213</a>).</p></li>
+</ul>
+<p>New fields for existing flavors:</p>
+<ul class="simple">
+<li><p>Added ARCBUField form field.
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/151">gh-151</a>).</p></li>
+<li><p>Added NLZipCodeField, NLProvinceField, NLSoFiNumberField, NLPhoneNumberField model fields
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/152">gh-152</a>).</p></li>
+<li><p>Added AUBusinessNumberField model and form fields
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/63">gh-63</a>).</p></li>
+</ul>
+<p>Modifications to existing flavors:</p>
+<ul class="simple">
+<li><p>Moved Dutch validators from localflavor.nl.forms to localflavor.nl.validators
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/152">gh-152</a>).</p></li>
+<li><p>Fix check for promotional social security numbers in USSocialSecurityNumberField
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/157">gh-157</a>).</p></li>
+<li><p>Updated IBANField to support the latest additions to the IBAN Registry (version 64 / March 2016).</p></li>
+<li><p>Fix bug with MXRFCField where some incorrect values would validate correctly.
+(<a class="reference external" href="https://github.com/django/django-localflavor/issues/204">gh-204</a>).</p></li>
+<li><p>Fixed bug with IBANFormField validation.
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/215">gh-215</a>).</p></li>
+<li><p>Update regex in DEZipCodeField to prohibit invalid postal codes.
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/216">gh-216</a>).</p></li>
+<li><p>Added deconstructor methods to validators.
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/220">gh-220</a>).</p></li>
+<li><p>Fix bug in ESIdentityCardNumberField where some valid values for NIE numbers were not
+validating
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/217">gh-217</a>).</p></li>
+<li><p>Add deconstruct method to all model fields
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/162">gh-162</a>
+<a class="reference external" href="https://github.com/django/django-localflavor/pull/224">gh-224</a>).</p></li>
+</ul>
+<p>Other changes:</p>
+<ul class="simple">
+<li><p>Drop support for Django 1.5, Django 1.6 and Python 2.6
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/170">gh-170</a>).</p></li>
+</ul>
+</section>
+<section id="id23">
+<h2>1.2   (2015-11-27)<a class="headerlink" href="#id23" title="Link to this heading">¶</a></h2>
+<p>New flavors:</p>
+<ul class="simple">
+<li><p>None</p></li>
+</ul>
+<p>New fields for existing flavors:</p>
+<ul class="simple">
+<li><p>Added form field for Estonian business registration codes
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/135">gh-135</a>).</p></li>
+<li><p>Added model field for Ecuadorian provinces
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/138">gh-138</a>).</p></li>
+<li><p>Added form field for Swiss Social Security numbers (
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/155">gh-155</a>).</p></li>
+<li><p>Added form field for Brazilian Legal Process numbers (Processo)
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/163">gh-163</a>).</p></li>
+</ul>
+<p>Modifications to existing flavors:</p>
+<ul class="simple">
+<li><p>Fixed misspelled Polish administrative unit names
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/136">gh-136</a>).</p></li>
+<li><p>Added Kosovo and Timor-Leste to list of IBAN countries
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/139">gh-139</a>).</p></li>
+<li><p>Fixed error in Romanian fiscal identity code (CIF) field when value has a trailing slash
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/146">gh-146</a>).</p></li>
+<li><p>Updated validation in Swiss postal code field to only accept values in the range 1000 - 9000
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/154">gh-154</a>).</p></li>
+<li><p>Added validator for International Article Number (EAN) to the generic module
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/156">gh-156</a>).</p></li>
+<li><p>Updated Italian social security number field to use ‘tax code’ in error message
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/167">gh-167</a>).</p></li>
+<li><p>Fixed error in Greek tax number code field when value has only alpha characters
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/171">gh-171</a>).</p></li>
+<li><p>Added stricter validation in the Brazilian Cadastro de Pessoas Físicas (CPF) field
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/172">gh-172</a>).</p></li>
+<li><p>Corrected Romanian counties choice names to use ș and ț (comma below)
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/175">gh-175</a>).</p></li>
+<li><p>Updated Brazilian postal code field to also accept values with XX.XXX-XXX and XXXXXXXX formats
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/177">gh-177</a>).</p></li>
+<li><p>Marked US state names for translation
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/178">gh-178</a>).</p></li>
+<li><p>Fixed French national identification number validation for people born before 1976 in Corsica
+(<a class="reference external" href="https://github.com/django/django-localflavor/pull/186">gh-186</a>).</p></li>
+</ul>
+</section>
+<section id="id24">
+<h2>1.1   (2014-12-10)<a class="headerlink" href="#id24" title="Link to this heading">¶</a></h2>
+<p>New flavors:</p>
+<ul class="simple">
+<li><p>Added local flavor for Denmark (gh-83)</p></li>
+<li><p>Added local flavor for Estonia (gh-70)</p></li>
+<li><p>Added local flavor for Latvia (gh-68)</p></li>
+<li><p>Added local flavor for Malta (gh-88)</p></li>
+<li><p>Added local flavor for Pakistan (gh-41)</p></li>
+<li><p>Added local flavor for Singapore (gh-119)</p></li>
+</ul>
+<p>New fields for existing flavors:</p>
+<ul class="simple">
+<li><p>Added model and form fields for French SIREN/SIRET numbers (gh-123)</p></li>
+<li><p>Added model field for states of Brazil (gh-22)</p></li>
+<li><p>Added form field for Indian Aadhaar numbers (gh-23)</p></li>
+<li><p>Added model field for states of India (gh-23)</p></li>
+<li><p>Added form field for Lithuanian phone numbers</p></li>
+<li><p>Added model field for Dutch bank accounts (gh-42)</p></li>
+<li><p>Added form field for Italian phone numbers (gh-74)</p></li>
+<li><p>Added form field for French National Identification Number (gh-75)</p></li>
+<li><p>Added IBAN model and form fields (gh-86)</p></li>
+<li><p>Added BIC model and form fields (gh-125)</p></li>
+<li><p>Added SSN model field for US (gh-96)</p></li>
+<li><p>Added ZIP code model field for US (gh-55)</p></li>
+</ul>
+<p>Other modifications to existing flavors:</p>
+<ul class="simple">
+<li><p><em>backward incompatible</em> Updated the region lists of Great Britain (gh-43, gh-126)</p></li>
+<li><p>Added Ceuta and Mellila to regions of Spain (gh-8)</p></li>
+<li><p>Added support entities in Italian SSN form field (gh-20)</p></li>
+<li><p>Added Japanese prefecture codes and fix prefecture order (gh-27)</p></li>
+<li><p>Added normalization for Lithuanian postal code field (gh-69)</p></li>
+<li><p>Added whitespace stripping whitespace from US ZIP code field (gh-77)</p></li>
+<li><p>Added an option for customizing French form field labels (gh-102)</p></li>
+<li><p>Added mapping between provinces and regions for Italy (gh-105)</p></li>
+<li><p>Added Telengana to states of India (gh-107)</p></li>
+<li><p>Added support for 14X and 17X Chinese cell numbers (gh-17, gh-120)</p></li>
+<li><p>Allowed spaces in CPF numbers for Brazil (gh-32)</p></li>
+<li><p>Fixed CIF validation for Spain (gh-78)</p></li>
+<li><p>Fixed armed forces “states” for US (gh-8)</p></li>
+<li><p>Fixed REGON number validation for Poland (gh-62)</p></li>
+<li><p>Rejected US SSN starting with 9 (gh-35)</p></li>
+<li><p>Rejected Brazilian CPF number when all numbers all numbers are equal (gh-103)</p></li>
+<li><p>Added ‘Y’ to the NIE number validation for Spain (gh-127)</p></li>
+<li><p>Updated Argentina’s CUIT number validation to support legal types 24 and 33 (gh-121)</p></li>
+<li><p>Added ‘R’, ‘V’ and ‘W’ to the Spanish identity card number validation (gh-132)</p></li>
+</ul>
+<p>Other changes:</p>
+<ul class="simple">
+<li><p>Added checksums module (from Django) providing a Luhn validator (gh-122)</p></li>
+</ul>
+</section>
+<section id="id25">
+<h2>1.0 (2013-07-29)<a class="headerlink" href="#id25" title="Link to this heading">¶</a></h2>
+<p>Initial release</p>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Changelog</a><ul>
+<li><a class="reference internal" href="#unreleased">5.0   (unreleased)</a></li>
+<li><a class="reference internal" href="#id4">4.0   (2023-04-22)</a></li>
+<li><a class="reference internal" href="#id5">3.1   (2021-05-28)</a></li>
+<li><a class="reference internal" href="#id7">3.0   (2020-02-19)</a></li>
+<li><a class="reference internal" href="#id11">2.2   (2019-05-07)</a></li>
+<li><a class="reference internal" href="#id14">2.1   (2018-08-24)</a></li>
+<li><a class="reference internal" href="#id15">2.0   (2017-12-30)</a></li>
+<li><a class="reference internal" href="#id16">1.6   (2017-11-22)</a></li>
+<li><a class="reference internal" href="#id18">1.5   (2017-05-26)</a></li>
+<li><a class="reference internal" href="#id19">1.4   (2017-01-03)</a></li>
+<li><a class="reference internal" href="#id21">1.3   (2016-05-06)</a></li>
+<li><a class="reference internal" href="#id23">1.2   (2015-11-27)</a></li>
+<li><a class="reference internal" href="#id24">1.1   (2014-12-10)</a></li>
+<li><a class="reference internal" href="#id25">1.0 (2013-07-29)</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="authors.html"
+                          title="previous chapter">Authors</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="localflavor/ar.html"
+                          title="next chapter">Argentina (<code class="docutils literal notranslate"><span class="pre">ar</span></code>)</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/changelog.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="localflavor/ar.html" title="Argentina (ar)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="authors.html" title="Authors"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Changelog</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright Django Software Foundation and individual contributors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+  </body>
+</html>

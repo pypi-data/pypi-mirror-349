@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Canada (ca) &#8212; django-localflavor 4.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=2bf1fcf8" />
+    
+    <script src="../_static/documentation_options.js?v=9f5556dd"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Switzerland (ch)" href="ch.html" />
+    <link rel="prev" title="Brazil (br)" href="br.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="ch.html" title="Switzerland (ch)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="br.html" title="Brazil (br)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Canada (<code class="docutils literal notranslate"><span class="pre">ca</span></code>)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="canada-ca">
+<h1>Canada (<code class="docutils literal notranslate"><span class="pre">ca</span></code>)<a class="headerlink" href="#canada-ca" title="Link to this heading">¶</a></h1>
+<section id="module-localflavor.ca.forms">
+<span id="forms"></span><h2>Forms<a class="headerlink" href="#module-localflavor.ca.forms" title="Link to this heading">¶</a></h2>
+<p>Canada-specific Form helpers.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.ca.forms.CAPostalCodeField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.ca.forms.</span></span><span class="sig-name descname"><span class="pre">CAPostalCodeField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/ca/forms.html#CAPostalCodeField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.ca.forms.CAPostalCodeField" title="Link to this definition">¶</a></dt>
+<dd><p>Canadian postal code form field.</p>
+<p>Validates against known invalid characters: D, F, I, O, Q, U
+Additionally the first character cannot be Z or W.
+For more info see:
+<a class="reference external" href="http://www.canadapost.ca/tools/pg/manual/PGaddress-e.asp#1402170">http://www.canadapost.ca/tools/pg/manual/PGaddress-e.asp#1402170</a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.ca.forms.CAPostalCodeField.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/ca/forms.html#CAPostalCodeField.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.ca.forms.CAPostalCodeField.clean" title="Link to this definition">¶</a></dt>
+<dd><p>Validate the given value and return its “cleaned” value as an
+appropriate Python object. Raise ValidationError for any errors.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.ca.forms.CAProvinceField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.ca.forms.</span></span><span class="sig-name descname"><span class="pre">CAProvinceField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/ca/forms.html#CAProvinceField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.ca.forms.CAProvinceField" title="Link to this definition">¶</a></dt>
+<dd><p>A form field that validates its input is a Canadian province name or abbreviation.</p>
+<p>It normalizes the input to the standard two-leter postal service
+abbreviation for the given province.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.ca.forms.CAProvinceField.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/ca/forms.html#CAProvinceField.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.ca.forms.CAProvinceField.clean" title="Link to this definition">¶</a></dt>
+<dd><p>Validate the given value and return its “cleaned” value as an
+appropriate Python object. Raise ValidationError for any errors.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.ca.forms.CAProvinceSelect">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.ca.forms.</span></span><span class="sig-name descname"><span class="pre">CAProvinceSelect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attrs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/ca/forms.html#CAProvinceSelect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.ca.forms.CAProvinceSelect" title="Link to this definition">¶</a></dt>
+<dd><p>A Select widget that uses a list of Canadian provinces and territories as its choices.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.ca.forms.CASocialInsuranceNumberField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.ca.forms.</span></span><span class="sig-name descname"><span class="pre">CASocialInsuranceNumberField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/ca/forms.html#CASocialInsuranceNumberField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.ca.forms.CASocialInsuranceNumberField" title="Link to this definition">¶</a></dt>
+<dd><p>A Canadian Social Insurance Number (SIN).</p>
+<p>Checks the following rules to determine whether the number is valid:</p>
+<ul class="simple">
+<li><p>Conforms to the XXX-XXX-XXX format.</p></li>
+<li><dl class="simple">
+<dt>Passes the check digit process “Luhn Algorithm”</dt><dd><p>See: <a class="reference external" href="http://en.wikipedia.org/wiki/Social_Insurance_Number">http://en.wikipedia.org/wiki/Social_Insurance_Number</a></p>
+</dd>
+</dl>
+</li>
+</ul>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.ca.forms.CASocialInsuranceNumberField.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/ca/forms.html#CASocialInsuranceNumberField.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.ca.forms.CASocialInsuranceNumberField.clean" title="Link to this definition">¶</a></dt>
+<dd><p>Validate the given value and return its “cleaned” value as an
+appropriate Python object. Raise ValidationError for any errors.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-localflavor.ca.models">
+<span id="models"></span><h2>Models<a class="headerlink" href="#module-localflavor.ca.models" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.ca.models.CAPostalCodeField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.ca.models.</span></span><span class="sig-name descname"><span class="pre">CAPostalCodeField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/ca/models.html#CAPostalCodeField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.ca.models.CAPostalCodeField" title="Link to this definition">¶</a></dt>
+<dd><p>A model field that stores the Canadian Postal code in the database.</p>
+<p>Forms represent it as a <a class="reference internal" href="#localflavor.ca.forms.CAPostalCodeField" title="localflavor.ca.forms.CAPostalCodeField"><code class="xref py py-class docutils literal notranslate"><span class="pre">CAPostalCodeField</span></code></a> field.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 4.0.</span></p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.ca.models.CAPostalCodeField.formfield">
+<span class="sig-name descname"><span class="pre">formfield</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/ca/models.html#CAPostalCodeField.formfield"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.ca.models.CAPostalCodeField.formfield" title="Link to this definition">¶</a></dt>
+<dd><p>Return a django.forms.Field instance for this field.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.ca.models.CAProvinceField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.ca.models.</span></span><span class="sig-name descname"><span class="pre">CAProvinceField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/ca/models.html#CAProvinceField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.ca.models.CAProvinceField" title="Link to this definition">¶</a></dt>
+<dd><p>A model field that stores the two-letter Canadian province abbreviation in the database.</p>
+<p>Forms represent it as a <code class="docutils literal notranslate"><span class="pre">forms.CAProvinceField</span></code> field.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 4.0.</span></p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.ca.models.CAProvinceField.deconstruct">
+<span class="sig-name descname"><span class="pre">deconstruct</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/ca/models.html#CAProvinceField.deconstruct"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.ca.models.CAProvinceField.deconstruct" title="Link to this definition">¶</a></dt>
+<dd><p>Return enough information to recreate the field as a 4-tuple:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>The name of the field on the model, if contribute_to_class() has
+been run.</p></li>
+<li><p>The import path of the field, including the class, e.g.
+django.db.models.IntegerField. This should be the most portable
+version, so less specific may be better.</p></li>
+<li><p>A list of positional arguments.</p></li>
+<li><p>A dict of keyword arguments.</p></li>
+</ul>
+</div></blockquote>
+<p>Note that the positional or keyword arguments must contain values of
+the following types (including inner values of collection types):</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>None, bool, str, int, float, complex, set, frozenset, list, tuple,
+dict</p></li>
+<li><p>UUID</p></li>
+<li><p>datetime.datetime (naive), datetime.date</p></li>
+<li><p>top-level classes, top-level functions - will be referenced by their
+full import path</p></li>
+<li><p>Storage instances - these have their own deconstruct() method</p></li>
+</ul>
+</div></blockquote>
+<p>This is because the values here must be serialized into a text format
+(possibly new Python code, possibly JSON) and these are the only types
+with encoding handlers defined.</p>
+<p>There’s no need to return the exact way the field was instantiated this
+time, just ensure that the resulting field is the same - prefer keyword
+arguments over positional ones, and omit parameters with their default
+values.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.ca.models.CASocialInsuranceNumberField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.ca.models.</span></span><span class="sig-name descname"><span class="pre">CASocialInsuranceNumberField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/ca/models.html#CASocialInsuranceNumberField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.ca.models.CASocialInsuranceNumberField" title="Link to this definition">¶</a></dt>
+<dd><p>A model field that stores a Canadian Social Insurance Number (SIN) in the format <code class="docutils literal notranslate"><span class="pre">XXX-XXX-XXX</span></code>.</p>
+<p>Forms represent it as <code class="docutils literal notranslate"><span class="pre">forms.CASocialInsuranceNumberField</span></code> field.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 4.0.</span></p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.ca.models.CASocialInsuranceNumberField.formfield">
+<span class="sig-name descname"><span class="pre">formfield</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/ca/models.html#CASocialInsuranceNumberField.formfield"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.ca.models.CASocialInsuranceNumberField.formfield" title="Link to this definition">¶</a></dt>
+<dd><p>Return a django.forms.Field instance for this field.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="data">
+<h2>Data<a class="headerlink" href="#data" title="Link to this heading">¶</a></h2>
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.ca.ca_provinces.PROVINCE_CHOICES">
+<span class="sig-prename descclassname"><span class="pre">localflavor.ca.ca_provinces.</span></span><span class="sig-name descname"><span class="pre">PROVINCE_CHOICES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(('AB',</span> <span class="pre">'Alberta'),</span> <span class="pre">('BC',</span> <span class="pre">'British</span> <span class="pre">Columbia'),</span> <span class="pre">('MB',</span> <span class="pre">'Manitoba'),</span> <span class="pre">('NB',</span> <span class="pre">'New</span> <span class="pre">Brunswick'),</span> <span class="pre">('NL',</span> <span class="pre">'Newfoundland</span> <span class="pre">and</span> <span class="pre">Labrador'),</span> <span class="pre">('NT',</span> <span class="pre">'Northwest</span> <span class="pre">Territories'),</span> <span class="pre">('NS',</span> <span class="pre">'Nova</span> <span class="pre">Scotia'),</span> <span class="pre">('NU',</span> <span class="pre">'Nunavut'),</span> <span class="pre">('ON',</span> <span class="pre">'Ontario'),</span> <span class="pre">('PE',</span> <span class="pre">'Prince</span> <span class="pre">Edward</span> <span class="pre">Island'),</span> <span class="pre">('QC',</span> <span class="pre">'Quebec'),</span> <span class="pre">('SK',</span> <span class="pre">'Saskatchewan'),</span> <span class="pre">('YT',</span> <span class="pre">'Yukon'))</span></em><a class="headerlink" href="#localflavor.ca.ca_provinces.PROVINCE_CHOICES" title="Link to this definition">¶</a></dt>
+<dd><p>An alphabetical list of provinces and territories for use as <cite>choices</cite>
+in a formfield. Source: <a class="reference external" href="http://www.canada.gc.ca/othergov/prov_e.html">http://www.canada.gc.ca/othergov/prov_e.html</a></p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.ca.ca_provinces.PROVINCES_NORMALIZED">
+<span class="sig-prename descclassname"><span class="pre">localflavor.ca.ca_provinces.</span></span><span class="sig-name descname"><span class="pre">PROVINCES_NORMALIZED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'ab':</span> <span class="pre">'AB',</span> <span class="pre">'alberta':</span> <span class="pre">'AB',</span> <span class="pre">'b.c.':</span> <span class="pre">'BC',</span> <span class="pre">'bc':</span> <span class="pre">'BC',</span> <span class="pre">'british</span> <span class="pre">columbia':</span> <span class="pre">'BC',</span> <span class="pre">'manitoba':</span> <span class="pre">'MB',</span> <span class="pre">'mb':</span> <span class="pre">'MB',</span> <span class="pre">'nb':</span> <span class="pre">'NB',</span> <span class="pre">'new</span> <span class="pre">brunswick':</span> <span class="pre">'NB',</span> <span class="pre">'newfoundland':</span> <span class="pre">'NL',</span> <span class="pre">'newfoundland</span> <span class="pre">and</span> <span class="pre">labrador':</span> <span class="pre">'NL',</span> <span class="pre">'nf':</span> <span class="pre">'NL',</span> <span class="pre">'nl':</span> <span class="pre">'NL',</span> <span class="pre">'northwest</span> <span class="pre">territories':</span> <span class="pre">'NT',</span> <span class="pre">'nova</span> <span class="pre">scotia':</span> <span class="pre">'NS',</span> <span class="pre">'ns':</span> <span class="pre">'NS',</span> <span class="pre">'nt':</span> <span class="pre">'NT',</span> <span class="pre">'nu':</span> <span class="pre">'NU',</span> <span class="pre">'nunavut':</span> <span class="pre">'NU',</span> <span class="pre">'on':</span> <span class="pre">'ON',</span> <span class="pre">'ontario':</span> <span class="pre">'ON',</span> <span class="pre">'p.e.i.':</span> <span class="pre">'PE',</span> <span class="pre">'pe':</span> <span class="pre">'PE',</span> <span class="pre">'pei':</span> <span class="pre">'PE',</span> <span class="pre">'pq':</span> <span class="pre">'QC',</span> <span class="pre">'prince</span> <span class="pre">edward</span> <span class="pre">island':</span> <span class="pre">'PE',</span> <span class="pre">'qc':</span> <span class="pre">'QC',</span> <span class="pre">'quebec':</span> <span class="pre">'QC',</span> <span class="pre">'saskatchewan':</span> <span class="pre">'SK',</span> <span class="pre">'sk':</span> <span class="pre">'SK',</span> <span class="pre">'yk':</span> <span class="pre">'YT',</span> <span class="pre">'yt':</span> <span class="pre">'YT',</span> <span class="pre">'yukon':</span> <span class="pre">'YT',</span> <span class="pre">'yukon</span> <span class="pre">territory':</span> <span class="pre">'YT'}</span></em><a class="headerlink" href="#localflavor.ca.ca_provinces.PROVINCES_NORMALIZED" title="Link to this definition">¶</a></dt>
+<dd><p>a mapping of province misspellings/abbreviations to normalized abbreviations</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Canada (<code class="docutils literal notranslate"><span class="pre">ca</span></code>)</a><ul>
+<li><a class="reference internal" href="#module-localflavor.ca.forms">Forms</a><ul>
+<li><a class="reference internal" href="#localflavor.ca.forms.CAPostalCodeField"><code class="docutils literal notranslate"><span class="pre">CAPostalCodeField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.ca.forms.CAPostalCodeField.clean"><code class="docutils literal notranslate"><span class="pre">CAPostalCodeField.clean()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.ca.forms.CAProvinceField"><code class="docutils literal notranslate"><span class="pre">CAProvinceField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.ca.forms.CAProvinceField.clean"><code class="docutils literal notranslate"><span class="pre">CAProvinceField.clean()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.ca.forms.CAProvinceSelect"><code class="docutils literal notranslate"><span class="pre">CAProvinceSelect</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.ca.forms.CASocialInsuranceNumberField"><code class="docutils literal notranslate"><span class="pre">CASocialInsuranceNumberField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.ca.forms.CASocialInsuranceNumberField.clean"><code class="docutils literal notranslate"><span class="pre">CASocialInsuranceNumberField.clean()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-localflavor.ca.models">Models</a><ul>
+<li><a class="reference internal" href="#localflavor.ca.models.CAPostalCodeField"><code class="docutils literal notranslate"><span class="pre">CAPostalCodeField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.ca.models.CAPostalCodeField.formfield"><code class="docutils literal notranslate"><span class="pre">CAPostalCodeField.formfield()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.ca.models.CAProvinceField"><code class="docutils literal notranslate"><span class="pre">CAProvinceField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.ca.models.CAProvinceField.deconstruct"><code class="docutils literal notranslate"><span class="pre">CAProvinceField.deconstruct()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.ca.models.CASocialInsuranceNumberField"><code class="docutils literal notranslate"><span class="pre">CASocialInsuranceNumberField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.ca.models.CASocialInsuranceNumberField.formfield"><code class="docutils literal notranslate"><span class="pre">CASocialInsuranceNumberField.formfield()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data">Data</a><ul>
+<li><a class="reference internal" href="#localflavor.ca.ca_provinces.PROVINCE_CHOICES"><code class="docutils literal notranslate"><span class="pre">PROVINCE_CHOICES</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.ca.ca_provinces.PROVINCES_NORMALIZED"><code class="docutils literal notranslate"><span class="pre">PROVINCES_NORMALIZED</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="br.html"
+                          title="previous chapter">Brazil (<code class="docutils literal notranslate"><span class="pre">br</span></code>)</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="ch.html"
+                          title="next chapter">Switzerland (<code class="docutils literal notranslate"><span class="pre">ch</span></code>)</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/localflavor/ca.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="ch.html" title="Switzerland (ch)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="br.html" title="Brazil (br)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Canada (<code class="docutils literal notranslate"><span class="pre">ca</span></code>)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright Django Software Foundation and individual contributors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Poland (pl) &#8212; django-localflavor 4.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=2bf1fcf8" />
+    
+    <script src="../_static/documentation_options.js?v=9f5556dd"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Portugal (pt)" href="pt.html" />
+    <link rel="prev" title="Pakistan (pk)" href="pk.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pt.html" title="Portugal (pt)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pk.html" title="Pakistan (pk)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Poland (<code class="docutils literal notranslate"><span class="pre">pl</span></code>)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="poland-pl">
+<h1>Poland (<code class="docutils literal notranslate"><span class="pre">pl</span></code>)<a class="headerlink" href="#poland-pl" title="Link to this heading">¶</a></h1>
+<section id="module-localflavor.pl.forms">
+<span id="forms"></span><h2>Forms<a class="headerlink" href="#module-localflavor.pl.forms" title="Link to this heading">¶</a></h2>
+<p>Polish-specific form helpers.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.pl.forms.PLCountySelect">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.pl.forms.</span></span><span class="sig-name descname"><span class="pre">PLCountySelect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attrs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/pl/forms.html#PLCountySelect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.pl.forms.PLCountySelect" title="Link to this definition">¶</a></dt>
+<dd><p>A select widget with list of Polish administrative units as choices.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.pl.forms.PLNIPField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.pl.forms.</span></span><span class="sig-name descname"><span class="pre">PLNIPField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/pl/forms.html#PLNIPField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.pl.forms.PLNIPField" title="Link to this definition">¶</a></dt>
+<dd><p>A form field that validates as Polish Tax Number (NIP).</p>
+<p>Valid forms are: XXX-YYY-YY-YY, XXX-YY-YY-YYY or XXXYYYYYYY.
+Checksum algorithm based on documentation at
+<a class="reference external" href="http://wipos.p.lodz.pl/zylla/ut/nip-rego.html">http://wipos.p.lodz.pl/zylla/ut/nip-rego.html</a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.pl.forms.PLNIPField.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/pl/forms.html#PLNIPField.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.pl.forms.PLNIPField.clean" title="Link to this definition">¶</a></dt>
+<dd><p>Validate the given value and return its “cleaned” value as an
+appropriate Python object. Raise ValidationError for any errors.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.pl.forms.PLNIPField.has_valid_checksum">
+<span class="sig-name descname"><span class="pre">has_valid_checksum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/pl/forms.html#PLNIPField.has_valid_checksum"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.pl.forms.PLNIPField.has_valid_checksum" title="Link to this definition">¶</a></dt>
+<dd><p>Calculates a checksum with the provided algorithm.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.pl.forms.PLNationalIDCardNumberField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.pl.forms.</span></span><span class="sig-name descname"><span class="pre">PLNationalIDCardNumberField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/pl/forms.html#PLNationalIDCardNumberField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.pl.forms.PLNationalIDCardNumberField" title="Link to this definition">¶</a></dt>
+<dd><p>A form field that validates as Polish National ID Card Number.</p>
+<dl class="simple">
+<dt>Checks the following rules:</dt><dd><ul class="simple">
+<li><p>the length consist of 3 letter and 6 digits</p></li>
+<li><p>has a valid checksum</p></li>
+</ul>
+</dd>
+</dl>
+<p>The algorithm is documented at <a class="reference external" href="http://en.wikipedia.org/wiki/Polish_identity_card">http://en.wikipedia.org/wiki/Polish_identity_card</a>.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.pl.forms.PLNationalIDCardNumberField.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/pl/forms.html#PLNationalIDCardNumberField.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.pl.forms.PLNationalIDCardNumberField.clean" title="Link to this definition">¶</a></dt>
+<dd><p>Validate the given value and return its “cleaned” value as an
+appropriate Python object. Raise ValidationError for any errors.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.pl.forms.PLNationalIDCardNumberField.has_valid_checksum">
+<span class="sig-name descname"><span class="pre">has_valid_checksum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/pl/forms.html#PLNationalIDCardNumberField.has_valid_checksum"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.pl.forms.PLNationalIDCardNumberField.has_valid_checksum" title="Link to this definition">¶</a></dt>
+<dd><p>Calculates a checksum with the provided algorithm.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.pl.forms.PLPESELField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.pl.forms.</span></span><span class="sig-name descname"><span class="pre">PLPESELField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/pl/forms.html#PLPESELField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.pl.forms.PLPESELField" title="Link to this definition">¶</a></dt>
+<dd><p>A form field that validates as Polish Identification Number (PESEL).</p>
+<dl class="simple">
+<dt>Checks the following rules:</dt><dd><ul class="simple">
+<li><p>the length consist of 11 digits</p></li>
+<li><p>has a valid checksum</p></li>
+<li><p>contains a valid birth date</p></li>
+</ul>
+</dd>
+</dl>
+<p>The algorithm is documented at <a class="reference external" href="http://en.wikipedia.org/wiki/PESEL">http://en.wikipedia.org/wiki/PESEL</a>.</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 1.4.</span></p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.pl.forms.PLPESELField.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/pl/forms.html#PLPESELField.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.pl.forms.PLPESELField.clean" title="Link to this definition">¶</a></dt>
+<dd><p>Validate the given value and return its “cleaned” value as an
+appropriate Python object. Raise ValidationError for any errors.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.pl.forms.PLPESELField.has_valid_birth_date">
+<span class="sig-name descname"><span class="pre">has_valid_birth_date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/pl/forms.html#PLPESELField.has_valid_birth_date"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.pl.forms.PLPESELField.has_valid_birth_date" title="Link to this definition">¶</a></dt>
+<dd><p>Checks whether the birth date encoded in PESEL is valid.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.pl.forms.PLPESELField.has_valid_checksum">
+<span class="sig-name descname"><span class="pre">has_valid_checksum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/pl/forms.html#PLPESELField.has_valid_checksum"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.pl.forms.PLPESELField.has_valid_checksum" title="Link to this definition">¶</a></dt>
+<dd><p>Calculates a checksum with the provided algorithm.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.pl.forms.PLPostalCodeField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.pl.forms.</span></span><span class="sig-name descname"><span class="pre">PLPostalCodeField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/pl/forms.html#PLPostalCodeField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.pl.forms.PLPostalCodeField" title="Link to this definition">¶</a></dt>
+<dd><p>A form field that validates as Polish postal code.</p>
+<p>Valid code is XX-XXX where X is digit.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.pl.forms.PLProvinceSelect">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.pl.forms.</span></span><span class="sig-name descname"><span class="pre">PLProvinceSelect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attrs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/pl/forms.html#PLProvinceSelect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.pl.forms.PLProvinceSelect" title="Link to this definition">¶</a></dt>
+<dd><p>A select widget with list of Polish administrative provinces as choices.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.pl.forms.PLREGONField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.pl.forms.</span></span><span class="sig-name descname"><span class="pre">PLREGONField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/pl/forms.html#PLREGONField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.pl.forms.PLREGONField" title="Link to this definition">¶</a></dt>
+<dd><p>A form field that validates its input is a REGON number.</p>
+<p>Valid regon number consists of 9 or 14 digits.
+See <a class="reference external" href="http://www.stat.gov.pl/bip/regon_ENG_HTML.htm">http://www.stat.gov.pl/bip/regon_ENG_HTML.htm</a> for more information.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.pl.forms.PLREGONField.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/pl/forms.html#PLREGONField.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.pl.forms.PLREGONField.clean" title="Link to this definition">¶</a></dt>
+<dd><p>Validate the given value and return its “cleaned” value as an
+appropriate Python object. Raise ValidationError for any errors.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.pl.forms.PLREGONField.has_valid_checksum">
+<span class="sig-name descname"><span class="pre">has_valid_checksum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/pl/forms.html#PLREGONField.has_valid_checksum"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.pl.forms.PLREGONField.has_valid_checksum" title="Link to this definition">¶</a></dt>
+<dd><p>Calculates a checksum with the provided algorithm.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="data">
+<h2>Data<a class="headerlink" href="#data" title="Link to this heading">¶</a></h2>
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.pl.pl_administrativeunits.ADMINISTRATIVE_UNIT_CHOICES">
+<span class="sig-prename descclassname"><span class="pre">localflavor.pl.pl_administrativeunits.</span></span><span class="sig-name descname"><span class="pre">ADMINISTRATIVE_UNIT_CHOICES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(('wroclaw',</span> <span class="pre">'Wrocław'),</span> <span class="pre">('jeleniagora',</span> <span class="pre">'Jelenia</span> <span class="pre">Góra'),</span> <span class="pre">('legnica',</span> <span class="pre">'Legnica'),</span> <span class="pre">('boleslawiecki',</span> <span class="pre">'bolesławiecki'),</span> <span class="pre">('dzierzoniowski',</span> <span class="pre">'dzierżoniowski'),</span> <span class="pre">('glogowski',</span> <span class="pre">'głogowski'),</span> <span class="pre">('gorowski',</span> <span class="pre">'górowski'),</span> <span class="pre">('jaworski',</span> <span class="pre">'jaworski'),</span> <span class="pre">('jeleniogorski',</span> <span class="pre">'jeleniogórski'),</span> <span class="pre">('kamiennogorski',</span> <span class="pre">'kamiennogórski'),</span> <span class="pre">('klodzki',</span> <span class="pre">'kłodzki'),</span> <span class="pre">('legnicki',</span> <span class="pre">'legnicki'),</span> <span class="pre">('lubanski',</span> <span class="pre">'lubański'),</span> <span class="pre">('lubinski',</span> <span class="pre">'lubiński'),</span> <span class="pre">('lwowecki',</span> <span class="pre">'lwówecki'),</span> <span class="pre">('milicki',</span> <span class="pre">'milicki'),</span> <span class="pre">('olesnicki',</span> <span class="pre">'oleśnicki'),</span> <span class="pre">('olawski',</span> <span class="pre">'oławski'),</span> <span class="pre">('polkowicki',</span> <span class="pre">'polkowicki'),</span> <span class="pre">('strzelinski',</span> <span class="pre">'strzeliński'),</span> <span class="pre">('sredzki',</span> <span class="pre">'średzki'),</span> <span class="pre">('swidnicki',</span> <span class="pre">'świdnicki'),</span> <span class="pre">('trzebnicki',</span> <span class="pre">'trzebnicki'),</span> <span class="pre">('walbrzyski',</span> <span class="pre">'wałbrzyski'),</span> <span class="pre">('wolowski',</span> <span class="pre">'wołowski'),</span> <span class="pre">('wroclawski',</span> <span class="pre">'wrocławski'),</span> <span class="pre">('zabkowicki',</span> <span class="pre">'ząbkowicki'),</span> <span class="pre">('zgorzelecki',</span> <span class="pre">'zgorzelecki'),</span> <span class="pre">('zlotoryjski',</span> <span class="pre">'złotoryjski'),</span> <span class="pre">('bydgoszcz',</span> <span class="pre">'Bydgoszcz'),</span> <span class="pre">('torun',</span> <span class="pre">'Toruń'),</span> <span class="pre">('wloclawek',</span> <span class="pre">'Włocławek'),</span> <span class="pre">('grudziadz',</span> <span class="pre">'Grudziądz'),</span> <span class="pre">('aleksandrowski',</span> <span class="pre">'aleksandrowski'),</span> <span class="pre">('brodnicki',</span> <span class="pre">'brodnicki'),</span> <span class="pre">('bydgoski',</span> <span class="pre">'bydgoski'),</span> <span class="pre">('chelminski',</span> <span class="pre">'chełmiński'),</span> <span class="pre">('golubsko-dobrzynski',</span> <span class="pre">'golubsko-dobrzyński'),</span> <span class="pre">('grudziadzki',</span> <span class="pre">'grudziądzki'),</span> <span class="pre">('inowroclawski',</span> <span class="pre">'inowrocławski'),</span> <span class="pre">('lipnowski',</span> <span class="pre">'lipnowski'),</span> <span class="pre">('mogilenski',</span> <span class="pre">'mogileński'),</span> <span class="pre">('nakielski',</span> <span class="pre">'nakielski'),</span> <span class="pre">('radziejowski',</span> <span class="pre">'radziejowski'),</span> <span class="pre">('rypinski',</span> <span class="pre">'rypiński'),</span> <span class="pre">('sepolenski',</span> <span class="pre">'sępoleński'),</span> <span class="pre">('swiecki',</span> <span class="pre">'świecki'),</span> <span class="pre">('torunski',</span> <span class="pre">'toruński'),</span> <span class="pre">('tucholski',</span> <span class="pre">'tucholski'),</span> <span class="pre">('wabrzeski',</span> <span class="pre">'wąbrzeski'),</span> <span class="pre">('wloclawski',</span> <span class="pre">'włocławski'),</span> <span class="pre">('zninski',</span> <span class="pre">'żniński'),</span> <span class="pre">('lublin',</span> <span class="pre">'Lublin'),</span> <span class="pre">('biala-podlaska',</span> <span class="pre">'Biała</span> <span class="pre">Podlaska'),</span> <span class="pre">('chelm',</span> <span class="pre">'Chełm'),</span> <span class="pre">('zamosc',</span> <span class="pre">'Zamość'),</span> <span class="pre">('bialski',</span> <span class="pre">'bialski'),</span> <span class="pre">('bilgorajski',</span> <span class="pre">'biłgorajski'),</span> <span class="pre">('chelmski',</span> <span class="pre">'chełmski'),</span> <span class="pre">('hrubieszowski',</span> <span class="pre">'hrubieszowski'),</span> <span class="pre">('janowski',</span> <span class="pre">'janowski'),</span> <span class="pre">('krasnostawski',</span> <span class="pre">'krasnostawski'),</span> <span class="pre">('krasnicki',</span> <span class="pre">'kraśnicki'),</span> <span class="pre">('lubartowski',</span> <span class="pre">'lubartowski'),</span> <span class="pre">('lubelski',</span> <span class="pre">'lubelski'),</span> <span class="pre">('leczynski',</span> <span class="pre">'łęczyński'),</span> <span class="pre">('lukowski',</span> <span class="pre">'łukowski'),</span> <span class="pre">('opolski',</span> <span class="pre">'opolski'),</span> <span class="pre">('parczewski',</span> <span class="pre">'parczewski'),</span> <span class="pre">('pulawski',</span> <span class="pre">'puławski'),</span> <span class="pre">('radzynski',</span> <span class="pre">'radzyński'),</span> <span class="pre">('rycki',</span> <span class="pre">'rycki'),</span> <span class="pre">('swidnicki',</span> <span class="pre">'świdnicki'),</span> <span class="pre">('tomaszowski',</span> <span class="pre">'tomaszowski'),</span> <span class="pre">('wlodawski',</span> <span class="pre">'włodawski'),</span> <span class="pre">('zamojski',</span> <span class="pre">'zamojski'),</span> <span class="pre">('gorzow-wielkopolski',</span> <span class="pre">'Gorzów</span> <span class="pre">Wielkopolski'),</span> <span class="pre">('zielona-gora',</span> <span class="pre">'Zielona</span> <span class="pre">Góra'),</span> <span class="pre">('gorzowski',</span> <span class="pre">'gorzowski'),</span> <span class="pre">('krosnienski',</span> <span class="pre">'krośnieński'),</span> <span class="pre">('miedzyrzecki',</span> <span class="pre">'międzyrzecki'),</span> <span class="pre">('nowosolski',</span> <span class="pre">'nowosolski'),</span> <span class="pre">('slubicki',</span> <span class="pre">'słubicki'),</span> <span class="pre">('strzelecko-drezdenecki',</span> <span class="pre">'strzelecko-drezdenecki'),</span> <span class="pre">('sulecinski',</span> <span class="pre">'suleńciński'),</span> <span class="pre">('swiebodzinski',</span> <span class="pre">'świebodziński'),</span> <span class="pre">('wschowski',</span> <span class="pre">'wschowski'),</span> <span class="pre">('zielonogorski',</span> <span class="pre">'zielonogórski'),</span> <span class="pre">('zaganski',</span> <span class="pre">'żagański'),</span> <span class="pre">('zarski',</span> <span class="pre">'żarski'),</span> <span class="pre">('lodz',</span> <span class="pre">'Łódź'),</span> <span class="pre">('piotrkow-trybunalski',</span> <span class="pre">'Piotrków</span> <span class="pre">Trybunalski'),</span> <span class="pre">('skierniewice',</span> <span class="pre">'Skierniewice'),</span> <span class="pre">('belchatowski',</span> <span class="pre">'bełchatowski'),</span> <span class="pre">('brzezinski',</span> <span class="pre">'brzeziński'),</span> <span class="pre">('kutnowski',</span> <span class="pre">'kutnowski'),</span> <span class="pre">('laski',</span> <span class="pre">'łaski'),</span> <span class="pre">('leczycki',</span> <span class="pre">'łęczycki'),</span> <span class="pre">('lowicki',</span> <span class="pre">'łowicki'),</span> <span class="pre">('lodzki</span> <span class="pre">wschodni',</span> <span class="pre">'łódzki</span> <span class="pre">wschodni'),</span> <span class="pre">('opoczynski',</span> <span class="pre">'opoczyński'),</span> <span class="pre">('pabianicki',</span> <span class="pre">'pabianicki'),</span> <span class="pre">('pajeczanski',</span> <span class="pre">'pajęczański'),</span> <span class="pre">('piotrkowski',</span> <span class="pre">'piotrkowski'),</span> <span class="pre">('poddebicki',</span> <span class="pre">'poddębicki'),</span> <span class="pre">('radomszczanski',</span> <span class="pre">'radomszczański'),</span> <span class="pre">('rawski',</span> <span class="pre">'rawski'),</span> <span class="pre">('sieradzki',</span> <span class="pre">'sieradzki'),</span> <span class="pre">('skierniewicki',</span> <span class="pre">'skierniewicki'),</span> <span class="pre">('tomaszowski',</span> <span class="pre">'tomaszowski'),</span> <span class="pre">('wielunski',</span> <span class="pre">'wieluński'),</span> <span class="pre">('wieruszowski',</span> <span class="pre">'wieruszowski'),</span> <span class="pre">('zdunskowolski',</span> <span class="pre">'zduńskowolski'),</span> <span class="pre">('zgierski',</span> <span class="pre">'zgierski'),</span> <span class="pre">('krakow',</span> <span class="pre">'Kraków'),</span> <span class="pre">('tarnow',</span> <span class="pre">'Tarnów'),</span> <span class="pre">('nowy-sacz',</span> <span class="pre">'Nowy</span> <span class="pre">Sącz'),</span> <span class="pre">('bochenski',</span> <span class="pre">'bocheński'),</span> <span class="pre">('brzeski',</span> <span class="pre">'brzeski'),</span> <span class="pre">('chrzanowski',</span> <span class="pre">'chrzanowski'),</span> <span class="pre">('dabrowski',</span> <span class="pre">'dąbrowski'),</span> <span class="pre">('gorlicki',</span> <span class="pre">'gorlicki'),</span> <span class="pre">('krakowski',</span> <span class="pre">'krakowski'),</span> <span class="pre">('limanowski',</span> <span class="pre">'limanowski'),</span> <span class="pre">('miechowski',</span> <span class="pre">'miechowski'),</span> <span class="pre">('myslenicki',</span> <span class="pre">'myślenicki'),</span> <span class="pre">('nowosadecki',</span> <span class="pre">'nowosądecki'),</span> <span class="pre">('nowotarski',</span> <span class="pre">'nowotarski'),</span> <span class="pre">('olkuski',</span> <span class="pre">'olkuski'),</span> <span class="pre">('oswiecimski',</span> <span class="pre">'oświęcimski'),</span> <span class="pre">('proszowicki',</span> <span class="pre">'proszowicki'),</span> <span class="pre">('suski',</span> <span class="pre">'suski'),</span> <span class="pre">('tarnowski',</span> <span class="pre">'tarnowski'),</span> <span class="pre">('tatrzanski',</span> <span class="pre">'tatrzański'),</span> <span class="pre">('wadowicki',</span> <span class="pre">'wadowicki'),</span> <span class="pre">('wielicki',</span> <span class="pre">'wielicki'),</span> <span class="pre">('warszawa',</span> <span class="pre">'Warszawa'),</span> <span class="pre">('ostroleka',</span> <span class="pre">'Ostrołęka'),</span> <span class="pre">('plock',</span> <span class="pre">'Płock'),</span> <span class="pre">('radom',</span> <span class="pre">'Radom'),</span> <span class="pre">('siedlce',</span> <span class="pre">'Siedlce'),</span> <span class="pre">('bialobrzeski',</span> <span class="pre">'białobrzeski'),</span> <span class="pre">('ciechanowski',</span> <span class="pre">'ciechanowski'),</span> <span class="pre">('garwolinski',</span> <span class="pre">'garwoliński'),</span> <span class="pre">('gostyninski',</span> <span class="pre">'gostyniński'),</span> <span class="pre">('grodziski',</span> <span class="pre">'grodziski'),</span> <span class="pre">('grojecki',</span> <span class="pre">'grójecki'),</span> <span class="pre">('kozienicki',</span> <span class="pre">'kozenicki'),</span> <span class="pre">('legionowski',</span> <span class="pre">'legionowski'),</span> <span class="pre">('lipski',</span> <span class="pre">'lipski'),</span> <span class="pre">('losicki',</span> <span class="pre">'łosicki'),</span> <span class="pre">('makowski',</span> <span class="pre">'makowski'),</span> <span class="pre">('minski',</span> <span class="pre">'miński'),</span> <span class="pre">('mlawski',</span> <span class="pre">'mławski'),</span> <span class="pre">('nowodworski',</span> <span class="pre">'nowodworski'),</span> <span class="pre">('ostrolecki',</span> <span class="pre">'ostrołęcki'),</span> <span class="pre">('ostrowski',</span> <span class="pre">'ostrowski'),</span> <span class="pre">('otwocki',</span> <span class="pre">'otwocki'),</span> <span class="pre">('piaseczynski',</span> <span class="pre">'piaseczyński'),</span> <span class="pre">('plocki',</span> <span class="pre">'płocki'),</span> <span class="pre">('plonski',</span> <span class="pre">'płoński'),</span> <span class="pre">('pruszkowski',</span> <span class="pre">'pruszkowski'),</span> <span class="pre">('przasnyski',</span> <span class="pre">'przasnyski'),</span> <span class="pre">('przysuski',</span> <span class="pre">'przysuski'),</span> <span class="pre">('pultuski',</span> <span class="pre">'pułtuski'),</span> <span class="pre">('radomski',</span> <span class="pre">'radomski'),</span> <span class="pre">('siedlecki',</span> <span class="pre">'siedlecki'),</span> <span class="pre">('sierpecki',</span> <span class="pre">'sierpecki'),</span> <span class="pre">('sochaczewski',</span> <span class="pre">'sochaczewski'),</span> <span class="pre">('sokolowski',</span> <span class="pre">'sokołowski'),</span> <span class="pre">('szydlowiecki',</span> <span class="pre">'szydłowiecki'),</span> <span class="pre">('warszawski-zachodni',</span> <span class="pre">'warszawski</span> <span class="pre">zachodni'),</span> <span class="pre">('wegrowski',</span> <span class="pre">'węgrowski'),</span> <span class="pre">('wolominski',</span> <span class="pre">'wołomiński'),</span> <span class="pre">('wyszkowski',</span> <span class="pre">'wyszkowski'),</span> <span class="pre">('zwolenski',</span> <span class="pre">'zwoleński'),</span> <span class="pre">('zurominski',</span> <span class="pre">'żuromiński'),</span> <span class="pre">('zyrardowski',</span> <span class="pre">'żyrardowski'),</span> <span class="pre">('opole',</span> <span class="pre">'Opole'),</span> <span class="pre">('brzeski',</span> <span class="pre">'brzeski'),</span> <span class="pre">('glubczycki',</span> <span class="pre">'głubczyski'),</span> <span class="pre">('kedzierzynsko-kozielski',</span> <span class="pre">'kędzierzyńsko-kozielski'),</span> <span class="pre">('kluczborski',</span> <span class="pre">'kluczborski'),</span> <span class="pre">('krapkowicki',</span> <span class="pre">'krapkowicki'),</span> <span class="pre">('namyslowski',</span> <span class="pre">'namysłowski'),</span> <span class="pre">('nyski',</span> <span class="pre">'nyski'),</span> <span class="pre">('oleski',</span> <span class="pre">'oleski'),</span> <span class="pre">('opolski',</span> <span class="pre">'opolski'),</span> <span class="pre">('prudnicki',</span> <span class="pre">'prudnicki'),</span> <span class="pre">('strzelecki',</span> <span class="pre">'strzelecki'),</span> <span class="pre">('rzeszow',</span> <span class="pre">'Rzeszów'),</span> <span class="pre">('krosno',</span> <span class="pre">'Krosno'),</span> <span class="pre">('przemysl',</span> <span class="pre">'Przemyśl'),</span> <span class="pre">('tarnobrzeg',</span> <span class="pre">'Tarnobrzeg'),</span> <span class="pre">('bieszczadzki',</span> <span class="pre">'bieszczadzki'),</span> <span class="pre">('brzozowski',</span> <span class="pre">'brzozowski'),</span> <span class="pre">('debicki',</span> <span class="pre">'dębicki'),</span> <span class="pre">('jaroslawski',</span> <span class="pre">'jarosławski'),</span> <span class="pre">('jasielski',</span> <span class="pre">'jasielski'),</span> <span class="pre">('kolbuszowski',</span> <span class="pre">'kolbuszowski'),</span> <span class="pre">('krosnienski',</span> <span class="pre">'krośnieński'),</span> <span class="pre">('leski',</span> <span class="pre">'leski'),</span> <span class="pre">('lezajski',</span> <span class="pre">'leżajski'),</span> <span class="pre">('lubaczowski',</span> <span class="pre">'lubaczowski'),</span> <span class="pre">('lancucki',</span> <span class="pre">'łańcucki'),</span> <span class="pre">('mielecki',</span> <span class="pre">'mielecki'),</span> <span class="pre">('nizanski',</span> <span class="pre">'niżański'),</span> <span class="pre">('przemyski',</span> <span class="pre">'przemyski'),</span> <span class="pre">('przeworski',</span> <span class="pre">'przeworski'),</span> <span class="pre">('ropczycko-sedziszowski',</span> <span class="pre">'ropczycko-sędziszowski'),</span> <span class="pre">('rzeszowski',</span> <span class="pre">'rzeszowski'),</span> <span class="pre">('sanocki',</span> <span class="pre">'sanocki'),</span> <span class="pre">('stalowowolski',</span> <span class="pre">'stalowowolski'),</span> <span class="pre">('strzyzowski',</span> <span class="pre">'strzyżowski'),</span> <span class="pre">('tarnobrzeski',</span> <span class="pre">'tarnobrzeski'),</span> <span class="pre">('bialystok',</span> <span class="pre">'Białystok'),</span> <span class="pre">('lomza',</span> <span class="pre">'Łomża'),</span> <span class="pre">('suwalki',</span> <span class="pre">'Suwałki'),</span> <span class="pre">('augustowski',</span> <span class="pre">'augustowski'),</span> <span class="pre">('bialostocki',</span> <span class="pre">'białostocki'),</span> <span class="pre">('bielski',</span> <span class="pre">'bielski'),</span> <span class="pre">('grajewski',</span> <span class="pre">'grajewski'),</span> <span class="pre">('hajnowski',</span> <span class="pre">'hajnowski'),</span> <span class="pre">('kolnenski',</span> <span class="pre">'kolneński'),</span> <span class="pre">('łomzynski',</span> <span class="pre">'łomżyński'),</span> <span class="pre">('moniecki',</span> <span class="pre">'moniecki'),</span> <span class="pre">('sejnenski',</span> <span class="pre">'sejneński'),</span> <span class="pre">('siemiatycki',</span> <span class="pre">'siematycki'),</span> <span class="pre">('sokolski',</span> <span class="pre">'sokólski'),</span> <span class="pre">('suwalski',</span> <span class="pre">'suwalski'),</span> <span class="pre">('wysokomazowiecki',</span> <span class="pre">'wysokomazowiecki'),</span> <span class="pre">('zambrowski',</span> <span class="pre">'zambrowski'),</span> <span class="pre">('gdansk',</span> <span class="pre">'Gdańsk'),</span> <span class="pre">('gdynia',</span> <span class="pre">'Gdynia'),</span> <span class="pre">('slupsk',</span> <span class="pre">'Słupsk'),</span> <span class="pre">('sopot',</span> <span class="pre">'Sopot'),</span> <span class="pre">('bytowski',</span> <span class="pre">'bytowski'),</span> <span class="pre">('chojnicki',</span> <span class="pre">'chojnicki'),</span> <span class="pre">('czluchowski',</span> <span class="pre">'człuchowski'),</span> <span class="pre">('kartuski',</span> <span class="pre">'kartuski'),</span> <span class="pre">('koscierski',</span> <span class="pre">'kościerski'),</span> <span class="pre">('kwidzynski',</span> <span class="pre">'kwidzyński'),</span> <span class="pre">('leborski',</span> <span class="pre">'lęborski'),</span> <span class="pre">('malborski',</span> <span class="pre">'malborski'),</span> <span class="pre">('nowodworski',</span> <span class="pre">'nowodworski'),</span> <span class="pre">('gdanski',</span> <span class="pre">'gdański'),</span> <span class="pre">('pucki',</span> <span class="pre">'pucki'),</span> <span class="pre">('slupski',</span> <span class="pre">'słupski'),</span> <span class="pre">('starogardzki',</span> <span class="pre">'starogardzki'),</span> <span class="pre">('sztumski',</span> <span class="pre">'sztumski'),</span> <span class="pre">('tczewski',</span> <span class="pre">'tczewski'),</span> <span class="pre">('wejherowski',</span> <span class="pre">'wejcherowski'),</span> <span class="pre">('katowice',</span> <span class="pre">'Katowice'),</span> <span class="pre">('bielsko-biala',</span> <span class="pre">'Bielsko-Biała'),</span> <span class="pre">('bytom',</span> <span class="pre">'Bytom'),</span> <span class="pre">('chorzow',</span> <span class="pre">'Chorzów'),</span> <span class="pre">('czestochowa',</span> <span class="pre">'Częstochowa'),</span> <span class="pre">('dabrowa-gornicza',</span> <span class="pre">'Dąbrowa</span> <span class="pre">Górnicza'),</span> <span class="pre">('gliwice',</span> <span class="pre">'Gliwice'),</span> <span class="pre">('jastrzebie-zdroj',</span> <span class="pre">'Jastrzębie</span> <span class="pre">Zdrój'),</span> <span class="pre">('jaworzno',</span> <span class="pre">'Jaworzno'),</span> <span class="pre">('myslowice',</span> <span class="pre">'Mysłowice'),</span> <span class="pre">('piekary-slaskie',</span> <span class="pre">'Piekary</span> <span class="pre">Śląskie'),</span> <span class="pre">('ruda-slaska',</span> <span class="pre">'Ruda</span> <span class="pre">Śląska'),</span> <span class="pre">('rybnik',</span> <span class="pre">'Rybnik'),</span> <span class="pre">('siemianowice-slaskie',</span> <span class="pre">'Siemianowice</span> <span class="pre">Śląskie'),</span> <span class="pre">('sosnowiec',</span> <span class="pre">'Sosnowiec'),</span> <span class="pre">('swietochlowice',</span> <span class="pre">'Świętochłowice'),</span> <span class="pre">('tychy',</span> <span class="pre">'Tychy'),</span> <span class="pre">('zabrze',</span> <span class="pre">'Zabrze'),</span> <span class="pre">('zory',</span> <span class="pre">'Żory'),</span> <span class="pre">('bedzinski',</span> <span class="pre">'będziński'),</span> <span class="pre">('bielski',</span> <span class="pre">'bielski'),</span> <span class="pre">('bierunsko-ledzinski',</span> <span class="pre">'bieruńsko-lędziński'),</span> <span class="pre">('cieszynski',</span> <span class="pre">'cieszyński'),</span> <span class="pre">('czestochowski',</span> <span class="pre">'częstochowski'),</span> <span class="pre">('gliwicki',</span> <span class="pre">'gliwicki'),</span> <span class="pre">('klobucki',</span> <span class="pre">'kłobucki'),</span> <span class="pre">('lubliniecki',</span> <span class="pre">'lubliniecki'),</span> <span class="pre">('mikolowski',</span> <span class="pre">'mikołowski'),</span> <span class="pre">('myszkowski',</span> <span class="pre">'myszkowski'),</span> <span class="pre">('pszczynski',</span> <span class="pre">'pszczyński'),</span> <span class="pre">('raciborski',</span> <span class="pre">'raciborski'),</span> <span class="pre">('rybnicki',</span> <span class="pre">'rybnicki'),</span> <span class="pre">('tarnogorski',</span> <span class="pre">'tarnogórski'),</span> <span class="pre">('wodzislawski',</span> <span class="pre">'wodzisławski'),</span> <span class="pre">('zawiercianski',</span> <span class="pre">'zawierciański'),</span> <span class="pre">('zywiecki',</span> <span class="pre">'żywiecki'),</span> <span class="pre">('kielce',</span> <span class="pre">'Kielce'),</span> <span class="pre">('buski',</span> <span class="pre">'buski'),</span> <span class="pre">('jedrzejowski',</span> <span class="pre">'jędrzejowski'),</span> <span class="pre">('kazimierski',</span> <span class="pre">'kazimierski'),</span> <span class="pre">('kielecki',</span> <span class="pre">'kielecki'),</span> <span class="pre">('konecki',</span> <span class="pre">'konecki'),</span> <span class="pre">('opatowski',</span> <span class="pre">'opatowski'),</span> <span class="pre">('ostrowiecki',</span> <span class="pre">'ostrowiecki'),</span> <span class="pre">('pinczowski',</span> <span class="pre">'pińczowski'),</span> <span class="pre">('sandomierski',</span> <span class="pre">'sandomierski'),</span> <span class="pre">('skarzyski',</span> <span class="pre">'skarżyski'),</span> <span class="pre">('starachowicki',</span> <span class="pre">'starachowicki'),</span> <span class="pre">('staszowski',</span> <span class="pre">'staszowski'),</span> <span class="pre">('wloszczowski',</span> <span class="pre">'włoszczowski'),</span> <span class="pre">('olsztyn',</span> <span class="pre">'Olsztyn'),</span> <span class="pre">('elblag',</span> <span class="pre">'Elbląg'),</span> <span class="pre">('bartoszycki',</span> <span class="pre">'bartoszycki'),</span> <span class="pre">('braniewski',</span> <span class="pre">'braniewski'),</span> <span class="pre">('dzialdowski',</span> <span class="pre">'działdowski'),</span> <span class="pre">('elblaski',</span> <span class="pre">'elbląski'),</span> <span class="pre">('elcki',</span> <span class="pre">'ełcki'),</span> <span class="pre">('gizycki',</span> <span class="pre">'giżycki'),</span> <span class="pre">('goldapski',</span> <span class="pre">'gołdapski'),</span> <span class="pre">('ilawski',</span> <span class="pre">'iławski'),</span> <span class="pre">('ketrzynski',</span> <span class="pre">'kętrzyński'),</span> <span class="pre">('lidzbarski',</span> <span class="pre">'lidzbarski'),</span> <span class="pre">('mragowski',</span> <span class="pre">'mrągowski'),</span> <span class="pre">('nidzicki',</span> <span class="pre">'nidzicki'),</span> <span class="pre">('nowomiejski',</span> <span class="pre">'nowomiejski'),</span> <span class="pre">('olecki',</span> <span class="pre">'olecki'),</span> <span class="pre">('olsztynski',</span> <span class="pre">'olsztyński'),</span> <span class="pre">('ostrodzki',</span> <span class="pre">'ostródzki'),</span> <span class="pre">('piski',</span> <span class="pre">'piski'),</span> <span class="pre">('szczycienski',</span> <span class="pre">'szczycieński'),</span> <span class="pre">('wegorzewski',</span> <span class="pre">'węgorzewski'),</span> <span class="pre">('poznan',</span> <span class="pre">'Poznań'),</span> <span class="pre">('kalisz',</span> <span class="pre">'Kalisz'),</span> <span class="pre">('konin',</span> <span class="pre">'Konin'),</span> <span class="pre">('leszno',</span> <span class="pre">'Leszno'),</span> <span class="pre">('chodzieski',</span> <span class="pre">'chodziejski'),</span> <span class="pre">('czarnkowsko-trzcianecki',</span> <span class="pre">'czarnkowsko-trzcianecki'),</span> <span class="pre">('gnieznienski',</span> <span class="pre">'gnieźnieński'),</span> <span class="pre">('gostynski',</span> <span class="pre">'gostyński'),</span> <span class="pre">('grodziski',</span> <span class="pre">'grodziski'),</span> <span class="pre">('jarocinski',</span> <span class="pre">'jarociński'),</span> <span class="pre">('kaliski',</span> <span class="pre">'kaliski'),</span> <span class="pre">('kepinski',</span> <span class="pre">'kępiński'),</span> <span class="pre">('kolski',</span> <span class="pre">'kolski'),</span> <span class="pre">('koninski',</span> <span class="pre">'koniński'),</span> <span class="pre">('koscianski',</span> <span class="pre">'kościański'),</span> <span class="pre">('krotoszynski',</span> <span class="pre">'krotoszyński'),</span> <span class="pre">('leszczynski',</span> <span class="pre">'leszczyński'),</span> <span class="pre">('miedzychodzki',</span> <span class="pre">'międzychodzki'),</span> <span class="pre">('nowotomyski',</span> <span class="pre">'nowotomyski'),</span> <span class="pre">('obornicki',</span> <span class="pre">'obornicki'),</span> <span class="pre">('ostrowski',</span> <span class="pre">'ostrowski'),</span> <span class="pre">('ostrzeszowski',</span> <span class="pre">'ostrzeszowski'),</span> <span class="pre">('pilski',</span> <span class="pre">'pilski'),</span> <span class="pre">('pleszewski',</span> <span class="pre">'pleszewski'),</span> <span class="pre">('poznanski',</span> <span class="pre">'poznański'),</span> <span class="pre">('rawicki',</span> <span class="pre">'rawicki'),</span> <span class="pre">('slupecki',</span> <span class="pre">'słupecki'),</span> <span class="pre">('szamotulski',</span> <span class="pre">'szamotulski'),</span> <span class="pre">('sredzki',</span> <span class="pre">'średzki'),</span> <span class="pre">('sremski',</span> <span class="pre">'śremski'),</span> <span class="pre">('turecki',</span> <span class="pre">'turecki'),</span> <span class="pre">('wagrowiecki',</span> <span class="pre">'wągrowiecki'),</span> <span class="pre">('wolsztynski',</span> <span class="pre">'wolsztyński'),</span> <span class="pre">('wrzesinski',</span> <span class="pre">'wrzesiński'),</span> <span class="pre">('zlotowski',</span> <span class="pre">'złotowski'),</span> <span class="pre">('bialogardzki',</span> <span class="pre">'białogardzki'),</span> <span class="pre">('choszczenski',</span> <span class="pre">'choszczeński'),</span> <span class="pre">('drawski',</span> <span class="pre">'drawski'),</span> <span class="pre">('goleniowski',</span> <span class="pre">'goleniowski'),</span> <span class="pre">('gryficki',</span> <span class="pre">'gryficki'),</span> <span class="pre">('gryfinski',</span> <span class="pre">'gryfiński'),</span> <span class="pre">('kamienski',</span> <span class="pre">'kamieński'),</span> <span class="pre">('kolobrzeski',</span> <span class="pre">'kołobrzeski'),</span> <span class="pre">('koszalinski',</span> <span class="pre">'koszaliński'),</span> <span class="pre">('lobeski',</span> <span class="pre">'łobeski'),</span> <span class="pre">('mysliborski',</span> <span class="pre">'myśliborski'),</span> <span class="pre">('policki',</span> <span class="pre">'policki'),</span> <span class="pre">('pyrzycki',</span> <span class="pre">'pyrzycki'),</span> <span class="pre">('slawienski',</span> <span class="pre">'sławieński'),</span> <span class="pre">('stargardzki',</span> <span class="pre">'stargardzki'),</span> <span class="pre">('szczecinecki',</span> <span class="pre">'szczecinecki'),</span> <span class="pre">('swidwinski',</span> <span class="pre">'świdwiński'),</span> <span class="pre">('walecki',</span> <span class="pre">'wałecki'))</span></em><a class="headerlink" href="#localflavor.pl.pl_administrativeunits.ADMINISTRATIVE_UNIT_CHOICES" title="Link to this definition">¶</a></dt>
+<dd><p>Polish administrative units as in <a class="reference external" href="http://pl.wikipedia.org/wiki/Podzia%C5%82_administracyjny_Polski">http://pl.wikipedia.org/wiki/Podzia%C5%82_administracyjny_Polski</a></p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.pl.pl_voivodeships.VOIVODESHIP_CHOICES">
+<span class="sig-prename descclassname"><span class="pre">localflavor.pl.pl_voivodeships.</span></span><span class="sig-name descname"><span class="pre">VOIVODESHIP_CHOICES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(('lower_silesia',</span> <span class="pre">'Lower</span> <span class="pre">Silesian'),</span> <span class="pre">('kuyavia-pomerania',</span> <span class="pre">'Kuyavian-Pomeranian'),</span> <span class="pre">('lublin',</span> <span class="pre">'Lublin'),</span> <span class="pre">('lubusz',</span> <span class="pre">'Lubusz'),</span> <span class="pre">('lodz',</span> <span class="pre">'Lodz'),</span> <span class="pre">('lesser_poland',</span> <span class="pre">'Lesser</span> <span class="pre">Poland'),</span> <span class="pre">('masovia',</span> <span class="pre">'Masovian'),</span> <span class="pre">('opole',</span> <span class="pre">'Opole'),</span> <span class="pre">('subcarpatia',</span> <span class="pre">'Subcarpathian'),</span> <span class="pre">('podlasie',</span> <span class="pre">'Podlasie'),</span> <span class="pre">('pomerania',</span> <span class="pre">'Pomeranian'),</span> <span class="pre">('silesia',</span> <span class="pre">'Silesian'),</span> <span class="pre">('swietokrzyskie',</span> <span class="pre">'Swietokrzyskie'),</span> <span class="pre">('warmia-masuria',</span> <span class="pre">'Warmian-Masurian'),</span> <span class="pre">('greater_poland',</span> <span class="pre">'Greater</span> <span class="pre">Poland'),</span> <span class="pre">('west_pomerania',</span> <span class="pre">'West</span> <span class="pre">Pomeranian'))</span></em><a class="headerlink" href="#localflavor.pl.pl_voivodeships.VOIVODESHIP_CHOICES" title="Link to this definition">¶</a></dt>
+<dd><p>Polish voivodeship as in <a class="reference external" href="http://en.wikipedia.org/wiki/Poland#Administrative_division">http://en.wikipedia.org/wiki/Poland#Administrative_division</a></p>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Poland (<code class="docutils literal notranslate"><span class="pre">pl</span></code>)</a><ul>
+<li><a class="reference internal" href="#module-localflavor.pl.forms">Forms</a><ul>
+<li><a class="reference internal" href="#localflavor.pl.forms.PLCountySelect"><code class="docutils literal notranslate"><span class="pre">PLCountySelect</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.pl.forms.PLNIPField"><code class="docutils literal notranslate"><span class="pre">PLNIPField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.pl.forms.PLNIPField.clean"><code class="docutils literal notranslate"><span class="pre">PLNIPField.clean()</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.pl.forms.PLNIPField.has_valid_checksum"><code class="docutils literal notranslate"><span class="pre">PLNIPField.has_valid_checksum()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.pl.forms.PLNationalIDCardNumberField"><code class="docutils literal notranslate"><span class="pre">PLNationalIDCardNumberField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.pl.forms.PLNationalIDCardNumberField.clean"><code class="docutils literal notranslate"><span class="pre">PLNationalIDCardNumberField.clean()</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.pl.forms.PLNationalIDCardNumberField.has_valid_checksum"><code class="docutils literal notranslate"><span class="pre">PLNationalIDCardNumberField.has_valid_checksum()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.pl.forms.PLPESELField"><code class="docutils literal notranslate"><span class="pre">PLPESELField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.pl.forms.PLPESELField.clean"><code class="docutils literal notranslate"><span class="pre">PLPESELField.clean()</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.pl.forms.PLPESELField.has_valid_birth_date"><code class="docutils literal notranslate"><span class="pre">PLPESELField.has_valid_birth_date()</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.pl.forms.PLPESELField.has_valid_checksum"><code class="docutils literal notranslate"><span class="pre">PLPESELField.has_valid_checksum()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.pl.forms.PLPostalCodeField"><code class="docutils literal notranslate"><span class="pre">PLPostalCodeField</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.pl.forms.PLProvinceSelect"><code class="docutils literal notranslate"><span class="pre">PLProvinceSelect</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.pl.forms.PLREGONField"><code class="docutils literal notranslate"><span class="pre">PLREGONField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.pl.forms.PLREGONField.clean"><code class="docutils literal notranslate"><span class="pre">PLREGONField.clean()</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.pl.forms.PLREGONField.has_valid_checksum"><code class="docutils literal notranslate"><span class="pre">PLREGONField.has_valid_checksum()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data">Data</a><ul>
+<li><a class="reference internal" href="#localflavor.pl.pl_administrativeunits.ADMINISTRATIVE_UNIT_CHOICES"><code class="docutils literal notranslate"><span class="pre">ADMINISTRATIVE_UNIT_CHOICES</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.pl.pl_voivodeships.VOIVODESHIP_CHOICES"><code class="docutils literal notranslate"><span class="pre">VOIVODESHIP_CHOICES</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="pk.html"
+                          title="previous chapter">Pakistan (<code class="docutils literal notranslate"><span class="pre">pk</span></code>)</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="pt.html"
+                          title="next chapter">Portugal (<code class="docutils literal notranslate"><span class="pre">pt</span></code>)</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/localflavor/pl.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="pt.html" title="Portugal (pt)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pk.html" title="Pakistan (pk)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Poland (<code class="docutils literal notranslate"><span class="pre">pl</span></code>)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright Django Software Foundation and individual contributors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+  </body>
+</html>

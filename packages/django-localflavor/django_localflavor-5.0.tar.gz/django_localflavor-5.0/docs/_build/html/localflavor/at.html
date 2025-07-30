@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Austria (at) &#8212; django-localflavor 4.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=2bf1fcf8" />
+    
+    <script src="../_static/documentation_options.js?v=9f5556dd"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Australia (au)" href="au.html" />
+    <link rel="prev" title="Argentina (ar)" href="ar.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="au.html" title="Australia (au)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="ar.html" title="Argentina (ar)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Austria (<code class="docutils literal notranslate"><span class="pre">at</span></code>)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-localflavor.at.forms">
+<span id="austria-at"></span><h1>Austria (<code class="docutils literal notranslate"><span class="pre">at</span></code>)<a class="headerlink" href="#module-localflavor.at.forms" title="Link to this heading">¶</a></h1>
+<p>AT-specific Form helpers.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.at.forms.ATSocialSecurityNumberField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.at.forms.</span></span><span class="sig-name descname"><span class="pre">ATSocialSecurityNumberField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/at/forms.html#ATSocialSecurityNumberField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.at.forms.ATSocialSecurityNumberField" title="Link to this definition">¶</a></dt>
+<dd><p>Austrian Social Security numbers are composed of a 4 digits and 6 digits field.</p>
+<p>The latter represents in most cases the person’s birthdate while
+the first 4 digits represent a 3-digits counter and a one-digit checksum.</p>
+<p>The 6-digits field can also differ from the person’s birthdate if the
+3-digits counter suffered an overflow.</p>
+<p>This code is based on information available on
+<a class="reference external" href="http://de.wikipedia.org/wiki/Sozialversicherungsnummer#.C3.96sterreich">http://de.wikipedia.org/wiki/Sozialversicherungsnummer#.C3.96sterreich</a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.at.forms.ATSocialSecurityNumberField.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/at/forms.html#ATSocialSecurityNumberField.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.at.forms.ATSocialSecurityNumberField.clean" title="Link to this definition">¶</a></dt>
+<dd><p>Validate the given value and return its “cleaned” value as an
+appropriate Python object. Raise ValidationError for any errors.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.at.forms.ATStateSelect">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.at.forms.</span></span><span class="sig-name descname"><span class="pre">ATStateSelect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attrs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/at/forms.html#ATStateSelect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.at.forms.ATStateSelect" title="Link to this definition">¶</a></dt>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">Select</span></code> widget that uses a list of AT states as its choices.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.at.forms.ATZipCodeField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.at.forms.</span></span><span class="sig-name descname"><span class="pre">ATZipCodeField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/at/forms.html#ATZipCodeField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.at.forms.ATZipCodeField" title="Link to this definition">¶</a></dt>
+<dd><p>A form field that validates its input is an Austrian postcode.</p>
+<p>Accepts 4 digits (first digit must be greater than 0).</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.at.at_states.STATE_CHOICES">
+<span class="sig-prename descclassname"><span class="pre">localflavor.at.at_states.</span></span><span class="sig-name descname"><span class="pre">STATE_CHOICES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(('BL',</span> <span class="pre">'Burgenland'),</span> <span class="pre">('KA',</span> <span class="pre">'Carinthia'),</span> <span class="pre">('NO',</span> <span class="pre">'Lower</span> <span class="pre">Austria'),</span> <span class="pre">('OO',</span> <span class="pre">'Upper</span> <span class="pre">Austria'),</span> <span class="pre">('SA',</span> <span class="pre">'Salzburg'),</span> <span class="pre">('ST',</span> <span class="pre">'Styria'),</span> <span class="pre">('TI',</span> <span class="pre">'Tyrol'),</span> <span class="pre">('VO',</span> <span class="pre">'Vorarlberg'),</span> <span class="pre">('WI',</span> <span class="pre">'Vienna'))</span></em><a class="headerlink" href="#localflavor.at.at_states.STATE_CHOICES" title="Link to this definition">¶</a></dt>
+<dd><p>A list of Austrian states according to <a class="reference external" href="https://en.wikipedia.org/wiki/States_of_Austria">https://en.wikipedia.org/wiki/States_of_Austria</a></p>
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Austria (<code class="docutils literal notranslate"><span class="pre">at</span></code>)</a><ul>
+<li><a class="reference internal" href="#localflavor.at.forms.ATSocialSecurityNumberField"><code class="docutils literal notranslate"><span class="pre">ATSocialSecurityNumberField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.at.forms.ATSocialSecurityNumberField.clean"><code class="docutils literal notranslate"><span class="pre">ATSocialSecurityNumberField.clean()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.at.forms.ATStateSelect"><code class="docutils literal notranslate"><span class="pre">ATStateSelect</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.at.forms.ATZipCodeField"><code class="docutils literal notranslate"><span class="pre">ATZipCodeField</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.at.at_states.STATE_CHOICES"><code class="docutils literal notranslate"><span class="pre">STATE_CHOICES</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="ar.html"
+                          title="previous chapter">Argentina (<code class="docutils literal notranslate"><span class="pre">ar</span></code>)</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="au.html"
+                          title="next chapter">Australia (<code class="docutils literal notranslate"><span class="pre">au</span></code>)</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/localflavor/at.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="au.html" title="Australia (au)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="ar.html" title="Argentina (ar)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Austria (<code class="docutils literal notranslate"><span class="pre">at</span></code>)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright Django Software Foundation and individual contributors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+  </body>
+</html>

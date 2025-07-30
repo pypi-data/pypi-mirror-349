@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Japan (jp) &#8212; django-localflavor 4.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=2bf1fcf8" />
+    
+    <script src="../_static/documentation_options.js?v=9f5556dd"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Kuwait (kw)" href="kw.html" />
+    <link rel="prev" title="Italy (it)" href="it.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="kw.html" title="Kuwait (kw)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="it.html" title="Italy (it)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Japan (<code class="docutils literal notranslate"><span class="pre">jp</span></code>)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="japan-jp">
+<h1>Japan (<code class="docutils literal notranslate"><span class="pre">jp</span></code>)<a class="headerlink" href="#japan-jp" title="Link to this heading">¶</a></h1>
+<section id="module-localflavor.jp.forms">
+<span id="forms"></span><h2>Forms<a class="headerlink" href="#module-localflavor.jp.forms" title="Link to this heading">¶</a></h2>
+<p>JP-specific Form helpers.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.jp.forms.JPPostalCodeField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.jp.forms.</span></span><span class="sig-name descname"><span class="pre">JPPostalCodeField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/jp/forms.html#JPPostalCodeField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.jp.forms.JPPostalCodeField" title="Link to this definition">¶</a></dt>
+<dd><p>A form field that validates its input is a Japanese postcode.</p>
+<p>Accepts 7 digits, with or without a hyphen.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.jp.forms.JPPostalCodeField.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/jp/forms.html#JPPostalCodeField.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.jp.forms.JPPostalCodeField.clean" title="Link to this definition">¶</a></dt>
+<dd><p>Validates the input and returns a string that contains only numbers.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.jp.forms.JPPrefectureCodeSelect">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.jp.forms.</span></span><span class="sig-name descname"><span class="pre">JPPrefectureCodeSelect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attrs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/jp/forms.html#JPPrefectureCodeSelect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.jp.forms.JPPrefectureCodeSelect" title="Link to this definition">¶</a></dt>
+<dd><p>A Select widget for Japanese prefecture codes.</p>
+<p>It uses a list of Japanese prefectures as its choices and the prefectures code as the post value.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.jp.forms.JPPrefectureSelect">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.jp.forms.</span></span><span class="sig-name descname"><span class="pre">JPPrefectureSelect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attrs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/jp/forms.html#JPPrefectureSelect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.jp.forms.JPPrefectureSelect" title="Link to this definition">¶</a></dt>
+<dd><p>A Select widget that uses a list of Japanese prefectures as its choices.</p>
+</dd></dl>
+
+</section>
+<section id="data">
+<h2>Data<a class="headerlink" href="#data" title="Link to this heading">¶</a></h2>
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.jp.jp_prefectures.JP_PREFECTURES">
+<span class="sig-prename descclassname"><span class="pre">localflavor.jp.jp_prefectures.</span></span><span class="sig-name descname"><span class="pre">JP_PREFECTURES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(('hokkaido',</span> <span class="pre">'Hokkaido'),</span> <span class="pre">('aomori',</span> <span class="pre">'Aomori'),</span> <span class="pre">('iwate',</span> <span class="pre">'Iwate'),</span> <span class="pre">('miyagi',</span> <span class="pre">'Miyagi'),</span> <span class="pre">('akita',</span> <span class="pre">'Akita'),</span> <span class="pre">('yamagata',</span> <span class="pre">'Yamagata'),</span> <span class="pre">('fukushima',</span> <span class="pre">'Fukushima'),</span> <span class="pre">('ibaraki',</span> <span class="pre">'Ibaraki'),</span> <span class="pre">('tochigi',</span> <span class="pre">'Tochigi'),</span> <span class="pre">('gunma',</span> <span class="pre">'Gunma'),</span> <span class="pre">('saitama',</span> <span class="pre">'Saitama'),</span> <span class="pre">('chiba',</span> <span class="pre">'Chiba'),</span> <span class="pre">('tokyo',</span> <span class="pre">'Tokyo'),</span> <span class="pre">('kanagawa',</span> <span class="pre">'Kanagawa'),</span> <span class="pre">('niigata',</span> <span class="pre">'Niigata'),</span> <span class="pre">('toyama',</span> <span class="pre">'Toyama'),</span> <span class="pre">('ishikawa',</span> <span class="pre">'Ishikawa'),</span> <span class="pre">('fukui',</span> <span class="pre">'Fukui'),</span> <span class="pre">('yamanashi',</span> <span class="pre">'Yamanashi'),</span> <span class="pre">('nagano',</span> <span class="pre">'Nagano'),</span> <span class="pre">('gifu',</span> <span class="pre">'Gifu'),</span> <span class="pre">('shizuoka',</span> <span class="pre">'Shizuoka'),</span> <span class="pre">('aichi',</span> <span class="pre">'Aichi'),</span> <span class="pre">('mie',</span> <span class="pre">'Mie'),</span> <span class="pre">('shiga',</span> <span class="pre">'Shiga'),</span> <span class="pre">('kyoto',</span> <span class="pre">'Kyoto'),</span> <span class="pre">('osaka',</span> <span class="pre">'Osaka'),</span> <span class="pre">('hyogo',</span> <span class="pre">'Hyogo'),</span> <span class="pre">('nara',</span> <span class="pre">'Nara'),</span> <span class="pre">('wakayama',</span> <span class="pre">'Wakayama'),</span> <span class="pre">('tottori',</span> <span class="pre">'Tottori'),</span> <span class="pre">('shimane',</span> <span class="pre">'Shimane'),</span> <span class="pre">('okayama',</span> <span class="pre">'Okayama'),</span> <span class="pre">('hiroshima',</span> <span class="pre">'Hiroshima'),</span> <span class="pre">('yamaguchi',</span> <span class="pre">'Yamaguchi'),</span> <span class="pre">('tokushima',</span> <span class="pre">'Tokushima'),</span> <span class="pre">('kagawa',</span> <span class="pre">'Kagawa'),</span> <span class="pre">('ehime',</span> <span class="pre">'Ehime'),</span> <span class="pre">('kochi',</span> <span class="pre">'Kochi'),</span> <span class="pre">('fukuoka',</span> <span class="pre">'Fukuoka'),</span> <span class="pre">('saga',</span> <span class="pre">'Saga'),</span> <span class="pre">('nagasaki',</span> <span class="pre">'Nagasaki'),</span> <span class="pre">('kumamoto',</span> <span class="pre">'Kumamoto'),</span> <span class="pre">('oita',</span> <span class="pre">'Oita'),</span> <span class="pre">('miyazaki',</span> <span class="pre">'Miyazaki'),</span> <span class="pre">('kagoshima',</span> <span class="pre">'Kagoshima'),</span> <span class="pre">('okinawa',</span> <span class="pre">'Okinawa'))</span></em><a class="headerlink" href="#localflavor.jp.jp_prefectures.JP_PREFECTURES" title="Link to this definition">¶</a></dt>
+<dd><p>A list of prefectures</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Japan (<code class="docutils literal notranslate"><span class="pre">jp</span></code>)</a><ul>
+<li><a class="reference internal" href="#module-localflavor.jp.forms">Forms</a><ul>
+<li><a class="reference internal" href="#localflavor.jp.forms.JPPostalCodeField"><code class="docutils literal notranslate"><span class="pre">JPPostalCodeField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.jp.forms.JPPostalCodeField.clean"><code class="docutils literal notranslate"><span class="pre">JPPostalCodeField.clean()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.jp.forms.JPPrefectureCodeSelect"><code class="docutils literal notranslate"><span class="pre">JPPrefectureCodeSelect</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.jp.forms.JPPrefectureSelect"><code class="docutils literal notranslate"><span class="pre">JPPrefectureSelect</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data">Data</a><ul>
+<li><a class="reference internal" href="#localflavor.jp.jp_prefectures.JP_PREFECTURES"><code class="docutils literal notranslate"><span class="pre">JP_PREFECTURES</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="it.html"
+                          title="previous chapter">Italy (<code class="docutils literal notranslate"><span class="pre">it</span></code>)</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="kw.html"
+                          title="next chapter">Kuwait (<code class="docutils literal notranslate"><span class="pre">kw</span></code>)</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/localflavor/jp.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="kw.html" title="Kuwait (kw)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="it.html" title="Italy (it)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Japan (<code class="docutils literal notranslate"><span class="pre">jp</span></code>)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright Django Software Foundation and individual contributors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+  </body>
+</html>

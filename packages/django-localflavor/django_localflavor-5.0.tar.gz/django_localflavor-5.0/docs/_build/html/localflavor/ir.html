@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Iran (ir) &#8212; django-localflavor 4.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=2bf1fcf8" />
+    
+    <script src="../_static/documentation_options.js?v=9f5556dd"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Iceland (is)" href="is_.html" />
+    <link rel="prev" title="India (in)" href="in_.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="is_.html" title="Iceland (is)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="in_.html" title="India (in)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Iran (<code class="docutils literal notranslate"><span class="pre">ir</span></code>)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="iran-ir">
+<h1>Iran (<code class="docutils literal notranslate"><span class="pre">ir</span></code>)<a class="headerlink" href="#iran-ir" title="Link to this heading">¶</a></h1>
+<section id="module-localflavor.ir.forms">
+<span id="forms"></span><h2>Forms<a class="headerlink" href="#module-localflavor.ir.forms" title="Link to this heading">¶</a></h2>
+<p>Iranian-specific form helpers.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.ir.forms.IRIDNumberField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.ir.forms.</span></span><span class="sig-name descname"><span class="pre">IRIDNumberField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/ir/forms.html#IRIDNumberField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.ir.forms.IRIDNumberField" title="Link to this definition">¶</a></dt>
+<dd><p>A form field that validates its input as an Iranian identification number.</p>
+<p>Valid form is per the Iranian ID specification.</p>
+<dl>
+<dt>Persian documentation :</dt><dd><p><a class="reference external" href="http://www.aliarash.com/article/codemeli/codemeli.htm">http://www.aliarash.com/article/codemeli/codemeli.htm</a></p>
+<p>There isn’t good English documentation available for the Iranian identification number. Non-Persian speakers
+will need to use an online translation service to read this documentation.</p>
+</dd>
+</dl>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.2.</span></p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.ir.forms.IRIDNumberField.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/ir/forms.html#IRIDNumberField.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.ir.forms.IRIDNumberField.clean" title="Link to this definition">¶</a></dt>
+<dd><p>Validate the given value and return its “cleaned” value as an
+appropriate Python object. Raise ValidationError for any errors.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.ir.forms.IRPostalCodeField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.ir.forms.</span></span><span class="sig-name descname"><span class="pre">IRPostalCodeField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/ir/forms.html#IRPostalCodeField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.ir.forms.IRPostalCodeField" title="Link to this definition">¶</a></dt>
+<dd><p>A form field that validates its input as an Iran postal code.</p>
+<p>Valid form is XXXXXXXXXX where X represents integer.</p>
+<dl class="simple">
+<dt>Validate code:</dt><dd><ul class="simple">
+<li><p>don’t use 0 in first 5 digit</p></li>
+<li><p>don’t use 2 in postal code</p></li>
+<li><p>First 4 digit is not the same</p></li>
+<li><p>The 5th digit cannot be 5</p></li>
+<li><p>all digits aren’t the same</p></li>
+</ul>
+</dd>
+</dl>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.2.</span></p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.ir.forms.IRPostalCodeField.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/ir/forms.html#IRPostalCodeField.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.ir.forms.IRPostalCodeField.clean" title="Link to this definition">¶</a></dt>
+<dd><p>Validate the given value and return its “cleaned” value as an
+appropriate Python object. Raise ValidationError for any errors.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.ir.forms.IRProvinceSelect">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.ir.forms.</span></span><span class="sig-name descname"><span class="pre">IRProvinceSelect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attrs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/ir/forms.html#IRProvinceSelect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.ir.forms.IRProvinceSelect" title="Link to this definition">¶</a></dt>
+<dd><p>A Select widget that uses a list of Iran provinces cities as its choices.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.2.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.ir.ir_provinces.PROVINCE_CHOICES">
+<span class="sig-prename descclassname"><span class="pre">localflavor.ir.ir_provinces.</span></span><span class="sig-name descname"><span class="pre">PROVINCE_CHOICES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(('AL',</span> <span class="pre">'Alborz'),</span> <span class="pre">('AR',</span> <span class="pre">'Ardabil'),</span> <span class="pre">('AE',</span> <span class="pre">'Azerbaijan</span> <span class="pre">East'),</span> <span class="pre">('AW',</span> <span class="pre">'Azerbaijan</span> <span class="pre">Wast'),</span> <span class="pre">('BU',</span> <span class="pre">'Bushehr'),</span> <span class="pre">('CM',</span> <span class="pre">'Chahar</span> <span class="pre">Mahaal</span> <span class="pre">and</span> <span class="pre">Bakhtiari'),</span> <span class="pre">('FA',</span> <span class="pre">'Fars'),</span> <span class="pre">('GI',</span> <span class="pre">'Gilan'),</span> <span class="pre">('GO',</span> <span class="pre">'Golestan'),</span> <span class="pre">('HA',</span> <span class="pre">'Hamadan'),</span> <span class="pre">('HO',</span> <span class="pre">'Hormozgan'),</span> <span class="pre">('IL',</span> <span class="pre">'Ilam'),</span> <span class="pre">('IS',</span> <span class="pre">'Isfahan'),</span> <span class="pre">('KE',</span> <span class="pre">'Kerman'),</span> <span class="pre">('KM',</span> <span class="pre">'Kermanshah'),</span> <span class="pre">('KN',</span> <span class="pre">'Khorasan</span> <span class="pre">North'),</span> <span class="pre">('KR',</span> <span class="pre">'Khorasan</span> <span class="pre">Razavi'),</span> <span class="pre">('KS',</span> <span class="pre">'Khorasan</span> <span class="pre">South'),</span> <span class="pre">('KH',</span> <span class="pre">'Khuzestan'),</span> <span class="pre">('KB',</span> <span class="pre">'Kohgiluyeh</span> <span class="pre">and</span> <span class="pre">Boyer-Ahmad'),</span> <span class="pre">('KU',</span> <span class="pre">'Kurdistan'),</span> <span class="pre">('LO',</span> <span class="pre">'Lorestan'),</span> <span class="pre">('MA',</span> <span class="pre">'Markazi'),</span> <span class="pre">('MZ',</span> <span class="pre">'Mazandaran'),</span> <span class="pre">('QA',</span> <span class="pre">'Qazvin'),</span> <span class="pre">('QO',</span> <span class="pre">'Qom'),</span> <span class="pre">('SE',</span> <span class="pre">'Semnan'),</span> <span class="pre">('SB',</span> <span class="pre">'Sistan</span> <span class="pre">and</span> <span class="pre">Baluchestan'),</span> <span class="pre">('TH',</span> <span class="pre">'Tehran'),</span> <span class="pre">('YZ',</span> <span class="pre">'Yazd'),</span> <span class="pre">('ZN',</span> <span class="pre">'Zanjan'))</span></em><a class="headerlink" href="#localflavor.ir.ir_provinces.PROVINCE_CHOICES" title="Link to this definition">¶</a></dt>
+<dd><p>A list of Iran provinces and autonomous cities as <cite>choices</cite> in a
+formfield. From <a class="reference external" href="https://en.wikipedia.org/wiki/Provinces_of_Iran">https://en.wikipedia.org/wiki/Provinces_of_Iran</a></p>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Iran (<code class="docutils literal notranslate"><span class="pre">ir</span></code>)</a><ul>
+<li><a class="reference internal" href="#module-localflavor.ir.forms">Forms</a><ul>
+<li><a class="reference internal" href="#localflavor.ir.forms.IRIDNumberField"><code class="docutils literal notranslate"><span class="pre">IRIDNumberField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.ir.forms.IRIDNumberField.clean"><code class="docutils literal notranslate"><span class="pre">IRIDNumberField.clean()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.ir.forms.IRPostalCodeField"><code class="docutils literal notranslate"><span class="pre">IRPostalCodeField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.ir.forms.IRPostalCodeField.clean"><code class="docutils literal notranslate"><span class="pre">IRPostalCodeField.clean()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.ir.forms.IRProvinceSelect"><code class="docutils literal notranslate"><span class="pre">IRProvinceSelect</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.ir.ir_provinces.PROVINCE_CHOICES"><code class="docutils literal notranslate"><span class="pre">PROVINCE_CHOICES</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="in_.html"
+                          title="previous chapter">India (<code class="docutils literal notranslate"><span class="pre">in</span></code>)</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="is_.html"
+                          title="next chapter">Iceland (<code class="docutils literal notranslate"><span class="pre">is</span></code>)</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/localflavor/ir.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="is_.html" title="Iceland (is)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="in_.html" title="India (in)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Iran (<code class="docutils literal notranslate"><span class="pre">ir</span></code>)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright Django Software Foundation and individual contributors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+  </body>
+</html>

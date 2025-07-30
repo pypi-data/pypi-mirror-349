@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Hungary (hu) &#8212; django-localflavor 4.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=2bf1fcf8" />
+    
+    <script src="../_static/documentation_options.js?v=9f5556dd"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Indonesia (id)" href="id_.html" />
+    <link rel="prev" title="Croatia (hr)" href="hr.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="id_.html" title="Indonesia (id)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="hr.html" title="Croatia (hr)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Hungary (<code class="docutils literal notranslate"><span class="pre">hu</span></code>)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="hungary-hu">
+<h1>Hungary (<code class="docutils literal notranslate"><span class="pre">hu</span></code>)<a class="headerlink" href="#hungary-hu" title="Link to this heading">¶</a></h1>
+<section id="module-localflavor.hu.forms">
+<span id="forms"></span><h2>Forms<a class="headerlink" href="#module-localflavor.hu.forms" title="Link to this heading">¶</a></h2>
+<p>HU-specific Form helpers</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.hu.forms.HUCountySelect">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.hu.forms.</span></span><span class="sig-name descname"><span class="pre">HUCountySelect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attrs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/hu/forms.html#HUCountySelect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.hu.forms.HUCountySelect" title="Link to this definition">¶</a></dt>
+<dd><p>A Select widget that uses a list of Hungarian Counties as its choices.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 1.3.</span></p>
+</div>
+</dd></dl>
+
+</section>
+<section id="data">
+<h2>Data<a class="headerlink" href="#data" title="Link to this heading">¶</a></h2>
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.hu.hu_counties.HU_COUNTY_CHOICES">
+<span class="sig-prename descclassname"><span class="pre">localflavor.hu.hu_counties.</span></span><span class="sig-name descname"><span class="pre">HU_COUNTY_CHOICES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(('bacs_kiskun',</span> <span class="pre">'Bács-Kiskun'),</span> <span class="pre">('baranya',</span> <span class="pre">'Baranya'),</span> <span class="pre">('bekes',</span> <span class="pre">'Békés'),</span> <span class="pre">('borsod_abauj_zemplen',</span> <span class="pre">'Borsod-Abaúj-Zemplén'),</span> <span class="pre">('csongrad',</span> <span class="pre">'Csongrád'),</span> <span class="pre">('fejer',</span> <span class="pre">'Fejér'),</span> <span class="pre">('gyor_moson_sopron',</span> <span class="pre">'Győr-Moson-Sopron'),</span> <span class="pre">('hajdu_bihar',</span> <span class="pre">'Hajdú-Bihar'),</span> <span class="pre">('heves',</span> <span class="pre">'Heves'),</span> <span class="pre">('jasz_nagykun_szolnok',</span> <span class="pre">'Jász-Nagykun-Szolnok'),</span> <span class="pre">('komarom_esztergom',</span> <span class="pre">'Komárom-Esztergom'),</span> <span class="pre">('nograd',</span> <span class="pre">'Nógrád'),</span> <span class="pre">('pest',</span> <span class="pre">'Pest'),</span> <span class="pre">('somogy',</span> <span class="pre">'Somogy'),</span> <span class="pre">('szabolcs_szatmar_bereg',</span> <span class="pre">'Szabolcs-Szatmár-Bereg'),</span> <span class="pre">('tolna',</span> <span class="pre">'Tolna'),</span> <span class="pre">('vas',</span> <span class="pre">'Vas'),</span> <span class="pre">('veszprem',</span> <span class="pre">'Veszprém'),</span> <span class="pre">('zala',</span> <span class="pre">'Zala'))</span></em><a class="headerlink" href="#localflavor.hu.hu_counties.HU_COUNTY_CHOICES" title="Link to this definition">¶</a></dt>
+<dd><p>Hungarian counties: <a class="reference external" href="https://en.wikipedia.org/wiki/Counties_of_Hungary">https://en.wikipedia.org/wiki/Counties_of_Hungary</a></p>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Hungary (<code class="docutils literal notranslate"><span class="pre">hu</span></code>)</a><ul>
+<li><a class="reference internal" href="#module-localflavor.hu.forms">Forms</a><ul>
+<li><a class="reference internal" href="#localflavor.hu.forms.HUCountySelect"><code class="docutils literal notranslate"><span class="pre">HUCountySelect</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data">Data</a><ul>
+<li><a class="reference internal" href="#localflavor.hu.hu_counties.HU_COUNTY_CHOICES"><code class="docutils literal notranslate"><span class="pre">HU_COUNTY_CHOICES</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="hr.html"
+                          title="previous chapter">Croatia (<code class="docutils literal notranslate"><span class="pre">hr</span></code>)</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="id_.html"
+                          title="next chapter">Indonesia (<code class="docutils literal notranslate"><span class="pre">id</span></code>)</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/localflavor/hu.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="id_.html" title="Indonesia (id)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="hr.html" title="Croatia (hr)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Hungary (<code class="docutils literal notranslate"><span class="pre">hu</span></code>)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright Django Software Foundation and individual contributors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>France (fr) &#8212; django-localflavor 4.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=2bf1fcf8" />
+    
+    <script src="../_static/documentation_options.js?v=9f5556dd"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Great Britain (gb)" href="gb.html" />
+    <link rel="prev" title="Finland (fi)" href="fi.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="gb.html" title="Great Britain (gb)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="fi.html" title="Finland (fi)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">France (<code class="docutils literal notranslate"><span class="pre">fr</span></code>)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="france-fr">
+<h1>France (<code class="docutils literal notranslate"><span class="pre">fr</span></code>)<a class="headerlink" href="#france-fr" title="Link to this heading">¶</a></h1>
+<section id="module-localflavor.fr.forms">
+<span id="forms"></span><h2>Forms<a class="headerlink" href="#module-localflavor.fr.forms" title="Link to this heading">¶</a></h2>
+<p>FR-specific Form helpers</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.fr.forms.FRDepartmentField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.fr.forms.</span></span><span class="sig-name descname"><span class="pre">FRDepartmentField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/fr/forms.html#FRDepartmentField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.fr.forms.FRDepartmentField" title="Link to this definition">¶</a></dt>
+<dd><p>A Select Field that uses a FRDepartmentSelect widget.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="localflavor.fr.forms.FRDepartmentField.widget">
+<span class="sig-name descname"><span class="pre">widget</span></span><a class="headerlink" href="#localflavor.fr.forms.FRDepartmentField.widget" title="Link to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#localflavor.fr.forms.FRDepartmentSelect" title="localflavor.fr.forms.FRDepartmentSelect"><code class="xref py py-class docutils literal notranslate"><span class="pre">FRDepartmentSelect</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.fr.forms.FRDepartmentSelect">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.fr.forms.</span></span><span class="sig-name descname"><span class="pre">FRDepartmentSelect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attrs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/fr/forms.html#FRDepartmentSelect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.fr.forms.FRDepartmentSelect" title="Link to this definition">¶</a></dt>
+<dd><p>A Select widget that uses a list of FR departments as its choices.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.fr.forms.FRNationalIdentificationNumber">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.fr.forms.</span></span><span class="sig-name descname"><span class="pre">FRNationalIdentificationNumber</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/fr/forms.html#FRNationalIdentificationNumber"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.fr.forms.FRNationalIdentificationNumber" title="Link to this definition">¶</a></dt>
+<dd><p>Validates input as a French National Identification number.</p>
+<p>Validation of the Number, and checksum calculation is detailed at <a class="reference external" href="http://en.wikipedia.org/wiki/INSEE_code">http://en.wikipedia.org/wiki/INSEE_code</a></p>
+<dl class="simple">
+<dt>Complete spec of the codification is detailed here:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://fr.scribd.com/document/456848429/INSEE-Guide-Identification">https://fr.scribd.com/document/456848429/INSEE-Guide-Identification</a></p></li>
+<li><p><a class="reference external" href="https://fr.scribd.com/document/456848431/INSEE-Codes-Pays">https://fr.scribd.com/document/456848431/INSEE-Codes-Pays</a></p></li>
+</ul>
+</dd>
+</dl>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 1.1.</span></p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.fr.forms.FRNationalIdentificationNumber.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/fr/forms.html#FRNationalIdentificationNumber.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.fr.forms.FRNationalIdentificationNumber.clean" title="Link to this definition">¶</a></dt>
+<dd><p>Validate the given value and return its “cleaned” value as an
+appropriate Python object. Raise ValidationError for any errors.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.fr.forms.FRRNAField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.fr.forms.</span></span><span class="sig-name descname"><span class="pre">FRRNAField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/fr/forms.html#FRRNAField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.fr.forms.FRRNAField" title="Link to this definition">¶</a></dt>
+<dd><p>RNA Stands for “Répertoire National des Associations”</p>
+<p>It’s under the authority of the French Minister of the Interior.
+See <a class="reference external" href="https://fr.wikipedia.org/wiki/R%C3%A9pertoire_national_des_associations">https://fr.wikipedia.org/wiki/R%C3%A9pertoire_national_des_associations</a> for more information.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 4.0.</span></p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.fr.forms.FRRNAField.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/fr/forms.html#FRRNAField.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.fr.forms.FRRNAField.clean" title="Link to this definition">¶</a></dt>
+<dd><p>Validate the given value and return its “cleaned” value as an
+appropriate Python object. Raise ValidationError for any errors.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.fr.forms.FRRegion2016Select">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.fr.forms.</span></span><span class="sig-name descname"><span class="pre">FRRegion2016Select</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attrs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/fr/forms.html#FRRegion2016Select"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.fr.forms.FRRegion2016Select" title="Link to this definition">¶</a></dt>
+<dd><p>A Select widget that uses a list of France’s New Regions as its choices.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.fr.forms.FRRegionField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.fr.forms.</span></span><span class="sig-name descname"><span class="pre">FRRegionField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/fr/forms.html#FRRegionField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.fr.forms.FRRegionField" title="Link to this definition">¶</a></dt>
+<dd><p>A Select Field that uses a FRRegionSelect widget.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="localflavor.fr.forms.FRRegionField.widget">
+<span class="sig-name descname"><span class="pre">widget</span></span><a class="headerlink" href="#localflavor.fr.forms.FRRegionField.widget" title="Link to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#localflavor.fr.forms.FRRegionSelect" title="localflavor.fr.forms.FRRegionSelect"><code class="xref py py-class docutils literal notranslate"><span class="pre">FRRegionSelect</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.fr.forms.FRRegionSelect">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.fr.forms.</span></span><span class="sig-name descname"><span class="pre">FRRegionSelect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attrs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/fr/forms.html#FRRegionSelect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.fr.forms.FRRegionSelect" title="Link to this definition">¶</a></dt>
+<dd><p>A Select widget that uses a list of FR Regions as its choices.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.fr.forms.FRSIRENField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.fr.forms.</span></span><span class="sig-name descname"><span class="pre">FRSIRENField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/fr/forms.html#FRSIRENField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.fr.forms.FRSIRENField" title="Link to this definition">¶</a></dt>
+<dd><p>SIREN stands for “Système d’identification du répertoire des entreprises”.</p>
+<p>It’s under authority of the INSEE.
+See <a class="reference external" href="http://fr.wikipedia.org/wiki">http://fr.wikipedia.org/wiki</a>/Système_d’identification_du_répertoire_des_entreprises for more information.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 1.1.</span></p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.fr.forms.FRSIRENField.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/fr/forms.html#FRSIRENField.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.fr.forms.FRSIRENField.clean" title="Link to this definition">¶</a></dt>
+<dd><p>Validate the given value and return its “cleaned” value as an
+appropriate Python object. Raise ValidationError for any errors.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.fr.forms.FRSIRENField.to_python">
+<span class="sig-name descname"><span class="pre">to_python</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/fr/forms.html#FRSIRENField.to_python"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.fr.forms.FRSIRENField.to_python" title="Link to this definition">¶</a></dt>
+<dd><p>Return a string.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.fr.forms.FRSIRETField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.fr.forms.</span></span><span class="sig-name descname"><span class="pre">FRSIRETField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/fr/forms.html#FRSIRETField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.fr.forms.FRSIRETField" title="Link to this definition">¶</a></dt>
+<dd><p>SIRET stands for “Système d’identification du répertoire des établissements”.</p>
+<p>It’s under authority of the INSEE.
+See <a class="reference external" href="http://fr.wikipedia.org/wiki">http://fr.wikipedia.org/wiki</a>/Système_d’identification_du_répertoire_des_établissements for more information.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 1.1.</span></p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.fr.forms.FRSIRETField.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/fr/forms.html#FRSIRETField.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.fr.forms.FRSIRETField.clean" title="Link to this definition">¶</a></dt>
+<dd><p>Validate the given value and return its “cleaned” value as an
+appropriate Python object. Raise ValidationError for any errors.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.fr.forms.FRSIRETField.to_python">
+<span class="sig-name descname"><span class="pre">to_python</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/fr/forms.html#FRSIRETField.to_python"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.fr.forms.FRSIRETField.to_python" title="Link to this definition">¶</a></dt>
+<dd><p>Return a string.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.fr.forms.FRZipCodeField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.fr.forms.</span></span><span class="sig-name descname"><span class="pre">FRZipCodeField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/fr/forms.html#FRZipCodeField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.fr.forms.FRZipCodeField" title="Link to this definition">¶</a></dt>
+<dd><p>Validate local French zip code.</p>
+<p>The correct format is ‘XXXXX’.</p>
+</dd></dl>
+
+</section>
+<section id="data">
+<h2>Data<a class="headerlink" href="#data" title="Link to this heading">¶</a></h2>
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.fr.fr_department.DEPARTMENT_CHOICES_PER_REGION">
+<span class="sig-prename descclassname"><span class="pre">localflavor.fr.fr_department.</span></span><span class="sig-name descname"><span class="pre">DEPARTMENT_CHOICES_PER_REGION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(('01',</span> <span class="pre">'Ain',</span> <span class="pre">'82'),</span> <span class="pre">('02',</span> <span class="pre">'Aisne',</span> <span class="pre">'22'),</span> <span class="pre">('03',</span> <span class="pre">'Allier',</span> <span class="pre">'83'),</span> <span class="pre">('04',</span> <span class="pre">'Alpes-de-Haute-Provence',</span> <span class="pre">'93'),</span> <span class="pre">('05',</span> <span class="pre">'Hautes-Alpes',</span> <span class="pre">'93'),</span> <span class="pre">('06',</span> <span class="pre">'Alpes-Maritimes',</span> <span class="pre">'93'),</span> <span class="pre">('07',</span> <span class="pre">'Ardèche',</span> <span class="pre">'82'),</span> <span class="pre">('08',</span> <span class="pre">'Ardennes',</span> <span class="pre">'21'),</span> <span class="pre">('09',</span> <span class="pre">'Ariège',</span> <span class="pre">'73'),</span> <span class="pre">('10',</span> <span class="pre">'Aube',</span> <span class="pre">'21'),</span> <span class="pre">('11',</span> <span class="pre">'Aude',</span> <span class="pre">'91'),</span> <span class="pre">('12',</span> <span class="pre">'Aveyron',</span> <span class="pre">'73'),</span> <span class="pre">('13',</span> <span class="pre">'Bouches-du-Rhône',</span> <span class="pre">'93'),</span> <span class="pre">('14',</span> <span class="pre">'Calvados',</span> <span class="pre">'25'),</span> <span class="pre">('15',</span> <span class="pre">'Cantal',</span> <span class="pre">'83'),</span> <span class="pre">('16',</span> <span class="pre">'Charente',</span> <span class="pre">'54'),</span> <span class="pre">('17',</span> <span class="pre">'Charente-Maritime',</span> <span class="pre">'54'),</span> <span class="pre">('18',</span> <span class="pre">'Cher',</span> <span class="pre">'24'),</span> <span class="pre">('19',</span> <span class="pre">'Corrèze',</span> <span class="pre">'74'),</span> <span class="pre">('2A',</span> <span class="pre">'Corse-du-Sud',</span> <span class="pre">'94'),</span> <span class="pre">('2B',</span> <span class="pre">'Haute-Corse',</span> <span class="pre">'94'),</span> <span class="pre">('21',</span> <span class="pre">&quot;Côte-d'Or&quot;,</span> <span class="pre">'26'),</span> <span class="pre">('22',</span> <span class="pre">&quot;Côtes-d'Armor&quot;,</span> <span class="pre">'53'),</span> <span class="pre">('23',</span> <span class="pre">'Creuse',</span> <span class="pre">'74'),</span> <span class="pre">('24',</span> <span class="pre">'Dordogne',</span> <span class="pre">'72'),</span> <span class="pre">('25',</span> <span class="pre">'Doubs',</span> <span class="pre">'43'),</span> <span class="pre">('26',</span> <span class="pre">'Drôme',</span> <span class="pre">'82'),</span> <span class="pre">('27',</span> <span class="pre">'Eure',</span> <span class="pre">'23'),</span> <span class="pre">('28',</span> <span class="pre">'Eure-et-Loir',</span> <span class="pre">'24'),</span> <span class="pre">('29',</span> <span class="pre">'Finistère',</span> <span class="pre">'53'),</span> <span class="pre">('30',</span> <span class="pre">'Gard',</span> <span class="pre">'91'),</span> <span class="pre">('31',</span> <span class="pre">'Haute-Garonne',</span> <span class="pre">'73'),</span> <span class="pre">('32',</span> <span class="pre">'Gers',</span> <span class="pre">'73'),</span> <span class="pre">('33',</span> <span class="pre">'Gironde',</span> <span class="pre">'72'),</span> <span class="pre">('34',</span> <span class="pre">'Hérault',</span> <span class="pre">'91'),</span> <span class="pre">('35',</span> <span class="pre">'Ille-et-Vilaine',</span> <span class="pre">'53'),</span> <span class="pre">('36',</span> <span class="pre">'Indre',</span> <span class="pre">'24'),</span> <span class="pre">('37',</span> <span class="pre">'Indre-et-Loire',</span> <span class="pre">'24'),</span> <span class="pre">('38',</span> <span class="pre">'Isère',</span> <span class="pre">'82'),</span> <span class="pre">('39',</span> <span class="pre">'Jura',</span> <span class="pre">'43'),</span> <span class="pre">('40',</span> <span class="pre">'Landes',</span> <span class="pre">'72'),</span> <span class="pre">('41',</span> <span class="pre">'Loir-et-Cher',</span> <span class="pre">'24'),</span> <span class="pre">('42',</span> <span class="pre">'Loire',</span> <span class="pre">'82'),</span> <span class="pre">('43',</span> <span class="pre">'Haute-Loire',</span> <span class="pre">'83'),</span> <span class="pre">('44',</span> <span class="pre">'Loire-Atlantique',</span> <span class="pre">'52'),</span> <span class="pre">('45',</span> <span class="pre">'Loiret',</span> <span class="pre">'24'),</span> <span class="pre">('46',</span> <span class="pre">'Lot',</span> <span class="pre">'73'),</span> <span class="pre">('47',</span> <span class="pre">'Lot-et-Garonne',</span> <span class="pre">'72'),</span> <span class="pre">('48',</span> <span class="pre">'Lozère',</span> <span class="pre">'91'),</span> <span class="pre">('49',</span> <span class="pre">'Maine-et-Loire',</span> <span class="pre">'52'),</span> <span class="pre">('50',</span> <span class="pre">'Manche',</span> <span class="pre">'25'),</span> <span class="pre">('51',</span> <span class="pre">'Marne',</span> <span class="pre">'21'),</span> <span class="pre">('52',</span> <span class="pre">'Haute-Marne',</span> <span class="pre">'21'),</span> <span class="pre">('53',</span> <span class="pre">'Mayenne',</span> <span class="pre">'52'),</span> <span class="pre">('54',</span> <span class="pre">'Meurthe-et-Moselle',</span> <span class="pre">'41'),</span> <span class="pre">('55',</span> <span class="pre">'Meuse',</span> <span class="pre">'41'),</span> <span class="pre">('56',</span> <span class="pre">'Morbihan',</span> <span class="pre">'53'),</span> <span class="pre">('57',</span> <span class="pre">'Moselle',</span> <span class="pre">'41'),</span> <span class="pre">('58',</span> <span class="pre">'Nièvre',</span> <span class="pre">'26'),</span> <span class="pre">('59',</span> <span class="pre">'Nord',</span> <span class="pre">'31'),</span> <span class="pre">('60',</span> <span class="pre">'Oise',</span> <span class="pre">'22'),</span> <span class="pre">('61',</span> <span class="pre">'Orne',</span> <span class="pre">'25'),</span> <span class="pre">('62',</span> <span class="pre">'Pas-de-Calais',</span> <span class="pre">'31'),</span> <span class="pre">('63',</span> <span class="pre">'Puy-de-Dôme',</span> <span class="pre">'83'),</span> <span class="pre">('64',</span> <span class="pre">'Pyrénées-Atlantiques',</span> <span class="pre">'72'),</span> <span class="pre">('65',</span> <span class="pre">'Hautes-Pyrénées',</span> <span class="pre">'73'),</span> <span class="pre">('66',</span> <span class="pre">'Pyrénées-Orientales',</span> <span class="pre">'91'),</span> <span class="pre">('67',</span> <span class="pre">'Bas-Rhin',</span> <span class="pre">'42'),</span> <span class="pre">('68',</span> <span class="pre">'Haut-Rhin',</span> <span class="pre">'42'),</span> <span class="pre">('69',</span> <span class="pre">'Rhône',</span> <span class="pre">'82'),</span> <span class="pre">('70',</span> <span class="pre">'Haute-Saône',</span> <span class="pre">'43'),</span> <span class="pre">('71',</span> <span class="pre">'Saône-et-Loire',</span> <span class="pre">'26'),</span> <span class="pre">('72',</span> <span class="pre">'Sarthe',</span> <span class="pre">'52'),</span> <span class="pre">('73',</span> <span class="pre">'Savoie',</span> <span class="pre">'82'),</span> <span class="pre">('74',</span> <span class="pre">'Haute-Savoie',</span> <span class="pre">'82'),</span> <span class="pre">('75',</span> <span class="pre">'Paris',</span> <span class="pre">'11'),</span> <span class="pre">('76',</span> <span class="pre">'Seine-Maritime',</span> <span class="pre">'23'),</span> <span class="pre">('77',</span> <span class="pre">'Seine-et-Marne',</span> <span class="pre">'11'),</span> <span class="pre">('78',</span> <span class="pre">'Yvelines',</span> <span class="pre">'11'),</span> <span class="pre">('79',</span> <span class="pre">'Deux-Sèvres',</span> <span class="pre">'54'),</span> <span class="pre">('80',</span> <span class="pre">'Somme',</span> <span class="pre">'22'),</span> <span class="pre">('81',</span> <span class="pre">'Tarn',</span> <span class="pre">'73'),</span> <span class="pre">('82',</span> <span class="pre">'Tarn-et-Garonne',</span> <span class="pre">'73'),</span> <span class="pre">('83',</span> <span class="pre">'Var',</span> <span class="pre">'93'),</span> <span class="pre">('84',</span> <span class="pre">'Vaucluse',</span> <span class="pre">'93'),</span> <span class="pre">('85',</span> <span class="pre">'Vendée',</span> <span class="pre">'52'),</span> <span class="pre">('86',</span> <span class="pre">'Vienne',</span> <span class="pre">'54'),</span> <span class="pre">('87',</span> <span class="pre">'Haute-Vienne',</span> <span class="pre">'74'),</span> <span class="pre">('88',</span> <span class="pre">'Vosges',</span> <span class="pre">'41'),</span> <span class="pre">('89',</span> <span class="pre">'Yonne',</span> <span class="pre">'26'),</span> <span class="pre">('90',</span> <span class="pre">'Territoire</span> <span class="pre">de</span> <span class="pre">Belfort',</span> <span class="pre">'43'),</span> <span class="pre">('91',</span> <span class="pre">'Essonne',</span> <span class="pre">'11'),</span> <span class="pre">('92',</span> <span class="pre">'Hauts-de-Seine',</span> <span class="pre">'11'),</span> <span class="pre">('93',</span> <span class="pre">'Seine-Saint-Denis',</span> <span class="pre">'11'),</span> <span class="pre">('94',</span> <span class="pre">'Val-de-Marne',</span> <span class="pre">'11'),</span> <span class="pre">('95',</span> <span class="pre">&quot;Val-d'Oise&quot;,</span> <span class="pre">'11'),</span> <span class="pre">('971',</span> <span class="pre">'Guadeloupe',</span> <span class="pre">'01'),</span> <span class="pre">('972',</span> <span class="pre">'Martinique',</span> <span class="pre">'02'),</span> <span class="pre">('973',</span> <span class="pre">'Guyane',</span> <span class="pre">'03'),</span> <span class="pre">('974',</span> <span class="pre">'La</span> <span class="pre">Réunion',</span> <span class="pre">'04'),</span> <span class="pre">('975',</span> <span class="pre">'Saint-Pierre-et-Miquelon',</span> <span class="pre">None),</span> <span class="pre">('976',</span> <span class="pre">'Mayotte',</span> <span class="pre">'05'),</span> <span class="pre">('977',</span> <span class="pre">'Saint-Barthélemy',</span> <span class="pre">None),</span> <span class="pre">('978',</span> <span class="pre">'Saint-Martin',</span> <span class="pre">None),</span> <span class="pre">('984',</span> <span class="pre">'Terres</span> <span class="pre">australes</span> <span class="pre">et</span> <span class="pre">antarctiques</span> <span class="pre">françaises',</span> <span class="pre">None),</span> <span class="pre">('986',</span> <span class="pre">'Wallis</span> <span class="pre">et</span> <span class="pre">Futuna',</span> <span class="pre">None),</span> <span class="pre">('987',</span> <span class="pre">'Polynésie</span> <span class="pre">française',</span> <span class="pre">None),</span> <span class="pre">('988',</span> <span class="pre">'Nouvelle-Calédonie',</span> <span class="pre">None),</span> <span class="pre">('989',</span> <span class="pre">'Île</span> <span class="pre">de</span> <span class="pre">Clipperton',</span> <span class="pre">None))</span></em><a class="headerlink" href="#localflavor.fr.fr_department.DEPARTMENT_CHOICES_PER_REGION" title="Link to this definition">¶</a></dt>
+<dd><p>See the “Code officiel géographique” on the INSEE website &lt;www.insee.fr&gt;.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.fr.fr_department.DEPARTMENT_CHOICES">
+<span class="sig-prename descclassname"><span class="pre">localflavor.fr.fr_department.</span></span><span class="sig-name descname"><span class="pre">DEPARTMENT_CHOICES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(('01',</span> <span class="pre">'01</span> <span class="pre">-</span> <span class="pre">Ain'),</span> <span class="pre">('02',</span> <span class="pre">'02</span> <span class="pre">-</span> <span class="pre">Aisne'),</span> <span class="pre">('03',</span> <span class="pre">'03</span> <span class="pre">-</span> <span class="pre">Allier'),</span> <span class="pre">('04',</span> <span class="pre">'04</span> <span class="pre">-</span> <span class="pre">Alpes-de-Haute-Provence'),</span> <span class="pre">('05',</span> <span class="pre">'05</span> <span class="pre">-</span> <span class="pre">Hautes-Alpes'),</span> <span class="pre">('06',</span> <span class="pre">'06</span> <span class="pre">-</span> <span class="pre">Alpes-Maritimes'),</span> <span class="pre">('07',</span> <span class="pre">'07</span> <span class="pre">-</span> <span class="pre">Ardèche'),</span> <span class="pre">('08',</span> <span class="pre">'08</span> <span class="pre">-</span> <span class="pre">Ardennes'),</span> <span class="pre">('09',</span> <span class="pre">'09</span> <span class="pre">-</span> <span class="pre">Ariège'),</span> <span class="pre">('10',</span> <span class="pre">'10</span> <span class="pre">-</span> <span class="pre">Aube'),</span> <span class="pre">('11',</span> <span class="pre">'11</span> <span class="pre">-</span> <span class="pre">Aude'),</span> <span class="pre">('12',</span> <span class="pre">'12</span> <span class="pre">-</span> <span class="pre">Aveyron'),</span> <span class="pre">('13',</span> <span class="pre">'13</span> <span class="pre">-</span> <span class="pre">Bouches-du-Rhône'),</span> <span class="pre">('14',</span> <span class="pre">'14</span> <span class="pre">-</span> <span class="pre">Calvados'),</span> <span class="pre">('15',</span> <span class="pre">'15</span> <span class="pre">-</span> <span class="pre">Cantal'),</span> <span class="pre">('16',</span> <span class="pre">'16</span> <span class="pre">-</span> <span class="pre">Charente'),</span> <span class="pre">('17',</span> <span class="pre">'17</span> <span class="pre">-</span> <span class="pre">Charente-Maritime'),</span> <span class="pre">('18',</span> <span class="pre">'18</span> <span class="pre">-</span> <span class="pre">Cher'),</span> <span class="pre">('19',</span> <span class="pre">'19</span> <span class="pre">-</span> <span class="pre">Corrèze'),</span> <span class="pre">('2A',</span> <span class="pre">'2A</span> <span class="pre">-</span> <span class="pre">Corse-du-Sud'),</span> <span class="pre">('2B',</span> <span class="pre">'2B</span> <span class="pre">-</span> <span class="pre">Haute-Corse'),</span> <span class="pre">('21',</span> <span class="pre">&quot;21</span> <span class="pre">-</span> <span class="pre">Côte-d'Or&quot;),</span> <span class="pre">('22',</span> <span class="pre">&quot;22</span> <span class="pre">-</span> <span class="pre">Côtes-d'Armor&quot;),</span> <span class="pre">('23',</span> <span class="pre">'23</span> <span class="pre">-</span> <span class="pre">Creuse'),</span> <span class="pre">('24',</span> <span class="pre">'24</span> <span class="pre">-</span> <span class="pre">Dordogne'),</span> <span class="pre">('25',</span> <span class="pre">'25</span> <span class="pre">-</span> <span class="pre">Doubs'),</span> <span class="pre">('26',</span> <span class="pre">'26</span> <span class="pre">-</span> <span class="pre">Drôme'),</span> <span class="pre">('27',</span> <span class="pre">'27</span> <span class="pre">-</span> <span class="pre">Eure'),</span> <span class="pre">('28',</span> <span class="pre">'28</span> <span class="pre">-</span> <span class="pre">Eure-et-Loir'),</span> <span class="pre">('29',</span> <span class="pre">'29</span> <span class="pre">-</span> <span class="pre">Finistère'),</span> <span class="pre">('30',</span> <span class="pre">'30</span> <span class="pre">-</span> <span class="pre">Gard'),</span> <span class="pre">('31',</span> <span class="pre">'31</span> <span class="pre">-</span> <span class="pre">Haute-Garonne'),</span> <span class="pre">('32',</span> <span class="pre">'32</span> <span class="pre">-</span> <span class="pre">Gers'),</span> <span class="pre">('33',</span> <span class="pre">'33</span> <span class="pre">-</span> <span class="pre">Gironde'),</span> <span class="pre">('34',</span> <span class="pre">'34</span> <span class="pre">-</span> <span class="pre">Hérault'),</span> <span class="pre">('35',</span> <span class="pre">'35</span> <span class="pre">-</span> <span class="pre">Ille-et-Vilaine'),</span> <span class="pre">('36',</span> <span class="pre">'36</span> <span class="pre">-</span> <span class="pre">Indre'),</span> <span class="pre">('37',</span> <span class="pre">'37</span> <span class="pre">-</span> <span class="pre">Indre-et-Loire'),</span> <span class="pre">('38',</span> <span class="pre">'38</span> <span class="pre">-</span> <span class="pre">Isère'),</span> <span class="pre">('39',</span> <span class="pre">'39</span> <span class="pre">-</span> <span class="pre">Jura'),</span> <span class="pre">('40',</span> <span class="pre">'40</span> <span class="pre">-</span> <span class="pre">Landes'),</span> <span class="pre">('41',</span> <span class="pre">'41</span> <span class="pre">-</span> <span class="pre">Loir-et-Cher'),</span> <span class="pre">('42',</span> <span class="pre">'42</span> <span class="pre">-</span> <span class="pre">Loire'),</span> <span class="pre">('43',</span> <span class="pre">'43</span> <span class="pre">-</span> <span class="pre">Haute-Loire'),</span> <span class="pre">('44',</span> <span class="pre">'44</span> <span class="pre">-</span> <span class="pre">Loire-Atlantique'),</span> <span class="pre">('45',</span> <span class="pre">'45</span> <span class="pre">-</span> <span class="pre">Loiret'),</span> <span class="pre">('46',</span> <span class="pre">'46</span> <span class="pre">-</span> <span class="pre">Lot'),</span> <span class="pre">('47',</span> <span class="pre">'47</span> <span class="pre">-</span> <span class="pre">Lot-et-Garonne'),</span> <span class="pre">('48',</span> <span class="pre">'48</span> <span class="pre">-</span> <span class="pre">Lozère'),</span> <span class="pre">('49',</span> <span class="pre">'49</span> <span class="pre">-</span> <span class="pre">Maine-et-Loire'),</span> <span class="pre">('50',</span> <span class="pre">'50</span> <span class="pre">-</span> <span class="pre">Manche'),</span> <span class="pre">('51',</span> <span class="pre">'51</span> <span class="pre">-</span> <span class="pre">Marne'),</span> <span class="pre">('52',</span> <span class="pre">'52</span> <span class="pre">-</span> <span class="pre">Haute-Marne'),</span> <span class="pre">('53',</span> <span class="pre">'53</span> <span class="pre">-</span> <span class="pre">Mayenne'),</span> <span class="pre">('54',</span> <span class="pre">'54</span> <span class="pre">-</span> <span class="pre">Meurthe-et-Moselle'),</span> <span class="pre">('55',</span> <span class="pre">'55</span> <span class="pre">-</span> <span class="pre">Meuse'),</span> <span class="pre">('56',</span> <span class="pre">'56</span> <span class="pre">-</span> <span class="pre">Morbihan'),</span> <span class="pre">('57',</span> <span class="pre">'57</span> <span class="pre">-</span> <span class="pre">Moselle'),</span> <span class="pre">('58',</span> <span class="pre">'58</span> <span class="pre">-</span> <span class="pre">Nièvre'),</span> <span class="pre">('59',</span> <span class="pre">'59</span> <span class="pre">-</span> <span class="pre">Nord'),</span> <span class="pre">('60',</span> <span class="pre">'60</span> <span class="pre">-</span> <span class="pre">Oise'),</span> <span class="pre">('61',</span> <span class="pre">'61</span> <span class="pre">-</span> <span class="pre">Orne'),</span> <span class="pre">('62',</span> <span class="pre">'62</span> <span class="pre">-</span> <span class="pre">Pas-de-Calais'),</span> <span class="pre">('63',</span> <span class="pre">'63</span> <span class="pre">-</span> <span class="pre">Puy-de-Dôme'),</span> <span class="pre">('64',</span> <span class="pre">'64</span> <span class="pre">-</span> <span class="pre">Pyrénées-Atlantiques'),</span> <span class="pre">('65',</span> <span class="pre">'65</span> <span class="pre">-</span> <span class="pre">Hautes-Pyrénées'),</span> <span class="pre">('66',</span> <span class="pre">'66</span> <span class="pre">-</span> <span class="pre">Pyrénées-Orientales'),</span> <span class="pre">('67',</span> <span class="pre">'67</span> <span class="pre">-</span> <span class="pre">Bas-Rhin'),</span> <span class="pre">('68',</span> <span class="pre">'68</span> <span class="pre">-</span> <span class="pre">Haut-Rhin'),</span> <span class="pre">('69',</span> <span class="pre">'69</span> <span class="pre">-</span> <span class="pre">Rhône'),</span> <span class="pre">('70',</span> <span class="pre">'70</span> <span class="pre">-</span> <span class="pre">Haute-Saône'),</span> <span class="pre">('71',</span> <span class="pre">'71</span> <span class="pre">-</span> <span class="pre">Saône-et-Loire'),</span> <span class="pre">('72',</span> <span class="pre">'72</span> <span class="pre">-</span> <span class="pre">Sarthe'),</span> <span class="pre">('73',</span> <span class="pre">'73</span> <span class="pre">-</span> <span class="pre">Savoie'),</span> <span class="pre">('74',</span> <span class="pre">'74</span> <span class="pre">-</span> <span class="pre">Haute-Savoie'),</span> <span class="pre">('75',</span> <span class="pre">'75</span> <span class="pre">-</span> <span class="pre">Paris'),</span> <span class="pre">('76',</span> <span class="pre">'76</span> <span class="pre">-</span> <span class="pre">Seine-Maritime'),</span> <span class="pre">('77',</span> <span class="pre">'77</span> <span class="pre">-</span> <span class="pre">Seine-et-Marne'),</span> <span class="pre">('78',</span> <span class="pre">'78</span> <span class="pre">-</span> <span class="pre">Yvelines'),</span> <span class="pre">('79',</span> <span class="pre">'79</span> <span class="pre">-</span> <span class="pre">Deux-Sèvres'),</span> <span class="pre">('80',</span> <span class="pre">'80</span> <span class="pre">-</span> <span class="pre">Somme'),</span> <span class="pre">('81',</span> <span class="pre">'81</span> <span class="pre">-</span> <span class="pre">Tarn'),</span> <span class="pre">('82',</span> <span class="pre">'82</span> <span class="pre">-</span> <span class="pre">Tarn-et-Garonne'),</span> <span class="pre">('83',</span> <span class="pre">'83</span> <span class="pre">-</span> <span class="pre">Var'),</span> <span class="pre">('84',</span> <span class="pre">'84</span> <span class="pre">-</span> <span class="pre">Vaucluse'),</span> <span class="pre">('85',</span> <span class="pre">'85</span> <span class="pre">-</span> <span class="pre">Vendée'),</span> <span class="pre">('86',</span> <span class="pre">'86</span> <span class="pre">-</span> <span class="pre">Vienne'),</span> <span class="pre">('87',</span> <span class="pre">'87</span> <span class="pre">-</span> <span class="pre">Haute-Vienne'),</span> <span class="pre">('88',</span> <span class="pre">'88</span> <span class="pre">-</span> <span class="pre">Vosges'),</span> <span class="pre">('89',</span> <span class="pre">'89</span> <span class="pre">-</span> <span class="pre">Yonne'),</span> <span class="pre">('90',</span> <span class="pre">'90</span> <span class="pre">-</span> <span class="pre">Territoire</span> <span class="pre">de</span> <span class="pre">Belfort'),</span> <span class="pre">('91',</span> <span class="pre">'91</span> <span class="pre">-</span> <span class="pre">Essonne'),</span> <span class="pre">('92',</span> <span class="pre">'92</span> <span class="pre">-</span> <span class="pre">Hauts-de-Seine'),</span> <span class="pre">('93',</span> <span class="pre">'93</span> <span class="pre">-</span> <span class="pre">Seine-Saint-Denis'),</span> <span class="pre">('94',</span> <span class="pre">'94</span> <span class="pre">-</span> <span class="pre">Val-de-Marne'),</span> <span class="pre">('95',</span> <span class="pre">&quot;95</span> <span class="pre">-</span> <span class="pre">Val-d'Oise&quot;),</span> <span class="pre">('971',</span> <span class="pre">'971</span> <span class="pre">-</span> <span class="pre">Guadeloupe'),</span> <span class="pre">('972',</span> <span class="pre">'972</span> <span class="pre">-</span> <span class="pre">Martinique'),</span> <span class="pre">('973',</span> <span class="pre">'973</span> <span class="pre">-</span> <span class="pre">Guyane'),</span> <span class="pre">('974',</span> <span class="pre">'974</span> <span class="pre">-</span> <span class="pre">La</span> <span class="pre">Réunion'),</span> <span class="pre">('975',</span> <span class="pre">'975</span> <span class="pre">-</span> <span class="pre">Saint-Pierre-et-Miquelon'),</span> <span class="pre">('976',</span> <span class="pre">'976</span> <span class="pre">-</span> <span class="pre">Mayotte'),</span> <span class="pre">('977',</span> <span class="pre">'977</span> <span class="pre">-</span> <span class="pre">Saint-Barthélemy'),</span> <span class="pre">('978',</span> <span class="pre">'978</span> <span class="pre">-</span> <span class="pre">Saint-Martin'),</span> <span class="pre">('984',</span> <span class="pre">'984</span> <span class="pre">-</span> <span class="pre">Terres</span> <span class="pre">australes</span> <span class="pre">et</span> <span class="pre">antarctiques</span> <span class="pre">françaises'),</span> <span class="pre">('986',</span> <span class="pre">'986</span> <span class="pre">-</span> <span class="pre">Wallis</span> <span class="pre">et</span> <span class="pre">Futuna'),</span> <span class="pre">('987',</span> <span class="pre">'987</span> <span class="pre">-</span> <span class="pre">Polynésie</span> <span class="pre">française'),</span> <span class="pre">('988',</span> <span class="pre">'988</span> <span class="pre">-</span> <span class="pre">Nouvelle-Calédonie'),</span> <span class="pre">('989',</span> <span class="pre">'989</span> <span class="pre">-</span> <span class="pre">Île</span> <span class="pre">de</span> <span class="pre">Clipperton'))</span></em><a class="headerlink" href="#localflavor.fr.fr_department.DEPARTMENT_CHOICES" title="Link to this definition">¶</a></dt>
+<dd><p>A list of departments</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.fr.fr_region.REGION_CHOICES">
+<span class="sig-prename descclassname"><span class="pre">localflavor.fr.fr_region.</span></span><span class="sig-name descname"><span class="pre">REGION_CHOICES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(('01',</span> <span class="pre">'Guadeloupe'),</span> <span class="pre">('02',</span> <span class="pre">'Martinique'),</span> <span class="pre">('03',</span> <span class="pre">'Guyane'),</span> <span class="pre">('04',</span> <span class="pre">'La</span> <span class="pre">Réunion'),</span> <span class="pre">('05',</span> <span class="pre">'Mayotte'),</span> <span class="pre">('11',</span> <span class="pre">'Île-de-France'),</span> <span class="pre">('21',</span> <span class="pre">'Champagne-Ardenne'),</span> <span class="pre">('22',</span> <span class="pre">'Picardie'),</span> <span class="pre">('23',</span> <span class="pre">'Haute-Normandie'),</span> <span class="pre">('24',</span> <span class="pre">'Centre'),</span> <span class="pre">('25',</span> <span class="pre">'Basse-Normandie'),</span> <span class="pre">('26',</span> <span class="pre">'Bourgogne'),</span> <span class="pre">('31',</span> <span class="pre">'Nord-Pas-de-Calais'),</span> <span class="pre">('41',</span> <span class="pre">'Lorraine'),</span> <span class="pre">('42',</span> <span class="pre">'Alsace'),</span> <span class="pre">('43',</span> <span class="pre">'Franche-Comté'),</span> <span class="pre">('52',</span> <span class="pre">'Pays</span> <span class="pre">de</span> <span class="pre">la</span> <span class="pre">Loire'),</span> <span class="pre">('53',</span> <span class="pre">'Bretagne'),</span> <span class="pre">('54',</span> <span class="pre">'Poitou-Charentes'),</span> <span class="pre">('72',</span> <span class="pre">'Aquitaine'),</span> <span class="pre">('73',</span> <span class="pre">'Midi-Pyrénées'),</span> <span class="pre">('74',</span> <span class="pre">'Limousin'),</span> <span class="pre">('82',</span> <span class="pre">'Rhône-Alpes'),</span> <span class="pre">('83',</span> <span class="pre">'Auvergne'),</span> <span class="pre">('91',</span> <span class="pre">'Languedoc-Roussillon'),</span> <span class="pre">('93',</span> <span class="pre">&quot;Provence-Alpes-Côte</span> <span class="pre">d'Azur&quot;),</span> <span class="pre">('94',</span> <span class="pre">'Corse'))</span></em><a class="headerlink" href="#localflavor.fr.fr_region.REGION_CHOICES" title="Link to this definition">¶</a></dt>
+<dd><p>See the “Code officiel géographique” on the INSEE website &lt;www.insee.fr&gt;.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.fr.fr_region.REGION_2016_CHOICES">
+<span class="sig-prename descclassname"><span class="pre">localflavor.fr.fr_region.</span></span><span class="sig-name descname"><span class="pre">REGION_2016_CHOICES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(('01',</span> <span class="pre">'Guadeloupe'),</span> <span class="pre">('02',</span> <span class="pre">'Martinique'),</span> <span class="pre">('03',</span> <span class="pre">'Guyane'),</span> <span class="pre">('04',</span> <span class="pre">'La</span> <span class="pre">Réunion'),</span> <span class="pre">('06',</span> <span class="pre">'Mayotte'),</span> <span class="pre">('11',</span> <span class="pre">'Île-de-France'),</span> <span class="pre">('24',</span> <span class="pre">'Centre-Val</span> <span class="pre">de</span> <span class="pre">Loire'),</span> <span class="pre">('27',</span> <span class="pre">'Bourgogne-Franche-Comté'),</span> <span class="pre">('28',</span> <span class="pre">'Normandie'),</span> <span class="pre">('32',</span> <span class="pre">'Hauts-de-France'),</span> <span class="pre">('44',</span> <span class="pre">'Grand</span> <span class="pre">Est'),</span> <span class="pre">('52',</span> <span class="pre">'Pays</span> <span class="pre">de</span> <span class="pre">la</span> <span class="pre">Loire'),</span> <span class="pre">('53',</span> <span class="pre">'Bretagne'),</span> <span class="pre">('75',</span> <span class="pre">'Nouvelle-Aquitaine'),</span> <span class="pre">('76',</span> <span class="pre">'Occitanie'),</span> <span class="pre">('84',</span> <span class="pre">'Auvergne-Rhône-Alpes'),</span> <span class="pre">('93',</span> <span class="pre">&quot;Provence-Alpes-Côte</span> <span class="pre">d'Azur&quot;),</span> <span class="pre">('94',</span> <span class="pre">'Corse'))</span></em><a class="headerlink" href="#localflavor.fr.fr_region.REGION_2016_CHOICES" title="Link to this definition">¶</a></dt>
+<dd><p>Built-in immutable sequence.</p>
+<p>If no argument is given, the constructor returns an empty tuple.
+If iterable is specified the tuple is initialized from iterable’s items.</p>
+<p>If the argument is a tuple, the return value is the same object.</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">France (<code class="docutils literal notranslate"><span class="pre">fr</span></code>)</a><ul>
+<li><a class="reference internal" href="#module-localflavor.fr.forms">Forms</a><ul>
+<li><a class="reference internal" href="#localflavor.fr.forms.FRDepartmentField"><code class="docutils literal notranslate"><span class="pre">FRDepartmentField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.fr.forms.FRDepartmentField.widget"><code class="docutils literal notranslate"><span class="pre">FRDepartmentField.widget</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.fr.forms.FRDepartmentSelect"><code class="docutils literal notranslate"><span class="pre">FRDepartmentSelect</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.fr.forms.FRNationalIdentificationNumber"><code class="docutils literal notranslate"><span class="pre">FRNationalIdentificationNumber</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.fr.forms.FRNationalIdentificationNumber.clean"><code class="docutils literal notranslate"><span class="pre">FRNationalIdentificationNumber.clean()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.fr.forms.FRRNAField"><code class="docutils literal notranslate"><span class="pre">FRRNAField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.fr.forms.FRRNAField.clean"><code class="docutils literal notranslate"><span class="pre">FRRNAField.clean()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.fr.forms.FRRegion2016Select"><code class="docutils literal notranslate"><span class="pre">FRRegion2016Select</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.fr.forms.FRRegionField"><code class="docutils literal notranslate"><span class="pre">FRRegionField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.fr.forms.FRRegionField.widget"><code class="docutils literal notranslate"><span class="pre">FRRegionField.widget</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.fr.forms.FRRegionSelect"><code class="docutils literal notranslate"><span class="pre">FRRegionSelect</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.fr.forms.FRSIRENField"><code class="docutils literal notranslate"><span class="pre">FRSIRENField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.fr.forms.FRSIRENField.clean"><code class="docutils literal notranslate"><span class="pre">FRSIRENField.clean()</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.fr.forms.FRSIRENField.to_python"><code class="docutils literal notranslate"><span class="pre">FRSIRENField.to_python()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.fr.forms.FRSIRETField"><code class="docutils literal notranslate"><span class="pre">FRSIRETField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.fr.forms.FRSIRETField.clean"><code class="docutils literal notranslate"><span class="pre">FRSIRETField.clean()</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.fr.forms.FRSIRETField.to_python"><code class="docutils literal notranslate"><span class="pre">FRSIRETField.to_python()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.fr.forms.FRZipCodeField"><code class="docutils literal notranslate"><span class="pre">FRZipCodeField</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data">Data</a><ul>
+<li><a class="reference internal" href="#localflavor.fr.fr_department.DEPARTMENT_CHOICES_PER_REGION"><code class="docutils literal notranslate"><span class="pre">DEPARTMENT_CHOICES_PER_REGION</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.fr.fr_department.DEPARTMENT_CHOICES"><code class="docutils literal notranslate"><span class="pre">DEPARTMENT_CHOICES</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.fr.fr_region.REGION_CHOICES"><code class="docutils literal notranslate"><span class="pre">REGION_CHOICES</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.fr.fr_region.REGION_2016_CHOICES"><code class="docutils literal notranslate"><span class="pre">REGION_2016_CHOICES</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="fi.html"
+                          title="previous chapter">Finland (<code class="docutils literal notranslate"><span class="pre">fi</span></code>)</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="gb.html"
+                          title="next chapter">Great Britain (<code class="docutils literal notranslate"><span class="pre">gb</span></code>)</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/localflavor/fr.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="gb.html" title="Great Britain (gb)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="fi.html" title="Finland (fi)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">France (<code class="docutils literal notranslate"><span class="pre">fr</span></code>)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright Django Software Foundation and individual contributors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+  </body>
+</html>

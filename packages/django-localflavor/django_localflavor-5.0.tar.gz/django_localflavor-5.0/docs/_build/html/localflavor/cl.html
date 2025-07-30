@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Chile (cl) &#8212; django-localflavor 4.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=2bf1fcf8" />
+    
+    <script src="../_static/documentation_options.js?v=9f5556dd"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="China (cn)" href="cn.html" />
+    <link rel="prev" title="Switzerland (ch)" href="ch.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="cn.html" title="China (cn)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="ch.html" title="Switzerland (ch)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Chile (<code class="docutils literal notranslate"><span class="pre">cl</span></code>)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="chile-cl">
+<h1>Chile (<code class="docutils literal notranslate"><span class="pre">cl</span></code>)<a class="headerlink" href="#chile-cl" title="Link to this heading">¶</a></h1>
+<section id="module-localflavor.cl.forms">
+<span id="forms"></span><h2>Forms<a class="headerlink" href="#module-localflavor.cl.forms" title="Link to this heading">¶</a></h2>
+<p>Chile specific form helpers.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.cl.forms.CLRegionSelect">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.cl.forms.</span></span><span class="sig-name descname"><span class="pre">CLRegionSelect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attrs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/cl/forms.html#CLRegionSelect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.cl.forms.CLRegionSelect" title="Link to this definition">¶</a></dt>
+<dd><p>A Select widget that uses a list of Chilean Regions (Regiones) as its choices.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.cl.forms.CLRutField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.cl.forms.</span></span><span class="sig-name descname"><span class="pre">CLRutField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/cl/forms.html#CLRutField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.cl.forms.CLRutField" title="Link to this definition">¶</a></dt>
+<dd><p>Chilean “Rol Unico Tributario” (RUT) field.</p>
+<p>This is the Chilean national identification number.</p>
+<p>Samples for testing are available from
+<a class="reference external" href="https://palena.sii.cl/cvc/dte/ee_empresas_emisoras.html">https://palena.sii.cl/cvc/dte/ee_empresas_emisoras.html</a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.cl.forms.CLRutField.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/cl/forms.html#CLRutField.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.cl.forms.CLRutField.clean" title="Link to this definition">¶</a></dt>
+<dd><p>Check and clean the Chilean RUT.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="data">
+<h2>Data<a class="headerlink" href="#data" title="Link to this heading">¶</a></h2>
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.cl.cl_regions.REGION_CHOICES">
+<span class="sig-prename descclassname"><span class="pre">localflavor.cl.cl_regions.</span></span><span class="sig-name descname"><span class="pre">REGION_CHOICES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(('RM',</span> <span class="pre">'Región</span> <span class="pre">Metropolitana</span> <span class="pre">de</span> <span class="pre">Santiago'),</span> <span class="pre">('I',</span> <span class="pre">'Región</span> <span class="pre">de</span> <span class="pre">Tarapacá'),</span> <span class="pre">('II',</span> <span class="pre">'Región</span> <span class="pre">de</span> <span class="pre">Antofagasta'),</span> <span class="pre">('III',</span> <span class="pre">'Región</span> <span class="pre">de</span> <span class="pre">Atacama'),</span> <span class="pre">('IV',</span> <span class="pre">'Región</span> <span class="pre">de</span> <span class="pre">Coquimbo'),</span> <span class="pre">('V',</span> <span class="pre">'Región</span> <span class="pre">de</span> <span class="pre">Valparaíso'),</span> <span class="pre">('VI',</span> <span class="pre">&quot;Región</span> <span class="pre">del</span> <span class="pre">Libertador</span> <span class="pre">Bernardo</span> <span class="pre">O'Higgins&quot;),</span> <span class="pre">('VII',</span> <span class="pre">'Región</span> <span class="pre">del</span> <span class="pre">Maule'),</span> <span class="pre">('VIII',</span> <span class="pre">'Región</span> <span class="pre">del</span> <span class="pre">Bío</span> <span class="pre">Bío'),</span> <span class="pre">('IX',</span> <span class="pre">'Región</span> <span class="pre">de</span> <span class="pre">la</span> <span class="pre">Araucanía'),</span> <span class="pre">('X',</span> <span class="pre">'Región</span> <span class="pre">de</span> <span class="pre">los</span> <span class="pre">Lagos'),</span> <span class="pre">('XI',</span> <span class="pre">'Región</span> <span class="pre">de</span> <span class="pre">Aysén</span> <span class="pre">del</span> <span class="pre">General</span> <span class="pre">Carlos</span> <span class="pre">Ibáñez</span> <span class="pre">del</span> <span class="pre">Campo'),</span> <span class="pre">('XII',</span> <span class="pre">'Región</span> <span class="pre">de</span> <span class="pre">Magallanes</span> <span class="pre">y</span> <span class="pre">la</span> <span class="pre">Antártica</span> <span class="pre">Chilena'),</span> <span class="pre">('XIV',</span> <span class="pre">'Región</span> <span class="pre">de</span> <span class="pre">Los</span> <span class="pre">Ríos'),</span> <span class="pre">('XV',</span> <span class="pre">'Región</span> <span class="pre">de</span> <span class="pre">Arica-Parinacota'),</span> <span class="pre">('XVI',</span> <span class="pre">'Región</span> <span class="pre">del</span> <span class="pre">Ñuble'))</span></em><a class="headerlink" href="#localflavor.cl.cl_regions.REGION_CHOICES" title="Link to this definition">¶</a></dt>
+<dd><p>A list of Chilean regions as <cite>choices</cite> in a formfield.</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Chile (<code class="docutils literal notranslate"><span class="pre">cl</span></code>)</a><ul>
+<li><a class="reference internal" href="#module-localflavor.cl.forms">Forms</a><ul>
+<li><a class="reference internal" href="#localflavor.cl.forms.CLRegionSelect"><code class="docutils literal notranslate"><span class="pre">CLRegionSelect</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.cl.forms.CLRutField"><code class="docutils literal notranslate"><span class="pre">CLRutField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.cl.forms.CLRutField.clean"><code class="docutils literal notranslate"><span class="pre">CLRutField.clean()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data">Data</a><ul>
+<li><a class="reference internal" href="#localflavor.cl.cl_regions.REGION_CHOICES"><code class="docutils literal notranslate"><span class="pre">REGION_CHOICES</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="ch.html"
+                          title="previous chapter">Switzerland (<code class="docutils literal notranslate"><span class="pre">ch</span></code>)</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="cn.html"
+                          title="next chapter">China (<code class="docutils literal notranslate"><span class="pre">cn</span></code>)</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/localflavor/cl.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="cn.html" title="China (cn)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="ch.html" title="Switzerland (ch)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Chile (<code class="docutils literal notranslate"><span class="pre">cl</span></code>)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright Django Software Foundation and individual contributors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+  </body>
+</html>

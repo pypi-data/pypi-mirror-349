@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Australia (au) &#8212; django-localflavor 4.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=2bf1fcf8" />
+    
+    <script src="../_static/documentation_options.js?v=9f5556dd"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Belgium (be)" href="be.html" />
+    <link rel="prev" title="Austria (at)" href="at.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="be.html" title="Belgium (be)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="at.html" title="Austria (at)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Australia (<code class="docutils literal notranslate"><span class="pre">au</span></code>)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="australia-au">
+<h1>Australia (<code class="docutils literal notranslate"><span class="pre">au</span></code>)<a class="headerlink" href="#australia-au" title="Link to this heading">¶</a></h1>
+<section id="module-localflavor.au.forms">
+<span id="forms"></span><h2>Forms<a class="headerlink" href="#module-localflavor.au.forms" title="Link to this heading">¶</a></h2>
+<p>Australian-specific Form helpers.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.au.forms.AUBusinessNumberField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.au.forms.</span></span><span class="sig-name descname"><span class="pre">AUBusinessNumberField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/au/forms.html#AUBusinessNumberField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.au.forms.AUBusinessNumberField" title="Link to this definition">¶</a></dt>
+<dd><p>A form field that validates input as an Australian Business Number (ABN).</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 1.3.</span></p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 1.4.</span></p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.au.forms.AUBusinessNumberField.prepare_value">
+<span class="sig-name descname"><span class="pre">prepare_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/au/forms.html#AUBusinessNumberField.prepare_value"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.au.forms.AUBusinessNumberField.prepare_value" title="Link to this definition">¶</a></dt>
+<dd><p>Format the value for display.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.au.forms.AUBusinessNumberField.to_python">
+<span class="sig-name descname"><span class="pre">to_python</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/au/forms.html#AUBusinessNumberField.to_python"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.au.forms.AUBusinessNumberField.to_python" title="Link to this definition">¶</a></dt>
+<dd><p>Return a string.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.au.forms.AUCompanyNumberField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.au.forms.</span></span><span class="sig-name descname"><span class="pre">AUCompanyNumberField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/au/forms.html#AUCompanyNumberField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.au.forms.AUCompanyNumberField" title="Link to this definition">¶</a></dt>
+<dd><p>A form field that validates input as an Australian Company Number (ACN).</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 1.5.</span></p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.au.forms.AUCompanyNumberField.prepare_value">
+<span class="sig-name descname"><span class="pre">prepare_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/au/forms.html#AUCompanyNumberField.prepare_value"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.au.forms.AUCompanyNumberField.prepare_value" title="Link to this definition">¶</a></dt>
+<dd><p>Format the value for display.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.au.forms.AUCompanyNumberField.to_python">
+<span class="sig-name descname"><span class="pre">to_python</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/au/forms.html#AUCompanyNumberField.to_python"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.au.forms.AUCompanyNumberField.to_python" title="Link to this definition">¶</a></dt>
+<dd><p>Return a string.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.au.forms.AUPostCodeField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.au.forms.</span></span><span class="sig-name descname"><span class="pre">AUPostCodeField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/au/forms.html#AUPostCodeField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.au.forms.AUPostCodeField" title="Link to this definition">¶</a></dt>
+<dd><p>Australian post code field.</p>
+<p>Assumed to be 4 digits.
+Northern Territory 3-digit postcodes should have leading zero.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.au.forms.AUStateSelect">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.au.forms.</span></span><span class="sig-name descname"><span class="pre">AUStateSelect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attrs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/au/forms.html#AUStateSelect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.au.forms.AUStateSelect" title="Link to this definition">¶</a></dt>
+<dd><p>A Select widget that uses a list of Australian states/territories as its choices.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.au.forms.AUTaxFileNumberField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.au.forms.</span></span><span class="sig-name descname"><span class="pre">AUTaxFileNumberField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/au/forms.html#AUTaxFileNumberField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.au.forms.AUTaxFileNumberField" title="Link to this definition">¶</a></dt>
+<dd><p>A form field that validates input as an Australian Tax File Number (TFN).</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 1.4.</span></p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.au.forms.AUTaxFileNumberField.prepare_value">
+<span class="sig-name descname"><span class="pre">prepare_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/au/forms.html#AUTaxFileNumberField.prepare_value"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.au.forms.AUTaxFileNumberField.prepare_value" title="Link to this definition">¶</a></dt>
+<dd><p>Format the value for display.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-localflavor.au.models">
+<span id="models"></span><h2>Models<a class="headerlink" href="#module-localflavor.au.models" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.au.models.AUBusinessNumberField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.au.models.</span></span><span class="sig-name descname"><span class="pre">AUBusinessNumberField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/au/models.html#AUBusinessNumberField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.au.models.AUBusinessNumberField" title="Link to this definition">¶</a></dt>
+<dd><p>A model field that checks that the value is a valid Australian Business Number (ABN).</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 1.3.</span></p>
+</div>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="localflavor.au.models.AUBusinessNumberField.description">
+<span class="sig-name descname"><span class="pre">description</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Australian</span> <span class="pre">Business</span> <span class="pre">Number'</span></em><a class="headerlink" href="#localflavor.au.models.AUBusinessNumberField.description" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.au.models.AUBusinessNumberField.formfield">
+<span class="sig-name descname"><span class="pre">formfield</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/au/models.html#AUBusinessNumberField.formfield"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.au.models.AUBusinessNumberField.formfield" title="Link to this definition">¶</a></dt>
+<dd><p>Return a django.forms.Field instance for this field.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.au.models.AUBusinessNumberField.to_python">
+<span class="sig-name descname"><span class="pre">to_python</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/au/models.html#AUBusinessNumberField.to_python"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.au.models.AUBusinessNumberField.to_python" title="Link to this definition">¶</a></dt>
+<dd><p>Ensure the ABN is stored without spaces.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="localflavor.au.models.AUBusinessNumberField.validators">
+<span class="sig-name descname"><span class="pre">validators</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;localflavor.au.validators.AUBusinessNumberFieldValidator</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;django.core.validators.MaxLengthValidator</span> <span class="pre">object&gt;]</span></em><a class="headerlink" href="#localflavor.au.models.AUBusinessNumberField.validators" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.au.models.AUCompanyNumberField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.au.models.</span></span><span class="sig-name descname"><span class="pre">AUCompanyNumberField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/au/models.html#AUCompanyNumberField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.au.models.AUCompanyNumberField" title="Link to this definition">¶</a></dt>
+<dd><p>A model field that checks that the value is a valid Australian Company Number (ACN).</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 1.5.</span></p>
+</div>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="localflavor.au.models.AUCompanyNumberField.description">
+<span class="sig-name descname"><span class="pre">description</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Australian</span> <span class="pre">Company</span> <span class="pre">Number'</span></em><a class="headerlink" href="#localflavor.au.models.AUCompanyNumberField.description" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.au.models.AUCompanyNumberField.formfield">
+<span class="sig-name descname"><span class="pre">formfield</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/au/models.html#AUCompanyNumberField.formfield"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.au.models.AUCompanyNumberField.formfield" title="Link to this definition">¶</a></dt>
+<dd><p>Return a django.forms.Field instance for this field.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.au.models.AUCompanyNumberField.to_python">
+<span class="sig-name descname"><span class="pre">to_python</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/au/models.html#AUCompanyNumberField.to_python"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.au.models.AUCompanyNumberField.to_python" title="Link to this definition">¶</a></dt>
+<dd><p>Ensure the ACN is stored without spaces.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="localflavor.au.models.AUCompanyNumberField.validators">
+<span class="sig-name descname"><span class="pre">validators</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;localflavor.au.validators.AUCompanyNumberFieldValidator</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;django.core.validators.MaxLengthValidator</span> <span class="pre">object&gt;]</span></em><a class="headerlink" href="#localflavor.au.models.AUCompanyNumberField.validators" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.au.models.AUPostCodeField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.au.models.</span></span><span class="sig-name descname"><span class="pre">AUPostCodeField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/au/models.html#AUPostCodeField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.au.models.AUPostCodeField" title="Link to this definition">¶</a></dt>
+<dd><p>A model field that stores the four-digit Australian postcode in the database.</p>
+<p>This field is represented by forms as a <a class="reference internal" href="#localflavor.au.forms.AUPostCodeField" title="localflavor.au.forms.AUPostCodeField"><code class="xref py py-class docutils literal notranslate"><span class="pre">AUPostCodeField</span></code></a> field.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="localflavor.au.models.AUPostCodeField.description">
+<span class="sig-name descname"><span class="pre">description</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Australian</span> <span class="pre">Postcode'</span></em><a class="headerlink" href="#localflavor.au.models.AUPostCodeField.description" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.au.models.AUPostCodeField.formfield">
+<span class="sig-name descname"><span class="pre">formfield</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/au/models.html#AUPostCodeField.formfield"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.au.models.AUPostCodeField.formfield" title="Link to this definition">¶</a></dt>
+<dd><p>Return a django.forms.Field instance for this field.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.au.models.AUStateField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.au.models.</span></span><span class="sig-name descname"><span class="pre">AUStateField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/au/models.html#AUStateField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.au.models.AUStateField" title="Link to this definition">¶</a></dt>
+<dd><p>A model field that stores the three-letter Australian state abbreviation in the database.</p>
+<p>It is represented with <code class="xref py py-data docutils literal notranslate"><span class="pre">STATE_CHOICES`</span></code> choices.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.au.models.AUStateField.deconstruct">
+<span class="sig-name descname"><span class="pre">deconstruct</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/au/models.html#AUStateField.deconstruct"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.au.models.AUStateField.deconstruct" title="Link to this definition">¶</a></dt>
+<dd><p>Return enough information to recreate the field as a 4-tuple:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>The name of the field on the model, if contribute_to_class() has
+been run.</p></li>
+<li><p>The import path of the field, including the class, e.g.
+django.db.models.IntegerField. This should be the most portable
+version, so less specific may be better.</p></li>
+<li><p>A list of positional arguments.</p></li>
+<li><p>A dict of keyword arguments.</p></li>
+</ul>
+</div></blockquote>
+<p>Note that the positional or keyword arguments must contain values of
+the following types (including inner values of collection types):</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>None, bool, str, int, float, complex, set, frozenset, list, tuple,
+dict</p></li>
+<li><p>UUID</p></li>
+<li><p>datetime.datetime (naive), datetime.date</p></li>
+<li><p>top-level classes, top-level functions - will be referenced by their
+full import path</p></li>
+<li><p>Storage instances - these have their own deconstruct() method</p></li>
+</ul>
+</div></blockquote>
+<p>This is because the values here must be serialized into a text format
+(possibly new Python code, possibly JSON) and these are the only types
+with encoding handlers defined.</p>
+<p>There’s no need to return the exact way the field was instantiated this
+time, just ensure that the resulting field is the same - prefer keyword
+arguments over positional ones, and omit parameters with their default
+values.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="localflavor.au.models.AUStateField.description">
+<span class="sig-name descname"><span class="pre">description</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Australian</span> <span class="pre">State'</span></em><a class="headerlink" href="#localflavor.au.models.AUStateField.description" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.au.models.AUTaxFileNumberField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.au.models.</span></span><span class="sig-name descname"><span class="pre">AUTaxFileNumberField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/au/models.html#AUTaxFileNumberField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.au.models.AUTaxFileNumberField" title="Link to this definition">¶</a></dt>
+<dd><p>A model field that checks that the value is a valid Tax File Number (TFN).</p>
+<p>A TFN is a number issued to a person by the Commissioner of Taxation and
+is used to verify client identity and establish their income levels.
+It is a eight or nine digit number without any embedded meaning.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 1.4.</span></p>
+</div>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="localflavor.au.models.AUTaxFileNumberField.description">
+<span class="sig-name descname"><span class="pre">description</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Australian</span> <span class="pre">Tax</span> <span class="pre">File</span> <span class="pre">Number'</span></em><a class="headerlink" href="#localflavor.au.models.AUTaxFileNumberField.description" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.au.models.AUTaxFileNumberField.formfield">
+<span class="sig-name descname"><span class="pre">formfield</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/au/models.html#AUTaxFileNumberField.formfield"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.au.models.AUTaxFileNumberField.formfield" title="Link to this definition">¶</a></dt>
+<dd><p>Return a django.forms.Field instance for this field.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.au.models.AUTaxFileNumberField.to_python">
+<span class="sig-name descname"><span class="pre">to_python</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/au/models.html#AUTaxFileNumberField.to_python"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.au.models.AUTaxFileNumberField.to_python" title="Link to this definition">¶</a></dt>
+<dd><p>Ensure the TFN is stored without spaces.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="localflavor.au.models.AUTaxFileNumberField.validators">
+<span class="sig-name descname"><span class="pre">validators</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;localflavor.au.validators.AUTaxFileNumberFieldValidator</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;django.core.validators.MaxLengthValidator</span> <span class="pre">object&gt;]</span></em><a class="headerlink" href="#localflavor.au.models.AUTaxFileNumberField.validators" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="data">
+<h2>Data<a class="headerlink" href="#data" title="Link to this heading">¶</a></h2>
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.au.au_states.STATE_CHOICES">
+<span class="sig-prename descclassname"><span class="pre">localflavor.au.au_states.</span></span><span class="sig-name descname"><span class="pre">STATE_CHOICES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(('ACT',</span> <span class="pre">'Australian</span> <span class="pre">Capital</span> <span class="pre">Territory'),</span> <span class="pre">('NSW',</span> <span class="pre">'New</span> <span class="pre">South</span> <span class="pre">Wales'),</span> <span class="pre">('NT',</span> <span class="pre">'Northern</span> <span class="pre">Territory'),</span> <span class="pre">('QLD',</span> <span class="pre">'Queensland'),</span> <span class="pre">('SA',</span> <span class="pre">'South</span> <span class="pre">Australia'),</span> <span class="pre">('TAS',</span> <span class="pre">'Tasmania'),</span> <span class="pre">('VIC',</span> <span class="pre">'Victoria'),</span> <span class="pre">('WA',</span> <span class="pre">'Western</span> <span class="pre">Australia'))</span></em><a class="headerlink" href="#localflavor.au.au_states.STATE_CHOICES" title="Link to this definition">¶</a></dt>
+<dd><p>An alphabetical list of states for use as <cite>choices</cite> in a formfield.</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Australia (<code class="docutils literal notranslate"><span class="pre">au</span></code>)</a><ul>
+<li><a class="reference internal" href="#module-localflavor.au.forms">Forms</a><ul>
+<li><a class="reference internal" href="#localflavor.au.forms.AUBusinessNumberField"><code class="docutils literal notranslate"><span class="pre">AUBusinessNumberField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.au.forms.AUBusinessNumberField.prepare_value"><code class="docutils literal notranslate"><span class="pre">AUBusinessNumberField.prepare_value()</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.au.forms.AUBusinessNumberField.to_python"><code class="docutils literal notranslate"><span class="pre">AUBusinessNumberField.to_python()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.au.forms.AUCompanyNumberField"><code class="docutils literal notranslate"><span class="pre">AUCompanyNumberField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.au.forms.AUCompanyNumberField.prepare_value"><code class="docutils literal notranslate"><span class="pre">AUCompanyNumberField.prepare_value()</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.au.forms.AUCompanyNumberField.to_python"><code class="docutils literal notranslate"><span class="pre">AUCompanyNumberField.to_python()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.au.forms.AUPostCodeField"><code class="docutils literal notranslate"><span class="pre">AUPostCodeField</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.au.forms.AUStateSelect"><code class="docutils literal notranslate"><span class="pre">AUStateSelect</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.au.forms.AUTaxFileNumberField"><code class="docutils literal notranslate"><span class="pre">AUTaxFileNumberField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.au.forms.AUTaxFileNumberField.prepare_value"><code class="docutils literal notranslate"><span class="pre">AUTaxFileNumberField.prepare_value()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-localflavor.au.models">Models</a><ul>
+<li><a class="reference internal" href="#localflavor.au.models.AUBusinessNumberField"><code class="docutils literal notranslate"><span class="pre">AUBusinessNumberField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.au.models.AUBusinessNumberField.description"><code class="docutils literal notranslate"><span class="pre">AUBusinessNumberField.description</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.au.models.AUBusinessNumberField.formfield"><code class="docutils literal notranslate"><span class="pre">AUBusinessNumberField.formfield()</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.au.models.AUBusinessNumberField.to_python"><code class="docutils literal notranslate"><span class="pre">AUBusinessNumberField.to_python()</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.au.models.AUBusinessNumberField.validators"><code class="docutils literal notranslate"><span class="pre">AUBusinessNumberField.validators</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.au.models.AUCompanyNumberField"><code class="docutils literal notranslate"><span class="pre">AUCompanyNumberField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.au.models.AUCompanyNumberField.description"><code class="docutils literal notranslate"><span class="pre">AUCompanyNumberField.description</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.au.models.AUCompanyNumberField.formfield"><code class="docutils literal notranslate"><span class="pre">AUCompanyNumberField.formfield()</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.au.models.AUCompanyNumberField.to_python"><code class="docutils literal notranslate"><span class="pre">AUCompanyNumberField.to_python()</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.au.models.AUCompanyNumberField.validators"><code class="docutils literal notranslate"><span class="pre">AUCompanyNumberField.validators</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.au.models.AUPostCodeField"><code class="docutils literal notranslate"><span class="pre">AUPostCodeField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.au.models.AUPostCodeField.description"><code class="docutils literal notranslate"><span class="pre">AUPostCodeField.description</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.au.models.AUPostCodeField.formfield"><code class="docutils literal notranslate"><span class="pre">AUPostCodeField.formfield()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.au.models.AUStateField"><code class="docutils literal notranslate"><span class="pre">AUStateField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.au.models.AUStateField.deconstruct"><code class="docutils literal notranslate"><span class="pre">AUStateField.deconstruct()</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.au.models.AUStateField.description"><code class="docutils literal notranslate"><span class="pre">AUStateField.description</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.au.models.AUTaxFileNumberField"><code class="docutils literal notranslate"><span class="pre">AUTaxFileNumberField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.au.models.AUTaxFileNumberField.description"><code class="docutils literal notranslate"><span class="pre">AUTaxFileNumberField.description</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.au.models.AUTaxFileNumberField.formfield"><code class="docutils literal notranslate"><span class="pre">AUTaxFileNumberField.formfield()</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.au.models.AUTaxFileNumberField.to_python"><code class="docutils literal notranslate"><span class="pre">AUTaxFileNumberField.to_python()</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.au.models.AUTaxFileNumberField.validators"><code class="docutils literal notranslate"><span class="pre">AUTaxFileNumberField.validators</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data">Data</a><ul>
+<li><a class="reference internal" href="#localflavor.au.au_states.STATE_CHOICES"><code class="docutils literal notranslate"><span class="pre">STATE_CHOICES</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="at.html"
+                          title="previous chapter">Austria (<code class="docutils literal notranslate"><span class="pre">at</span></code>)</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="be.html"
+                          title="next chapter">Belgium (<code class="docutils literal notranslate"><span class="pre">be</span></code>)</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/localflavor/au.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="be.html" title="Belgium (be)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="at.html" title="Austria (at)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Australia (<code class="docutils literal notranslate"><span class="pre">au</span></code>)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright Django Software Foundation and individual contributors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+  </body>
+</html>

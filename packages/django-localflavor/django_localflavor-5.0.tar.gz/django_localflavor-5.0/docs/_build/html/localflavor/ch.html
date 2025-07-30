@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Switzerland (ch) &#8212; django-localflavor 4.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=2bf1fcf8" />
+    
+    <script src="../_static/documentation_options.js?v=9f5556dd"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Chile (cl)" href="cl.html" />
+    <link rel="prev" title="Canada (ca)" href="ca.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="cl.html" title="Chile (cl)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="ca.html" title="Canada (ca)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Switzerland (<code class="docutils literal notranslate"><span class="pre">ch</span></code>)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="switzerland-ch">
+<h1>Switzerland (<code class="docutils literal notranslate"><span class="pre">ch</span></code>)<a class="headerlink" href="#switzerland-ch" title="Link to this heading">¶</a></h1>
+<section id="module-localflavor.ch.forms">
+<span id="forms"></span><h2>Forms<a class="headerlink" href="#module-localflavor.ch.forms" title="Link to this heading">¶</a></h2>
+<p>Swiss-specific Form helpers.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.ch.forms.CHIdentityCardNumberField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.ch.forms.</span></span><span class="sig-name descname"><span class="pre">CHIdentityCardNumberField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/ch/forms.html#CHIdentityCardNumberField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.ch.forms.CHIdentityCardNumberField" title="Link to this definition">¶</a></dt>
+<dd><p>A Swiss identity card number.</p>
+<p>Checks the following rules to determine whether the number is valid:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Conforms to the X1234567&lt;0 or 1234567890 format.</p></li>
+<li><p>Included checksums match calculated checksums</p></li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.ch.forms.CHIdentityCardNumberField.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/ch/forms.html#CHIdentityCardNumberField.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.ch.forms.CHIdentityCardNumberField.clean" title="Link to this definition">¶</a></dt>
+<dd><p>Validate the given value and return its “cleaned” value as an
+appropriate Python object. Raise ValidationError for any errors.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.ch.forms.CHSocialSecurityNumberField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.ch.forms.</span></span><span class="sig-name descname"><span class="pre">CHSocialSecurityNumberField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/ch/forms.html#CHSocialSecurityNumberField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.ch.forms.CHSocialSecurityNumberField" title="Link to this definition">¶</a></dt>
+<dd><p>A Swiss Social Security number (also known as the new AHV Number).</p>
+<p>Checks the following rules to determine whether the number is valid:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Conforms to the 756.XXXX.XXXX.XX</p></li>
+<li><p>Included checksums match calculated checksums</p></li>
+</ul>
+</div></blockquote>
+<p>See:
+<a class="reference external" href="http://de.wikipedia.org/wiki/Sozialversicherungsnummer#Versichertennummer">http://de.wikipedia.org/wiki/Sozialversicherungsnummer#Versichertennummer</a></p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 1.2.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.ch.forms.CHStateSelect">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.ch.forms.</span></span><span class="sig-name descname"><span class="pre">CHStateSelect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attrs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/ch/forms.html#CHStateSelect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.ch.forms.CHStateSelect" title="Link to this definition">¶</a></dt>
+<dd><p>A Select widget that uses a list of CH states as its choices.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.ch.forms.CHZipCodeField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.ch.forms.</span></span><span class="sig-name descname"><span class="pre">CHZipCodeField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/ch/forms.html#CHZipCodeField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.ch.forms.CHZipCodeField" title="Link to this definition">¶</a></dt>
+<dd><p>A form field that validates input as a Swiss zip code.</p>
+<p>Valid codes consist of four digits ranging from 1XXX to 9XXX.</p>
+<p>See:
+<a class="reference external" href="http://en.wikipedia.org/wiki/Postal_codes_in_Switzerland_and_Liechtenstein">http://en.wikipedia.org/wiki/Postal_codes_in_Switzerland_and_Liechtenstein</a></p>
+</dd></dl>
+
+</section>
+<section id="data">
+<h2>Data<a class="headerlink" href="#data" title="Link to this heading">¶</a></h2>
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.ch.ch_states.STATE_CHOICES">
+<span class="sig-prename descclassname"><span class="pre">localflavor.ch.ch_states.</span></span><span class="sig-name descname"><span class="pre">STATE_CHOICES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(('AG',</span> <span class="pre">'Aargau'),</span> <span class="pre">('AI',</span> <span class="pre">'Appenzell</span> <span class="pre">Innerrhoden'),</span> <span class="pre">('AR',</span> <span class="pre">'Appenzell</span> <span class="pre">Ausserrhoden'),</span> <span class="pre">('BS',</span> <span class="pre">'Basel-Stadt'),</span> <span class="pre">('BL',</span> <span class="pre">'Basel-Land'),</span> <span class="pre">('BE',</span> <span class="pre">'Berne'),</span> <span class="pre">('FR',</span> <span class="pre">'Fribourg'),</span> <span class="pre">('GE',</span> <span class="pre">'Geneva'),</span> <span class="pre">('GL',</span> <span class="pre">'Glarus'),</span> <span class="pre">('GR',</span> <span class="pre">'Graubuenden'),</span> <span class="pre">('JU',</span> <span class="pre">'Jura'),</span> <span class="pre">('LU',</span> <span class="pre">'Lucerne'),</span> <span class="pre">('NE',</span> <span class="pre">'Neuchatel'),</span> <span class="pre">('NW',</span> <span class="pre">'Nidwalden'),</span> <span class="pre">('OW',</span> <span class="pre">'Obwalden'),</span> <span class="pre">('SH',</span> <span class="pre">'Schaffhausen'),</span> <span class="pre">('SZ',</span> <span class="pre">'Schwyz'),</span> <span class="pre">('SO',</span> <span class="pre">'Solothurn'),</span> <span class="pre">('SG',</span> <span class="pre">'St.</span> <span class="pre">Gallen'),</span> <span class="pre">('TG',</span> <span class="pre">'Thurgau'),</span> <span class="pre">('TI',</span> <span class="pre">'Ticino'),</span> <span class="pre">('UR',</span> <span class="pre">'Uri'),</span> <span class="pre">('VS',</span> <span class="pre">'Valais'),</span> <span class="pre">('VD',</span> <span class="pre">'Vaud'),</span> <span class="pre">('ZG',</span> <span class="pre">'Zug'),</span> <span class="pre">('ZH',</span> <span class="pre">'Zurich'))</span></em><a class="headerlink" href="#localflavor.ch.ch_states.STATE_CHOICES" title="Link to this definition">¶</a></dt>
+<dd><p>An alphabetical list of states</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Switzerland (<code class="docutils literal notranslate"><span class="pre">ch</span></code>)</a><ul>
+<li><a class="reference internal" href="#module-localflavor.ch.forms">Forms</a><ul>
+<li><a class="reference internal" href="#localflavor.ch.forms.CHIdentityCardNumberField"><code class="docutils literal notranslate"><span class="pre">CHIdentityCardNumberField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.ch.forms.CHIdentityCardNumberField.clean"><code class="docutils literal notranslate"><span class="pre">CHIdentityCardNumberField.clean()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.ch.forms.CHSocialSecurityNumberField"><code class="docutils literal notranslate"><span class="pre">CHSocialSecurityNumberField</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.ch.forms.CHStateSelect"><code class="docutils literal notranslate"><span class="pre">CHStateSelect</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.ch.forms.CHZipCodeField"><code class="docutils literal notranslate"><span class="pre">CHZipCodeField</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data">Data</a><ul>
+<li><a class="reference internal" href="#localflavor.ch.ch_states.STATE_CHOICES"><code class="docutils literal notranslate"><span class="pre">STATE_CHOICES</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="ca.html"
+                          title="previous chapter">Canada (<code class="docutils literal notranslate"><span class="pre">ca</span></code>)</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="cl.html"
+                          title="next chapter">Chile (<code class="docutils literal notranslate"><span class="pre">cl</span></code>)</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/localflavor/ch.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="cl.html" title="Chile (cl)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="ca.html" title="Canada (ca)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Switzerland (<code class="docutils literal notranslate"><span class="pre">ch</span></code>)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright Django Software Foundation and individual contributors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+  </body>
+</html>

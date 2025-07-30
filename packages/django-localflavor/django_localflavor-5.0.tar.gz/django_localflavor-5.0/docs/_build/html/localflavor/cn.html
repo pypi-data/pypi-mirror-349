@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>China (cn) &#8212; django-localflavor 4.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=2bf1fcf8" />
+    
+    <script src="../_static/documentation_options.js?v=9f5556dd"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Colombia (co)" href="co.html" />
+    <link rel="prev" title="Chile (cl)" href="cl.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="co.html" title="Colombia (co)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="cl.html" title="Chile (cl)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">China (<code class="docutils literal notranslate"><span class="pre">cn</span></code>)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="china-cn">
+<h1>China (<code class="docutils literal notranslate"><span class="pre">cn</span></code>)<a class="headerlink" href="#china-cn" title="Link to this heading">¶</a></h1>
+<section id="module-localflavor.cn.forms">
+<span id="forms"></span><h2>Forms<a class="headerlink" href="#module-localflavor.cn.forms" title="Link to this heading">¶</a></h2>
+<p>China(mainland)-specific Form helpers.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.cn.forms.CNIDCardField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.cn.forms.</span></span><span class="sig-name descname"><span class="pre">CNIDCardField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">18</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">15</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/cn/forms.html#CNIDCardField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.cn.forms.CNIDCardField" title="Link to this definition">¶</a></dt>
+<dd><p>A form field that validates input as a Resident Identity Card (PRC) number.</p>
+<dl class="simple">
+<dt>This field would check the following restrictions:</dt><dd><ul class="simple">
+<li><p>the length could only be 15 or 18;</p></li>
+<li><p>if the length is 18, the last character can be x or X;</p></li>
+<li><p>has a valid checksum (only for those with a length of 18);</p></li>
+<li><p>has a valid date of birth;</p></li>
+<li><p>has a valid province.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The checksum algorithm is described in GB11643-1999.
+See: <a class="reference external" href="http://en.wikipedia.org/wiki/Resident_Identity_Card#Identity_card_number">http://en.wikipedia.org/wiki/Resident_Identity_Card#Identity_card_number</a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.cn.forms.CNIDCardField.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/cn/forms.html#CNIDCardField.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.cn.forms.CNIDCardField.clean" title="Link to this definition">¶</a></dt>
+<dd><p>Check whether the input is a valid ID Card Number.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.cn.forms.CNIDCardField.has_valid_birthday">
+<span class="sig-name descname"><span class="pre">has_valid_birthday</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/cn/forms.html#CNIDCardField.has_valid_birthday"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.cn.forms.CNIDCardField.has_valid_birthday" title="Link to this definition">¶</a></dt>
+<dd><p>This method grabs the date of birth from the ID card number and test whether it is a valid date.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.cn.forms.CNIDCardField.has_valid_checksum">
+<span class="sig-name descname"><span class="pre">has_valid_checksum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/cn/forms.html#CNIDCardField.has_valid_checksum"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.cn.forms.CNIDCardField.has_valid_checksum" title="Link to this definition">¶</a></dt>
+<dd><p>This method checks if the last letter/digit is valid according to GB11643-1999.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.cn.forms.CNIDCardField.has_valid_location">
+<span class="sig-name descname"><span class="pre">has_valid_location</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/cn/forms.html#CNIDCardField.has_valid_location"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.cn.forms.CNIDCardField.has_valid_location" title="Link to this definition">¶</a></dt>
+<dd><p>This method checks if the first two digits in the ID Card are valid province code.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.cn.forms.CNPostCodeField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.cn.forms.</span></span><span class="sig-name descname"><span class="pre">CNPostCodeField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/cn/forms.html#CNPostCodeField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.cn.forms.CNPostCodeField" title="Link to this definition">¶</a></dt>
+<dd><p>A form field that validates input as postal codes in mainland China.</p>
+<p>Valid codes are in the format of XXXXXX where X is a digit.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.cn.forms.CNProvinceSelect">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.cn.forms.</span></span><span class="sig-name descname"><span class="pre">CNProvinceSelect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attrs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/cn/forms.html#CNProvinceSelect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.cn.forms.CNProvinceSelect" title="Link to this definition">¶</a></dt>
+<dd><p>A select widget providing the list of provinces and districts in People’s Republic of China as choices.</p>
+</dd></dl>
+
+</section>
+<section id="data">
+<h2>Data<a class="headerlink" href="#data" title="Link to this heading">¶</a></h2>
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.cn.cn_provinces.CN_PROVINCE_CHOICES">
+<span class="sig-prename descclassname"><span class="pre">localflavor.cn.cn_provinces.</span></span><span class="sig-name descname"><span class="pre">CN_PROVINCE_CHOICES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(('anhui',</span> <span class="pre">'安徽'),</span> <span class="pre">('beijing',</span> <span class="pre">'北京'),</span> <span class="pre">('chongqing',</span> <span class="pre">'重庆'),</span> <span class="pre">('fujian',</span> <span class="pre">'福建'),</span> <span class="pre">('gansu',</span> <span class="pre">'甘肃'),</span> <span class="pre">('guangdong',</span> <span class="pre">'广东'),</span> <span class="pre">('guangxi',</span> <span class="pre">'广西壮族自治区'),</span> <span class="pre">('guizhou',</span> <span class="pre">'贵州'),</span> <span class="pre">('hainan',</span> <span class="pre">'海南'),</span> <span class="pre">('hebei',</span> <span class="pre">'河北'),</span> <span class="pre">('heilongjiang',</span> <span class="pre">'黑龙江'),</span> <span class="pre">('henan',</span> <span class="pre">'河南'),</span> <span class="pre">('hongkong',</span> <span class="pre">'香港'),</span> <span class="pre">('hubei',</span> <span class="pre">'湖北'),</span> <span class="pre">('hunan',</span> <span class="pre">'湖南'),</span> <span class="pre">('jiangsu',</span> <span class="pre">'江苏'),</span> <span class="pre">('jiangxi',</span> <span class="pre">'江西'),</span> <span class="pre">('jilin',</span> <span class="pre">'吉林'),</span> <span class="pre">('liaoning',</span> <span class="pre">'辽宁'),</span> <span class="pre">('macao',</span> <span class="pre">'澳门'),</span> <span class="pre">('neimongol',</span> <span class="pre">'内蒙古自治区'),</span> <span class="pre">('ningxia',</span> <span class="pre">'宁夏回族自治区'),</span> <span class="pre">('qinghai',</span> <span class="pre">'青海'),</span> <span class="pre">('shaanxi',</span> <span class="pre">'陕西'),</span> <span class="pre">('shandong',</span> <span class="pre">'山东'),</span> <span class="pre">('shanghai',</span> <span class="pre">'上海'),</span> <span class="pre">('shanxi',</span> <span class="pre">'山西'),</span> <span class="pre">('sichuan',</span> <span class="pre">'四川'),</span> <span class="pre">('taiwan',</span> <span class="pre">'台湾'),</span> <span class="pre">('tianjin',</span> <span class="pre">'天津'),</span> <span class="pre">('xinjiang',</span> <span class="pre">'新疆维吾尔自治区'),</span> <span class="pre">('xizang',</span> <span class="pre">'西藏自治区'),</span> <span class="pre">('yunnan',</span> <span class="pre">'云南'),</span> <span class="pre">('zhejiang',</span> <span class="pre">'浙江'))</span></em><a class="headerlink" href="#localflavor.cn.cn_provinces.CN_PROVINCE_CHOICES" title="Link to this definition">¶</a></dt>
+<dd><p>An alphabetical list of provinces for use as <cite>choices</cite> in a formfield.
+<a class="reference external" href="http://en.wikipedia.org/wiki/ISO_3166-2:CN">http://en.wikipedia.org/wiki/ISO_3166-2:CN</a>
+<a class="reference external" href="http://en.wikipedia.org/wiki/Province_%28China%29">http://en.wikipedia.org/wiki/Province_%28China%29</a>
+<a class="reference external" href="http://en.wikipedia.org/wiki/Direct-controlled_municipality">http://en.wikipedia.org/wiki/Direct-controlled_municipality</a>
+<a class="reference external" href="http://en.wikipedia.org/wiki/Autonomous_regions_of_China">http://en.wikipedia.org/wiki/Autonomous_regions_of_China</a></p>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">China (<code class="docutils literal notranslate"><span class="pre">cn</span></code>)</a><ul>
+<li><a class="reference internal" href="#module-localflavor.cn.forms">Forms</a><ul>
+<li><a class="reference internal" href="#localflavor.cn.forms.CNIDCardField"><code class="docutils literal notranslate"><span class="pre">CNIDCardField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.cn.forms.CNIDCardField.clean"><code class="docutils literal notranslate"><span class="pre">CNIDCardField.clean()</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.cn.forms.CNIDCardField.has_valid_birthday"><code class="docutils literal notranslate"><span class="pre">CNIDCardField.has_valid_birthday()</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.cn.forms.CNIDCardField.has_valid_checksum"><code class="docutils literal notranslate"><span class="pre">CNIDCardField.has_valid_checksum()</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.cn.forms.CNIDCardField.has_valid_location"><code class="docutils literal notranslate"><span class="pre">CNIDCardField.has_valid_location()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.cn.forms.CNPostCodeField"><code class="docutils literal notranslate"><span class="pre">CNPostCodeField</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.cn.forms.CNProvinceSelect"><code class="docutils literal notranslate"><span class="pre">CNProvinceSelect</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data">Data</a><ul>
+<li><a class="reference internal" href="#localflavor.cn.cn_provinces.CN_PROVINCE_CHOICES"><code class="docutils literal notranslate"><span class="pre">CN_PROVINCE_CHOICES</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="cl.html"
+                          title="previous chapter">Chile (<code class="docutils literal notranslate"><span class="pre">cl</span></code>)</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="co.html"
+                          title="next chapter">Colombia (<code class="docutils literal notranslate"><span class="pre">co</span></code>)</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/localflavor/cn.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="co.html" title="Colombia (co)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="cl.html" title="Chile (cl)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">China (<code class="docutils literal notranslate"><span class="pre">cn</span></code>)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright Django Software Foundation and individual contributors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+  </body>
+</html>

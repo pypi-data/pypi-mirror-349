@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Norway (no) &#8212; django-localflavor 4.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=2bf1fcf8" />
+    
+    <script src="../_static/documentation_options.js?v=9f5556dd"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Nepal (np)" href="np.html" />
+    <link rel="prev" title="The Netherlands (nl)" href="nl.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="np.html" title="Nepal (np)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="nl.html" title="The Netherlands (nl)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Norway (<code class="docutils literal notranslate"><span class="pre">no</span></code>)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="norway-no">
+<h1>Norway (<code class="docutils literal notranslate"><span class="pre">no</span></code>)<a class="headerlink" href="#norway-no" title="Link to this heading">¶</a></h1>
+<section id="module-localflavor.no.forms">
+<span id="forms"></span><h2>Forms<a class="headerlink" href="#module-localflavor.no.forms" title="Link to this heading">¶</a></h2>
+<p>Norwegian-specific Form helpers.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.no.forms.NOBankAccountNumber">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.no.forms.</span></span><span class="sig-name descname"><span class="pre">NOBankAccountNumber</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/no/forms.html#NOBankAccountNumber"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.no.forms.NOBankAccountNumber" title="Link to this definition">¶</a></dt>
+<dd><p>A form field for Norwegian bank account numbers.</p>
+<p>Performs MOD11 with the custom weights for the Norwegian bank account numbers,
+including a check for a remainder of 0, in which event the checksum is also 0.</p>
+<p>Usually their string representation is along the lines of ZZZZ.YY.XXXXX, where the last X is the check digit.
+They’re always a total of 11 digits long, with 10 out of these 11 being the actual account number itself.</p>
+<ul class="simple">
+<li><p>Accepts, and strips, account numbers with extra spaces.</p></li>
+<li><p>Accepts, and strips, account numbers provided in form of XXXX.YY.XXXXX.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>No consideration is taking for banking clearing numbers as of yet, seeing as these are only used between
+banks themselves.</p>
+</div>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 1.5.</span></p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.no.forms.NOBankAccountNumber.to_python">
+<span class="sig-name descname"><span class="pre">to_python</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/no/forms.html#NOBankAccountNumber.to_python"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.no.forms.NOBankAccountNumber.to_python" title="Link to this definition">¶</a></dt>
+<dd><p>Return a string.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.no.forms.NOMunicipalitySelect">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.no.forms.</span></span><span class="sig-name descname"><span class="pre">NOMunicipalitySelect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attrs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/no/forms.html#NOMunicipalitySelect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.no.forms.NOMunicipalitySelect" title="Link to this definition">¶</a></dt>
+<dd><p>A Select widget that uses a list of Norwegian municipalities (fylker) as its choices.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.no.forms.NOSocialSecurityNumber">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.no.forms.</span></span><span class="sig-name descname"><span class="pre">NOSocialSecurityNumber</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/no/forms.html#NOSocialSecurityNumber"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.no.forms.NOSocialSecurityNumber" title="Link to this definition">¶</a></dt>
+<dd><p>Algorithm is documented at <a class="reference external" href="http://no.wikipedia.org/wiki/Personnummer">http://no.wikipedia.org/wiki/Personnummer</a>.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.no.forms.NOSocialSecurityNumber.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/no/forms.html#NOSocialSecurityNumber.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.no.forms.NOSocialSecurityNumber.clean" title="Link to this definition">¶</a></dt>
+<dd><p>Validate the given value and return its “cleaned” value as an
+appropriate Python object. Raise ValidationError for any errors.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.no.forms.NOZipCodeField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.no.forms.</span></span><span class="sig-name descname"><span class="pre">NOZipCodeField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/no/forms.html#NOZipCodeField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.no.forms.NOZipCodeField" title="Link to this definition">¶</a></dt>
+<dd><p>A form field that validates input as a Norwegian zip code.</p>
+<p>Valid codes have four digits.</p>
+</dd></dl>
+
+</section>
+<section id="data">
+<h2>Data<a class="headerlink" href="#data" title="Link to this heading">¶</a></h2>
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.no.no_municipalities.MUNICIPALITY_CHOICES">
+<span class="sig-prename descclassname"><span class="pre">localflavor.no.no_municipalities.</span></span><span class="sig-name descname"><span class="pre">MUNICIPALITY_CHOICES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(('agder',</span> <span class="pre">'Agder'),</span> <span class="pre">('akershus',</span> <span class="pre">'Akershus'),</span> <span class="pre">('buskerud',</span> <span class="pre">'Buskerud'),</span> <span class="pre">('finnmark',</span> <span class="pre">'Finnmark'),</span> <span class="pre">('innlandet',</span> <span class="pre">'Innlandet'),</span> <span class="pre">('janmayen',</span> <span class="pre">'Jan</span> <span class="pre">Mayen'),</span> <span class="pre">('moreogromsdal',</span> <span class="pre">'Møre</span> <span class="pre">og</span> <span class="pre">Romsdal'),</span> <span class="pre">('nordland',</span> <span class="pre">'Nordland'),</span> <span class="pre">('oslo',</span> <span class="pre">'Oslo'),</span> <span class="pre">('ostfold',</span> <span class="pre">'Østfold'),</span> <span class="pre">('rogaland',</span> <span class="pre">'Rogaland'),</span> <span class="pre">('svalbard',</span> <span class="pre">'Svalbard'),</span> <span class="pre">('telemark',</span> <span class="pre">'Telemark'),</span> <span class="pre">('troms',</span> <span class="pre">'Troms'),</span> <span class="pre">('trondelag',</span> <span class="pre">'Trøndelag'),</span> <span class="pre">('vestfold',</span> <span class="pre">'Vestfold'),</span> <span class="pre">('vestland',</span> <span class="pre">'Vestland'))</span></em><a class="headerlink" href="#localflavor.no.no_municipalities.MUNICIPALITY_CHOICES" title="Link to this definition">¶</a></dt>
+<dd><p>An alphabetical list of Norwegian municipalities (fylker) for
+use as <cite>choices</cite> in a formfield.</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Norway (<code class="docutils literal notranslate"><span class="pre">no</span></code>)</a><ul>
+<li><a class="reference internal" href="#module-localflavor.no.forms">Forms</a><ul>
+<li><a class="reference internal" href="#localflavor.no.forms.NOBankAccountNumber"><code class="docutils literal notranslate"><span class="pre">NOBankAccountNumber</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.no.forms.NOBankAccountNumber.to_python"><code class="docutils literal notranslate"><span class="pre">NOBankAccountNumber.to_python()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.no.forms.NOMunicipalitySelect"><code class="docutils literal notranslate"><span class="pre">NOMunicipalitySelect</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.no.forms.NOSocialSecurityNumber"><code class="docutils literal notranslate"><span class="pre">NOSocialSecurityNumber</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.no.forms.NOSocialSecurityNumber.clean"><code class="docutils literal notranslate"><span class="pre">NOSocialSecurityNumber.clean()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.no.forms.NOZipCodeField"><code class="docutils literal notranslate"><span class="pre">NOZipCodeField</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data">Data</a><ul>
+<li><a class="reference internal" href="#localflavor.no.no_municipalities.MUNICIPALITY_CHOICES"><code class="docutils literal notranslate"><span class="pre">MUNICIPALITY_CHOICES</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="nl.html"
+                          title="previous chapter">The Netherlands (<code class="docutils literal notranslate"><span class="pre">nl</span></code>)</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="np.html"
+                          title="next chapter">Nepal (<code class="docutils literal notranslate"><span class="pre">np</span></code>)</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/localflavor/no.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="np.html" title="Nepal (np)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="nl.html" title="The Netherlands (nl)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Norway (<code class="docutils literal notranslate"><span class="pre">no</span></code>)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright Django Software Foundation and individual contributors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+  </body>
+</html>

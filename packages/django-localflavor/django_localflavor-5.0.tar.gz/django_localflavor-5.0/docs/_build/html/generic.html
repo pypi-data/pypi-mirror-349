@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Generic helpers &#8212; django-localflavor 4.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=2bf1fcf8" />
+    
+    <script src="_static/documentation_options.js?v=9f5556dd"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="South Africa (za)" href="localflavor/za.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="localflavor/za.html" title="South Africa (za)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Generic helpers</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="generic-helpers">
+<h1>Generic helpers<a class="headerlink" href="#generic-helpers" title="Link to this heading">¶</a></h1>
+<section id="module-localflavor.generic.forms">
+<span id="forms"></span><h2>Forms<a class="headerlink" href="#module-localflavor.generic.forms" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.generic.forms.BICFormField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.generic.forms.</span></span><span class="sig-name descname"><span class="pre">BICFormField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/localflavor/generic/forms.html#BICFormField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.generic.forms.BICFormField" title="Link to this definition">¶</a></dt>
+<dd><p>A BIC consists of 8 (BIC8) or 11 (BIC11) alphanumeric characters.</p>
+<p>BICs are also known as SWIFT-BIC, BIC code, SWIFT ID, SWIFT code or ISO 9362.</p>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/ISO_9362">https://en.wikipedia.org/wiki/ISO_9362</a></p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 1.1.</span></p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.generic.forms.BICFormField.to_python">
+<span class="sig-name descname"><span class="pre">to_python</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/localflavor/generic/forms.html#BICFormField.to_python"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.generic.forms.BICFormField.to_python" title="Link to this definition">¶</a></dt>
+<dd><p>Return a string.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.generic.forms.DateField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.generic.forms.</span></span><span class="sig-name descname"><span class="pre">DateField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_formats</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/localflavor/generic/forms.html#DateField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.generic.forms.DateField" title="Link to this definition">¶</a></dt>
+<dd><p>A date input field which uses non-US date input formats by default.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.generic.forms.DateTimeField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.generic.forms.</span></span><span class="sig-name descname"><span class="pre">DateTimeField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_formats</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/localflavor/generic/forms.html#DateTimeField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.generic.forms.DateTimeField" title="Link to this definition">¶</a></dt>
+<dd><p>A date and time input field which uses non-US date and time input formats by default.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.generic.forms.IBANFormField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.generic.forms.</span></span><span class="sig-name descname"><span class="pre">IBANFormField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">use_nordea_extensions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_countries</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/localflavor/generic/forms.html#IBANFormField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.generic.forms.IBANFormField" title="Link to this definition">¶</a></dt>
+<dd><p>An IBAN consists of up to 34 alphanumeric characters.</p>
+<p>To limit validation to specific countries, set the ‘include_countries’ argument with a tuple or list of ISO 3166-1
+alpha-2 codes. For example, <cite>include_countries=(‘NL’, ‘BE, ‘LU’)</cite>.</p>
+<p>A list of countries that use IBANs as part of SEPA is included for convenience. To use this feature, set
+<cite>include_countries=IBAN_SEPA_COUNTRIES</cite> as an argument to the field.</p>
+<p>Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">django</span><span class="w"> </span><span class="kn">import</span> <span class="n">forms</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">localflavor.generic.forms</span><span class="w"> </span><span class="kn">import</span> <span class="n">IBANFormField</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">localflavor.generic.countries.sepa</span><span class="w"> </span><span class="kn">import</span> <span class="n">IBAN_SEPA_COUNTRIES</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">MyForm</span><span class="p">(</span><span class="n">forms</span><span class="o">.</span><span class="n">Form</span><span class="p">):</span>
+    <span class="n">iban</span> <span class="o">=</span> <span class="n">IBANFormField</span><span class="p">(</span><span class="n">include_countries</span><span class="o">=</span><span class="n">IBAN_SEPA_COUNTRIES</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In addition to validating official IBANs, this field can optionally validate unofficial IBANs that have been
+catalogued by Nordea by setting the <cite>use_nordea_extensions</cite> argument to True.</p>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/International_Bank_Account_Number">https://en.wikipedia.org/wiki/International_Bank_Account_Number</a></p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 1.1.</span></p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.generic.forms.IBANFormField.prepare_value">
+<span class="sig-name descname"><span class="pre">prepare_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/localflavor/generic/forms.html#IBANFormField.prepare_value"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.generic.forms.IBANFormField.prepare_value" title="Link to this definition">¶</a></dt>
+<dd><p>The display format for IBAN has a space every 4 characters.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.generic.forms.IBANFormField.to_python">
+<span class="sig-name descname"><span class="pre">to_python</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/localflavor/generic/forms.html#IBANFormField.to_python"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.generic.forms.IBANFormField.to_python" title="Link to this definition">¶</a></dt>
+<dd><p>Return a string.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.generic.forms.SplitDateTimeField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.generic.forms.</span></span><span class="sig-name descname"><span class="pre">SplitDateTimeField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_date_formats</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_time_formats</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/localflavor/generic/forms.html#SplitDateTimeField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.generic.forms.SplitDateTimeField" title="Link to this definition">¶</a></dt>
+<dd><p>Split date and time input fields which use non-US date and time input formats by default.</p>
+</dd></dl>
+
+</section>
+<section id="module-localflavor.generic.models">
+<span id="models"></span><h2>Models<a class="headerlink" href="#module-localflavor.generic.models" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.generic.models.BICField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.generic.models.</span></span><span class="sig-name descname"><span class="pre">BICField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/localflavor/generic/models.html#BICField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.generic.models.BICField" title="Link to this definition">¶</a></dt>
+<dd><p>A BIC consists of 8 (BIC8) or 11 (BIC11) alphanumeric characters.</p>
+<p>BICs are also known as SWIFT-BIC, BIC code, SWIFT ID, SWIFT code or ISO 9362.</p>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/ISO_9362">https://en.wikipedia.org/wiki/ISO_9362</a></p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 1.1.</span></p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.generic.models.BICField.formfield">
+<span class="sig-name descname"><span class="pre">formfield</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/localflavor/generic/models.html#BICField.formfield"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.generic.models.BICField.formfield" title="Link to this definition">¶</a></dt>
+<dd><p>Return a django.forms.Field instance for this field.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.generic.models.BICField.to_python">
+<span class="sig-name descname"><span class="pre">to_python</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/localflavor/generic/models.html#BICField.to_python"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.generic.models.BICField.to_python" title="Link to this definition">¶</a></dt>
+<dd><p>Convert the input value into the expected Python data type, raising
+django.core.exceptions.ValidationError if the data can’t be converted.
+Return the converted value. Subclasses should override this.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.generic.models.IBANField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.generic.models.</span></span><span class="sig-name descname"><span class="pre">IBANField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/localflavor/generic/models.html#IBANField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.generic.models.IBANField" title="Link to this definition">¶</a></dt>
+<dd><p>An IBAN consists of up to 34 alphanumeric characters.</p>
+<p>To limit validation to specific countries, set the ‘include_countries’ argument with a tuple or list of ISO 3166-1
+alpha-2 codes. For example, <cite>include_countries=(‘NL’, ‘BE, ‘LU’)</cite>.</p>
+<p>A list of countries that use IBANs as part of SEPA is included for convenience. To use this feature, set
+<cite>include_countries=IBAN_SEPA_COUNTRIES</cite> as an argument to the field.</p>
+<p>Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">django.db</span><span class="w"> </span><span class="kn">import</span> <span class="n">models</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">localflavor.generic.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">IBANField</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">localflavor.generic.countries.sepa</span><span class="w"> </span><span class="kn">import</span> <span class="n">IBAN_SEPA_COUNTRIES</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">MyModel</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">iban</span> <span class="o">=</span> <span class="n">IBANField</span><span class="p">(</span><span class="n">include_countries</span><span class="o">=</span><span class="n">IBAN_SEPA_COUNTRIES</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In addition to validating official IBANs, this field can optionally validate unofficial IBANs that have been
+catalogued by Nordea by setting the <cite>use_nordea_extensions</cite> argument to True.</p>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/International_Bank_Account_Number">https://en.wikipedia.org/wiki/International_Bank_Account_Number</a></p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 1.1.</span></p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.generic.models.IBANField.deconstruct">
+<span class="sig-name descname"><span class="pre">deconstruct</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/localflavor/generic/models.html#IBANField.deconstruct"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.generic.models.IBANField.deconstruct" title="Link to this definition">¶</a></dt>
+<dd><p>Return enough information to recreate the field as a 4-tuple:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>The name of the field on the model, if contribute_to_class() has
+been run.</p></li>
+<li><p>The import path of the field, including the class, e.g.
+django.db.models.IntegerField. This should be the most portable
+version, so less specific may be better.</p></li>
+<li><p>A list of positional arguments.</p></li>
+<li><p>A dict of keyword arguments.</p></li>
+</ul>
+</div></blockquote>
+<p>Note that the positional or keyword arguments must contain values of
+the following types (including inner values of collection types):</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>None, bool, str, int, float, complex, set, frozenset, list, tuple,
+dict</p></li>
+<li><p>UUID</p></li>
+<li><p>datetime.datetime (naive), datetime.date</p></li>
+<li><p>top-level classes, top-level functions - will be referenced by their
+full import path</p></li>
+<li><p>Storage instances - these have their own deconstruct() method</p></li>
+</ul>
+</div></blockquote>
+<p>This is because the values here must be serialized into a text format
+(possibly new Python code, possibly JSON) and these are the only types
+with encoding handlers defined.</p>
+<p>There’s no need to return the exact way the field was instantiated this
+time, just ensure that the resulting field is the same - prefer keyword
+arguments over positional ones, and omit parameters with their default
+values.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.generic.models.IBANField.formfield">
+<span class="sig-name descname"><span class="pre">formfield</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/localflavor/generic/models.html#IBANField.formfield"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.generic.models.IBANField.formfield" title="Link to this definition">¶</a></dt>
+<dd><p>Return a django.forms.Field instance for this field.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.generic.models.IBANField.to_python">
+<span class="sig-name descname"><span class="pre">to_python</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/localflavor/generic/models.html#IBANField.to_python"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.generic.models.IBANField.to_python" title="Link to this definition">¶</a></dt>
+<dd><p>Convert the input value into the expected Python data type, raising
+django.core.exceptions.ValidationError if the data can’t be converted.
+Return the converted value. Subclasses should override this.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-localflavor.generic.validators">
+<span id="validators"></span><h2>Validators<a class="headerlink" href="#module-localflavor.generic.validators" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.generic.validators.BICValidator">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.generic.validators.</span></span><span class="sig-name descname"><span class="pre">BICValidator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/localflavor/generic/validators.html#BICValidator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.generic.validators.BICValidator" title="Link to this definition">¶</a></dt>
+<dd><p>A validator for SWIFT Business Identifier Codes (ISO 9362:2009).</p>
+<p>Validation is based on the BIC structure found on wikipedia.</p>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/ISO_9362#Structure">https://en.wikipedia.org/wiki/ISO_9362#Structure</a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.generic.validators.BICValidator.deconstruct">
+<span class="sig-name descname"><span class="pre">deconstruct</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#localflavor.generic.validators.BICValidator.deconstruct" title="Link to this definition">¶</a></dt>
+<dd><p>Return a 3-tuple of class import path, positional arguments,
+and keyword arguments.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.generic.validators.EANValidator">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.generic.validators.</span></span><span class="sig-name descname"><span class="pre">EANValidator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/localflavor/generic/validators.html#EANValidator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.generic.validators.EANValidator" title="Link to this definition">¶</a></dt>
+<dd><p>A generic validator for EAN like codes with the last digit being the checksum.</p>
+<p><a class="reference external" href="http://en.wikipedia.org/wiki/International_Article_Number_(EAN">http://en.wikipedia.org/wiki/International_Article_Number_(EAN</a>)</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.generic.validators.EANValidator.deconstruct">
+<span class="sig-name descname"><span class="pre">deconstruct</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#localflavor.generic.validators.EANValidator.deconstruct" title="Link to this definition">¶</a></dt>
+<dd><p>Return a 3-tuple of class import path, positional arguments,
+and keyword arguments.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.generic.validators.IBANValidator">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.generic.validators.</span></span><span class="sig-name descname"><span class="pre">IBANValidator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/localflavor/generic/validators.html#IBANValidator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.generic.validators.IBANValidator" title="Link to this definition">¶</a></dt>
+<dd><p>A validator for International Bank Account Numbers (IBAN - ISO 13616-1:2007).</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.generic.validators.IBANValidator.deconstruct">
+<span class="sig-name descname"><span class="pre">deconstruct</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#localflavor.generic.validators.IBANValidator.deconstruct" title="Link to this definition">¶</a></dt>
+<dd><p>Return a 3-tuple of class import path, positional arguments,
+and keyword arguments.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.generic.validators.IBANValidator.iban_checksum">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">iban_checksum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/localflavor/generic/validators.html#IBANValidator.iban_checksum"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.generic.validators.IBANValidator.iban_checksum" title="Link to this definition">¶</a></dt>
+<dd><p>Returns check digits for an input IBAN number.</p>
+<p>Original checksum in input value is ignored.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.generic.validators.VATINValidator">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.generic.validators.</span></span><span class="sig-name descname"><span class="pre">VATINValidator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/localflavor/generic/validators.html#VATINValidator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.generic.validators.VATINValidator" title="Link to this definition">¶</a></dt>
+<dd><p>A validator for VAT identification numbers.</p>
+<p>Currently only supports European VIES VAT identification numbers.</p>
+<p>See See <a class="reference external" href="https://en.wikipedia.org/wiki/VAT_identification_number">https://en.wikipedia.org/wiki/VAT_identification_number</a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.generic.validators.VATINValidator.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/localflavor/generic/validators.html#VATINValidator.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.generic.validators.VATINValidator.clean" title="Link to this definition">¶</a></dt>
+<dd><p>Return tuple of country code and number.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.generic.validators.VATINValidator.deconstruct">
+<span class="sig-name descname"><span class="pre">deconstruct</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#localflavor.generic.validators.VATINValidator.deconstruct" title="Link to this definition">¶</a></dt>
+<dd><p>Return a 3-tuple of class import path, positional arguments,
+and keyword arguments.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.generic.validators.VATIN_COUNTRY_CODE_LENGTH">
+<span class="sig-prename descclassname"><span class="pre">localflavor.generic.validators.</span></span><span class="sig-name descname"><span class="pre">VATIN_COUNTRY_CODE_LENGTH</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#localflavor.generic.validators.VATIN_COUNTRY_CODE_LENGTH" title="Link to this definition">¶</a></dt>
+<dd><p>Length of the country code prefix of a VAT identification number.</p>
+<p>Codes are two letter ISO 3166-1 alpha-2 codes except for Greece that uses
+ISO 639-1.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.generic.validators.VATIN_PATTERN_MAP">
+<span class="sig-prename descclassname"><span class="pre">localflavor.generic.validators.</span></span><span class="sig-name descname"><span class="pre">VATIN_PATTERN_MAP</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'AT':</span> <span class="pre">'^ATU\\d{8}$',</span> <span class="pre">'BE':</span> <span class="pre">'^BE0?\\d{9}$',</span> <span class="pre">'BG':</span> <span class="pre">'^BG\\d{9,10}$',</span> <span class="pre">'CY':</span> <span class="pre">'^CY\\d{8}[A-Z]$',</span> <span class="pre">'CZ':</span> <span class="pre">'^CZ\\d{8,10}$',</span> <span class="pre">'DE':</span> <span class="pre">'^DE\\d{9}$',</span> <span class="pre">'DK':</span> <span class="pre">'^DK\\d{8}$',</span> <span class="pre">'EE':</span> <span class="pre">'^EE\\d{9}$',</span> <span class="pre">'EL':</span> <span class="pre">'^EL\\d{9}$',</span> <span class="pre">'ES':</span> <span class="pre">'^ES[A-Z0-9]\\d{7}[A-Z0-9]$',</span> <span class="pre">'FI':</span> <span class="pre">'^FI\\d{8}$',</span> <span class="pre">'FR':</span> <span class="pre">'^FR[A-HJ-NP-Z0-9][A-HJ-NP-Z0-9]\\d{9}$',</span> <span class="pre">'GB':</span> <span class="pre">'^(GB(GD|HA)\\d{3}|GB\\d{9}|GB\\d{12})$',</span> <span class="pre">'HR':</span> <span class="pre">'^HR\\d{11}$',</span> <span class="pre">'HU':</span> <span class="pre">'^HU\\d{8}$',</span> <span class="pre">'IE':</span> <span class="pre">'^IE\\d[A-Z0-9\\+\\*]\\d{5}[A-Z]{1,2}$',</span> <span class="pre">'IT':</span> <span class="pre">'^IT\\d{11}$',</span> <span class="pre">'LT':</span> <span class="pre">'^LT(\\d{9}|\\d{12})$',</span> <span class="pre">'LU':</span> <span class="pre">'^LU\\d{8}$',</span> <span class="pre">'LV':</span> <span class="pre">'^LV\\d{11}$',</span> <span class="pre">'MT':</span> <span class="pre">'^MT\\d{8}$',</span> <span class="pre">'NL':</span> <span class="pre">'^NL\\d{9}B\\d{2}$',</span> <span class="pre">'PL':</span> <span class="pre">'^PL\\d{10}$',</span> <span class="pre">'PT':</span> <span class="pre">'^PT\\d{9}$',</span> <span class="pre">'RO':</span> <span class="pre">'^RO\\d{2,10}$',</span> <span class="pre">'SE':</span> <span class="pre">'^SE\\d{10}01$',</span> <span class="pre">'SI':</span> <span class="pre">'^SI\\d{8}$',</span> <span class="pre">'SK':</span> <span class="pre">'^SK\\d{10}$'}</span></em><a class="headerlink" href="#localflavor.generic.validators.VATIN_PATTERN_MAP" title="Link to this definition">¶</a></dt>
+<dd><p>Map of country codes and regular expressions.</p>
+<p>See <a class="reference external" href="https://en.wikipedia.org/wiki/VAT_identification_number">https://en.wikipedia.org/wiki/VAT_identification_number</a></p>
+</dd></dl>
+
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 1.1.</span></p>
+</div>
+</section>
+<section id="data">
+<h2>Data<a class="headerlink" href="#data" title="Link to this heading">¶</a></h2>
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.generic.countries.iso_3166.ISO_3166_1_ALPHA2_COUNTRY_CODES">
+<span class="sig-prename descclassname"><span class="pre">localflavor.generic.countries.iso_3166.</span></span><span class="sig-name descname"><span class="pre">ISO_3166_1_ALPHA2_COUNTRY_CODES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('AD',</span> <span class="pre">'AE',</span> <span class="pre">'AF',</span> <span class="pre">'AG',</span> <span class="pre">'AI',</span> <span class="pre">'AL',</span> <span class="pre">'AM',</span> <span class="pre">'AO',</span> <span class="pre">'AQ',</span> <span class="pre">'AR',</span> <span class="pre">'AS',</span> <span class="pre">'AT',</span> <span class="pre">'AU',</span> <span class="pre">'AW',</span> <span class="pre">'AX',</span> <span class="pre">'AZ',</span> <span class="pre">'BA',</span> <span class="pre">'BB',</span> <span class="pre">'BD',</span> <span class="pre">'BE',</span> <span class="pre">'BF',</span> <span class="pre">'BG',</span> <span class="pre">'BH',</span> <span class="pre">'BI',</span> <span class="pre">'BJ',</span> <span class="pre">'BL',</span> <span class="pre">'BM',</span> <span class="pre">'BN',</span> <span class="pre">'BO',</span> <span class="pre">'BQ',</span> <span class="pre">'BR',</span> <span class="pre">'BS',</span> <span class="pre">'BT',</span> <span class="pre">'BV',</span> <span class="pre">'BW',</span> <span class="pre">'BY',</span> <span class="pre">'BZ',</span> <span class="pre">'CA',</span> <span class="pre">'CC',</span> <span class="pre">'CD',</span> <span class="pre">'CF',</span> <span class="pre">'CG',</span> <span class="pre">'CH',</span> <span class="pre">'CI',</span> <span class="pre">'CK',</span> <span class="pre">'CL',</span> <span class="pre">'CM',</span> <span class="pre">'CN',</span> <span class="pre">'CO',</span> <span class="pre">'CR',</span> <span class="pre">'CU',</span> <span class="pre">'CV',</span> <span class="pre">'CW',</span> <span class="pre">'CX',</span> <span class="pre">'CY',</span> <span class="pre">'CZ',</span> <span class="pre">'DE',</span> <span class="pre">'DJ',</span> <span class="pre">'DK',</span> <span class="pre">'DM',</span> <span class="pre">'DO',</span> <span class="pre">'DZ',</span> <span class="pre">'EC',</span> <span class="pre">'EE',</span> <span class="pre">'EG',</span> <span class="pre">'EH',</span> <span class="pre">'ER',</span> <span class="pre">'ES',</span> <span class="pre">'ET',</span> <span class="pre">'FI',</span> <span class="pre">'FJ',</span> <span class="pre">'FK',</span> <span class="pre">'FM',</span> <span class="pre">'FO',</span> <span class="pre">'FR',</span> <span class="pre">'GA',</span> <span class="pre">'GB',</span> <span class="pre">'GD',</span> <span class="pre">'GE',</span> <span class="pre">'GF',</span> <span class="pre">'GG',</span> <span class="pre">'GH',</span> <span class="pre">'GI',</span> <span class="pre">'GL',</span> <span class="pre">'GM',</span> <span class="pre">'GN',</span> <span class="pre">'GP',</span> <span class="pre">'GQ',</span> <span class="pre">'GR',</span> <span class="pre">'GS',</span> <span class="pre">'GT',</span> <span class="pre">'GU',</span> <span class="pre">'GW',</span> <span class="pre">'GY',</span> <span class="pre">'HK',</span> <span class="pre">'HM',</span> <span class="pre">'HN',</span> <span class="pre">'HR',</span> <span class="pre">'HT',</span> <span class="pre">'HU',</span> <span class="pre">'ID',</span> <span class="pre">'IE',</span> <span class="pre">'IL',</span> <span class="pre">'IM',</span> <span class="pre">'IN',</span> <span class="pre">'IO',</span> <span class="pre">'IQ',</span> <span class="pre">'IR',</span> <span class="pre">'IS',</span> <span class="pre">'IT',</span> <span class="pre">'JE',</span> <span class="pre">'JM',</span> <span class="pre">'JO',</span> <span class="pre">'JP',</span> <span class="pre">'KE',</span> <span class="pre">'KG',</span> <span class="pre">'KH',</span> <span class="pre">'KI',</span> <span class="pre">'KM',</span> <span class="pre">'KN',</span> <span class="pre">'KP',</span> <span class="pre">'KR',</span> <span class="pre">'KW',</span> <span class="pre">'KY',</span> <span class="pre">'KZ',</span> <span class="pre">'LA',</span> <span class="pre">'LB',</span> <span class="pre">'LC',</span> <span class="pre">'LI',</span> <span class="pre">'LK',</span> <span class="pre">'LR',</span> <span class="pre">'LS',</span> <span class="pre">'LT',</span> <span class="pre">'LU',</span> <span class="pre">'LV',</span> <span class="pre">'LY',</span> <span class="pre">'MA',</span> <span class="pre">'MC',</span> <span class="pre">'MD',</span> <span class="pre">'ME',</span> <span class="pre">'MF',</span> <span class="pre">'MG',</span> <span class="pre">'MH',</span> <span class="pre">'MK',</span> <span class="pre">'ML',</span> <span class="pre">'MM',</span> <span class="pre">'MN',</span> <span class="pre">'MO',</span> <span class="pre">'MP',</span> <span class="pre">'MQ',</span> <span class="pre">'MR',</span> <span class="pre">'MS',</span> <span class="pre">'MT',</span> <span class="pre">'MU',</span> <span class="pre">'MV',</span> <span class="pre">'MW',</span> <span class="pre">'MX',</span> <span class="pre">'MY',</span> <span class="pre">'MZ',</span> <span class="pre">'NA',</span> <span class="pre">'NC',</span> <span class="pre">'NE',</span> <span class="pre">'NF',</span> <span class="pre">'NG',</span> <span class="pre">'NI',</span> <span class="pre">'NL',</span> <span class="pre">'NO',</span> <span class="pre">'NP',</span> <span class="pre">'NR',</span> <span class="pre">'NU',</span> <span class="pre">'NZ',</span> <span class="pre">'OM',</span> <span class="pre">'PA',</span> <span class="pre">'PE',</span> <span class="pre">'PF',</span> <span class="pre">'PG',</span> <span class="pre">'PH',</span> <span class="pre">'PK',</span> <span class="pre">'PL',</span> <span class="pre">'PM',</span> <span class="pre">'PN',</span> <span class="pre">'PR',</span> <span class="pre">'PS',</span> <span class="pre">'PT',</span> <span class="pre">'PW',</span> <span class="pre">'PY',</span> <span class="pre">'QA',</span> <span class="pre">'RE',</span> <span class="pre">'RO',</span> <span class="pre">'RS',</span> <span class="pre">'RU',</span> <span class="pre">'RW',</span> <span class="pre">'SA',</span> <span class="pre">'SB',</span> <span class="pre">'SC',</span> <span class="pre">'SD',</span> <span class="pre">'SE',</span> <span class="pre">'SG',</span> <span class="pre">'SH',</span> <span class="pre">'SI',</span> <span class="pre">'SJ',</span> <span class="pre">'SK',</span> <span class="pre">'SL',</span> <span class="pre">'SM',</span> <span class="pre">'SN',</span> <span class="pre">'SO',</span> <span class="pre">'SR',</span> <span class="pre">'SS',</span> <span class="pre">'ST',</span> <span class="pre">'SV',</span> <span class="pre">'SX',</span> <span class="pre">'SY',</span> <span class="pre">'SZ',</span> <span class="pre">'TC',</span> <span class="pre">'TD',</span> <span class="pre">'TF',</span> <span class="pre">'TG',</span> <span class="pre">'TH',</span> <span class="pre">'TJ',</span> <span class="pre">'TK',</span> <span class="pre">'TL',</span> <span class="pre">'TM',</span> <span class="pre">'TN',</span> <span class="pre">'TO',</span> <span class="pre">'TR',</span> <span class="pre">'TT',</span> <span class="pre">'TV',</span> <span class="pre">'TW',</span> <span class="pre">'TZ',</span> <span class="pre">'UA',</span> <span class="pre">'UG',</span> <span class="pre">'UM',</span> <span class="pre">'US',</span> <span class="pre">'UY',</span> <span class="pre">'UZ',</span> <span class="pre">'VA',</span> <span class="pre">'VC',</span> <span class="pre">'VE',</span> <span class="pre">'VG',</span> <span class="pre">'VI',</span> <span class="pre">'VN',</span> <span class="pre">'VU',</span> <span class="pre">'WF',</span> <span class="pre">'WS',</span> <span class="pre">'YE',</span> <span class="pre">'YT',</span> <span class="pre">'ZA',</span> <span class="pre">'ZM',</span> <span class="pre">'ZW',</span> <span class="pre">'XK')</span></em><a class="headerlink" href="#localflavor.generic.countries.iso_3166.ISO_3166_1_ALPHA2_COUNTRY_CODES" title="Link to this definition">¶</a></dt>
+<dd><p>ISO 3166-1 country list.
+Sourced from <a class="reference external" href="https://www.iso.org/obp/ui">https://www.iso.org/obp/ui</a> on 2014-11-08</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.generic.countries.sepa.IBAN_SEPA_COUNTRIES">
+<span class="sig-prename descclassname"><span class="pre">localflavor.generic.countries.sepa.</span></span><span class="sig-name descname"><span class="pre">IBAN_SEPA_COUNTRIES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('AD',</span> <span class="pre">'AT',</span> <span class="pre">'BE',</span> <span class="pre">'BG',</span> <span class="pre">'CH',</span> <span class="pre">'CY',</span> <span class="pre">'CZ',</span> <span class="pre">'DE',</span> <span class="pre">'DK',</span> <span class="pre">'EE',</span> <span class="pre">'ES',</span> <span class="pre">'FI',</span> <span class="pre">'FR',</span> <span class="pre">'GB',</span> <span class="pre">'GI',</span> <span class="pre">'GR',</span> <span class="pre">'HR',</span> <span class="pre">'HU',</span> <span class="pre">'IE',</span> <span class="pre">'IS',</span> <span class="pre">'IT',</span> <span class="pre">'LI',</span> <span class="pre">'LT',</span> <span class="pre">'LU',</span> <span class="pre">'LV',</span> <span class="pre">'MC',</span> <span class="pre">'MT',</span> <span class="pre">'NL',</span> <span class="pre">'NO',</span> <span class="pre">'PL',</span> <span class="pre">'PT',</span> <span class="pre">'RO',</span> <span class="pre">'SE',</span> <span class="pre">'SI',</span> <span class="pre">'SK',</span> <span class="pre">'SM',</span> <span class="pre">'VA')</span></em><a class="headerlink" href="#localflavor.generic.countries.sepa.IBAN_SEPA_COUNTRIES" title="Link to this definition">¶</a></dt>
+<dd><p>European Payments Council list of SEPA scheme countries as of 2 Sep 2015.
+<a class="reference external" href="http://www.europeanpaymentscouncil.eu/index.cfm/knowledge-bank/epc-documents/epc-list-of-sepa-scheme-countries/">http://www.europeanpaymentscouncil.eu/index.cfm/knowledge-bank/epc-documents/epc-list-of-sepa-scheme-countries/</a></p>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Generic helpers</a><ul>
+<li><a class="reference internal" href="#module-localflavor.generic.forms">Forms</a><ul>
+<li><a class="reference internal" href="#localflavor.generic.forms.BICFormField"><code class="docutils literal notranslate"><span class="pre">BICFormField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.generic.forms.BICFormField.to_python"><code class="docutils literal notranslate"><span class="pre">BICFormField.to_python()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.generic.forms.DateField"><code class="docutils literal notranslate"><span class="pre">DateField</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.generic.forms.DateTimeField"><code class="docutils literal notranslate"><span class="pre">DateTimeField</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.generic.forms.IBANFormField"><code class="docutils literal notranslate"><span class="pre">IBANFormField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.generic.forms.IBANFormField.prepare_value"><code class="docutils literal notranslate"><span class="pre">IBANFormField.prepare_value()</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.generic.forms.IBANFormField.to_python"><code class="docutils literal notranslate"><span class="pre">IBANFormField.to_python()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.generic.forms.SplitDateTimeField"><code class="docutils literal notranslate"><span class="pre">SplitDateTimeField</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-localflavor.generic.models">Models</a><ul>
+<li><a class="reference internal" href="#localflavor.generic.models.BICField"><code class="docutils literal notranslate"><span class="pre">BICField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.generic.models.BICField.formfield"><code class="docutils literal notranslate"><span class="pre">BICField.formfield()</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.generic.models.BICField.to_python"><code class="docutils literal notranslate"><span class="pre">BICField.to_python()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.generic.models.IBANField"><code class="docutils literal notranslate"><span class="pre">IBANField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.generic.models.IBANField.deconstruct"><code class="docutils literal notranslate"><span class="pre">IBANField.deconstruct()</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.generic.models.IBANField.formfield"><code class="docutils literal notranslate"><span class="pre">IBANField.formfield()</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.generic.models.IBANField.to_python"><code class="docutils literal notranslate"><span class="pre">IBANField.to_python()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-localflavor.generic.validators">Validators</a><ul>
+<li><a class="reference internal" href="#localflavor.generic.validators.BICValidator"><code class="docutils literal notranslate"><span class="pre">BICValidator</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.generic.validators.BICValidator.deconstruct"><code class="docutils literal notranslate"><span class="pre">BICValidator.deconstruct()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.generic.validators.EANValidator"><code class="docutils literal notranslate"><span class="pre">EANValidator</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.generic.validators.EANValidator.deconstruct"><code class="docutils literal notranslate"><span class="pre">EANValidator.deconstruct()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.generic.validators.IBANValidator"><code class="docutils literal notranslate"><span class="pre">IBANValidator</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.generic.validators.IBANValidator.deconstruct"><code class="docutils literal notranslate"><span class="pre">IBANValidator.deconstruct()</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.generic.validators.IBANValidator.iban_checksum"><code class="docutils literal notranslate"><span class="pre">IBANValidator.iban_checksum()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.generic.validators.VATINValidator"><code class="docutils literal notranslate"><span class="pre">VATINValidator</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.generic.validators.VATINValidator.clean"><code class="docutils literal notranslate"><span class="pre">VATINValidator.clean()</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.generic.validators.VATINValidator.deconstruct"><code class="docutils literal notranslate"><span class="pre">VATINValidator.deconstruct()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.generic.validators.VATIN_COUNTRY_CODE_LENGTH"><code class="docutils literal notranslate"><span class="pre">VATIN_COUNTRY_CODE_LENGTH</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.generic.validators.VATIN_PATTERN_MAP"><code class="docutils literal notranslate"><span class="pre">VATIN_PATTERN_MAP</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data">Data</a><ul>
+<li><a class="reference internal" href="#localflavor.generic.countries.iso_3166.ISO_3166_1_ALPHA2_COUNTRY_CODES"><code class="docutils literal notranslate"><span class="pre">ISO_3166_1_ALPHA2_COUNTRY_CODES</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.generic.countries.sepa.IBAN_SEPA_COUNTRIES"><code class="docutils literal notranslate"><span class="pre">IBAN_SEPA_COUNTRIES</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="localflavor/za.html"
+                          title="previous chapter">South Africa (<code class="docutils literal notranslate"><span class="pre">za</span></code>)</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/generic.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="localflavor/za.html" title="South Africa (za)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Generic helpers</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright Django Software Foundation and individual contributors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+  </body>
+</html>

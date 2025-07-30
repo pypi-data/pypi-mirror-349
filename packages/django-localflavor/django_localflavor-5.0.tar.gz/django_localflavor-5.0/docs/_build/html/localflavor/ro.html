@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Romania (ro) &#8212; django-localflavor 4.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=2bf1fcf8" />
+    
+    <script src="../_static/documentation_options.js?v=9f5556dd"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Russia (ru)" href="ru.html" />
+    <link rel="prev" title="Paraguay (py)" href="py_.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="ru.html" title="Russia (ru)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="py_.html" title="Paraguay (py)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Romania (<code class="docutils literal notranslate"><span class="pre">ro</span></code>)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="romania-ro">
+<h1>Romania (<code class="docutils literal notranslate"><span class="pre">ro</span></code>)<a class="headerlink" href="#romania-ro" title="Link to this heading">¶</a></h1>
+<section id="module-localflavor.ro.forms">
+<span id="forms"></span><h2>Forms<a class="headerlink" href="#module-localflavor.ro.forms" title="Link to this heading">¶</a></h2>
+<p>Romanian specific form helpers.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.ro.forms.ROCIFField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.ro.forms.</span></span><span class="sig-name descname"><span class="pre">ROCIFField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/ro/forms.html#ROCIFField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.ro.forms.ROCIFField" title="Link to this definition">¶</a></dt>
+<dd><p>A Romanian fiscal identity code (CIF) field.</p>
+<p>For CIF validation algorithm see: <a class="reference external" href="https://ro.wikipedia.org/wiki/Cod_de_Identificare_Fiscal%C4%83">https://ro.wikipedia.org/wiki/Cod_de_Identificare_Fiscal%C4%83</a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.ro.forms.ROCIFField.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/ro/forms.html#ROCIFField.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.ro.forms.ROCIFField.clean" title="Link to this definition">¶</a></dt>
+<dd><p>CIF validation.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>value: the CIF code</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.ro.forms.ROCNPField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.ro.forms.</span></span><span class="sig-name descname"><span class="pre">ROCNPField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">13</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">13</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/ro/forms.html#ROCNPField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.ro.forms.ROCNPField" title="Link to this definition">¶</a></dt>
+<dd><p>A Romanian personal identity code (CNP) field.</p>
+<p>For CNP validation algorithm see: <a class="reference external" href="https://ro.wikipedia.org/wiki/Cod_numeric_personal">https://ro.wikipedia.org/wiki/Cod_numeric_personal</a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.ro.forms.ROCNPField.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/ro/forms.html#ROCNPField.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.ro.forms.ROCNPField.clean" title="Link to this definition">¶</a></dt>
+<dd><p>CNP validations.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>value: the CNP code</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.ro.forms.ROCountyField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.ro.forms.</span></span><span class="sig-name descname"><span class="pre">ROCountyField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/ro/forms.html#ROCountyField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.ro.forms.ROCountyField" title="Link to this definition">¶</a></dt>
+<dd><p>A form field that validates its input is a Romanian county name or abbreviation.</p>
+<p>It normalizes the input to the standard vehicle registration abbreviation for the given county.</p>
+<p>WARNING: This field will only accept names written with diacritics (using comma bellow for ș and ț); consider
+using ROCountySelect if this behavior is unacceptable for you</p>
+<p>For more information regarding diacritics see <em>Comma-below (ș and ț) versus cedilla (ş and ţ)</em> and
+<em>Unicode and HTML</em> sections from: <a class="reference external" href="https://en.wikipedia.org/wiki/Romanian_alphabet">Romanian alphabet</a>.</p>
+<dl>
+<dt>Example:</dt><dd><div class="line-block">
+<div class="line">Argeș =&gt; valid (comma bellow)</div>
+<div class="line">Argeş =&gt; invalid (cedilla)</div>
+<div class="line">Arges =&gt; invalid (no diacritic)</div>
+</div>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.ro.forms.ROCountyField.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/ro/forms.html#ROCountyField.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.ro.forms.ROCountyField.clean" title="Link to this definition">¶</a></dt>
+<dd><p>Validate the given value and return its “cleaned” value as an
+appropriate Python object. Raise ValidationError for any errors.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.ro.forms.ROCountySelect">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.ro.forms.</span></span><span class="sig-name descname"><span class="pre">ROCountySelect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attrs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/ro/forms.html#ROCountySelect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.ro.forms.ROCountySelect" title="Link to this definition">¶</a></dt>
+<dd><p>A Select widget that uses a list of Romanian counties (județe) as its choices.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.ro.forms.ROPostalCodeField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.ro.forms.</span></span><span class="sig-name descname"><span class="pre">ROPostalCodeField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">6</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">6</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/ro/forms.html#ROPostalCodeField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.ro.forms.ROPostalCodeField" title="Link to this definition">¶</a></dt>
+<dd><p>Romanian postal code field.</p>
+</dd></dl>
+
+</section>
+<section id="data">
+<h2>Data<a class="headerlink" href="#data" title="Link to this heading">¶</a></h2>
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.ro.ro_counties.COUNTIES_CHOICES">
+<span class="sig-prename descclassname"><span class="pre">localflavor.ro.ro_counties.</span></span><span class="sig-name descname"><span class="pre">COUNTIES_CHOICES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(('AB',</span> <span class="pre">'Alba'),</span> <span class="pre">('AR',</span> <span class="pre">'Arad'),</span> <span class="pre">('AG',</span> <span class="pre">'Argeș'),</span> <span class="pre">('BC',</span> <span class="pre">'Bacău'),</span> <span class="pre">('BH',</span> <span class="pre">'Bihor'),</span> <span class="pre">('BN',</span> <span class="pre">'Bistrița-Năsăud'),</span> <span class="pre">('BT',</span> <span class="pre">'Botoșani'),</span> <span class="pre">('BV',</span> <span class="pre">'Brașov'),</span> <span class="pre">('BR',</span> <span class="pre">'Brăila'),</span> <span class="pre">('B',</span> <span class="pre">'București'),</span> <span class="pre">('BZ',</span> <span class="pre">'Buzău'),</span> <span class="pre">('CS',</span> <span class="pre">'Caraș-Severin'),</span> <span class="pre">('CL',</span> <span class="pre">'Călărași'),</span> <span class="pre">('CJ',</span> <span class="pre">'Cluj'),</span> <span class="pre">('CT',</span> <span class="pre">'Constanța'),</span> <span class="pre">('CV',</span> <span class="pre">'Covasna'),</span> <span class="pre">('DB',</span> <span class="pre">'Dâmbovița'),</span> <span class="pre">('DJ',</span> <span class="pre">'Dolj'),</span> <span class="pre">('GL',</span> <span class="pre">'Galați'),</span> <span class="pre">('GR',</span> <span class="pre">'Giurgiu'),</span> <span class="pre">('GJ',</span> <span class="pre">'Gorj'),</span> <span class="pre">('HR',</span> <span class="pre">'Harghita'),</span> <span class="pre">('HD',</span> <span class="pre">'Hunedoara'),</span> <span class="pre">('IL',</span> <span class="pre">'Ialomița'),</span> <span class="pre">('IS',</span> <span class="pre">'Iași'),</span> <span class="pre">('IF',</span> <span class="pre">'Ilfov'),</span> <span class="pre">('MM',</span> <span class="pre">'Maramureș'),</span> <span class="pre">('MH',</span> <span class="pre">'Mehedinți'),</span> <span class="pre">('MS',</span> <span class="pre">'Mureș'),</span> <span class="pre">('NT',</span> <span class="pre">'Neamț'),</span> <span class="pre">('OT',</span> <span class="pre">'Olt'),</span> <span class="pre">('PH',</span> <span class="pre">'Prahova'),</span> <span class="pre">('SM',</span> <span class="pre">'Satu</span> <span class="pre">Mare'),</span> <span class="pre">('SJ',</span> <span class="pre">'Sălaj'),</span> <span class="pre">('SB',</span> <span class="pre">'Sibiu'),</span> <span class="pre">('SV',</span> <span class="pre">'Suceava'),</span> <span class="pre">('TR',</span> <span class="pre">'Teleorman'),</span> <span class="pre">('TM',</span> <span class="pre">'Timiș'),</span> <span class="pre">('TL',</span> <span class="pre">'Tulcea'),</span> <span class="pre">('VS',</span> <span class="pre">'Vaslui'),</span> <span class="pre">('VL',</span> <span class="pre">'Vâlcea'),</span> <span class="pre">('VN',</span> <span class="pre">'Vrancea'))</span></em><a class="headerlink" href="#localflavor.ro.ro_counties.COUNTIES_CHOICES" title="Link to this definition">¶</a></dt>
+<dd><p>A list of Romanian counties as <cite>choices</cite> in a formfield.</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Romania (<code class="docutils literal notranslate"><span class="pre">ro</span></code>)</a><ul>
+<li><a class="reference internal" href="#module-localflavor.ro.forms">Forms</a><ul>
+<li><a class="reference internal" href="#localflavor.ro.forms.ROCIFField"><code class="docutils literal notranslate"><span class="pre">ROCIFField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.ro.forms.ROCIFField.clean"><code class="docutils literal notranslate"><span class="pre">ROCIFField.clean()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.ro.forms.ROCNPField"><code class="docutils literal notranslate"><span class="pre">ROCNPField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.ro.forms.ROCNPField.clean"><code class="docutils literal notranslate"><span class="pre">ROCNPField.clean()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.ro.forms.ROCountyField"><code class="docutils literal notranslate"><span class="pre">ROCountyField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.ro.forms.ROCountyField.clean"><code class="docutils literal notranslate"><span class="pre">ROCountyField.clean()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.ro.forms.ROCountySelect"><code class="docutils literal notranslate"><span class="pre">ROCountySelect</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.ro.forms.ROPostalCodeField"><code class="docutils literal notranslate"><span class="pre">ROPostalCodeField</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data">Data</a><ul>
+<li><a class="reference internal" href="#localflavor.ro.ro_counties.COUNTIES_CHOICES"><code class="docutils literal notranslate"><span class="pre">COUNTIES_CHOICES</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="py_.html"
+                          title="previous chapter">Paraguay (<code class="docutils literal notranslate"><span class="pre">py</span></code>)</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="ru.html"
+                          title="next chapter">Russia (<code class="docutils literal notranslate"><span class="pre">ru</span></code>)</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/localflavor/ro.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="ru.html" title="Russia (ru)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="py_.html" title="Paraguay (py)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Romania (<code class="docutils literal notranslate"><span class="pre">ro</span></code>)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright Django Software Foundation and individual contributors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+  </body>
+</html>

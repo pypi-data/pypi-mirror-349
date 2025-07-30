@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Iceland (is) &#8212; django-localflavor 4.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=2bf1fcf8" />
+    
+    <script src="../_static/documentation_options.js?v=9f5556dd"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Italy (it)" href="it.html" />
+    <link rel="prev" title="Iran (ir)" href="ir.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="it.html" title="Italy (it)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="ir.html" title="Iran (ir)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Iceland (<code class="docutils literal notranslate"><span class="pre">is</span></code>)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="iceland-is">
+<h1>Iceland (<code class="docutils literal notranslate"><span class="pre">is</span></code>)<a class="headerlink" href="#iceland-is" title="Link to this heading">¶</a></h1>
+<section id="module-localflavor.is_.forms">
+<span id="forms"></span><h2>Forms<a class="headerlink" href="#module-localflavor.is_.forms" title="Link to this heading">¶</a></h2>
+<p>Iceland specific form helpers.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.is_.forms.ISIdNumberField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.is_.forms.</span></span><span class="sig-name descname"><span class="pre">ISIdNumberField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">11</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/is_/forms.html#ISIdNumberField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.is_.forms.ISIdNumberField" title="Link to this definition">¶</a></dt>
+<dd><p>Icelandic identification number (kennitala).</p>
+<p>This is a number every citizen of Iceland has.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.is_.forms.ISIdNumberField.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/is_/forms.html#ISIdNumberField.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.is_.forms.ISIdNumberField.clean" title="Link to this definition">¶</a></dt>
+<dd><p>Validate the given value and return its “cleaned” value as an
+appropriate Python object. Raise ValidationError for any errors.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.is_.forms.ISPostalCodeSelect">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.is_.forms.</span></span><span class="sig-name descname"><span class="pre">ISPostalCodeSelect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attrs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/is_/forms.html#ISPostalCodeSelect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.is_.forms.ISPostalCodeSelect" title="Link to this definition">¶</a></dt>
+<dd><p>A Select widget that uses a list of Icelandic postal codes as its choices.</p>
+</dd></dl>
+
+</section>
+<section id="data">
+<h2>Data<a class="headerlink" href="#data" title="Link to this heading">¶</a></h2>
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.is_.is_postalcodes.IS_POSTALCODES">
+<span class="sig-prename descclassname"><span class="pre">localflavor.is_.is_postalcodes.</span></span><span class="sig-name descname"><span class="pre">IS_POSTALCODES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(('101',</span> <span class="pre">'101</span> <span class="pre">Reykjavík'),</span> <span class="pre">('102',</span> <span class="pre">'102</span> <span class="pre">Reykjavík'),</span> <span class="pre">('103',</span> <span class="pre">'103</span> <span class="pre">Reykjavík'),</span> <span class="pre">('104',</span> <span class="pre">'104</span> <span class="pre">Reykjavík'),</span> <span class="pre">('105',</span> <span class="pre">'105</span> <span class="pre">Reykjavík'),</span> <span class="pre">('107',</span> <span class="pre">'107</span> <span class="pre">Reykjavík'),</span> <span class="pre">('108',</span> <span class="pre">'108</span> <span class="pre">Reykjavík'),</span> <span class="pre">('109',</span> <span class="pre">'109</span> <span class="pre">Reykjavík'),</span> <span class="pre">('110',</span> <span class="pre">'110</span> <span class="pre">Reykjavík'),</span> <span class="pre">('111',</span> <span class="pre">'111</span> <span class="pre">Reykjavík'),</span> <span class="pre">('112',</span> <span class="pre">'112</span> <span class="pre">Reykjavík'),</span> <span class="pre">('113',</span> <span class="pre">'113</span> <span class="pre">Reykjavík'),</span> <span class="pre">('116',</span> <span class="pre">'116</span> <span class="pre">Reykjavík'),</span> <span class="pre">('121',</span> <span class="pre">'121</span> <span class="pre">Reykjavík'),</span> <span class="pre">('123',</span> <span class="pre">'123</span> <span class="pre">Reykjavík'),</span> <span class="pre">('124',</span> <span class="pre">'124</span> <span class="pre">Reykjavík'),</span> <span class="pre">('125',</span> <span class="pre">'125</span> <span class="pre">Reykjavík'),</span> <span class="pre">('127',</span> <span class="pre">'127</span> <span class="pre">Reykjavík'),</span> <span class="pre">('128',</span> <span class="pre">'128</span> <span class="pre">Reykjavík'),</span> <span class="pre">('129',</span> <span class="pre">'129</span> <span class="pre">Reykjavík'),</span> <span class="pre">('130',</span> <span class="pre">'130</span> <span class="pre">Reykjavík'),</span> <span class="pre">('132',</span> <span class="pre">'132</span> <span class="pre">Reykjavík'),</span> <span class="pre">('161',</span> <span class="pre">'161</span> <span class="pre">Reykjavík'),</span> <span class="pre">('162',</span> <span class="pre">'162</span> <span class="pre">Reykjavík</span> <span class="pre">-</span> <span class="pre">Dreifbýli'),</span> <span class="pre">('170',</span> <span class="pre">'170</span> <span class="pre">Seltjarnarnesi'),</span> <span class="pre">('172',</span> <span class="pre">'172</span> <span class="pre">Seltjarnarnesi'),</span> <span class="pre">('190',</span> <span class="pre">'190</span> <span class="pre">Vogum'),</span> <span class="pre">('191',</span> <span class="pre">'191</span> <span class="pre">Vogum'),</span> <span class="pre">('200',</span> <span class="pre">'200</span> <span class="pre">Kópavogi'),</span> <span class="pre">('201',</span> <span class="pre">'201</span> <span class="pre">Kópavogi'),</span> <span class="pre">('202',</span> <span class="pre">'202</span> <span class="pre">Kópavogi'),</span> <span class="pre">('203',</span> <span class="pre">'203</span> <span class="pre">Kópavogi'),</span> <span class="pre">('206',</span> <span class="pre">'206</span> <span class="pre">Kópavogur'),</span> <span class="pre">('210',</span> <span class="pre">'210</span> <span class="pre">Garðabæ'),</span> <span class="pre">('212',</span> <span class="pre">'212</span> <span class="pre">Garðabæ'),</span> <span class="pre">('220',</span> <span class="pre">'220</span> <span class="pre">Hafnarfirði'),</span> <span class="pre">('221',</span> <span class="pre">'221</span> <span class="pre">Hafnarfirði'),</span> <span class="pre">('222',</span> <span class="pre">'222</span> <span class="pre">Hafnarfirði'),</span> <span class="pre">('225',</span> <span class="pre">'225</span> <span class="pre">Garðabæ'),</span> <span class="pre">('230',</span> <span class="pre">'230</span> <span class="pre">Reykjanesbæ'),</span> <span class="pre">('232',</span> <span class="pre">'232</span> <span class="pre">Reykjanesbæ'),</span> <span class="pre">('233',</span> <span class="pre">'233</span> <span class="pre">Reykjanesbæ'),</span> <span class="pre">('235',</span> <span class="pre">'235</span> <span class="pre">Keflavíkurflugvöllur'),</span> <span class="pre">('240',</span> <span class="pre">'240</span> <span class="pre">Grindavík'),</span> <span class="pre">('241',</span> <span class="pre">'241</span> <span class="pre">Grindavík'),</span> <span class="pre">('245',</span> <span class="pre">'245</span> <span class="pre">Suðurnesjabæ'),</span> <span class="pre">('246',</span> <span class="pre">'246</span> <span class="pre">Suðurnesjabæ'),</span> <span class="pre">('250',</span> <span class="pre">'250</span> <span class="pre">Suðurnesjabæ'),</span> <span class="pre">('251',</span> <span class="pre">'251</span> <span class="pre">Suðurnesjabæ'),</span> <span class="pre">('260',</span> <span class="pre">'260</span> <span class="pre">Reykjanesbæ'),</span> <span class="pre">('262',</span> <span class="pre">'262</span> <span class="pre">Reykjanesbæ'),</span> <span class="pre">('270',</span> <span class="pre">'270</span> <span class="pre">Mosfellsbæ'),</span> <span class="pre">('271',</span> <span class="pre">'271</span> <span class="pre">Mosfellsbæ'),</span> <span class="pre">('276',</span> <span class="pre">'276</span> <span class="pre">Mosfellsbæ'),</span> <span class="pre">('300',</span> <span class="pre">'300</span> <span class="pre">Akranesi'),</span> <span class="pre">('301',</span> <span class="pre">'301</span> <span class="pre">Akranesi'),</span> <span class="pre">('302',</span> <span class="pre">'302</span> <span class="pre">Akranesi'),</span> <span class="pre">('310',</span> <span class="pre">'310</span> <span class="pre">Borgarnesi'),</span> <span class="pre">('311',</span> <span class="pre">'311</span> <span class="pre">Borgarnesi'),</span> <span class="pre">('320',</span> <span class="pre">'320</span> <span class="pre">Reykholt</span> <span class="pre">í</span> <span class="pre">Borgarfirði'),</span> <span class="pre">('340',</span> <span class="pre">'340</span> <span class="pre">Stykkishólmi'),</span> <span class="pre">('341',</span> <span class="pre">'341</span> <span class="pre">Stykkishólmi'),</span> <span class="pre">('342',</span> <span class="pre">'342</span> <span class="pre">Stykkishólmur'),</span> <span class="pre">('345',</span> <span class="pre">'345</span> <span class="pre">Flatey</span> <span class="pre">á</span> <span class="pre">Breiðafirði'),</span> <span class="pre">('350',</span> <span class="pre">'350</span> <span class="pre">Grundarfirði'),</span> <span class="pre">('351',</span> <span class="pre">'351</span> <span class="pre">Grundarfirði'),</span> <span class="pre">('355',</span> <span class="pre">'355</span> <span class="pre">Ólafsvík'),</span> <span class="pre">('356',</span> <span class="pre">'356</span> <span class="pre">Snæfellsbæ'),</span> <span class="pre">('360',</span> <span class="pre">'360</span> <span class="pre">Hellissandi'),</span> <span class="pre">('370',</span> <span class="pre">'370</span> <span class="pre">Búðardal'),</span> <span class="pre">('371',</span> <span class="pre">'371</span> <span class="pre">Búðardal'),</span> <span class="pre">('380',</span> <span class="pre">'380</span> <span class="pre">Reykhólahreppi'),</span> <span class="pre">('381',</span> <span class="pre">'381</span> <span class="pre">Reykhólahreppi'),</span> <span class="pre">('400',</span> <span class="pre">'400</span> <span class="pre">Ísafirði'),</span> <span class="pre">('401',</span> <span class="pre">'401</span> <span class="pre">Ísafirði'),</span> <span class="pre">('410',</span> <span class="pre">'410</span> <span class="pre">Hnífsdal'),</span> <span class="pre">('415',</span> <span class="pre">'415</span> <span class="pre">Bolungarvík'),</span> <span class="pre">('416',</span> <span class="pre">'416</span> <span class="pre">Bolungarvík'),</span> <span class="pre">('420',</span> <span class="pre">'420</span> <span class="pre">Súðavík'),</span> <span class="pre">('421',</span> <span class="pre">'421</span> <span class="pre">Súðavík'),</span> <span class="pre">('425',</span> <span class="pre">'425</span> <span class="pre">Flateyri'),</span> <span class="pre">('426',</span> <span class="pre">'426</span> <span class="pre">Flateyri'),</span> <span class="pre">('430',</span> <span class="pre">'430</span> <span class="pre">Suðureyri'),</span> <span class="pre">('431',</span> <span class="pre">'431</span> <span class="pre">Suðureyri'),</span> <span class="pre">('450',</span> <span class="pre">'450</span> <span class="pre">Patreksfirði'),</span> <span class="pre">('451',</span> <span class="pre">'451</span> <span class="pre">Patreksfirði'),</span> <span class="pre">('460',</span> <span class="pre">'460</span> <span class="pre">Tálknafirði'),</span> <span class="pre">('461',</span> <span class="pre">'461</span> <span class="pre">Tálknafirði'),</span> <span class="pre">('465',</span> <span class="pre">'465</span> <span class="pre">Bíldudal'),</span> <span class="pre">('466',</span> <span class="pre">'466</span> <span class="pre">Bíldudal'),</span> <span class="pre">('470',</span> <span class="pre">'470</span> <span class="pre">Þingeyri'),</span> <span class="pre">('471',</span> <span class="pre">'471</span> <span class="pre">Þingeyri'),</span> <span class="pre">('500',</span> <span class="pre">'500</span> <span class="pre">Stað'),</span> <span class="pre">('510',</span> <span class="pre">'510</span> <span class="pre">Hólmavík'),</span> <span class="pre">('511',</span> <span class="pre">'511</span> <span class="pre">Hólmavík'),</span> <span class="pre">('512',</span> <span class="pre">'512</span> <span class="pre">Hólmavík'),</span> <span class="pre">('520',</span> <span class="pre">'520</span> <span class="pre">Drangsnesi'),</span> <span class="pre">('524',</span> <span class="pre">'524</span> <span class="pre">Árneshreppi'),</span> <span class="pre">('530',</span> <span class="pre">'530</span> <span class="pre">Hvammstanga'),</span> <span class="pre">('531',</span> <span class="pre">'531</span> <span class="pre">Hvammstanga'),</span> <span class="pre">('540',</span> <span class="pre">'540</span> <span class="pre">Blönduósi'),</span> <span class="pre">('541',</span> <span class="pre">'541</span> <span class="pre">Blönduósi'),</span> <span class="pre">('545',</span> <span class="pre">'545</span> <span class="pre">Skagaströnd'),</span> <span class="pre">('546',</span> <span class="pre">'546</span> <span class="pre">Skagaströnd'),</span> <span class="pre">('550',</span> <span class="pre">'550</span> <span class="pre">Sauðárkróki'),</span> <span class="pre">('551',</span> <span class="pre">'551</span> <span class="pre">Sauðárkróki'),</span> <span class="pre">('560',</span> <span class="pre">'560</span> <span class="pre">Varmahlíð'),</span> <span class="pre">('561',</span> <span class="pre">'561</span> <span class="pre">Varmahlíð'),</span> <span class="pre">('565',</span> <span class="pre">'565</span> <span class="pre">Hofsós'),</span> <span class="pre">('566',</span> <span class="pre">'566</span> <span class="pre">Hofsós'),</span> <span class="pre">('570',</span> <span class="pre">'570</span> <span class="pre">Fljótum'),</span> <span class="pre">('580',</span> <span class="pre">'580</span> <span class="pre">Siglufirði'),</span> <span class="pre">('581',</span> <span class="pre">'581</span> <span class="pre">Siglufirði'),</span> <span class="pre">('600',</span> <span class="pre">'600</span> <span class="pre">Akureyri'),</span> <span class="pre">('601',</span> <span class="pre">'601</span> <span class="pre">Akureyri'),</span> <span class="pre">('602',</span> <span class="pre">'602</span> <span class="pre">Akureyri'),</span> <span class="pre">('603',</span> <span class="pre">'603</span> <span class="pre">Akureyri'),</span> <span class="pre">('604',</span> <span class="pre">'604</span> <span class="pre">Akureyri'),</span> <span class="pre">('605',</span> <span class="pre">'605</span> <span class="pre">Akureyri'),</span> <span class="pre">('606',</span> <span class="pre">'606</span> <span class="pre">Akureyri'),</span> <span class="pre">('607',</span> <span class="pre">'607</span> <span class="pre">Akureyri'),</span> <span class="pre">('610',</span> <span class="pre">'610</span> <span class="pre">Grenivík'),</span> <span class="pre">('611',</span> <span class="pre">'611</span> <span class="pre">Grímsey'),</span> <span class="pre">('616',</span> <span class="pre">'616</span> <span class="pre">Grenivík'),</span> <span class="pre">('620',</span> <span class="pre">'620</span> <span class="pre">Dalvík'),</span> <span class="pre">('621',</span> <span class="pre">'621</span> <span class="pre">Dalvík'),</span> <span class="pre">('625',</span> <span class="pre">'625</span> <span class="pre">Ólafsfirði'),</span> <span class="pre">('626',</span> <span class="pre">'626</span> <span class="pre">Ólafsfirði'),</span> <span class="pre">('630',</span> <span class="pre">'630</span> <span class="pre">Hrísey'),</span> <span class="pre">('640',</span> <span class="pre">'640</span> <span class="pre">Húsavík'),</span> <span class="pre">('641',</span> <span class="pre">'641</span> <span class="pre">Húsavík'),</span> <span class="pre">('645',</span> <span class="pre">'645</span> <span class="pre">Fosshólli'),</span> <span class="pre">('650',</span> <span class="pre">'650</span> <span class="pre">Laugum'),</span> <span class="pre">('660',</span> <span class="pre">'660</span> <span class="pre">Mývatni'),</span> <span class="pre">('670',</span> <span class="pre">'670</span> <span class="pre">Kópaskeri'),</span> <span class="pre">('671',</span> <span class="pre">'671</span> <span class="pre">Kópaskeri'),</span> <span class="pre">('675',</span> <span class="pre">'675</span> <span class="pre">Raufarhöfn'),</span> <span class="pre">('676',</span> <span class="pre">'676</span> <span class="pre">Raufarhöfn'),</span> <span class="pre">('680',</span> <span class="pre">'680</span> <span class="pre">Þórshöfn'),</span> <span class="pre">('681',</span> <span class="pre">'681</span> <span class="pre">Þórshöfn'),</span> <span class="pre">('685',</span> <span class="pre">'685</span> <span class="pre">Bakkafirði'),</span> <span class="pre">('686',</span> <span class="pre">'686</span> <span class="pre">Bakkafirði'),</span> <span class="pre">('690',</span> <span class="pre">'690</span> <span class="pre">Vopnafirði'),</span> <span class="pre">('691',</span> <span class="pre">'691</span> <span class="pre">Vopnafirði'),</span> <span class="pre">('700',</span> <span class="pre">'700</span> <span class="pre">Egilsstöðum'),</span> <span class="pre">('701',</span> <span class="pre">'701</span> <span class="pre">Egilsstöðum'),</span> <span class="pre">('710',</span> <span class="pre">'710</span> <span class="pre">Seyðisfirði'),</span> <span class="pre">('711',</span> <span class="pre">'711</span> <span class="pre">Seyðisfirði'),</span> <span class="pre">('715',</span> <span class="pre">'715</span> <span class="pre">Mjóafirði'),</span> <span class="pre">('720',</span> <span class="pre">'720</span> <span class="pre">Borgarfirði</span> <span class="pre">(eystri)'),</span> <span class="pre">('721',</span> <span class="pre">'721</span> <span class="pre">Borgarfirði</span> <span class="pre">(eystri)'),</span> <span class="pre">('730',</span> <span class="pre">'730</span> <span class="pre">Reyðarfirði'),</span> <span class="pre">('731',</span> <span class="pre">'731</span> <span class="pre">Reyðarfirði'),</span> <span class="pre">('735',</span> <span class="pre">'735</span> <span class="pre">Eskifirði'),</span> <span class="pre">('736',</span> <span class="pre">'736</span> <span class="pre">Eskifirði'),</span> <span class="pre">('740',</span> <span class="pre">'740</span> <span class="pre">Neskaupstað'),</span> <span class="pre">('741',</span> <span class="pre">'741</span> <span class="pre">Neskaupsstað'),</span> <span class="pre">('750',</span> <span class="pre">'750</span> <span class="pre">Fáskrúðsfirði'),</span> <span class="pre">('751',</span> <span class="pre">'751</span> <span class="pre">Fáskrúðsfirði'),</span> <span class="pre">('755',</span> <span class="pre">'755</span> <span class="pre">Stöðvarfirði'),</span> <span class="pre">('756',</span> <span class="pre">'756</span> <span class="pre">Stöðvarfirði'),</span> <span class="pre">('760',</span> <span class="pre">'760</span> <span class="pre">Breiðdalsvík'),</span> <span class="pre">('761',</span> <span class="pre">'761</span> <span class="pre">Breiðdalsvík'),</span> <span class="pre">('765',</span> <span class="pre">'765</span> <span class="pre">Djúpavogi'),</span> <span class="pre">('766',</span> <span class="pre">'766</span> <span class="pre">Djúpavogi'),</span> <span class="pre">('780',</span> <span class="pre">'780</span> <span class="pre">Höfn</span> <span class="pre">í</span> <span class="pre">Hornafirði'),</span> <span class="pre">('781',</span> <span class="pre">'781</span> <span class="pre">Höfn</span> <span class="pre">í</span> <span class="pre">Hornafirði'),</span> <span class="pre">('785',</span> <span class="pre">'785</span> <span class="pre">Öræfum'),</span> <span class="pre">('800',</span> <span class="pre">'800</span> <span class="pre">Selfossi'),</span> <span class="pre">('801',</span> <span class="pre">'801</span> <span class="pre">Selfossi'),</span> <span class="pre">('802',</span> <span class="pre">'802</span> <span class="pre">Selfossi'),</span> <span class="pre">('803',</span> <span class="pre">'803</span> <span class="pre">Selfoss'),</span> <span class="pre">('804',</span> <span class="pre">'804</span> <span class="pre">Selfoss'),</span> <span class="pre">('805',</span> <span class="pre">'805</span> <span class="pre">Selfoss'),</span> <span class="pre">('806',</span> <span class="pre">'806</span> <span class="pre">Selfoss'),</span> <span class="pre">('810',</span> <span class="pre">'810</span> <span class="pre">Hveragerði'),</span> <span class="pre">('815',</span> <span class="pre">'815</span> <span class="pre">Þorlákshöfn'),</span> <span class="pre">('816',</span> <span class="pre">'816</span> <span class="pre">Ölfus'),</span> <span class="pre">('820',</span> <span class="pre">'820</span> <span class="pre">Eyrarbakka'),</span> <span class="pre">('825',</span> <span class="pre">'825</span> <span class="pre">Stokkseyri'),</span> <span class="pre">('840',</span> <span class="pre">'840</span> <span class="pre">Laugarvatni'),</span> <span class="pre">('845',</span> <span class="pre">'845</span> <span class="pre">Flúðum'),</span> <span class="pre">('846',</span> <span class="pre">'846</span> <span class="pre">Flúðum'),</span> <span class="pre">('850',</span> <span class="pre">'850</span> <span class="pre">Hellu'),</span> <span class="pre">('851',</span> <span class="pre">'851</span> <span class="pre">Hellu'),</span> <span class="pre">('860',</span> <span class="pre">'860</span> <span class="pre">Hvolsvelli'),</span> <span class="pre">('861',</span> <span class="pre">'861</span> <span class="pre">Hvolsvelli'),</span> <span class="pre">('870',</span> <span class="pre">'870</span> <span class="pre">Vík'),</span> <span class="pre">('871',</span> <span class="pre">'871</span> <span class="pre">Vík'),</span> <span class="pre">('880',</span> <span class="pre">'880</span> <span class="pre">Kirkjubæjarklaustri'),</span> <span class="pre">('881',</span> <span class="pre">'881</span> <span class="pre">Kirkjubæjarklaustri'),</span> <span class="pre">('900',</span> <span class="pre">'900</span> <span class="pre">Vestmannaeyjum'),</span> <span class="pre">('902',</span> <span class="pre">'902</span> <span class="pre">Vestmannaeyjum'))</span></em><a class="headerlink" href="#localflavor.is_.is_postalcodes.IS_POSTALCODES" title="Link to this definition">¶</a></dt>
+<dd><p>Built-in immutable sequence.</p>
+<p>If no argument is given, the constructor returns an empty tuple.
+If iterable is specified the tuple is initialized from iterable’s items.</p>
+<p>If the argument is a tuple, the return value is the same object.</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Iceland (<code class="docutils literal notranslate"><span class="pre">is</span></code>)</a><ul>
+<li><a class="reference internal" href="#module-localflavor.is_.forms">Forms</a><ul>
+<li><a class="reference internal" href="#localflavor.is_.forms.ISIdNumberField"><code class="docutils literal notranslate"><span class="pre">ISIdNumberField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.is_.forms.ISIdNumberField.clean"><code class="docutils literal notranslate"><span class="pre">ISIdNumberField.clean()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.is_.forms.ISPostalCodeSelect"><code class="docutils literal notranslate"><span class="pre">ISPostalCodeSelect</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data">Data</a><ul>
+<li><a class="reference internal" href="#localflavor.is_.is_postalcodes.IS_POSTALCODES"><code class="docutils literal notranslate"><span class="pre">IS_POSTALCODES</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="ir.html"
+                          title="previous chapter">Iran (<code class="docutils literal notranslate"><span class="pre">ir</span></code>)</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="it.html"
+                          title="next chapter">Italy (<code class="docutils literal notranslate"><span class="pre">it</span></code>)</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/localflavor/is_.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="it.html" title="Italy (it)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="ir.html" title="Iran (ir)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Iceland (<code class="docutils literal notranslate"><span class="pre">is</span></code>)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright Django Software Foundation and individual contributors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+  </body>
+</html>

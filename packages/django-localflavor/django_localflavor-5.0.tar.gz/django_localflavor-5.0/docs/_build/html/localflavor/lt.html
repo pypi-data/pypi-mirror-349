@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Lithuania (lt) &#8212; django-localflavor 4.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=2bf1fcf8" />
+    
+    <script src="../_static/documentation_options.js?v=9f5556dd"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Latvia (lv)" href="lv.html" />
+    <link rel="prev" title="Sri Lanka (lk)" href="lk.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="lv.html" title="Latvia (lv)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="lk.html" title="Sri Lanka (lk)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Lithuania (<code class="docutils literal notranslate"><span class="pre">lt</span></code>)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="lithuania-lt">
+<h1>Lithuania (<code class="docutils literal notranslate"><span class="pre">lt</span></code>)<a class="headerlink" href="#lithuania-lt" title="Link to this heading">¶</a></h1>
+<section id="module-localflavor.lt.forms">
+<span id="forms"></span><h2>Forms<a class="headerlink" href="#module-localflavor.lt.forms" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.lt.forms.LTCountySelect">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.lt.forms.</span></span><span class="sig-name descname"><span class="pre">LTCountySelect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attrs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/lt/forms.html#LTCountySelect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.lt.forms.LTCountySelect" title="Link to this definition">¶</a></dt>
+<dd><p>A select field with the Lithuanian counties as choices</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.lt.forms.LTIDCodeField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.lt.forms.</span></span><span class="sig-name descname"><span class="pre">LTIDCodeField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/lt/forms.html#LTIDCodeField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.lt.forms.LTIDCodeField" title="Link to this definition">¶</a></dt>
+<dd><p>A form field that validates as Lithuanian ID Code.</p>
+<dl class="simple">
+<dt>Checks:</dt><dd><ul class="simple">
+<li><p>Made of exactly 11 decimal numbers.</p></li>
+<li><p>Checksum is correct.</p></li>
+<li><p>ID contains valid date.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.lt.forms.LTIDCodeField.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/lt/forms.html#LTIDCodeField.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.lt.forms.LTIDCodeField.clean" title="Link to this definition">¶</a></dt>
+<dd><p>Validate the given value and return its “cleaned” value as an
+appropriate Python object. Raise ValidationError for any errors.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.lt.forms.LTIDCodeField.valid_date">
+<span class="sig-name descname"><span class="pre">valid_date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/lt/forms.html#LTIDCodeField.valid_date"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.lt.forms.LTIDCodeField.valid_date" title="Link to this definition">¶</a></dt>
+<dd><p>Check if date in ID code is valid.</p>
+<p>We won’t check for dates in future as it would become too restrictive.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.lt.forms.LTMunicipalitySelect">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.lt.forms.</span></span><span class="sig-name descname"><span class="pre">LTMunicipalitySelect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attrs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/lt/forms.html#LTMunicipalitySelect"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.lt.forms.LTMunicipalitySelect" title="Link to this definition">¶</a></dt>
+<dd><p>A select field with the Lithuanian municipalities as choices</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="localflavor.lt.forms.LTPostalCodeField">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">localflavor.lt.forms.</span></span><span class="sig-name descname"><span class="pre">LTPostalCodeField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/lt/forms.html#LTPostalCodeField"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.lt.forms.LTPostalCodeField" title="Link to this definition">¶</a></dt>
+<dd><p>A form field that validates and normalizes Lithuanian postal codes.</p>
+<dl class="simple">
+<dt>Lithuanian postal codes in following forms accepted:</dt><dd><ul class="simple">
+<li><p>XXXXX</p></li>
+<li><p>LT-XXXXX</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="localflavor.lt.forms.LTPostalCodeField.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/localflavor/lt/forms.html#LTPostalCodeField.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#localflavor.lt.forms.LTPostalCodeField.clean" title="Link to this definition">¶</a></dt>
+<dd><p>Validate the given value and return its “cleaned” value as an
+appropriate Python object. Raise ValidationError for any errors.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="data">
+<h2>Data<a class="headerlink" href="#data" title="Link to this heading">¶</a></h2>
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.lt.lt_choices.COUNTY_CHOICES">
+<span class="sig-prename descclassname"><span class="pre">localflavor.lt.lt_choices.</span></span><span class="sig-name descname"><span class="pre">COUNTY_CHOICES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(('alytus',</span> <span class="pre">'Alytus'),</span> <span class="pre">('kaunas',</span> <span class="pre">'Kaunas'),</span> <span class="pre">('klaipeda',</span> <span class="pre">'Klaipėda'),</span> <span class="pre">('marijampole',</span> <span class="pre">'Marijampolė'),</span> <span class="pre">('panevezys',</span> <span class="pre">'Panevėžys'),</span> <span class="pre">('siauliai',</span> <span class="pre">'Šiauliai'),</span> <span class="pre">('taurage',</span> <span class="pre">'Tauragė'),</span> <span class="pre">('telsiai',</span> <span class="pre">'Telšiai'),</span> <span class="pre">('utena',</span> <span class="pre">'Utena'),</span> <span class="pre">('vilnius',</span> <span class="pre">'Vilnius'))</span></em><a class="headerlink" href="#localflavor.lt.lt_choices.COUNTY_CHOICES" title="Link to this definition">¶</a></dt>
+<dd><p>Alphabetically sorted list of Lithuanian counties.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="localflavor.lt.lt_choices.MUNICIPALITY_CHOICES">
+<span class="sig-prename descclassname"><span class="pre">localflavor.lt.lt_choices.</span></span><span class="sig-name descname"><span class="pre">MUNICIPALITY_CHOICES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(('akmene',</span> <span class="pre">'Akmenė</span> <span class="pre">district'),</span> <span class="pre">('alytus_c',</span> <span class="pre">'Alytus</span> <span class="pre">city'),</span> <span class="pre">('alytus',</span> <span class="pre">'Alytus</span> <span class="pre">district'),</span> <span class="pre">('anyksciai',</span> <span class="pre">'Anykščiai</span> <span class="pre">district'),</span> <span class="pre">('birstonas',</span> <span class="pre">'Birštonas'),</span> <span class="pre">('birzai',</span> <span class="pre">'Biržai</span> <span class="pre">district'),</span> <span class="pre">('druskininkai',</span> <span class="pre">'Druskininkai'),</span> <span class="pre">('elektrenai',</span> <span class="pre">'Elektrėnai'),</span> <span class="pre">('ignalina',</span> <span class="pre">'Ignalina</span> <span class="pre">district'),</span> <span class="pre">('jonava',</span> <span class="pre">'Jonava</span> <span class="pre">district'),</span> <span class="pre">('joniskis',</span> <span class="pre">'Joniškis</span> <span class="pre">district'),</span> <span class="pre">('jurbarkas',</span> <span class="pre">'Jurbarkas</span> <span class="pre">district'),</span> <span class="pre">('kaisiadorys',</span> <span class="pre">'Kaišiadorys</span> <span class="pre">district'),</span> <span class="pre">('kalvarija',</span> <span class="pre">'Kalvarija'),</span> <span class="pre">('kaunas_c',</span> <span class="pre">'Kaunas</span> <span class="pre">city'),</span> <span class="pre">('kaunas',</span> <span class="pre">'Kaunas</span> <span class="pre">district'),</span> <span class="pre">('kazluruda',</span> <span class="pre">'Kazlų</span> <span class="pre">Rūda'),</span> <span class="pre">('kedainiai',</span> <span class="pre">'Kėdainiai</span> <span class="pre">district'),</span> <span class="pre">('kelme',</span> <span class="pre">'Kelmė</span> <span class="pre">district'),</span> <span class="pre">('klaipeda_c',</span> <span class="pre">'Klaipėda</span> <span class="pre">city'),</span> <span class="pre">('klaipeda',</span> <span class="pre">'Klaipėda</span> <span class="pre">district'),</span> <span class="pre">('kretinga',</span> <span class="pre">'Kretinga</span> <span class="pre">district'),</span> <span class="pre">('kupiskis',</span> <span class="pre">'Kupiškis</span> <span class="pre">district'),</span> <span class="pre">('lazdijai',</span> <span class="pre">'Lazdijai</span> <span class="pre">district'),</span> <span class="pre">('marijampole',</span> <span class="pre">'Marijampolė'),</span> <span class="pre">('mazeikiai',</span> <span class="pre">'Mažeikiai</span> <span class="pre">district'),</span> <span class="pre">('moletai',</span> <span class="pre">'Molėtai</span> <span class="pre">district'),</span> <span class="pre">('neringa',</span> <span class="pre">'Neringa'),</span> <span class="pre">('pagegiai',</span> <span class="pre">'Pagėgiai'),</span> <span class="pre">('pakruojis',</span> <span class="pre">'Pakruojis</span> <span class="pre">district'),</span> <span class="pre">('palanga',</span> <span class="pre">'Palanga</span> <span class="pre">city'),</span> <span class="pre">('panevezys_c',</span> <span class="pre">'Panevėžys</span> <span class="pre">city'),</span> <span class="pre">('panevezys',</span> <span class="pre">'Panevėžys</span> <span class="pre">district'),</span> <span class="pre">('pasvalys',</span> <span class="pre">'Pasvalys</span> <span class="pre">district'),</span> <span class="pre">('plunge',</span> <span class="pre">'Plungė</span> <span class="pre">district'),</span> <span class="pre">('prienai',</span> <span class="pre">'Prienai</span> <span class="pre">district'),</span> <span class="pre">('radviliskis',</span> <span class="pre">'Radviliškis</span> <span class="pre">district'),</span> <span class="pre">('raseiniai',</span> <span class="pre">'Raseiniai</span> <span class="pre">district'),</span> <span class="pre">('rietavas',</span> <span class="pre">'Rietavas'),</span> <span class="pre">('rokiskis',</span> <span class="pre">'Rokiškis</span> <span class="pre">district'),</span> <span class="pre">('skuodas',</span> <span class="pre">'Skuodas</span> <span class="pre">district'),</span> <span class="pre">('sakiai',</span> <span class="pre">'Šakiai</span> <span class="pre">district'),</span> <span class="pre">('salcininkai',</span> <span class="pre">'Šalčininkai</span> <span class="pre">district'),</span> <span class="pre">('siauliai_c',</span> <span class="pre">'Šiauliai</span> <span class="pre">city'),</span> <span class="pre">('siauliai',</span> <span class="pre">'Šiauliai</span> <span class="pre">district'),</span> <span class="pre">('silale',</span> <span class="pre">'Šilalė</span> <span class="pre">district'),</span> <span class="pre">('silute',</span> <span class="pre">'Šilutė</span> <span class="pre">district'),</span> <span class="pre">('sirvintos',</span> <span class="pre">'Širvintos</span> <span class="pre">district'),</span> <span class="pre">('svencionys',</span> <span class="pre">'Švenčionys</span> <span class="pre">district'),</span> <span class="pre">('taurage',</span> <span class="pre">'Tauragė</span> <span class="pre">district'),</span> <span class="pre">('telsiai',</span> <span class="pre">'Telšiai</span> <span class="pre">district'),</span> <span class="pre">('trakai',</span> <span class="pre">'Trakai</span> <span class="pre">district'),</span> <span class="pre">('ukmerge',</span> <span class="pre">'Ukmergė</span> <span class="pre">district'),</span> <span class="pre">('utena',</span> <span class="pre">'Utena</span> <span class="pre">district'),</span> <span class="pre">('varena',</span> <span class="pre">'Varėna</span> <span class="pre">district'),</span> <span class="pre">('vilkaviskis',</span> <span class="pre">'Vilkaviškis</span> <span class="pre">district'),</span> <span class="pre">('vilnius_c',</span> <span class="pre">'Vilnius</span> <span class="pre">city'),</span> <span class="pre">('vilnius',</span> <span class="pre">'Vilnius</span> <span class="pre">district'),</span> <span class="pre">('visaginas',</span> <span class="pre">'Visaginas'),</span> <span class="pre">('zarasai',</span> <span class="pre">'Zarasai</span> <span class="pre">district'))</span></em><a class="headerlink" href="#localflavor.lt.lt_choices.MUNICIPALITY_CHOICES" title="Link to this definition">¶</a></dt>
+<dd><p>Alphabetically sorted lists of Lithuanian municipalities.</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Lithuania (<code class="docutils literal notranslate"><span class="pre">lt</span></code>)</a><ul>
+<li><a class="reference internal" href="#module-localflavor.lt.forms">Forms</a><ul>
+<li><a class="reference internal" href="#localflavor.lt.forms.LTCountySelect"><code class="docutils literal notranslate"><span class="pre">LTCountySelect</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.lt.forms.LTIDCodeField"><code class="docutils literal notranslate"><span class="pre">LTIDCodeField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.lt.forms.LTIDCodeField.clean"><code class="docutils literal notranslate"><span class="pre">LTIDCodeField.clean()</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.lt.forms.LTIDCodeField.valid_date"><code class="docutils literal notranslate"><span class="pre">LTIDCodeField.valid_date()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#localflavor.lt.forms.LTMunicipalitySelect"><code class="docutils literal notranslate"><span class="pre">LTMunicipalitySelect</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.lt.forms.LTPostalCodeField"><code class="docutils literal notranslate"><span class="pre">LTPostalCodeField</span></code></a><ul>
+<li><a class="reference internal" href="#localflavor.lt.forms.LTPostalCodeField.clean"><code class="docutils literal notranslate"><span class="pre">LTPostalCodeField.clean()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data">Data</a><ul>
+<li><a class="reference internal" href="#localflavor.lt.lt_choices.COUNTY_CHOICES"><code class="docutils literal notranslate"><span class="pre">COUNTY_CHOICES</span></code></a></li>
+<li><a class="reference internal" href="#localflavor.lt.lt_choices.MUNICIPALITY_CHOICES"><code class="docutils literal notranslate"><span class="pre">MUNICIPALITY_CHOICES</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="lk.html"
+                          title="previous chapter">Sri Lanka (<code class="docutils literal notranslate"><span class="pre">lk</span></code>)</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="lv.html"
+                          title="next chapter">Latvia (<code class="docutils literal notranslate"><span class="pre">lv</span></code>)</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/localflavor/lt.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="lv.html" title="Latvia (lv)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="lk.html" title="Sri Lanka (lk)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">django-localflavor 4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Lithuania (<code class="docutils literal notranslate"><span class="pre">lt</span></code>)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright Django Software Foundation and individual contributors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+  </body>
+</html>
