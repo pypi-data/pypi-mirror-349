@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: fraudaverse
+Version: 0.0.5
+Summary: Python lib to access FraudAverse analytical capabilities
+Author: FraudAverse GmbH
+Requires-Dist: pyarrow
+Requires-Dist: python-dotenv
+Requires-Dist: pandas
+Dynamic: author
+Dynamic: requires-dist
+Dynamic: summary
