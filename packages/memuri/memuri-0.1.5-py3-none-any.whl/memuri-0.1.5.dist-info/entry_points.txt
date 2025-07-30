@@ -1,0 +1,3 @@
+[console_scripts]
+memuri=memuri.cli:main
+
