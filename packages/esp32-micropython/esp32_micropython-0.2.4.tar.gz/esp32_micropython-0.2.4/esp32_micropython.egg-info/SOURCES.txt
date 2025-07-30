@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+esp32_micropython/__init__.py
+esp32_micropython/dm.py
+esp32_micropython.egg-info/PKG-INFO
+esp32_micropython.egg-info/SOURCES.txt
+esp32_micropython.egg-info/dependency_links.txt
+esp32_micropython.egg-info/entry_points.txt
+esp32_micropython.egg-info/requires.txt
+esp32_micropython.egg-info/top_level.txt
