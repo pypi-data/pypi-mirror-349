@@ -1,0 +1,24 @@
+ci:
+  autofix_prs: false
+  autoupdate_commit_msg: 'pre-commit: bump repositories'
+
+repos:
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v5.0.0
+  hooks:
+  - id: check-ast
+  - id: check-builtin-literals
+  - id: check-docstring-first
+  - id: check-merge-conflict
+  - id: check-yaml
+  - id: check-toml
+  - id: debug-statements
+  - id: double-quote-string-fixer
+  - id: end-of-file-fixer
+  - id: trailing-whitespace
+- repo: https://github.com/astral-sh/ruff-pre-commit
+  rev: v0.11.10
+  hooks:
+    - id: ruff
+      args: [--fix, --show-fixes]
+    - id: ruff-format
