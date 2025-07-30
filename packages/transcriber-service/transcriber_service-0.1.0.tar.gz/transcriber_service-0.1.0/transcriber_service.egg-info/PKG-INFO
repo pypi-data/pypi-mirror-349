@@ -1,0 +1,29 @@
+Metadata-Version: 2.2
+Name: transcriber_service
+Version: 0.1.0
+Summary: A toolkit for transcribing
+Author: Tatsiana Kozlova
+Author-email: tanya126060@gmail.com
+License: MIT
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=3.8
+License-File: LICENSE
+Requires-Dist: pydantic>=2.11.4
+Requires-Dist: typing>=3.7.4.3
+Requires-Dist: password_strength>=0.0.3.post2
+Requires-Dist: email_validator>=2.2.0
+Requires-Dist: python-docx>=1.1.2
+Requires-Dist: pymongo>=4.12.1
+Requires-Dist: msgpack>=1.1.0
+Requires-Dist: audio_transcribing>=0.2.6
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
