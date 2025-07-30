@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: conflux-ai
+Version: 0.6.3
+Summary: Build prompt pipelines easily.
+Author-email: Pritam Dey <pritamdey@ailens.ai>
+License-File: LICENSE
+Requires-Python: ~=3.10
+Requires-Dist: fastmcp>=2.4.0
+Requires-Dist: numpy<3.0.0,>1.25.0
+Requires-Dist: openai~=1.81
+Requires-Dist: pillow~=10.0
+Requires-Dist: pydantic<3,>=2.11.4
+Provides-Extra: faiss
+Requires-Dist: faiss-cpu<2,>=1.11.0; extra == 'faiss'
+Description-Content-Type: text/markdown
+
+# Conflux
+Coming soon.
