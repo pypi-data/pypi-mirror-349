@@ -1,0 +1,7 @@
+LICENCE.txt
+README.md
+setup.py
+sit_timeline_logging.egg-info/PKG-INFO
+sit_timeline_logging.egg-info/SOURCES.txt
+sit_timeline_logging.egg-info/dependency_links.txt
+sit_timeline_logging.egg-info/top_level.txt
