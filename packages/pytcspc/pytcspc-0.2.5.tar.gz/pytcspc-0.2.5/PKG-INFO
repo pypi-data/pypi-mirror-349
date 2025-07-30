@@ -1,0 +1,77 @@
+Metadata-Version: 2.4
+Name: pytcspc
+Version: 0.2.5
+Summary: Time-correlated single photon counting (TCSPC) data analysis
+Project-URL: Homepage, https://github.com/easunarunachalam/pyTCSPC
+Author-email: Easun Arunachalam <arunachalam@g.harvard.edu>
+License: MIT License
+        
+        Copyright (c) 2022 Easun Arunachalam
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+License-File: LICENSE.md
+Keywords: example,setuptools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: bottleneck>=1.4.2
+Requires-Dist: corner>=2.2.2
+Requires-Dist: dask
+Requires-Dist: h5py
+Requires-Dist: joblib
+Requires-Dist: matplotlib
+Requires-Dist: multipletau>=0.4.1
+Requires-Dist: numexpr>=2.8.4
+Requires-Dist: numpy<2
+Requires-Dist: pandas
+Requires-Dist: scikit-image
+Requires-Dist: scipy
+Requires-Dist: sdtfile>=2024.5.24
+Requires-Dist: tqdm
+Requires-Dist: xarray
+Requires-Dist: zarr
+Description-Content-Type: text/markdown
+
+# `pytcspc`: analysis of time-correlated single photon counting (TCSPC) data
+
+This python library can be used for analyzing time-domain fluorescence lifetime imaging microscopy (FLIM) data and fluorescence correlation spectroscopy (FCS) data collected with TCSPC hardware.
+
+## Installing
+Please see `INSTALLATION.md`.
+
+## Functions
+
+### FLIM
+- read Becker &amp; Hickl .sdt files (based on [`sdtfile`](https://github.com/cgohlke/sdtfile)) into user-friendly `xarray.DataArray`s suitable for further analysis
+- produce intensity and lifetime images
+- fit decay curves to multiexponential models using least-squares or Gibbs sampling approaches
+
+### FCS
+- read Becker &amp; Hickl .spc files into user-friendly `xarray.DataArray`s suitable for further analysis
+- generate FLIM and intensity images and "videos"
+- generate kymographs for line-scanning FCS
+- calculate correlation functions (based on [`multipletau`](https://github.com/FCS-analysis/multipletau))
+
+## examples
+- `FCS`: fit FCS data for diffusion of Alexa Fluor 488
+- `fit_oneexp`: fit decay curve for a solution of FAD
+- `fit_from_image`: fit decay curve for NAD(P)H in yeast
+- `Gibbssampling`: fit a polyexp model using least-squares regression and a biexponential model using Gibbs sampling
+
+## Contributing
+Please see `CONTRIBUTING.md`.

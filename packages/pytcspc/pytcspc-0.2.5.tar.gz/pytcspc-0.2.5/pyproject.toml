@@ -1,0 +1,51 @@
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pytcspc"
+dynamic = ["version"]
+description = "Time-correlated single photon counting (TCSPC) data analysis"
+readme = "README.md"
+license = {file = "LICENSE.md"}
+authors = [
+    { name = "Easun Arunachalam", email = "arunachalam@g.harvard.edu" },
+]
+keywords = [
+    "example",
+    "setuptools",
+]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "dask",
+    "bottleneck>=1.4.2",
+    "corner>=2.2.2",
+    "h5py",
+    "joblib",
+    "matplotlib",
+    "multipletau>=0.4.1",
+    "numexpr>=2.8.4",
+    "numpy<2",
+    "pandas",
+    "scikit-image",
+    "scipy",
+    "sdtfile>=2024.5.24",
+    "tqdm",
+    "xarray",
+    "zarr",
+]
+
+[project.urls]
+Homepage = "https://github.com/easunarunachalam/pyTCSPC"
+
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "src/pytcspc",
+]
