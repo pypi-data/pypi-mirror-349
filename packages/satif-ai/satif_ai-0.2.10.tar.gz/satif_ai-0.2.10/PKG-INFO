@@ -1,0 +1,23 @@
+Metadata-Version: 2.3
+Name: satif-ai
+Version: 0.2.10
+Summary: AI Agents for Satif
+License: MIT
+Author: Syncpulse
+Maintainer: Bryan Djafer
+Maintainer-email: bryan.djafer@syncpulse.fr
+Requires-Python: >=3.10,<3.14
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Provides-Extra: xlsx
+Requires-Dist: openai-agents (>=0.0.9,<0.0.10)
+Requires-Dist: satif-sdk (>=0.1.0,<1.0.0)
+Requires-Dist: sdif-mcp (>=0.1.0,<1.0.0)
+Description-Content-Type: text/markdown
+
+# SATIF AI
+
