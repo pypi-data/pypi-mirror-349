@@ -1,0 +1,8 @@
+2025-04-06T23:59:08+01:00 debian_pc rsync-c9335dc7-4918-4b54-a0e8-5f The synchronisation has completed successfully.
+2025-04-08T05:10:57+01:00 debian_pc kernel: hrtimer: interrupt took 5570 ns
+2025-04-11T17:09:10+01:00 debian_pc thermald[1305]: Config file /etc/thermald/thermal-conf.xml does not exist
+2025-04-11T17:17:12+01:00 debian_pc chromium_chromium.desktop[15704] [15704:15704:0411/171712.941108:ERROR:gpu_blocklist.cc(119)] Unable to get gpu adapter
+2025-05-06T16:32:06+01:00 debian_pc-SH81R com.core447.StreamController.des     thread._stop()
+2025-05-10T05:26:51+01:00 debian_pc ubuntu-appindicators@ubuntu.com[ Using Brute-force mode for StatusNotifierItem :1.99@/com/core447/StreamController/Menu
+2025-05-17T05:49:28+01:00 debian_pc org.bunkus.mkvtoolnix-gui.deskto cleanupAtEndOfQueue
+2025-05-17T06:33:50+01:00 debian_pc pycharm-community_pycharm-commun Recomputation log:
