@@ -1,0 +1,4 @@
+dist
+docs
+mcp_pypi
+tests
