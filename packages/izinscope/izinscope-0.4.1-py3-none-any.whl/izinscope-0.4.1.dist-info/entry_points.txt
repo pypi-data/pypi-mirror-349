@@ -1,0 +1,3 @@
+[console_scripts]
+izinscope=izinscope.__init__:main
+
