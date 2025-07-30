@@ -1,0 +1,14 @@
+safelz4-0.0.1.dev0.dist-info/METADATA,sha256=6OVWu_Sr--_w1r1IlvLbkjvY7mKdjAmzGD8E2-dATGE,3324
+safelz4-0.0.1.dev0.dist-info/WHEEL,sha256=0T6HfVUiwsR6fTnQy2R6BoroXAEmMeDDkX6MIlqUn8Y,106
+safelz4-0.0.1.dev0.dist-info/licenses/LICENCE.md,sha256=4jm0BBnxNUTmWYrbL5tDUZBphAEI3QCWSnZ54faoeUs,1067
+safelz4.libs/libgcc_s-e52197c3.so.1,sha256=vkPW1Auw6CH9Bjk7frmX3hry_1H9c0tRI0Ncyg71WUI,724137
+safelz4/__init__.py,sha256=QS0z12gZiE1EGZR5MUAqFUcQUxX7-_KI-ZufJVDLpok,516
+safelz4/__main__.py,sha256=-GqoftNECZBtC8F82KWJrdSD05BcKBrrL0ElHEEUHyk,36
+safelz4/_block/__init__.py,sha256=-Fz8EWdF5BVJy2qhE6xeRVE24y4-Z4QsLy9z28vFXoo,447
+safelz4/_block/__init__.pyi,sha256=484CoBSvYjG_hfw7TRnllr4TOZz181E1tOWOrPLbGxw,3461
+safelz4/_frame/__init__.py,sha256=8EeZspPbhcyjrUfTgy5nRFj5ZnEm6XhqdYnFrcYejB4,1290
+safelz4/_frame/__init__.pyi,sha256=hY7xzJOwssA4nVqqLuGit81kdd_LQF0lquHDMOvsMx8,7319
+safelz4/_safelz4_rs.abi3.so,sha256=BSiezAQojUkVnFBbqAHhJAY9hPYQqqeHzl22LjorPl0,986217
+safelz4/block.py,sha256=3zdVSMX7DUCmTMKx_PHYrnxHRSi48pSDGm4XJkILMnY,4348
+safelz4/frame.py,sha256=oAfMxTHynq2ozb5OZyig5UnYyoi4kd49bsi0OXBu36s,4081
+safelz4-0.0.1.dev0.dist-info/RECORD,,
