@@ -1,0 +1,2 @@
+[console_scripts]
+py2exelite = py2exelite.__main__:main

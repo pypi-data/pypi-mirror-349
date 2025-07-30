@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+Py2ExeLite.egg-info/PKG-INFO
+Py2ExeLite.egg-info/SOURCES.txt
+Py2ExeLite.egg-info/dependency_links.txt
+Py2ExeLite.egg-info/entry_points.txt
+Py2ExeLite.egg-info/top_level.txt
+py2exelite/__init__.py
+py2exelite/__main__.py
+py2exelite/builder.py
