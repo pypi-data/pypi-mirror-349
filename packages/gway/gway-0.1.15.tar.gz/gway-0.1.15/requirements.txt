@@ -1,0 +1,12 @@
+toml
+setuptools 
+twine
+build
+colorama
+bottle
+requests
+dateparser
+fastapi
+uvicorn
+docutils
+qrcode[pil]
