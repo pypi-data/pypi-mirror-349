@@ -1,0 +1,8 @@
+README.md
+setup.py
+addition_simple_package/__init__.py
+addition_simple_package/addition.py
+addition_simple_package.egg-info/PKG-INFO
+addition_simple_package.egg-info/SOURCES.txt
+addition_simple_package.egg-info/dependency_links.txt
+addition_simple_package.egg-info/top_level.txt
