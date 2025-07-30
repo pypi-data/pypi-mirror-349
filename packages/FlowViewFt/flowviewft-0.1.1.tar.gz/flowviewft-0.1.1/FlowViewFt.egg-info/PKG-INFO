@@ -1,0 +1,25 @@
+Metadata-Version: 2.4
+Name: FlowViewFt
+Version: 0.1.1
+Summary: FlowViewFt es una libreria para crear aplicaciones con Flet sinplificando las rutas y el manejo de estados.
+Author-email: Héctor <danielramirezr27@gmail.com>
+License: MIT
+Keywords: testing,logging,example
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: License
+Requires-Dist: flet[all]>=0.27.6
+Requires-Dist: repath>=0.1.2
+Dynamic: license-file
+
+# FlowViewFt
+
+
+# Como instalar
+
+```bash
+pip install FlowViewFt
+```
