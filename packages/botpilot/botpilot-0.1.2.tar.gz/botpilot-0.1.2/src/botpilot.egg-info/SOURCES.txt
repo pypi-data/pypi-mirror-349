@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+src/botpilot/__init__.py
+src/botpilot/main.py
+src/botpilot.egg-info/PKG-INFO
+src/botpilot.egg-info/SOURCES.txt
+src/botpilot.egg-info/dependency_links.txt
+src/botpilot.egg-info/entry_points.txt
+src/botpilot.egg-info/requires.txt
+src/botpilot.egg-info/top_level.txt
+src/botpilot/commands/__init__.py
+src/botpilot/commands/init.py
