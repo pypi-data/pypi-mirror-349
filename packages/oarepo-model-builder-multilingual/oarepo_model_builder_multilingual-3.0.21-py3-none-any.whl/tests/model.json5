@@ -1,0 +1,23 @@
+{
+  "settings": {
+    "i18n-languages": ["cs", "en"],
+    "supported-langs": {
+      "cs": {
+      },
+      "en": {
+      },
+    }
+  },
+  "record": {
+    "use": "invenio",
+    "properties": {
+      "metadata": {
+        "properties": {
+          "a": {
+            "type": "multilingual"
+          }
+        }
+      }
+    }
+  },
+}
