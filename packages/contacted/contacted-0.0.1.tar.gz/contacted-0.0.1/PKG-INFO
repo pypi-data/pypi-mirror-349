@@ -1,0 +1,42 @@
+Metadata-Version: 2.4
+Name: contacted
+Version: 0.0.1
+Summary: Python SDK for ContactedAI email API service
+Author-email: ContactedAI <lawrence@contacted.io>
+License: MIT
+Project-URL: Homepage, https://contacted.io
+Project-URL: Documentation, https://contacted.gitbook.io
+Project-URL: Repository, https://github.com/LawrenceGB/contacted-python
+Keywords: email,api,contacted,transactional-email
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# ContactedAI Python SDK
+
+**⚠️ This package is currently under development and not yet functional.**
+
+This package is reserved for the official ContactedAI Python SDK.
+
+## Coming Soon
+
+- Full API integration
+- Easy email sending
+- Template management
+- Complete documentation
+
+## Stay Updated
+
+Visit [contacted.io](https://contacted.io) for updates on the SDK release.
+
+## Contact
+
+For questions about the upcoming SDK, please contact support through our website.
