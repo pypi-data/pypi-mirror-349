@@ -1,0 +1,2 @@
+[console_scripts]
+mcp_bill_track = src.server:run_server
