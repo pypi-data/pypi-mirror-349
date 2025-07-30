@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: ayn_utils
+Version: 0.0.1
+Summary: A personal collection of Python utilities
+Author-email: "Ahmed Y. Nurye" <anurye.yesuf@gmail.com>
+Maintainer-email: "Ahmed Y. Nurye" <anurye.yesuf@gmail.com>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/anurye/ayn_utils
+Project-URL: Issues, https://github.com/anurye/ayn_utils/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: pypdf
+Dynamic: license-file
+
+# A Personal Collection of Python Utility Functions
