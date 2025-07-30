@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: simple-mcp-server
+Version: 0.1.0
+Summary: A simple MCP server with hello and dice rolling tools
+Home-page: https://github.com/yourusername/simple-mcp-server
+Author: Your Name
+Author-email: your.email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: mcp-server>=0.1.0
+
+# Simple MCP Server
+
+A simple MCP server implementation with two example tools:
+
+1. `say_hello(name: str) -> str` - Returns a greeting message
+2. `roll_dice(sides: int = 6) -> int` - Returns a random dice roll
+
+## Installation
+
+```bash
+pip install simple-mcp-server
+```
+
+## Usage
+
+After installation, run:
+
+```bash
+simple-mcp-server
+```
+
+The server will start and be ready to accept MCP connections.
