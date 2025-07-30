@@ -1,0 +1,10 @@
+LICENSE.lic
+README.md
+setup.py
+neuroedge_sdk/__init__.py
+neuroedge_sdk/persistence_model.py
+neuroedge_sdk/tracking_model.py
+neuroedge_sdk2.egg-info/PKG-INFO
+neuroedge_sdk2.egg-info/SOURCES.txt
+neuroedge_sdk2.egg-info/dependency_links.txt
+neuroedge_sdk2.egg-info/top_level.txt
