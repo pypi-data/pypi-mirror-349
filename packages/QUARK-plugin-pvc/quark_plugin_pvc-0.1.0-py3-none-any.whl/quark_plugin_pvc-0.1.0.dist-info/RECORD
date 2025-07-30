@@ -1,0 +1,10 @@
+quark_plugin_pvc/__init__.py,sha256=gv2jetbOusg0LqgLdxG9pePJRjfJZG4ticEFxAFy_Yo,571
+quark_plugin_pvc/createReferenceGraph.py,sha256=apSLg0LUb3IurcWxw8-f4ofoQPdActxsT19z8tIVl1o,2041
+quark_plugin_pvc/pvc_graph_provider.py,sha256=i3iSC326tEDnzYTLIPE3f3EHRX5y3qNSGVY3V0BKl9I,10566
+quark_plugin_pvc/pvc_qubo_mapping.py,sha256=SqxK8zvQKevUW6mNXisFl8mdWSG3c-AzlxRSo58qYWI,10261
+quark_plugin_pvc/data/reference_data.txt,sha256=5E4rMPhKO4DaOADALpsYy5WCt3FXzlUlvFkvjPnjpIk,6224696
+quark_plugin_pvc/data/reference_graph.gpickle,sha256=6Lgs_wvdbNkZs7pHWqPBlef2OK9r6pMBJpIetu__UyI,513537
+quark_plugin_pvc-0.1.0.dist-info/METADATA,sha256=fN5-lrjofiNiC0zmicEYVOAj1XJtd0zpPRBzrrLeVak,807
+quark_plugin_pvc-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+quark_plugin_pvc-0.1.0.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+quark_plugin_pvc-0.1.0.dist-info/RECORD,,
