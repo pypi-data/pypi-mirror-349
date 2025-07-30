@@ -1,0 +1,109 @@
+import json
+
+from pygeai import logger
+from pygeai.cli.commands import Command, Option, ArgumentsEnum
+from pygeai.cli.commands.builders import build_help_text
+from pygeai.cli.texts.help import SPEC_HELP_TEXT
+from pygeai.core.common.exceptions import MissingRequirementException, WrongArgumentError
+
+from pygeai.core.utils.console import Console
+from pygeai.lab.managers import AILabManager
+from pygeai.lab.spec.loader import JSONLoader
+from pygeai.lab.spec.parsers import AgentParser
+
+
+def show_help():
+    """
+    Displays help text in stdout
+    """
+    help_text = build_help_text(spec_commands, SPEC_HELP_TEXT)
+    Console.write_stdout(help_text)
+
+
+def load_agent(option_list: list):
+    project_id = None
+    file = None
+    automatic_publish = False
+
+    for option_flag, option_arg in option_list:
+        if option_flag.name == "project_id":
+            project_id = option_arg
+        if option_flag.name == "file":
+            file = option_arg
+        if option_flag.name == "automatic_publish":
+            automatic_publish = option_arg
+
+    if not project_id:
+        raise MissingRequirementException("Project ID must be defined.")
+
+    if not file:
+        raise MissingRequirementException("Cannot load agent definition without specifying path to JSON file.")
+
+    agent_data = JSONLoader.load_data(file_path=file)
+    if isinstance(agent_data, dict):
+        agent = AgentParser.get_agent(agent_data)
+        create_agent(project_id, agent, automatic_publish)
+    elif isinstance(agent_data, list):
+        for agent_spec in agent_data:
+            agent = AgentParser.get_agent(agent_spec)
+            create_agent(project_id, agent, automatic_publish)
+
+
+def create_agent(project_id, agent, automatic_publish):
+    try:
+        created_agent = AILabManager().create_agent(
+            project_id=project_id,
+            agent=agent,
+            automatic_publish=automatic_publish
+        )
+
+        Console.write_stdout(f"Created agent detail: \n{created_agent}")
+    except Exception as e:
+        logger.error(f"Error creating agent: {e}\nAgent data: {agent}")
+        Console.write_stderr(f"Error creating agent: \n{agent}")
+
+
+load_agent_options = [
+    Option(
+        "project_id",
+        ["--project-id", "--pid"],
+        "ID of the project",
+        True
+    ),
+    Option(
+        "file",
+        ["--file", "-f"],
+        "Path to the file containing agent definition in JSON format.",
+        True
+    ),
+    Option(
+        "automatic_publish",
+        ["--automatic-publish", "--ap"],
+        "Define if reasoning strategy must be published besides being created. 0: Create as draft. 1: Create and publish.",
+        True
+    ),
+]
+
+
+spec_commands = [
+    Command(
+        "help",
+        ["help", "h"],
+        "Display help text",
+        show_help,
+        ArgumentsEnum.NOT_AVAILABLE,
+        [],
+        []
+    ),
+    Command(
+        "laod_agent",
+        ["load-agent", "la"],
+        "Load agent from JSON specification",
+        load_agent,
+        ArgumentsEnum.REQUIRED,
+        [],
+        load_agent_options
+    )
+
+
+]
