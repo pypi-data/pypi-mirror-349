@@ -1,0 +1,42 @@
+# VSCode
+.vscode/
+
+# Python
+__pycache__
+
+# Env
+user.sh
+.env
+
+# Pytest
+junitxml_report
+.coverage
+.pytest_cache
+.testmondata
+
+# Pyright
+.pyright/
+
+# Firebase
+idtrackr-firebase-*
+
+# Pipenv
+Pipfile.lock
+
+# cache
+.ruff_cache
+
+# coverage
+.coverage
+coverage.*
+
+# Project
+database/
+
+# Tox
+.tox*
+
+# packaging
+*.egg*
+dist
+build

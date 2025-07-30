@@ -1,0 +1,42 @@
+Metadata-Version: 2.4
+Name: id-tracker
+Version: 0.0.1
+Summary: A Django app for tracking lost and found ID cards.
+Author-email: Michael Owiso <okwizifr@gmail.com>
+Maintainer-email: Michael Owiso <okwizifr@gmail.com>
+License-Expression: GPL-3.0-only
+Project-URL: Homepage, https://github.com/Okwizi/IDTracker-Backend
+Project-URL: Repository, https://github.com/Okwizi/IDTracker-Backend.git
+Project-URL: Issues, https://github.com/Okwizi/IDTracker-Backend/issues
+Keywords: django,id-tracker,lost-and-found,django-app,firebase,django-rest-framework
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: C
+Classifier: Framework :: Django :: 5.2
+Classifier: Environment :: Web Environment
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Typing :: Typed
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: django>=5.2.1
+Requires-Dist: djangorestframework>=3.16.0
+Requires-Dist: django-extensions>=4.1
+Requires-Dist: firebase-admin>=6.8.0
+Requires-Dist: django-cors-headers>=4.7.0
+Requires-Dist: psycopg>=3.2.9
+Requires-Dist: uv>=0.7.3
+Requires-Dist: ipython>=9.2.0
+Requires-Dist: qrcode>=8.2
+Requires-Dist: pyopt
+Requires-Dist: git-changelog
+Dynamic: license-file
+
+# IDTracker-Backend
+Backend for IDTracker
+
+[![wakatime](https://wakatime.com/badge/user/c9d8f09f-02e5-44b9-a8ba-aa6d81cb9bdf/project/69ad7da2-61d1-4203-9ae3-b02964232d93.svg)](https://wakatime.com/badge/user/c9d8f09f-02e5-44b9-a8ba-aa6d81cb9bdf/project/69ad7da2-61d1-4203-9ae3-b02964232d93)
