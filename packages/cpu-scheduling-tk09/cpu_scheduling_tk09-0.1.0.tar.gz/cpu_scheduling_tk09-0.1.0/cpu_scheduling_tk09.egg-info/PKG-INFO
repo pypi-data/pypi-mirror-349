@@ -1,0 +1,35 @@
+Metadata-Version: 2.4
+Name: cpu-scheduling-tk09
+Version: 0.1.0
+Summary: CPU Scheduling Algorithms: FCFS, SJF, SRTF, Round Robin, Priority
+Home-page: https://github.com/yourusername/cpu-scheduling-tk09
+Author: Your Name
+Author-email: you@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-python
+Dynamic: summary
+
+# cpu-scheduling-tk09
+
+A Python package implementing classic CPU scheduling algorithms:
+
+- FCFS (First Come First Serve)
+- SJF (Shortest Job First)
+- SRTF (Shortest Remaining Time First)
+- Round Robin
+- Priority Scheduling
+
+## Installation
+
+```bash
+pip install cpu-scheduling-tk09
