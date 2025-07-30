@@ -1,0 +1,56 @@
+Metadata-Version: 2.4
+Name: sekf
+Version: 0.0.3
+Summary: The Subset Extended Kalman Filter for online updates to neural network models as systems evolve.
+Project-URL: Homepage, https://github.com/joshuaeh/Subset-Extended-Kalman-Filter/
+Project-URL: Issues, https://github.com/joshuaeh/Subset-Extended-Kalman-Filter/issues/
+Author-email: Joshua Hammond <joshua.hammond@utexas.edu>
+License-Expression: MIT
+License-File: LICENSE
+Keywords: bayesian inference,ekf,extended kalman filter,kalman filter,online learning,sequential bayesian inference,sequential learning,subset extended kalman filter
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.8
+Requires-Dist: joshuaeh-jtoolbox
+Requires-Dist: jupyter>=1.1.1
+Requires-Dist: matplotlib
+Requires-Dist: numpy>=1.24.4
+Requires-Dist: pandas>=2.0.3
+Requires-Dist: scikit-learn>=1.3.2
+Requires-Dist: scipy>=1.10.1
+Requires-Dist: seaborn
+Requires-Dist: torch>=2.5.1
+Requires-Dist: tqdm>=4.67.1
+Provides-Extra: dev
+Requires-Dist: pytest; extra == 'dev'
+Description-Content-Type: text/markdown
+
+# Subset Extended Kalman Filter
+
+Updating Neural Network models as changes in the underlying system occur:
+
+- slowly and monotonically (drift)
+- discretely (transfer learning)
+
+## Installation
+
+The `sekf` package can be installed using `pip` (though it is not yet on the pip namespace) two ways:
+
+- `pip install git+https://github.com/joshuaeh/Subset-Extended-Kalman-Filter.git` to install from the github repository
+- clone the repository using `git clone https://github.com/joshuaeh/Subset-Extended-Kalman-Filter.git`, then install locally using `pip install -e <path_to_repo>`
+- If you are getting a `ModuleNotFoundError`, check that you are using the correct python environment. I've also found it helpful to declare the package name when installing locally using `uv`: `uv pip install -e "sekf @ ."`.  
+
+## TODO
+
+- pypi distribution for `pip install sekf` [user guide](https://packaging.python.org/en/latest/tutorials/packaging-projects/)
+- documentation
