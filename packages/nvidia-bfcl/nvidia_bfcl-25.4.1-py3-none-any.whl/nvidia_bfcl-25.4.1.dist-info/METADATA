@@ -1,0 +1,257 @@
+Metadata-Version: 2.4
+Name: nvidia_bfcl
+Version: 25.4.1
+Summary: Berkeley Function Calling Leaderboard (BFCL) - packaged by NVIDIA
+License: Apache 2.0
+Project-URL: Repository, https://github.com/ShishirPatil/gorilla/tree/main/berkeley-function-call-leaderboard
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: tqdm
+Requires-Dist: numpy==1.26.4
+Requires-Dist: pandas
+Requires-Dist: huggingface_hub
+Requires-Dist: pydantic>=2.8.2
+Requires-Dist: python-dotenv>=1.0.1
+Requires-Dist: tree_sitter==0.21.3
+Requires-Dist: tree-sitter-java==0.21.0
+Requires-Dist: tree-sitter-javascript==0.21.4
+Requires-Dist: openai==1.58.0
+Requires-Dist: typer>=0.12.5
+Requires-Dist: tabulate>=0.9.0
+Requires-Dist: datamodel-code-generator==0.25.7
+Requires-Dist: mpmath==1.3.0
+Requires-Dist: tenacity==9.0.0
+Requires-Dist: writer-sdk>=1.2.0
+Requires-Dist: overrides
+Provides-Extra: oss-eval-vllm
+Requires-Dist: vllm==0.6.3; extra == "oss-eval-vllm"
+Provides-Extra: oss-eval-sglang
+Requires-Dist: sglang[all]; extra == "oss-eval-sglang"
+Provides-Extra: wandb
+Requires-Dist: wandb==0.18.5; extra == "wandb"
+
+# NVIDIA Evals Factory
+
+The goal of NVIDIA Evals Factory is to advance and refine state-of-the-art methodologies for model evaluation, and deliver them as modular evaluation packages (evaluation containers and pip wheels) that teams can use as standardized building blocks.
+
+# Quick start guide
+
+NVIDIA Evals Factory provide you with evaluation clients, that are specifically built to evaluate model endpoints using our Standard API.
+
+## Launching an evaluation for an LLM
+
+1. Install the package
+    ```
+    pip install nvidia-bfcl
+    ```
+
+3. (Optional) Set a token to your API endpoint if it's protected
+    ```bash
+    export MY_API_KEY="your_api_key_here"
+    ```
+4. List the available evaluations:
+    ```bash
+    $ core_evals_bfcl ls
+    Available tasks:
+    * bfclv2 (in bfcl)
+    * bfclv2_ast (in bfcl)
+    * bfclv3 (in bfcl)
+    * bfclv3_ast (in bfcl)
+    ...
+    ```
+5. Run the evaluation of your choice:
+   ```bash
+   core_evals_bfcl run_eval \
+       --eval_type bfclv3_ast \
+       --model_id meta/llama-3.1-70b-instruct \
+       --model_url https://integrate.api.nvidia.com/v1/chat/completions \
+       --model_type chat \
+       --api_key_name MY_API_KEY \
+       --output_dir /workspace/results
+   ```
+6. Gather the results
+    ```bash
+    cat /workspace/results/results.yml
+    ```
+
+# Command-Line Tool
+
+Each package comes pre-installed with a set of command-line tools, designed to simplify the execution of evaluation tasks. Below are the available commands and their usage for the `bfcl` (`bfcl`):
+
+## Commands
+
+### 1. **List Evaluation Types**
+
+```bash
+core_evals_bfcl ls
+```
+
+Displays the evaluation types available within the harness.
+
+### 2. **Run an evaluation**
+
+The `core_evals_bfcl run_eval` command executes the evaluation process. Below are the flags and their descriptions:
+
+### Required flags
+* `--eval_type <string>`
+The type of evaluation to perform
+* `--model_id <string>`
+The name or identifier of the model to evaluate.
+* `--model_url <url>`
+The API endpoint where the model is accessible.
+* `--model_type <string>`
+The type of the model to evaluate, currently either "chat", "completions", or "vlm".
+* `--output_dir <directory>`
+The directory to use as the working directory for the evaluation. The results, including the results.yml output file, will be saved here.
+
+### Optional flags
+* `--api_key_name <string>`
+The name of the environment variable that stores the Bearer token for the API, if authentication is required.
+* `--run_config <path>`
+Specifies the path to a  YAML file containing the evaluation definition.
+
+### Example
+
+```bash
+core_evals_bfcl run_eval \
+    --eval_type bfclv3_ast \
+    --model_id my_model \
+    --model_type chat \
+    --model_url http://localhost:8000 \
+    --output_dir ./evaluation_results
+```
+
+If the model API requires authentication, set the API key in an environment variable and reference it using the `--api_key_name` flag:
+
+```bash
+export MY_API_KEY="your_api_key_here"
+
+core_evals_bfcl run_eval \
+    --eval_type bfclv3_ast \
+    --model_id my_model \
+    --model_type chat \
+    --model_url http://localhost:8000 \
+    --api_key_name MY_API_KEY \
+    --output_dir ./evaluation_results
+```
+
+# Configuring evaluations via YAML
+
+Evaluations in NVIDIA Evals Factory are configured using YAML files that define the parameters and settings required for the evaluation process. These configuration files follow a standard API which ensures consistency across evaluations.
+
+Example of a YAML config:
+```yaml
+config:
+  type: bfclv3_ast
+  params:
+    parallelism: 50
+    limit_samples: 20
+target:
+  api_endpoint:
+    model_id: meta/llama-3.1-8b-instruct
+    type: chat
+    url: https://integrate.api.nvidia.com/v1/chat/completions
+    api_key: NVIDIA_API_KEY
+```
+
+The priority of overrides is as follows:
+1. command line arguments
+2. user config (as seen above)
+3. task defaults (defined per task type)
+4. framework defaults 
+
+`--dry_run` option allows you to print the final run configuration and command without executing the evaluation.
+
+### Example:
+
+```bash
+core_evals_bfcl run_eval \
+    --eval_type bfclv3_ast \
+    --model_id my_model \
+    --model_type chat \
+    --model_url http://localhost:8000 \
+    --output_dir .evaluation_results \
+    --dry_run
+```
+
+Output:
+
+```bash
+Rendered config:
+
+command: '{% if target.api_endpoint.api_key is not none %}OPENAI_API_KEY=${{target.api_endpoint.api_key}}{%
+  endif %} bfcl generate --model {{target.api_endpoint.model_id}} --test-category
+  {{config.params.task}} --model-mapping oai --result-dir {{config.output_dir}} --model-args
+  base_url={{target.api_endpoint.url}}  {% if config.params.limit_samples is not none
+  %} --limit {{config.params.limit_samples}}{% endif %} --num-threads  {{config.params.parallelism}}
+  && {% if target.api_endpoint.api_key is not none %}OPENAI_API_KEY=${{target.api_endpoint.api_key}}{%
+  endif %} bfcl evaluate --model {{target.api_endpoint.model_id}} --test-category
+  {{config.params.task}} --model-mapping oai --result-dir {{config.output_dir}} --score-dir
+  {{config.output_dir}}
+
+  '
+framework_name: bfcl
+pkg_name: bfcl
+config:
+  output_dir: .evaluation_results
+  params:
+    limit_samples: null
+    max_new_tokens: null
+    max_retries: null
+    parallelism: 10
+    task: multi_turn,ast
+    temperature: null
+    timeout: null
+    top_p: null
+    extra: {}
+  supported_endpoint_types:
+  - llm
+  - vlm
+  type: bfclv3_ast
+target:
+  api_endpoint:
+    api_key: null
+    model_id: my_model
+    stream: null
+    type: chat
+    url: http://localhost:8000
+
+
+Rendered command:
+
+ bfcl generate --model my_model --test-category multi_turn,ast --model-mapping oai --result-dir .evaluation_results --model-args base_url=http://localhost:8000   --num-threads  10 &&  bfcl evaluate --model my_model --test-category multi_turn,ast --model-mapping oai --result-dir .evaluation_results --score-dir .evaluation_results
+```
+
+# FAQ
+
+## BFCL only - API Keys for Executable Test Categories
+
+If you want to run executable test categories, you must provide API keys. Add the keys to your `.env` file, so that the placeholder values used in questions/params/answers can be replaced with real data.
+There are 4 API keys to include:
+
+1. RAPID-API Key: <https://rapidapi.com/hub>
+
+   - Yahoo Finance: <https://rapidapi.com/sparior/api/yahoo-finance15>
+   - Real Time Amazon Data : <https://rapidapi.com/letscrape-6bRBa3QguO5/api/real-time-amazon-data>
+   - Urban Dictionary: <https://rapidapi.com/community/api/urban-dictionary>
+   - Covid 19: <https://rapidapi.com/api-sports/api/covid-193>
+   - Time zone by Location: <https://rapidapi.com/BertoldVdb/api/timezone-by-location>
+
+   All the Rapid APIs we use have free tier usage. You need to **subscribe** to those API providers in order to have the executable test environment setup but it will be _free of charge_!
+
+2. Exchange Rate API: <https://www.exchangerate-api.com>
+3. OMDB API: <http://www.omdbapi.com/apikey.aspx>
+4. Geocode API: <https://geocode.maps.co/>
+
+## Deploying a model as an endpoint
+
+NVIDIA Evals Factory utilize a client-server communication architecture to interact with the model. As a prerequisite, the **model must be deployed as an endpoint with a NIM-compatible API**.
+
+Users have the flexibility to deploy their model using their own infrastructure and tooling.
+
+Servers with APIs that conform to the OpenAI/NIM API standard are expected to work seamlessly out of the box.

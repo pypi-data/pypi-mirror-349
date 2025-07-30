@@ -1,0 +1,4 @@
+[console_scripts]
+bfcl = bfcl.__main__:cli
+core-evals-bfcl = core_evals.bfcl.entrypoint:run_eval
+core_evals_bfcl = core_evals.bfcl.entrypoint:run_eval
