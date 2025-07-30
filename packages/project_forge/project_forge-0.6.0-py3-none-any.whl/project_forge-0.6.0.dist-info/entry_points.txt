@@ -1,0 +1,5 @@
+[console_scripts]
+project-forge = project_forge.cli:cli
+
+[pytest11]
+forger = project_forge.testing.plugin
