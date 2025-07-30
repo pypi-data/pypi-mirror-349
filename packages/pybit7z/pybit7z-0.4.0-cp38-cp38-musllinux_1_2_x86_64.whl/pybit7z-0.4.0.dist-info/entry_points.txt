@@ -1,0 +1,3 @@
+[console_scripts]
+pybit7z = pybit7z.cli:main
+
