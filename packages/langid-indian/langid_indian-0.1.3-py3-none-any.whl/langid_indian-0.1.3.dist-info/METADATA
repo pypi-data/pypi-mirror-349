@@ -1,0 +1,79 @@
+Metadata-Version: 2.4
+Name: langid_indian
+Version: 0.1.3
+Summary: A language identifier for Indian languages using a pretrained machine learning model.
+Home-page: https://github.com/yashingle-ai/Indian-Language-Identification-based-on-ML
+Author: Yash Ingle
+Author-email: yash.ingle003@gmail.com
+License: MIT
+Project-URL: Bug Tracker, https://github.com/yashingle-ai/Indian-Language-Identification-based-on-ML/issues
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: scikit-learn
+Requires-Dist: numpy
+Requires-Dist: tqdm
+Requires-Dist: requests
+Requires-Dist: joblib
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: project-url
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# langid_indian
+
+A language identifier for Indian languages using a pretrained Machine learning model.
+
+[![PyPI version](https://img.shields.io/pypi/v/langid_indian.svg)](https://pypi.org/project/langid-indian/0.1.2/)
+
+**langid_indian** is a Python package for identifying Indian languages in text using a pretrained machine learning model. It supports multiple languages from the Eighth Schedule of the Indian Constitution and can be used in NLP pipelines, chatbot applications, or multilingual data analysis.
+
+🔗 **PyPI Project Page:** [https://pypi.org/project/langid-indian/0.1.2/](https://pypi.org/project/langid-indian/0.1.2/)
+
+---
+
+## Installation
+
+```bash
+pip install langid_indian
+
+
+### Supported Languages
+
+- Assamese (অসমীয়া)
+- Bengali (বাংলা)
+- Bodo
+- Dogri
+- English
+- Gujarati
+- Hindi (हिन्दी)
+- Kannada (ಕನ್ನಡ)
+- Kashmiri
+- Konkani
+- Maithili
+- Malayalam (മലയാളം)
+- Manipuri
+- Marathi (मराठी)
+- Nepali
+- Odia
+- Punjabi (ਪੰਜਾਬੀ)
+- Santali
+- Sindhi
+- Tamil (தமிழ்)
+- Telugu (తెలుగు)
+- Urdu (اردو)
