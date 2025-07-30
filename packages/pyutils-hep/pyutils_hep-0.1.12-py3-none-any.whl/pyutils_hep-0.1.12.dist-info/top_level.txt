@@ -1,0 +1,4 @@
+common
+snowflake
+t2k
+thirdparty
