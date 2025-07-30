@@ -1,0 +1,9 @@
+README.md
+setup.py
+mynutrition/__init__.py
+mynutrition/core.py
+mynutrition.egg-info/PKG-INFO
+mynutrition.egg-info/SOURCES.txt
+mynutrition.egg-info/dependency_links.txt
+mynutrition.egg-info/requires.txt
+mynutrition.egg-info/top_level.txt
