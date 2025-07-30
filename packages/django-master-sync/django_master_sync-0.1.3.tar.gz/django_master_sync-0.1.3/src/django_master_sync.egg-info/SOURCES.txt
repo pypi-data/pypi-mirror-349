@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/django_master_sync/__init__.py
+src/django_master_sync/main.py
+src/django_master_sync.egg-info/PKG-INFO
+src/django_master_sync.egg-info/SOURCES.txt
+src/django_master_sync.egg-info/dependency_links.txt
+src/django_master_sync.egg-info/requires.txt
+src/django_master_sync.egg-info/top_level.txt
