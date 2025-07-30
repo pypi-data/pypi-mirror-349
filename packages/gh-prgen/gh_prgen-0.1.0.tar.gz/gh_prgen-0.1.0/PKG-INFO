@@ -1,0 +1,16 @@
+Metadata-Version: 2.2
+Name: gh-prgen
+Version: 0.1.0
+Summary: Generate GitHub PR titles and descriptions using Ollama AI
+Home-page: https://github.com/venigallasivasrinivas/gh-prgen
+Author: Venigalla Siva Srinivas
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: classifier
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-python
+Dynamic: summary
