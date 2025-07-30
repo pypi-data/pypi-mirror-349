@@ -1,0 +1,7 @@
+pydantic-qpython
+typing-extensions-qpython
+anyio<5,>=3.5.0
+distro<2,>=1.7.0
+sniffio
+jiter-qpython
+httpx<1,>=0.23.0
