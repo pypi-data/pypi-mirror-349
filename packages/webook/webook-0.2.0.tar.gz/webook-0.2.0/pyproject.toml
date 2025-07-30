@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "webook"
+version = "0.2.0"
+description = ""
+authors = ["Liu Xiang <liuxiang921@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.12"
+playwright = "^1.52.0"
+mistletoe = "^1.4.0"
+pypdf2 = "^3.0.1"
+requests = "^2.32.3"
+pillow = "^11.2.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+wbk = 'webook.main:main'
