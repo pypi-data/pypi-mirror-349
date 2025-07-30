@@ -1,0 +1,2 @@
+[console_scripts]
+uniform-vlm-infer = uniform_vlm_infer.cli:main
