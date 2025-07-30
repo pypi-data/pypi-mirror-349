@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+easyimage/__init__.py
+easyimage.egg-info/PKG-INFO
+easyimage.egg-info/SOURCES.txt
+easyimage.egg-info/dependency_links.txt
+easyimage.egg-info/top_level.txt

@@ -1,0 +1,1 @@
+This package allows you to edit images very fast with python language, with easy library based on pillow.

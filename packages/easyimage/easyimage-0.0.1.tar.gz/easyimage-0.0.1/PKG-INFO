@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: easyimage
+Version: 0.0.1
+Summary: A lot of cool image editing functions that can be used easily (based on PIL)
+Author-email: Anvarys <anvarys.anon@gmail.com>
+License: GPL-3.0
+Project-URL: Homepage, https://github.com/anvarys/easyimage
+Description-Content-Type: text/markdown
+
+This package allows you to edit images very fast with python language, with easy library based on pillow.
