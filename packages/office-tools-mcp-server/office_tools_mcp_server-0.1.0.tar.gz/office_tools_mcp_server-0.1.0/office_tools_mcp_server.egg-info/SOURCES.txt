@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+office_tool/__init__.py
+office_tool/office.py
+office_tools_mcp_server.egg-info/PKG-INFO
+office_tools_mcp_server.egg-info/SOURCES.txt
+office_tools_mcp_server.egg-info/dependency_links.txt
+office_tools_mcp_server.egg-info/entry_points.txt
+office_tools_mcp_server.egg-info/requires.txt
+office_tools_mcp_server.egg-info/top_level.txt

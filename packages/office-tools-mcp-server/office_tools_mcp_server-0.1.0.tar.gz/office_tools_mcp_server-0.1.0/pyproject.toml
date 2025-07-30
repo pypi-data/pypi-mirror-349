@@ -1,0 +1,16 @@
+[project]
+name = "office-tools-mcp-server"
+version = "0.1.0"
+description = "Office Tool MCP Server, different types of file could be generated, including PPTs, documents, spreadsheets, webpages and broadcasts."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "aiohttp>=3.11.18",
+    "fastmcp>=2.4.0",
+    "python-dotenv>=1.1.0",
+    "uvicorn>=0.34.2",
+]
+
+
+[project.scripts]
+office-tools-mcp-server = "office_tool.office:mcp.run"
