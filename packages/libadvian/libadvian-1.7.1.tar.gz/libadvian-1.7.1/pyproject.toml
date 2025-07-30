@@ -1,0 +1,80 @@
+[project]
+name = "libadvian"
+version = "1.7.1"
+description = "Small helpers that do not warrant their own library"
+authors = [{name="Eero af Heurlin", email="eero.afheurlin@advian.fi" }]
+homepage = "https://gitlab.com/advian-oss/python-libadvian/"
+repository = "https://gitlab.com/advian-oss/python-libadvian/"
+license = "MIT"
+readme = "README.rst"
+dynamic = ["dependencies", "requires-python"]
+
+[tool.black]
+line-length = 120
+target-version = ['py37']
+exclude = '''
+(
+  /(
+      \.eggs         # exclude a few common directories in the
+    | \.git          # root of the project
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | \.venv
+    | _build
+    | buck-out
+    | build
+    | dist
+  )/
+  |  __pycache__
+)
+'''
+
+[tool.pytest.ini_options]
+junit_family="xunit2"
+addopts="--cov=libadvian --cov-fail-under=65 --cov-branch"
+asyncio_mode="strict"
+
+[tool.pylint.format]
+max-line-length = 120
+
+[tool.pylint.messages_control]
+disable=["fixme", "W1202", "C0209"]
+
+[tool.coverage.run]
+omit = ["tests/*"]
+branch = true
+
+[tool.poetry.dependencies]
+python = ">=3.9,<4.0"
+requests = "^2.30"
+frozendict = { version="^2.3", optional=true }
+
+[project.optional-dependencies]
+http = ["requests", "frozendict"]
+vector = ["http"]  # alias
+logstash = ["http"]  # alias
+all = ["http"]
+
+[tool.poetry.group.dev.dependencies]
+types-toml = ">=0.10,<1.0" # caret behaviour on 0.x is to lock to 0.x.*
+types-requests = "^2.30"
+pytest = "^7.4"
+coverage = "^7.3"
+pytest-cov = "^4.1"
+pylint = "^2.17"
+black = "^23.7"
+bandit = "^1.7"
+mypy = "^1.5"
+pre-commit = "^3.3"
+pytest-asyncio = ">=0.21,<1.0" # caret behaviour on 0.x is to lock to 0.x.*
+bump2version = "^1.0"
+detect-secrets = "^1.2"
+# Required for tests
+frozendict = { version="^2.3", optional=false }
+requests = "^2.30"
+
+
+[build-system]
+requires = ["poetry-core>=2.1.0"]
+build-backend = "poetry.core.masonry.api"
