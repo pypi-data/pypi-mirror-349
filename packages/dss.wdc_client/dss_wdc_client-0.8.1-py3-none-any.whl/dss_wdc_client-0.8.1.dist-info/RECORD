@@ -1,0 +1,5 @@
+dss_wdc_client/__init__py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dss_wdc_client/client.py,sha256=GdkUsBBC-zTGnouFkV7sIs-_CzhhCq4PSXAfKuHMjTg,8334
+dss_wdc_client-0.8.1.dist-info/METADATA,sha256=O6K5P1YZkzQfA0bIkC9yDusJ_NfVLkxGhWj1cO6JWTY,3038
+dss_wdc_client-0.8.1.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+dss_wdc_client-0.8.1.dist-info/RECORD,,
