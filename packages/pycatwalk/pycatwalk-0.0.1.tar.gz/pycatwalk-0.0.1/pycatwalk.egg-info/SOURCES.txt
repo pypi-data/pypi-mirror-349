@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+README.rst
+pyproject.toml
+setup.cfg
+setup.py
+pycatwalk.egg-info/PKG-INFO
+pycatwalk.egg-info/SOURCES.txt
+pycatwalk.egg-info/dependency_links.txt
+pycatwalk.egg-info/requires.txt
+pycatwalk.egg-info/top_level.txt
