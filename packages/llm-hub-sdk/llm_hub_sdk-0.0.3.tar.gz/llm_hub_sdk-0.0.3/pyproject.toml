@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llm-hub-sdk"
+version = "0.0.3"
+description = "This Python SDK that provides convenient clients for interacting with the LLM-HUB – a centralized backend service"
+readme = "README.MD"
+requires-python = ">=3.8"
+
+authors = [
+  { name = "NTV360" }
+]
+
+license = "LicenseRef-NTV360-Proprietary"
+license-files = ["LICENSE.md"]  
+
+dependencies = [
+"requests>=2.20",
+]
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+]
+
+keywords = ["llm", "hub", "sdk", "api", "chat", "generative-ai"]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "ruff", 
+    "black",
+    "mypy",
+    "build",       # For building locally: python -m build
+    "twine",       # For uploading to PyPI
+    "python-dotenv", # If used in examples/tests but not by the SDK core
+]
+
+[tool.black]
+line-length = 100
