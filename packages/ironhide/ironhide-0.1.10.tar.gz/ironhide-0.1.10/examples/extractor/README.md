@@ -1,0 +1,1 @@
+uv sync -U && uv sync --refresh
