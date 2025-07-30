@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: qrcode-scanner
+Version: 0.0.1
+Summary: Read QR codes from HID devices
+Author: medram
+Author-email: mramouchy@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: hidapi (>=0.14.0.post4,<0.15.0)
+Description-Content-Type: text/markdown
+
+

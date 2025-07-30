@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "qrcode-scanner"
+version = "0.0.1"
+description = "Read QR codes from HID devices"
+authors = ["medram <mramouchy@gmail.com>"]
+readme = "README.md"
+package-mode = true
+
+[tool.poetry.dependencies]
+python = "^3.10"
+hidapi = "^0.14.0.post4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
