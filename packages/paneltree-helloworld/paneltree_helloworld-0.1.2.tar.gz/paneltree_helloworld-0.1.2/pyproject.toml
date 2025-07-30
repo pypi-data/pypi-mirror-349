@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "paneltree-helloworld"
+version = "0.1.2"
+authors = [
+    { name = "paneltree", email = "paneltree@outlook.com" },
+]
+description = "A simple Hello World package"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.6"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = []
