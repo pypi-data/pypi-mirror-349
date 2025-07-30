@@ -1,0 +1,16 @@
+[project]
+name = "mcp-calpower-server"
+version = "0.4.0"
+description = "A Model Context Protocol server for power calculating"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp>=1.4.1",
+]
+
+[project.scripts]
+mcp-calpower-server = "mcp_calpower_server:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
