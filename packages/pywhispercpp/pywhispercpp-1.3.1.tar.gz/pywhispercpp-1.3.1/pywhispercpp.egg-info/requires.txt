@@ -1,0 +1,8 @@
+numpy
+requests
+tqdm
+platformdirs
+
+[examples]
+sounddevice
+webrtcvad
