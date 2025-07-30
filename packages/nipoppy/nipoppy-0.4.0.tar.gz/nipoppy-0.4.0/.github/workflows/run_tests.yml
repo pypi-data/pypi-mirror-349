@@ -1,0 +1,56 @@
+---
+name: Run tests
+
+on:
+  push:
+    branches: ['*']
+  pull_request:
+    branches: ['*']
+
+# cancel previous runs if new one is triggered
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+
+  test:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        python-version: ["3.9", "3.10", "3.11", "3.12", "3.13"]
+
+    # only trigger on upstream repo
+    if: github.repository_owner == 'nipoppy' && github.event.repository.name == 'nipoppy'
+
+    steps:
+
+    - uses: actions/checkout@v4
+      with:
+        submodules: recursive
+
+    - uses: actions/setup-python@v5
+      with:
+        python-version: ${{ matrix.python-version }}
+        allow-prereleases: true
+
+    - name: Install package
+      run: |
+        pip install -U pip
+        pip install .[tests]
+
+    - name: Run tests
+      run: |
+        python -m pytest --cov=nipoppy --cov-report=xml
+      env:
+        ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
+        ZENODO_ID: ${{ env.ZENODO_ID }}
+
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v5
+      with:
+        files: ./coverage.xml
+        name: codecov-umbrella
+        token: ${{ secrets.CODECOV_TOKEN }}
