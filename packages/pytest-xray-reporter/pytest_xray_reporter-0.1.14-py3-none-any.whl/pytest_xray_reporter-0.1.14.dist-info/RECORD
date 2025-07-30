@@ -1,0 +1,7 @@
+pytest_xray_reporter/__init__.py,sha256=G90CPsuyZ7C753d1vRMlEs4Qb_VWJsdA0S4BhkaXvnQ,78
+pytest_xray_reporter/plugin.py,sha256=mM78Lj_Up7ohC8gZzc81TgWFGNVBNMZVqqD7lTgp9WU,10335
+pytest_xray_reporter-0.1.14.dist-info/METADATA,sha256=exnBG_Xl5LdRbXT70qsvab7h9RsjEQkQUCeZ8ibc_ZA,4588
+pytest_xray_reporter-0.1.14.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pytest_xray_reporter-0.1.14.dist-info/entry_points.txt,sha256=ZZvczdkhYQA6ALVLq7HkW__rvMPnH0TQgleZwft-XzA,55
+pytest_xray_reporter-0.1.14.dist-info/licenses/LICENSE,sha256=pNT0myZXhWsxsP-ZfH4ULG6-K3wNxnkklP5eOn-197s,1073
+pytest_xray_reporter-0.1.14.dist-info/RECORD,,
