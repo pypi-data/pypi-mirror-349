@@ -1,0 +1,15 @@
+jupyter_secrets_manager/__init__.py,sha256=YlUZRrU92YHFdELA-UzJ0JzOJjzcGoVBrZ99bgTZCyo,604
+jupyter_secrets_manager/_version.py,sha256=efv02WZz012b3Yfi0__4d2EvXfJa-MdSeKtd2PmarsQ,171
+jupyter_secrets_manager-0.4.0.data/data/share/jupyter/labextensions/jupyter-secrets-manager/package.json,sha256=kPOhpONi8hnndXLeXXQS-gGHr7ZSjQVy59BgnBD02_A,6125
+jupyter_secrets_manager-0.4.0.data/data/share/jupyter/labextensions/jupyter-secrets-manager/schemas/jupyter-secrets-manager/manager.json,sha256=YDsd1PICOtn9WpuGx549g_ypF66kf4chrtOlAGpSfBo,350
+jupyter_secrets_manager-0.4.0.data/data/share/jupyter/labextensions/jupyter-secrets-manager/schemas/jupyter-secrets-manager/package.json.orig,sha256=CHEQuadE_S7gg3rwQRaHdi2UhSKM9NDS6o-lK8mGOdk,6905
+jupyter_secrets_manager-0.4.0.data/data/share/jupyter/labextensions/jupyter-secrets-manager/static/728.69cdb8043c4eb7a36084.js,sha256=ac24BDxOt6NghEtArfUxb7Z-_HmgI5FNwQ2FtEEh4SI,4017
+jupyter_secrets_manager-0.4.0.data/data/share/jupyter/labextensions/jupyter-secrets-manager/static/810.fbdfc5a62015cce3d70b.js,sha256=-9_FpiAVzOPXC4SHqo9p_XWKUFXIPGe3CjIStqN6IHY,6194
+jupyter_secrets_manager-0.4.0.data/data/share/jupyter/labextensions/jupyter-secrets-manager/static/remoteEntry.c7854c8222ab48705366.js,sha256=x4VMgiKrSHBTZjqbBCX-R7StmABKR3L7tEi1bNi3JKw,6852
+jupyter_secrets_manager-0.4.0.data/data/share/jupyter/labextensions/jupyter-secrets-manager/static/style.js,sha256=bgMBLOqON7lxVnjIzcHYWeUfgmt2tZdaPr4MK9CFI4c,166
+jupyter_secrets_manager-0.4.0.data/data/share/jupyter/labextensions/jupyter-secrets-manager/static/third-party-licenses.json,sha256=W6N2sSD7tQihMqQk64F9xMd1Flfr2KO97esAiHUOYdM,2453
+jupyter_secrets_manager-0.4.0.data/data/share/jupyter/labextensions/jupyter-secrets-manager/install.json,sha256=4aidGLvkR2KbwGmTCD8tkwRLS2rPNgMz-3CnPcOBdjs,207
+jupyter_secrets_manager-0.4.0.dist-info/METADATA,sha256=WdjIrsD9z4kgm8kSP0QLUpIq1o-J3feITDTttI75HTI,7884
+jupyter_secrets_manager-0.4.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+jupyter_secrets_manager-0.4.0.dist-info/licenses/LICENSE,sha256=fr-HmFi0CgCe8A3csGUj1g4aQOUaqVi4XFd71S6LWEw,1532
+jupyter_secrets_manager-0.4.0.dist-info/RECORD,,
