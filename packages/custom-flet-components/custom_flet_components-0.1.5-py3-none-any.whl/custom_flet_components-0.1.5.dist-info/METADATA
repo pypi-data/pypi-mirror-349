@@ -1,0 +1,32 @@
+Metadata-Version: 2.4
+Name: custom_flet_components
+Version: 0.1.5
+Summary: Custom Components For Flet Python
+Author: Mudassir Farooq
+Author-email: pktechmania21@gmail.com
+License: MIT
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: flet>=0.27.6
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary
+
+# custom_flet_components
+
+This is a custom Flet package.
+
+## Installation
+
+Run this command:
+
+    pip install custom_flet_components
+
+## Usage
+
+Document how to use custom_flet_components here.
