@@ -1,0 +1,3 @@
+# datatailr
+
+The `datatailr` package
