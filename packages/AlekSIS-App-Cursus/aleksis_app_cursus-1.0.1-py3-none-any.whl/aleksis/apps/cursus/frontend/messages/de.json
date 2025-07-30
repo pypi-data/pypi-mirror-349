@@ -1,0 +1,79 @@
+{
+  "cursus": {
+    "course": {
+      "create": "Kurs erstellen",
+      "fields": {
+        "groups": "Gruppen",
+        "lesson_quota": "Stundenpensum",
+        "name": "Name",
+        "subject": "Fach",
+        "teachers": "Lehrkräfte"
+      },
+      "menu_title": "Kurse",
+      "title_plural": "Kurse"
+    },
+    "course_bundle": {
+      "title_plural": "Kursebündel",
+      "menu_title": "Kursbündel",
+      "bundled": "Kursbündel erstellen",
+      "fields": {
+        "name": "Name",
+        "groups": "Gruppen",
+        "lesson_quota": "Stundenpensum",
+        "courses": "Enthaltene Kurse"
+      }
+    },
+    "menu_title": "Kursverwaltung",
+    "errors": {
+      "name_required": "Name benötigt",
+      "short_name_required": "Kurzname benötigt",
+      "subject_required": "Fach benötigt"
+    },
+    "school_structure": {
+      "add": "{name} hinzufügen",
+      "add_title": "{name} hinzufügen",
+      "errors": {
+        "no_group_types": {
+          "long": "Es wurden keine Gruppentypen für das erste/zweite Gruppenlevel (z. B. Jahrgänge und Klassen) festgelegt. Deswegen kann die Funktion zum Planen der Schulstruktur noch nicht verwendet werden.",
+          "short": "Keine Gruppentypen konfiguriert"
+        }
+      },
+      "fields": {
+        "name": "Name",
+        "short_name": "Kurzname"
+      },
+      "menu_title": "Schulstruktur",
+      "timetable": "Stundenplan",
+      "title": "Meine Schulstruktur"
+    },
+    "subject": {
+      "create": "Fach erstellen",
+      "fields": {
+        "colour_bg": "Hintergrundfarbe",
+        "colour_fg": "Vordergrundfarbe",
+        "name": "Name",
+        "parent": "Elternfach",
+        "short_name": "Kurzname",
+        "teachers": "Lehrkräfte"
+      },
+      "has_parent": "Elternfach vorhanden",
+      "menu_title": "Fächer",
+      "title_plural": "Fächer"
+    },
+    "teachers": {
+      "field": {
+        "availability": {
+          "available": "Verfügbar",
+          "unavailable": "Nicht verfügbar"
+        },
+        "status": {
+          "good_fit": "Passt gut",
+          "misses_subject": "Unterrichtet das Fach nicht"
+        },
+        "subjects": {
+          "has_subject": "Unterrichtet dieses Fach"
+        }
+      }
+    }
+  }
+}

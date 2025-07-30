@@ -1,0 +1,50 @@
+query gqlPersons {
+  persons {
+    id
+    fullName
+    shortName
+  }
+}
+
+query gqlGroups {
+  groups {
+    id
+    name
+  }
+}
+
+query gqlTeachers {
+  persons: teachers {
+    id
+    fullName
+    shortName
+    subjectsAsTeacher {
+      id
+      name
+      shortName
+      colourFg
+      colourBg
+    }
+  }
+}
+
+query gqlCalendar(
+  $names: [String]
+  $datetimeStart: Date
+  $datetimeEnd: Date
+  $params: String
+) {
+  calendar {
+    calendarFeeds(names: $names) {
+      name
+      events(start: $datetimeStart, end: $datetimeEnd, params: $params) {
+        name
+        start
+        end
+        color
+        description
+        meta
+      }
+    }
+  }
+}

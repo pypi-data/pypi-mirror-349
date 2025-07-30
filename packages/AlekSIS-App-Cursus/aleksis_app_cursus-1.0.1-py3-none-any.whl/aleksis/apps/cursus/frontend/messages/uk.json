@@ -1,0 +1,47 @@
+{
+  "cursus": {
+    "course": {
+      "create": "Створити курс",
+      "fields": {
+        "groups": "Групи",
+        "lesson_quota": "Погодинне навантаження",
+        "name": "Назва",
+        "subject": "Предмет",
+        "teachers": "Викладачі"
+      },
+      "menu_title": "Курси",
+      "title_plural": "Курси"
+    },
+    "errors": {
+      "name_required": "Назва обов'язкова",
+      "short_name_required": "Коротка назва обов'язкова",
+      "subject_required": "Предмет обов'язковий"
+    },
+    "menu_title": "Планування курсу",
+    "school_structure": {
+      "add": "Додати {name}",
+      "add_title": "Додати {name}",
+      "fields": {
+        "name": "Назва",
+        "short_name": "Коротка назва"
+      },
+      "menu_title": "Структура школи",
+      "timetable": "Розклад",
+      "title": "Моя структура школи"
+    },
+    "subject": {
+      "create": "Створити предмет",
+      "fields": {
+        "colour_bg": "Колір заднього плану",
+        "colour_fg": "Колір переднього плану",
+        "name": "Назва",
+        "parent": "Головний предмет",
+        "short_name": "Коротка назва",
+        "teachers": "Викладачі"
+      },
+      "has_parent": "Є головний предмет",
+      "menu_title": "Предмети",
+      "title_plural": "Предмети"
+    }
+  }
+}
