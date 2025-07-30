@@ -1,0 +1,109 @@
+framework:
+  name: bigcode-evaluation-harness
+  pkg_name: bigcode_eval
+  full_name: Code Generation LM Evaluation Harness
+  description: A framework for the evaluation of autoregressive code generation language models.
+  url: https://github.com/bigcode-project/bigcode-evaluation-harness
+  source: https://gitlab-master.nvidia.com/swdl-nemollm-mlops/evals/bigcode-evaluation-harness
+defaults:
+  command: >-
+    {% if target.api_endpoint.api_key is not none %}NVCF_TOKEN=${{target.api_endpoint.api_key}}{% endif %}
+    bigcode-eval --model_type {% if target.api_endpoint.type == "completions" %}nim-base{% elif target.api_endpoint.type == "chat" %}nim-chat{% endif %}
+    --url {{target.api_endpoint.url}} --model_kwargs '{"model_name": "{{target.api_endpoint.model_id}}", "timeout": {{config.params.request_timeout}}, "connection_retries": {{config.params.max_retries}}}'
+    --out_dir {{config.output_dir}} --task {{config.params.task}} --allow_code_execution --n_samples={{config.params.extra.n_samples}} {% if config.params.limit_samples is not none %}--limit {{config.params.limit_samples}}{% endif %}
+    --max_new_tokens={{config.params.max_new_tokens}} --do_sample={{config.params.extra.do_sample}}
+    --top_p {{config.params.top_p}} --temperature {{config.params.temperature}} --async_limit {{config.params.parallelism}}{% if config.params.extra.args is defined %} {{config.params.extra.args}} {% endif %}
+  config:
+    supported_endpoint_types:
+    - completions
+    params:
+      limit_samples: null
+      max_new_tokens: 512
+      temperature: 0.0000001
+      top_p: 0.9999999
+      parallelism: 10
+      max_retries: 5
+      request_timeout: 30
+      extra:
+        do_sample: True
+        n_samples: 1
+  target:
+    api_endpoint: {} # required to add: url, model_id, api_key
+evaluations:
+- name: HumanEval
+  description: HumanEval is used to measure functional correctness for synthesizing programs from docstrings. It consists of 164 original programming problems, assessing language comprehension, algorithms, and simple mathematics, with some comparable to simple software interview questions.
+  defaults:
+    config:
+      type: "humaneval"
+      supported_endpoint_types:
+      - completions
+      params:
+        task: "humaneval"
+        max_new_tokens: 1024
+        temperature: 0.1
+        top_p: 0.95
+        extra:
+          do_sample: True
+          n_samples: 20
+- name: HumanEval-Instruct
+  description: InstructHumanEval is a modified version of OpenAI HumanEval. For a given prompt, we extracted its signature, its docstring as well as its header to create a flexing setting which would allow to evaluation instruction-tuned LLM. The delimiters used in the instruction-tuning procedure can be use to build and instruction that would allow the model to elicit its best capabilities.
+  defaults:
+    config:
+      type: "humaneval_instruct"
+      supported_endpoint_types:
+      - chat
+      params:
+        task: "instruct-humaneval-nocontext-py"
+        max_new_tokens: 1024
+        temperature: 0.1
+        top_p: 0.95
+        extra:
+          do_sample: True
+          n_samples: 20
+- name: HumanEval+
+  description: HumanEvalPlus is a modified version of HumanEval containing 80x more test cases.
+  defaults:
+    config:
+      type: "humanevalplus"
+      supported_endpoint_types:
+      - completions
+      params:
+        task: "humanevalplus"
+        max_new_tokens: 1024
+        temperature: 0.1
+        top_p: 0.95
+        extra:
+          do_sample: True
+          n_samples: 5  # fewer since HumanEval+ has more problems
+- name: MBPP
+  description: MBPP consists of Python programming problems, designed to be solvable by entry level programmers, covering programming fundamentals, standard library functionality, and so on. Each problem consists of a task description, code solution and 3 automated test cases.
+  defaults:
+    config:
+      type: "mbpp"
+      supported_endpoint_types:
+      - completions
+      - chat
+      params:
+        task: "mbpp"
+        max_new_tokens: 2048
+        temperature: 0.1
+        top_p: 0.95
+        extra:
+          do_sample: True
+          n_samples: 10
+- name: MBPP+
+  description: MBPP+ is a modified version of MBPP containing 35x more test cases.
+  defaults:
+    config:
+      type: "mbppplus"
+      supported_endpoint_types:
+      - completions
+      - chat
+      params:
+        task: "mbppplus"
+        max_new_tokens: 2048
+        temperature: 0.1
+        top_p: 0.95
+        extra:
+          do_sample: True
+          n_samples: 5  # fewer since MBPP+ has more problems
