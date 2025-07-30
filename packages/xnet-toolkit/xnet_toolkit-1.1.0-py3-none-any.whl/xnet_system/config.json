@@ -1,0 +1,45 @@
+// Copyright (c) 2025 StasX (Kozosvyst Stas). All rights reserved.
+{
+    "version": "1.0.0",
+    "update_url": "https://github.com/StasX-Official/xnet/releases/latest",
+    "log_level": "info",
+    "timeout": 5,
+    "max_ports": 1000,
+    "default_scan_range": "1-1024",
+    "async_threads": 100,
+    "security": {
+        "encryption_enabled": true,
+        "confirm_dangerous_actions": true,
+        "max_failed_attempts": 5,
+        "session_timeout": 1800,
+        "log_encryption": true,
+        "safe_mode": true
+    },
+    "advanced_features": {
+        "packet_sniffer": {
+            "max_capture_time": 60,
+            "max_packets": 1000,
+            "default_interface": "",
+            "require_root": true
+        },
+        "arp_watch": {
+            "check_interval": 5,
+            "alert_threshold": 3,
+            "monitoring_time": 300
+        },
+        "port_knock": {
+            "sequences": {
+                "default": [5678, 7856, 6587, 8765],
+                "admin": [9012, 1290, 2109, 0921]
+            },
+            "open_port": 22,
+            "timeout": 30,
+            "open_duration": 60
+        },
+        "packet_sender": {
+            "default_ttl": 64,
+            "default_timeout": 5,
+            "max_payload_size": 1024
+        }
+    }
+}
