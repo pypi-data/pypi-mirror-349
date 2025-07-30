@@ -1,0 +1,5 @@
+#USER INPUT# -> :"dl"
+#USER INPUT# -> :"coin"
+#USER INPUT# -> :"gen"
+#USER INPUT# -> :"1"
+#USER INPUT# -> :"0.0.328"
