@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: gbb-excel-mcp
+Version: 0.1.0
+Summary: excel文件中内容匹配工邦邦商品sku
+Author-email: "meng4.wang" <meng4.wang@gongbangbang.com>
+Keywords: gbb,mcp,server
+Requires-Python: >=3.10
+Requires-Dist: mcp>=1.9.0

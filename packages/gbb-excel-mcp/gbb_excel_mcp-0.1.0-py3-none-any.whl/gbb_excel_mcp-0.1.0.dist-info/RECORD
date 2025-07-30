@@ -1,0 +1,9 @@
+gbb_excel_mcp/__init__.py,sha256=I1OQU7JaZyoWTf46dDf5dJ2IWINS69j-RyKHsf573uQ,59
+gbb_excel_mcp/gbb.py,sha256=wukxZcVf8NDILP-ADPF26d3sdSOOAqtgb-0ydhdE_lY,926
+gbb_excel_mcp/pro_collect_dify.py,sha256=TO3OE8t3ZwIRITuPhVzIQsoqI_fPWQc11_1UdebZvYc,1045
+gbb_excel_mcp/pro_suit_dify.py,sha256=AHzvF31zJW1QZ2oC3H0MB3JTzWP8isuqV4h9a-bwz2A,1178
+gbb_excel_mcp/server.py,sha256=o9BqVcy0OupKxfVpXqXnHspGUxyBYkUiW9pQxVp2PwY,1692
+gbb_excel_mcp-0.1.0.dist-info/METADATA,sha256=wCOF7jWO-V8PyvDY8YumBeWRXPgF3b0lnQIF65-Ebz0,243
+gbb_excel_mcp-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+gbb_excel_mcp-0.1.0.dist-info/entry_points.txt,sha256=pHSmaFyP9vNLTNZji6Z4JkH7FWP6En7KYSL9P4kYUlw,53
+gbb_excel_mcp-0.1.0.dist-info/RECORD,,
