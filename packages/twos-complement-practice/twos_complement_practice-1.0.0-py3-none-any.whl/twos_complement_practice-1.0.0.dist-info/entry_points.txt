@@ -1,0 +1,2 @@
+[console_scripts]
+twos-practice = twos_complement_practice.twos_complement:main
