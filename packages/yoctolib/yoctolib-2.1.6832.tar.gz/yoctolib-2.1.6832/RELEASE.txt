@@ -1,0 +1,8 @@
+TypedPython v2.1.6832
+
+- Add __all__ symbol to yocto_api to enable star import
+- Add missing functions to sync version
+- Add support for firmware update
+- Fix YModule.get_friendlyName()
+- Fix event and callbacks handling
+- Fix uploads
