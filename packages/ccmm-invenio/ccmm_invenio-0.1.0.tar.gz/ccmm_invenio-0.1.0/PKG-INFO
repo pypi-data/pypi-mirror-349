@@ -1,0 +1,27 @@
+Metadata-Version: 2.4
+Name: ccmm-invenio
+Version: 0.1.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# CCMM-Invenio: CCMM runtime library for NRP Invenio
+
+This library provides:
+
+* Fixtures for vocabularies to support the CCMM model in NRP Invenio
+* Schema serializers for the CCMM model
+* Import and export modules for the CCMM model
+* UI components for working with the CCMM model in NRP Invenio
+
+## Installation
+
+```bash
+pip install ccmm-invenio
+```
+
+## Usage
+
+```bash
+invenio oarepo fixtures load
+```
