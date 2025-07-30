@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+jsontoqt/__init__.py
+jsontoqt/__main__.py
+jsontoqt/form.py
+jsontoqt.egg-info/PKG-INFO
+jsontoqt.egg-info/SOURCES.txt
+jsontoqt.egg-info/dependency_links.txt
+jsontoqt.egg-info/top_level.txt
