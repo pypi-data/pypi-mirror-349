@@ -1,0 +1,14 @@
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+*.egg
+*.whl
+__pycache__/
+*.gdx
+*.lock
+.vscode/
+.venv/
+*.ipynb
