@@ -1,0 +1,10 @@
+numpy
+numba
+opencv-python
+shapely
+trimesh
+cameravision
+simplepyutils
+framepump
+scipy
+bpy==3.6.0
