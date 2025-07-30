@@ -1,0 +1,13 @@
+[build-system]
+build-backend = "hatchling.build"
+requires = [
+    "hatchling",
+]
+
+[project]
+name = "robotpy-native-wpilib"
+version = "0.0.1"
+description = "Empty package workaround for trusted publishing setup"
+
+[tool.hatch.build.targets.wheel]
+only-include = [""]
