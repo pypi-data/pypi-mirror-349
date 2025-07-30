@@ -1,0 +1,11 @@
+native/romi/_init_robotpy_native_romi.py,sha256=jmfNqv6wDJRR0vqwkS1mb_cXoJAchaoZybZ8NWOj8n4,724
+native/romi/robotpy-native-romi.pc,sha256=Dmt7kwcfQCL2q6JzAoDPp89DhNF15M4YrZ3ShL8HTBw,300
+native/romi/include/frc/romi/OnBoardIO.h,sha256=8E7y1Jzz_3MmMVse6kdRFortwAtwFCievUSKaqzP9BQ,1737
+native/romi/include/frc/romi/RomiGyro.h,sha256=OQkil-zW6IB0RX6iplXDV7h_9zOpSS9fKZEyxbqAi1M,2591
+native/romi/include/frc/romi/RomiMotor.h,sha256=Lw7fVyDakRvAd7c_5k4kbg_QvUTXFPJHfKMlx5Zj3GM,811
+native/romi/lib/romiVendordep.dll,sha256=MLe7l8TDUPmZKJzvKdcDEnbdnP1lZLr3MhQB-NoLvm4,26112
+native/romi/lib/romiVendordep.lib,sha256=AaFSgW4T6mv4BAgRLDtrjv2VuLGuCPRg6v34ImSID18,21836
+robotpy_native_romi-2025.3.2.dist-info/METADATA,sha256=Av-icmSfUs4T4zSa4hMzMlqQRhrRoqK3ooP-d2Jer5o,183
+robotpy_native_romi-2025.3.2.dist-info/WHEEL,sha256=Vhj7RpPOKCXcsr4rUs7q4pISuo5nT6VsOuaQwH9GILY,94
+robotpy_native_romi-2025.3.2.dist-info/entry_points.txt,sha256=Xc0U2GpkqIPz_QT8WlVnn_B3LVysxH3WfKu9oe2gZSY,32
+robotpy_native_romi-2025.3.2.dist-info/RECORD,,
