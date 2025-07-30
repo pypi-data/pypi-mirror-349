@@ -1,0 +1,17 @@
+README.md,sha256=KiN37A41pBxyEqsuZOSFrAJrRbLvzDujwTraR6h4qY8,1901
+.uv-cache/archive-v0/WOfSLSSA4GsOfcxlUzmKJ/pyarrow/tests/data/orc/README.md,sha256=_4X5XszZqQtWAVEz5N1Va4VyyayGQgNDKrcdMX2Ib4s,932
+.uv-cache/archive-v0/f3wMfwcDSNOijUst2-WUf/pyarrow/tests/data/orc/README.md,sha256=_4X5XszZqQtWAVEz5N1Va4VyyayGQgNDKrcdMX2Ib4s,932
+qore_client/__init__.py,sha256=kjk2m8UhkpF_Gk7XKT_tqjUj3P0TtmPJc934GFiqW1c,205
+qore_client/auth.py,sha256=YD46r40hQQd-MG3XjFtLNbUWgKV-kC04rZw3SLxz_A8,2014
+qore_client/client.py,sha256=CvOvODO3pqW8ELKA3K5E8LtIZBntqUJ2uKHjgc7sE-s,6315
+qore_client/settings.py,sha256=jd6sjuLtTWkpcvQbrII31GdwSE_B0sQA5YpvKNiJISg,184
+qore_client/utils/__init__.py,sha256=d2jfeKP4l8yHeqAJH0GObWQUvGhALCD6zuaFvtoo2Pk,335
+qore_client/utils/drive.py,sha256=kk5MHCFjY99wdmlST5CNq3-LzaBPr0-5AULVp8_4Stc,501
+qore_client/utils/file.py,sha256=p7mS81xyD36TCDuCEA_QZ5AoEZC_5ctZheGlE1st4H0,5177
+qore_client/utils/folder.py,sha256=znD_Ypn8SzTbIC2G21_PYarPi4YGOoEYbP0_kw8lDkI,1807
+qore_client/utils/module.py,sha256=xqKpY0Ng0gLCmFQuuIKyj12aoELcFP1Ho7EBFWXPuJE,12144
+qore_client/utils/organization.py,sha256=_GSSHU2WjYD63D9x3oa46ZRNxZ2jwKYn5sH5K15E5kQ,781
+qore_client/version.py,sha256=go20U3RCVaJ2N55RnX4tO5rinfUCRV0puFyrHCto8yw,23
+qore_client-0.0.15.dist-info/METADATA,sha256=Dffe2YpTmqHffL60Ufe9cHMGWWCAyvERuN8M0Ad5Wws,2772
+qore_client-0.0.15.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+qore_client-0.0.15.dist-info/RECORD,,
