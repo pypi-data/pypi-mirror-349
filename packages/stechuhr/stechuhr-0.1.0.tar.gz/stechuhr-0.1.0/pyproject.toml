@@ -1,0 +1,32 @@
+[project]
+name = "stechuhr"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Lukas Grassauer", email = "lukas@grassauer.eu" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "cel-python>=0.2.0,<=0.2.0",
+]
+
+[project.scripts]
+stechuhr = "stechuhr:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "ruff>=0.11.9,<=0.11.9",
+]
+test = [
+    "hypothesis>=6.131.15,<=6.131.15",
+    "pytest>=8.3.5,<=8.3.5",
+]
+typecheck = [
+    "mypy>=1.15.0,<=1.15.0",
+    "pyright>=1.1.400,<=1.1.400",
+]

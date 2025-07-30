@@ -1,0 +1,43 @@
+amends "package://github.com/jdx/hk/releases/download/v1.0.0/hk@1.0.0#/Config.pkl"
+import "package://github.com/jdx/hk/releases/download/v1.0.0/hk@1.0.0#/Builtins.pkl"
+
+local linters = new Mapping<String, Step> {
+    ["mise"] {
+            glob = "mise.toml"
+            stage = "mise.toml"
+            fix = "mise fmt --all"
+        }
+
+    // define a custom linter
+    ["pkl"] {
+        glob = "*.pkl"
+        check = "pkl eval {{files}} >/dev/null"
+    }
+    ["validate-pyproject"] {
+        glob = "pyproject.toml"
+        check = "validate-pyproject {{files}}"
+    }
+    ["ruff"] = Builtins.ruff
+    ["ruff-fmt"] {
+        glob = "*.py"
+        stage = "*.py"
+        check = "ruff format --check {{files}}"
+        fix = "ruff format {{files}}"
+    }
+}
+
+hooks {
+    ["pre-commit"] {
+        fix = true           // automatically modify files with available linter fixes
+        stash = "patch-file" // stashes unstaged changes while running fix steps
+        steps = linters
+    }
+    // "fix" and "check" are special steps for `hk fix` and `hk check` commands
+    ["fix"] {
+        fix = true
+        steps = linters
+    }
+    ["check"] {
+        steps = linters
+    }
+}

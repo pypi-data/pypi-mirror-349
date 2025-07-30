@@ -1,0 +1,21 @@
+[tools]
+pkl = "latest"
+uv = "0.7.6"
+hk = "latest"
+"pipx:validate-pyproject" = { version = "0.24.1", extras = "all" }
+
+[settings]
+python.uv_venv_auto = true
+
+[tasks.build]
+run = "uv build"
+
+[tasks.tests]
+run = "uv run pytest tests/"
+
+[tasks.typecheck]
+run = """
+uv run mypy src/
+uv run pyright src/
+"""
+
