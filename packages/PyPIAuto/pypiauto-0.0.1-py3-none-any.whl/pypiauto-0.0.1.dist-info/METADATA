@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: PyPIAuto
+Version: 0.0.1
+Summary: 一键创建Python项目模板并发布到PyPI
+Author: Xiaoqiang
+Author-email: xiaoqiangclub@hotmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: poetry
+Requires-Dist: setuptools
+Requires-Dist: twine
+Requires-Dist: wheel
