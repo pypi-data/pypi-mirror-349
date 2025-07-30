@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/searchpubmed/__init__.py
+src/searchpubmed/pubmed.py
+src/searchpubmed/query_builder.py
+src/searchpubmed.egg-info/PKG-INFO
+src/searchpubmed.egg-info/SOURCES.txt
+src/searchpubmed.egg-info/dependency_links.txt
+src/searchpubmed.egg-info/requires.txt
+src/searchpubmed.egg-info/top_level.txt
+tests/test_jats_chunks.py
+tests/test_pmc.py
+tests/test_pmcid.py
+tests/test_pubmed.py
+tests/test_query_builder.py
