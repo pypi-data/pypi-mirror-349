@@ -1,0 +1,14 @@
+flask_pluginkit/__init__.py,sha256=0-8CITaDbv3E2dnkrNuQIkLhSANOP2vvHpVTKKBnHWg,681
+flask_pluginkit/_compat.py,sha256=dbgAw6fTTDAFlpXlmW7RJ24u2Eh92t4OuVIDj6KV2Ec,496
+flask_pluginkit/_installer.py,sha256=ebV-ihV2Pj9w70ibqLsY_5_PTypFNNUJUgW6260pwdY,10438
+flask_pluginkit/_web.py,sha256=-aovvd6pG2o2IDTKtkwedn9_DDRhzomd5md4vcEPwy8,9957
+flask_pluginkit/exceptions.py,sha256=TsmHxJqpc2qyFJBGuN7t19yAeukTd1aDJKjrmVg11-M,598
+flask_pluginkit/pluginkit.py,sha256=gq_vsvwfUb8RJv5pg_rDugtMNZKM1hsxYixSr4iSm_w,46712
+flask_pluginkit/utils.py,sha256=l2SVTZsmEQJf1D45yGS1M6uJLPIFaUCJkT5Ks0GN1Ac,12924
+flask_pluginkit/static/translations.ini,sha256=XG4-IowvaaDZXxe87oZai1B7U8uNN4AjV6pDXKcRDRk,820
+flask_pluginkit/templates/manager.html,sha256=yZZUw-GEAk_HnQh7HjsLXIVUOOfEbAhAwPpKRAh48S8,14907
+flask_pluginkit-3.9.0.dist-info/licenses/LICENSE,sha256=h4ibJRKr3wrfnbJeG5qF7kDrRHN6iIcZI6b1-GE-fUE,1507
+flask_pluginkit-3.9.0.dist-info/METADATA,sha256=MKEwS5OlZg1Rs8Gz76RWkNIRpCtGMxYxvS69Ckvyy40,3714
+flask_pluginkit-3.9.0.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+flask_pluginkit-3.9.0.dist-info/top_level.txt,sha256=N3W9-VxJgqxhdQ2LJlriVtUQ6E6XdcI9n3Fykmknvt4,16
+flask_pluginkit-3.9.0.dist-info/RECORD,,
