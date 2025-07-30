@@ -1,0 +1,7 @@
+textblob
+nltk
+transformers==4.37.2
+torch==2.1.0
+accelerate
+requests
+numpy<2.0
