@@ -1,0 +1,2 @@
+[console_scripts]
+django-db-migrate = django_db_migrator.cli:main

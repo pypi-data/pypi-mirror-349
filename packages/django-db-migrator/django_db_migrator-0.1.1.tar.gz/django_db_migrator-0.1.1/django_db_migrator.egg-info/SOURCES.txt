@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+setup.cfg
+django_db_migrator/__init__.py
+django_db_migrator/cli.py
+django_db_migrator/migrator.py
+django_db_migrator.egg-info/PKG-INFO
+django_db_migrator.egg-info/SOURCES.txt
+django_db_migrator.egg-info/dependency_links.txt
+django_db_migrator.egg-info/entry_points.txt
+django_db_migrator.egg-info/requires.txt
+django_db_migrator.egg-info/top_level.txt
