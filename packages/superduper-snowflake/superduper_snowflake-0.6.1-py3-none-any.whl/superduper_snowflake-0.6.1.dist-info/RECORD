@@ -1,0 +1,12 @@
+superduper_snowflake/__init__.py,sha256=1rSfcOvOpr3UZGloxWDU3w0HlBYiFlTuQj0ZXqZXG3A,280
+superduper_snowflake/connect.py,sha256=Y6CXY00-QbM3VFhPKYmLTV5EOgjpoJAC6COqAurk3wM,2546
+superduper_snowflake/data_backend.py,sha256=TR-I8vGlyvLwqTU1KUDQDjw7lMXli7ng9GQiv-qCo8U,14552
+superduper_snowflake/query.py,sha256=pRHEK-CJAGIJuswqUXvsE996K5ntvUq1vI04K3DxOlM,3152
+superduper_snowflake/schema.py,sha256=uv2NbRNWqKskMD0ugyZBPkSALKgH80vdc-ouIyXcsOo,1348
+superduper_snowflake/secrets.py,sha256=utnGP2wMe83htOtEzKDrzDrUgCN-FIvQZtqUZ3FAI5A,916
+superduper_snowflake/vector_search.py,sha256=s7DhW3u_Bn12TKKQT8wcrL4-3WXcBxsIklau_pSv2Jw,6474
+superduper_snowflake-0.6.1.dist-info/licenses/LICENSE,sha256=fq2WxmjewRN4VfDClVl-6CiVFZedp4y5_iGqQiXHBN8,11353
+superduper_snowflake-0.6.1.dist-info/METADATA,sha256=Yeo_GWQ9kV6M3V68KCGOqanHaxpE0b-g5m8Yh6xbec0,14488
+superduper_snowflake-0.6.1.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+superduper_snowflake-0.6.1.dist-info/top_level.txt,sha256=wM5kMcMU4NVRrAExFjzhnzFKZ_zOhoamRdWv_OfyyGQ,21
+superduper_snowflake-0.6.1.dist-info/RECORD,,
