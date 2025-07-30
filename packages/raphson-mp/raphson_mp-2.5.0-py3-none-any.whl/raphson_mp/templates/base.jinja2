@@ -1,0 +1,83 @@
+{% macro icon(icon_name) %}
+    <div class="icon icon-{{ icon_name }}"></div>
+{% endmacro %}
+
+{% macro icon_button(icon_name, id = None, title = None) %}
+    <button {% if id %}id="{{id}}"{% endif %} class="icon-button" {% if title %} title="{{title}}"{% endif %}>
+        {{ icon(icon_name) }}
+    </button>
+{% endmacro %}
+{% macro page_heading(title, back_url=None) %}
+    <div class="page-heading">
+        {% if back_url %}
+        <a href="{{ back_url }}">
+            {{ icon_button('arrow-left') }}
+        </a>
+        {% endif %}
+        <h1>{{ title }}</h1>
+    </div>
+{% endmacro %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#202020">
+
+    <title>{% block title %}{% endblock title %}</title>
+
+    <link rel="icon" href="/static/img/favicon.ico">
+    <link rel="manifest" href="/static/manifest.json">
+
+    {% if not user or user.theme == "default" %}
+        <link rel="preload" href="/static/img/background-colorful.jpg" as="image">
+        <link rel="preload" href="/static/font/quicksand-v30-latin-regular.woff2" as="font" crossorigin="anonymous">
+    {% endif %}
+
+    <link rel="stylesheet" href="/static/css/base.css">
+    {% for style in styles %}
+        <link rel="stylesheet" href="/static/css/{{ style }}.css">
+    {% endfor %}
+
+    {% if user %}
+        <link rel="stylesheet" href="/static/css/theme/{{ user.theme }}.css">
+    {% else %}
+        <link rel="stylesheet" href="/static/css/theme/default.css">
+    {% endif %}
+
+    {# When changing this, also update static/js/types.d.ts #}
+    <script id="vars" type="application/json">
+        {
+            "csrfToken": {{ (user.csrf if user else None) | tojson }},
+            "offlineMode": {{ offline_mode | tojson }},
+            "loadTimestamp": {{ load_timestamp | tojson }},
+            "tBrowseArtist": {{ gettext("Artist: ") | tojson }},
+            "tBrowseAlbum": {{ gettext("Album: ") | tojson }},
+            "tBrowseTag": {{ gettext("Tag: ") | tojson }},
+            "tBrowsePlaylist": {{ gettext("Playlist: ") | tojson }},
+            "tBrowseYear": {{ gettext("Year: ") | tojson }},
+            "tBrowseRecentlyAdded": {{ gettext("Recently added") | tojson }},
+            "tBrowseRecentlyReleased": {{ gettext("Recently released") | tojson }},
+            "tBrowseRandom": {{ gettext("Random") | tojson }},
+            "tBrowseMissingMetadata": {{ gettext("Missing metadata") | tojson }},
+            "tBrowseNothing": {{ gettext("Browse") | tojson }},
+            "tActivityFileAdded": {{ gettext("Added") | tojson }},
+            "tActivityFileModified": {{ gettext("Modified") | tojson }},
+            "tActivityFileDeleted": {{ gettext("Deleted") | tojson }},
+            "tActivityFileMoved": {{ gettext("Moved") | tojson }},
+            "tTrackInfoUnavailable": {{ gettext("[track info unavailable]") | tojson }},
+            "tNoData": {{ gettext("No data") | tojson }}
+        }
+    </script>
+    <script src="/static/js/base.js" type="module"></script>
+    {% if script is defined %}
+        <script src="/static/js/{{ script }}.js" type="module"></script>
+    {% endif %}
+</head>
+
+<body>
+    {% block body %}{% endblock body %}
+</body>
+
+</html>
