@@ -1,0 +1,2 @@
+pydantic-core-qpython>=2.24.4
+annotated-types

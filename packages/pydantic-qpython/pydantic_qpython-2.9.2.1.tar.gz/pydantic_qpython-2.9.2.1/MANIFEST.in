@@ -1,0 +1,6 @@
+include pydantic/*.py
+recursive-include pydantic/_internal *
+recursive-include pydantic/deprecated *
+recursive-include pydantic/experimental *
+recursive-include pydantic/plugin *
+recursive-include pydantic/v1 *
