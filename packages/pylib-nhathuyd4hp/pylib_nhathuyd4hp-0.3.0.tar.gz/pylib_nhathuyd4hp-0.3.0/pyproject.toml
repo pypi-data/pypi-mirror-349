@@ -1,0 +1,7 @@
+[project]
+name = "pylib-nhathuyd4hp"
+version = "0.3.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
