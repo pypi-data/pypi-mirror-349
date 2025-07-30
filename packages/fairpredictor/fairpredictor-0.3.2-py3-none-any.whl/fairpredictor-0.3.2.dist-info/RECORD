@@ -1,0 +1,9 @@
+src/predictor/__init__.py,sha256=JfuShvyFR7PfPismLPL7rJ9Js06DiyqpR97Z9fxaFks,455
+src/predictor/app.py,sha256=yJ1-Cle3_s0SmINxDBF1DEkTJaSnm8aEt4nWfh690SQ,4228
+src/predictor/models.py,sha256=nZj4rJOaXDud2GfSOe3sQHs87dGUevz4QISGIO9ixZs,2909
+src/predictor/prediction.py,sha256=6ltIJPFZVCdr62GHK6IxDffvz5Aq-Yw65KdLKu0Vk20,9760
+src/predictor/utils.py,sha256=OBfhPv6fTcwUp0CRD9DKzFTlc7j_ACUXxpnNknS38OU,7033
+fairpredictor-0.3.2.dist-info/METADATA,sha256=79wwTA7PhDB-kbSYkXizKJ5WXjfdNMQeafBtoHt6tic,2114
+fairpredictor-0.3.2.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+fairpredictor-0.3.2.dist-info/licenses/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fairpredictor-0.3.2.dist-info/RECORD,,
