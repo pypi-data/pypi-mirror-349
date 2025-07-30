@@ -1,0 +1,2 @@
+[console_scripts]
+audio_miner = audio_miner.cli:main
