@@ -1,0 +1,12 @@
+conventions/__init__.py,sha256=GgpNzLcVATqT1ZUK2eYMPRcWFYeu38gZ9hg_fO1_Lt4,87
+conventions/__main__.py,sha256=RDgsfJQe0l2AdjAuw1kgnB2wSAV8Zscj7NwCt92cBZU,126
+conventions/cache.py,sha256=drvoM2ynyVdnZq4CI2LjQx7G7XWSfSBZH3BumAgU--g,3320
+conventions/cli.py,sha256=kq52l7GIjycCaIObMS-IWb7bv1DCw80FR5PRSYBq0LU,3892
+conventions/conferences.py,sha256=F4vctqbsVjE97nJmjm0wAbR4T9XKXUfVfwBOoi9BgOg,5687
+conventions/config.py,sha256=IJU2K_VfxXjhB8HxKsgEFtrOxKqe4wUDyn30R-9W6Wc,829
+conventions/search.py,sha256=fy8vh1zm4uyUubEJy_TB4LrhWsh3LCSNMFgDq1hRSz0,1779
+conventions-0.1.0.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+conventions-0.1.0.dist-info/METADATA,sha256=AnbfxqIUKfTaUI9IQBw639qhukzG9G36lJK0kOzdZ_c,1633
+conventions-0.1.0.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+conventions-0.1.0.dist-info/top_level.txt,sha256=9zOr6-OcI00F0FA3v9lrk5joBYO-JSk4PmccjfGPmJs,12
+conventions-0.1.0.dist-info/RECORD,,
