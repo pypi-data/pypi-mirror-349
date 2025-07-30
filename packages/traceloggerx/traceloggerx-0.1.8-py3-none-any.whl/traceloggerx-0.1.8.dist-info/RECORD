@@ -1,0 +1,10 @@
+traceloggerx/__init__.py,sha256=c3OiAKhp0j8rSszvz3QZAGkkEzlTL5B99zvgi3J3fo8,66
+traceloggerx/logutils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+traceloggerx/logutils/formatter.py,sha256=Ru-Ty3dGWgPNW2uLDc3z2QUQZB1vDto6SNu7HNzsEGA,2020
+traceloggerx/logutils/handlers.py,sha256=BzwuqLK10g6io4rVhMFA0HQKFlNd1MFGqpGp1DEzdgk,1424
+traceloggerx/logutils/logger.py,sha256=MDmno7nMirxeB_8CmB_JDqz7_PJ-G_cMqaCGYCV8VMo,2440
+traceloggerx-0.1.8.dist-info/licenses/LICENSE,sha256=ombPWDoUcbCp3mIWgUhuSmSkNYs8pSD88u3i3GWeLhw,1066
+traceloggerx-0.1.8.dist-info/METADATA,sha256=wnUK--7q30c9r0Tm38DViOGQWGm3ypsmcV5RxGhuXac,1837
+traceloggerx-0.1.8.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+traceloggerx-0.1.8.dist-info/top_level.txt,sha256=IAyHXx6ommDJnUi7HaeiOTeDAWm4IJLzv7EDjOkFqFo,13
+traceloggerx-0.1.8.dist-info/RECORD,,
