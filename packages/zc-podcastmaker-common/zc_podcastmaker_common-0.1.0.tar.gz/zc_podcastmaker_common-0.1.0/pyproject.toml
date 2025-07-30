@@ -1,0 +1,75 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "zc-podcastmaker-common"
+version = "0.1.0"
+description = "Common utilities library for PodcastMaker components"
+requires-python = ">=3.10"
+authors = [
+    {name = "ZCZoft", email = "info@zczoft.com"}
+]
+dependencies = [
+    "boto3>=1.28.0",
+    "pydantic>=2.0.0",
+    "anthropic>=0.5.0",
+    "pika>=1.3.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-mock>=3.10.0",
+    "ruff>=0.4.0",
+    "mypy>=1.0.0"
+]
+
+[tool.pytest]
+testpaths = ["tests"]
+python_files = "test_*.py"
+python_functions = "test_*"
+python_classes = "Test*"
+addopts = "-v --tb=short"
+
+[tool.ruff]
+line-length = 88
+exclude = [
+    ".git",
+    "__pycache__",
+    "build",
+    "dist",
+    ".venv",
+    ".eggs"
+]
+# Habilita reglas de formato y linter equivalentes a black, isort y flake8
+lint.select = ["E", "F", "I", "B", "UP", "C90", "W"]
+# Updated to use proper rule codes for Ruff 0.11.x
+lint.ignore = ["E203"]
+
+# Opcional: puedes ajustar los perfiles de formato si lo deseas
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+# Configuration for python-semantic-release
+[tool.semantic_release]
+version_variable = ["pyproject.toml:version"]
+branch = "main"
+upload_to_pypi = false  # We handle PyPI upload in the GitHub workflow
+upload_to_release = true
+build_command = "python -m build"
+commit_message = "chore(release): {version} [skip ci]"
+commit_parser = "angular"
+github_repository = "zczoft/elurologodemundi/projects/common"  # Repositorio correcto de GitHub
+changelog_file = "CHANGELOG.md"
+changelog_sections = [
+    {"type" = "feat", "section" = "Features", "hidden" = false},
+    {"type" = "fix", "section" = "Bug Fixes", "hidden" = false},
+    {"type" = "perf", "section" = "Performance Improvements", "hidden" = false},
+    {"type" = "refactor", "section" = "Code Refactoring", "hidden" = false},
+    {"type" = "docs", "section" = "Documentation", "hidden" = false},
+    {"type" = "test", "section" = "Tests", "hidden" = false},
+    {"type" = "ci", "section" = "Continuous Integration", "hidden" = false},
+    {"type" = "chore", "section" = "Miscellaneous Chores", "hidden" = true}
+]
