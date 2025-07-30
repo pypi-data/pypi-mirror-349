@@ -1,0 +1,3 @@
+[console_scripts]
+netcat-py = netcat_py:main
+

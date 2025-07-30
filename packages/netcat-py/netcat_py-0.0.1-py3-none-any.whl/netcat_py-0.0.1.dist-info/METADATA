@@ -1,0 +1,11 @@
+Metadata-Version: 2.3
+Name: netcat-py
+Version: 0.0.1
+Summary: NetCat in Python
+Author: Zeev Rotshtein
+Author-email: Zeev Rotshtein <zeevro@gmail.com>
+Requires-Python: >=3.10
+Project-URL: Repository, https://github.com/zeevro/netcat-py
+Description-Content-Type: text/markdown
+
+# netcat-py
