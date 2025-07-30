@@ -1,0 +1,6 @@
+[console_scripts]
+batch_extract_integrals=beautifuljason.tools.batch_extract_integrals:main
+jason_batch_convert=beautifuljason.tools.jason_batch_convert:main
+jason_config=beautifuljason.tools.jason_config:main
+jason_watchdog=beautifuljason.tools.jason_watchdog:main
+
