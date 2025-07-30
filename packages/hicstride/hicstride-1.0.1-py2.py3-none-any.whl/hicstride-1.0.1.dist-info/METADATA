@@ -1,0 +1,258 @@
+Metadata-Version: 2.4
+Name: hicstride
+Version: 1.0.1
+Summary: STRIDE: A Robust Dissimilarity Measurement for Chromatin Conformation Capture Data Based on Sequencing Depth-Insensitive Representation.
+Home-page: https://gitee.com/matrix_evolution/STRIDE
+Author: Bingxiang Xu
+Author-email: xubingxiang@sus.edu.cn
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.23.4
+Requires-Dist: scipy>=1.12.0
+Requires-Dist: pandas>=2.2.1
+Requires-Dist: joblib>=1.3.2
+Requires-Dist: h5py>=3.10.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# STRIDE
+
+## Introduction
+
+STRIDE is a robust dissimilarity measurement for chromatin conformation capture data based on sequencing depth insensitive representation. 
+
+STRIDE can be applied to any technique that primarily outputs a contact frequency matrix, including but not limited to Hi-C and its variants, as well as HiChIP/PLAC-seq.  The performance of STRIDE relies on introducing the concept of mean first passage time (MFPT) from Markov processes into Hi-C data analysis. This transforms the contact matrix into an MFPT representation that is less sensitive to sequencing depth and experimental noise, while preserving biologically meaningful features. 
+
+![logo](https://gitee.com/matrix_evolution/STRIDE/raw/master/images/logo.jpg)
+
+As shown in the figure above, as sequencing depth decreases, a large number of contact frequencies in the contact map decay to 0, resulting in missing distance information between loci. Additionally, noise levels caused by stochastic fluctuations gradually increase. Both of these issues are significantly mitigated in the MFPT representation.
+
+## Installation
+
+### Dependencies
+
+The STRIDE software package is developed and tested on Python version 3.11.7 and depends on the following packages:
+
+```
+numpy>=1.23.4
+scipy>=1.12.0
+pandas>=2.2.1
+joblib>=1.3.2
+h5py>=3.10.0
+```
+
+In addition, the following optional dependencies are required for certain functions:
+
+*   The package hic-straw (>=1.3.1) is required for the support of .hic format input files. 
+*   The pytorch package (>=2.2.1) is required if any accelerated computation is needed. 
+
+### Install
+
+The STRIDE package can be installed either through this git repository or through pip. 
+
+* Through this git repository:
+
+  ```shell
+  conda create -n stride python=3.11
+  conda activate stride
+  git clone https://gitee.com/matrix_evolution/STRIDE.git
+  cd STRIDE
+  python setup.py install
+  ```
+
+* Through pip:
+
+  ```shell
+  pip install hicstride
+  ```
+
+## Usage{.tabset}
+
+There are three major subprograms in the STRIDE package:
+
+* **mfpt**: calculate the MFPT representation of a contact map. 
+* **stride**: calculate the STRIDE distance between two contact maps. 
+* **batch**: calculate the pair-wise STRIDE distances for a batch of contact maps. 
+
+### Common command line arguments
+
+| Short form | Long form      | Meaning                                                      | Default |
+| ---------- | -------------- | ------------------------------------------------------------ | ------- |
+| -d         | --device       | The device on which the calculation will be executed if pytorch is available, or it will be omitted. | cpu     |
+| -c         | --min-coverage | Proportion of bins with low coverage to be filtered in the KR normalization. | 0.02    |
+| -k         | --KR-tolerance | The precision of the KR normalization. When standard deviations of row sums go below it, the normalization will be stopped. | 1e-12   |
+| -t         | --file-type    | The format of the input file(s) ({hic, txt}).                | hic     |
+|            | --ch           | The chromosomes which should be processed when the format of the input file(s) are .hic. Multiple chromosomes can be provieded through a comma seperated list. It will be omitted if the input format is txt. |         |
+| -l         | --chr-length   | The length of the chromosomes. The value will be taken if the input format is txt, or it will be omitted. | 0       |
+| -r         | --resolution   | The resolution used when the format of the input file(s) are .hic. It will be omitted if the input format is txt. | 50000   |
+| -o         | --output-dir   | The output directory. It will be created automatically if not exist. | .       |
+| -n         | -name          | The name of the project. It will be used as the names of the output files. | STRIDE  |
+
+### Sub command specific arguments {.tabset}
+
+#### mfpt
+
+| Name  | Meaning                              | Default         |
+| ----- | ------------------------------------ | --------------- |
+| input | The path to the input file / folder. | None (required) |
+
+#### stride
+
+| Name   | Meaning                                                      | Default         |
+| ------ | ------------------------------------------------------------ | --------------- |
+| --norm | The matrix norm used in the calculation. It must be supported by scipy.linalg.norm. | 2               |
+| input1 | The path to the first input file.                            | None (required) |
+| input2 | The path to the second input file.                           | None (required) |
+
+#### batch
+
+| Name             | Meaning                                                 | Default         |
+| ---------------- | ------------------------------------------------------- | --------------- |
+| -p / --n-threads | The number of threads used in loading the contact maps. | 1               |
+| input            | The path to the input file / folder.                    | None (required) |
+
+### Detailed command line usage {.tabset}
+
+#### mfpt
+
+```shell
+usage: stride mfpt [-h] [-d DEVICE] [-c MIN_COVERAGE] [-k KR_TOLERANCE] [-t {hic,txt}] [--ch CH] [-l CHRLEN] [-r RESOLUTION] [-o OUTPUT_DIR] [-n NAME] input
+
+Calculate the MFPT representation for a contact map.
+
+positional arguments:
+  input                 The path to the input file.
+
+options:
+  -h, --help            show this help message and exit
+  -d DEVICE, --device DEVICE
+                        The device on which the calculation will be executed if pytorch is available, or it will be omitted.
+  -c MIN_COVERAGE, --min-coverage MIN_COVERAGE
+                        Proportion of bins with low coverage to be filtered in the KR normalization.
+  -k KR_TOLERANCE, --KR-tolerance KR_TOLERANCE
+                        The precision of the KR normalization. When standard deviations of row sums go below it, the normalization will be stopped.
+  -t {hic,txt}, --file-type {hic,txt}
+                        The format of the input file(s).
+  --ch CH               The chromosomes which should be processed when the format of the input file(s) are .hic. Multiple chromosomes can be provieded through a comma seperated list. It will be
+                        omitted if the input format is txt.
+  -l CHRLEN, --chr-length CHRLEN
+                        The length of the chromosomes. The value will be taken if the input format is txt, or it will be omitted.
+  -r RESOLUTION, --resolution RESOLUTION
+                        The resolution used when the format of the input file(s) are .hic. It will be omitted if the input format is txt.
+  -o OUTPUT_DIR, --output-dir OUTPUT_DIR
+                        The output directory. It will be created automatically if not exist.
+  -n NAME, --name NAME  The name of the project. It will be used as the names of the output files.
+```
+
+#### stride
+
+```Shell
+usage: stride stride [-h] [-d DEVICE] [-c MIN_COVERAGE] [-k KR_TOLERANCE] [-t {hic,txt}] [--ch CH] [-l CHRLEN] [-r RESOLUTION] [-o OUTPUT_DIR] [-n NAME] [--norm NORM] input1 input2
+
+Calculate the STRIDE distances for two given contact maps.
+
+positional arguments:
+  input1                The path to the first input file.
+  input2                The path to the second input file.
+
+options:
+  -h, --help            show this help message and exit
+  -d DEVICE, --device DEVICE
+                        The device on which the calculation will be executed if pytorch is available, or it will be omitted.
+  -c MIN_COVERAGE, --min-coverage MIN_COVERAGE
+                        Proportion of bins with low coverage to be filtered in the KR normalization.
+  -k KR_TOLERANCE, --KR-tolerance KR_TOLERANCE
+                        The precision of the KR normalization. When standard deviations of row sums go below it, the normalization will be stopped.
+  -t {hic,txt}, --file-type {hic,txt}
+                        The format of the input file(s).
+  --ch CH               The chromosomes which should be processed when the format of the input file(s) are .hic. Multiple chromosomes can be provieded through a comma seperated list. It will be
+                        omitted if the input format is txt.
+  -l CHRLEN, --chr-length CHRLEN
+                        The length of the chromosomes. The value will be taken if the input format is txt, or it will be omitted.
+  -r RESOLUTION, --resolution RESOLUTION
+                        The resolution used when the format of the input file(s) are .hic. It will be omitted if the input format is txt.
+  -o OUTPUT_DIR, --output-dir OUTPUT_DIR
+                        The output directory. It will be created automatically if not exist.
+  -n NAME, --name NAME  The name of the project. It will be used as the names of the output files.
+  --norm NORM           The matrix norm used in the calculation. It must be supported by scipy.linalg.norm.
+```
+
+#### batch
+
+```shell
+usage: stride batch [-h] [-d DEVICE] [-c MIN_COVERAGE] [-k KR_TOLERANCE] [-t {hic,txt}] [--ch CH] [-l CHRLEN] [-r RESOLUTION] [-o OUTPUT_DIR] [-n NAME] [-p THREADS] input
+
+Calculate the pairwise STRIDE distances for a batch of contact maps.
+
+positional arguments:
+  input                 The path to the input folder.
+
+options:
+  -h, --help            show this help message and exit
+  -d DEVICE, --device DEVICE
+                        The device on which the calculation will be executed if pytorch is available, or it will be omitted.
+  -c MIN_COVERAGE, --min-coverage MIN_COVERAGE
+                        Proportion of bins with low coverage to be filtered in the KR normalization.
+  -k KR_TOLERANCE, --KR-tolerance KR_TOLERANCE
+                        The precision of the KR normalization. When standard deviations of row sums go below it, the normalization will be stopped.
+  -t {hic,txt}, --file-type {hic,txt}
+                        The format of the input file(s).
+  --ch CH               The chromosomes which should be processed when the format of the input file(s) are .hic. Multiple chromosomes can be provieded through a comma seperated list. It will be
+                        omitted if the input format is txt.
+  -l CHRLEN, --chr-length CHRLEN
+                        The length of the chromosomes. The value will be taken if the input format is txt, or it will be omitted.
+  -r RESOLUTION, --resolution RESOLUTION
+                        The resolution used when the format of the input file(s) are .hic. It will be omitted if the input format is txt.
+  -o OUTPUT_DIR, --output-dir OUTPUT_DIR
+                        The output directory. It will be created automatically if not exist.
+  -n NAME, --name NAME  The name of the project. It will be used as the names of the output files.
+  -p THREADS, --n-threads THREADS
+                        The number of threads used in loading the contact maps.
+```
+
+### Input file formats
+
+There tow input file formats supported in stride.
+
+* The .hic format generated from juicer tools which contains contact maps of multiple chromosomes and resolutions. 
+* The three column text (txt) file which only records the bin pairs with positive number of contacts. The start position of the first bin, second bin and the number of contacts between them should be placed in each row, respectively, separated by any kind of white space. Position of the first bin is supposed to be smaller than that of the second bin. 
+* The batch command only accepts input in "txt" format. All contact maps to be processed must be placed in the input folder in individual files with a .txt extension. The remaining part of the filenames will be used as the name for the corresponding contact map.
+
+### Output format
+
+* The output of the mfpt command is an HDF5 file named according to the value of the --name argument, stored in the specified output folder. If the input is in "txt" format, the output is saved under an object named "STRIDE" within the file. If the input is in ".hic" format, the outputs are sequentially saved under objects named after the chromosome names within the file.
+* The output of the stride command is placed in the output folder as the *_score.txt file. 
+* The output of the batch command is saved in the output folder as a dense distance matrix in a file named *_batch.txt. The row and column names correspond to the names of the respective contact maps. Contact maps that fail during MFPT representation calculation are automatically excluded.
+
+## Notation
+
+In our publication, we used a specific argument combination to calculate the stride distances of the single-cell Hi-C data in batch mode. The "-c" parameter was set to 0 to disable the filter of bins with low coverage. The "-k" parameter was set to 1e5 to accelerate the calculation of matrix balancing. The resolution ("-r") was set to 500Kb. 
+
+## citation
+
+[TBC]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
