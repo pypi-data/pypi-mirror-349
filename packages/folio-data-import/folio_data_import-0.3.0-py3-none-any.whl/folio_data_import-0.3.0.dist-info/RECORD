@@ -1,0 +1,12 @@
+folio_data_import/MARCDataImport.py,sha256=je3TdCdaDR-gYA3Gh1k4AX9l3v83sCTt4Y9lOFxayu8,36220
+folio_data_import/UserImport.py,sha256=ZulGaGJhI_N5vmR69YF_qbzbGeVyzcthXklSjDpZCyA,40998
+folio_data_import/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+folio_data_import/__main__.py,sha256=kav_uUsnrIjGjVxQkk3exLKrc1mah9t2x3G6bGS-5I0,3710
+folio_data_import/custom_exceptions.py,sha256=xOeIbM86d2r5-z3ul4JFTJLT3vI3kwmEq62cWS-9dOc,646
+folio_data_import/marc_preprocessors/__init__.py,sha256=urExfNTQoZsDCtDPcUY9EEC5OFcUihxhYEQkQFVzbMY,30
+folio_data_import/marc_preprocessors/_preprocessors.py,sha256=4Zrp-9LdL7f5QqUTOjyMkK5IaHP2YOkmkqoY_4o585Q,16377
+folio_data_import-0.3.0.dist-info/LICENSE,sha256=qJX7wxMC7ky9Kq4v3zij8MjGEiC5wsB7pYeOhLj5TDk,1083
+folio_data_import-0.3.0.dist-info/METADATA,sha256=Aqf0PXhdwFyChMKvl9cOluKN60IyMAUPDKSpb8AOlXI,6069
+folio_data_import-0.3.0.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+folio_data_import-0.3.0.dist-info/entry_points.txt,sha256=498SxWVXeEMRNw3PUf-eoReZvKewmYwPBtZhIUPr_Jg,192
+folio_data_import-0.3.0.dist-info/RECORD,,
