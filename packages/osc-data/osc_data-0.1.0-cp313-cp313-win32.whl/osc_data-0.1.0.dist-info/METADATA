@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: osc-data
+Version: 0.1.0
+Summary: data represent, processing
+Author-email: wangmengdi <790990241@qq.com>
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+
+# osc-data
+
+
+## 简介
+
+多模态数据表示与处理。
+
