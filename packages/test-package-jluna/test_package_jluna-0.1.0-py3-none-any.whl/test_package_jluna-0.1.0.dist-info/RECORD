@@ -1,0 +1,5 @@
+test_package/__init__.py,sha256=IMjkMO3twhQzluVTo8Z6rE7Eg-9U79_LGKMcsWLKBkY,22
+test_package_jluna-0.1.0.dist-info/METADATA,sha256=Kl34jOEJTxAFPJuTRNl-opqFGi3jhSDRLdlDppOpDDg,549
+test_package_jluna-0.1.0.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+test_package_jluna-0.1.0.dist-info/top_level.txt,sha256=GeXTEKqyjBx-5S0TKnJMkgF1M3Cpjq6YSWM7P4c9-lg,13
+test_package_jluna-0.1.0.dist-info/RECORD,,
