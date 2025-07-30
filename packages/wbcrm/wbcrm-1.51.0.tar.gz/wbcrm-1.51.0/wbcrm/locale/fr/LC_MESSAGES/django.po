@@ -1,0 +1,1487 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-20 09:30+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: wbcrm/admin/activities.py:29 wbcrm/admin/activities.py:45
+msgid "Main information"
+msgstr ""
+
+#: wbcrm/admin/activities.py:46
+msgid "Meta"
+msgstr ""
+
+#: wbcrm/admin/activities.py:47
+msgid "Temporal Information"
+msgstr ""
+
+#: wbcrm/admin/activities.py:48
+msgid "Geographical Information"
+msgstr ""
+
+#: wbcrm/admin/activities.py:49
+msgid "Linked Entries"
+msgstr ""
+
+#: wbcrm/admin/activities.py:50
+msgid "Linked Activities"
+msgstr ""
+
+#: wbcrm/admin/activities.py:52 wbcrm/viewsets/display/activities.py:141
+#: wbcrm/viewsets/display/activities.py:225
+#: wbcrm/viewsets/display/activities.py:328
+msgid "Recurrence"
+msgstr ""
+
+#: wbcrm/dynamic_preferences_registry.py:15
+msgid "Check for mandatory participants"
+msgstr ""
+
+#: wbcrm/dynamic_preferences_registry.py:17
+msgid ""
+"Determines whether or not companies must be entered as participants in the "
+"\"Companies\" field for activities."
+msgstr ""
+
+#: wbcrm/dynamic_preferences_registry.py:28
+msgid "The default Maximum allowed days"
+msgstr ""
+
+#: wbcrm/filters/activities.py:30
+msgid "Types"
+msgstr ""
+
+#: wbcrm/filters/activities.py:39 wbcrm/serializers/activities.py:233
+msgid "Visibility"
+msgstr ""
+
+#: wbcrm/filters/activities.py:43 wbcrm/report/activity_report.py:78
+#: wbcrm/serializers/activities.py:259 wbcrm/templates/email/activity.html:80
+#: wbcrm/viewsets/display/activities.py:72
+#: wbcrm/viewsets/display/activities.py:76
+#: wbcrm/viewsets/display/activities.py:375
+msgid "Participants"
+msgstr ""
+
+#: wbcrm/filters/activities.py:51 wbcrm/serializers/activities.py:253
+#: wbcrm/viewsets/display/activities.py:376
+msgid "Companies"
+msgstr ""
+
+#: wbcrm/filters/activities.py:59 wbcrm/models/activities.py:433
+#: wbcrm/models/groups.py:20 wbcrm/viewsets/display/activities.py:377
+#: wbcrm/viewsets/menu/groups.py:6
+msgid "Groups"
+msgstr ""
+
+#: wbcrm/filters/activities.py:69
+msgid "Clients of"
+msgstr ""
+
+#: wbcrm/filters/activities.py:79
+msgid "Latest Reviewers"
+msgstr ""
+
+#: wbcrm/filters/activities.py:87 wbcrm/models/activities.py:355
+msgid "Importance"
+msgstr ""
+
+#: wbcrm/filters/activities.py:91 wbcrm/models/activities.py:379
+msgid "Created"
+msgstr ""
+
+#: wbcrm/filters/activities.py:94 wbcrm/models/activities.py:399
+#: wbcrm/viewsets/display/activities.py:378
+msgid "Edited"
+msgstr ""
+
+#: wbcrm/filters/activities.py:97
+msgid "Only Recent"
+msgstr ""
+
+#: wbcrm/filters/activities.py:100 wbcrm/viewsets/titles/utils.py:13
+msgid "Customer Status"
+msgstr ""
+
+#: wbcrm/filters/activities.py:165 wbcrm/models/activities.py:247
+#: wbcrm/serializers/activities.py:483
+msgid "Status"
+msgstr ""
+
+#: wbcrm/filters/activities.py:175
+msgid "Multipliers"
+msgstr ""
+
+#: wbcrm/filters/activities.py:189
+msgid "Is occupied by different activity"
+msgstr ""
+
+#: wbcrm/filters/groups.py:10 wbcrm/models/groups.py:16
+#: wbcrm/viewsets/display/groups.py:17
+msgid "Members"
+msgstr ""
+
+#: wbcrm/filters/products.py:10 wbcrm/models/products.py:52
+#: wbcrm/viewsets/display/products.py:29
+msgid "Prospects"
+msgstr ""
+
+#: wbcrm/filters/products.py:26 wbcrm/models/products.py:43
+#: wbcrm/viewsets/display/products.py:28 wbcrm/viewsets/display/products.py:59
+msgid "Is Competitor"
+msgstr ""
+
+#: wbcrm/filters/signals.py:74
+msgid "No Activity"
+msgstr ""
+
+#: wbcrm/filters/signals.py:78
+msgid "Last Month"
+msgstr ""
+
+#: wbcrm/filters/signals.py:79
+msgid "Last 3 Months"
+msgstr ""
+
+#: wbcrm/filters/signals.py:80
+msgid "Last 6 Months"
+msgstr ""
+
+#: wbcrm/filters/signals.py:81
+msgid "Last 12 Months"
+msgstr ""
+
+#: wbcrm/filters/signals.py:82
+msgid "All Time"
+msgstr ""
+
+#: wbcrm/kpi_handlers/activities.py:18 wbcrm/models/activities.py:126
+#: wbcrm/viewsets/titles/activities.py:13
+msgid "Activity Type"
+msgstr ""
+
+#: wbcrm/kpi_handlers/activities.py:24
+msgid "Only Internal"
+msgstr ""
+
+#: wbcrm/kpi_handlers/activities.py:24
+msgid "Only External"
+msgstr ""
+
+#: wbcrm/kpi_handlers/activities.py:24
+msgid "All"
+msgstr ""
+
+#: wbcrm/kpi_handlers/activities.py:28
+msgid "Participants of Activity"
+msgstr ""
+
+#: wbcrm/kpi_handlers/activities.py:29
+msgid "Activities considered are related to the participants"
+msgstr ""
+
+#: wbcrm/kpi_handlers/activities.py:32
+msgid "Creator of activity"
+msgstr ""
+
+#: wbcrm/kpi_handlers/activities.py:32
+msgid "Activities considered are related to the creator"
+msgstr ""
+
+#: wbcrm/kpi_handlers/activities.py:36
+msgid "Person Assigned"
+msgstr ""
+
+#: wbcrm/kpi_handlers/activities.py:37
+msgid "Activities considered are related to the persons assigned"
+msgstr ""
+
+#: wbcrm/kpi_handlers/activities.py:95
+msgid "Number of Activities"
+msgstr ""
+
+#: wbcrm/kpi_handlers/activities.py:114
+#, python-brace-format
+msgid "Activity Type: {types}"
+msgstr ""
+
+#: wbcrm/kpi_handlers/activities.py:115
+#, python-brace-format
+msgid "Activity Area: {area}"
+msgstr ""
+
+#: wbcrm/kpi_handlers/activities.py:116
+#, python-brace-format
+msgid "Person Participates: {participating}"
+msgstr ""
+
+#: wbcrm/kpi_handlers/activities.py:117
+#, python-brace-format
+msgid "Person Created: {created}"
+msgstr ""
+
+#: wbcrm/kpi_handlers/activities.py:118
+#, python-brace-format
+msgid "Person Assigned: {assigned}"
+msgstr ""
+
+#: wbcrm/models/accounts.py:93
+msgid "Pending"
+msgstr ""
+
+#: wbcrm/models/accounts.py:94
+msgid "Open"
+msgstr ""
+
+#: wbcrm/models/accounts.py:95
+msgid "Close"
+msgstr ""
+
+#: wbcrm/models/accounts.py:99
+msgid "Relationship Status"
+msgstr ""
+
+#: wbcrm/models/accounts.py:100
+msgid ""
+"The Relationship Status from 1 to 5. 1 being the cold and 5 being the hot."
+msgstr ""
+
+#: wbcrm/models/accounts.py:116
+msgid "Parent Account"
+msgstr ""
+
+#: wbcrm/models/accounts.py:132
+msgid "Owner"
+msgstr ""
+
+#: wbcrm/models/accounts.py:341
+msgid "Account"
+msgstr ""
+
+#: wbcrm/models/accounts.py:342
+msgid "Accounts"
+msgstr ""
+
+#: wbcrm/models/accounts.py:510
+msgid "authorized Hidden Users"
+msgstr ""
+
+#: wbcrm/models/accounts.py:511
+msgid "List of users that are allowed to see this hidden account role"
+msgstr ""
+
+#: wbcrm/models/activities.py:74 wbcrm/models/groups.py:15
+#: wbcrm/models/products.py:33 wbcrm/report/activity_report.py:72
+#: wbcrm/serializers/activities.py:274 wbcrm/viewsets/display/activities.py:45
+#: wbcrm/viewsets/display/activities.py:372
+#: wbcrm/viewsets/display/products.py:27
+msgid "Title"
+msgstr ""
+
+#: wbcrm/models/activities.py:90
+msgid "Activity Heat Multiplier"
+msgstr ""
+
+#: wbcrm/models/activities.py:97
+msgid ""
+"Used for the activity heat calculation. Multipliers range from low (i.e. e-"
+"mail) to medium (i.e. call) and high (i.e. meeting)."
+msgstr ""
+
+#: wbcrm/models/activities.py:127 wbcrm/viewsets/menu/activities.py:21
+#: wbcrm/viewsets/titles/activities.py:7
+msgid "Activity Types"
+msgstr ""
+
+#: wbcrm/models/activities.py:160
+msgid "LLM Summary"
+msgstr ""
+
+#: wbcrm/models/activities.py:164
+msgid "Online Meeting"
+msgstr ""
+
+#: wbcrm/models/activities.py:165
+msgid "Check this if it happens online"
+msgstr ""
+
+#: wbcrm/models/activities.py:169 wbcrm/models/activities.py:1056
+msgid "Cancelled"
+msgstr ""
+
+#: wbcrm/models/activities.py:170
+msgid "Planned"
+msgstr ""
+
+#: wbcrm/models/activities.py:171
+msgid "Finished"
+msgstr ""
+
+#: wbcrm/models/activities.py:172
+msgid "Reviewed"
+msgstr ""
+
+#: wbcrm/models/activities.py:185
+msgid "Low"
+msgstr ""
+
+#: wbcrm/models/activities.py:186
+msgid "Medium"
+msgstr ""
+
+#: wbcrm/models/activities.py:187
+msgid "High"
+msgstr ""
+
+#: wbcrm/models/activities.py:190 wbcrm/models/recurrence.py:21
+msgid "Never"
+msgstr ""
+
+#: wbcrm/models/activities.py:191
+msgid "At time of event"
+msgstr ""
+
+#: wbcrm/models/activities.py:192
+msgid "5 minutes before"
+msgstr ""
+
+#: wbcrm/models/activities.py:193
+msgid "15 minutes before"
+msgstr ""
+
+#: wbcrm/models/activities.py:194
+msgid "30 minutes before"
+msgstr ""
+
+#: wbcrm/models/activities.py:195
+msgid "1 hour before"
+msgstr ""
+
+#: wbcrm/models/activities.py:196
+msgid "2 hour before"
+msgstr ""
+
+#: wbcrm/models/activities.py:197
+msgid "12 hour before"
+msgstr ""
+
+#: wbcrm/models/activities.py:198
+msgid "1 week before"
+msgstr ""
+
+#: wbcrm/models/activities.py:217 wbcrm/models/activities.py:1024
+#: wbcrm/models/activities.py:1066 wbcrm/serializers/activities.py:480
+msgid "Activity"
+msgstr ""
+
+#: wbcrm/models/activities.py:218 wbcrm/viewsets/buttons/signals.py:17
+#: wbcrm/viewsets/menu/activities.py:39 wbcrm/viewsets/titles/activities.py:46
+msgid "Activities"
+msgstr ""
+
+#: wbcrm/models/activities.py:222
+msgid "Activity Participant"
+msgstr ""
+
+#: wbcrm/models/activities.py:223
+msgid "User notification when addeded to an activity."
+msgstr ""
+
+#: wbcrm/models/activities.py:227
+msgid "Activity Reminder"
+msgstr ""
+
+#: wbcrm/models/activities.py:228
+msgid "Sends a reminder that an activity is starting soon."
+msgstr ""
+
+#: wbcrm/models/activities.py:232
+msgid "Finished Activity"
+msgstr ""
+
+#: wbcrm/models/activities.py:233
+msgid "Notifies a user of a finished activity that can be reviewed."
+msgstr ""
+
+#: wbcrm/models/activities.py:237
+msgid "Daily Summary"
+msgstr ""
+
+#: wbcrm/models/activities.py:238
+msgid "Sends out a daily summary of a user's upcoming day."
+msgstr ""
+
+#: wbcrm/models/activities.py:242
+msgid "Activity Sync Irregularities"
+msgstr ""
+
+#: wbcrm/models/activities.py:243
+msgid "Admin notification to inform about irregularities of the activity sync."
+msgstr ""
+
+#: wbcrm/models/activities.py:260 wbcrm/models/activities.py:261
+msgid "Finish"
+msgstr ""
+
+#: wbcrm/models/activities.py:262
+msgid "Are you sure you want to finish this activity?"
+msgstr ""
+
+#: wbcrm/models/activities.py:273
+msgid "In this status this has to be provided."
+msgstr ""
+
+#: wbcrm/models/activities.py:288
+msgctxt "Transition button label for Reviews"
+msgid "Review"
+msgstr ""
+
+#: wbcrm/models/activities.py:289
+msgctxt "Transition action label for Reviews"
+msgid "Review"
+msgstr ""
+
+#: wbcrm/models/activities.py:301
+msgid "When reviewing an activity a result has to be provided!"
+msgstr ""
+
+#: wbcrm/models/activities.py:309
+#, python-brace-format
+msgid "You need to enter an employer for {persons}"
+msgid_plural "You need to enter an employer for: {persons}"
+msgstr[0] ""
+msgstr[1] ""
+
+#: wbcrm/models/activities.py:319
+#, python-brace-format
+msgid "You need to enter an employee for {companies}"
+msgid_plural "You need to enter an employee for: {companies}"
+msgstr[0] ""
+msgstr[1] ""
+
+#: wbcrm/models/activities.py:337 wbcrm/models/activities.py:338
+msgid "Cancel"
+msgstr ""
+
+#: wbcrm/models/activities.py:339
+msgid "Are you sure you want to cancel this activity?"
+msgstr ""
+
+#: wbcrm/models/activities.py:346 wbcrm/templates/email/activity.html:66
+#: wbcrm/viewsets/display/activities.py:380
+msgid "Description"
+msgstr ""
+
+#: wbcrm/models/activities.py:347
+msgid "Review"
+msgstr ""
+
+#: wbcrm/models/activities.py:352 wbcrm/viewsets/display/activities.py:371
+msgid "Type"
+msgstr ""
+
+#: wbcrm/models/activities.py:358 wbcrm/report/activity_report.py:73
+msgid "Start"
+msgstr ""
+
+#: wbcrm/models/activities.py:359
+msgid "End"
+msgstr ""
+
+#: wbcrm/models/activities.py:365
+msgid "Reminder"
+msgstr ""
+
+#: wbcrm/models/activities.py:367
+msgid ""
+"Sends a mail and system notification to all participating internal employees "
+"before the start of the activity."
+msgstr ""
+
+#: wbcrm/models/activities.py:371 wbcrm/report/activity_report.py:75
+msgid "Location"
+msgstr ""
+
+#: wbcrm/models/activities.py:374
+msgid "Longitude"
+msgstr ""
+
+#: wbcrm/models/activities.py:377
+msgid "Latitude"
+msgstr ""
+
+#: wbcrm/models/activities.py:386 wbcrm/report/activity_report.py:76
+msgid "Creator"
+msgstr ""
+
+#: wbcrm/models/activities.py:387
+msgid "The creator of this activity"
+msgstr ""
+
+#: wbcrm/models/activities.py:395 wbcrm/viewsets/display/activities.py:382
+msgid "Latest Reviewer"
+msgstr ""
+
+#: wbcrm/models/activities.py:396
+msgid "The latest person to review the activity"
+msgstr ""
+
+#: wbcrm/models/activities.py:398
+msgid "Reviewed at"
+msgstr ""
+
+#: wbcrm/models/activities.py:406 wbcrm/report/activity_report.py:77
+#: wbcrm/serializers/activities.py:238
+msgid "Assigned to"
+msgstr ""
+
+#: wbcrm/models/activities.py:407
+msgid "The person in charge of handling this activity"
+msgstr ""
+
+#: wbcrm/models/activities.py:413
+msgid "Participating Companies"
+msgstr ""
+
+#: wbcrm/models/activities.py:414
+msgid ""
+"The list of companies other than the main company that participate in this "
+"activity"
+msgstr ""
+
+#: wbcrm/models/activities.py:423
+msgid "Participating Persons"
+msgstr ""
+
+#: wbcrm/models/activities.py:424
+msgid "The list of participants"
+msgstr ""
+
+#: wbcrm/models/activities.py:434
+msgid ""
+"Each member of the group will be added to the list of participants and "
+"companies automatically."
+msgstr ""
+
+#: wbcrm/models/activities.py:442
+msgid "Preceded by"
+msgstr ""
+
+#: wbcrm/models/activities.py:443
+msgid "The preceding activity"
+msgstr ""
+
+#: wbcrm/models/activities.py:447
+msgid "Without Participating Company"
+msgstr ""
+
+#: wbcrm/models/activities.py:609
+#, python-brace-format
+msgid "You did not supply an employer for {persons}<br />"
+msgid_plural ""
+"For the following participants you did not supply an employer: {persons}<br /"
+">"
+msgstr[0] ""
+msgstr[1] ""
+
+#: wbcrm/models/activities.py:619
+#, python-brace-format
+msgid "You did not supply an employee for {companies}<br />"
+msgid_plural ""
+"For the following companies you did not supply an employee: {companies}<br />"
+msgstr[0] ""
+msgstr[1] ""
+
+#: wbcrm/models/activities.py:637
+msgid "Period needs to be set for recurrence to work!"
+msgstr ""
+
+#: wbcrm/models/activities.py:984
+msgid " starting at the {} at {}"
+msgstr ""
+
+#: wbcrm/models/activities.py:990
+msgid "{} added you"
+msgstr ""
+
+#: wbcrm/models/activities.py:992
+msgid "You were automatically added"
+msgstr ""
+
+#: wbcrm/models/activities.py:997
+msgid "{} as participant in a {}{}"
+msgstr ""
+
+#: wbcrm/models/activities.py:1030 wbcrm/models/products.py:18
+msgid "Company"
+msgstr ""
+
+#: wbcrm/models/activities.py:1037
+msgid "Initial Customer Status"
+msgstr ""
+
+#: wbcrm/models/activities.py:1038
+msgid "The Customer Status at activity creation time"
+msgstr ""
+
+#: wbcrm/models/activities.py:1057 wbcrm/models/activities.py:1149
+msgid "Maybe"
+msgstr ""
+
+#: wbcrm/models/activities.py:1058
+msgid "Attends"
+msgstr ""
+
+#: wbcrm/models/activities.py:1059
+msgid "Not Responded"
+msgstr ""
+
+#: wbcrm/models/activities.py:1060
+msgid "Attends Digitally"
+msgstr ""
+
+#: wbcrm/models/activities.py:1061
+msgid "Pending Invitation"
+msgstr ""
+
+#: wbcrm/models/activities.py:1072 wbcrm/viewsets/display/activities.py:400
+msgid "Participant"
+msgstr ""
+
+#: wbcrm/models/activities.py:1078 wbcrm/viewsets/display/activities.py:401
+#: wbcrm/viewsets/titles/activities.py:56
+msgid "Participation Status"
+msgstr ""
+
+#: wbcrm/models/activities.py:1083
+#, python-brace-format
+msgid "Status of {participant} for activity {title} is: {status}"
+msgstr ""
+
+#: wbcrm/models/activities.py:1091
+msgid "Activity's Participant"
+msgstr ""
+
+#: wbcrm/models/activities.py:1092
+msgid "Activities' Participants"
+msgstr ""
+
+#: wbcrm/models/activities.py:1150
+msgid "Setting Maybe"
+msgstr ""
+
+#: wbcrm/models/activities.py:1174
+msgid "Accept"
+msgstr ""
+
+#: wbcrm/models/activities.py:1175
+msgid "Accepting"
+msgstr ""
+
+#: wbcrm/models/activities.py:1176
+msgid "Are you sure you want to participate in this activity?"
+msgstr ""
+
+#: wbcrm/models/activities.py:1201
+msgid "Attend Digitally"
+msgstr ""
+
+#: wbcrm/models/activities.py:1202
+msgid "Setting Attendance"
+msgstr ""
+
+#: wbcrm/models/activities.py:1203
+msgid "Are you sure you want to attend digitally in this activity?"
+msgstr ""
+
+#: wbcrm/models/activities.py:1227 wbcrm/models/activities.py:1228
+msgid "Decline"
+msgstr ""
+
+#: wbcrm/models/activities.py:1229
+msgid "Are you sure you want to decline to participate in this activity?"
+msgstr ""
+
+#: wbcrm/models/activities.py:1247
+msgid "Resend Invitation"
+msgstr ""
+
+#: wbcrm/models/activities.py:1248
+msgid "Resending Invitation"
+msgstr ""
+
+#: wbcrm/models/activities.py:1250
+msgid ""
+"Are you sure you want to send this person an invitation to participate in "
+"this activity again?"
+msgstr ""
+
+#: wbcrm/models/groups.py:19
+msgid "Group"
+msgstr ""
+
+#: wbcrm/models/products.py:12 wbcrm/models/products.py:77
+#: wbcrm/viewsets/display/products.py:58 wbcrm/viewsets/titles/products.py:13
+msgid "Product"
+msgstr ""
+
+#: wbcrm/models/products.py:26
+msgid "Company-Product Relationship"
+msgstr ""
+
+#: wbcrm/models/products.py:27
+msgid "Company-Product Relationships"
+msgstr ""
+
+#: wbcrm/models/products.py:45
+msgid "Indicates wether this is a competitor's product"
+msgstr ""
+
+#: wbcrm/models/products.py:53
+msgid "The list of prospects"
+msgstr ""
+
+#: wbcrm/models/products.py:62
+msgid "{} (Competitor)"
+msgstr ""
+
+#: wbcrm/models/products.py:78 wbcrm/viewsets/menu/products.py:6
+#: wbcrm/viewsets/titles/products.py:7
+msgid "Products"
+msgstr ""
+
+#: wbcrm/models/recurrence.py:22
+msgid "Business Daily"
+msgstr ""
+
+#: wbcrm/models/recurrence.py:23
+msgid "Daily"
+msgstr ""
+
+#: wbcrm/models/recurrence.py:24
+msgid "Weekly"
+msgstr ""
+
+#: wbcrm/models/recurrence.py:25
+msgid "Bi-Weekly"
+msgstr ""
+
+#: wbcrm/models/recurrence.py:26
+msgid "Monthly"
+msgstr ""
+
+#: wbcrm/models/recurrence.py:27
+msgid "Quarterly"
+msgstr ""
+
+#: wbcrm/models/recurrence.py:28
+msgid "Annually"
+msgstr ""
+
+#: wbcrm/models/recurrence.py:35 wbcrm/viewsets/buttons/activities.py:24
+msgid "Parent Activity"
+msgstr ""
+
+#: wbcrm/models/recurrence.py:40
+msgid "Propagate for all following activities?"
+msgstr ""
+
+#: wbcrm/models/recurrence.py:41
+msgid ""
+"If this is checked, changes will be propagated to the following activities."
+msgstr ""
+
+#: wbcrm/models/recurrence.py:45
+msgid "Exclude occurrence from propagation?"
+msgstr ""
+
+#: wbcrm/models/recurrence.py:46
+msgid "If this is checked, changes will not be propagated on this activity."
+msgstr ""
+
+#: wbcrm/models/recurrence.py:49
+msgid "Date"
+msgstr ""
+
+#: wbcrm/models/recurrence.py:53
+msgid ""
+"Specifies until when an event is to be repeated. Is mutually exclusive with "
+"the Recurrence Count."
+msgstr ""
+
+#: wbcrm/models/recurrence.py:60
+msgid "Count"
+msgstr ""
+
+#: wbcrm/models/recurrence.py:62
+msgid ""
+"Specifies how often an activity should be repeated excluding the original "
+"activity. Is mutually exclusive with the end date. Limited to a maximum of "
+"365 recurrences."
+msgstr ""
+
+#: wbcrm/models/recurrence.py:69
+msgid "Recurrence Frequency"
+msgstr ""
+
+#: wbcrm/models/recurrence.py:70
+msgid "Repeat activity at the specified frequency"
+msgstr ""
+
+#: wbcrm/report/activity_report.py:43
+msgid "Report"
+msgstr ""
+
+#: wbcrm/report/activity_report.py:46
+msgid "all"
+msgstr ""
+
+#: wbcrm/report/activity_report.py:74
+msgid "Duration (hours)"
+msgstr ""
+
+#: wbcrm/report/activity_report.py:80
+msgid "Total"
+msgstr ""
+
+#: wbcrm/serializers/accounts.py:122
+msgid ""
+"The selected entry does not have an associated user account. Note: "
+"Notifications cannot be sent to users without an account."
+msgstr ""
+
+#: wbcrm/serializers/activities.py:51
+msgid "Cannot add a duplicate activity type."
+msgstr ""
+
+#: wbcrm/serializers/activities.py:126 wbcrm/viewsets/titles/activities.py:20
+msgid "Private Activity"
+msgstr ""
+
+#: wbcrm/serializers/activities.py:126 wbcrm/viewsets/titles/activities.py:23
+msgid "Confidential Activity"
+msgstr ""
+
+#: wbcrm/serializers/activities.py:226
+msgid "Recurrence End"
+msgstr ""
+
+#: wbcrm/serializers/activities.py:231
+msgid ""
+"Set to private for the activity to hide sensitive information from anyone "
+"but the assignee and participants. Set to confidential to hide from anyone "
+"but users with manager permissions."
+msgstr ""
+
+#: wbcrm/serializers/activities.py:262 wbcrm/viewsets/display/activities.py:374
+msgid "Period"
+msgstr ""
+
+#: wbcrm/serializers/activities.py:313
+msgid "Please add an activity type."
+msgstr ""
+
+#: wbcrm/serializers/activities.py:331
+msgid "A private activity already uses this conference room at the same time."
+msgstr ""
+
+#: wbcrm/serializers/activities.py:342
+msgid ""
+"A confidential activity already uses this conference room at the same time."
+msgstr ""
+
+#: wbcrm/serializers/activities.py:350
+#, python-brace-format
+msgid ""
+"The activity \"{title}\" already uses this conference room at the same time."
+msgstr ""
+
+#: wbcrm/serializers/activities.py:392
+msgid "is a member"
+msgstr ""
+
+#: wbcrm/serializers/activities.py:395
+msgid " and"
+msgstr ""
+
+#: wbcrm/serializers/activities.py:396
+msgid "are members"
+msgstr ""
+
+#: wbcrm/serializers/activities.py:402
+#, python-brace-format
+msgid ""
+"{missing_members} {util_str} of the group: {groups}\n"
+". You cannot remove members of selected groups."
+msgid_plural ""
+"{missing_members} {util_str} of the following group(s): {groups}\n"
+". You cannot remove members of selected groups."
+msgstr[0] ""
+msgstr[1] ""
+
+#: wbcrm/serializers/activities.py:485 wbcrm/viewsets/display/activities.py:403
+msgid "Position"
+msgstr ""
+
+#: wbcrm/serializers/activities.py:487
+msgid "Primary Telephone"
+msgstr ""
+
+#: wbcrm/serializers/activities.py:490 wbcrm/viewsets/display/activities.py:404
+msgid "Primary Email"
+msgstr ""
+
+#: wbcrm/serializers/activities.py:503
+msgid "The person is already a participant in this activity."
+msgstr ""
+
+#: wbcrm/serializers/products.py:46
+msgid "competitor "
+msgstr ""
+
+#: wbcrm/serializers/products.py:47
+msgid "Cannot add a duplicate {}product."
+msgstr ""
+
+#: wbcrm/serializers/recurrence.py:58
+msgid "Please provide a valid timeframe."
+msgstr ""
+
+#: wbcrm/serializers/recurrence.py:61
+msgid ""
+"You can only pick either a recurrence count or an end date but not both."
+msgstr ""
+
+#: wbcrm/serializers/recurrence.py:76
+msgid ""
+"The \"Repeat Until\" date needs to be after the \"Recurrence Start\" date."
+msgstr ""
+
+#: wbcrm/serializers/recurrence.py:81
+msgid "Period must correspond to the recurrence 'Business Daily'"
+msgstr ""
+
+#: wbcrm/serializers/recurrence.py:89
+msgid "It is only possible to change the time of the period of an occurrence."
+msgstr ""
+
+#: wbcrm/serializers/signals.py:39
+#, python-brace-format
+msgid "Call with {name}"
+msgstr ""
+
+#: wbcrm/synchronization/activity/admin.py:34
+msgid "Operation completed, we have set the webhook for {} users."
+msgstr ""
+
+#: wbcrm/synchronization/activity/admin.py:39
+#: wbcrm/synchronization/activity/admin.py:53
+#: wbcrm/synchronization/activity/admin.py:67
+msgid "Operation Failed, {}"
+msgstr ""
+
+#: wbcrm/synchronization/activity/admin.py:48
+msgid "Operation completed, we have stopped the webhook for {} users."
+msgstr ""
+
+#: wbcrm/synchronization/activity/admin.py:62
+msgid "Operation completed, we checked the webhook for {} users."
+msgstr ""
+
+#: wbcrm/synchronization/activity/backend.py:188
+msgid "Notify admins of event webhook inconsistencies - {}"
+msgstr ""
+
+#: wbcrm/synchronization/activity/backends/google/google_calendar_backend.py:37
+msgid ""
+"The Google credentials are not set. You cannot use the Google Calendar "
+"Backend without the Google credentials."
+msgstr ""
+
+#: wbcrm/synchronization/activity/backends/google/google_calendar_backend.py:39
+msgid "Could not create the Google service. Exception: "
+msgstr ""
+
+#: wbcrm/synchronization/activity/backends/google/google_calendar_backend.py:40
+msgid "Could not create the external google event. Exception: "
+msgstr ""
+
+#: wbcrm/synchronization/activity/backends/google/google_calendar_backend.py:41
+msgid "Could not delete a corresponding external event. Exception: "
+msgstr ""
+
+#: wbcrm/synchronization/activity/backends/google/google_calendar_backend.py:42
+msgid "Could not update the external google-event. Exception: "
+msgstr ""
+
+#: wbcrm/synchronization/activity/backends/google/google_calendar_backend.py:44
+msgid ""
+"Could not update the participation status on the google-event. Exception: "
+msgstr ""
+
+#: wbcrm/synchronization/activity/backends/google/google_calendar_backend.py:46
+msgid "Couldn't sync with google calendar. Exception:"
+msgstr ""
+
+#: wbcrm/synchronization/activity/backends/google/google_calendar_backend.py:47
+msgid "Could not set the google web hook for the user: "
+msgstr ""
+
+#: wbcrm/synchronization/activity/backends/google/google_calendar_backend.py:394
+msgid "Timestamp valid until:"
+msgstr ""
+
+#: wbcrm/synchronization/activity/backends/google/google_calendar_backend.py:396
+msgid "No valid web hook found"
+msgstr ""
+
+#: wbcrm/synchronization/activity/backends/outlook/backend.py:382
+msgid "Outlook TenantId not found for: "
+msgstr ""
+
+#: wbcrm/synchronization/activity/backends/outlook/backend.py:397
+msgid " has no active webhook"
+msgstr ""
+
+#: wbcrm/synchronization/activity/backends/outlook/backend.py:405
+msgid "Webhook is invalid, Remove or Stop it and Set again please. "
+msgstr ""
+
+#: wbcrm/synchronization/activity/backends/outlook/backend.py:407
+msgid "Webhook not found. "
+msgstr ""
+
+#: wbcrm/synchronization/activity/backends/outlook/backend.py:416
+msgid ""
+"Number of subscriptions found in outlook for {} out of the total number: {}/"
+"{}."
+msgstr ""
+
+#: wbcrm/synchronization/activity/backends/outlook/backend.py:419
+msgid "TenantId not found for "
+msgstr ""
+
+#: wbcrm/synchronization/activity/backends/outlook/backend.py:456
+msgid "<li>No Call Record subscription found in Microsoft</li>"
+msgstr ""
+
+#: wbcrm/synchronization/activity/backends/outlook/backend.py:461
+msgid ""
+"\n"
+"                <li>Number of calendar subscription not found in our "
+"system : <b>{}</b></li>\n"
+"                <p>{}</p>\n"
+"\n"
+"                <li>Number of calendar subscription assumed to be active not "
+"found in outlook: <b>{}</b></li>\n"
+"                <p>{}</p>\n"
+"            "
+msgstr ""
+
+#: wbcrm/synchronization/activity/dynamic_preferences_registry.py:15
+msgid "Synchronization Backend Calendar"
+msgstr ""
+
+#: wbcrm/synchronization/activity/dynamic_preferences_registry.py:16
+msgid ""
+"The Backend Calendar to synchronize activities with an external calendar."
+msgstr ""
+
+#: wbcrm/synchronization/activity/dynamic_preferences_registry.py:25
+msgid "Synchronization Past Activity"
+msgstr ""
+
+#: wbcrm/synchronization/activity/dynamic_preferences_registry.py:34
+msgid "Cancel Internal Activity Instead Of Deleting"
+msgstr ""
+
+#: wbcrm/synchronization/activity/dynamic_preferences_registry.py:36
+msgid ""
+"When an activity is deleted in an external calendar the corresponding "
+"workbench activity can be cancelled (default) or also deleted."
+msgstr ""
+
+#: wbcrm/synchronization/activity/dynamic_preferences_registry.py:46
+msgid "Cancel External Activity With One Non-Attending Internal Participant"
+msgstr ""
+
+#: wbcrm/synchronization/activity/dynamic_preferences_registry.py:48
+msgid ""
+"When an activity was created by an external person and has only one internal "
+"participant the activity in the workbench can be canceled if this "
+"participant doesn't choose to attend."
+msgstr ""
+
+#: wbcrm/synchronization/activity/dynamic_preferences_registry.py:58
+msgid "Synchronize Activity Description"
+msgstr ""
+
+#: wbcrm/synchronization/activity/dynamic_preferences_registry.py:67
+msgid ""
+"Synchronize External Participants From Internal Calendar To External Calendar"
+msgstr ""
+
+#: wbcrm/synchronization/activity/dynamic_preferences_registry.py:76
+msgid "Create New Activity When Replanning Passed Reviewed Activities"
+msgstr ""
+
+#: wbcrm/synchronization/activity/dynamic_preferences_registry.py:78
+msgid ""
+"If an activity with a past end date (already passed and reviewed) is moved "
+"to a future date, a new activity will automatically be created for the "
+"updated schedule."
+msgstr ""
+
+#: wbcrm/synchronization/activity/dynamic_preferences_registry.py:87
+msgid "Google Synchronization Credentials"
+msgstr ""
+
+#: wbcrm/synchronization/activity/dynamic_preferences_registry.py:96
+msgid "Outlook Synchronization Credentials"
+msgstr ""
+
+#: wbcrm/synchronization/activity/dynamic_preferences_registry.py:106
+msgid "Microsoft Graph Access Token"
+msgstr ""
+
+#: wbcrm/synchronization/activity/dynamic_preferences_registry.py:107
+msgid ""
+"The access token obtained from subscriptions to Microsoft used for "
+"authentication pruposes"
+msgstr ""
+
+#: wbcrm/synchronization/activity/dynamic_preferences_registry.py:116
+msgid "Microsoft Graph Webhook Secret Client State"
+msgstr ""
+
+#: wbcrm/synchronization/activity/dynamic_preferences_registry.py:118
+msgid ""
+"Secret Client Value defined during subscription, it will be injected into "
+"the webhook notification against spoofing"
+msgstr ""
+
+#: wbcrm/tasks.py:90
+#, python-brace-format
+msgid "{type} in {reminder} Minutes"
+msgstr ""
+
+#: wbcrm/tasks.py:154
+msgid "Activity Summary {}"
+msgstr ""
+
+#: wbcrm/tasks.py:203
+msgid "Your Schedule for Today"
+msgstr ""
+
+#: wbcrm/tasks.py:233
+msgid "Activity Finished"
+msgstr ""
+
+#: wbcrm/tasks.py:234
+#, python-brace-format
+msgid ""
+"The activity \"{title}\" just finished and you are in charge of it. Please "
+"review."
+msgstr ""
+
+#: wbcrm/templates/email/activity.html:5
+msgid "This is a reminder for an upcoming "
+msgstr ""
+
+#: wbcrm/templates/email/activity_report.html:4
+msgid "Dear "
+msgstr ""
+
+#: wbcrm/templates/email/activity_report.html:5
+msgid "Attached you will find the requested Excel activity report for"
+msgstr ""
+
+#: wbcrm/templates/email/daily_summary.html:4
+msgid "You have"
+msgstr ""
+
+#: wbcrm/templates/email/daily_summary.html:4
+msgid "Activities today"
+msgstr ""
+
+#: wbcrm/templates/email/global_daily_summary.html:12
+#, python-format
+msgid "There were %(activities_count)s activities on %(report_date)s."
+msgstr ""
+
+#: wbcrm/viewsets/activities.py:197
+msgid ""
+"You can only modify the review text for an activity that is either cancelled "
+"or already reviewed."
+msgstr ""
+
+#: wbcrm/viewsets/activities.py:204
+msgid ""
+"This activity was created by an external user and synchronized. The "
+"modification is restricted."
+msgstr ""
+
+#: wbcrm/viewsets/activities.py:226
+msgid ""
+"There are more participants currently participating in this activity than "
+"the maximum capacity of the selected conference room allows."
+msgstr ""
+
+#: wbcrm/viewsets/activities.py:283
+msgid "<b>User Activity</b>"
+msgstr ""
+
+#: wbcrm/viewsets/buttons/activities.py:12
+msgid ""
+"<p> Are you sure you want to delete all the future instances of this "
+"activity? <br>     Only 'Planned' and 'Canceled' activities will be deleted. "
+"<br>    Depending on the number of activities to be deleted <br>     it may "
+"take some time until the deleted activities are no longer displayed in the "
+"activity list. </p>"
+msgstr ""
+
+#: wbcrm/viewsets/buttons/activities.py:30
+msgid "Delete Next Occurrences"
+msgstr ""
+
+#: wbcrm/viewsets/buttons/activities.py:33
+#: wbcrm/viewsets/buttons/activities.py:34
+msgid "Delete"
+msgstr ""
+
+#: wbcrm/viewsets/buttons/activities.py:37
+msgid "Next Activity"
+msgstr ""
+
+#: wbcrm/viewsets/buttons/activities.py:39
+msgid "Previous Activity"
+msgstr ""
+
+#: wbcrm/viewsets/buttons/activities.py:67
+msgid "Show Participants' Activities"
+msgstr ""
+
+#: wbcrm/viewsets/display/activities.py:46
+msgid "Icon"
+msgstr ""
+
+#: wbcrm/viewsets/display/activities.py:47
+msgid "Color"
+msgstr ""
+
+#: wbcrm/viewsets/display/activities.py:48
+msgid "Multiplier"
+msgstr ""
+
+#: wbcrm/viewsets/display/activities.py:49
+msgid "Is Default"
+msgstr ""
+
+#: wbcrm/viewsets/display/activities.py:92
+#: wbcrm/viewsets/display/activities.py:181
+#: wbcrm/viewsets/display/activities.py:297
+msgid "Main Information"
+msgstr ""
+
+#: wbcrm/viewsets/display/activities.py:147
+#: wbcrm/viewsets/display/activities.py:229
+#: wbcrm/viewsets/display/activities.py:342
+msgid "Additional Information"
+msgstr ""
+
+#: wbcrm/viewsets/display/activities.py:217
+msgid "Participant Information"
+msgstr ""
+
+#: wbcrm/viewsets/display/activities.py:273
+#: wbcrm/viewsets/display/activities.py:277
+msgid "Repeat Until"
+msgstr ""
+
+#: wbcrm/viewsets/display/activities.py:370
+msgid "Sentiment"
+msgstr ""
+
+#: wbcrm/viewsets/display/activities.py:373
+msgid "Summary"
+msgstr ""
+
+#: wbcrm/viewsets/display/activities.py:379
+msgctxt "As a table header"
+msgid "Created"
+msgstr ""
+
+#: wbcrm/viewsets/display/activities.py:381
+msgctxt "As a table header"
+msgid "Review"
+msgstr ""
+
+#: wbcrm/viewsets/display/activities.py:402
+msgid "Status Changed"
+msgstr ""
+
+#: wbcrm/viewsets/display/activities.py:405
+msgid "Primary Phone Number"
+msgstr ""
+
+#: wbcrm/viewsets/display/activities.py:413
+msgid "Is Available"
+msgstr ""
+
+#: wbcrm/viewsets/display/activities.py:418
+msgid "Is Occupied"
+msgstr ""
+
+#: wbcrm/viewsets/display/groups.py:16
+msgid "Name"
+msgstr ""
+
+#: wbcrm/viewsets/display/products.py:71
+msgid "Interests"
+msgstr ""
+
+#: wbcrm/viewsets/display/products.py:80 wbcrm/viewsets/display/products.py:85
+msgid "Interested Products"
+msgstr ""
+
+#: wbcrm/viewsets/menu/activities.py:28
+msgid "Create Activity Type"
+msgstr ""
+
+#: wbcrm/viewsets/menu/activities.py:46
+msgid "Create Activity"
+msgstr ""
+
+#: wbcrm/viewsets/menu/activities.py:55 wbcrm/viewsets/titles/activities.py:61
+msgid "Activity Chart"
+msgstr ""
+
+#: wbcrm/viewsets/menu/groups.py:10
+msgid "Create Groups"
+msgstr ""
+
+#: wbcrm/viewsets/menu/products.py:13
+msgid "Create Product"
+msgstr ""
+
+#: wbcrm/viewsets/recurrence.py:24
+#, python-brace-format
+msgid "This is a recurring occurrence with period {repeat_choice}"
+msgstr ""
+
+#: wbcrm/viewsets/titles/activities.py:10
+msgid "New Activity Type"
+msgstr ""
+
+#: wbcrm/viewsets/titles/activities.py:25
+msgid "Activity: {{title}}"
+msgstr ""
+
+#: wbcrm/viewsets/titles/activities.py:30
+msgid "Delete Private Activity"
+msgstr ""
+
+#: wbcrm/viewsets/titles/activities.py:33
+msgid "Delete Confidential Activity"
+msgstr ""
+
+#: wbcrm/viewsets/titles/activities.py:35
+msgid "Delete Activity: {{title}}"
+msgstr ""
+
+#: wbcrm/viewsets/titles/activities.py:40
+#, python-brace-format
+msgid "Activities for {person}"
+msgstr ""
+
+#: wbcrm/viewsets/titles/activities.py:42
+msgid "Activities for Multiple Persons"
+msgstr ""
+
+#: wbcrm/viewsets/titles/activities.py:45
+msgid "Activities for {}"
+msgstr ""
+
+#: wbcrm/viewsets/titles/activities.py:50
+#, python-brace-format
+msgid "New Activity for {entry}"
+msgstr ""
+
+#: wbcrm/viewsets/titles/activities.py:51
+msgid "New Activity"
+msgstr ""
+
+#: wbcrm/viewsets/titles/products.py:10
+msgid "Add Product"
+msgstr ""
+
+#: wbcrm/viewsets/titles/utils.py:7
+msgid "Customer Statuses"
+msgstr ""
+
+#: wbcrm/viewsets/titles/utils.py:10
+msgid "New Customer Status"
+msgstr ""
+
+#: wbcrm/viewsets/titles/utils.py:18
+msgid "Company Positions"
+msgstr ""
+
+#: wbcrm/viewsets/titles/utils.py:21
+msgid "New Company Position"
+msgstr ""
+
+#: wbcrm/viewsets/titles/utils.py:24
+msgid "Company Position"
+msgstr ""
+
+#: wbcrm/viewsets/titles/utils.py:29
+msgid "Company Types"
+msgstr ""
+
+#: wbcrm/viewsets/titles/utils.py:32
+msgid "New Company Type"
+msgstr ""
+
+#: wbcrm/viewsets/titles/utils.py:35
+msgid "Company Type"
+msgstr ""
+
+#: wbcrm/viewsets/titles/utils.py:40
+msgid "Specializations"
+msgstr ""
+
+#: wbcrm/viewsets/titles/utils.py:43
+msgid "New Specialization"
+msgstr ""
+
+#: wbcrm/viewsets/titles/utils.py:46
+msgid "Specialization"
+msgstr ""
+
+#: wbcrm/workflows/assignee_methods.py:18
+msgid "Assignee has no user account!"
+msgstr ""
+
+#: wbcrm/workflows/assignee_methods.py:20
+msgid "No activity attached!"
+msgstr ""
+
+#: wbcrm/workflows/assignee_methods.py:23
+msgid "Error in assignee method: {}"
+msgstr ""
