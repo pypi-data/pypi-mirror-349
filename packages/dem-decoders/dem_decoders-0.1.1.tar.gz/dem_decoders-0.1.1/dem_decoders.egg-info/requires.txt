@@ -1,0 +1,13 @@
+numpy
+stim
+scipy
+ldpc
+sinter>=1.15.0
+tqdm
+
+[dev]
+pip-tools
+pytest
+scalene
+black
+pytest-black
