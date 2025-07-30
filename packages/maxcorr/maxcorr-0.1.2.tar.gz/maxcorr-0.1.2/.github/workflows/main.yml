@@ -1,0 +1,31 @@
+name: Main Workflow
+
+on: [push, workflow_dispatch]
+
+jobs:
+    test:
+        strategy:
+            fail-fast: false
+            matrix:
+                # * test on different operative systems
+                # * test minimal versions: python 3.8.0 + lowest full requirements (of direct packages only)
+                # * test latest versions: python 3.12.x + latest full requirements
+                #    (as of today, torch is not compatible with python 3.13)
+                os: ["windows-2022", "macos-13", "ubuntu-20.04"]
+                versions: [["3.8.0", "--resolution lowest-direct .[full]"], ["3.12.x", ".[full]"]]
+        runs-on: ${{ matrix.os }}
+        steps:
+            - uses: actions/checkout@v4
+            - uses: actions/setup-python@v5
+              with:
+                python-version: ${{ matrix.versions[0] }}
+            - name: Install Dependencies
+              run: |
+                python -m pip install --upgrade pip pytest uv
+                uv pip install --upgrade ${{ matrix.versions[1] }} --system
+            - name: Print Versions
+              run: |
+                python --version
+                pip freeze
+            - name: Run Tests
+              run: pytest -rfP
