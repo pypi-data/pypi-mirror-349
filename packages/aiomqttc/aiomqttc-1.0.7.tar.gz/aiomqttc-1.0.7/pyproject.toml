@@ -1,0 +1,64 @@
+[project]
+name = "aiomqttc"
+version = "1.0.7"
+description = "aiomqttc - Asynchronous MQTT Client for Micropython and Python"
+authors = [
+    { name = "Carlos Tangerino", email = "carlos.tangerino@gmail.com" }
+]
+readme = "README.md"
+license = "Unlicense"
+license-files = ["LICENSE"]
+requires-python = ">=3.9"
+keywords = ["micropython", "mqtt", "asyncio", "iot", "client", "EDGE", "aiomqttc"]
+dependencies = [
+    "rich>=14.0.0",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: Implementation :: MicroPython",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Topic :: Software Development :: Embedded Systems",
+    "Topic :: System :: Hardware",
+    "Topic :: Communications",
+    "Topic :: Internet",
+]
+
+[project.urls]
+Homepage = "https://github.com/Tangerino/aiomqttc.git"
+Documentation = "https://github.com/Tangerino/aiomqttc.git"
+Source = "https://github.com/Tangerino/aiomqttc.git"
+Issues = "https://github.com/Tangerino/aiomqttc/issues"
+
+
+
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.4.0",
+    "pre-commit>=3.7.0",
+]
+
+[tool.setuptools]
+py-modules = ["aiomqttc", "main", "wifi", "config"]
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+fix = true
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP"]
+ignore = ["E501", "RUF012"]
+extend-select = ["I", "UP", "RUF"]
+
+[tool.ruff.format]
+quote-style = "preserve"
+line-ending = "auto"
