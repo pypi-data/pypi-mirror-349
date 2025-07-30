@@ -1,0 +1,10 @@
+biocontext/README.md,sha256=VfgH1cKBgGjAd8cxFPhkZnBcuZvbYdiXj3UCU7KyM_A,3021
+biocontext/__init__.py,sha256=tcGXu03akw82FoBksphHtgqbP5uFmaHlqE6paaoeHwM,308
+biocontext/client.py,sha256=7E7NaDjQP-82suLe9-lUlxTvO8pu2rTmfHGuvHvn23o,2215
+biocontext/server.py,sha256=CZovqi_uLR-Gs8GJeOBtSYluuMqKZf3Yv73niL7AgdA,4713
+biocontext/utils/__init__.py,sha256=3K4vLnfC_-SnQo-wB8y5NFmp6a5qxyIK8BNWla959ic,108
+biocontext/utils/string.py,sha256=-r2O4wHRaoFzBVWcnoy0gcRzNCkzEfUJ9aS-nMy3np0,516
+biocontext-0.0.1.dist-info/METADATA,sha256=U9t-QAGDGFqbTOoP2zvY_w061M-UlXBgFlMqXI-rK4Y,3916
+biocontext-0.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+biocontext-0.0.1.dist-info/licenses/LICENSE,sha256=cxuJdzNq8f1pyfch-4XtfN224VoZBRQeTdAWXfUe_Wk,1078
+biocontext-0.0.1.dist-info/RECORD,,
