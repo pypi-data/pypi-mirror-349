@@ -1,0 +1,44 @@
+Metadata-Version: 2.4
+Name: deriv
+Version: 0.0.1a0
+Summary: A highly efficient autodiff library with a NumPy-like API
+Home-page: https://github.com/kandarpa02/cpy-deriv.git
+Author: Kandarpa Sarkar
+Author-email: kandarpaexe@gmail.com
+License: Apache-2.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Cython
+Classifier: Programming Language :: C++
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-python
+Dynamic: summary
+
+# Deriv
+
+Deriv is a highly efficient autodiff library with a NumPy-like API.
+
+This is an early alpha release. APIs will change.
+
+## Features
+
+- Manual gradient engine
+- Cython-accelerated matrix ops
+- NumPy-style syntax
+
+More detailed documentation is coming soon :)
+I have my assignments pending so have to go now :(
