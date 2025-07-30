@@ -1,0 +1,5 @@
+tabulate
+timesketch-api-client
+click
+timesketch-import-client
+pandas
