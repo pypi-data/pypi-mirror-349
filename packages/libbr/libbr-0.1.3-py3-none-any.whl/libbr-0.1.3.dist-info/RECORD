@@ -1,0 +1,9 @@
+libbr/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+libbr/core.py,sha256=C6yllM1PTvAFtmLCKwcvtKilrA4G76-2s6LLDqE3qkA,582
+libbr/layout.py,sha256=VDVd_QJUaYrMj76-sra2B5LbifdxKnxGMixFTiShX0w,1196
+libbr/widgets.py,sha256=1x0ILS9qxe7D0kTwEizAwFomS1GF8IDK8VQI3NAIl3A,2269
+libbr-0.1.3.dist-info/LICENSE,sha256=0axGENsgQhaYRadg0MqN9D45HyhZNC2ycUMVy0ietxU,1106
+libbr-0.1.3.dist-info/METADATA,sha256=1QRjsQ0BxEi5gXl63iiXVKcMS9NUN6Y_oa2eRT2ZwEc,364
+libbr-0.1.3.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+libbr-0.1.3.dist-info/top_level.txt,sha256=BPNyizBNSOTwM0U32NR570_K5IB5WtS3NAa-1KyaRho,6
+libbr-0.1.3.dist-info/RECORD,,
