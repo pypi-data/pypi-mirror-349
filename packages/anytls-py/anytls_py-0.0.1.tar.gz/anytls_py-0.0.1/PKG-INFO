@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: anytls-py
+Version: 0.0.1
+Summary: Add your description here
+Author-email: QIN2DIM <yaoqinse@gmail.com>
+License-File: LICENSE
+Requires-Python: >=3.12
+Requires-Dist: typer>=0.15.4
+Description-Content-Type: text/markdown
+
+# anytls-py
+AnyTLS python startup
