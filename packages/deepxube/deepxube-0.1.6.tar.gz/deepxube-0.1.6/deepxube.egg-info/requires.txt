@@ -1,0 +1,16 @@
+torch>=2.0
+numpy==1.*
+matplotlib
+clingo
+wget
+filelock
+pillow
+types-Pillow
+imageio
+
+[test]
+pytest
+pytest-cov
+mypy
+flake8
+tox
