@@ -1,0 +1,15 @@
+haystack_opea/__init__.py,sha256=oKSjEkw4ABS5zx_kEFBqJjDDQgip-rMZG7BVCBb7Iuw,295
+haystack_opea/embedders/__init__.py,sha256=1xEeto1tP6RvPQ3_frRM8aiT1HElU5tFUu8xZfAMraY,77
+haystack_opea/embedders/tei/__init__.py,sha256=uFisROpr3LNlqZ-_6KpCpT84Nw7qf0LNm-N-qwJtQTc,299
+haystack_opea/embedders/tei/document_embedder.py,sha256=Ai2_u8uzknKCOlvLh781aZ24exN328FrqIa_QXV4K3o,6877
+haystack_opea/embedders/tei/text_embedder.py,sha256=6uzw69weVKBgYR_-VzaOogy1-JIXCV_XPCs1Qy-yLJw,3976
+haystack_opea/embedders/tei/truncate.py,sha256=JpE4_zK-mpD3LZvTcdUdrft5b0iozclBAQDdibkBCAA,954
+haystack_opea/generators/__init__.py,sha256=jeWZGEA1mEp0yxBl6SJuTTb3xnzHaNdAq8C09-3YJNk,144
+haystack_opea/generators/generator.py,sha256=tBBzbOdvmArXWJ2IfnnFo-k4Z4CJ9o4TA-C2hIFNPDc,2817
+haystack_opea/utils/__init__.py,sha256=Hes_t6cPUZQRt7JNDzG80IxziqDZ__NedRsqEpb5C4I,195
+haystack_opea/utils/opea_backend.py,sha256=Z9DD4edF8reJV7d2nvmfwFYTHO-p8vnup42LeFsZFRU,3264
+haystack_opea/utils/utils.py,sha256=BxVgbNjALOc7wvfU6WiHYKwZxIuWLMyWC9p2EJErw0o,1472
+haystack_opea-0.1.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+haystack_opea-0.1.1.dist-info/METADATA,sha256=n3bsE8ztNXg_fMdJ_iyd-8LMj_pAgRLK56Lh6Hyo_7M,3684
+haystack_opea-0.1.1.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+haystack_opea-0.1.1.dist-info/RECORD,,
