@@ -1,0 +1,17 @@
+odoo/addons/delivery_carrier_partner/README.rst,sha256=Naw8jp15p6UVvfTMOCKJkvMOiWqY92tf3Vw6LcYGYqE,3052
+odoo/addons/delivery_carrier_partner/__init__.py,sha256=eShEGRadAlxopoLqIQ4-N42FM7MWPSuBe0h_l1cXTPM,87
+odoo/addons/delivery_carrier_partner/__manifest__.py,sha256=_bUN94FGt_XHChrq6Ugd2w5XDCFu4D2evDweqOhlxLM,535
+odoo/addons/delivery_carrier_partner/i18n/delivery_carrier_partner.pot,sha256=dupwB9sEjcrlXwOkewfwC_54r3pixdfpA_l5n2zEI78,877
+odoo/addons/delivery_carrier_partner/i18n/es.po,sha256=2zGXT-1o6QXeB6nf0C24AdyExlQcDI6tN2glTQ4W3PE,1124
+odoo/addons/delivery_carrier_partner/i18n/it.po,sha256=ZhvSyL3IzAV8sMzd_JJcum8rkWjKi54iNr3Xauo00_g,1134
+odoo/addons/delivery_carrier_partner/models/__init__.py,sha256=-K4wh1XVA03SZzTTycr_kcgawLtJanP54sq4kwHL5eA,97
+odoo/addons/delivery_carrier_partner/models/delivery_carrier.py,sha256=S3ThnC_aUrsaSv_QMkgHqk1-pO8al1sLGSeVmgGuONw,392
+odoo/addons/delivery_carrier_partner/readme/CONTRIBUTORS.rst,sha256=zHlE8__o-LoM1RfUoF1Z6oF_GEmV4pvFqPz7MVA-O4M,142
+odoo/addons/delivery_carrier_partner/readme/DESCRIPTION.rst,sha256=7gCDoix9LWfR-YxUbsRQ6J4pHt-7KZf1aRAwqnXw9hc,84
+odoo/addons/delivery_carrier_partner/static/description/icon.png,sha256=6xBPJauaFOF0KDHfHgQopSc28kKvxMaeoQFQWZtfZDo,9455
+odoo/addons/delivery_carrier_partner/static/description/index.html,sha256=uREJGY_vpdis9ZImAVT63TBMvmyxBTP_L8fh206_9LI,12439
+odoo/addons/delivery_carrier_partner/views/delivery_carrier_views.xml,sha256=vzjRi0G_otpqJE7dlIQ4qCuFE2sa2pFPVc-slYtp5SY,636
+odoo13_addon_delivery_carrier_partner-13.0.1.0.2.dev4.dist-info/METADATA,sha256=RQpqUXI_v1Q9uIK9rt0H9VSxzeGv7t3TFoGV48ijVFs,3608
+odoo13_addon_delivery_carrier_partner-13.0.1.0.2.dev4.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+odoo13_addon_delivery_carrier_partner-13.0.1.0.2.dev4.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+odoo13_addon_delivery_carrier_partner-13.0.1.0.2.dev4.dist-info/RECORD,,
