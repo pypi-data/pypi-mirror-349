@@ -1,0 +1,10 @@
+dwrappr/__init__.py,sha256=U_5t-6iZeiatOQLo6Ws4cYOSkjoY1ddU3S_mCK3F_Cs,825
+dwrappr/dataset.py,sha256=PxsCjSs0n1I0dgFVEWyd6Biba1bs1mydlZWK7I9Xko0,39198
+dwrappr/filehandler.py,sha256=MNa8Oe-IgY9qE5Dh_b65L387e88f9rQi2FP2IgNEbT8,6792
+dwrappr/generators.py,sha256=MLbpag0dUJ5reFuRzFe3NGcRTK3oUX4VS0kQmfdYOxE,1488
+dwrappr/utils.py,sha256=DD5b2-2aumnBvRsZfc4b7SEVo-oPKAOGCY3-hqjMXIE,8297
+dwrappr-0.0.11.dist-info/licenses/LICENSE,sha256=pAZXnNE2dxxwXFIduGyn1gpvPefJtUYOYZOi3yeGG94,1068
+dwrappr-0.0.11.dist-info/METADATA,sha256=aZNGHd_iheuTFz4h4S2skZpKO9DJ3nrWUqo9WV7NHyI,2604
+dwrappr-0.0.11.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+dwrappr-0.0.11.dist-info/top_level.txt,sha256=ja2Cjqmaqq9P0WviASC1o_GTzndT6DywI8YWiRB1GrI,8
+dwrappr-0.0.11.dist-info/RECORD,,
