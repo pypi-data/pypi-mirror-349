@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wtfport-cli"
+version = "1.0.5"
+description = "Find what’s using a TCP or UDP port"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Anil Raj Rimal", email = "anilrajrimal@gmail.com" }]
+requires-python = ">=3.9"
+dependencies = ["psutil"]
+
+[project.scripts]
+wtfport = "wtfport.cli:main"
+
+[tool.setuptools.packages]
+find = { include = ["wtfport"] }
