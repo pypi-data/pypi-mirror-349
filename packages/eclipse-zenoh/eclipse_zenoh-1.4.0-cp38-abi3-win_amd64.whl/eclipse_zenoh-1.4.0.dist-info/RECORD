@@ -1,0 +1,12 @@
+eclipse_zenoh-1.4.0.dist-info/METADATA,sha256=ak4TBG91jMVgIlqYR206gzsoIRIaRKzi3QRLuZWshrM,6245
+eclipse_zenoh-1.4.0.dist-info/WHEEL,sha256=qo08K5WTt1v9liGoFGXfI182ciKs5521XAErJtzFynQ,94
+eclipse_zenoh-1.4.0.dist-info/licenses/LICENSE,sha256=bfA36L5rA6VZwYOLaJZ-uwEhggVgwDaxsd2PeMblc0A,24830
+eclipse_zenoh-1.4.0.dist-info/licenses/NOTICE.md,sha256=KbiACT5v2OzXY9lpOBxhFExU9lYMAazsjKgzVlV6vHg,1293
+zenoh/__init__.py,sha256=miQJ8n9sLfVqz7JLoqA1C5Oy8ou5-XzleuGOZDubxRo,549
+zenoh/__init__.pyi,sha256=iP7d3LV82kqwt71OyRTSZe_0bgi0Xvqv4mcyT8ipFwE,39985
+zenoh/ext.py,sha256=YWOleNd5B1uXi55L-4FelNEl8W_4hS0GJTPzlbLLidY,3130
+zenoh/ext.pyi,sha256=8BDcvjHUGeLhJZmd1hBzDMH2HJs09FJsEa-O3zH-VQw,1395
+zenoh/handlers.pyi,sha256=-YuOH37HvHT98__Keh-MayjPmPAw_o_muzxdq9BxP7c,1767
+zenoh/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+zenoh/zenoh.pyd,sha256=bMalcC5INNfLKJL7h-Y9spdfH_LljsntvSifbfB3g98,20196352
+eclipse_zenoh-1.4.0.dist-info/RECORD,,
