@@ -1,0 +1,13 @@
+ragbot/__init__.py,sha256=oDfj8_TfNRW6AVyMhsuv6b7WqTy3TvDA9SJ4U4uIZwM,60
+ragbot/cli.py,sha256=QUI0I5J2lSgsdEVVrl100dW5GEmT5kQD_ccMXzxmhNc,2874
+ragbot/document_loader.py,sha256=_WziyAssfdsCLeolTTPI-srJNDyUuivhdSmSscW0W6M,4121
+ragbot/ragbot_api.py,sha256=6qRQmIoMsKTCSd5h7AoTODrTvDSRG5VtZjamoIz1oKc,2263
+ragbot/ret.py,sha256=OXJpi7vKIpHDiP-3mGtKOwmjvSSpXoD0zqhfGGY0qMU,5110
+ragbot/static/chat.html,sha256=tETxCgSTX8uNEfAnczptTPISFBujjI5ChGP-hueICCU,959
+ragbot/static/chat_window.html,sha256=p3Pe8Y8-JbwdjbA5tRVdNmOwab-4_zaRyaOIJ2oU1H4,3565
+ragbot/static/index.html,sha256=eJufQQJMD7EDS6ypZIizqRgnew2cxULUnjYyoLnM2Yg,4463
+ragbot-0.1.0.dist-info/METADATA,sha256=N3jltfbHj4zF2Hqgsbn1AIU61QojaDvtjiHxgh8kpJU,809
+ragbot-0.1.0.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+ragbot-0.1.0.dist-info/entry_points.txt,sha256=zqyzvs9A4EvM1xPRLeU3f2Z5e-PwqR_77PiDHvVM6s4,87
+ragbot-0.1.0.dist-info/top_level.txt,sha256=zQHZHX8cYZKSItSkGEARoPZqh9y9LM7LfBRLI48QhEQ,7
+ragbot-0.1.0.dist-info/RECORD,,
