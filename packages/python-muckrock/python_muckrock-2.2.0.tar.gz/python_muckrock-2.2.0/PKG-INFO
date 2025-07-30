@@ -1,0 +1,25 @@
+Metadata-Version: 2.4
+Name: python-muckrock
+Version: 2.2.0
+Summary: A simple Python wrapper for the MuckRock API v2
+Project-URL: Homepage, https://github.com/MuckRock/python-muckrock
+Project-URL: Bug Tracker, https://github.com/MuckRock/python-muckrock/issues
+Project-URL: Documentation, https://python-muckrock.readthedocs.io/en/latest/
+Author-email: duckduckgrayduck <sanjin@muckrock.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: <=3.12,>=3.7
+Requires-Dist: python-squarelet
+Requires-Dist: ratelimit
+Requires-Dist: requests
+Requires-Dist: urllib3
+Description-Content-Type: text/markdown
+
+# python-muckrock
+A Python wrapper for the MuckRock API, allowing for users to search and file requests and search other endpoints. 
+
+Issues: https://github.com/MuckRock/python-muckrock/issues
+
+Documentation: https://python-muckrock.readthedocs.io/en/latest/
