@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: python-introspection
+Version: 0.1.0
+Summary: Python library and CLI tool to introspect Python installations
+Author-email: Filipe Laíns <lains@riseup.net>
+Requires-Python: >= 3.9
+Classifier: License :: OSI Approved :: MIT License
+License-File: LICENSE
+Project-URL: Home, https://github.com/FFY00/python-introspection

@@ -1,0 +1,9 @@
+python_introspection/__init__.py,sha256=bJXsIbfMStH3s-51yNRuwA2Pf7Nch_4_k2_31Y1Fpwk,3814
+python_introspection/__main__.py,sha256=YFh34RSjzOkyGz6FRmwk2dWjhxzWRhAlw1y5H6f3KzU,2258
+python_introspection/_cli.py,sha256=1BpTe2J3QN9l5JeXePv37--RnTGqbHyrvWi9TPwbaWE,7443
+python_introspection/scripts/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+python_introspection/scripts/generate-build-details.py,sha256=eCXyObgIs50FxHwwi5qM7IOmKRT3Q-CI2BrZMRTX1E0,8611
+python_introspection-0.1.0.dist-info/licenses/LICENSE,sha256=1GHV-96qXjzHIItLVqYxXtzcVh0LccGoYrrFm22hkCs,1080
+python_introspection-0.1.0.dist-info/WHEEL,sha256=G2gURzTEtmeR8nrdXUJfNiB3VYVxigPQ-bEQujpNiNs,82
+python_introspection-0.1.0.dist-info/METADATA,sha256=LrW3uoII3kVzrtBd0RG0s2FWHvdDCcZWDcuG-80vZ4Q,345
+python_introspection-0.1.0.dist-info/RECORD,,
