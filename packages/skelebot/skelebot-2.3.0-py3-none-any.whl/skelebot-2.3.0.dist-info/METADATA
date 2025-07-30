@@ -1,0 +1,166 @@
+Metadata-Version: 2.4
+Name: skelebot
+Version: 2.3.0
+Summary: ML Build Tool
+Project-URL: Homepage, https://github.com/carsdotcom/skelebot
+Project-URL: Documentation, https://carsdotcom.github.io/skelebot/
+Project-URL: Issues, https://github.com/carsdotcom/skelebot/issues
+Project-URL: Changelog, https://github.com/carsdotcom/skelebot/blob/master/CHANGELOG.md
+Author-email: Sean Shookman <sshookman@cars.com>, Joao Moreira <jmoreira@cars.com>
+License: MIT License
+        
+        Copyright (c) 2019 Cars.com
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+License-File: LICENSE
+Requires-Python: >=3.9
+Requires-Dist: boto3>=1.10
+Requires-Dist: colorama>=0.4.1
+Requires-Dist: dohq-artifactory>=0.1.17
+Requires-Dist: pyyaml>=5.1.2
+Requires-Dist: schema>=0.7.0
+Requires-Dist: tomli>=1.1.0; python_version < '3.11'
+Provides-Extra: dev
+Requires-Dist: coverage~=7.5; extra == 'dev'
+Requires-Dist: pytest~=8.2; extra == 'dev'
+Description-Content-Type: text/markdown
+
+
+<p align="center"><img src="logo.gif"></p>
+<h1 align="center">Machine Learning Project Development Tool</h1>
+
+[![CircleCI token](https://circleci.com/gh/carsdotcom/skelebot/tree/master.svg?style=svg)](https://circleci.com/gh/carsdotcom/skelebot)
+[![codecov](https://codecov.io/gh/carsdotcom/skelebot/branch/master/graph/badge.svg)](https://codecov.io/gh/carsdotcom/skelebot)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/d7211eb35681489c9f76066d9a137e46)](https://www.codacy.com/app/sshookman/skelebot?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=carsdotcom/skelebot&amp;utm_campaign=Badge_Grade)
+[![License: MIT](https://img.shields.io/badge/License-MIT-teal.svg)](LICENSE)
+![Version](https://img.shields.io/badge/dynamic/xml.svg?style=svg&color=purple&label=Dev%20Version&query=.&url=https%3A%2F%2Fraw.githubusercontent.com%2Fcarsdotcom%2Fskelebot%2Fmaster%2FVERSION)
+![PyPI](https://img.shields.io/pypi/v/skelebot?color=purple&label=PyPi%20Release)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/skelebot?color=purple&label=PyPi%20Installs)
+
+<!--CONTRIBUTORS-->
+<table>
+  <tr>
+    <td align="center" width="150px">
+      <a href="https://github.com/sshookman">
+        <img src="https://avatars0.githubusercontent.com/u/926448?v=4", width="100px"a><br />
+        <sub><b>Sean Shookman</b></sub>
+      </a>
+    </td>    <td align="center" width="150px">
+      <a href="https://github.com/jagmoreira">
+        <img src="https://avatars2.githubusercontent.com/u/13685125?v=4", width="100px"a><br />
+        <sub><b>Joao Moreira</b></sub>
+      </a>
+    </td>    <td align="center" width="150px">
+      <a href="https://github.com/sherry0531">
+        <img src="https://avatars0.githubusercontent.com/u/7463903?v=4", width="100px"a><br />
+        <sub><b>Sherry Wang</b></sub>
+      </a>
+    </td>    <td align="center" width="150px">
+      <a href="https://github.com/chutchi2">
+        <img src="https://avatars0.githubusercontent.com/u/16807739?v=4", width="100px"a><br />
+        <sub><b>Cody Hutchins</b></sub>
+      </a>
+    </td>    <td align="center" width="150px">
+      <a href="https://github.com/kislam01">
+        <img src="https://avatars0.githubusercontent.com/u/16831765?v=4", width="100px"a><br />
+        <sub><b>Kazi Tanzim Islam</b></sub>
+      </a>
+    </td>    <td align="center" width="150px">
+      <a href="https://github.com/sgaist">
+        <img src="https://avatars0.githubusercontent.com/u/898010?v=4", width="100px"a><br />
+        <sub><b>Samuel Gaist</b></sub>
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="150px">
+      <a href="https://github.com/SanthoshBala18">
+        <img src="https://avatars3.githubusercontent.com/u/24211143?v=4", width="100px"a><br />
+        <sub><b>SanthoshBala18</b></sub>
+      </a>
+    </td>
+  </tr>
+</table>
+<!--/CONTRIBUTORS-->
+
+## About
+
+Skelebot is a command-line tool for developing machine learning projects and executing them in Docker. The purpose of Skelebot is to simply make the life of a Data Scientist easier by doing a lot of the legwork for mundane tasks automatically through a unified, consistent interface.
+
+```
+[/code/my-iris-model] > skelebot -h
+usage: skelebot [-h] [-v] [-e ENV] [-d HOST] [-s] [-n] [-c] [-V]
+                {loadData,train,score,push,pull,jupyter,plugin,bump,prime,exec,publish,envs}
+                ...
+
+Iris Example
+Example Skelebot Project
+-----------------------------------
+Version: 1.1.0
+Environment: None
+Skelebot Version: 2.0.0
+-----------------------------------
+
+positional arguments:
+  {loadData,train,score,push,pull,jupyter,plugin,bump,prime,exec,publish,envs}
+    loadData            Load the Iris Dataset and save it into the data folder for the train job to access (src/loadData.py)
+    train               Use the data loaded in the loadData job to train the iris model (src/train.py)
+    score               Use the model that was built in the train job to score new data against the iris model (src/score.py)
+    push                Push an artifact to Artifactory
+    pull                Pull an artifact from Artifactory
+    jupyter             Spin up Jupyter in a Docker Container (port=8888, folder=.)
+    plugin              Install a plugin for skelebot from a local zip file
+    bump                Bump the skelebot.yaml project version
+    prime               Generate Dockerfile and .dockerignore and build the docker image
+    exec                Exec into the running Docker container
+    publish             Publish your versioned Docker Image to the registry
+    envs                Display the available environments for the project
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -v, --version         Display the version number of Skelebot
+  -e ENV, --env ENV     Specify the runtime environment configurations
+  -d HOST, --docker-host HOST
+                        Set the Docker Host on which the command will be executed
+  -s, --skip-build      Skip the build process and attempt to use previous docker build
+  -n, --native          Run natively instead of through Docker
+  -c, --contact         Display the contact email of the Skelebot project
+  -V, --verbose         Print all job commands to the screen just before execution
+```
+
+## Install
+
+Install Skelebot with Pip:
+
+```
+pip install skelebot
+```
+
+## Getting Started
+
+To get started using Skelebot you can follow the [Documentation](https://carsdotcom.github.io/skelebot/).
+
+## Contributing
+
+Anyone is welcome to make contributions to the project. If you would like to make a contribution, please read our [Contributor Guide](CONTRIBUTING.md).
+
+## Versioning
+
+This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+Please refer to the [Changelog](CHANGELOG.md) for information regarding the differences between versions of the project.

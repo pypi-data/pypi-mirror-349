@@ -1,0 +1,17 @@
+name: default
+
+dirs:
+- "config/"
+- "data/"
+- "models/"
+- "notebooks/"
+- "output"
+- "queries"
+- "src/jobs/"
+
+config:
+    dependencies:
+    - numpy
+    - pandas
+    - scipy
+    - scikit-learn
