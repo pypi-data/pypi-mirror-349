@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+holafacundoplayer/__init__.py
+holafacundoplayer/lala.py
+holafacundoplayer/player.py
+holafacundoplayer.egg-info/PKG-INFO
+holafacundoplayer.egg-info/SOURCES.txt
+holafacundoplayer.egg-info/dependency_links.txt
+holafacundoplayer.egg-info/top_level.txt
