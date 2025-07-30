@@ -1,0 +1,14 @@
+alpm_conf/__init__.py,sha256=u3JC3vVKkzmw4M4225XIiaceXsbFj7u95P8DDjbkaUM,814
+alpm_conf/alpm_conf.py,sha256=mMVp7MBY2ZBzHwEEB0qpYhFY4S1P880ldgXIZZz6oD4,28886
+alpm_conf/git.py,sha256=vs1GdVlKWPXMfeYkjxjSkwOyxeBLA3iBV9Bqe0b9QHI,8727
+alpm_conf/packages.py,sha256=0X7eWaR2Y5TSVYIKQ_kU5FgOWQUjJxpmxKMcUAmvZnw,11216
+alpm_conf/tests/__init__.py,sha256=kYGXRVqcOoDABPhYJ8YeElTTfrjERvMoI27pleurYLk,347
+alpm_conf/tests/pkg_utils.py,sha256=01k00OOmYHp7k-irsxDPCCqn7EWbCm202IXF3HvaegY,5344
+alpm_conf/tests/test_alpm_conf.py,sha256=838DQQuZr664ORagIr8VM0Y-dP5aAvQfYbR5AddFfa4,32131
+alpm_conf/tests/test_git.py,sha256=2pXWpqjtuB5SqYTPNSLIqjjGqOd9pS5yf1UnJQrV7Vw,4582
+alpm_conf/tests/test_packages.py,sha256=C__4cCyLV1FBG0uX65QMsmcVbDB0mDCPe8IZ8qViwFc,16800
+alpm_conf-0.4.dist-info/entry_points.txt,sha256=C3EaV_Qgl-fQ5U1II3rYle-e2NYBhESbYqHdhwTjoew,54
+alpm_conf-0.4.dist-info/licenses/LICENSE,sha256=BYxnNIn4fgI7LUA3ZXRuxWVFXX37zd-Kr6feJIizHQY,1081
+alpm_conf-0.4.dist-info/WHEEL,sha256=G2gURzTEtmeR8nrdXUJfNiB3VYVxigPQ-bEQujpNiNs,82
+alpm_conf-0.4.dist-info/METADATA,sha256=jrnSpIvmlHQVkB0aDTu5EBN0vmF8qaMAgLkLdymtkUo,3594
+alpm_conf-0.4.dist-info/RECORD,,
