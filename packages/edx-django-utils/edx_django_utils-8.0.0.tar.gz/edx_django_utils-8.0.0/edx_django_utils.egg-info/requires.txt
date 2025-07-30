@@ -1,0 +1,7 @@
+Django
+PyNaCl
+click
+django-crum
+django-waffle
+psutil
+stevedore
