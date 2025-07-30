@@ -1,0 +1,63 @@
+Metadata-Version: 2.4
+Name: BackboneTools
+Version: 2025.0.1
+Summary: BackboneTools is a Python package for working with Backbone.
+Project-URL: Repository, https://gitlab.ruhr-uni-bochum.de/ee/backbonetools.git
+Author-email: David Huckebrink <david.huckebrink@rub.de>, Leonie Plaga <leonie.plaga@rub.de>
+License-File: LICENSE
+Requires-Dist: gamsapi
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: openpyxl
+Requires-Dist: pandas
+Requires-Dist: plotly
+Requires-Dist: pytest
+Requires-Dist: tsam
+Description-Content-Type: text/markdown
+
+# Backbone Tools
+
+Tools to work with input and output data of the energy system modelling framework [Backbone](https://gitlab.vtt.fi/backbone/backbone/).
+
+An important prerequisite is to have [GAMS](https://www.gams.com/) installed on your system, as this packages calls certain GAMS commands through python.
+
+A detailled documentation can be found here: https://backbonetools.readthedocs.io.
+
+## Result parameters as DataFrames
+This is likely one of the core use cases. The `BackboneResult`-class enables easy access to all symbols.
+
+```python
+from backbonetools.io import BackboneResult
+
+# load result
+result = BackboneResult("path/to/result.gdx")
+
+# any symbol is available as DataFrame
+gen_df = result.r_gen_gnuft()
+gen_df.head()
+```
+This may yield something like this:
+|    | grid   | node   | unit       | f   |   t |    Val |
+|---:|:-------|:-------|:-----------|:----|----:|-------:|
+|  0 | elec   | AT0 0  | AT0 0 CCGT | f00 |   6 | 3295.9 |
+|  1 | elec   | AT0 0  | AT0 0 CCGT | f00 |   7 | 3295.9 |
+|  2 | elec   | AT0 0  | AT0 0 CCGT | f00 |   8 | 3295.9 |
+|  3 | elec   | AT0 0  | AT0 0 CCGT | f00 |   9 | 3295.9 |
+|  4 | elec   | AT0 0  | AT0 0 CCGT | f00 |  10 | 3295.9 |
+
+
+## Analysing multiple related results
+
+In a similar manner, multiplep results (e.g., from a Sensitivity analyis) can be analysed. To do so, place all result files in a directory and follow these steps.
+
+```python
+from backbonetools.io import BackboneScenarioAnalysis
+
+# load all results in a directory
+sa = BackboneScenarioAnalysis("path/to/result_dir")
+
+# result symbols are available similarly
+sa_gen_df = sa.r_gen_gnuft()
+```
+
+The difference between `sa_gen_df` and `gen_df` from above is that `sa_gen_df` has an additional column indicating to which result file the values adhere.
