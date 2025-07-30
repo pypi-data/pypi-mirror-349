@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: failure-api
+Version: 0.1.0
+Summary: A modular communication failure API for Multi-Agent Reinforcement Learning environments
+Home-page: https://github.com/dreyman91/Bachelor_Thesis/tree/main/Failure_API/src/failure_api
+Author: Oluwadamilare Adegun
+Author-email: Oluwadamilare Adegun <adegun_dare@icloud.com>
+Project-URL: Homepage, https://github.com/dreyman91/Bachelor_Thesis
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: pettingzoo
+Requires-Dist: gymnasium
+Requires-Dist: scipy
+Dynamic: author
+Dynamic: home-page
+Dynamic: requires-python
