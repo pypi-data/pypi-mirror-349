@@ -1,0 +1,2 @@
+[console_scripts]
+rosbag2nuscenes = roscenes.main:main
