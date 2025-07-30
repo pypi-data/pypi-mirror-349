@@ -1,0 +1,12 @@
+kws_decoder/__init__.py,sha256=vwGMQC4oOVgSOBcslafYqTZ_rGvEKvmZ9qTb26yiq5A,42
+kws_decoder/kws_decoder.cpython-310-x86_64-linux-gnu.so,sha256=5O-Y5QcwmlRHVm6XIRog7Y2MuAyaKtKxah4_YMeSzYg,336168
+kws_decoder/kws_decoder.cpython-311-x86_64-linux-gnu.so,sha256=aCTx9lRTtxlpQjyW8yrFTJpwn0ZW4jjGJxvb9LsznPo,336168
+kws_decoder/kws_decoder.cpython-312-x86_64-linux-gnu.so,sha256=RdvCk7nPES0rDu7dlzbMtgneEkeSkvdx9zPDWRYFIS0,336152
+kws_decoder/kws_decoder.cpython-313-x86_64-linux-gnu.so,sha256=Ul3tioF6igs_xfDQkHeu36NfQwKPzZudlUDD8ogLOQU,336184
+kws_decoder/kws_decoder.cpython-39-x86_64-linux-gnu.so,sha256=qRjqJjUO5_H-_rrDR2z06dn4lQalaS2kkrUgia4Iyys,336168
+kws_decoder/kws_decoder.pypy310-pp73-x86_64-linux-gnu.so,sha256=YAITHsKSW63ihBzylizxG-avLJGgRoAgdEdJ7dcckrc,332072
+kws_decoder/kws_decoder.pypy39-pp73-x86_64-linux-gnu.so,sha256=PlCRI3EODUrJ_R7DkpjG8KAfXCS13HIwQ9iu1aaNN14,332072
+kws_decoder-0.1.3.dist-info/METADATA,sha256=IPuFBC7Q9_4umYEo5yIukm_2VICEmWXOWGVOsEMkGZA,5687
+kws_decoder-0.1.3.dist-info/WHEEL,sha256=LmgFUHJhtHXzq_kBPB3j3uf4OU12wz62eFubDF7LHDU,170
+kws_decoder-0.1.3.dist-info/RECORD,,
+kws_decoder-0.1.3.dist-info/licenses/LICENSE,sha256=vfgRJOdRTyg34zpMiraycFdWrF1x9TJBJtLHtkr-6Ss,1084
