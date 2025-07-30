@@ -1,0 +1,13 @@
+l l1
+s s1 l1.p1 m1.p1
+m m1 R=0.5 T=0.5
+s s2 m1.p2 mirror2.p1
+m mirror2 R=0.5 T=0.5
+
+pd circ mirror2.p1.o
+pd trans mirror2.p2.o
+pd refl m1.p1.o
+
+ad ad_circ mirror2.p1.o f=0
+ad ad_trans mirror2.p2.o f=0
+ad ad_refl m1.p1.o f=0

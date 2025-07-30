@@ -1,0 +1,14 @@
+pyside6
+finesse
+pygments
+lxml
+ipython<9
+pygraphviz
+
+[lint]
+ruff
+pre-commit
+tox
+
+[test]
+pytest
