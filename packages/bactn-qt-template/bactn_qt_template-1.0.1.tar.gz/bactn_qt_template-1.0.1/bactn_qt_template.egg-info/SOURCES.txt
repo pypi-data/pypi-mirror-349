@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+bactn_qt_template.egg-info/PKG-INFO
+bactn_qt_template.egg-info/SOURCES.txt
+bactn_qt_template.egg-info/dependency_links.txt
+bactn_qt_template.egg-info/entry_points.txt
+bactn_qt_template.egg-info/top_level.txt
+qtcommandstemplate/__init__.py
+qtcommandstemplate/thonny_plugin.py
