@@ -1,0 +1,7 @@
+ml_adapter/sklearn/__init__.py,sha256=M3YPdPdn0HaHXvREjCfm5w3vbRI7CHKDm0zgF10jqLQ,1140
+ml_adapter/sklearn/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+waylay_ml_adapter_sklearn-0.0.10.dist-info/licenses/LICENCE.txt,sha256=ZIsIQXmgmBnk8f55yJonBveQ7ByZ9eyyzjbEgNocfpc,746
+waylay_ml_adapter_sklearn-0.0.10.dist-info/METADATA,sha256=Hsin9v5nGpM3kgrP3M0BGYtK6o5NYfFh1KdKcPxb0kA,1747
+waylay_ml_adapter_sklearn-0.0.10.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+waylay_ml_adapter_sklearn-0.0.10.dist-info/top_level.txt,sha256=3WkkE3yhxG7TqlWKnkHRQb1IAk4cS0ikRBDJ-cTOHY4,11
+waylay_ml_adapter_sklearn-0.0.10.dist-info/RECORD,,
