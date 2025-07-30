@@ -1,0 +1,3 @@
+import machinic.types as t
+
+class jsonc: ...
