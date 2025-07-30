@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-redis-airnet = mcp-redis-airnet:main
