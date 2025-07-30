@@ -1,0 +1,10 @@
+awslabs/__init__.py,sha256=47wJeKcStxEJwX7SVVV2pnAWYR8FxcaYoT3YTmZ5Plg,674
+awslabs/amazon_kendra_index_mcp_server/__init__.py,sha256=MjG3hisInXtsKdxdlqK2Ui1Mbxt0bj5EF9oMmuTS8vE,627
+awslabs/amazon_kendra_index_mcp_server/server.py,sha256=gloyTFJPKWB-uBA1brrteMIDuTLm416VCv1YzlTZ0vU,6708
+awslabs/amazon_kendra_index_mcp_server/util.py,sha256=IFH3YWVUMn22t4eRXhlEQ_8ZR99bAdQE-CGxuk5GGxg,1382
+awslabs_amazon_kendra_index_mcp_server-0.0.1.dist-info/METADATA,sha256=9uWQIf-4l60r37PqD1M_DQ2JAhLm0uNQTeRPOzRdtx8,6947
+awslabs_amazon_kendra_index_mcp_server-0.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+awslabs_amazon_kendra_index_mcp_server-0.0.1.dist-info/entry_points.txt,sha256=kC23-3wzxEXO5gGwCoBnpf2lB3teTWHZUkUODUkgE-8,110
+awslabs_amazon_kendra_index_mcp_server-0.0.1.dist-info/licenses/LICENSE,sha256=CeipvOyAZxBGUsFoaFqwkx54aPnIKEtm9a5u2uXxEws,10142
+awslabs_amazon_kendra_index_mcp_server-0.0.1.dist-info/licenses/NOTICE,sha256=1bUgOJtG2PGWAfR7zkCXQSDt1n4sLaPU7hutiWxsQ4M,106
+awslabs_amazon_kendra_index_mcp_server-0.0.1.dist-info/RECORD,,
