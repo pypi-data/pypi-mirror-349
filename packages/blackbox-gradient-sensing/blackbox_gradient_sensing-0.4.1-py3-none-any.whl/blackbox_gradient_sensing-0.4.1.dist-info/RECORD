@@ -1,0 +1,6 @@
+blackbox_gradient_sensing/__init__.py,sha256=Irl7tVvg4_EzpCtQNg1Z7fhEkKVrcyFsseCOXLTQAMU,120
+blackbox_gradient_sensing/bgs.py,sha256=_sNHEOTfkZI43SN8Fd0wlgIdvX5uRNHW6_-0JJPJT-4,36235
+blackbox_gradient_sensing-0.4.1.dist-info/METADATA,sha256=I6Yf1n6-dK03iz1Vb0SnyZclNKI7Q7RDEP_O0BnI44k,6900
+blackbox_gradient_sensing-0.4.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+blackbox_gradient_sensing-0.4.1.dist-info/licenses/LICENSE,sha256=1yCiA9b5nhslTavxPjsQAO-wpOnwJR9-l8LTVi7GJuk,1066
+blackbox_gradient_sensing-0.4.1.dist-info/RECORD,,
