@@ -1,0 +1,51 @@
+[project]
+name = "pyverno"
+description = "Python package version checker/updater"
+authors = [{name = "Daniel Miller", email = "millerdev@gmail.com"}]
+license = {file = "LICENSE"}
+readme = {file = "README.md", content-type = "text/markdown"}
+dynamic = ["version"]
+requires-python = ">= 3.9"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    'Intended Audience :: Developers',
+    'License :: OSI Approved :: BSD License',
+    'Operating System :: OS Independent',
+    'Programming Language :: Python',
+    'Programming Language :: Python :: 3',
+    'Programming Language :: Python :: 3.9',
+    'Programming Language :: Python :: 3.10',
+    'Programming Language :: Python :: 3.11',
+    'Programming Language :: Python :: 3.12',
+    'Programming Language :: Python :: 3.13',
+    'Programming Language :: Python :: 3.14',
+    'Topic :: Software Development :: Libraries :: Python Modules',
+]
+
+[dependency-groups]
+dev = [
+    'pytest',
+]
+
+[project.urls]
+Home = "https://github.com/dimagi/pyverno"
+
+[project.scripts]
+pyverno = "pyverno:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.version]
+path = "pyverno.py"
+
+[tool.pytest.ini_options]
+minversion = '8.1'
+addopts = ['--strict-markers']
+empty_parameter_set_mark = 'fail_at_collect'
+xfail_strict = true
+python_files = [
+    'tests.py',
+    '*/tests/*.py',
+]
