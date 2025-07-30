@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: lyzr-single-tool
+Version: 0.1.3
+Summary: Single tool call for lyzr
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: mcp[cli]>=1.9.0
+Requires-Dist: requests>=2.32.3
+Requires-Dist: twine>=6.1.0
+
+Testing this
