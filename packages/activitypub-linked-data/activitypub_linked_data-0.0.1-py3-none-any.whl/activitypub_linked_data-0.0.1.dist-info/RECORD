@@ -1,0 +1,9 @@
+activitypub_linked_data-0.0.1.dist-info/licenses/LICENSE,sha256=ldq0GyRYuDdX7byDFZ0CtWG5qZI7C-72a_ZYFDYsmyA,1464
+activitypub_linked_data-0.0.1.dist-info/licenses/NOTICE,sha256=hA6DKmYV70SmHitoB5nEI6tF2ziQTGHMTBFfQ6OaLd4,1649
+ap/linked_data/__init__.py,sha256=_b9pNiix9YHWpuGUcNRkT_2UNLgyMexvbA3j60c4ge8,63
+ap/linked_data/contexts.py,sha256=mri7iVLBQo0wU7RK1JL0DTgaclq7vkHM5W196xrPWis,28954
+ap/linked_data/loaders.py,sha256=tgJ3UTa2qSsgYK_nMXAAdb-RYN_infYwxC2gHnBJVts,3430
+activitypub_linked_data-0.0.1.dist-info/METADATA,sha256=hQdGDF5B_vdcLf1hyW9g6V4NsoEdDFGzI-xbQzdOrTc,2510
+activitypub_linked_data-0.0.1.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+activitypub_linked_data-0.0.1.dist-info/top_level.txt,sha256=hfKZJdHXh3MST29x11_kb2nuJouff8_nTFll8dlcvY8,3
+activitypub_linked_data-0.0.1.dist-info/RECORD,,
