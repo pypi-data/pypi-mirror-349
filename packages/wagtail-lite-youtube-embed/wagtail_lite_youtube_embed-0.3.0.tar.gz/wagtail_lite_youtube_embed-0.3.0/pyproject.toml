@@ -1,0 +1,59 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "wagtail-lite-youtube-embed"
+description = ""
+authors = [
+    {name = "Jake Howard"},
+]
+version = "0.3.0"
+readme = "README.md"
+classifiers = [
+    "License :: OSI Approved",
+    "License :: OSI Approved :: BSD License",
+    "Framework :: Wagtail",
+    "Framework :: Wagtail :: 6",
+    "Framework :: Wagtail :: 7",
+    "Framework :: Django",
+    "Framework :: Django :: 4.2",
+    "Framework :: Django :: 5.1",
+    "Framework :: Django :: 5.2",
+    "Development Status :: 5 - Production/Stable",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Operating System :: OS Independent",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Software Development",
+    "Typing :: Typed"
+]
+requires-python = ">=3.9"
+
+dependencies = [
+    "wagtail>=6.3",
+    "Django>=4.2"
+]
+
+[project.urls]
+Source = "https://github.com/RealOrangeOne/wagtail-lite-youtube-embed"
+Issues = "https://github.com/RealOrangeOne/wagtail-lite-youtube-embed/issues"
+Changelog = "https://github.com/RealOrangeOne/wagtail-lite-youtube-embed/releases"
+
+[tool.flit.module]
+name = "lite_youtube_embed"
+
+[project.optional-dependencies]
+dev = [
+    "ruff",
+    "coverage"
+]
+
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W", "N", "B", "A", "C4", "T20", "DJ"]
+ignore = ["E501", "DJ008"]
