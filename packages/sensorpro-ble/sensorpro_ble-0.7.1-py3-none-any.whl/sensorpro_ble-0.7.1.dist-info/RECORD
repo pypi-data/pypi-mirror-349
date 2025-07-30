@@ -1,0 +1,7 @@
+sensorpro_ble/__init__.py,sha256=Ttn1gYaas49ax8ejXhTvZDssFI4mBYBEQ1BpQ6pYxDM,646
+sensorpro_ble/parser.py,sha256=beDJ7x9MUO-3yb3y9TyU350204fcJH4oAomW7QMG0HE,2630
+sensorpro_ble/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sensorpro_ble-0.7.1.dist-info/LICENSE,sha256=gieJjxNidEKH1VXLqbV9tuqnmcnqvMqt5xcmktkn5I4,1072
+sensorpro_ble-0.7.1.dist-info/METADATA,sha256=Mj_oT4CEc6_z9VCYPzo0lgLEqhOacT7PGMUrgpLIEeI,4985
+sensorpro_ble-0.7.1.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+sensorpro_ble-0.7.1.dist-info/RECORD,,
