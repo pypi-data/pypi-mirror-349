@@ -1,0 +1,77 @@
+{
+    "hoodie_identifiers": [
+        "hudi",
+        "hoodie",
+        "mor",
+        "cow",
+        "merge on read",
+        "copy on write",
+        "hoodie.merge",
+        "hoodie.write",
+        "hoodie.read"
+    ],
+    "merge_write": [
+        "partition and writing data",
+        "writing data",
+        "merge",
+        "upsert",
+        "update",
+        "delete",
+        "commit",
+        "write",
+        "save",
+        "parquet.write",
+        "hoodie.write",
+        "output"
+    ],
+    "insert_write": [
+        "insert",
+        "insert overwrite",
+        "insert into",
+        "append"
+    ],
+    "indexing_keywords": [
+        "building workload profile",
+        "bloomindex",
+        "bloom",
+        "tagging:",
+        "index",
+        "rli",
+        "record level index"
+    ],
+    "transform_keywords": [
+        "union",
+        "filter",
+        "project",
+        "aggregate",
+        "sort",
+        "window",
+        "groupby",
+        "distinct",
+        "repartition",
+        "coalesce"
+    ],
+    "scan_keywords": [
+        "scan",
+        "read",
+        "parquet.read",
+        "hudi.read",
+        "hoodie.read",
+        "input",
+        "collect"
+    ],
+    "hudi_metadata_keywords": [
+        "metadata",
+        "tablemetadata",
+        "filesystembacked",
+        "file listing",
+        "listing files",
+        "list files",
+        "listing"
+    ],
+    "join_keywords": [
+        "join",
+        "broadcasthashjoin",
+        "shuffledhashjoin"
+    ]
+}
