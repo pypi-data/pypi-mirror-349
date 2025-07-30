@@ -1,0 +1,2 @@
+class CrawlerProcess(object):
+    pass
