@@ -1,0 +1,22 @@
+*.egg-info/
+.ipynb_checkpoints/
+dist/
+build/
+*.py[cod]
+node_modules/
+venv/
+
+# Compiled javascript
+d3vis_ipynb/nbextension/
+d3vis_ipynb/labextension/
+
+# OS X
+.DS_Store
+
+js/yarn-error.log
+js/yarn.lock
+js/package-lock.json
+
+examples/temp/
+examples/videos/
+examples/data/
