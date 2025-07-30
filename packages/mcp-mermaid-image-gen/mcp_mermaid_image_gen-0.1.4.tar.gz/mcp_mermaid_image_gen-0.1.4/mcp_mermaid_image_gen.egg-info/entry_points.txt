@@ -1,0 +1,2 @@
+[console_scripts]
+mcp_mermaid_image_gen = mcp_mermaid_image_gen.server.app:main
