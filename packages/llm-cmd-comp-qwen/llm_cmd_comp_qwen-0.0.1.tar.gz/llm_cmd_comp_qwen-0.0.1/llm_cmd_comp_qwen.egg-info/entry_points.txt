@@ -1,0 +1,2 @@
+[llm]
+term = llm_cmd_comp_qwen.plugin

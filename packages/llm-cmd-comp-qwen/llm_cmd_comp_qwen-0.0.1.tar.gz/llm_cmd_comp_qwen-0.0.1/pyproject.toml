@@ -1,0 +1,22 @@
+[project]
+name = "llm-cmd-comp-qwen"
+version = "0.0.1"
+description = "Use LLM to generate commands for your shell: specialized for qwen3"
+readme = "README.md"
+authors = [{name = "Ryan Patterson"}, {name = "Zach Mueller"}]
+license = {text = "Apache-2.0"}
+classifiers = [
+    "License :: OSI Approved :: Apache Software License"
+]
+dependencies = [
+    "llm",
+    "prompt_toolkit>=3.0.43",
+]
+
+[project.urls]
+Homepage = "https://github.com/muellerzr/llm-cmd-comp-qwen"
+Changelog = "https://github.com/muellerzr/llm-cmd-comp-qwen/releases"
+Issues = "https://github.com/muellerzr/llm-cmd-comp-qwen/issues"
+
+[project.entry-points.llm]
+term = "llm_cmd_comp_qwen.plugin"

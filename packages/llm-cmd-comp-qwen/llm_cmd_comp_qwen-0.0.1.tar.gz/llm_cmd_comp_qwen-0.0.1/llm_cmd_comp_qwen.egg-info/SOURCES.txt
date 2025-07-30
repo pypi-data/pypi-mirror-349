@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+llm_cmd_comp_qwen/__init__.py
+llm_cmd_comp_qwen/plugin.py
+llm_cmd_comp_qwen.egg-info/PKG-INFO
+llm_cmd_comp_qwen.egg-info/SOURCES.txt
+llm_cmd_comp_qwen.egg-info/dependency_links.txt
+llm_cmd_comp_qwen.egg-info/entry_points.txt
+llm_cmd_comp_qwen.egg-info/requires.txt
+llm_cmd_comp_qwen.egg-info/top_level.txt
