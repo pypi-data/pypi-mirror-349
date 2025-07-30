@@ -1,0 +1,3 @@
+[console_scripts]
+what=what_cli.__main__:main
+
