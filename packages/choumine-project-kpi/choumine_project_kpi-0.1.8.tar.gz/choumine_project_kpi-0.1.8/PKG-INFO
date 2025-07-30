@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: choumine-project-kpi
+Version: 0.1.8
+Summary: Add your description here
+Author-email: choumine <569908115@qq.com>
+Requires-Python: >=3.13
+Requires-Dist: mcp[cli]>=1.6.0
+Requires-Dist: openai>=1.76.0
+Requires-Dist: openpyxl>=3.1.5
+Requires-Dist: pandas>=2.2.3
+Requires-Dist: tkcalendar>=1.6.1
