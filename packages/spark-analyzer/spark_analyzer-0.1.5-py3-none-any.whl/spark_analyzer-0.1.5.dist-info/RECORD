@@ -1,0 +1,14 @@
+spark_analyzer/README.md,sha256=0WMzXZSD_5PEtMaIRlkNFC_KUUR4FoJ48R_1ruR_bV0,5861
+spark_analyzer/__init__.py,sha256=P6PH3l7fy5t1OWdcXmQlxIPx-A6KH00qwtSk1yhMJXA,22
+spark_analyzer/cli.py,sha256=Zajx1IgZlbFo2O5Yu-PZ9r-MH8zY8KJKoGHMt0dvB-Q,37867
+spark_analyzer/config_cli.py,sha256=qrpJwuIl6CgBVZmtceuNT_cuMbQTVunr0dHEcldGrwU,15073
+spark_analyzer/lib/__init__.py,sha256=s4ia4QaeE_-kzngUxzlaI2Hl5OQgdcP9rSTDT1f68Zo,33
+spark_analyzer/lib/api_client.py,sha256=CyhPCamkjtvBKWXeC2q2aqXaeTnjPvi0A14NK7uk8H4,24706
+spark_analyzer/lib/s3_uploader.py,sha256=FqxOsekrjK0H3AgsF_mMaKEoOGkn69CNfcLBI3xodrw,21250
+spark_analyzer/lib/spark_stage_analyzer.py,sha256=Mtv4WPdmPDiqs4wyWK_TYwIPVu84CCXqLTmBfAkqs2Q,17022
+spark_analyzer/resources/hoodie_keywords.json,sha256=lQh2FIKgagGo53xACporBpBhZSNGbj4Lcq8XwREY_0E,1498
+spark_analyzer-0.1.5.dist-info/METADATA,sha256=57PqxDL11QzhlGvQEDWEZWcBXVBBf37fmGNp9i7-lOs,7047
+spark_analyzer-0.1.5.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+spark_analyzer-0.1.5.dist-info/entry_points.txt,sha256=uRhdPYaamvPyNYexL3bZu_EOsMf_nx2eR8DGVN5E89k,116
+spark_analyzer-0.1.5.dist-info/top_level.txt,sha256=8s3WYeWhoiovUBjiIkea_UuLzUVMq-YG_YvCXZH_dEo,15
+spark_analyzer-0.1.5.dist-info/RECORD,,
