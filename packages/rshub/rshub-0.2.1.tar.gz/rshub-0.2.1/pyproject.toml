@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=42"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rshub"
+version = "0.2.1"
+description = "This a python package to run and download submitted files on RSHub"
+readme = "README.md"
+authors = [{name = "Yiwen Fang", email = "yiwenfang@intl.zju.edu.cn"}]
+dependencies = [
+    "requests",
+    "scipy"
+]
+requires-python = ">=3.6"
+
+[project.urls]
+Homepage = "https://rshub.zju.edu.cn"

@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+rshub/__init__.py
+rshub/check_authenticity.py
+rshub/load_file.py
+rshub/submit_jobs.py
+rshub.egg-info/PKG-INFO
+rshub.egg-info/SOURCES.txt
+rshub.egg-info/dependency_links.txt
+rshub.egg-info/requires.txt
+rshub.egg-info/top_level.txt
