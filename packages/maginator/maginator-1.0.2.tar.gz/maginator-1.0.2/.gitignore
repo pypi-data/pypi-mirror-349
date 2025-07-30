@@ -1,0 +1,7 @@
+__pycache__/
+*.egg-info/
+dist/
+build/
+test/
+.snakemake/
+maginator/workflow/scripts/extra

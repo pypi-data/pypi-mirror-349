@@ -1,0 +1,2 @@
+setuptools
+snakemake-executor-plugin-cluster-generic
