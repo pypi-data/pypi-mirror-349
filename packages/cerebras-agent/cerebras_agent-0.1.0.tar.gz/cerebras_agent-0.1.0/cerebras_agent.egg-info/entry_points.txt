@@ -1,0 +1,2 @@
+[console_scripts]
+cerebras-agent = cerebras_agent.cli:app
