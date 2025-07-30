@@ -1,0 +1,15 @@
+{
+    "layout_type": "double",
+    "latex_column_width": 3.5,
+    "latex_text_width": 7.0,
+    "base_font_size": 9,
+    "title_scale": 1.1,
+    "label_scale": 1.0,
+    "tick_scale": 0.85,
+    "legend_scale": 0.85,
+    "format": "pdf",
+    "dpi": 300,
+    "style": "seaborn-v0_8-whitegrid",
+    "grid": true,
+    "spine_style": "classic"
+  }

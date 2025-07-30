@@ -1,0 +1,15 @@
+{
+    "layout_type": "double",
+    "latex_column_width": 5.0,
+    "latex_text_width": 10.0,
+    "base_font_size": 14,
+    "title_scale": 1.4,
+    "label_scale": 1.2,
+    "tick_scale": 1.1,
+    "legend_scale": 1.1,
+    "format": "png",
+    "dpi": 150,
+    "style": "seaborn-v0_8-talk",
+    "grid": true,
+    "spine_style": "classic"
+  }

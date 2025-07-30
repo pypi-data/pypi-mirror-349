@@ -1,0 +1,12 @@
+scientific_plot_scaler/__init__.py,sha256=z0KuMjBY1rKipF1csSVO89MGKQauE-VzVZ4W6wtTMt8,588
+scientific_plot_scaler/plot_scaler.py,sha256=oqR0lNLw4bfMjatGxGprEYRctFxGMJ5ElJkmgzwcyE8,12214
+scientific_plot_scaler/configs/ieee_journal.json,sha256=7LMlP9m-ylZLFO2F3oPeaYrQYLGnpxZIzEVSb9ZIcaY,340
+scientific_plot_scaler/configs/nature_journal.json,sha256=rS8TYWxccGIAkuYuUq9QH2TZhxXCn3EvHsttPA9xmH4,310
+scientific_plot_scaler/configs/presentation.json,sha256=IN1Pg40Q8lApMgTWfeq6rUow-CATO943jraZBkIdAUM,335
+scientific_plot_scaler/configs/thesis_single.json,sha256=n9n9tdoz2OFCAw61gpg3vejNKYBLWE1NGtcDkjeAff0,329
+scientific_plot_scaler-1.0.0.dist-info/licenses/LICENSE.md,sha256=gtb9B1JEy6Z5OwScE4gFpHuno1l6kCXZNEnNCvGPFNA,1073
+scientific_plot_scaler-1.0.0.dist-info/METADATA,sha256=0dao2qzkIA43runxUBDK7Pcj_SwhE7oof4Irszvekqc,8794
+scientific_plot_scaler-1.0.0.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+scientific_plot_scaler-1.0.0.dist-info/entry_points.txt,sha256=6y_0nUmVj-2SLRdMjLRgAP8KOat6SSITswlYIGVOMAo,72
+scientific_plot_scaler-1.0.0.dist-info/top_level.txt,sha256=2N8TKLSPrihSnOdTqbImxdH70SOS5vkzDPgLGjgjJoA,23
+scientific_plot_scaler-1.0.0.dist-info/RECORD,,
