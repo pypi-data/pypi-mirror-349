@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+src/datatailr/__init__.py
+src/datatailr.egg-info/PKG-INFO
+src/datatailr.egg-info/SOURCES.txt
+src/datatailr.egg-info/dependency_links.txt
+src/datatailr.egg-info/top_level.txt
