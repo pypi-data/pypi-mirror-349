@@ -1,0 +1,6 @@
+data_ingestion_tool/__init__.py,sha256=vgX7kACitz4Hj_gnx5Y0i7zSqguA-QMUb8VOhxaGn-Q,13
+data_ingestion_tool/box_ingest.py,sha256=fi-rdLVvBM0VQmpQziZ68qEBUby-vLfEkaPGCL6G4GM,10203
+data_ingestion_tool-1.0.0.dist-info/METADATA,sha256=PZyo-zdtCAgtnEs2XkHiqGlMH6QWZzaMv4D_tjzWfVg,384
+data_ingestion_tool-1.0.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+data_ingestion_tool-1.0.0.dist-info/top_level.txt,sha256=-JTtm5tMeaGO24tiuPQNcQyxYl-hAA6uE6GLh62DFWc,20
+data_ingestion_tool-1.0.0.dist-info/RECORD,,
