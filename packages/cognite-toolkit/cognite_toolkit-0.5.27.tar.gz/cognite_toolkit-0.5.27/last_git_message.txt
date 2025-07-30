@@ -1,0 +1,28 @@
+[CDF-24720] 🚶‍♂️‍➡️Profile command (#1573)
+
+# Description
+
+This is a new alpha feature with the first use case to evaluate new CDF
+projects for upgrade.
+
+![image](https://github.com/user-attachments/assets/e76ae32d-155f-4930-bf50-40d6b2db5a21)
+
+Will extend it with writing to file and give more granular results as
+well as more resources. But stopping for now to keep the PR small.
+
+## Changelog
+
+- [x] Patch
+- [ ] Minor
+- [ ] Skip
+
+## cdf
+
+### Added
+
+- [alpha] New command `cdf profile`. Enabled with `profile = true` in
+the [alpha_flags] of section `cdf.toml` .
+
+## templates
+
+No changes.
