@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: csv-analyzer1
+Version: 0.1.1
+Summary: Valide et charge des données CSV en objets Python
+Author: Theme 7
+Description-Content-Type: text/markdown
+Requires-Dist: pydantic
+
+# Analyseur CSV intelligent
+
+Valide et charge des clients à partir d’un fichier CSV à l’aide de Pydantic.

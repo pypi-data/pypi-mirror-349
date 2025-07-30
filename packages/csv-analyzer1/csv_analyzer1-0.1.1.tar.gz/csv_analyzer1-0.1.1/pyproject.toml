@@ -1,0 +1,7 @@
+[project]
+name = "csv-analyzer1"
+version = "0.1.1"
+description = "Valide et charge des données CSV en objets Python"
+readme = "README.md"
+authors = [{name = "Theme 7"}]
+dependencies = ["pydantic"]
