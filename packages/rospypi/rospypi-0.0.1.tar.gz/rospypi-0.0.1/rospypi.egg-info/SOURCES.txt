@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+setup.py
+rospypi/__init__.py
+rospypi.egg-info/PKG-INFO
+rospypi.egg-info/SOURCES.txt
+rospypi.egg-info/dependency_links.txt
+rospypi.egg-info/top_level.txt
