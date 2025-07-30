@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/wteleport/__init__.py
+src/wteleport.egg-info/PKG-INFO
+src/wteleport.egg-info/SOURCES.txt
+src/wteleport.egg-info/dependency_links.txt
+src/wteleport.egg-info/requires.txt
+src/wteleport.egg-info/top_level.txt
+tests/test_hello.py

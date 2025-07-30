@@ -1,0 +1,26 @@
+[project]
+name = "wteleport"
+version = "0.0.0"
+description = "The most convenient tool for working with telegram"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [
+  { name = "wisderfin", email = "wisderfin@yandex.ru" }
+]
+dependencies = [
+    "requests",
+    "pytest"
+    ]
+
+[project.urls]
+"Homepage" = "https://github.com/wisderfin/wteleport"
+"Bug Tracker" = "https://github.com/wisderfin/wteleport/issues"
+
+[tool.setuptools]
+packages = ["wteleport"]
+package-dir = { "" = "src" }
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
