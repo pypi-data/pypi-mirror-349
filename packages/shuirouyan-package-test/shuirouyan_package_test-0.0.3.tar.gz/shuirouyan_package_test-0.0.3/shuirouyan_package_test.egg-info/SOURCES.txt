@@ -1,0 +1,10 @@
+setup.py
+project/__init__.py
+project/requirements.txt
+project/test_print.py
+shuirouyan_package_test.egg-info/PKG-INFO
+shuirouyan_package_test.egg-info/SOURCES.txt
+shuirouyan_package_test.egg-info/dependency_links.txt
+shuirouyan_package_test.egg-info/entry_points.txt
+shuirouyan_package_test.egg-info/requires.txt
+shuirouyan_package_test.egg-info/top_level.txt

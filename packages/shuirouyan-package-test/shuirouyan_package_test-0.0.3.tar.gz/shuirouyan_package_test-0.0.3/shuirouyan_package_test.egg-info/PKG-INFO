@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: shuirouyan-package-test
+Version: 0.0.3
+Summary: pythonpypi update version
+Author: shuirouyan
+Author-email: ck163114@163.com
+License: MIT
+Requires-Python: >=3.6
+
+pythonpypi update version, this is test pypi project
