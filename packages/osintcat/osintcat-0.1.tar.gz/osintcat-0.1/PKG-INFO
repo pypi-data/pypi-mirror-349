@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: osintcat
+Version: 0.1
+Summary: python package for osintcat.ru
+Home-page: https://github.com/stormylol/osintcat
+Author: flux
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Dynamic: author
+Dynamic: classifier
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
