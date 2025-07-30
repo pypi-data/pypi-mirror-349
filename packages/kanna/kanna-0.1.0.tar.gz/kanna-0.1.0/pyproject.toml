@@ -1,0 +1,29 @@
+[project]
+name = "kanna"
+version = "0.1.0"
+description = "A task runner for pyproject environments"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+authors = [
+  { name = "AlexandreSenpai", email = "alexandrebsramos@hotmail.com" }
+]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+dependencies = [
+  "tomli>=2.2.1",
+]
+
+[project.urls]
+Homepage = "https://github.com/alexandresenpai/kanna"
+Repository = "https://github.com/alexandresenpai/kanna"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project.scripts]
+kanna = "kanna:run"
