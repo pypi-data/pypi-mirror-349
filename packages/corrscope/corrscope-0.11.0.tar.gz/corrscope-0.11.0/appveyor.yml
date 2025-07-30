@@ -1,0 +1,56 @@
+#Docs: https://www.appveyor.com/docs/appveyor-yml/
+
+#https://github.com/vasole/fisx/blob/master/appveyor.yml
+#https://github.com/sdispater/poetry/blob/master/.appveyor.yml
+#https://github.com/sdispater/pendulum/blob/master/appveyor.yml
+
+branches:
+  only:
+    - master
+
+image: Visual Studio 2022
+shallow_clone: true
+environment:
+  matrix:
+    # For Python versions available on Appveyor, see
+    # https://www.appveyor.com/docs/windows-images-software/ or
+    # https://www.appveyor.com/docs/linux-images-software/
+    - pydir: 'C:\Python310-x64'
+  global:
+    py: '%pydir%\python.exe'
+    APPVEYOR_SAVE_CACHE_ON_ERROR: true
+
+
+cache:
+  - '%LOCALAPPDATA%\uv\cache -> .appveyor\clear-caches'
+  # - '.venv -> .appveyor\clear-caches'
+
+install:
+  # needed? to fix `appveyor` command
+  - 'set PATH=C:\Program Files\AppVeyor\BuildAgent\;%PATH%'
+
+  - powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+  - 'set Path=%USERPROFILE%\.local\bin;%Path%'
+
+  # Prevents: "The current Python version (2.7.15) is not supported by the project (^3.6)"
+  - 'set PATH=%pydir%;%pydir%\bin;%pydir%\Scripts;%PATH%'
+  - 'uv sync --extra qt5'  # don't pass --no-dev
+
+build_script:
+  - exit
+
+test_script:
+  - 'uv run black --check .'
+  - 'uv run pytest --tb=short'
+
+after_test:
+  # Run 32-bit PyInstaller to make CI complete faster.
+  # pyinstaller used to get stuck for minutes on 32-bit builds, but it no longer happens.
+  - 'uv build'
+  - 'uv run pyinstaller corrscope.spec -y'
+
+artifacts:
+  - path: 'dist\corrscope-*'  # exclude dist\.gitignore
+
+on_finish:
+  - 'uv cache prune --ci'

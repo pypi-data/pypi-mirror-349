@@ -1,0 +1,58 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "corrscope"
+version = "0.11.0"
+description = "Python program to render wave files into oscilloscope views, featuring advanced correlation-based triggering algorithm"
+authors = [{ name = "nyanpasu64", email = "nyanpasu64@tuta.io" }]
+requires-python = "~=3.10"
+readme = "README.md"
+license = "BSD-2-Clause"
+
+# https://packaging.python.org/en/latest/specifications/version-specifiers/#version-specifiers
+dependencies = [
+    "ruamel.yaml>=0.17,<0.19",
+    "numpy>=1.21,<3.0",
+    "click>=8.0.1,<9",
+    "matplotlib~=3.5",
+    "attrs>=21.2.0",
+    "appdirs>=1.4.4,<2",
+    "atomicwrites>=1.4.0,<2",
+    "colorspacious>=1.1.2,<2",
+    "QtPy>=2.0.1,<3",
+    "appnope>=0.1.3,<0.2 ; sys_platform == 'darwin'",
+]
+
+[project.optional-dependencies]
+qt5 = [
+    "PyQt5~=5.15",
+    "PyQt5-Qt5~=5.15,<5.15.11",
+]
+qt6 = ["PyQt6~=6.2"]
+
+[project.urls]
+Repository = "https://github.com/corrscope/corrscope/"
+Documentation = "https://corrscope.github.io/corrscope/"
+
+[project.scripts]
+corr = "corrscope.cli:main"
+
+[dependency-groups]
+dev = [
+    "pytest>=8,<9",
+    "pytest-mock>=3.6.1,<4",
+    "hypothesis>=6.14.0,<7",
+    "delayed-assert>=0.3.5,<0.4",
+    "pyinstaller~=6.3 ; python_version < '3.13'",
+    "pytest-cases>=3.6.1,<4",
+    "black>=22,<23",
+]
+
+[tool.black]
+line-length = 88
+py36 = true
+exclude = '''
+utils/scipy/ |
+/(\.eggs|\.git|\.hg|\.mypy_cache|\.nox|\.tox|\.venv|\.svn|_build|buck-out|build|dist)/'''
