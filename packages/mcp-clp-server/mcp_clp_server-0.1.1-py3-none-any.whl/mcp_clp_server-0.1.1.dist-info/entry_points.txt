@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-clp-server = mcp_clp_server.main:main
