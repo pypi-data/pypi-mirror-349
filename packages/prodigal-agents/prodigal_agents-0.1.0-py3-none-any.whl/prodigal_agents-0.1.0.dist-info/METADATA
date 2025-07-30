@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: prodigal-agents
+Version: 0.1.0
+Summary: Core Agent SDK for Prodigal AI
+License: Apache-2.0
+Author: Prodigal AI
+Author-email: contact@prodigalai.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: pydantic (>=2.0,<3.0)
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Project-URL: Bug Tracker, https://github.com/Prodigal-AI/prodigal-agents/issues
+Project-URL: Documentation, https://prodigal-agents.readthedocs.io
+Project-URL: Homepage, https://github.com/Prodigal-AI/prodigal-agents
+Project-URL: Repository, https://github.com/Prodigal-AI/prodigal-agents.git
+Description-Content-Type: text/markdown
+
+# prodigal-agents
+Prodigal Agents is a cutting-edge multi-agent framework by Prodigal AI, empowering businesses with intelligent, collaborative, and efficient solutions. Inspired by biological ecosystems, it transforms AI interactions, task execution, and results delivery across diverse industries, driving innovation and scalability.
+
+## Features
+- Multi-agent orchestration
+- Integration with LLMs (e.g., OpenAI, Hugging Face)
+- Edge and cloud deployment support
+
+## Installation
+```bash
+pip install prodigal-agents
