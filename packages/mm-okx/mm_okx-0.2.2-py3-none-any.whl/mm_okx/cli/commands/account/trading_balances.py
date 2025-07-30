@@ -1,0 +1,15 @@
+from mm_std import print_table
+
+from mm_okx.cli.commands.account_commands import BaseAccountParams
+from mm_okx.cli.utils import print_debug_or_error
+from mm_okx.clients.account import AccountClient
+
+
+async def run(params: BaseAccountParams, ccy: str | None) -> None:
+    client = AccountClient(params.account)
+    res = await client.get_trading_balances(ccy)
+    print_debug_or_error(res, params.debug)
+
+    headers = ["ccy", "avail", "frozen"]
+    rows = [[b.ccy, b.avail, b.frozen] for b in res.unwrap()]
+    print_table("Trading Balances", headers, rows)
