@@ -1,0 +1,14 @@
+coherent/build/__init__.py,sha256=CFlGGaW2kgqXfBJKXxsPqeKpN33WFUi37JqPTwxAVU4,560
+coherent/build/__main__.py,sha256=wmbz6yU_c3RgzN4ylP8wV0OwMqXr03-oe6obLZ2OZCE,220
+coherent/build/backend.py,sha256=I_RtUxb7Rk4DWXxvoEOCrDIoysjWb6XKs48YvQ7Ux_c,3470
+coherent/build/bootstrap.py,sha256=W0-49l76sljhYEnwYrWZfgHyklvoqBua-uDi1FrqWEU,863
+coherent/build/discovery.py,sha256=QLsT0HKZqBx7PoMtEMl5SC6bdki3M6xeDY8CkJVFfWo,11696
+coherent/build/flit.py,sha256=vjDDJdRmniSl0aPpl5n16O4hTAlctoUt7wAON9PtJxc,3285
+coherent/build/layouts.py,sha256=yDOQ3AhNRiXlWPbml3643vsBbaMDlAneHCyYZT5epnY,3574
+coherent/build/metadata.py,sha256=miDnk6ZHri8qLY_bcpM6ZgTkl8c-0TX4Ryn1qurCE6w,4794
+coherent/build/system.toml,sha256=2Rj7zIVtQzLWZABo2SG6E80Shn_t9fiBWf6dApzu9Xo,78
+coherent/build/compat/py311.py,sha256=8ElqArsMy_PYChI3SidWH_yrTX_1GTbMj4CLY-_bhCM,151
+coherent_build-0.35.0.dist-info/licenses/LICENSE,sha256=WlfLTbheKi3YjCkGKJCK3VfjRRRJ4KmnH9-zh3b9dZ0,1076
+coherent_build-0.35.0.dist-info/WHEEL,sha256=G2gURzTEtmeR8nrdXUJfNiB3VYVxigPQ-bEQujpNiNs,82
+coherent_build-0.35.0.dist-info/METADATA,sha256=jJMm_mOxaf0UgyJNwvXC2g4jNXh1sMUx5nthfE2ZoOI,1902
+coherent_build-0.35.0.dist-info/RECORD,,
