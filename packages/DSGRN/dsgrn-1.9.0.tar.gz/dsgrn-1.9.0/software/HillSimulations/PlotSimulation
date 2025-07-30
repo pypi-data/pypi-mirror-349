@@ -1,0 +1,40 @@
+#!/usr/bin/python
+#
+# RunSimulation
+#
+#  Description:
+#    This script performs a Hill Model simulation for a specified regulatory network
+#    and parameter.   
+#
+#  Usage:
+#    ./RunSimulation <network_spec_file> <parameter>
+#
+#  Inputs: <network_spec_file>      -- a network specification file
+#          <parameter>              -- a JSON string indicating the parameter
+#                                      e.g. '{ "L[X, Y]" : 2.34848, "U[X, Y]" : 1.23888, ... }'
+#
+#  Outputs: 
+#          The plot of the simulation results is displayed
+#
+#  Example usage:
+#    ./PlotSimulation network.txt "`../AlgebraicGeometry/bin/ParameterSampler network.txt 12`"
+#
+
+import subprocess, json, sys, hillmodel, numpy
+from hillmodel import *
+
+def PlotSimulation(network_spec_file,parameter,settings=[0.0,30.0,.01]):
+  # Construct a Hill Model
+  hillexp = 10  # Hill function exponent
+  model = hillmodel(network_spec_file,parameter,hillexp)
+  # Initial condition
+  y0 = numpy.array([1.0 for x in range( model.dim() )]) # initial condition
+  # Settings variables (start, end, step)
+  t0, t1, dt = settings
+  # Integrate
+  times, timeseries, varnames = model.simulateHillModel(y0,t0,t1,dt)
+  # Plot
+  model.plotResults(times,timeseries);
+
+if __name__ == "__main__":
+  PlotSimulation(sys.argv[1], json.loads(sys.argv[2]))
