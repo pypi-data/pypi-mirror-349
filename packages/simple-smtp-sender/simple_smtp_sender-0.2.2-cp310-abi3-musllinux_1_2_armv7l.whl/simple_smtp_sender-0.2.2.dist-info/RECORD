@@ -1,0 +1,8 @@
+simple_smtp_sender-0.2.2.dist-info/METADATA,sha256=Bu3o5V6OTIIhHNblZ7VADS5Hw3l0WFr6Vyz1ntfLAC0,4999
+simple_smtp_sender-0.2.2.dist-info/WHEEL,sha256=9HQYxxa423szNNDn4dhqsU9ygZqXkh4QjgESSDY7NEA,106
+simple_smtp_sender.libs/libgcc_s-5b5488a6.so.1,sha256=HGKUsVmTeNAxEdSy7Ua5Vh_I9FN3RCbPWzvZ7H_TrwE,2749061
+simple_smtp_sender/__init__.py,sha256=9XJRJ4Zas6syeJSUxdGcLQvvkIXz_BL0rkYQZFZb7DQ,155
+simple_smtp_sender/__init__.pyi,sha256=udX5N1epmjt1RGmQgcSf-CTz_qXWo43gx5NBGCChXQ0,2030
+simple_smtp_sender/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+simple_smtp_sender/simple_smtp_sender.abi3.so,sha256=-hGbwcyVRLGhYvw49xiatZ7L4xIWjJSbvDB4ifN8di8,6541261
+simple_smtp_sender-0.2.2.dist-info/RECORD,,
