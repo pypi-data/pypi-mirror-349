@@ -1,0 +1,12 @@
+romgeo/__init__.py,sha256=kYlGb2QIPMue9KIxjm305LiFrdXddTZrcK4WqDqELF4,74
+romgeo/crs.py,sha256=_wHu0nWNbXMqXC4kh3Vi_uvNgK3j28ZYs17Uw5Ib3zQ,2764
+romgeo/projections.py,sha256=NUepxeVBEwvQ9IxRRPSkUkBxxG70LMLGWVlq4R-lBXY,19122
+romgeo/transformations.py,sha256=5vde9XtREqnXGBcFA1m67j8tklzB6AUWftzInrB7wrY,33910
+romgeo/cuda/__init__.py,sha256=hC8Zs9d32t1UYcETaKT1pIV8VN3WiFSFaqDwhWYyoN8,66
+romgeo/cuda/projections.py,sha256=dG8Z6W4Wt3QEpNADbxlPEVRF7bU8dDABP4wZnliAUsU,2473
+romgeo/cuda/transformations.py,sha256=0IEjASFHDyx_zlPK-O6ps-Nid1Xp5DEhbjpnxtD-igk,5170
+romgeo-0.1.4.dist-info/licenses/LICENSE,sha256=4tSd3ZrnLWPTHZX_WGHIKAvc4sPWlQiMIOZGEEnQMPY,2391
+romgeo-0.1.4.dist-info/METADATA,sha256=LbdDCvAVt3WdNuZbGoN28Nznd0hvXSeSPM809QsTyxQ,3720
+romgeo-0.1.4.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+romgeo-0.1.4.dist-info/top_level.txt,sha256=Hy3wjl7RDTkKxejGuorrrn2c6aJnheRw0UGbkffaMrE,7
+romgeo-0.1.4.dist-info/RECORD,,
