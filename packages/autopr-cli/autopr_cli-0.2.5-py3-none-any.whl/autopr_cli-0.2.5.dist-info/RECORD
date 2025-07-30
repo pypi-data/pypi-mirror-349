@@ -1,0 +1,14 @@
+run_cli.py,sha256=3UfpotwrtblKVHTJPaxMYoiaSfTF5TZXkLLJ8o7jIcE,1339
+autopr/__init__.py,sha256=Xsa3ayOMVkhUWm4t06YeyHE0apjpZefxLH4ylp0CDtU,22
+autopr/cli.py,sha256=YfCs09HHDIYGa0Qp2mh6hnfYE7vwzthiMqSQMExbHfY,1404
+autopr/git_utils.py,sha256=eyopooshWqzmGJVZMnSHgxPdfselD24wCFLotb_SccQ,1021
+autopr/github_service.py,sha256=2FoeNRUgnN8_Mks3RTb5bYmZ4f2wScLTws8J47LHVG8,659
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_cli.py,sha256=_aOikNSJPORupQe2NJpCUhdE8Pm_pyZSmXzRUbF1Qy4,2918
+tests/test_git_utils.py,sha256=1CM2prVt4sN_dZfG7GZT5YJHCynijHaErLIk9nheJ1w,4471
+tests/test_github_service.py,sha256=hqsjl4VVOBzvl8KoVTjaB0-k2qwInfXh3WS2trTasM4,3236
+autopr_cli-0.2.5.dist-info/METADATA,sha256=thXEh1QG5MGKuRIbL_nwsLz6UKMmCghJHZN_ZSRci2I,3682
+autopr_cli-0.2.5.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+autopr_cli-0.2.5.dist-info/entry_points.txt,sha256=Zi7OIKjmTmKe-BRFbXChwuOrMI_QkQL99onNEiQlhzQ,40
+autopr_cli-0.2.5.dist-info/top_level.txt,sha256=ACdTfu2yB2fNdk2MCdsRQCSMr5giji3cL-TFSfStZnA,21
+autopr_cli-0.2.5.dist-info/RECORD,,
