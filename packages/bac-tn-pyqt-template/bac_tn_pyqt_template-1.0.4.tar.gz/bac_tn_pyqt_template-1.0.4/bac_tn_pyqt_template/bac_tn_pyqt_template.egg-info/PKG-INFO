@@ -1,0 +1,24 @@
+Metadata-Version: 2.4
+Name: bac-tn-pyqt-template
+Version: 1.0.4
+Summary: Plugin Thonny pour insérer un modèle PyQt5 destiné aux élèves Bac Informatique Tunisie
+Author-email: nex <none@example.com>
+License: MIT
+Project-URL: Homepage, https://pypi.org/project/bac-tn-pyqt-template
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# Bac-TN PyQt Template
+
+Plugin Thonny : ajoute un modèle PyQt5 dans l’éditeur pour les élèves Bac Informatique Tunisie 🇹🇳.
+
+## Utilisation
+
+Après installation, allez dans `Outils > Insérer modèle PyQt5 - BacTN`.
+
+Un exemple PyQt5 avec `uic.loadUi()` sera inséré.
+
+## Auteur
+- nex

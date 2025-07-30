@@ -1,0 +1,7 @@
+LICENSE
+README.md
+pyproject.toml
+bac_tn_pyqt_template/bac_tn_pyqt_template.egg-info/PKG-INFO
+bac_tn_pyqt_template/bac_tn_pyqt_template.egg-info/SOURCES.txt
+bac_tn_pyqt_template/bac_tn_pyqt_template.egg-info/dependency_links.txt
+bac_tn_pyqt_template/bac_tn_pyqt_template.egg-info/top_level.txt

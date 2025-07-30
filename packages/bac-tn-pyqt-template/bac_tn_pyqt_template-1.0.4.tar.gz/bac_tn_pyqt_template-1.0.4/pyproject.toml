@@ -1,0 +1,20 @@
+[project]
+name = "bac-tn-pyqt-template"
+version = "1.0.4"
+description = "Plugin Thonny pour insérer un modèle PyQt5 destiné aux élèves Bac Informatique Tunisie"
+authors = [{ name = "nex", email = "none@example.com" }]
+license = { text = "MIT" }
+readme = "README.md"
+requires-python = ">=3.7"
+
+[project.urls]
+Homepage = "https://pypi.org/project/bac-tn-pyqt-template"
+
+[tool.setuptools.packages.find]
+where = ["bac_tn_pyqt_template"]
+include = ["*"]
+namespaces = false
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
