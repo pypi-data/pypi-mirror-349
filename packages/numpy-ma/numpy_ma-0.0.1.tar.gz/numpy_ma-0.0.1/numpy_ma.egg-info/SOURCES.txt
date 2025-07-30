@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+setup.py
+numpy_ma/__init__.py
+numpy_ma.egg-info/PKG-INFO
+numpy_ma.egg-info/SOURCES.txt
+numpy_ma.egg-info/dependency_links.txt
+numpy_ma.egg-info/top_level.txt
