@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+LePatrick/__init__.py
+LePatrick/patrick.py
+LePatrick/utils.py
+LePatrick.egg-info/PKG-INFO
+LePatrick.egg-info/SOURCES.txt
+LePatrick.egg-info/dependency_links.txt
+LePatrick.egg-info/requires.txt
+LePatrick.egg-info/top_level.txt
+LePatrick/assets/patrick.png
+tests/test_patrick.py
