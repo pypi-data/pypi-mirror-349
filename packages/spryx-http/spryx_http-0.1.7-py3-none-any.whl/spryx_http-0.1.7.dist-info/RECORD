@@ -1,0 +1,12 @@
+spryx_http/__init__.py,sha256=gzhRUcFJk60vriKFppjrrbnIhP2mi1L-Nf6JAlfvwH4,721
+spryx_http/auth.py,sha256=x8X7cYatoaC9UhrZqjKCN2gUEWXMyyAWpqm9vVDwUAY,2240
+spryx_http/base.py,sha256=rnL7e49_bsWlOrlyxL3tTT_0e9pOxVIbHFRisEF77bQ,18686
+spryx_http/exceptions.py,sha256=PIepOlooxULy4Ssf9YVinUJIB0zhn51D72ZPP-QZ6y0,2382
+spryx_http/models.py,sha256=KYYRzopswLv1KDW9dNKpbaRHlzBBIMi7AJTOhobtguA,310
+spryx_http/pagination.py,sha256=3jJidLXHnziXEBnB_wP8LzP_1EO7K23R_2Ffve_0WlE,4148
+spryx_http/retry.py,sha256=puH_i1CWb7HdFkWB8yRd6gTFrHvke7-NRELgzQEf67I,5767
+spryx_http/settings.py,sha256=1puyjekNS6Tf-wZ4rujuYh-Oe9M90aYKP79PN1UrYVE,996
+spryx_http-0.1.7.dist-info/LICENSE,sha256=vt5n8iKTAy1LJb9EJqYu7maVTn_H-U5rJyGPLrrYqZc,1062
+spryx_http-0.1.7.dist-info/METADATA,sha256=AL5zSArIb9jbx0YKlssfaN_xAO7FodN45abtLsZhn1E,2862
+spryx_http-0.1.7.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+spryx_http-0.1.7.dist-info/RECORD,,
