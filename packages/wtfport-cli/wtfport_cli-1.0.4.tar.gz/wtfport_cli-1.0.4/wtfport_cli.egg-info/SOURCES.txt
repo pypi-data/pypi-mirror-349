@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+wtfport/__init__.py
+wtfport/cli.py
+wtfport_cli.egg-info/PKG-INFO
+wtfport_cli.egg-info/SOURCES.txt
+wtfport_cli.egg-info/dependency_links.txt
+wtfport_cli.egg-info/entry_points.txt
+wtfport_cli.egg-info/requires.txt
+wtfport_cli.egg-info/top_level.txt
