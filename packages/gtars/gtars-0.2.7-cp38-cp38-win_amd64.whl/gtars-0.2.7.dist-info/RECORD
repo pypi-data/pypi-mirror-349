@@ -1,0 +1,15 @@
+gtars-0.2.7.dist-info/METADATA,sha256=W93sG3b0IiJt5P38siyFjnyQkZguyQbiqqC95TzpzCM,1291
+gtars-0.2.7.dist-info/WHEEL,sha256=ypFdP-bzcWPI3YpC7hUo0L3gNkY18kZWMj9SJHfCzBE,94
+gtars/__init__.py,sha256=40sUs-s_GrBuDCjOFT2laU_UlRtYRSRaibm7Rvn6DzI,36
+gtars/__init__.pyi,sha256=xq3DTJlvvVHWjbZ1EvMjKJBpN-UQO3z1Rulqaz2NN6w,18
+gtars/ailist/__init__.py,sha256=o7oBu9b0iejrxXkEoOEXZ8-zEa3hEh6iZkULB46uJdw,43
+gtars/ailist/__init__.pyi,sha256=RUnm49LTodLyhVd3cdNbFxSL3fFQo2gffG_Zg9zZ3Jw,1224
+gtars/digests/__init__.py,sha256=5tAtEZJFA95IEM7Dig-qr4w8VuUOh_jm9ja3AnBJDY8,44
+gtars/gtars.cp38-win_amd64.pyd,sha256=va8P2f8Uq1S0AxHH65YRX4BglfdzxIYEw7HZLhA4j7k,4903936
+gtars/models/__init__.py,sha256=v5i7Tswm9kCL0ltmidwvhHtkqAGM8pPKzfdXqDN7viM,43
+gtars/models/__init__.pyi,sha256=ZAIjyY7lWtXxtzm5u3spZO8PU1RpSV789R1p4ccopzk,2130
+gtars/tokenizers/__init__.py,sha256=MQBE4wgxG-Le3kjGsRU92LazQazLVZrnp-CrdjRQWvU,47
+gtars/tokenizers/__init__.pyi,sha256=T7zx5Fcz5nmV_bUK5NFih8gxdEhNMUl09c4mSCwhUTk,5211
+gtars/utils/__init__.py,sha256=7c7y8fobclw4s59-1qyCt1SZ4225ydmaOPRPohiaK7c,42
+gtars/utils/__init__.pyi,sha256=l6QsZolEhCHloCZ2GvhlrTWTRcjAO5EgL4mEDVGlwUo,422
+gtars-0.2.7.dist-info/RECORD,,
