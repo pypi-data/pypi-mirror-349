@@ -1,0 +1,2 @@
+[pylsp]
+starkiller = starkiller.pylsp_plugin.plugin
