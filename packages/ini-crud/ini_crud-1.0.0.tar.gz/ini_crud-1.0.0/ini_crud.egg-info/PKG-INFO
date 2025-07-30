@@ -1,0 +1,88 @@
+Metadata-Version: 2.1
+Name: ini-crud
+Version: 1.0.0
+Summary: a simple tool for ini file crud
+Home-page: https://github.com/hujianli94/ini_crud.ini
+Author: hujianli
+Author-email: 1879324764@qq.com
+License: MIT
+Description: 
+        # ini_crud
+        
+        ## Description
+        
+        ini_crud is a simple crud library for dart.
+        
+        ## Install
+        
+        ```shell
+        pip install ini_crud
+        ```
+        
+        ## Usage
+        
+        增删改
+        
+        ```shell
+        # 新增文件，设置 section 和 option
+        ini_crud dest=/etc/anotherconf2 section=drinks option=db value=hu state=present create=yes
+        
+        # 更新文件，设置 section 和 option 多个值
+        ini_crud dest=/etc/anotherconf2 section=drinks option=db value=hu1,hu2 state=present diff=yes
+        
+        # 删除文件中设置 section 和 option
+        ini_crud dest=/etc/anotherconf2 section=drinks option=db value=hu state=absent
+        
+        # 修改文件，设置 section 和 option，并开启备份
+        ini_crud dest=/etc/anotherconf2 section=drinks option=name value=hu1111 state=present
+        ini_crud dest=/etc/anotherconf2 section=drinks option=db value=hu2222 state=present backup=yes
+        
+        # 修改文件，设置 section 和 option，并开启备份，允许空值
+        ini_crud dest=/etc/anotherconf2 section=drinks option=name2 value= state=present allow_no_value=yes
+        ini_crud dest=/etc/anotherconf2 section=drinks option=name2 value= state=present backup=yes allow_no_value=yes
+        
+        # 修改文件，设置 section 和 option，开启 diff
+        ini_crud dest=/etc/anotherconf2 section=drinks option=db value=hu111111111 state=present diff=yes
+        
+        # 修改文件，设置 section 和 option，并开启备份，允许空值，开启 diff, 并设置 no_extra_spaces
+        ini_crud dest=/etc/anotherconf2 section=drinks option=db value=localhost state=present backup=yes no_extra_spaces=yes create=yes allow_no_value=yes diff=yes
+        ```
+        
+        查
+        
+        ```shell
+        # 查询文件，根据 section 和 option 查询
+        ini_crud dest=/etc/anotherconf2 section=drinks option=db mode=get
+        
+        # 查询文件，查询 所有 section 下的 option
+        ini_crud dest=/etc/anotherconf2 section=drinks mode=get
+        ```
+        
+        ## 方法调用
+        
+        ```python
+        from ini_crud import do_ini, backup_local, match_opt, match_active_opt, get_ini_lines
+        
+        if __name__ == '__main__':
+            do_ini("/etc/hosts", section="test", option="test", value="test", state="present")
+            do_ini("/etc/anotherconf", section="test", option="test", value="test", state="present")
+            do_ini("/etc/anotherconf", section="drinks", option="db", value="hu", state="present", backup=True)
+            do_ini("/etc/anotherconf", section="drinks", option="name", value="hu", state="present", backup=True, _diff=True)
+            do_ini("/etc/anotherconf", section="drinks", option="db3", value="", state="present", backup=True,
+                   allow_no_value=True)
+            do_ini("/etc/anotherconf", section="drinks", option="db2", value="hu2", state="present", backup=True,
+                   no_extra_spaces=True)
+            changed, backup_file, diff, msg = do_ini("/etc/anotherconf2", section="drinks", option="db", mode="get")
+            print(changed, backup_file, diff, msg['options'])
+        ```
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8.0
+Description-Content-Type: text/markdown

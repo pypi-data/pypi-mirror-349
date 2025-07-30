@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+setup.py
+ini_crud/__init__.py
+ini_crud/__version__.py
+ini_crud/cli.py
+ini_crud/core.py
+ini_crud/errors.py
+ini_crud/logs.py
+ini_crud/utils.py
+ini_crud.egg-info/PKG-INFO
+ini_crud.egg-info/SOURCES.txt
+ini_crud.egg-info/dependency_links.txt
+ini_crud.egg-info/entry_points.txt
+ini_crud.egg-info/top_level.txt

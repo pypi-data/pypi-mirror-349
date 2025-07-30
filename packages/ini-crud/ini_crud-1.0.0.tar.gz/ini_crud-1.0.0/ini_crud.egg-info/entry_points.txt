@@ -1,0 +1,3 @@
+[console_scripts]
+ini_crud = ini_crud.cli:main
+
