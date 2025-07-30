@@ -1,0 +1,11 @@
+textual>=3.2.0
+
+[:sys_platform == "zos"]
+racfu==1.0a2.dev2
+
+[dev]
+textual-dev>=1.7.0
+
+[images]
+qrcode>=8.1
+textual-image>=0.8.2
