@@ -1,0 +1,1 @@
+from .service_providers.replicate.mapper import Wan2_1_T2V_14b_720PReplicateMapper

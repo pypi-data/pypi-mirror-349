@@ -1,0 +1,1 @@
+from .service_providers.fal.mapper import Wan2_1_FLF2V_14b_720PFalMapper
