@@ -1,0 +1,45 @@
+[tool.poetry]
+name = "triqler"
+version = "0.9.0"
+description = "Triqler: TRansparent Identification-Quantification-Linked Error Rates"
+authors = ["Matthew The <matthew.the@tum.de>", "Patrick Truong <patrick.truong@scilifelab.se>"]
+license= "Apache-2.0"
+readme = "README.md"
+homepage = "https://github.com/statisticalbiotechnology/triqler"
+repository = "https://github.com/statisticalbiotechnology/triqler"
+keywords = ["mass spectrometry", "missing values", "proteomics", "quantification"]
+include = [
+  "LICENSE",
+]
+packages = [
+    {include = "triqler"},
+    {include = "tests", format = "sdist"},
+]
+
+[tool.poetry.scripts]
+triqler = 'triqler.triqler:main'
+
+dinosaur2triqler = 'triqler.convert.dinosaur:main'
+maxquant2triqler = 'triqler.convert.maxquant:main'
+quandenser2triqler = 'triqler.convert.quandenser:main'
+diann2triqler = 'triqler.convert.diann:main'
+
+plot_hyperparameter_fits = 'triqler.distribution.plot_hyperparameter_fits:main'
+plot_posteriors = 'triqler.distribution.plot_posteriors:main'
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.14"
+numpy = "^2.0.0"
+scipy = "^1.9.1"
+threadpoolctl = "^3.1.0"
+pandas = ">=1.4.0"
+job-pool = ">=0.3.0"
+pyarrow = "^19.0.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.4"
+pytest-cov = "^2.12.1"
+
+[build-system]
+requires = ["poetry-core>=1.5.1"]
+build-backend = "poetry.core.masonry.api"
