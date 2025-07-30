@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+calculate_power_mcp_76980.egg-info/PKG-INFO
+calculate_power_mcp_76980.egg-info/SOURCES.txt
+calculate_power_mcp_76980.egg-info/dependency_links.txt
+calculate_power_mcp_76980.egg-info/requires.txt
+calculate_power_mcp_76980.egg-info/top_level.txt
+mcp_server/__init__.py
+mcp_server/server.py
