@@ -1,0 +1,28 @@
+[tool.poetry]
+name        = "prodigal-agents"
+version     = "0.1.0"
+description = "Core Agent SDK for Prodigal AI"
+authors     = ["Prodigal AI <contact@prodigalai.com>"]
+readme      = "README.md"
+license     = "Apache-2.0"
+packages    = [{ include = "prodigal_agents", from = "src" }]
+
+[tool.poetry.dependencies]
+python     = "^3.9"
+pydantic   = "^2.0"
+requests   = "^2.31.0"
+
+[tool.poetry.dev-dependencies]
+pytest     = "^7.2"
+black      = "^24.0"
+flake8     = "^5.0"
+
+[tool.poetry.urls]
+"Homepage"      = "https://github.com/Prodigal-AI/prodigal-agents"
+"Repository"    = "https://github.com/Prodigal-AI/prodigal-agents.git"
+"Bug Tracker"   = "https://github.com/Prodigal-AI/prodigal-agents/issues"
+"Documentation" = "https://prodigal-agents.readthedocs.io"  # if you have it
+
+[build-system]
+requires    = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
