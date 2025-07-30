@@ -1,0 +1,8 @@
+
+[test]
+mypy
+pytest
+pytest-mypy-plugins
+pytest-random-order
+coverage
+phantom-types
