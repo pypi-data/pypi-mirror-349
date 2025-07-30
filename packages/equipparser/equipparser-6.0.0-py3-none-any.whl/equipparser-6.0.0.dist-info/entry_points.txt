@@ -1,0 +1,4 @@
+[console_scripts]
+equipparser = equipparser.irsx_cli:main
+irsx_index = equipparser.irsx_index_cli:main
+irsx_retrieve = equipparser.irsx_retrieve_cli:main
