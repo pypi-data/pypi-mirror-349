@@ -1,0 +1,11 @@
+imgannotator/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+imgannotator/cli.py,sha256=s7IQmLMHQUq_5lmYiLyk5SvePSKvzfykNeRpde7oRaw,677
+imgannotator/filters.py,sha256=-wgpQOX8RnMVBdCJ60FrhURn7ov3-aC4lVyZJL9mZTM,620
+imgannotator/metadata.py,sha256=RSJzzEPJGuepTxQjJ3OH8p7KtYLmdxuAjK4_tfSxtRA,613
+tests/test_filters.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_metadata.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+imgannotator-0.1.0.dist-info/METADATA,sha256=Y2W5CXFm7xQXNqOG6O0hKqUEN_IwN8wfZARvcUmzdEA,309
+imgannotator-0.1.0.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+imgannotator-0.1.0.dist-info/entry_points.txt,sha256=HXy297KqZH1uRCLTWObxESV4Ed6_4YCqY_6R-DKxn9w,54
+imgannotator-0.1.0.dist-info/top_level.txt,sha256=cQqDFns0z-JAwt1yGxMXdz70AEI0nmj20uRzScS0Bho,19
+imgannotator-0.1.0.dist-info/RECORD,,

@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: imgannotator
+Version: 0.1.0
+Summary: CLI for applying image filters and embedding EXIF metadata
+Author-email: Your Name <you@example.com>
+License: MIT
+Project-URL: Homepage, https://github.com/you/imgannotator
+Keywords: cli,typer,image,exif
+Description-Content-Type: text/markdown
