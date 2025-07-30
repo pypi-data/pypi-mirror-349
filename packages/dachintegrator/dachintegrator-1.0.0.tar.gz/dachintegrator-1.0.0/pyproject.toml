@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dachintegrator"
+version = "1.0.0"
+description = "Python SDK class for Django to create convenient CRUD and Non CRUD third-party integrations"
+authors = [{ name="Dachi Vadachkoria", email="dachi.vadachkoria@gmail.com" }]
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = [
+    "requests==2.28.1",
+    "django>=4.0"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/dachivadachkoria/integrator"

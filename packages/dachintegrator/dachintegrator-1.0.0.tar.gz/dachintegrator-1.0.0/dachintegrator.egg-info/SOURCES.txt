@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+pyproject.toml
+readme.md
+dachintegrator.egg-info/PKG-INFO
+dachintegrator.egg-info/SOURCES.txt
+dachintegrator.egg-info/dependency_links.txt
+dachintegrator.egg-info/requires.txt
+dachintegrator.egg-info/top_level.txt
+integrator/__init__.py
+integrator/sdk.py
+integrator/types.py
