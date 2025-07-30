@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RAGBot Chat</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: #00ff99;
+      font-family: "Courier New", monospace;
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #00ffaa;
+    }
+
+    .chat-box {
+      border: 1px solid #00ff99;
+      padding: 15px;
+      height: 400px;
+      overflow-y: auto;
+      background-color: #1e1e1e;
+      margin-bottom: 20px;
+      border-radius: 10px;
+    }
+
+    .user-msg, .bot-msg {
+      max-width: 70%;
+      padding: 10px;
+      border-radius: 15px;
+      margin: 10px;
+      display: inline-block;
+      clear: both;
+      font-size: 16px;
+      line-height: 1.4;
+    }
+
+    .user-msg {
+      background-color: #007bff; /* Blue bubble */
+      color: #fff;
+      float: right;
+      text-align: right;
+    }
+
+    .bot-msg {
+      background-color: #1abc9c; /* Greenish bubble */
+      color: #000;
+      float: left;
+      text-align: left;
+    }
+
+    .chat-input {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"] {
+      flex: 1;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #00ff99;
+      background-color: #0f0f0f;
+      color: #fff;
+    }
+
+    button {
+      padding: 10px 15px;
+      border-radius: 5px;
+      border: none;
+      background-color: #00ff99;
+      color: #0f0f0f;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background-color: #00ffaa;
+    }
+
+    .footer-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h2>🤖 RAGBot Terminal</h2>
+  <div class="chat-box" id="chatBox">
+    <div class="bot-msg">How may I help you?</div>
+  </div>
+
+  <div class="chat-input">
+    <input type="text" id="userInput" placeholder="Type your question..." />
+    <button onclick="sendMessage()">Send</button>
+  </div>
+
+  <div class="footer-buttons">
+    <button onclick="window.location.href='chat.html'">Exit</button>
+    <button onclick="continueChat()">Continue</button>
+  </div>
+
+  <script>
+    const chatBox = document.getElementById("chatBox");
+    const userInput = document.getElementById("userInput");
+
+    function appendMessage(text, sender) {
+      const div = document.createElement("div");
+      div.className = sender === "user" ? "user-msg" : "bot-msg";
+      div.innerText = text;
+      chatBox.appendChild(div);
+      chatBox.scrollTop = chatBox.scrollHeight;
+    }
+
+    function sendMessage() {
+      const text = userInput.value.trim();
+      if (!text) return;
+
+      appendMessage(text, "user");
+      userInput.value = "";
+
+      // Simulate RAG response (replace with backend call)
+      fetch("/chat/", {
+        method: "POST",
+        headers: {
+        "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ query: text })
+        })
+        .then(response => response.json())
+        .then(data => {
+        appendMessage(data.answer, "bot");
+        appendMessage("Do you want to continue or exit?", "bot");
+        })
+        .catch(error => {
+        appendMessage("Error contacting RAGBot API.", "bot");
+        console.error(error);
+        });
+
+    }
+
+    function continueChat() {
+      userInput.focus();
+    }
+
+    function mockRAGResponse(query) {
+      if (query.toLowerCase().includes("iitb")) {
+        return "IIT Bombay is located in Powai, Mumbai, Maharashtra, India.";
+      }
+      return "This is a mock response from RAGBot.";
+    }
+  </script>
+</body>
+</html>

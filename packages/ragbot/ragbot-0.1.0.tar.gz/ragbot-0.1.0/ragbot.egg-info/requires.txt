@@ -1,0 +1,16 @@
+langchain
+langchain-community
+langchain-huggingface
+faiss-cpu
+llama-cpp-python
+fastapi
+uvicorn
+beautifulsoup4
+requests
+sentence-transformers
+python-multipart
+tqdm
+nltk
+unstructured
+python-magic
+tiktoken

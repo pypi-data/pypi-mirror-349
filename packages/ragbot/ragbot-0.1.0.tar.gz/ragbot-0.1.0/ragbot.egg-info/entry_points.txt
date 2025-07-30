@@ -1,0 +1,3 @@
+[console_scripts]
+ragbot = ragbot.cli:main
+ragbot-download = ragbot.cli:download_model
