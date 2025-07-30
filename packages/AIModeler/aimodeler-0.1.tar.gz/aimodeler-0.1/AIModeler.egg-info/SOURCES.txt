@@ -1,0 +1,5 @@
+setup.py
+AIModeler.egg-info/PKG-INFO
+AIModeler.egg-info/SOURCES.txt
+AIModeler.egg-info/dependency_links.txt
+AIModeler.egg-info/top_level.txt
