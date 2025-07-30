@@ -1,0 +1,47 @@
+Metadata-Version: 2.4
+Name: image_processing_danilo
+Version: 0.0.1
+Summary: image Processing Package using Skimage
+Author: Danilo
+Author-email: danilo.r.oliveira1@gmail.com
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: matplotlib==3.10.3
+Requires-Dist: numpy
+Requires-Dist: scikit-image==0.25.2
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# image_processing_danilo
+
+Description. 
+The package image_processing_danilo is used to:
+	Processing:
+		- Histogran matching
+		- Structural similarity
+		- Resize image
+	Utils:
+		- Read image
+		- Save image
+		- Plot image
+		- Plot result
+		- Plot histogram 
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install package_name
+
+```bash
+pip install image_processing_danilo
+```
+
+## Author
+Danilo
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
