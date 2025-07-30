@@ -1,0 +1,17 @@
+beehiiv_python_client/__init__.py,sha256=qvvhR-pv8SLZknSBzenp7qAziXlN6JhA-LcGiGSBAQo,584
+beehiiv_python_client/client.py,sha256=Bxw3jpdwjriNmTzwi7o3jwiL6ero582XoXcg55buYLg,5572
+beehiiv_python_client/exceptions.py,sha256=dPG7fk8pLy6F_qrQ6HcSipgUkqC-WFSbFVjekhN6FpI,1024
+beehiiv_python_client/models.py,sha256=rfDtui0CjbXWh51tph39FjaiIdgizKYhXDcoqmNHJr0,904
+beehiiv_python_client/resources/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+beehiiv_python_client/resources/automations.py,sha256=qYwPKJjy4lbAhBHF_uNzM4w-6KCVen9RTRXAZDTo2C0,4984
+beehiiv_python_client/resources/base.py,sha256=WWuXNVBhgj6HVpmiejgwWaZieW0-Tk_bVoUaUtiCgdA,1108
+beehiiv_python_client/resources/custom_fields.py,sha256=PcW7vPHiNBqBQoGvbQkz9y989YrMiLChhYWVQQQWU9E,3846
+beehiiv_python_client/resources/posts.py,sha256=VqtTuRUJ5kNwssjzBRLU6Jakn8x4l31zLULinzCDUjE,7494
+beehiiv_python_client/resources/publications.py,sha256=tpqrgg4fLRm_4lLY4wDc1HWhHfgB4tM6FfB0e1SzxK0,2619
+beehiiv_python_client/resources/segments.py,sha256=uVRCULzGi_OulmYIjeGTmQ845856_fxiD8Vpq1Fi8eA,4352
+beehiiv_python_client/resources/subscriptions.py,sha256=UaPVh7Ho5OzPJk7buV8W2aPkxr1oHSHg3rOA-FovX7o,10334
+beehiiv_python_client/resources/tiers.py,sha256=qsIVlNSuAKIYw_r5Hx-hF7mak_DsopnkVzbDgWy2XZ8,4305
+beehiiv_python_client-0.1.3.dist-info/LICENSE,sha256=gZYhjv7Mk_G-hBTNTQ7fgg9glcznbmbmJwhlTbDr8wk,1079
+beehiiv_python_client-0.1.3.dist-info/METADATA,sha256=NTBmyYwK-t1RYyI8bLTNN6JL2x86wemnxvZ5yaegrl4,9951
+beehiiv_python_client-0.1.3.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+beehiiv_python_client-0.1.3.dist-info/RECORD,,

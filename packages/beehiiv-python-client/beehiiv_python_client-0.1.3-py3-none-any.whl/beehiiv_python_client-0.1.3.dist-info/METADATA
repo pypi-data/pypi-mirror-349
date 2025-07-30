@@ -1,0 +1,322 @@
+Metadata-Version: 2.3
+Name: beehiiv-python-client
+Version: 0.1.3
+Summary: A Python client for the Beehiiv API v2.
+License: MIT
+Keywords: beehiiv,api,client,newsletter
+Author: Salah El. Elnabrawy
+Author-email: salah.nb.03@gmail.com
+Requires-Python: >=3.8.1,<4.0.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Communications :: Email
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Project-URL: Homepage, https://github.com/salah55s/beehiiv-python-client
+Project-URL: Repository, https://github.com/salah55s/beehiiv-python-client
+Description-Content-Type: text/markdown
+
+
+# Beehiiv Python Client
+
+A comprehensive Python client library for interacting with the [Beehiiv API v2](https://developers.beehiiv.com/api-reference/automation-journeys/create).
+
+## Features
+
+* **Easy-to-use interface** for Beehiiv API v2 endpoints
+* **Authentication handling** and common request patterns
+* **Type hints** for better developer experience
+* **Comprehensive error handling** for API responses
+* **Full API coverage** including:
+  * **Publications** : List, Get, Get Referral Program
+  * **Automations** : List Automations, Get Automation, Add Subscription to Journey, List Journeys, Get Journey
+  * **Subscriptions** : Create, List, Get by ID, Get by Email, Update, Delete, Add Tag, Bulk Operations
+  * **Posts** : Create, List, Get Aggregate Stats, Get, Delete
+  * **Custom Fields** : Create, List, Get, Update, Delete
+  * **Segments** : List, Get, Recalculate, List Subscribers, Delete
+  * **Tiers** : Create, List, Get, Update
+
+## Installation
+
+Install the package via pip:
+
+```bash
+pip install beehiiv-python-client
+```
+
+For local development:
+
+```bash
+git clone https://github.com/selnabrawy/beehiiv-python-client.git
+cd beehiiv-python-client
+poetry install
+```
+
+## Prerequisites
+
+* Python 3.8+
+* A Beehiiv API Key (found in your Beehiiv publication settings under Integrations > API)
+
+## Quick Start
+
+```python
+import os
+from dotenv import load_dotenv
+from beehiiv_python_client import BeehiivClient, BeehiivAPIException
+
+# Load environment variables
+load_dotenv()
+
+API_KEY = os.getenv("BEEHIIV_API_KEY")
+PUBLICATION_ID = os.getenv("BEEHIIV_PUBLICATION_ID")
+
+if not API_KEY:
+    raise ValueError("BEEHIIV_API_KEY not set in environment variables.")
+
+client = BeehiivClient(api_key=API_KEY)
+
+try:
+    if PUBLICATION_ID:
+        print(f"Fetching details for publication: {PUBLICATION_ID}")
+        publication = client.publications.get(publication_id=PUBLICATION_ID, expand=["stats"])
+        print(f"Publication Name: {publication['data']['name']}")
+        print(f"Active Subscriptions: {publication['data']['stats']['active_subscriptions']}")
+
+        print("\nListing first 2 subscriptions:")
+        subscriptions = client.subscriptions.list(publication_id=PUBLICATION_ID, limit=2)
+        for sub in subscriptions.get('data', []):
+            print(f"- Email: {sub['email']}, Status: {sub['status']}")
+    else:
+        print("Listing all publications available to this API key:")
+        publications = client.publications.list()
+        for pub in publications.get('data', []):
+            print(f"- ID: {pub['id']}, Name: {pub['name']}")
+
+except BeehiivAPIException as e:
+    print(f"An API error occurred: {e}")
+    print(f"Status Code: {e.status_code}")
+    print(f"Error Data: {e.error_data}")
+except Exception as e:
+    print(f"An unexpected error occurred: {e}")
+```
+
+## Environment Variables
+
+Create a `.env` file in your project root:
+
+```env
+BEEHIIV_API_KEY="your_actual_api_key"
+BEEHIIV_PUBLICATION_ID="pub_your_publication_id"
+BEEHIIV_AUTOMATION_ID_FOR_TESTING="aut_your_automation_id"  # Optional
+```
+
+**Important:** Add `.env` to your `.gitignore` file to keep your API keys secure.
+
+## Usage Examples
+
+### Publications
+
+```python
+# List all publications accessible by the API key
+pubs = client.publications.list(expand=["stats"])
+
+# Get a specific publication
+pub_details = client.publications.get(publication_id="pub_xxxx", expand=["stats"])
+
+# Get referral program details
+referral_info = client.publications.get_referral_program(publication_id="pub_xxxx")
+```
+
+### Subscriptions
+
+```python
+# Create a new subscription
+new_sub = client.subscriptions.create(
+    publication_id="pub_xxxx",
+    email="test@example.com",
+    send_welcome_email=False,
+    double_opt_override="on"  # or "off"
+)
+subscription_id = new_sub['data']['id']
+
+# List subscriptions
+subs = client.subscriptions.list(publication_id="pub_xxxx", limit=10, status="active")
+
+# Get a subscription by ID
+sub_by_id = client.subscriptions.get_by_id(
+    publication_id="pub_xxxx", 
+    subscription_id="sub_yyyy"
+)
+
+# Get a subscription by email (automatically URL encoded)
+sub_by_email = client.subscriptions.get_by_email(
+    publication_id="pub_xxxx", 
+    email="user@example.com"
+)
+
+# Update a subscription
+updated_sub = client.subscriptions.update(
+    publication_id="pub_xxxx",
+    subscription_id="sub_yyyy",
+    custom_fields=[{"name": "VIP", "value": "true"}]
+)
+
+# Add tags to a subscription
+client.subscriptions.add_tag(
+    publication_id="pub_xxxx",
+    subscription_id="sub_yyyy",
+    tags=["new_tag", "another_tag"]
+)
+
+# Bulk update subscription statuses
+client.subscriptions.bulk_update_status(
+    publication_id="pub_xxxx",
+    subscription_ids=["sub_aaaa", "sub_bbbb"],
+    new_status="inactive"
+)
+
+# Delete a subscription (use with caution)
+# client.subscriptions.delete(publication_id="pub_xxxx", subscription_id="sub_yyyy")
+```
+
+### Automations
+
+```python
+# List automations for a publication
+automations = client.automations.list_automations(publication_id="pub_xxxx")
+
+# Get a specific automation
+automation_details = client.automations.get_automation(
+    publication_id="pub_xxxx", 
+    automation_id="aut_zzzz"
+)
+
+# Add an existing subscription to an automation journey
+# (Automation must have an "Add by API" trigger)
+journey = client.automations.add_subscription_to_journey(
+    publication_id="pub_xxxx",
+    automation_id="aut_zzzz",
+    subscription_id="sub_yyyy"  # or email="user@example.com"
+)
+
+# List journeys for an automation
+journeys = client.automations.list_journeys(
+    publication_id="pub_xxxx", 
+    automation_id="aut_zzzz"
+)
+
+# Get a specific journey
+journey_details = client.automations.get_journey(
+    publication_id="pub_xxxx",
+    automation_id="aut_zzzz",
+    automation_journey_id="aj_wwww"
+)
+```
+
+### Posts (Beta)
+
+> **Note:** Post creation and block-based structure is currently in Beta according to Beehiiv API documentation.
+
+```python
+# List posts
+posts = client.posts.list(publication_id="pub_xxxx", status="confirmed", limit=5)
+
+# Get a specific post
+post_details = client.posts.get(
+    publication_id="pub_xxxx", 
+    post_id="post_vvvv", 
+    expand=["stats"]
+)
+
+# Create a post (simplified example - refer to API docs for full block structure)
+# new_post = client.posts.create(
+#     publication_id="pub_xxxx",
+#     title="My API Post",
+#     blocks=[{"type": "paragraph", "plaintext": "Hello from the API!"}],
+#     status="draft"
+# )
+```
+
+### Custom Fields, Segments, and Tiers
+
+```python
+# List custom fields
+custom_fields = client.custom_fields.list(publication_id="pub_xxxx")
+
+# List segments
+segments = client.segments.list(publication_id="pub_xxxx", expand=["stats"])
+
+# List tiers
+tiers = client.tiers.list(publication_id="pub_xxxx", expand=["prices"])
+```
+
+## Error Handling
+
+The client provides specific exceptions for different HTTP error scenarios:
+
+* `BeehiivBadRequestException` (400)
+* `BeehiivUnauthorizedException` (401)
+* `BeehiivForbiddenException` (403)
+* `BeehiivNotFoundException` (404)
+* `BeehiivRateLimitException` (429)
+* `BeehiivServerErrorException` (5xx)
+* `BeehiivAPIException` (other API errors or network issues)
+
+All exceptions inherit from `BeehiivAPIException` and include `status_code` and `error_data` attributes.
+
+```python
+from beehiiv_python_client import BeehiivAPIException, BeehiivNotFoundException
+
+try:
+    client.publications.get("pub_nonexistent")
+except BeehiivNotFoundException as e:
+    print(f"Publication not found: {e.message}")
+    print(f"Details: {e.error_data}")
+except BeehiivAPIException as e:
+    print(f"A Beehiiv API error occurred: {e}")
+```
+
+## Examples Directory
+
+Check out the `examples/` directory for more detailed usage:
+
+* `examples/basic_usage.py`: Demonstrates common operations across different resources
+* `examples/manage_automations.py`: Focuses on Automations endpoints
+
+## Contributing
+
+Contributions are welcome! Please follow these steps:
+
+1. Fork the repository
+2. Create a new branch (`git checkout -b feature/your-feature-name`)
+3. Install development dependencies: `poetry install --with dev`
+4. Set up pre-commit hooks: `pre-commit install`
+5. Make your changes
+6. Write tests for your changes in the `tests/` directory
+7. Ensure all tests pass: `poetry run tox` or `poetry run pytest`
+8. Ensure code style and typing checks pass
+9. Commit your changes (`git commit -am 'Add some feature'`)
+10. Push to the branch (`git push origin feature/your-feature-name`)
+11. Create a new Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE]() file for details.
+
+## Support
+
+For issues and questions:
+
+* Check the [Beehiiv API Documentation](https://api-docs.beehiiv.com/)
+* Open an issue on [GitHub](https://github.com/selnabrawy/beehiiv-python-client/issues)
+* Review the examples in the `examples/` directory
+
