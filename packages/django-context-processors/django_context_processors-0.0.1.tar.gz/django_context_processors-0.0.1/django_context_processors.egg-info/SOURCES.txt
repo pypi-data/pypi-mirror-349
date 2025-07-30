@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+setup.py
+django_context_processors/__init__.py
+django_context_processors.egg-info/PKG-INFO
+django_context_processors.egg-info/SOURCES.txt
+django_context_processors.egg-info/dependency_links.txt
+django_context_processors.egg-info/top_level.txt
