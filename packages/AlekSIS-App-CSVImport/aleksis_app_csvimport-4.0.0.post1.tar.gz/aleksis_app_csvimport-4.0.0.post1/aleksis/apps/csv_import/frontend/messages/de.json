@@ -1,0 +1,19 @@
+{
+  "csv": {
+    "import": {
+      "create_new_objects": "Wenn notwendig, neue Objekte erstellen",
+      "csv_file": "CSV-Datei",
+      "do_import_title": "CSV-Import ausführen",
+      "import_data": "Daten importieren",
+      "import_template": "Import-Vorlage",
+      "instructions": "Sie können Daten von verschiedenen Schulverwaltungssoftwares mit diesem CSV-Importer importieren. Bitte lesen Sie die Hinweise zu der von Ihnen verwendeten Software in unser Dokumentation! Manchmal ist ein spezielles Verfahren notwendig, um die Daten korrekt zu importieren.",
+      "menu_title": "CSV-Datei importieren",
+      "prepare_title": "CSV-Import vorbereiten",
+      "school_term": "Zugehöriges Schuljahr"
+    },
+    "import_template": {
+      "menu_title": "Import-Vorlagen"
+    },
+    "menu_title": "CSV-Import"
+  }
+}
