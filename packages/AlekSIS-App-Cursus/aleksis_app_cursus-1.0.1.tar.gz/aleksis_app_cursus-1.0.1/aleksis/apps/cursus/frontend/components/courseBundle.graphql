@@ -1,0 +1,51 @@
+query courseBundles($orderBy: [String], $filters: JSONString) {
+  items: courseBundles(orderBy: $orderBy, filters: $filters) {
+    id
+    name
+    courses {
+      id
+      name
+    }
+    lessonQuota
+    canEdit
+    canDelete
+  }
+}
+
+mutation createCourseBundles($input: [BatchCreateCourseBundleInput]!) {
+  createCourseBundles(input: $input) {
+    items: courseBundles {
+      id
+      name
+      courses {
+        id
+        name
+      }
+      lessonQuota
+      canEdit
+      canDelete
+    }
+  }
+}
+
+mutation deleteCourseBundles($ids: [ID]!) {
+  deleteCourseBundles(ids: $ids) {
+    deletionCount
+  }
+}
+
+mutation updateCourseBundles($input: [BatchPatchCourseBundleInput]!) {
+  updateCourseBundles(input: $input) {
+    items: courseBundles {
+      id
+      name
+      courses {
+        id
+        name
+      }
+      lessonQuota
+      canEdit
+      canDelete
+    }
+  }
+}
