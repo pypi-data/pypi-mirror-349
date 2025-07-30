@@ -1,0 +1,50 @@
+Metadata-Version: 2.3
+Name: oak_cli
+Version: 0.5.2
+Summary: The Oakestra CLI
+Author: Alexander Malyuk
+Author-email: malyuk.alexander1999@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: ansible (>=10.1.0,<11.0.0)
+Requires-Dist: ansible-core (>=2.17.1,<3.0.0)
+Requires-Dist: ansible-runner (>=2.4.0,<3.0.0)
+Requires-Dist: icecream (>=2.1.3,<3.0.0)
+Requires-Dist: oakestra-utils (>=0.2.0,<0.3.0)
+Requires-Dist: psutil (>=5.9.8,<6.0.0)
+Requires-Dist: pydantic (>=2.6.4,<3.0.0)
+Requires-Dist: requests (>=2.32.3,<3.0.0)
+Requires-Dist: rich-pixels (>=3.0.1,<4.0.0)
+Requires-Dist: typer (>=0.15.4,<0.16.0)
+Description-Content-Type: text/markdown
+
+[![PyPI - Version](https://img.shields.io/pypi/v/oak-cli)](https://pypi.org/project/oak-cli/)
+[![Codestyle Check](https://github.com/oakestra/oakestra-cli/actions/workflows/python_codestyle_check.yml/badge.svg)](https://github.com/oakestra/oakestra-cli/actions/workflows/python_codestyle_check.yml)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/oak-cli)](https://pypi.org/project/oak-cli/)
+
+The **Oak-CLI** is the command line interface for the [Oakestra](https://github.com/oakestra/oakestra) Edge Computing platform.
+
+📚 Check out the [Oak-CLI Wiki](https://www.oakestra.io/docs/getting-started/deploy-app/with-the-cli/) to get started.
+
+## 🦾 Benefits of the **Oak-CLI**
+- Native interface for the Oakestra APIs
+- Eliminates the need to use external third-party tools
+- Accelerated & simpler workflows
+- The CLI commands can be chained together and used in custom scripts
+- Automates tedious tasks away (e.g. acquiring login token, installing dependencies, and much more!)
+
+## 📕 Requirements 
+- Linux (preferably Debian/Ubuntu)
+- Python Version **3.10+**
+
+## ⬇️ Installation
+
+```
+pip install oak-cli
+```
+
+
