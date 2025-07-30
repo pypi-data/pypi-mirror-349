@@ -1,0 +1,8 @@
+pypiauto/__init__.py,sha256=y7rUgeJXfNA-nFs6utPYnr7hLVoRQjgSOdCFivPWI4E,437
+pypiauto/cli.py,sha256=_qHMJpq4YvtLQ6O0zG75rq0X-nfkvEP0_AsShL1dC1s,3107
+pypiauto/creator.py,sha256=QEQtael8bFgt2nhfKIkvixWg3Pd0TMAlH3Z1ZwsJTGw,7341
+pypiauto/publisher.py,sha256=pIm0MQrOepLmEBc5T15fUpiphbvnKK1iHtapTE-dYiE,2717
+pypiauto-0.0.4.dist-info/entry_points.txt,sha256=4kt2jA4sguwe0xpREAmh53J43w0-iAzlEobplTYiPqM,46
+pypiauto-0.0.4.dist-info/METADATA,sha256=5O8-hi8i1lFAjKoh0Z1Aca78NBOSoyCrx_IHtgX1J1U,636
+pypiauto-0.0.4.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+pypiauto-0.0.4.dist-info/RECORD,,
