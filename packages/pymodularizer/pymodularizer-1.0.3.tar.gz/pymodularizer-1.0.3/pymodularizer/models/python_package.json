@@ -1,0 +1,30 @@
+{
+    "python_package": {
+        "description": "Pacote Python instalável com módulos internos.",
+        "structure": {
+          "my_package/": {
+            "__init__.py": "",
+            "core/": {
+              "__init__.py": "",
+              "module_a.py": "",
+              "module_b.py": ""
+            },
+            "helpers/": {
+              "__init__.py": "",
+              "tools.py": ""
+            }
+          },
+          "tests/": {
+            "__init__.py": "",
+            "test_module_a.py": "",
+            "test_module_b.py": ""
+          },
+          "README.md": "# Python Package\n",
+          "pyproject.toml": "[project]\nname = 'python-package'\nversion = '0.1.0'\n",
+          "setup.cfg": "[metadata]\nname = python-package\nversion = 0.1.0\n",
+          "requirements.txt": "# requirements\n",
+          ".gitignore": "__pycache__/\n.env\n",
+          ".env.example": "# Exemplo de variáveis de ambiente\n"
+        }
+      }
+    }
