@@ -1,0 +1,3 @@
+[console_scripts]
+filesystem = filesystem:main
+main_adfin_mcp = main_adfin_mcp:main

@@ -1,0 +1,18 @@
+[project]
+name = "adfinmcp"
+version = "0.1.1"
+description = "An MCP server that interacts with all Adfin public APIs."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "mcp[cli]>=1.4.1",
+    "requests>=2.32.3",
+]
+
+[tool.setuptools]
+py-modules = ["main_adfin_mcp", "filesystem", "adfin_interaction", "environment", "api_importer"]
+
+
+[project.scripts]
+main_adfin_mcp = "main_adfin_mcp:main"
+filesystem = "filesystem:main"
