@@ -1,0 +1,11 @@
+test/test_losses/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/test_losses/test_cluster_loss.py,sha256=6R-q17ETbA7OBJ_bZMVT0-1deRwjNDRFMnvSIU_5cfg,6694
+test/test_losses/test_sparsity_loss.py,sha256=epjzMz81jPC6Mao_OabVANVs2OvzTD8tboxEBWOtgFM,4788
+torch_deeptype/__init__.py,sha256=qJQTbGp1kqIfbRHFbkDFq9JWgSRIp1i2Akd25UleGak,113
+torch_deeptype/deeptype_model.py,sha256=maSPPyuyfzPRWKjnKeZhtNf1zy7dySIDmsFIRzZA49M,2234
+torch_deeptype/deeptype_trainer.py,sha256=Sy936Cc-ptbM6P_ikJ_U4ptPY_BC1t4_Pzc1cQ1a2SE,11618
+torch_deeptype/losses.py,sha256=omA5tDOInERnMPZEh7H7duzOzOKVm2_MhrxaU0nkaXY,1769
+torch_deeptype-0.1.1.dist-info/METADATA,sha256=gwFoj2KcrDacH0ISAutlHjO03QeCKM14oACCR_UIXHE,5555
+torch_deeptype-0.1.1.dist-info/WHEEL,sha256=Wyh-_nZ0DJYolHNn1_hMa4lM7uDedD_RGVwbmTjyItk,91
+torch_deeptype-0.1.1.dist-info/top_level.txt,sha256=HeFWRlvSw042ZXJNQvied3HlYr4f3dFyEbDMzwPD9X4,20
+torch_deeptype-0.1.1.dist-info/RECORD,,
