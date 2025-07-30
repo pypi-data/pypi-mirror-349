@@ -1,0 +1,2 @@
+[console_scripts]
+asplnas = asplnas:hello
