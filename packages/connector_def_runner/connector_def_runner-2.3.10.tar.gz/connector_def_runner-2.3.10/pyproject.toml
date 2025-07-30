@@ -1,0 +1,52 @@
+[project]
+name = "connector_def_runner"
+version = "2.3.10"
+description = "Run connectors by schema definitions"
+authors = [
+    { name = "Swimlane", email = "integrations@swimlane.com" }
+]
+requires-python = ">=3.9,<4.0"
+maintainers = [
+    { name = "Swimlane", email = "integrations@swimlane.com" }
+]
+readme = "README.md"
+homepage = "https://github.com/swimlane/connector-definition-runner"
+repository = "https://github.com/swimlane/connector-definition-runner"
+keywords = ["connector", "swimlane", "connectors"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+
+[tool.poetry]
+packages = [
+    { include = "./connector_definition_runner" }
+]
+
+[tool.poetry.dependencies]
+requests = "2.32.3"
+PyYAML = "==6.0.2"
+chevron = "==0.14.0"
+xmltodict = "0.14.2"
+
+[tool.poetry.dev-dependencies]
+pytest = "8.3.5"
+commitizen = "4.4.1"
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+version = "2.0.0"
+tag_format = "$version"
+version_files = [
+    "./connector_definition_runner/__version__.py",
+    "pyproject.toml:version"
+]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
