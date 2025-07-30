@@ -1,0 +1,12 @@
+[project]
+name = "wtfport-cli"
+version = "1.0.1"
+description = "Find what’s using a TCP or UDP port"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Anil Raj Rimal", email = "anilrajrimal@gmail.com" }]
+requires-python = ">=3.9"
+dependencies = ["psutil"]
+
+[project.scripts]
+wtfport = "wtfport.cli:main"
