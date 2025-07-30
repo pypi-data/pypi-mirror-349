@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: whlee
+Version: 0.0.4
+Summary: toy tools update at 20250516
+Author: whl
+Author-email: 2631@139.com
+License: MIT
+Requires-Python: >=3.8
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: addict
+Requires-Dist: openai ==1.58.1
+
