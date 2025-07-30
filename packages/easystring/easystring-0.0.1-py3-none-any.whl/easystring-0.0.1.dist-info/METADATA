@@ -1,0 +1,26 @@
+Metadata-Version: 2.4
+Name: easystring
+Version: 0.0.1
+Summary: a toolkit of necessary & useful string operations
+Home-page: 
+Author: Ashish Kumar Dash
+Author-email: ashishdash2410@gmail.com
+License: MIT
+Keywords: string
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 11
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: keywords
+Dynamic: license
+Dynamic: license-file
+Dynamic: summary
+
+this is a very useful string functions catalogue used to perform basic operations on strings and which will save time.
