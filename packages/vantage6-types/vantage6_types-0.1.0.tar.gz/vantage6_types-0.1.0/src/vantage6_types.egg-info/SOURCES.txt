@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/vantage6/types/__init__.py
+src/vantage6_types.egg-info/PKG-INFO
+src/vantage6_types.egg-info/SOURCES.txt
+src/vantage6_types.egg-info/dependency_links.txt
+src/vantage6_types.egg-info/requires.txt
+src/vantage6_types.egg-info/top_level.txt
