@@ -1,0 +1,13 @@
+ini_crud/__init__.py,sha256=Ecsxs-5rFjJzSmoO0x9DAU-yxw24rjf2k6X3njwL0XY,985
+ini_crud/__version__.py,sha256=7TfC9ZSN9l9tvFxFTCwUK5qgoS4Kt0jX64lZBYYuZYE,90
+ini_crud/cli.py,sha256=cQzSCNLxiKrC-yqusVAEUmdww0C5Q8gTSvT4tE-_mf0,2669
+ini_crud/core.py,sha256=tkJFEQzWW_q566YvTuZgBNWTywPDvLB9OK4z6OPIHc4,10442
+ini_crud/errors.py,sha256=p6mJ1rZpzQvPUtopAfdcp0nghcoasINJTaxpoini6K8,458
+ini_crud/logs.py,sha256=RvGdF_ancRvD0Xw-aYXQVSzMti9uctRTU80svwxO2I8,431
+ini_crud/utils.py,sha256=elEa45Gxm6nA-453zfBlPYgvT9t13-rvG1SJVOno6Fg,7412
+ini_crud-1.0.0.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ini_crud-1.0.0.dist-info/METADATA,sha256=-Z-bO3HzKctxioHhtefAsweZ_9hXzYb6-pgJWTChZ8k,3479
+ini_crud-1.0.0.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+ini_crud-1.0.0.dist-info/entry_points.txt,sha256=bDiEeVkut3oIZJOCVO4SCS0nDvqRAnoRCtHZwJtnz3M,48
+ini_crud-1.0.0.dist-info/top_level.txt,sha256=RXY1oOxOmE4-BgjnqSZ-HGVgS7SGoZFq_q1-koT63ZE,9
+ini_crud-1.0.0.dist-info/RECORD,,
