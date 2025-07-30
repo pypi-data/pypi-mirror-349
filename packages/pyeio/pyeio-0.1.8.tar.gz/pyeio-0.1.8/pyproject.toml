@@ -1,0 +1,50 @@
+[project]
+name = "pyeio"
+version = "0.1.8"
+description = "Python package for easy data input output handling."
+readme = "README.md"
+license = "MIT"
+authors = [{ name = "Hart Traveller", email = "ruling_fiction.0b@icloud.com" }]
+urls = { homepage = "https://pypi.org/project/pyeio", documentation = "https://harttraveller.github.io/pyeio", repository = "https://github.com/harttraveller/pyeio" }
+requires-python = ">=3.11"
+dependencies = [
+    "pydantic>=2.9.2",
+    "cryptography>=44.0.3",
+    "typically==0.1.3",
+    # "annotated-types>=0.7.0",
+    "orjson>=3.10.18",
+    "pyyaml>=6.0.2",
+    "toml>=0.10.2",
+]
+
+[project.optional-dependencies]
+cli = ["cyclopts>=3.16.1"]
+
+[dependency-groups]
+doc = [
+    "mkdocs-jupyter>=0.25.1",
+    "mkdocs-material>=9.6.14",
+    "mkdocs-roamlinks-plugin>=0.3.2",
+    "mkdocstrings[python]>=0.29.1",
+]
+test = ["hypothesis>=6.131.17", "pytest>=8.3.5"]
+dev = [
+    "httpx>=0.28.1",
+    "numpy>=2.2.5",
+    "rich>=14.0.0",
+    "tqdm>=4.67.1",
+    "charset-normalizer>=3.4.2",
+]
+
+[project.scripts]
+io = "pyeio.__main__:cli"
+
+
+[build-system]
+requires = ["maturin>=1,<2"]
+build-backend = "maturin"
+
+[tool.maturin]
+module-name = "pyeio.rs.rs"
+bindings = "pyo3"
+features = ["pyo3/extension-module"]
