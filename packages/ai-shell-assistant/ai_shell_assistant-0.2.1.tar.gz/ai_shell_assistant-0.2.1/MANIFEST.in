@@ -1,0 +1,25 @@
+# Include the README and license files
+include README.md
+include LICENSE
+include requirements.txt
+
+# Include configuration files
+include pyproject.toml
+include setup.cfg
+
+# Include all Python files in the package
+recursive-include ai_cli *.py
+
+# Include type information
+include ai_cli/py.typed
+
+# Exclude development and build files
+exclude .gitignore
+exclude .pre-commit-config.yaml
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]
+recursive-exclude * *.so
+recursive-exclude * .DS_Store
+exclude build
+exclude dist
+exclude *.egg-info
