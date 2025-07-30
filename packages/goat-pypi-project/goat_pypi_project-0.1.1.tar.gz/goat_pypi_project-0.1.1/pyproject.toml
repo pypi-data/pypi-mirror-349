@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "goat-pypi-project"
+version = "0.1.1"
+description = "A Python package for goat-related functionalities."
+authors = [{ name = "Daniel Nebenzahl", email = "dn@scribesecurity.com" }]
+license = "MIT"  # Updated to a simple SPDX expression
+readme = "README.md"
+keywords = ["goat", "pypi", "python", "package"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+dependencies = []
+requires-python = ">=3.6"  # Add this line

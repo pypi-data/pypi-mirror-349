@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+goat_pypi_project.egg-info/PKG-INFO
+goat_pypi_project.egg-info/SOURCES.txt
+goat_pypi_project.egg-info/dependency_links.txt
+goat_pypi_project.egg-info/top_level.txt
+tests/__init__.py
+tests/test_main.py
