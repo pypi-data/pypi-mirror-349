@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.py
+math_sdk/__init__.py
+math_sdk/operations.py
+math_smpi_sdk.egg-info/PKG-INFO
+math_smpi_sdk.egg-info/SOURCES.txt
+math_smpi_sdk.egg-info/dependency_links.txt
+math_smpi_sdk.egg-info/top_level.txt
+tests/test_operations.py
