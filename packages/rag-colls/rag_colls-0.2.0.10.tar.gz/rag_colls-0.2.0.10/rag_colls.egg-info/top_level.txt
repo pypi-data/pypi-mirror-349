@@ -1,0 +1,15 @@
+bm25s
+chroma_db
+data
+data_cache
+dist
+docs
+docs_env
+envs_150
+envs_156
+eval_results
+examples
+model_cache
+rag_colls
+samples
+tests
