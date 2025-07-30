@@ -1,0 +1,9 @@
+scadere/__init__.py,sha256=Sa3PFIHBJNmeytyvkI_EoFiq-2BA1VhYLiLMyGsV03I,48
+scadere/__main__.py,sha256=AGRNTQkxV45Zo_KLewDVgD7pha-qq6j1oud9iKzEeHk,4848
+scadere/check.py,sha256=JNtwDi9pBeN4FiCf1UsxseBP-q10SihR6NxLIeMQLhg,2282
+scadere/listen.py,sha256=1kZN2uxrvcu0Tn2z7Fjtx2ilSQduJA_j-NBtPswBkWg,6659
+scadere-0.0.1.dist-info/entry_points.txt,sha256=O8sk4z3NKn_sw3M81h3yrSPDKnVw4sxvdQekjfQIRp0,49
+scadere-0.0.1.dist-info/COPYING,sha256=hIahDEOTzuHCU5J2nd07LWwkLW7Hko4UFO__ffsvB-8,34523
+scadere-0.0.1.dist-info/WHEEL,sha256=rSgq_JpHF9fHR1lx53qwg_1-2LypZE_qmcuXbVUq948,81
+scadere-0.0.1.dist-info/METADATA,sha256=tJ_u7pSD3QwRAPLDcx14fwTGpUaTiPMbGIh_O5OPJQE,2435
+scadere-0.0.1.dist-info/RECORD,,
