@@ -1,0 +1,10 @@
+pydantic_views/__init__.py,sha256=EFNB57cTueRYovhvOnzLU_IjQqI6VxBzWdyUotsCZYk,682
+pydantic_views/annotations.py,sha256=pfIzLnphkMByjYd8MkSwQwMyRbcmqWmAQJDsePjXYYs,1345
+pydantic_views/builder.py,sha256=AsEBfI7Trmuq5E6hpltB9Il41l7koBhV2bMyd2xy5Vc,14225
+pydantic_views/manager.py,sha256=hP-PZn8j-W3VikBkp_0n0eYPCrkfIt7KNCHH10BO0fs,1644
+pydantic_views/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pydantic_views/view.py,sha256=JsVsY4_tdis3oF5V-bjQ4OYGi1YUKZq8fLAdKk6OArs,3578
+pydantic_views-0.3.0b0.dist-info/LICENSE,sha256=9d1n-30suO0M7bgZcThFvTYWsr_bzEvOQVOVhq7qAyY,1081
+pydantic_views-0.3.0b0.dist-info/METADATA,sha256=f5s1QTvqRlEK46b6zJg9QCRrxaya8sfdOF4kJAf4AYs,6239
+pydantic_views-0.3.0b0.dist-info/WHEEL,sha256=RaoafKOydTQ7I_I3JTrPCg6kUmTgtm4BornzOqyEfJ8,88
+pydantic_views-0.3.0b0.dist-info/RECORD,,
