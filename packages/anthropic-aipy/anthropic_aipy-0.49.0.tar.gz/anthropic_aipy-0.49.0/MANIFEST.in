@@ -1,0 +1,18 @@
+include anthropic/*.py
+include anthropic/py.typed
+recursive-include anthropic/_decoders *
+recursive-include anthropic/_utils *
+recursive-include anthropic/lib *
+recursive-include anthropic/lib/_extras *
+recursive-include anthropic/lib/bedrock *
+recursive-include anthropic/lib/streaming *
+recursive-include anthropic/lib/vertex *
+recursive-include anthropic/resources *
+recursive-include anthropic/resources/beta *
+recursive-include anthropic/resources/beta/messages *
+recursive-include anthropic/resources/messages *
+recursive-include anthropic/types *
+recursive-include anthropic/types/beta *
+recursive-include anthropic/types/beta/messages *
+recursive-include anthropic/types/messages/ *
+recursive-include anthropic/types/shared *
