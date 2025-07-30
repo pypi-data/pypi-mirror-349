@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/DjangoSyncMaster/__init__.py
+src/DjangoSyncMaster/main.py
+src/DjangoSyncMaster.egg-info/PKG-INFO
+src/DjangoSyncMaster.egg-info/SOURCES.txt
+src/DjangoSyncMaster.egg-info/dependency_links.txt
+src/DjangoSyncMaster.egg-info/requires.txt
+src/DjangoSyncMaster.egg-info/top_level.txt
