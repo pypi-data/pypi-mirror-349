@@ -1,0 +1,7 @@
+textblob
+nltk
+transformers
+torch
+accelerate
+requests
+numpy
