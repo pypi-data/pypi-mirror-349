@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "titanic-model"
+description = "Titanic model package."
+version = "1.0.0"
+authors = [
+    {name = "Emin Tagiev", email = "emin.tagiev@phystech.edu"},
+]
+readme = "README.md"
+requires-python = ">=3.10.0"
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+classifiers = [
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+]
+
+[project.urls]
+Homepage = "https://github.com/Emilien-mipt/titanic-package"
+
+[tool.setuptools]
+packages = ["titanic_model"]
+
+[tool.setuptools.dynamic]
+# Динамическое чтение версии из файла
+version = {file = "titanic_model/VERSION"}
+# Динамическое чтение зависимостей
+dependencies = {file = ["requirements/requirements.txt"]}
