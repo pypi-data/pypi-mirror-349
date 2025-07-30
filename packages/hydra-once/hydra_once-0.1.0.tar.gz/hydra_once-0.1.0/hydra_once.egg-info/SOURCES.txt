@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+hydra_once/__init__.py
+hydra_once/_instantiate.py
+hydra_once/_once.py
+hydra_once.egg-info/PKG-INFO
+hydra_once.egg-info/SOURCES.txt
+hydra_once.egg-info/dependency_links.txt
+hydra_once.egg-info/requires.txt
+hydra_once.egg-info/top_level.txt
