@@ -1,0 +1,232 @@
+# MapBiomas Downloader
+
+Ferramenta para download e recorte de arquivos GeoTIFF do MapBiomas utilizando shapefile.
+
+## Instalação
+
+### Requisitos
+
+- Python 3.12+
+- Poetry
+- Dependências: geopandas, rasterio (instaladas automaticamente)
+
+### Configuração do ambiente
+
+1. Clone o repositório:
+```bash
+git clone https://github.com/seu-usuario/mapbiomas-downloader.git
+cd mapbiomas-downloader
+```
+
+2. Configure o ambiente Python com pyenv (recomendado):
+```bash
+pyenv install 3.12
+pyenv local 3.12
+```
+
+3. Instale as dependências com Poetry:
+```bash
+poetry install
+```
+
+## Uso do downloader
+
+O downloader pode ser executado diretamente usando o script shell fornecido:
+
+### Baixar e recortar usando shapefile
+
+Esta funcionalidade baixa rasters nacionais do MapBiomas e recorta utilizando um shapefile:
+
+```bash
+./downloader.sh --shapefile shape/DF/APPS_1.shp --ano-inicio 2020 --ano-fim 2021
+```
+
+**Nota importante:** Os arquivos shape não estão incluídos no repositório. Você deve baixar os shapefiles separadamente e salvá-los no diretório `shape`. Exemplo de estrutura:
+```
+shape/
+  DF/
+    seu_shapefile.shp
+    seu_shapefile.dbf
+    seu_shapefile.prj
+    ...
+  SE/
+    outro_shapefile.shp
+    ...
+```
+
+O shapefile deve conter uma das seguintes opções:
+- O campo `CD_MUN` com códigos IBGE (7 dígitos) dos municípios
+- O campo `cod_imovel` com valor no formato "UF-CODIGO-XXXX" (ex: "DF-5300108-XXXX")
+
+Os arquivos recortados serão salvos em pastas por ano, cada um com o nome do código do município:
+```
+downloads_mapbiomas/
+  2020/
+    5300108.tif
+  2021/
+    5300108.tif
+```
+
+### Modo de teste
+
+O downloader pode ser executado em modo de teste, sem baixar ou processar arquivos reais:
+
+```bash
+./downloader.sh --shapefile shape/DF/APPS_1.shp --teste
+
+# Ou, para o script específico do DF:
+./BRDF.sh --teste
+```
+
+No modo de teste:
+- O shapefile não precisa existir fisicamente
+- Os diretórios são criados, mas os arquivos .tif não são gerados
+- A simulação usa o código 5300108 (Brasília) como exemplo
+- Útil para testar a configuração sem consumir recursos
+
+### Onde obter shapefiles
+
+#### Fontes de shapefiles
+
+1. **Shapefiles oficiais do IBGE**:
+   - [Portal de Mapas do IBGE](https://portaldemapas.ibge.gov.br/portal.php#mapa222579)
+   - [Download de malhas municipais](https://www.ibge.gov.br/geociencias/organizacao-do-territorio/malhas-territoriais/15774-malhas.html)
+
+2. **Portais de dados abertos**:
+   - [Infraestrutura Nacional de Dados Espaciais (INDE)](https://www.inde.gov.br/)
+   - [Portal Brasileiro de Dados Abertos](https://dados.gov.br/)
+
+3. **Outros recursos regionais**:
+   - [Geoportal SEDUH-DF](https://www.geoportal.seduh.df.gov.br/geoportal/)
+   - [DataGEO São Paulo](https://datageo.ambiente.sp.gov.br/)
+
+#### Exemplo prático: Baixando e usando shapefile do IBGE
+
+```bash
+# Criar diretório para shapefiles do Brasil
+mkdir -p shape/BR
+cd shape/BR
+
+# Baixar shapefile dos municípios do Brasil (2020)
+wget https://geoftp.ibge.gov.br/organizacao_do_territorio/malhas_territoriais/malhas_municipais/municipio_2020/Brasil/BR/BR_Municipios_2020.zip
+unzip BR_Municipios_2020.zip
+cd ../..
+
+# Executar o downloader com este shapefile
+./downloader.sh --shapefile shape/BR/BR_Municipios_2020.shp --ano-inicio 2020 --ano-fim 2020
+```
+
+**Observação importante**: Os shapefiles não estão incluídos neste repositório devido ao tamanho dos arquivos e questões de licenciamento. Cada usuário deve baixar os shapefiles desejados de fontes oficiais.
+
+### Execução sem parâmetros
+
+Se o script for executado sem o parâmetro `--shapefile`, será exibida uma mensagem de erro.
+
+```bash
+./downloader.sh
+# Mostrará mensagem de erro e pedirá para especificar um shapefile
+```
+
+### Opções disponíveis
+
+- `--shapefile` ou `-s`: Caminho para shapefile com limites municipais (obrigatório)
+- `--ano-inicio` ou `-i`: Ano inicial para download (padrão: 1985)
+- `--ano-fim` ou `-f`: Ano final para download (padrão: 2023)
+- `--diretorio` ou `-d`: Diretório base para salvar os arquivos (padrão: downloads_mapbiomas)
+- `--teste` ou `-t`: Executa em modo de teste (sem download real)
+- `--limite-feicoes` ou `-l`: Limita o número de feições processadas (útil para shapefiles grandes)
+- `--substituir`: Substitui arquivos existentes sem perguntar
+- `--manter` ou `--usar-existentes`: Mantém arquivos existentes sem perguntar
+- `--help` ou `-h`: Exibe mensagem de ajuda
+
+**Anos disponíveis no MapBiomas**:
+Atualmente, o MapBiomas disponibiliza dados apenas para os seguintes anos:
+1985, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2023
+
+Se você especificar anos fora desta lista, o aplicativo automaticamente processará apenas os anos disponíveis dentro do intervalo solicitado.
+
+## Uso com Makefile
+
+O projeto também fornece um Makefile para facilitar a execução:
+
+```bash
+# Baixar dados usando shapefile
+make download-shapefile SHAPEFILE=shape/DF/APPS_1.shp ANO_INICIO=2020 ANO_FIM=2021
+```
+
+## Funcionamento interno
+
+O downloader opera da seguinte forma:
+
+1. Baixa o raster nacional completo do MapBiomas para cada ano solicitado
+2. Verifica se o shapefile contém o campo `CD_MUN` ou `cod_imovel` para identificar municípios
+3. Para cada geometria no shapefile, recorta o raster nacional usando a biblioteca `rasterio`
+4. Salva os rasters recortados em diretórios organizados por ano
+
+Isso permite processar grandes volumes de dados sem precisar baixar múltiplos arquivos menores.
+
+## Executando os Testes
+
+Este projeto utiliza pytest para a execução de testes automatizados. Os testes estão localizados no diretório `src/tests`.
+
+### Executar todos os testes
+
+```bash
+poetry run pytest
+```
+
+### Executar testes com relatório de cobertura
+
+```bash
+poetry run pytest --cov=src
+```
+
+### Executar testes específicos
+
+```bash
+poetry run pytest src/tests/test_downloader.py::TestDownloader::test_verificar_cd_mun
+```
+
+### Analisando os Resultados dos Testes
+
+Os testes geram relatórios que ajudam a verificar se todas as funcionalidades estão operando corretamente:
+
+- **Verificação de funcionalidades**: Os testes unitários verificam se cada função da biblioteca funciona isoladamente.
+- **Teste E2E (end-to-end)**: Simulam o fluxo completo de download e recorte de arquivos do MapBiomas.
+- **Cobertura de código**: O relatório de cobertura indica quais partes do código estão sendo testadas adequadamente.
+
+## Uso da Biblioteca
+
+```python
+from src.downloader import verificar_cd_mun, extrair_cd_mun, baixar_e_recortar_por_shapefile
+import asyncio
+
+# Verificar se shapefile tem campo CD_MUN
+info = verificar_cd_mun("caminho/para/shapefile.shp")
+
+# Extrair código de município de string formatada
+codigo = extrair_cd_mun("DF-5300108-XYZ123")  # "5300108"
+
+# Baixar e recortar
+async def download():
+    resultados = await baixar_e_recortar_por_shapefile(
+        shapefile_path="caminho/para/shapefile.shp",
+        ano_inicio=2020,
+        ano_fim=2021,
+        diretorio_base="downloads"
+    )
+    print(f"Municípios processados: {len(resultados)}")
+
+# Executar função assíncrona
+asyncio.run(download())
+```
+
+## Contribuição
+
+1. Sempre crie e ative um ambiente virtual antes de trabalhar no projeto
+2. Execute os testes antes de enviar suas alterações
+3. Mantenha a documentação atualizada
+
+## Licença
+
+Este projeto está licenciado sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
