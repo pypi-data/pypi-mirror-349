@@ -1,0 +1,5 @@
+multidict
+yarl
+async_timeout
+aiosignal
+aiohappyeyeballs
