@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: geosight
+Version: 0.1
+Author: Abdullah Ghifari
+License-File: LICENSE
+Requires-Dist: python-geohash==0.8.5
+Dynamic: author
+Dynamic: license-file
+Dynamic: requires-dist
