@@ -1,0 +1,11 @@
+zypper_changelog_lib/__init__.py,sha256=XYfKshdVyATG1gUoUzhH2mujTmInmHOWyZHvaBHihmo,501
+zypper_changelog_lib/__main__.py,sha256=yThZQ_L896cfRpXEmeb_LA7Ajvvo0o56m_2SZ1WEHrA,3175
+zypper_changelog_lib/zyppchangelog.py,sha256=6FDsDQ3aPmyM0hkJ7yX0CymDEMgNJzrhu_IS6uoyvRM,29010
+zypper_changelog_lib-0.7.9.dist-info/LICENSES/CC-BY-SA-4.0.txt,sha256=zeeIO5BQoRBPSsGaFXKq_W5dcyO2g1Gq9R-_S-ulSWY,18375
+zypper_changelog_lib-0.7.9.dist-info/LICENSES/CC0-1.0.txt,sha256=ogEPNDSH0_dhiv_lT3ifVIdgIzHAqNA_SemnxUfPBJk,7048
+zypper_changelog_lib-0.7.9.dist-info/LICENSES/GPL-3.0-or-later.txt,sha256=-5gWaMGKJ54oX8TYP7oeg2zITdTapzyWl9PP0tispuA,34674
+zypper_changelog_lib-0.7.9.dist-info/LICENSES/LGPL-2.1-only.txt,sha256=IOUP56rj5WN46_BBfZ3pBPVaDmHk3zFTM-YypNNVXZU,26419
+zypper_changelog_lib-0.7.9.dist-info/METADATA,sha256=5M2ap5ymf89Xj5dJYKRuSEinWOJCPG2sVW_rXDUH0DE,12909
+zypper_changelog_lib-0.7.9.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+zypper_changelog_lib-0.7.9.dist-info/entry_points.txt,sha256=3kiEgaw3L_76aTkDLvlNpV16T8QASqqtrBYtPMVAaJk,68
+zypper_changelog_lib-0.7.9.dist-info/RECORD,,
