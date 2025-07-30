@@ -1,0 +1,17 @@
+numpy
+pandas
+pyproj
+netCDF4
+xarray
+rioxarray
+toolz
+dask
+geospade
+
+[:python_version < "3.8"]
+importlib-metadata
+
+[testing]
+setuptools
+pytest
+pytest-cov
