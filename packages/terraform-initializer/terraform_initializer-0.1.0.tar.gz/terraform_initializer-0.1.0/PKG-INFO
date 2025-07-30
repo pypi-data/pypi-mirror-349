@@ -1,0 +1,86 @@
+Metadata-Version: 2.4
+Name: terraform_initializer
+Version: 0.1.0
+Summary: CLI tool to initialize Terraform projects with standard files
+Author-email: Aman Walekar <amanwalekar11@gmail.com>
+License-Expression: MIT
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# Terraform Initializer
+
+A simple CLI tool to bootstrap Terraform projects with opinionated, standard files and provider configurations for AWS, GCP, Azure, or local backends.
+
+## Features
+
+- Generates `provider.tf` based on selected backend
+- Creates standard Terraform files:
+  - `main.tf`
+  - `variables.tf`
+  - `locals.tf`
+  - `outputs.tf`
+- Prevents overwriting existing files
+- Easy to install via PyPI
+
+## Installation
+
+```bash
+pip install terraform-initializer
+```
+
+## Usage
+
+Initialize a new Terraform project in the current directory (defaults to your CWD):
+
+```bash
+terraform-init aws
+```
+
+Or specify a target directory:
+
+```bash
+terraform-init gcp ./my-terraform-project
+```
+
+Supported backends:
+
+- `aws`
+- `gcp`
+- `azure`
+- `local`
+
+After running, you’ll have:
+
+```bash
+provider.tf       # with backend-specific provider block
+main.tf           # starter module/file
+variables.tf      # placeholder for input variables
+locals.tf         # placeholder for local values
+outputs.tf        # placeholder for outputs
+```
+
+## Examples
+
+```bash
+# Bootstrap an Azure Terraform project
+terraform-init azure ./infra/azure
+```
+
+```bash
+# Bootstrap local backend for CI testing
+terraform-init local ./ci/terraform
+```
+
+## Templates
+
+Provider templates live under `terraform_initializer/templates/<backend>/provider.tf`. Feel free to customize them for your organization’s standards.
+
+## Contributing
+
+Contributions, issues and feature requests are welcome! Feel free to check [issues page]().
+
+## License
+
+MIT © Aman Walekar

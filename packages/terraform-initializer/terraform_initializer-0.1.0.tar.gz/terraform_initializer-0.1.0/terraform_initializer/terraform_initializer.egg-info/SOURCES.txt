@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+terraform_initializer/terraform_initializer/__init__.py
+terraform_initializer/terraform_initializer/cli.py
+terraform_initializer/terraform_initializer.egg-info/PKG-INFO
+terraform_initializer/terraform_initializer.egg-info/SOURCES.txt
+terraform_initializer/terraform_initializer.egg-info/dependency_links.txt
+terraform_initializer/terraform_initializer.egg-info/entry_points.txt
+terraform_initializer/terraform_initializer.egg-info/top_level.txt
+terraform_initializer/terraform_initializer/templates/variables.tf
+terraform_initializer/terraform_initializer/templates/aws/provider.tf
+terraform_initializer/terraform_initializer/templates/azure/provider.tf
+terraform_initializer/terraform_initializer/templates/gcp/provider.tf
+terraform_initializer/terraform_initializer/templates/local/provider.tf

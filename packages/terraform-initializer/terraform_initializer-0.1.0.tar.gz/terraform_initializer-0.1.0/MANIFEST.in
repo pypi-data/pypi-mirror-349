@@ -1,0 +1,3 @@
+include LICENSE
+include README.md
+recursive-include terraform_initializer/templates * 

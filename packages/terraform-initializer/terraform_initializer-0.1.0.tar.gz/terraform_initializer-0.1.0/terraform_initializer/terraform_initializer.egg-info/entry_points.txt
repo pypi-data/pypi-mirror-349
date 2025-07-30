@@ -1,0 +1,2 @@
+[console_scripts]
+terraform-init = terraform_initializer.cli:init

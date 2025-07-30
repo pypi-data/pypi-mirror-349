@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "terraform_initializer"
+version = "0.1.0"
+authors = [
+  { name="Aman Walekar", email="amanwalekar11@gmail.com" }
+]
+description = "CLI tool to initialize Terraform projects with standard files"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.7"
+
+[project.scripts]
+terraform-init = "terraform_initializer.cli:init"
+
+[tool.setuptools]
+packages = ["terraform_initializer"]
+package-data = {"terraform_initializer" = ["templates/**/*.tf"]}
