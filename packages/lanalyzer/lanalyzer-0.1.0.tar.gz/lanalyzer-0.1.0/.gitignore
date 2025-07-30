@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+dist/
+.venv/
+.cursorrules
+.vscode/
+.idea/
+examples/*
+.DS_Store
+analysis_log.txt
+.cursor/
+rules/*
+.ruff_cache/
+logs/
