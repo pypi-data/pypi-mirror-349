@@ -1,0 +1,5 @@
+torch
+timm
+numpy
+torch_scatter
+torch_geometric
