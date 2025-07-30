@@ -1,0 +1,14 @@
+tests:
+  script:
+    # create an environment and install dependencies
+    - uv venv 
+    - source .venv/bin/activate
+    - uv sync
+    - python -m pytest -v tests
+  only:
+    - merge_request
+  artifacts:
+    when: on_success
+    access: all
+    paths:
+      - uv.lock
