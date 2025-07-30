@@ -1,0 +1,22 @@
+### `pyproject.toml`
+
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "themusharraf-utils"
+version = "0.1.0"
+description = "A collection of useful Python utilities by Musharraf"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [
+    { name = "Musharraf Ibragimov", email = "meibrohimov@example.com" }
+]
+dependencies = []
+
+[project.urls]
+"Homepage" = "https://github.com/themusharraf/themusharraf-utils"
+"Issues" = "https://github.com/themusharraf/themusharraf-utils/issues"
