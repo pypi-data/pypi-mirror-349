@@ -1,0 +1,2 @@
+[console_scripts]
+progtracker = progtrack.cli:main
