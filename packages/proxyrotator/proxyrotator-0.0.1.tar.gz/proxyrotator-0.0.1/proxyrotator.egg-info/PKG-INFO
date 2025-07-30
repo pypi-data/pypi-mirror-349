@@ -1,0 +1,29 @@
+Metadata-Version: 2.4
+Name: proxyrotator
+Version: 0.0.1
+Summary: A simple proxy rotation utility
+Author: M Vashishta Varma
+Author-email: levovarma@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# proxyrotator
+
+A simple Python utility to rotate proxies by validating them against ipinfo.io.
+
+## Installation
+
+```bash
+pip install proxyrotator
