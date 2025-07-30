@@ -1,0 +1,10 @@
+hrun.libs/libgcc_s-1e52349c.so.1,sha256=Ani0u_W_tB8ESsFePO4D2mn2lrgWLhyFdw6RETxBTYM,437537
+hrun/__init__.py,sha256=onFYJu0XG5ViQ0k4k3fSO1d1pH1EB1KyKhc-_hHERcw,135
+hrun/core.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hrun/hrun.pyi,sha256=AwBQDAX91sQwR-MRVGjOvVj9g8Qf2M1bdiaVe4bS82o,3460
+hrun/hrun.pypy39-pp73-x86_64-linux-gnu.so,sha256=HIx1TDleq3IcTfhMRYNOqKkhSbrMxaMTm56ZB6ucQok,813825
+hrun/types.py,sha256=3XcRT1dhCxAc6JMJqhjOKMLFkRZRQHxitmg0i43xPIk,98
+hrun_rt-0.1.1.dist-info/METADATA,sha256=zyR5BQQhVZaMbLOzYNQtRkc6YnYxrz5ARJu7Ssr8duA,1907
+hrun_rt-0.1.1.dist-info/WHEEL,sha256=BcqskmA1Bt1knyNYQjFit_B-DmPxEPp_8BahS6W-Avg,112
+hrun_rt-0.1.1.dist-info/licenses/LICENSE,sha256=0GhBEpvESkqJIfAtsOfAq2500jAnC-odgK8829jXPg8,1071
+hrun_rt-0.1.1.dist-info/RECORD,,
