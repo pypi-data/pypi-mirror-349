@@ -1,0 +1,9 @@
+rust_pyfunc-0.13.2.dist-info/METADATA,sha256=_z4qH4sDYROj445KxciQLKdzPKKJF8ggHEiqsxHtjk8,13018
+rust_pyfunc-0.13.2.dist-info/WHEEL,sha256=YpU2aDuTyBIvwRZn8idqScP-vkQ8DUGkCILtYmMfnFY,96
+rust_pyfunc/__init__.py,sha256=rAXOCFoZ0xudyyT2xJTJY-q6aFvYGoXHQGa_gv9DkPw,197
+rust_pyfunc/pandas_corrwith.py,sha256=BsEdhvb4yCeKcFyLQRLX4GRzyrLnR4Sh3ftyEQsQPzc,2143
+rust_pyfunc/rolling_future.py,sha256=Oec3Le_oN58934z4_sxzGFPYeiRnZG2BB9VkWuuVeeg,14110
+rust_pyfunc/rust_pyfunc.cp312-win_amd64.pyd,sha256=AC4rd-RASbsWGxgndRy98FR6xOJgaq_ryqAgZgJz94Q,805888
+rust_pyfunc/rust_pyfunc.pyi,sha256=9p8eXfPdvqaz2gQHHZXVZ10RQ-wjoVrtnBztQkeIN3U,60941
+rust_pyfunc/treevisual.py,sha256=2d4rPtUEA9QDSJnofyWEy1jF0stBxNk8KqXD5R2bjQA,2016
+rust_pyfunc-0.13.2.dist-info/RECORD,,
