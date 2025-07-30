@@ -1,0 +1,2 @@
+[console_scripts]
+gisflask = gisflask.cli:main
