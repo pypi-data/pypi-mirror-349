@@ -1,0 +1,24 @@
+Metadata-Version: 2.4
+Name: todoist-mcp
+Version: 0.1.0
+Summary: FastMCP server for Todoist API integration
+Author-email: OAuthBringer <your.email@example.com>
+License: MIT
+Project-URL: Homepage, https://github.com/OAuthBringer/todoist-mcp
+Project-URL: Repository, https://github.com/OAuthBringer/todoist-mcp
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: fastmcp>=2.3.3
+Requires-Dist: todoist-api-python>=3.1.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0; extra == "dev"
+Requires-Dist: pytest-asyncio>=0.21.0; extra == "dev"
+Requires-Dist: pytest-mock>=3.10.0; extra == "dev"
+Requires-Dist: black>=23.0.0; extra == "dev"
+Requires-Dist: ruff>=0.1.0; extra == "dev"

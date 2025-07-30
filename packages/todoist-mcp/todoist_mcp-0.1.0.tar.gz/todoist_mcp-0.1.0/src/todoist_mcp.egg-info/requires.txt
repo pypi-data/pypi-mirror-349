@@ -1,0 +1,9 @@
+fastmcp>=2.3.3
+todoist-api-python>=3.1.0
+
+[dev]
+pytest>=7.0
+pytest-asyncio>=0.21.0
+pytest-mock>=3.10.0
+black>=23.0.0
+ruff>=0.1.0
