@@ -1,0 +1,16 @@
+Metadata-Version: 2.3
+Name: federated-learning-clinical-safety-sdk
+Version: 0.1.0
+Summary: Python SDK for the Federated Learning Clinical Safety API
+License: MIT
+Author: Alexander Dobson-Pleming
+Author-email: alexdobsonpleming@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: pydantic (>=2.0,<3.0)
+Requires-Dist: requests (>=2.28,<3.0)
