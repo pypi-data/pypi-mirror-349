@@ -1,0 +1,26 @@
+Metadata-Version: 2.4
+Name: boxlib
+Version: 0.2.1
+Summary: Utilities for bounding box manipulation.
+Author-email: István Sárándi <istvan.sarandi@uni-tuebingen.de>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/isarandi/boxlib
+Project-URL: Repository, https://github.com/isarandi/boxlib
+Project-URL: Issues, https://github.com/isarandi/boxlib/issues
+Project-URL: Author, https://istvansarandi.com
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: POSIX :: Linux
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Dynamic: license-file
+
+# boxlib
+Utilities for bounding box manipulation
