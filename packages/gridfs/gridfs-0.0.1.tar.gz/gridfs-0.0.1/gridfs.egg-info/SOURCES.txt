@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+setup.py
+gridfs/__init__.py
+gridfs.egg-info/PKG-INFO
+gridfs.egg-info/SOURCES.txt
+gridfs.egg-info/dependency_links.txt
+gridfs.egg-info/top_level.txt
