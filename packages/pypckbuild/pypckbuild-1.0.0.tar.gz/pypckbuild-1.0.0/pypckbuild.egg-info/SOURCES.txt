@@ -1,0 +1,7 @@
+pyproject.toml
+pypck/PyPck.py
+pypck/__init__.py
+pypckbuild.egg-info/PKG-INFO
+pypckbuild.egg-info/SOURCES.txt
+pypckbuild.egg-info/dependency_links.txt
+pypckbuild.egg-info/top_level.txt
