@@ -1,0 +1,49 @@
+Metadata-Version: 2.4
+Name: tmurkser
+Version: 0.1.0
+Summary: Simple tmux session manager
+Project-URL: Homepage, https://github.com/Data5tream/tmurkser
+Project-URL: Issues, https://github.com/Data5tream/tmurkser/issues
+Author-email: Simon Barth <data5tream@protonmail.com>
+License-Expression: MIT
+License-File: LICENSE
+Requires-Python: <4.0,>=3.12
+Requires-Dist: libtmux>=0.46.1
+Requires-Dist: tomlkit>=0.13.2
+Description-Content-Type: text/markdown
+
+# Tmurkser
+
+> A simple tmux session manager
+
+## Installation
+
+```shell
+pipx install tmurkser
+```
+
+## Features
+
+### Currently implemented
+
+- Save different tmux configurations with the `save` command. Save sessions and windows, saves the current working path of the active pane of each window.
+  - Save all session
+  - Only save specific sessions
+  - Exclue specific sessions
+- Restore tmux configurations
+
+## Planned features
+
+- Pane handling (currently only the active pane is handled)
+- Session templates
+
+## Development
+
+Dependencies are managed with [uv](https://docs.astral.sh/uv/)
+
+Run the program with:
+
+```shell
+uv run tmurkser
+```
+

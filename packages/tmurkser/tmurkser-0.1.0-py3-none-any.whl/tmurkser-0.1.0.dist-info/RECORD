@@ -1,0 +1,11 @@
+tmurkser/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tmurkser/config_file.py,sha256=JNe9ary3DAKHyTVdiSOiNcL7C6Ms8fJACIF-t7Wx0T0,1485
+tmurkser/dataclasses.py,sha256=2hqBEE6hvBFk19Kw824u7JE5-Xu5yXwXyLDSJir52Gk,947
+tmurkser/main.py,sha256=ICUqrlla2aA8pOI8XHfTaCNlDXw-FMzc_wGC03oom68,1903
+tmurkser/session_loader.py,sha256=sWPB5ylXpR0txR8DuGOsio3nlUl7y8S79MIICT5yANk,1387
+tmurkser/session_saver.py,sha256=bJT8caYIlJLW8sfY36LkJ5QIFCe-QGhPUZPWhqfvxs8,2933
+tmurkser-0.1.0.dist-info/METADATA,sha256=1wjqnJcyOAkqD2jnucs93zMwViSGSFoGmDJnD1giKe4,1091
+tmurkser-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+tmurkser-0.1.0.dist-info/entry_points.txt,sha256=VTh_bhGVUwwCfemV6DeAs6ge4AW0huHS2q4R2CuGOF0,48
+tmurkser-0.1.0.dist-info/licenses/LICENSE,sha256=2dwHwtkeirNWGpnbeJx_Qaw2lVYRNa86Knz53-Bm1Ck,1067
+tmurkser-0.1.0.dist-info/RECORD,,
