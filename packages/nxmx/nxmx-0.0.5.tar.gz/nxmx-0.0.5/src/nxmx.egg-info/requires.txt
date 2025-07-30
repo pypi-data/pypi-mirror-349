@@ -1,0 +1,5 @@
+h5py
+pint
+python-dateutil
+scipy
+numpy

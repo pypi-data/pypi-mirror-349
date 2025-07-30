@@ -1,0 +1,43 @@
+ci:
+  autoupdate_schedule: quarterly
+  skip: [pip-compile]
+
+repos:
+
+- repo: https://github.com/astral-sh/uv-pre-commit
+  rev: 0.7.6
+  hooks:
+  - id: pip-compile
+    args: [pyproject.toml, -o, requirements.txt]
+  - id: pip-compile
+    args: [-o, requirements_dev.txt, --group, dev, --no-deps]
+
+- repo: https://github.com/astral-sh/ruff-pre-commit
+  rev: v0.11.10
+  hooks:
+  - id: ruff-check
+    args: [--fix, --show-fixes, --exit-non-zero-on-fix]
+  - id: ruff-format
+
+# Format YAML & TOML files prettily
+- repo: https://github.com/macisamuele/language-formatters-pre-commit-hooks
+  rev: v2.14.0
+  hooks:
+  - id: pretty-format-yaml
+    args: [--autofix, --indent, '2']
+  - id: pretty-format-toml
+    args: [--autofix]
+
+# Syntax check with pre-commit out-of-the-box hooks
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v5.0.0
+  hooks:
+  - id: check-ast
+  - id: check-json
+  - id: pretty-format-json
+    args: [--autofix, --no-ensure-ascii, --no-sort-keys]
+  - id: check-yaml
+  - id: check-merge-conflict
+  - id: check-added-large-files
+    args: [--maxkb=200]
+  - id: requirements-txt-fixer
