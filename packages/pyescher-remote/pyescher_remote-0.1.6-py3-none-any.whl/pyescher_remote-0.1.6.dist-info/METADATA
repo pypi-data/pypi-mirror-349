@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: pyescher-remote
+Version: 0.1.6
+Summary: Remote control functionality for the pyescher and volo viewing libraries.
+Project-URL: Homepage, https://github.com/FennisRobert/pyescher-remote
+Project-URL: Issues, https://github.com/FennisRobert/pyescher-remote/issues
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: <=3.13,>3.7
+Requires-Dist: loguru>=0.7.3
+Requires-Dist: msgpack-numpy>=0.4.8
+Requires-Dist: msgpack>=1.0.5
+Requires-Dist: numpy>1.20
+Requires-Dist: pyzmq>=26.0.3
+Description-Content-Type: text/markdown
+
+# pyescher-remote
+Remote viewing library for pyescher and volo
