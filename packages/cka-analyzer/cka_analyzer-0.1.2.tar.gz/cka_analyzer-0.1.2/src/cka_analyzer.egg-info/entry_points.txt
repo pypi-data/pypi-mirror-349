@@ -1,0 +1,2 @@
+[console_scripts]
+cka-analyzer = cka_analyzer.cli:main
