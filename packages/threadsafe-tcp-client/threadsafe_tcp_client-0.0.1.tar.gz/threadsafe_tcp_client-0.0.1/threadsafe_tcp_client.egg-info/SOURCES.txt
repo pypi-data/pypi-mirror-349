@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+setup.py
+threadsafe_tcp_client/__init__.py
+threadsafe_tcp_client.egg-info/PKG-INFO
+threadsafe_tcp_client.egg-info/SOURCES.txt
+threadsafe_tcp_client.egg-info/dependency_links.txt
+threadsafe_tcp_client.egg-info/top_level.txt
