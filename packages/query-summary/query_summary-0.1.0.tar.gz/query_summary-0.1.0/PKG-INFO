@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: query_summary
+Version: 0.1.0
+Summary: A Flask middleware to track MongoDB queries and display summaries.
+Author: mstfsu
+Author-email: su.mustafa@hotmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+License-File: LICENSE
+Requires-Dist: pymongo>=4.0
+Requires-Dist: flask>=2.0
+Requires-Dist: mongoengine>=0.24.0
