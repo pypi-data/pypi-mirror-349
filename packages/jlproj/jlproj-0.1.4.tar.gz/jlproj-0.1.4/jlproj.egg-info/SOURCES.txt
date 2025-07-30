@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+setup.py
+jlproj/__init__.py
+jlproj/cli.py
+jlproj/faiss_wrapper.py
+jlproj/projector.py
+jlproj/utils.py
+jlproj.egg-info/PKG-INFO
+jlproj.egg-info/SOURCES.txt
+jlproj.egg-info/dependency_links.txt
+jlproj.egg-info/entry_points.txt
+jlproj.egg-info/not-zip-safe
+jlproj.egg-info/requires.txt
+jlproj.egg-info/top_level.txt
