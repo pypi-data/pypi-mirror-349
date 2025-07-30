@@ -1,0 +1,9 @@
+siemens_standard_bom/__init__.py,sha256=zpVtuGe0uU_0DyU7WNscREuvIf0_uRdF-NnaJikIQak,122
+siemens_standard_bom/immutable.py,sha256=-cPKXjJjnCUUoDmHjr_upofdo7HcnMvgyODya7pDGD0,1101
+siemens_standard_bom/model.py,sha256=BxUZbg98A9KVLueIusljWt4ftxj4li4AhYrAyS9XWgI,28152
+siemens_standard_bom/parser.py,sha256=-KypVMEu9XOh40Vhirr9SQSwDtG8qD_kqIGjmJcZcFA,1610
+siemens_standard_bom/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+siemens_standard_bom-4.0.0.dist-info/LICENSE,sha256=tXk-uiX4nUzpBVD3R_Zy1NuVBB6yPkY4vp364BYH5gU,1086
+siemens_standard_bom-4.0.0.dist-info/METADATA,sha256=Brnbt0zO4GETkIUM8ajAB2xMyvgbiVduYC_a7rww3M8,6420
+siemens_standard_bom-4.0.0.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+siemens_standard_bom-4.0.0.dist-info/RECORD,,
