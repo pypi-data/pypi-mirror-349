@@ -1,0 +1,5 @@
+# include every .hh in src/ (headers)
+recursive-include src *.hh
+
+# include every .cc in src/ (C++ sources)
+recursive-include src *.cc

@@ -1,0 +1,33 @@
+[build-system]
+requires = [
+  'setuptools>=77.0.1',
+  'packaging>=24.2',
+  'wheel',
+  'Cython'
+]
+build-backend = 'setuptools.build_meta'
+
+[project]
+name = 'voropy'
+version = '1.0.0'
+description = 'Python interface to the Voro++ library'
+authors = [
+  { name = 'Siyu Chen', email = 'sc2090@cam.ac.uk' }
+]
+requires-python = '>=3.7'
+dependencies = []
+readme = { file = "README.md", content-type = "text/markdown" }
+license = 'GPL-3.0-or-later'
+license-files = ['LICENSE']
+
+[tool.setuptools.packages.find]
+include = ['voropy']
+
+[[tool.setuptools.ext-modules]]
+name         = 'voropy.voroplusplus'
+sources      = [
+  'voropy/voroplusplus.pyx',
+  'src/voro++.cc',
+]
+include-dirs = ['src']
+language     = 'c++'
