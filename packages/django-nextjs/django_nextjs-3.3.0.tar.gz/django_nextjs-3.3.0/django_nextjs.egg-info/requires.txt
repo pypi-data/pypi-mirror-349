@@ -1,0 +1,12 @@
+Django>=4.2
+aiohttp
+websockets
+
+[dev]
+pre-commit
+pytest>=7
+pytest-cov
+pytest-django
+pytest-asyncio
+black
+isort

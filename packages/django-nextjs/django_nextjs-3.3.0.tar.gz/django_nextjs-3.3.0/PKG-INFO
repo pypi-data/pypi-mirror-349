@@ -1,0 +1,55 @@
+Metadata-Version: 2.4
+Name: django-nextjs
+Version: 3.3.0
+Summary: Integrate Next.js into your Django project
+Home-page: https://github.com/QueraTeam/django-nextjs
+Download-URL: https://github.com/QueraTeam/django-nextjs
+Author: Quera Team
+Keywords: django,next,nextjs,django-nextjs
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 4.2
+Classifier: Framework :: Django :: 5.0
+Classifier: Framework :: Django :: 5.1
+Classifier: Framework :: Django :: 5.2
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: Django>=4.2
+Requires-Dist: aiohttp
+Requires-Dist: websockets
+Provides-Extra: dev
+Requires-Dist: pre-commit; extra == "dev"
+Requires-Dist: pytest>=7; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: pytest-django; extra == "dev"
+Requires-Dist: pytest-asyncio; extra == "dev"
+Requires-Dist: black; extra == "dev"
+Requires-Dist: isort; extra == "dev"
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: download-url
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license-file
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: summary
+
+`django-nextjs` allows Django and Next.js pages to work together seamlessly.
+It enables you to add Next.js pages to an existing Django project
+or gradually migrate your frontend to Next.js.
+
+**For full documentation, usage examples, and advanced configuration,
+please visit the GitHub repository:**
+[django-nextjs](https://github.com/QueraTeam/django-nextjs)
