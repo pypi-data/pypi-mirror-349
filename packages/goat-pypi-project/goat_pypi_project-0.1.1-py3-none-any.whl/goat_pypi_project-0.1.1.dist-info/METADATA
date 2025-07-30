@@ -1,0 +1,52 @@
+Metadata-Version: 2.4
+Name: goat-pypi-project
+Version: 0.1.1
+Summary: A Python package for goat-related functionalities.
+Home-page: https://github.com/yourusername/goat-pypi-project
+Author: Daniel Nebenzahl
+Author-email: Daniel Nebenzahl <dn@scribesecurity.com>
+License-Expression: MIT
+Keywords: goat,pypi,python,package
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+
+# goat-pypi-project
+
+## Overview
+
+`goat-pypi-project` is a Python package designed to provide [brief description of the package functionality]. This package aims to [explain the purpose and goals of the package].
+
+## Installation
+
+You can install the package using pip:
+
+```
+pip install goat-pypi-project
+```
+
+## Usage
+
+Here is a simple example of how to use the package:
+
+```python
+from goat_pypi_project import [relevant_function_or_class]
+
+# Example usage
+result = [relevant_function_or_class](parameters)
+print(result)
+```
+
+## Contributing
+
+If you would like to contribute to the project, please fork the repository and submit a pull request. 
+
+## License
+
+This project is licensed under the [Your License] License - see the [LICENSE](LICENSE) file for details.

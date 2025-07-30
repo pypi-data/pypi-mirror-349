@@ -1,0 +1,7 @@
+goat_pypi_project-0.1.1.dist-info/licenses/LICENSE,sha256=Bt5VVQLVangCXBHF9BSRp9ZC2uEgIdKyG1ncffb_P0Q,1067
+tests/__init__.py,sha256=svyRAAc7QgY4BN4oiWRBWbu-YY8FpLDToVZ75XCHlkc,61
+tests/test_main.py,sha256=WfIxTA07SVaRs9GOrv_mqk95HV5C9lJWKMBhooOklzc,349
+goat_pypi_project-0.1.1.dist-info/METADATA,sha256=M7IlDSr6tgA-ZceUUqcSqI7aY6L5lDVA9tIIrgIAe-c,1350
+goat_pypi_project-0.1.1.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+goat_pypi_project-0.1.1.dist-info/top_level.txt,sha256=EdW7283x-lr_cbuivW8Ij7ANAP-ZJ9sLtILQseEPxXg,6
+goat_pypi_project-0.1.1.dist-info/RECORD,,
