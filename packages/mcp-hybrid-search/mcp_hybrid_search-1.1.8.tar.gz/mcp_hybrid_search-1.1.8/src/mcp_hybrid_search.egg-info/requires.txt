@@ -1,0 +1,7 @@
+mcp[cli]
+langchain
+langchain-experimental
+langchain-openai
+langchain-chroma
+pypdf
+rank_bm25
