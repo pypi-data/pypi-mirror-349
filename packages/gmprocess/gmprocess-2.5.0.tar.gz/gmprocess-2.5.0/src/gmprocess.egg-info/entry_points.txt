@@ -1,0 +1,9 @@
+[console_scripts]
+cwa_gather = gmprocess.bin.cwa_gather:cli
+fetch_orfeus = gmprocess.bin.fetch_orfeus:cli
+fix_inventory = gmprocess.bin.fix_inventory:main
+gmconvert = gmprocess.bin.gmconvert:main
+gminfo = gmprocess.bin.gminfo:cli
+gmprocess_config = gmprocess.bin.gmprocess_config:main
+gmrecords = gmprocess.bin.gmrecords:main
+gmworkspace = gmprocess.bin.gmworkspace:main
