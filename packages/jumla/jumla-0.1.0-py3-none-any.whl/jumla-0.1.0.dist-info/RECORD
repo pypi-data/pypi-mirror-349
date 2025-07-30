@@ -1,0 +1,10 @@
+jumla/__init__.py,sha256=GE9ldZWYz5KC_OXlxHUm_19W5RCgxUptr2Z7lZazRY0,1423
+jumla/cli.py,sha256=UY0rRwI6-dMkJjYnW0iqmUOpJ655DUOuJrQkKhbHyeQ,1477
+jumla/dataset.py,sha256=BhG6cLr9f_8NqNKUe2dg9ccCP5LkcxlW3mgMgct4nSU,8104
+jumla/files.py,sha256=CQXkWHNkpVkM1tkmjqDHa-owCBZAD60DAIIrOsZ9H6c,490
+jumla/log.py,sha256=md8fzR6n5KrMvlD5pBCSG1Pd6g3HvDNDb19_KwR46QE,670
+jumla/parser.py,sha256=yXC4DhW1ea7a85WwpEcf3L9_JT7bV0BcyR3fV8ITlJI,1356
+jumla-0.1.0.dist-info/METADATA,sha256=bXhJVWx7n0bbOVrSVRs8V25lWM4t6GMChoKQE-opIio,2254
+jumla-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+jumla-0.1.0.dist-info/entry_points.txt,sha256=U4lPnbvueLe8NzoElO3b2legH5HgZawguFUfBU0Xmts,37
+jumla-0.1.0.dist-info/RECORD,,
