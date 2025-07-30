@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+setup.py
+minicomc/__init__.py
+minicomc.egg-info/PKG-INFO
+minicomc.egg-info/SOURCES.txt
+minicomc.egg-info/dependency_links.txt
+minicomc.egg-info/top_level.txt
