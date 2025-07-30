@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+src/mcp_gen/__init__.py
+src/mcp_gen/cli.py
+src/mcp_gen/schemas.py
+src/mcp_gen/template_engine.py
+src/mcp_gen/validator.py
+src/mcp_gen.egg-info/PKG-INFO
+src/mcp_gen.egg-info/SOURCES.txt
+src/mcp_gen.egg-info/dependency_links.txt
+src/mcp_gen.egg-info/entry_points.txt
+src/mcp_gen.egg-info/requires.txt
+src/mcp_gen.egg-info/top_level.txt
+tests/test_cli.py
+tests/test_template_engine.py
+tests/test_validator.py
