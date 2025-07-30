@@ -1,0 +1,2 @@
+[console_scripts]
+prometheus-aioexporter-sample = prometheus_aioexporter.sample:script

@@ -1,0 +1,13 @@
+aiohttp>=3
+click
+prometheus-client>=0.4
+python-dotenv
+structlog
+
+[testing]
+pytest
+pytest-aiohttp
+pytest-asyncio
+pytest-mock
+pytest-structlog
+trustme
