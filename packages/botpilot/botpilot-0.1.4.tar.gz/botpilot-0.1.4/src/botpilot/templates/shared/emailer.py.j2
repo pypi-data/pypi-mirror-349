@@ -1,0 +1,30 @@
+from datetime import datetime
+import requests
+
+def emailer(sender, file_path, users, url_endpoint):
+
+    api_header = {
+        "Content-Type": "application/json",
+        "ACCEPT": "application/json"
+    }
+
+    api_body = {
+        "cc": [username + "@stanbic.com.gh" for username in users],
+        "subject": "",
+        "destination": [sender],
+        "data": {
+            "name": "Team",
+            "text": ""
+        },
+        "templateName": "generic-generic",
+        "attachments": [
+            {
+                "filename": f"",
+                "contentType": ".xlsx",
+                "path": file_path
+            }
+        ]
+    }
+
+    response = requests.post(url_endpoint, headers=api_header, json=api_body)
+    return response.status_code, response.text

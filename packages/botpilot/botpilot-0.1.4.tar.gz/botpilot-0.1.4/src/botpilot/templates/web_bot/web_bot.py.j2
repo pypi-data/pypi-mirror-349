@@ -1,0 +1,70 @@
+import os
+import time
+from datetime import datetime, timedelta
+from selenium import webdriver
+from selenium.webdriver.support.ui import WebDriverWait
+import configparser
+from shared import logger
+{% if with_db %}
+from shared import db_connections
+{% endif %}
+{% if emailer %}
+from shared import emailer
+{% endif %}
+{% if excel %}
+import pandas as pd
+{% endif %}
+
+# Application Configuration
+config = configparser.RawConfigParser()
+config_path = os.path.join(os.path.dirname(__file__), "..", "assets", "app.ini")
+config.read(config_path)
+
+class {{ class_name }}:
+    def __init__(self):
+        self.url = config.get("DEFAULT", "TARGET_URL")
+        self.searchDate = (datetime.today() - timedelta(days=1)).strftime("%Y-%m-%d")
+        {% if with_db %}
+        self.conn = db_connections.get_connection()
+        {% endif %}
+        {% if emailer %}
+        raw_users = config.get("EMAIL", "Users", fallback="")
+        self.email_users = [u.strip() for u in raw_users.split(",") if u.strip()]
+        self.email_endpoint = config.get("EMAIL", "endpoint")
+        {% endif %}
+
+        
+        download_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "downloads")
+
+
+
+        chrome_options = webdriver.ChromeOptions()
+        prefs = {
+            "download.default_directory": download_dir,
+            "download.prompt_for_download": False,
+            "download.directory_upgrade": True,
+            "safebrowsing.enabled": True
+        }
+        chrome_options.add_experimental_option("prefs", prefs)
+
+        driver_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "assets", "chromedriver.exe")
+        browser = webdriver.Chrome(driver_path, options=chrome_options)
+
+        wait = WebDriverWait(browser, 5)
+        browser.get(self.url)
+        browser.maximize_window()
+        time.sleep(4)
+        logger.logger.info("Bot initialized.")
+
+    def today_str(self):
+        return datetime.now().strftime("%Y-%m-%d")
+
+    def get_past_date(self, days):
+        return (datetime.now() - timedelta(days=days)).strftime("%Y-%m-%d")
+    {% if excel %}
+    def clean_excel(filepath, sheet="Sheet1", skiprows=0):
+        df = pd.read_excel(filepath, sheet_name=sheet, skiprows=skiprows)
+        df.dropna(how="all", inplace=True)
+        df.fillna(method="ffill", inplace=True)
+        return df
+    {% endif %}

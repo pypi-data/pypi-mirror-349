@@ -1,0 +1,6 @@
+typer[all]
+jinja2
+python-decouple
+pandas
+oracledb
+requests

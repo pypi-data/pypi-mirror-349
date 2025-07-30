@@ -1,0 +1,43 @@
+[DEFAULT]
+TARGET_URL=https://example.com
+USERNAME=your_username
+PASSWORD=your_password
+
+{% if with_db %}
+[GODIGI]
+DB_USER={{ user or '' }}
+DB_PASSWORD={{ password or '' }}
+UAT_SERVICE_NAME={{ service or '' }}
+UAT_HOST={{ host or '' }}
+PROD_SERVICE_NAME={{ service or '' }}
+PROD_HOST={{ host or '' }}
+PORT={{ port or '' }}
+
+
+
+[FINACLE]
+DB_USER={{ user or '' }}
+DB_PASSWORD={{ password or '' }}
+UAT_SERVICE_NAME={{ service or '' }}
+UAT_HOST={{ host or '' }}
+PROD_SERVICE_NAME={{ service or '' }}
+PROD_HOST={{ host or '' }}
+PORT={{ port or '' }}
+
+[OCH]
+DB_USER={{ user or '' }}
+DB_PASSWORD={{ password or '' }}
+UAT_SERVICE_NAME={{ service or '' }}
+UAT_HOST={{ host or '' }}
+PROD_SERVICE_NAME={{ service or '' }}
+PROD_HOST={{ host or '' }}
+PORT={{ port or '' }}
+
+{% endif %}
+
+[RESOURCES]
+LibDIR =
+
+[EMAIL]
+Users = 
+endpoint = 

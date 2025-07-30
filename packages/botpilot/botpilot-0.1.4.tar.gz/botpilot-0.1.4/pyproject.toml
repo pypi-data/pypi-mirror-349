@@ -1,0 +1,26 @@
+[project]
+name = "botpilot"
+version = "0.1.4"
+description = "A CLI toolkit for automating web bots and reconciliation bots."
+authors = [{ name="Patrick Adu-Amankwah", email="adu-amankwahp@stanbic.com.gh" }]
+dependencies = [
+  "typer[all]",
+  "jinja2",
+  "python-decouple",
+  "pandas",
+  "oracledb",
+  "requests"
+]
+requires-python = ">=3.7"
+readme = "README.md"
+license = { text = "MIT" }
+
+[project.scripts]
+botpilot = "botpilot.main:main"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["botpilot*"]

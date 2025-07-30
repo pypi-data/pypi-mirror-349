@@ -1,0 +1,6 @@
+# MANIFEST.in
+recursive-include src/botpilot/templates *.j2
+recursive-include src/botpilot/templates *.*
+recursive-include src/botpilot/shared *.py
+include README.md
+include LICENSE
