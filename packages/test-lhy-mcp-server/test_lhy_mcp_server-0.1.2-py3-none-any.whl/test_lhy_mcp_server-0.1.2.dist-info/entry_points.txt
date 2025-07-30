@@ -1,0 +1,2 @@
+[console_scripts]
+test-lhy-mcp-server = src.server.server:main
