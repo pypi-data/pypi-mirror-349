@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "uniform-vlm-infer"
+version = "0.1.0"
+description = "Easy one‑liner inference + post‑processing for the uniform LoRA VLM."
+readme = "README.md"
+authors = [
+  {name = "Dillon Murphy", email = "ddmurphy@calpoly.edu"},
+  {name = "Kailyn Kragas", email = "kkragas@calpoly.edu"},
+  {name = "Sofia Bryukhova", email = "sbryukho@calpoly.edu"},
+  {name = "Jasmine Cabrera", email = "jkscabrera2003@gmail.com"}
+]
+requires-python = ">=3.9"
+dependencies = [
+  "pandas>=2.0",
+  "huggingface_hub>=0.22",
+  "ms-swift"
+]
+
+[project.scripts]
+uniform-vlm-infer = "uniform_vlm_infer.cli:main"
+

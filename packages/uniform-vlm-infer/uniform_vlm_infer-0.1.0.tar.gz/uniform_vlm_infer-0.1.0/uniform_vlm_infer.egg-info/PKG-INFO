@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: uniform-vlm-infer
+Version: 0.1.0
+Summary: Easy one‑liner inference + post‑processing for the uniform LoRA VLM.
+Author-email: Dillon Murphy <ddmurphy@calpoly.edu>, Kailyn Kragas <kkragas@calpoly.edu>, Sofia Bryukhova <sbryukho@calpoly.edu>, Jasmine Cabrera <jkscabrera2003@gmail.com>
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: pandas>=2.0
+Requires-Dist: huggingface_hub>=0.22
+Requires-Dist: ms-swift
+
+Run on a **directory of images**:
+
+```bash
+uniform-vlm-infer ./images/ --csv preds.csv
+```
+
+Run on a **pre‑made dataset**:
+
+```bash
+uniform-vlm-infer ./data/val_dataset.jsonl --csv preds.csv
+```
