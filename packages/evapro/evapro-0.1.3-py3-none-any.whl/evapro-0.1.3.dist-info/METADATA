@@ -1,0 +1,83 @@
+Metadata-Version: 2.3
+Name: evapro
+Version: 0.1.3
+Summary: 遍历lims数据库，把新下的lims任务单添加到anneva监控
+License: MIT
+Author: Yuan Zan
+Author-email: yfinddream@gmail.com
+Requires-Python: >=3.8.1,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Utilities
+Requires-Dist: PyYAML (>=6.0,<7.0)
+Requires-Dist: colorama (>=0.4.6,<0.5.0)
+Requires-Dist: importlib-resources (>=5.12.0,<6.0.0)
+Requires-Dist: pandas (>=2.0.0,<3.0.0)
+Requires-Dist: pymysql (>=1.0.2,<2.0.0)
+Project-URL: Documentation, https://github.com/seqyuan/evapro#readme
+Project-URL: Homepage, https://github.com/seqyuan/evapro
+Project-URL: Repository, https://github.com/seqyuan/evapro
+Description-Content-Type: text/markdown
+
+# evapro
+
+遍历lims数据库，把新下的lims任务单添加到anneva监控
+
+## 安装
+
+```bash
+pip install evapro
+```
+
+或者使用poetry:
+
+```bash
+poetry add evapro
+```
+
+## 使用
+
+```bash
+evapro [options]
+```
+
+## 配置
+
+配置文件位于 `evapro/config/evapro.yaml`，包含以下配置项：
+
+- 数据库连接信息
+- 监控参数设置
+- 任务处理选项
+
+## 功能
+
+- 自动检测新lims任务单
+- 将任务单添加到anneva监控系统
+- 状态跟踪和报告
+
+## 开发
+
+```bash
+git clone https://github.com/seqyuan/evapro.git
+cd evapro
+poetry install
+poetry run pytest
+```
+
+## 贡献
+
+欢迎提交Pull Request。请确保通过所有测试并更新文档。
+
+## 许可证
+
+[MIT](LICENSE)
+
