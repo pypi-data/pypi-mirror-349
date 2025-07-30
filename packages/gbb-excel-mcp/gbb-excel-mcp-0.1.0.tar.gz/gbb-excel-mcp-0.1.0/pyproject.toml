@@ -1,0 +1,20 @@
+[project]
+name = "gbb-excel-mcp"
+version = "0.1.0"
+description = "excel文件中内容匹配工邦邦商品sku"
+readme = "README.md"
+authors = [
+    { name = "meng4.wang", email = "meng4.wang@gongbangbang.com" }
+]
+keywords = ["mcp", "server", "gbb"]
+requires-python = ">=3.10"
+dependencies = [
+    "mcp>=1.9.0",
+]
+
+[project.scripts]
+gbb-excel-mcp = "gbb_excel_mcp:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

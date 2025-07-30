@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.py
+gbb_excel_mcp.egg-info/PKG-INFO
+gbb_excel_mcp.egg-info/SOURCES.txt
+gbb_excel_mcp.egg-info/dependency_links.txt
+gbb_excel_mcp.egg-info/entry_points.txt
+gbb_excel_mcp.egg-info/requires.txt
+gbb_excel_mcp.egg-info/top_level.txt
