@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+kw/__init__.py
+kw.egg-info/PKG-INFO
+kw.egg-info/SOURCES.txt
+kw.egg-info/dependency_links.txt
+kw.egg-info/not-zip-safe
+kw.egg-info/top_level.txt
