@@ -1,0 +1,7 @@
+csv_analyzer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+csv_analyzer/logic.py,sha256=t12JuRuEoLPim24bMMHYxhYSN9I3a3-az5fsCfLnE2M,675
+csv_analyzer/models.py,sha256=M6DFwtRYWgTJRas3z7myff0p-89tnttc0n2avvPSY7Q,485
+csv_analyzer1-0.1.1.dist-info/METADATA,sha256=1zQvZ8JT0Bo5aq4rOTKPcl6f3M_a3WNsVY3aCrea73g,321
+csv_analyzer1-0.1.1.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+csv_analyzer1-0.1.1.dist-info/top_level.txt,sha256=9_TpRPnNpCTNdCRdK_D8kq1RYC3pzVo-t7YcQL9irpg,13
+csv_analyzer1-0.1.1.dist-info/RECORD,,
