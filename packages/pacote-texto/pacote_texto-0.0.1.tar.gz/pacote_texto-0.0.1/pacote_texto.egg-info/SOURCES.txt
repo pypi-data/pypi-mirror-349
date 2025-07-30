@@ -1,0 +1,9 @@
+setup.py
+pacote_texto/__init__.py
+pacote_texto/analise.py
+pacote_texto/limpeza.py
+pacote_texto/resumo.py
+pacote_texto.egg-info/PKG-INFO
+pacote_texto.egg-info/SOURCES.txt
+pacote_texto.egg-info/dependency_links.txt
+pacote_texto.egg-info/top_level.txt
