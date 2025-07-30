@@ -1,0 +1,10 @@
+jupyter_ai_tools/__init__.py,sha256=a_BD1E4F2ddYbI7b-RW8liLRgwGWHF0LFcqQJU9FdlY,335
+jupyter_ai_tools/extension.py,sha256=2kQRjRoWYbIdREcmgyZ0C7PVb6sS-B06RVomtq4W-mY,8316
+jupyter_ai_tools/git_tools.py,sha256=MGIyv0jAVNFe2Wbp9BNIsXildXC8p_Awh2m7_oTfZDk,4663
+jupyter_ai_tools/ynotebook_tools.py,sha256=yNYvgmV8PjloBPNJQpBk6cLp7aHVoTSIMaolLBOVB7g,5549
+jupyter_ai_tools-0.1.0.data/data/etc/jupyter/jupyter_server_config.d/jupyter_ai_tools.json,sha256=gVYPTSsMEJ8D7fIG33reT58I_3RC5mLUoI7Sh_9vnEo,91
+jupyter_ai_tools-0.1.0.dist-info/METADATA,sha256=BmrN8h201FSeZWbQiaR1LvPYjN3WUTuiwB4nTRznoHg,6177
+jupyter_ai_tools-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+jupyter_ai_tools-0.1.0.dist-info/entry_points.txt,sha256=R2ofk2UEaqzp_96s9Q9mz4kSWLR7zr5alNQaZeoRA-4,63
+jupyter_ai_tools-0.1.0.dist-info/licenses/LICENSE,sha256=1omDwXs8YNmInWwjD8ZJFrD377ZHzjyKMAEBSxljKtw,1523
+jupyter_ai_tools-0.1.0.dist-info/RECORD,,
