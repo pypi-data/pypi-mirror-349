@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: playwright-custom
+Version: 0.1.0
+Summary: Custom hook to install playwright deps
+Author: Your Name
+Author-email: your@email.com
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Requires-Dist: playwright
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
