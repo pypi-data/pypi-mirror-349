@@ -1,0 +1,11 @@
+__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+outbox/__init__.py,sha256=2ZxNxaDxOJ07RfXSMBA2uhNGnMXqicMo7friwURgu2Q,297
+outbox/handler.py,sha256=JexxPQEjXxuovHM-JvcCxvf80LJWu_Zly4i2oKUVdbc,1703
+outbox/protocols.py,sha256=c4wLaRRv0-OT-qetQ5HStgcnZF7uClOAD4B5Omkr7Tw,606
+outbox/schemas.py,sha256=To-qwJTDWlINO3Gp5On-iWornwvSSamzDbD-IwstxhE,197
+outbox/types.py,sha256=wN9SORaPE0Z_h0mjzh9Feinhopus8adKSgL5tDpLXIk,136
+outbox/worker.py,sha256=2i4kL21m5SwHxxbPjOq2H5QlqVfdobzopI9VxF_ZQhI,4933
+outbox_worker-0.2.2.dist-info/METADATA,sha256=8c7aCdTsm6Rq9gQl1fK6XMBgj88ra6VSsy925pMnuKc,1916
+outbox_worker-0.2.2.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+outbox_worker-0.2.2.dist-info/top_level.txt,sha256=4IaMfyk1jLEpH4l73kYjtV-FmFf-WUFZpoexgyC64Zk,16
+outbox_worker-0.2.2.dist-info/RECORD,,
