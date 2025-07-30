@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vdfparse"
+version = "1.0.0"
+description = "Valve Data Format (VDF) parser for Python"
+authors = [
+  { name="0xFF-SYS", email="makunzdev@gmail.com" }
+]
+readme = "README.md"
+requires-python = ">=3.6"
+license = {text = "MIT"}
+keywords = ["vdf", "valve", "steam", "parser"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]

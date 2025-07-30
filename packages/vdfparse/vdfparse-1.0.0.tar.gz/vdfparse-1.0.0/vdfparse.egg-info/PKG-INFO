@@ -1,0 +1,40 @@
+Metadata-Version: 2.4
+Name: vdfparse
+Version: 1.0.0
+Summary: Valve Data Format (VDF) parser for Python
+Home-page: https://github.com/0xFF-SYS/vdfparse
+Author: 0xFF-SYS
+Author-email: 0xFF-SYS <makunzdev@gmail.com>
+License: MIT
+Keywords: vdf,valve,steam,parser
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+
+# VDFParse
+
+A Python parser for Valve Data Format (VDF) files, as used by Steam and other Valve products.
+
+## Installation
+
+```sh
+pip install vdfparse
+```
+
+## Usage
+
+```python
+from vdfparse import VDFParse
+
+vdf = VDFParse('path/to/file.vdf')
+print(vdf.ToString())
+```
+
+See the source code for more advanced usage and helper functions.

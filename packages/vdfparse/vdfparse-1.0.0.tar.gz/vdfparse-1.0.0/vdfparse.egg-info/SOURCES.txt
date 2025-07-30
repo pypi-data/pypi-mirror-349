@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+vdfparse/VDFParse.py
+vdfparse/__init__.py
+vdfparse.egg-info/PKG-INFO
+vdfparse.egg-info/SOURCES.txt
+vdfparse.egg-info/dependency_links.txt
+vdfparse.egg-info/top_level.txt
