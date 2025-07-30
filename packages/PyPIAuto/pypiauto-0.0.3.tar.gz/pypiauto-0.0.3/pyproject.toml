@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "PyPIAuto"
+version = "0.0.3"
+description = "一键创建Python项目模板并发布到PyPI"
+authors = ["Xiaoqiang <xiaoqiangclub@hotmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+setuptools = "*"
+wheel = "*"
+twine = "*"
+poetry = "*"
+
+[tool.poetry.scripts]
+pypiauto = "pypiauto.cli:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
