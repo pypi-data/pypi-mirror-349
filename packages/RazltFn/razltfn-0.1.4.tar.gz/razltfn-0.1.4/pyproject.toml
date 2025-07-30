@@ -1,0 +1,13 @@
+[project]
+name = "RazltFn"
+version = "0.1.4"
+description = "Fortnite API Interact"
+authors = [
+    { name = "Mxtsouko", email = "mxtsouko@email.com" }
+]
+requires-python = ">=3.10"
+license = {text = "MIT"}
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
