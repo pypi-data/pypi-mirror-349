@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: baresquare-core-py
+Version: 0.1.6
+Summary: Baresquare's core Python utilities
+License-Expression: MIT
+Requires-Python: >=3.12
+Requires-Dist: fastapi>=0.115.12
+Provides-Extra: linting
+Requires-Dist: ruff==0.11.9; extra == 'linting'
+Provides-Extra: testing
+Requires-Dist: pytest==8.3.5; extra == 'testing'
+Description-Content-Type: text/markdown
+
+# Baresquare Core Python Library
+
+Core utilities and functionality for Baresquare Python services.
+
+## Features
+
+- Logger 
+- Middleware components for web applications
+- Commonly used functions and classes
