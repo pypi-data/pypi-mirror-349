@@ -1,0 +1,13 @@
+LICENSE
+README.md
+email_mcp_server.py
+pyproject.toml
+setup.py
+mbrug/__init__.py
+mbrug/email_mcp_server.py
+mbrug_email_mcp_server.egg-info/PKG-INFO
+mbrug_email_mcp_server.egg-info/SOURCES.txt
+mbrug_email_mcp_server.egg-info/dependency_links.txt
+mbrug_email_mcp_server.egg-info/entry_points.txt
+mbrug_email_mcp_server.egg-info/requires.txt
+mbrug_email_mcp_server.egg-info/top_level.txt

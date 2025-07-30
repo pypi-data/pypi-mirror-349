@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mbrug-email-mcp-server"
+version = "0.1.0"
+description = "Email MCP Server for Amazon Q CLI"
+authors = [
+    {name = "mbrug", email = "mbrug@example.com"},
+]
+readme = "README.md"
+requires-python = ">=3.6"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "google-auth-oauthlib",
+    "google-auth",
+    "google-api-python-client",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/mbrug/email-mcp-server"
+"Bug Tracker" = "https://github.com/mbrug/email-mcp-server/issues"
+
+[project.entry-points."amazon_q_mcp.servers"]
+"mbrug.email-mcp-server" = "mbrug.email_mcp_server:run_server"
+
+[project.scripts]
+mbrug-email-mcp-server = "mbrug.email_mcp_server:run_server"

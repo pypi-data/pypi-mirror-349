@@ -1,0 +1,5 @@
+[amazon_q_mcp.servers]
+mbrug.email-mcp-server = mbrug.email_mcp_server:run_server
+
+[console_scripts]
+mbrug-email-mcp-server = mbrug.email_mcp_server:run_server
