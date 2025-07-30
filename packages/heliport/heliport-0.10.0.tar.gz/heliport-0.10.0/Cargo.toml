@@ -1,0 +1,51 @@
+[package]
+name = "heliport"
+version = "0.10.0"
+edition = "2021"
+rust-version = "1.74"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name = "heliport"
+# use lib to be able to compile library from other rust crates
+# use cdylib to enable maturin linkage
+crate-type = ["lib", "cdylib"]
+
+[workspace]
+members = ["heliport-model"]
+
+[profile.release]
+lto = "thin"
+
+[build-dependencies]
+heliport-model = { path = "heliport-model" }
+anyhow = "1.0"
+log = { version = "0.4" }
+strum = { version = "0.25", features = ["derive"] }
+env_logger = "0.10"
+
+[dependencies]
+heliport-model = { path = "heliport-model" }
+regex = "1.10"
+unicode-blocks = "0.1.8"
+shingles = "0.1"
+ordered-float = "4.2"
+log = { version = "0.4" }
+env_logger = "0.10"
+strum = { version = "0.25", features = ["derive"] }
+pyo3 = { version = "0.24.1", features = ["anyhow"], optional = true }
+clap = { version = "4.5", features = ["derive", "wrap_help"], optional = true}
+anyhow = "1.0"
+rayon = "1.10"
+itertools = "0.11"
+lazy_static = "1.5"
+counter = "0.6.0"
+
+[dev-dependencies]
+test-log = "0.2.15"
+
+[features]
+# Put log features in default, to allow crates using heli as a library, disable them
+default = ["cli", "log/max_level_debug", "log/release_max_level_debug"]
+cli = ["dep:clap"]
+python = ["dep:pyo3"]
