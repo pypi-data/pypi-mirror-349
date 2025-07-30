@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gradient-swarm-optimization"
+version = "0.1.1"
+description = "A Python implementation of Gradient-guided Swarm Optimization algorithm"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {file = "MIT"}
+authors = [{name = "Emrullah Gazioglu", email = "emrullahgazioglu@gmail.com"}]
+keywords = ["optimization", "swarm intelligence", "metaheuristic", "binary optimization", "gradient-guided optimization"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Environment :: Console"
+]
+dependencies = [
+    "numpy>=1.20.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/gazioglue/gso"
+Documentation = "https://github.com/gazioglue/gso#readme"
+Repository = "https://github.com/gazioglue/gso.git"
+Changelog = "https://github.com/gazioglue/gso/blob/main/CHANGELOG.md"
+Usage = "https://github.com/gazioglue/gso/blob/main/USAGE.md"
+
+[tool.setuptools]
+packages = ["gso"]
+package-dir = {"" = "src"}
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-v"
