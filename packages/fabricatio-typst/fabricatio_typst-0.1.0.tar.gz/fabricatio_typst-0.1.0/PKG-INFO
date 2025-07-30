@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: fabricatio-typst
+Version: 0.1.0
+Requires-Dist: fabricatio-core
+Requires-Dist: fabricatio-rag ; extra == 'rag'
+Provides-Extra: rag
+License-File: LICENSE
+Summary: Add your description here
+Requires-Python: >=3.12, <3.14
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+
+
