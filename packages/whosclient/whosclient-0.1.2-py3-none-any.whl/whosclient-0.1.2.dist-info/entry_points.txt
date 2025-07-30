@@ -1,0 +1,2 @@
+[console_scripts]
+whosclient = whosclient.__main__:cli
