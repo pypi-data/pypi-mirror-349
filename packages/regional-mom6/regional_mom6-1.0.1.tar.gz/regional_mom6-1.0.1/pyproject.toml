@@ -1,0 +1,37 @@
+[project]
+name = "regional_mom6"
+description = "Automatic generation of regional configurations for Modular Ocean Model 6"
+keywords = ["mom6", "regional", "ocean modeling", "python"]
+authors = [
+  {name = "COSIMA community and outside contributors"},
+]
+dynamic = ["version"]
+readme = "README.md"
+dependencies = [
+  "bottleneck",
+  "dask[array]",
+  "dask[distributed]",
+  "netCDF4",
+  "numpy >= 1.17.0, < 2.0.0",
+  "scipy >= 1.2.0",
+  "xarray",
+  "xesmf >= 0.8.4",
+  "f90nml >= 1.4.1",
+  "copernicusmarine >= 2.0.0,<2.1.0"
+]
+
+[build-system]
+requires = ["setuptools", "setuptools_scm[toml]"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["regional_mom6", "regional_mom6.demos.premade_run_directories"]
+
+[tool.setuptools.package-dir]
+"regional_mom6.demos" = "demos"
+
+[tool.setuptools.package-data]
+"regional_mom6.demos.premade_run_directories" = ["**/*"]
+
+[tool.setuptools_scm]
+write_to = "regional_mom6/_version.py"

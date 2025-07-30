@@ -1,0 +1,10 @@
+bottleneck
+dask[array]
+dask[distributed]
+netCDF4
+numpy<2.0.0,>=1.17.0
+scipy>=1.2.0
+xarray
+xesmf>=0.8.4
+f90nml>=1.4.1
+copernicusmarine<2.1.0,>=2.0.0

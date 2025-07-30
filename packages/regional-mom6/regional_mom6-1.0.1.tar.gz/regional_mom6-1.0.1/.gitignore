@@ -1,0 +1,15 @@
+__pycache__
+.ipynb_checkpoints
+build
+_build
+regional_mom6/_version.py
+regional_mom6.egg-info
+.pytest_cache
+.env
+env
+docker
+*.swp
+
+inputdir/
+rundir/
+
