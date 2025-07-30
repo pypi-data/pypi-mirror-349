@@ -1,0 +1,14 @@
+fibgrid/__init__.py,sha256=pH5i4Fj1tbXLqLtTVIdoojiplZssQn0nnud8-HXodRE,577
+fibgrid/construction.py,sha256=OI7cHrmw3Yp-LTjkQrkueU3zEJaOwBQxuIbAS_44J5Q,5914
+fibgrid/realization.py,sha256=fycuN3ak-BqFUvkhll_4_aUqPeCuB34XqPw-wsEfOPg,4569
+fibgrid/files/fibgrid_sphere_n1650000.nc,sha256=LCKTtBvMToApUIjWGYiT-x5FgonI7YU283eP74q-92U,8124333
+fibgrid/files/fibgrid_sphere_n430000.nc,sha256=yhTeJGVH_sDL1QUDbDIPk6964zmIhZraW4K1XaE42hY,2461662
+fibgrid/files/fibgrid_sphere_n6600000.nc,sha256=Gvq4TpwqpRinDw0WPIDOky5WnCsOvsa4qyBgh-uXGuA,29350980
+fibgrid/files/fibgrid_wgs84_n1650000.nc,sha256=PaBGc-f5n7FUjKp-KTKR6H1TUhM2P5xVF6V6e4icXZw,8124213
+fibgrid/files/fibgrid_wgs84_n430000.nc,sha256=cjmdpwvsKMkQ6CuE4Qe9g1gtm0gA2MXkB5ZIKxEKIN4,2457628
+fibgrid/files/fibgrid_wgs84_n6600000.nc,sha256=PlseTv1o67FAiBAyZo3hQD1iwPn0CeVgW7qj4pC9b4Y,29355877
+fibgrid-0.0.7.dist-info/licenses/LICENSE.txt,sha256=L1Ky9J5Bt_Z1cy4vW6QfrEJqDunmgfJMhH6NkhoyXXw,1074
+fibgrid-0.0.7.dist-info/METADATA,sha256=4Hf84LWm5cjxOxfEsGqTQvvbPouxZx0q-U9YMuzXOrU,4916
+fibgrid-0.0.7.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+fibgrid-0.0.7.dist-info/top_level.txt,sha256=EVejEtiP-oTBvlh9lUU7en34jw_uVRfVruqFS6ssgPo,8
+fibgrid-0.0.7.dist-info/RECORD,,
