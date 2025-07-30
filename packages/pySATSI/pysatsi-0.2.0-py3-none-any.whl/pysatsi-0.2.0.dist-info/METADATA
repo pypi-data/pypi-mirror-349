@@ -1,0 +1,72 @@
+Metadata-Version: 2.4
+Name: pySATSI
+Version: 0.2.0
+Summary: Python package for focal mechanism stress inversions
+Project-URL: Homepage, https://code.usgs.gov/esc/pySATSI
+Project-URL: Issues, https://code.usgs.gov/esc/pySATSI/-/issues
+Author-email: "Robert J. Skoumal" <rskoumal@usgs.gov>
+License-Expression: CC0-1.0
+License-File: LICENSE.md
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Requires-Dist: numpy<2.0
+Requires-Dist: pandas
+Requires-Dist: scikit-learn
+Requires-Dist: scipy
+Provides-Extra: plot
+Requires-Dist: matplotlib; extra == 'plot'
+Description-Content-Type: text/markdown
+
+# pySATSI
+
+Python package for focal mechanism stress inversions.
+
+Author: Robert Skoumal, U.S. Geological Survey | rskoumal@usgs.gov
+
+This project contains Python code to compute damped stress inversions using earthquake focal mechanism solutions.
+
+## How to Use
+#### 1. Install the latest release in your virtual environment:
+<pre>
+# If you <i><b>don't</b></i> want to create any plots:
+pip install -U pySATSI
+
+# If you <i><b>do</b></i> want to create plots:
+pip install -U pySATSI[plots]
+</pre>
+Python 3.8+ versions are supported.
+
+#### 2. Run pySATSI with your desired control file:
+```
+pySATSI path_to/control_file.txt
+```
+
+## More information
+### Running examples
+A variety of examples are provided in the repository. It's recommended you play around with these examples to learn about some of the features.
+1. Download the examples folder available [HERE](https://code.usgs.gov/esc/pySATSI/-/archive/main/pySATSI-main.zip?path=examples).
+2. Unzip the folder.
+3. Navigate to the examples folder you just downloaded, e.g.:
+`
+cd examples
+`
+4. Run pySATSI with the example of your choice, e.g.:
+`pySATSI 0D/control_file.txt`
+
+### Manual
+Refer to the [manual](https://code.usgs.gov/esc/pySATSI/-/blob/main/pySATSI_manual.pdf) or the [wiki](https://code.usgs.gov/esc/pySATSI/-/wikis/home) for additional information about running the code.
+
+## Citation
+Please cite our paper if you use anything in this project:
+
+- Skoumal, R.J., Hardebeck, J.L., Michael, A.J. (in review). pySATSI: A Python package for computing focal mechanism stress inversions. _Seismological Research Letters_.
+
+Significant portions of this algorithm are based on [SATSI](https://www.usgs.gov/node/279402):
+
+- Hardebeck, J.L., & Michael, A.J. (2006). Damped regional‐scale stress inversions: Methodology and examples for southern California and the Coalinga aftershock sequence. Journal of Geophysical Research: Solid Earth, 111(B11). https://doi.org/10.1029/2005JB004144
+
+## License and Disclaimer
+[License](https://code.usgs.gov/esc/pySATSI/-/blob/main/LICENSE.md): This project is in the public domain.
+
+[Disclaimer](https://code.usgs.gov/esc/pySATSI/-/blob/main/DISCLAIMER.md): This software is preliminary or provisional and is subject to revision.
