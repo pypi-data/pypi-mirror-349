@@ -1,0 +1,136 @@
+Metadata-Version: 2.4
+Name: django-db-migrator
+Version: 0.1.1
+Summary: Easily migrate your Django PostgreSQL database between platforms
+Home-page: https://github.com/yourusername/django-db-migrator
+Author: Your Name
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+Requires-Dist: python-dotenv
+
+<p align="center">
+  <img src="assets/logo.png" width="300" alt="Django DB Migrator">
+</p>
+
+# django-db-migrator
+
+A lightweight CLI tool to migrate a Django PostgreSQL database between environments or platforms. Perfect for moving data between servers, staging/production, or local/dev environments.
+
+---
+
+## Features
+
+* Reads database credentials from `.env` files
+* Dumps PostgreSQL database using `pg_dump`
+* Creates destination PostgreSQL user and database (if needed)
+* Restores dump using `pg_restore`
+* Clear logs for every step
+* PyPI-installable with a single CLI command
+
+---
+
+## What It Automates (Checklist)
+
+✅ **Reads `.env` Files**
+
+* Parses source and destination environments
+* Auto-extracts: `DB_NAME`, `DB_USER`, `DB_PASSWORD`, `DB_HOST`, `DB_PORT`
+* Destination also supports `DB_SUPERUSER`, `DB_SUPERUSER_PASSWORD`
+
+✅ **Connects to Source DB**
+
+* Tests connection using environment credentials
+
+✅ **Dumps Database**
+
+* Uses `pg_dump` to export schema and data from source DB
+
+✅ **Connects to Destination with Superuser**
+
+* Uses `psql` with destination superuser credentials
+
+✅ **Creates User and Database if Missing**
+
+* Checks existence of destination DB and user
+* Runs `CREATE USER`, `CREATE DATABASE`, and `GRANT ALL PRIVILEGES` as needed
+
+✅ **Restores Dump**
+
+* Uses `pg_restore` to import data into destination
+
+✅ **Cleans Up**
+
+* Deletes temporary dump file after successful migration
+
+✅ **Logging**
+
+* Logs each step clearly with `INFO` and `ERROR` messages
+
+---
+
+## Installation
+
+```bash
+pip install django-db-migrator
+```
+
+---
+
+## Usage
+
+```bash
+django-db-migrate --source-env .env --dest-env .env.prod
+```
+
+### .env Format (both source and destination)
+
+```env
+DB_NAME=your_db_name
+DB_USER=your_db_user
+DB_PASSWORD=your_db_password
+DB_HOST=localhost
+DB_PORT=5432
+
+# Destination .env only
+DB_SUPERUSER=postgres
+DB_SUPERUSER_PASSWORD=supersecret
+```
+
+---
+
+## Requirements
+
+* PostgreSQL CLI tools: `pg_dump`, `pg_restore`, `psql`
+* Python 3.7+
+* `python-dotenv`
+
+Install PostgreSQL tools:
+
+```bash
+sudo apt install postgresql-client  # Linux
+brew install postgresql             # macOS
+```
+
+---
+
+## Development
+
+```bash
+git clone https://github.com/MhmdRdbri/Django-db-migrator
+cd django-db-migrator
+pip install -e .
+```
+
+Run locally:
+
+```bash
+python -m django_db_migrator.cli --source-env .env --dest-env .env.prod
+```
+
+---
+
+## License
+
+MIT License
+Copyright (c) [2025] [Mohammad Roudbari]
