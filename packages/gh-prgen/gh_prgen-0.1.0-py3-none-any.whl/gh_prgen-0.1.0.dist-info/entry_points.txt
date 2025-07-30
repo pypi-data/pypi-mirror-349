@@ -1,0 +1,2 @@
+[console_scripts]
+gh-prgen = gh_prgen.cli:main
