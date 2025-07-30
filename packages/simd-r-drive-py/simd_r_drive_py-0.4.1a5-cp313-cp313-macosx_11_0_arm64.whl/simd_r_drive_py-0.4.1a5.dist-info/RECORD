@@ -1,0 +1,7 @@
+simd_r_drive_py-0.4.1a5.dist-info/RECORD,,
+simd_r_drive_py-0.4.1a5.dist-info/WHEEL,sha256=JUwG_xVEDzGdRdUiD--I01bsrmIPAe855WQurTIRbHs,132
+simd_r_drive_py-0.4.1a5.dist-info/METADATA,sha256=YJZcB0f2QGkHCP8BplfPH1PSVWYRaxEqZSTNC3nE4cI,7706
+simd_r_drive/__init__.py,sha256=wblfvIrxwhikNXY20hBdmi29vB6tY79y0A6H08kFtBk,117
+simd_r_drive/simd_r_drive.pyi,sha256=VzsHkdjOzh4xE2tuR7MtQZnX3oUTFZi2eedyFKYa648,14982
+simd_r_drive/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+simd_r_drive/simd_r_drive.cpython-313-darwin.so,sha256=sOlGmafPHTdZxwQVM721oYGi8I1X95eGLLlkV45Q81w,716368
