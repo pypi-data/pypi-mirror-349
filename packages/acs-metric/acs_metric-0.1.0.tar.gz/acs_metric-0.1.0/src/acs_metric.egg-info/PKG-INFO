@@ -1,0 +1,46 @@
+Metadata-Version: 2.4
+Name: acs-metric
+Version: 0.1.0
+Summary: Accessibility Comprehension Score (ACS) Metric for Text Evaluation
+Home-page: https://github.com/Afsal-CP/acs-metric
+Author: Afsal-CP
+Author-email: your.email@domain.com
+Project-URL: Bug Tracker, https://github.com/Afsal-CP/acs-metric/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Text Processing :: General
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.19.0
+Requires-Dist: pandas>=1.2.0
+Requires-Dist: scikit-learn>=0.24.0
+Requires-Dist: scipy>=1.6.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: project-url
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# ACS Metric (Accessibility Comprehension Score)
+
+A comprehensive metric for evaluating the accessibility and comprehensibility of text summaries.
+
+## Installation
+
+```bash
+pip install acs-metric
