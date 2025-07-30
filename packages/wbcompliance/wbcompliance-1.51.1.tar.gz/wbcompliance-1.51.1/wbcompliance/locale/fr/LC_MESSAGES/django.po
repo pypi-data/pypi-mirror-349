@@ -1,0 +1,1626 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-20 09:30+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: wbcompliance/filters/compliances.py:19
+#: wbcompliance/filters/compliances.py:37
+#: wbcompliance/viewsets/display/compliance_form.py:150
+msgid "Is Signed"
+msgstr ""
+
+#: wbcompliance/filters/compliances.py:38
+msgid "Last version"
+msgstr ""
+
+#: wbcompliance/filters/compliances.py:102
+msgid "Is Recurring"
+msgstr ""
+
+#: wbcompliance/filters/compliances.py:103
+#: wbcompliance/filters/compliances.py:134
+#: wbcompliance/filters/compliances.py:152
+#: wbcompliance/models/compliance_task.py:265
+#: wbcompliance/viewsets/display/compliance_task.py:84
+#: wbcompliance/viewsets/display/compliance_task.py:266
+msgid "Active"
+msgstr ""
+
+#: wbcompliance/filters/compliances.py:115
+#: wbcompliance/filters/compliances.py:124
+#: wbcompliance/serializers/compliance_form.py:72
+#: wbcompliance/serializers/compliance_task.py:108
+#: wbcompliance/serializers/compliance_task.py:116
+#: wbcompliance/serializers/compliance_task.py:157
+#: wbcompliance/serializers/compliance_task.py:219
+#: wbcompliance/serializers/compliance_task.py:276
+#: wbcompliance/serializers/compliance_task.py:403
+#: wbcompliance/serializers/compliance_type.py:21
+#: wbcompliance/viewsets/compliance_task.py:245
+#: wbcompliance/viewsets/display/compliance_form.py:160
+#: wbcompliance/viewsets/display/compliance_task.py:86
+#: wbcompliance/viewsets/display/compliance_task.py:133
+#: wbcompliance/viewsets/display/compliance_task.py:149
+#: wbcompliance/viewsets/display/compliance_task.py:175
+#: wbcompliance/viewsets/display/compliance_task.py:204
+#: wbcompliance/viewsets/display/compliance_task.py:231
+msgid "Administrator"
+msgstr ""
+
+#: wbcompliance/filters/compliances.py:116
+#: wbcompliance/filters/compliances.py:125
+#: wbcompliance/filters/risk_management/incidents.py:54
+#: wbcompliance/filters/risk_management/rules.py:27
+#: wbcompliance/models/compliance_task.py:95
+#: wbcompliance/serializers/compliance_task.py:158
+#: wbcompliance/viewsets/compliance_task.py:246
+#: wbcompliance/viewsets/display/compliance_task.py:85
+#: wbcompliance/viewsets/display/compliance_task.py:132
+#: wbcompliance/viewsets/display/compliance_task.py:150
+#: wbcompliance/viewsets/display/compliance_task.py:176
+#: wbcompliance/viewsets/display/compliance_task.py:232
+msgid "Group"
+msgstr ""
+
+#: wbcompliance/filters/compliances.py:126
+#: wbcompliance/viewsets/compliance_task.py:247
+msgid "Tasks"
+msgstr ""
+
+#: wbcompliance/filters/compliances.py:169
+#: wbcompliance/models/compliance_task.py:455
+msgid "Is occurrence"
+msgstr ""
+
+#: wbcompliance/filters/risk_management/incidents.py:24
+msgid "Label"
+msgstr ""
+
+#: wbcompliance/filters/risk_management/incidents.py:27
+#: wbcompliance/models/risk_management/incidents.py:271
+#: wbcompliance/viewsets/display/risk_managment/checks.py:32
+#: wbcompliance/viewsets/display/risk_managment/incidents.py:52
+msgid "Rule"
+msgstr ""
+
+#: wbcompliance/filters/risk_management/incidents.py:35
+#: wbcompliance/models/risk_management/incidents.py:93
+#: wbcompliance/viewsets/display/risk_managment/rules.py:23
+msgid "Severity"
+msgstr ""
+
+#: wbcompliance/filters/risk_management/rules.py:24
+msgid "Exclude Informational Rule"
+msgstr ""
+
+#: wbcompliance/filters/risk_management/rules.py:67
+#: wbcompliance/viewsets/display/risk_managment/rules.py:59
+msgid "Open Incidents"
+msgstr ""
+
+#: wbcompliance/filters/risk_management/rules.py:71
+#: wbcompliance/filters/risk_management/rules.py:74
+#: wbcompliance/filters/risk_management/rules.py:77
+msgid "Opened Incident"
+msgstr ""
+
+#: wbcompliance/filters/risk_management/rules.py:80
+msgid "Notifed Users"
+msgstr ""
+
+#: wbcompliance/filters/risk_management/tables.py:30
+#: wbcompliance/viewsets/display/risk_managment/incidents.py:43
+msgid "Date Range"
+msgstr ""
+
+#: wbcompliance/filters/risk_management/tables.py:32
+msgid "Only open incidents"
+msgstr ""
+
+#: wbcompliance/filters/risk_management/tables.py:42
+msgid "Checked Object Type"
+msgstr ""
+
+#: wbcompliance/filters/risk_management/tables.py:104
+msgid "Checked Object Repr."
+msgstr ""
+
+#: wbcompliance/models/compliance_form.py:49
+#: wbcompliance/models/compliance_task.py:41
+#: wbcompliance/models/compliance_type.py:38
+#: wbcompliance/viewsets/display/compliance_form.py:27
+#: wbcompliance/viewsets/display/compliance_task.py:55
+#: wbcompliance/viewsets/display/compliance_type.py:16
+#: wbcompliance/viewsets/display/risk_managment/rules.py:57
+msgid "Name"
+msgstr ""
+
+#: wbcompliance/models/compliance_form.py:54
+#: wbcompliance/models/compliance_form.py:123
+#: wbcompliance/models/compliance_task.py:113
+#: wbcompliance/models/compliance_task.py:263
+#: wbcompliance/models/compliance_task.py:343
+#: wbcompliance/models/compliance_task.py:469
+#: wbcompliance/viewsets/display/compliance_form.py:28
+msgid "Type"
+msgstr ""
+
+#: wbcompliance/models/compliance_form.py:99
+#: wbcompliance/models/compliance_task.py:271
+#: wbcompliance/models/compliance_task.py:351
+#: wbcompliance/models/compliance_task.py:438
+#: wbcompliance/viewsets/display/compliance_form.py:137
+msgid "Creator"
+msgstr ""
+
+#: wbcompliance/models/compliance_form.py:103
+#: wbcompliance/models/compliance_task.py:274
+#: wbcompliance/models/compliance_task.py:354
+#: wbcompliance/models/compliance_task.py:442
+msgid "Created"
+msgstr ""
+
+#: wbcompliance/models/compliance_form.py:105
+#: wbcompliance/models/compliance_task.py:279
+#: wbcompliance/models/compliance_task.py:360
+#: wbcompliance/models/compliance_task.py:444
+#: wbcompliance/viewsets/display/compliance_form.py:138
+msgid "Changer"
+msgstr ""
+
+#: wbcompliance/models/compliance_form.py:107
+#: wbcompliance/models/compliance_task.py:446
+#: wbcompliance/viewsets/display/compliance_form.py:139
+msgid "Changed"
+msgstr ""
+
+#: wbcompliance/models/compliance_form.py:108
+#: wbcompliance/models/compliance_task.py:80
+#: wbcompliance/models/compliance_task.py:240
+#: wbcompliance/models/compliance_task.py:327
+#: wbcompliance/models/compliance_task.py:427
+#: wbcompliance/serializers/compliance_task.py:281
+#: wbcompliance/viewsets/display/compliance_form.py:136
+#: wbcompliance/viewsets/display/compliance_task.py:81
+#: wbcompliance/viewsets/display/compliance_task.py:127
+#: wbcompliance/viewsets/display/compliance_task.py:262
+msgid "Title"
+msgstr ""
+
+#: wbcompliance/models/compliance_form.py:109
+#: wbcompliance/models/compliance_form.py:409
+msgid "Policy"
+msgstr ""
+
+#: wbcompliance/models/compliance_form.py:110
+#: wbcompliance/models/compliance_form.py:407
+#: wbcompliance/serializers/compliance_form.py:60
+#: wbcompliance/viewsets/buttons/risk_managment/rules.py:15
+#: wbcompliance/viewsets/display/compliance_form.py:140
+#: wbcompliance/viewsets/display/compliance_form.py:256
+msgid "Start"
+msgstr ""
+
+#: wbcompliance/models/compliance_form.py:111
+#: wbcompliance/models/compliance_form.py:408
+#: wbcompliance/viewsets/buttons/risk_managment/rules.py:16
+#: wbcompliance/viewsets/display/compliance_form.py:141
+#: wbcompliance/viewsets/display/compliance_form.py:257
+msgid "End"
+msgstr ""
+
+#: wbcompliance/models/compliance_form.py:116
+msgid "Group to which the Form applies"
+msgstr ""
+
+#: wbcompliance/models/compliance_form.py:119
+msgid "Only internal"
+msgstr ""
+
+#: wbcompliance/models/compliance_form.py:119
+msgid "Send the Form only to internal users"
+msgstr ""
+
+#: wbcompliance/models/compliance_form.py:121
+#: wbcompliance/viewsets/display/compliance_form.py:159
+msgid "Form Type"
+msgstr ""
+
+#: wbcompliance/models/compliance_form.py:128
+#: wbcompliance/models/compliance_task.py:187
+#: wbcompliance/models/compliance_task.py:260
+#: wbcompliance/models/compliance_task.py:447
+#: wbcompliance/models/risk_management/checks.py:66
+#: wbcompliance/models/risk_management/incidents.py:141
+#: wbcompliance/models/risk_management/incidents.py:288
+#: wbcompliance/viewsets/display/compliance_task.py:148
+#: wbcompliance/viewsets/display/compliance_task.py:174
+#: wbcompliance/viewsets/display/compliance_task.py:201
+#: wbcompliance/viewsets/display/compliance_task.py:263
+#: wbcompliance/viewsets/display/risk_managment/checks.py:22
+#: wbcompliance/viewsets/display/risk_managment/incidents.py:50
+msgid "Status"
+msgstr ""
+
+#: wbcompliance/models/compliance_form.py:129
+msgid "The Compliance Form status (default to Draft)"
+msgstr ""
+
+#: wbcompliance/models/compliance_form.py:158
+#: wbcompliance/models/compliance_form.py:159
+msgid "Request Activation"
+msgstr ""
+
+#: wbcompliance/models/compliance_form.py:161
+msgid ""
+"{{_form_type.name}} <p>Title: <b>{{title}}</b></p>                "
+"<p>Version: <b>{{version}}</b></p> <p>Status: <b>{{status}}</b></p> "
+"<p>Start: <b>{{start}}</b></p>                <p>End: <b>{{end}}</b></p> "
+"<p>Do you want to send this request for validation ?</p>"
+msgstr ""
+
+#: wbcompliance/models/compliance_form.py:175
+msgid ""
+"Validation Request from {} to activate a {} version <b>{}</b> : <b>{}</b>"
+msgstr ""
+
+#: wbcompliance/models/compliance_form.py:178
+msgid "Validation Request {} : {}"
+msgstr ""
+
+#: wbcompliance/models/compliance_form.py:193
+#: wbcompliance/models/compliance_form.py:194
+msgid "Activate"
+msgstr ""
+
+#: wbcompliance/models/compliance_form.py:196
+msgid ""
+"\n"
+"                <p> Title: <b> {{title}} </b></p> <p>Version: <b>{{version}}"
+"</b></p>\n"
+"                <p>Start: <b>{{start}}</b></p><p>End: <b>{{end}}</b></p>\n"
+"                <p>Do you want to activate this {{_form_type.name}} ?</p>\n"
+"                "
+msgstr ""
+
+#: wbcompliance/models/compliance_form.py:212
+msgid "<p>{} has activated a {} version <b>{}</b> : <b>{}</b></p>"
+msgstr ""
+
+#: wbcompliance/models/compliance_form.py:216
+#: wbcompliance/models/compliance_form.py:624
+msgid "</br><p><b>Policy:</b></p><i>{}</i>"
+msgstr ""
+
+#: wbcompliance/models/compliance_form.py:217
+#: wbcompliance/models/compliance_form.py:625
+msgid "Applying a {} : {}"
+msgstr ""
+
+#: wbcompliance/models/compliance_form.py:233
+#: wbcompliance/models/compliance_form.py:234
+#: wbcompliance/models/compliance_task.py:650
+msgid "Return to Draft Mode"
+msgstr ""
+
+#: wbcompliance/models/compliance_form.py:236
+msgid ""
+"\n"
+"                {{_form_type.name}}<p>Title: <b> {{title}} </b></"
+"p><p>Version: <b>{{version}}</b></p>\n"
+"                <p>Status: <b>{{status}}</b></p> <p>Start: <b>{{start}}</b></"
+"p>  <p>End: <b>{{end}}</b></p>\n"
+"                <p>Do you want to return to draft mode this {{_form_type."
+"name}}?</p>\n"
+"                "
+msgstr ""
+
+#: wbcompliance/models/compliance_form.py:251
+msgid "{} has disabled a {} version <b>{}</b> : <b>{}</b>"
+msgstr ""
+
+#: wbcompliance/models/compliance_form.py:254
+msgid "Disabled {} : {}"
+msgstr ""
+
+#: wbcompliance/models/compliance_form.py:256
+msgid "{} has modified a {} version <b>{}</b> to Draft : <b>{}</b>"
+msgstr ""
+
+#: wbcompliance/models/compliance_form.py:259
+msgid "{} Drafted: {}"
+msgstr ""
+
+#: wbcompliance/models/compliance_form.py:402
+msgid "Form"
+msgstr ""
+
+#: wbcompliance/models/compliance_form.py:406
+#: wbcompliance/viewsets/display/compliance_form.py:255
+msgid "Version"
+msgstr ""
+
+#: wbcompliance/models/compliance_form.py:410
+#: wbcompliance/viewsets/display/compliance_form.py:258
+#: wbcompliance/viewsets/display/compliance_form.py:292
+msgid "Signed"
+msgstr ""
+
+#: wbcompliance/models/compliance_form.py:413
+#: wbcompliance/viewsets/display/compliance_form.py:262
+msgid "Signer"
+msgstr ""
+
+#: wbcompliance/models/compliance_form.py:417
+msgid "Remark"
+msgstr ""
+
+#: wbcompliance/models/compliance_form.py:454
+#: wbcompliance/viewsets/display/compliance_form.py:254
+msgid "Compliance Form"
+msgstr ""
+
+#: wbcompliance/models/compliance_form.py:456
+#: wbcompliance/models/compliance_form.py:523
+msgid "Name section"
+msgstr ""
+
+#: wbcompliance/models/compliance_form.py:486
+#: wbcompliance/models/compliance_form.py:549
+msgid "Section"
+msgstr ""
+
+#: wbcompliance/models/compliance_form.py:491
+#: wbcompliance/viewsets/display/compliance_form.py:63
+#: wbcompliance/viewsets/display/compliance_form.py:90
+msgid "Expected Answer"
+msgstr ""
+
+#: wbcompliance/models/compliance_form.py:520
+msgid "Compliance Form Signature"
+msgstr ""
+
+#: wbcompliance/models/compliance_form.py:554
+#: wbcompliance/viewsets/display/compliance_form.py:79
+#: wbcompliance/viewsets/display/compliance_form.py:93
+msgid "Answer"
+msgstr ""
+
+#: wbcompliance/models/compliance_form.py:616
+msgid "<p>{} has activated a <b>{}</b> policy version <b>{} </b></p>"
+msgstr ""
+
+#: wbcompliance/models/compliance_task.py:42
+#: wbcompliance/viewsets/display/compliance_task.py:56
+msgid "Order"
+msgstr ""
+
+#: wbcompliance/models/compliance_task.py:81
+#: wbcompliance/models/compliance_task.py:245
+#: wbcompliance/models/compliance_task.py:338
+#: wbcompliance/models/compliance_task.py:430
+#: wbcompliance/models/compliance_type.py:39
+#: wbcompliance/serializers/compliance_task.py:225
+#: wbcompliance/viewsets/display/compliance_task.py:128
+#: wbcompliance/viewsets/display/risk_managment/rules.py:58
+msgid "Description"
+msgstr ""
+
+#: wbcompliance/models/compliance_task.py:86
+#: wbcompliance/models/compliance_task.py:452
+#: wbcompliance/viewsets/display/compliance_task.py:82
+#: wbcompliance/viewsets/display/compliance_task.py:129
+msgid "Occurrence"
+msgstr ""
+
+#: wbcompliance/models/compliance_task.py:101
+#: wbcompliance/models/compliance_task.py:195
+msgid "Review"
+msgstr ""
+
+#: wbcompliance/models/compliance_task.py:102
+msgid "list of reviews that contain this task"
+msgstr ""
+
+#: wbcompliance/models/compliance_task.py:109
+#: wbcompliance/viewsets/display/compliance_task.py:83
+msgid "Risk Level"
+msgstr ""
+
+#: wbcompliance/models/compliance_task.py:111
+#: wbcompliance/viewsets/display/compliance_task.py:131
+msgid "Remarks"
+msgstr ""
+
+#: wbcompliance/models/compliance_task.py:180
+msgid "Compliance Task"
+msgstr ""
+
+#: wbcompliance/models/compliance_task.py:182
+#: wbcompliance/viewsets/display/compliance_task.py:147
+#: wbcompliance/viewsets/display/compliance_task.py:173
+#: wbcompliance/viewsets/display/compliance_task.py:199
+msgid "Occured"
+msgstr ""
+
+#: wbcompliance/models/compliance_task.py:189
+#: wbcompliance/serializers/compliance_task.py:169
+#: wbcompliance/viewsets/display/compliance_form.py:62
+#: wbcompliance/viewsets/display/compliance_form.py:77
+#: wbcompliance/viewsets/display/compliance_form.py:89
+#: wbcompliance/viewsets/display/compliance_task.py:202
+msgid "Text"
+msgstr ""
+
+#: wbcompliance/models/compliance_task.py:190
+#: wbcompliance/serializers/compliance_task.py:173
+#: wbcompliance/viewsets/display/compliance_task.py:203
+msgid "Summary Text"
+msgstr ""
+
+#: wbcompliance/models/compliance_task.py:196
+msgid "list of reviews that contain this task instance"
+msgstr ""
+
+#: wbcompliance/models/compliance_task.py:250
+#: wbcompliance/serializers/compliance_task.py:228
+msgid "Summary Description"
+msgstr ""
+
+#: wbcompliance/models/compliance_task.py:252
+#: wbcompliance/viewsets/display/compliance_task.py:264
+msgid "Deadline"
+msgstr ""
+
+#: wbcompliance/models/compliance_task.py:254
+#: wbcompliance/viewsets/display/compliance_task.py:265
+msgid "Progress"
+msgstr ""
+
+#: wbcompliance/models/compliance_task.py:283
+#: wbcompliance/models/compliance_task.py:363
+msgid "Last modified"
+msgstr ""
+
+#: wbcompliance/models/compliance_task.py:319
+msgid "Type Event"
+msgstr ""
+
+#: wbcompliance/models/compliance_task.py:325
+msgid "Level"
+msgstr ""
+
+#: wbcompliance/models/compliance_task.py:331
+msgid "Executive Summary"
+msgstr ""
+
+#: wbcompliance/models/compliance_task.py:336
+msgid "Executive Summary for the Board"
+msgstr ""
+
+#: wbcompliance/models/compliance_task.py:339
+msgid "Actions Taken"
+msgstr ""
+
+#: wbcompliance/models/compliance_task.py:340
+msgid "Consequences"
+msgstr ""
+
+#: wbcompliance/models/compliance_task.py:341
+msgid "Future Suggestions"
+msgstr ""
+
+#: wbcompliance/models/compliance_task.py:364
+msgid "Confidential"
+msgstr ""
+
+#: wbcompliance/models/compliance_task.py:428
+msgid "From"
+msgstr ""
+
+#: wbcompliance/models/compliance_task.py:429
+msgid "To"
+msgstr ""
+
+#: wbcompliance/models/compliance_task.py:432
+msgid "Year"
+msgstr ""
+
+#: wbcompliance/models/compliance_task.py:462
+msgid "Parent Review"
+msgstr ""
+
+#: wbcompliance/models/compliance_task.py:464
+msgid "Occured Instance"
+msgstr ""
+
+#: wbcompliance/models/compliance_task.py:584
+msgid "<b>{}</b> is available. You can now complete and validate it."
+msgstr ""
+
+#: wbcompliance/models/compliance_task.py:585
+msgid "Instance Indicator Report: {}"
+msgstr ""
+
+#: wbcompliance/models/compliance_task.py:615
+msgid "Request Validation"
+msgstr ""
+
+#: wbcompliance/models/compliance_task.py:617
+msgid ""
+"<p>Title: <b>{{title}}</b></p>                <p>Status: <b>{{status}}</b></"
+"p> <p>From: <b>{{from_date}}</b></p>                <p>To: <b>{{to_date}}</"
+"b></p> <p>Do you want to send this request for validation ?</p>"
+msgstr ""
+
+#: wbcompliance/models/compliance_task.py:631
+msgid ""
+"Validation Request from {} to validate a ompliance Risk Review: <b>{}</b>"
+msgstr ""
+
+#: wbcompliance/models/compliance_task.py:634
+msgid "Validation Requested Compliance Risk Review: {}"
+msgstr ""
+
+#: wbcompliance/models/compliance_task.py:652
+msgid ""
+"\n"
+"                <p>Title: <b> {{title}} </b></p>\n"
+"                <p>Status: <b>{{status}}</b></p> <p>From: <b>{{from_date}}</"
+"b></p>  <p>To: <b>{{to_date}}</b></p>\n"
+"                <p>Do you want to return to draft ?</p>\n"
+"                "
+msgstr ""
+
+#: wbcompliance/models/compliance_task.py:666
+msgid "{} has changed a Compliance Risk Review to Draft : <b>{}</b>"
+msgstr ""
+
+#: wbcompliance/models/compliance_task.py:669
+msgid "Compliance Risk Review : {}"
+msgstr ""
+
+#: wbcompliance/models/compliance_task.py:686
+msgid "Validate"
+msgstr ""
+
+#: wbcompliance/models/compliance_task.py:688
+msgid ""
+"\n"
+"                <p>Title: <b> {{title}} </b></p>\n"
+"                <p>Status: <b>{{status}}</b></p> <p>From: <b>{{from_date}}</"
+"b></p>  <p>To: <b>{{to_date}}</b></p>\n"
+"                <p>Do you want to validate?</p>\n"
+"                "
+msgstr ""
+
+#: wbcompliance/models/compliance_task.py:703
+msgid ""
+"\n"
+"                {} has validated a Compliance Risk Review : <b>{}</b>\n"
+"            "
+msgstr ""
+
+#: wbcompliance/models/compliance_task.py:707
+msgid "Validation - Compliance Risk Review : {}"
+msgstr ""
+
+#: wbcompliance/models/compliance_task.py:724
+msgid "Back to draft"
+msgstr ""
+
+#: wbcompliance/models/compliance_task.py:726
+msgid ""
+"\n"
+"                <p>Title: <b> {{title}} </b></p>\n"
+"                <p>Status: <b>{{status}}</b></p> <p>From: <b>{{from_date}}</"
+"b></p>  <p>To: <b>{{to_date}}</b></p>\n"
+"                <p>Do you want to return to the draft?</p>\n"
+"                "
+msgstr ""
+
+#: wbcompliance/models/compliance_task.py:740
+msgid "{} has drafted a Compliance Indicators Report : <b>{}</b>"
+msgstr ""
+
+#: wbcompliance/models/compliance_task.py:741
+msgid "Compliance Indicators Report drafted: {}"
+msgstr ""
+
+#: wbcompliance/models/compliance_task.py:784
+msgid "<p>An {} Event was created by {} {} at {}</p>"
+msgstr ""
+
+#: wbcompliance/models/compliance_task.py:791
+msgid "<p> Summary : {}</p>"
+msgstr ""
+
+#: wbcompliance/models/compliance_type.py:44
+#: wbcompliance/viewsets/display/compliance_type.py:17
+msgid "Group of administrators"
+msgstr ""
+
+#: wbcompliance/models/compliance_type.py:45
+msgid "groups responsible for managing this type of compliance"
+msgstr ""
+
+#: wbcompliance/models/risk_management/checks.py:51
+msgid "Creation Date"
+msgstr ""
+
+#: wbcompliance/models/risk_management/checks.py:52
+msgid "Time at which the check was created/triggered"
+msgstr ""
+
+#: wbcompliance/models/risk_management/checks.py:55
+#: wbcompliance/viewsets/display/risk_managment/checks.py:33
+msgid "Evaluation Date"
+msgstr ""
+
+#: wbcompliance/models/risk_management/checks.py:55
+msgid "The date at which the rule was evaluated"
+msgstr ""
+
+#: wbcompliance/models/risk_management/checks.py:101
+msgid "{} - {}"
+msgstr ""
+
+#: wbcompliance/models/risk_management/incidents.py:45
+msgid "Color"
+msgstr ""
+
+#: wbcompliance/models/risk_management/incidents.py:46
+msgid "Can be ignored"
+msgstr ""
+
+#: wbcompliance/models/risk_management/incidents.py:47
+msgid "Automatically closed"
+msgstr ""
+
+#: wbcompliance/models/risk_management/incidents.py:50
+msgid "Only Informational"
+msgstr ""
+
+#: wbcompliance/models/risk_management/incidents.py:51
+msgid "If true, the associated rule is not considered an incident"
+msgstr ""
+
+#: wbcompliance/models/risk_management/incidents.py:96
+#: wbcompliance/viewsets/buttons/risk_managment/incidents.py:27
+#: wbcompliance/viewsets/display/risk_managment/incidents.py:74
+msgid "Comment"
+msgstr ""
+
+#: wbcompliance/models/risk_management/incidents.py:101
+msgid "Handled by"
+msgstr ""
+
+#: wbcompliance/models/risk_management/incidents.py:102
+msgid "The person that resolved or ignored this incident"
+msgstr ""
+
+#: wbcompliance/models/risk_management/incidents.py:124
+#: wbcompliance/viewsets/display/risk_managment/incidents.py:136
+msgid "Check"
+msgstr ""
+
+#: wbcompliance/models/risk_management/incidents.py:125
+msgid "The check that opened this incident"
+msgstr ""
+
+#: wbcompliance/models/risk_management/incidents.py:131
+#: wbcompliance/viewsets/display/risk_managment/incidents.py:61
+#: wbcompliance/viewsets/display/risk_managment/incidents.py:138
+msgid "Breached Value"
+msgstr ""
+
+#: wbcompliance/models/risk_management/incidents.py:136
+#: wbcompliance/viewsets/buttons/compliance_task.py:57
+#: wbcompliance/viewsets/display/risk_managment/incidents.py:139
+msgid "Report"
+msgstr ""
+
+#: wbcompliance/models/risk_management/incidents.py:156
+#: wbcompliance/models/risk_management/incidents.py:157
+#: wbcompliance/models/risk_management/incidents.py:315
+#: wbcompliance/models/risk_management/incidents.py:316
+msgid "Resolve"
+msgstr ""
+
+#: wbcompliance/models/risk_management/incidents.py:158
+msgid "<p>Are you sure you want to resolve the incident {{computed_str}}"
+msgstr ""
+
+#: wbcompliance/models/risk_management/incidents.py:179
+#: wbcompliance/models/risk_management/incidents.py:180
+#: wbcompliance/models/risk_management/incidents.py:343
+#: wbcompliance/models/risk_management/incidents.py:344
+msgid "Ignore"
+msgstr ""
+
+#: wbcompliance/models/risk_management/incidents.py:181
+msgid "<p>Are you sure you want to ignore the incident {{computed_str}}"
+msgstr ""
+
+#: wbcompliance/models/risk_management/incidents.py:192
+#: wbcompliance/models/risk_management/incidents.py:364
+msgid "Incident type {} is not ignorable"
+msgstr ""
+
+#: wbcompliance/models/risk_management/incidents.py:219
+msgid ""
+"The relationship content type ({}) needs to match the incident rule backend "
+"allowed content type ({})"
+msgstr ""
+
+#: wbcompliance/models/risk_management/incidents.py:233
+msgid "{} {} Sub Incident for checked_object {}"
+msgstr ""
+
+#: wbcompliance/models/risk_management/incidents.py:267
+msgid "The incident spans date interval"
+msgstr ""
+
+#: wbcompliance/models/risk_management/incidents.py:272
+msgid "The rule that opened this incident"
+msgstr ""
+
+#: wbcompliance/models/risk_management/incidents.py:283
+msgid "Breached Object Representation"
+msgstr ""
+
+#: wbcompliance/models/risk_management/incidents.py:284
+msgid "String Representation of the breached object"
+msgstr ""
+
+#: wbcompliance/models/risk_management/incidents.py:291
+msgid "Notified"
+msgstr ""
+
+#: wbcompliance/models/risk_management/incidents.py:291
+msgid "True if the incident is already notified to the users"
+msgstr ""
+
+#: wbcompliance/models/risk_management/incidents.py:296
+msgid ""
+"If set, will ignore the forthcoming incidents for the specified duration"
+msgstr ""
+
+#: wbcompliance/models/risk_management/incidents.py:318
+msgid ""
+"<p>Are you sure you want to resolve the incident {{computed_str}} and its "
+"relationships?"
+msgstr ""
+
+#: wbcompliance/models/risk_management/incidents.py:346
+msgid ""
+"<p>Are you sure you want to ignore the incident {{computed_str}} and its "
+"relationships? If you set a days greater than 0, the forthcoming incident "
+"will be automatically ignore"
+msgstr ""
+
+#: wbcompliance/models/risk_management/incidents.py:417
+msgid "({}) {} Incident for breached object {} during {},{}"
+msgstr ""
+
+#: wbcompliance/models/risk_management/incidents.py:424
+msgid "({}) Incident for breached object {} during {}"
+msgstr ""
+
+#: wbcompliance/models/risk_management/rules.py:97
+msgid ""
+"The relationship content type ({}) needs to match the rule's backend allowed "
+"content type ({})"
+msgstr ""
+
+#: wbcompliance/models/risk_management/rules.py:108
+msgid "Rule Relationship {} -> {} {}"
+msgstr ""
+
+#: wbcompliance/models/risk_management/rules.py:234
+msgid ""
+"Passed content type {} does not match the allowed backend content type {}"
+msgstr ""
+
+#: wbcompliance/models/risk_management/rules.py:249
+msgid "Rule Backend {}"
+msgstr ""
+
+#: wbcompliance/models/risk_management/rules.py:271
+msgid "Threshold range"
+msgstr ""
+
+#: wbcompliance/models/risk_management/rules.py:272
+msgid ""
+"The range which triggers the specified severity. null bound represent "
+"infinity"
+msgstr ""
+
+#: wbcompliance/models/risk_management/rules.py:278
+msgid "Triggered Severity"
+msgstr ""
+
+#: wbcompliance/models/risk_management/rules.py:279
+msgid "The Triggered Severity when the rule is within the threshold range"
+msgstr ""
+
+#: wbcompliance/models/risk_management/rules.py:285
+msgid "Upgradable to next severity after X Days"
+msgstr ""
+
+#: wbcompliance/models/risk_management/rules.py:287
+msgid ""
+"If set to a positive integer, the resulting incident will be elevated to the "
+"next rule severity after an incident remains open this number of days"
+msgstr ""
+
+#: wbcompliance/models/risk_management/rules.py:295
+msgid "Notifiable Persons"
+msgstr ""
+
+#: wbcompliance/models/risk_management/rules.py:296
+msgid "Notified Persons for this rule and severity"
+msgstr ""
+
+#: wbcompliance/models/risk_management/rules.py:302
+#: wbcompliance/viewsets/display/risk_managment/rules.py:25
+msgid "Notifiable Groups"
+msgstr ""
+
+#: wbcompliance/models/risk_management/rules.py:303
+msgid "Notified Groups for this rule and severity"
+msgstr ""
+
+#: wbcompliance/models/risk_management/rules.py:349
+msgid "Range: {} (Severity {})"
+msgstr ""
+
+#: wbcompliance/models/risk_management/rules.py:407
+msgid "Quick Description"
+msgstr ""
+
+#: wbcompliance/models/risk_management/rules.py:410
+msgid "Enabled"
+msgstr ""
+
+#: wbcompliance/models/risk_management/rules.py:413
+#: wbcompliance/viewsets/display/risk_managment/rules.py:61
+msgid "Passive Only"
+msgstr ""
+
+#: wbcompliance/models/risk_management/rules.py:414
+msgid "If False, This rule can only be triggered passively"
+msgstr ""
+
+#: wbcompliance/models/risk_management/rules.py:417
+msgid "If true, the notification won't be send through System nor Mail"
+msgstr ""
+
+#: wbcompliance/models/risk_management/rules.py:420
+msgid ""
+"A mandatory rule cannot be modified by anyone other than the administrators"
+msgstr ""
+
+#: wbcompliance/models/risk_management/rules.py:423
+msgid "If True, this rule will automatically close all encountered incidents"
+msgstr ""
+
+#: wbcompliance/models/risk_management/rules.py:428
+msgid ""
+"If True, will keep this rule syncrhonize with the backend definition of all "
+"active relationship"
+msgstr ""
+
+#: wbcompliance/models/risk_management/rules.py:435
+msgid "Evaluation Frequency"
+msgstr ""
+
+#: wbcompliance/models/risk_management/rules.py:436
+msgid "The Evaluation Frequency in RRULE format"
+msgstr ""
+
+#: wbcompliance/models/risk_management/rules.py:478
+msgid "Rule {}"
+msgstr ""
+
+#: wbcompliance/models/risk_management/rules.py:616
+msgid "{} Broken Rule: {} as of {}"
+msgstr ""
+
+#: wbcompliance/serializers/compliance_form.py:64
+#: wbcompliance/viewsets/display/compliance_form.py:145
+msgid "Current Signed"
+msgstr ""
+
+#: wbcompliance/serializers/compliance_form.py:66
+msgid ""
+"The number of signatures of the compliance form over the number of total to "
+"be signed"
+msgstr ""
+
+#: wbcompliance/serializers/compliance_form.py:300
+#: wbcompliance/viewsets/display/compliance_form.py:81
+#: wbcompliance/viewsets/display/compliance_form.py:96
+msgid "Comments"
+msgstr ""
+
+#: wbcompliance/serializers/compliance_task.py:95
+#: wbcompliance/viewsets/display/compliance_task.py:87
+msgid "Indicator Reports"
+msgstr ""
+
+#: wbcompliance/serializers/compliance_task.py:97
+#: wbcompliance/serializers/compliance_task.py:164
+msgid "list of reports that contain this task"
+msgstr ""
+
+#: wbcompliance/serializers/compliance_task.py:154
+#: wbcompliance/viewsets/display/compliance_task.py:235
+msgid "Indicator"
+msgstr ""
+
+#: wbcompliance/serializers/compliance_task.py:159
+#: wbcompliance/viewsets/display/compliance_task.py:65
+#: wbcompliance/viewsets/display/compliance_task.py:146
+#: wbcompliance/viewsets/display/compliance_task.py:200
+#: wbcompliance/viewsets/menu/compliance_task.py:26
+#: wbcompliance/viewsets/titles/compliance_task.py:25
+msgid "Indicators"
+msgstr ""
+
+#: wbcompliance/serializers/compliance_task.py:162
+msgid "Indicator Instance Reports"
+msgstr ""
+
+#: wbcompliance/serializers/compliance_task.py:169
+msgid "Information for Management"
+msgstr ""
+
+#: wbcompliance/serializers/compliance_task.py:176
+msgid "Information for the Board of Directors"
+msgstr ""
+
+#: wbcompliance/serializers/compliance_task.py:225
+msgid "Explanation for Management"
+msgstr ""
+
+#: wbcompliance/serializers/compliance_task.py:228
+msgid "Explanation for the Board of Directors"
+msgstr ""
+
+#: wbcompliance/serializers/compliance_task.py:283
+msgid "Executive Summary for Management"
+msgstr ""
+
+#: wbcompliance/serializers/compliance_task.py:287
+#: wbcompliance/serializers/compliance_task.py:288
+msgid "Executive Summary for the Board of Directors"
+msgstr ""
+
+#: wbcompliance/serializers/compliance_task.py:399
+msgid "Main Indicator Report"
+msgstr ""
+
+#: wbcompliance/serializers/compliance_task.py:406
+msgid "Occured Instance Report"
+msgstr ""
+
+#: wbcompliance/serializers/risk_management/incidents.py:97
+msgid "Ignore until this date (included)"
+msgstr ""
+
+#: wbcompliance/serializers/risk_management/incidents.py:101
+msgid "Ignore for X days"
+msgstr ""
+
+#: wbcompliance/serializers/risk_management/incidents.py:103
+msgid ""
+"If set to a value different than 0, will ignore the forthcoming incidents "
+"for the specified number of days"
+msgstr ""
+
+#: wbcompliance/viewsets/buttons/compliance_form.py:18
+msgid "Email me the document"
+msgstr ""
+
+#: wbcompliance/viewsets/buttons/compliance_form.py:23
+#: wbcompliance/viewsets/buttons/compliance_form.py:24
+#: wbcompliance/viewsets/buttons/compliance_form.py:25
+msgid "Regenerate Document"
+msgstr ""
+
+#: wbcompliance/viewsets/buttons/compliance_form.py:39
+#: wbcompliance/viewsets/buttons/compliance_form.py:40
+#: wbcompliance/viewsets/buttons/compliance_form.py:41
+msgid "Send signature reminder notification"
+msgstr ""
+
+#: wbcompliance/viewsets/buttons/compliance_form.py:44
+msgid ""
+"<p> <b>{{_form_type.name}} :</b> {{title}}</p>\n"
+"             <p>Do you want to send a Compliance Form reminder "
+"notification ? </p>"
+msgstr ""
+
+#: wbcompliance/viewsets/buttons/compliance_form.py:47
+#: wbcompliance/viewsets/buttons/compliance_form.py:74
+#: wbcompliance/viewsets/buttons/compliance_task.py:122
+#: wbcompliance/viewsets/buttons/compliance_task.py:145
+msgid "Confirm"
+msgstr ""
+
+#: wbcompliance/viewsets/buttons/compliance_form.py:48
+#: wbcompliance/viewsets/buttons/compliance_form.py:75
+#: wbcompliance/viewsets/buttons/compliance_task.py:123
+#: wbcompliance/viewsets/buttons/compliance_task.py:146
+msgid "Cancel"
+msgstr ""
+
+#: wbcompliance/viewsets/buttons/compliance_form.py:50
+msgid "List all signatures"
+msgstr ""
+
+#: wbcompliance/viewsets/buttons/compliance_form.py:62
+#: wbcompliance/viewsets/buttons/compliance_form.py:64
+msgid "Signature"
+msgstr ""
+
+#: wbcompliance/viewsets/buttons/compliance_form.py:63
+msgid "Signature Compliance Form"
+msgstr ""
+
+#: wbcompliance/viewsets/buttons/compliance_form.py:67
+msgid ""
+"\n"
+"            <p> <b>{{_compliance_form.form_type}} : <span>{{_compliance_form."
+"title}}</span></b></p>\n"
+"            <p>Version : {{version}}</p> <p><br/><br/>Do you want to sign "
+"<b>{{_compliance_form.title}}</b> ? </p>\n"
+"            <p><span style='color:red'>This action is not reversible</span></"
+"p>\n"
+"            "
+msgstr ""
+
+#: wbcompliance/viewsets/buttons/compliance_task.py:33
+msgid "Show {}"
+msgstr ""
+
+#: wbcompliance/viewsets/buttons/compliance_task.py:43
+#: wbcompliance/viewsets/buttons/compliance_task.py:51
+msgid "Update {}"
+msgstr ""
+
+#: wbcompliance/viewsets/buttons/compliance_task.py:45
+msgid ""
+"\n"
+"                        <p>Update and actualize context</p>\n"
+"                        "
+msgstr ""
+
+#: wbcompliance/viewsets/buttons/compliance_task.py:50
+msgid "Update Context {}"
+msgstr ""
+
+#: wbcompliance/viewsets/buttons/compliance_task.py:82
+#: wbcompliance/viewsets/buttons/compliance_task.py:84
+msgid "Generate Instance"
+msgstr ""
+
+#: wbcompliance/viewsets/buttons/compliance_task.py:83
+msgid "Generate Instance "
+msgstr ""
+
+#: wbcompliance/viewsets/buttons/compliance_task.py:133
+msgid "Add/Remove Indicators of a Type"
+msgstr ""
+
+#: wbcompliance/viewsets/buttons/compliance_task.py:134
+#: wbcompliance/viewsets/buttons/compliance_task.py:135
+msgid "Add/Remove existing indicators"
+msgstr ""
+
+#: wbcompliance/viewsets/buttons/compliance_task.py:138
+msgid ""
+"\n"
+"                            <p> <b>Indicators Report : <span>{{title}} </"
+"span></b><br/><br/>\n"
+"                            Linking Indicators of type\n"
+"                            "
+msgstr ""
+
+#: wbcompliance/viewsets/buttons/risk_managment/checks.py:10
+#: wbcompliance/viewsets/display/risk_managment/checks.py:35
+#: wbcompliance/viewsets/display/risk_managment/rules.py:143
+#: wbcompliance/viewsets/menu/risk_management.py:41
+#: wbcompliance/viewsets/menu/risk_management.py:43
+msgid "Incidents"
+msgstr ""
+
+#: wbcompliance/viewsets/buttons/risk_managment/incidents.py:20
+msgid "Rule Type"
+msgstr ""
+
+#: wbcompliance/viewsets/buttons/risk_managment/incidents.py:39
+#: wbcompliance/viewsets/buttons/risk_managment/incidents.py:45
+msgid "Resolve all open Incident"
+msgstr ""
+
+#: wbcompliance/viewsets/buttons/risk_managment/incidents.py:41
+msgid ""
+"<p>Are you sure you want to close the current <b>{}</b> opened incidents?</p>"
+msgstr ""
+
+#: wbcompliance/viewsets/buttons/risk_managment/incidents.py:44
+msgid "resolveallincidents"
+msgstr ""
+
+#: wbcompliance/viewsets/buttons/risk_managment/rules.py:23
+#: wbcompliance/viewsets/buttons/risk_managment/rules.py:32
+msgid "Recheck Rules"
+msgstr ""
+
+#: wbcompliance/viewsets/buttons/risk_managment/rules.py:26
+msgid ""
+"\n"
+"                <p>Recheck all the rules between a certain interval</p>\n"
+"                "
+msgstr ""
+
+#: wbcompliance/viewsets/buttons/risk_managment/rules.py:31
+msgid "recheck"
+msgstr ""
+
+#: wbcompliance/viewsets/compliance_form.py:275
+msgid "<p>{} has activated a {} {} version {} </p>"
+msgstr ""
+
+#: wbcompliance/viewsets/compliance_form.py:279
+msgid "</br><p><b>User's ComplianceForm:</b></p><i>{}</i>"
+msgstr ""
+
+#: wbcompliance/viewsets/compliance_form.py:280
+msgid "Unsigned Compliance Form - {} Reminder : {} "
+msgstr ""
+
+#: wbcompliance/viewsets/compliance_form.py:368
+msgid "<p><b>{}</b> {} version <b>{} </b> has been signed</p>"
+msgstr ""
+
+#: wbcompliance/viewsets/compliance_form.py:378
+msgid "</br><p><b>{}:</b></p> <i>{}</i>"
+msgstr ""
+
+#: wbcompliance/viewsets/compliance_form.py:383
+msgid "Confirmation : {} {} version {} has been signed"
+msgstr ""
+
+#: wbcompliance/viewsets/compliance_task.py:244
+#: wbcompliance/viewsets/risk_management/tables.py:52
+#: wbcompliance/viewsets/risk_management/tables.py:53
+msgid "ID"
+msgstr ""
+
+#: wbcompliance/viewsets/display/compliance_form.py:42
+msgid "Titles"
+msgstr ""
+
+#: wbcompliance/viewsets/display/compliance_form.py:54
+#: wbcompliance/viewsets/menu/risk_management.py:10
+msgid "Rules"
+msgstr ""
+
+#: wbcompliance/viewsets/display/compliance_form.py:142
+msgid "Last Version"
+msgstr ""
+
+#: wbcompliance/viewsets/display/compliance_form.py:218
+msgid "Signers"
+msgstr ""
+
+#: wbcompliance/viewsets/display/compliance_form.py:231
+msgid "Sections"
+msgstr ""
+
+#: wbcompliance/viewsets/display/compliance_form.py:287
+msgid "Unsigned"
+msgstr ""
+
+#: wbcompliance/viewsets/display/compliance_task.py:108
+msgid "Instances"
+msgstr ""
+
+#: wbcompliance/viewsets/display/compliance_task.py:130
+msgid "Risk level"
+msgstr ""
+
+#: wbcompliance/viewsets/display/compliance_task.py:151
+#: wbcompliance/viewsets/display/compliance_task.py:177
+msgid "Indicator Instance Report"
+msgstr ""
+
+#: wbcompliance/viewsets/display/compliance_task.py:373
+#: wbcompliance/viewsets/menu/compliance_task.py:12
+#: wbcompliance/viewsets/titles/compliance_task.py:36
+msgid "Groups Indicator"
+msgstr ""
+
+#: wbcompliance/viewsets/display/risk_managment/checks.py:34
+msgid "Creation Time"
+msgstr ""
+
+#: wbcompliance/viewsets/display/risk_managment/incidents.py:51
+msgid "Object"
+msgstr ""
+
+#: wbcompliance/viewsets/display/risk_managment/incidents.py:53
+msgid "Breached Threshold"
+msgstr ""
+
+#: wbcompliance/viewsets/display/risk_managment/incidents.py:62
+msgid "Report Detail"
+msgstr ""
+
+#: wbcompliance/viewsets/display/risk_managment/incidents.py:63
+#: wbcompliance/viewsets/display/risk_managment/incidents.py:135
+msgid "Date"
+msgstr ""
+
+#: wbcompliance/viewsets/display/risk_managment/incidents.py:71
+msgid "Resolved By"
+msgstr ""
+
+#: wbcompliance/viewsets/display/risk_managment/incidents.py:72
+msgid "Users notified"
+msgstr ""
+
+#: wbcompliance/viewsets/display/risk_managment/incidents.py:73
+msgid "Ignored Until"
+msgstr ""
+
+#: wbcompliance/viewsets/display/risk_managment/incidents.py:102
+msgid "{} Incidents"
+msgstr ""
+
+#: wbcompliance/viewsets/display/risk_managment/incidents.py:124
+#: wbcompliance/viewsets/display/risk_managment/rules.py:140
+msgid "Relationships"
+msgstr ""
+
+#: wbcompliance/viewsets/display/risk_managment/incidents.py:134
+msgid "status"
+msgstr ""
+
+#: wbcompliance/viewsets/display/risk_managment/incidents.py:137
+msgid "Checked Object"
+msgstr ""
+
+#: wbcompliance/viewsets/display/risk_managment/incidents.py:140
+msgid "resolved_by"
+msgstr ""
+
+#: wbcompliance/viewsets/display/risk_managment/incidents.py:141
+msgid "comment"
+msgstr ""
+
+#: wbcompliance/viewsets/display/risk_managment/rules.py:21
+msgid "Lower Range"
+msgstr ""
+
+#: wbcompliance/viewsets/display/risk_managment/rules.py:22
+msgid "Upper Range"
+msgstr ""
+
+#: wbcompliance/viewsets/display/risk_managment/rules.py:24
+msgid "Notifiable Users"
+msgstr ""
+
+#: wbcompliance/viewsets/display/risk_managment/rules.py:26
+msgid "Upgrade severity after"
+msgstr ""
+
+#: wbcompliance/viewsets/display/risk_managment/rules.py:45
+msgid "Checked Objects"
+msgstr ""
+
+#: wbcompliance/viewsets/display/risk_managment/rules.py:60
+msgid "Enable"
+msgstr ""
+
+#: wbcompliance/viewsets/display/risk_managment/rules.py:67
+msgid "Rule Backend"
+msgstr ""
+
+#: wbcompliance/viewsets/display/risk_managment/rules.py:68
+msgid "Frequency"
+msgstr ""
+
+#: wbcompliance/viewsets/display/risk_managment/rules.py:69
+msgid "Activation Date"
+msgstr ""
+
+#: wbcompliance/viewsets/display/risk_managment/rules.py:70
+msgid "Silent"
+msgstr ""
+
+#: wbcompliance/viewsets/display/risk_managment/rules.py:71
+msgid "Mandatory"
+msgstr ""
+
+#: wbcompliance/viewsets/display/risk_managment/rules.py:73
+msgid "Automatically Close Incidents"
+msgstr ""
+
+#: wbcompliance/viewsets/display/risk_managment/rules.py:75
+msgid "All Checked Objects"
+msgstr ""
+
+#: wbcompliance/viewsets/display/risk_managment/rules.py:76
+msgid "Permission"
+msgstr ""
+
+#: wbcompliance/viewsets/display/risk_managment/rules.py:84
+msgid "In Breach"
+msgstr ""
+
+#: wbcompliance/viewsets/display/risk_managment/rules.py:85
+msgid "Passed"
+msgstr ""
+
+#: wbcompliance/viewsets/display/risk_managment/rules.py:135
+msgid "Parameters"
+msgstr ""
+
+#: wbcompliance/viewsets/display/risk_managment/rules.py:137
+msgid "Thresholds"
+msgstr ""
+
+#: wbcompliance/viewsets/display/risk_managment/tables.py:46
+msgid "No Incident"
+msgstr ""
+
+#: wbcompliance/viewsets/menu/compliance_form.py:7
+#: wbcompliance/viewsets/menu/compliance_form.py:48
+msgid "Forms"
+msgstr ""
+
+#: wbcompliance/viewsets/menu/compliance_form.py:14
+msgid "Add Form"
+msgstr ""
+
+#: wbcompliance/viewsets/menu/compliance_form.py:22
+#: wbcompliance/viewsets/menu/compliance_form.py:28
+msgid "Form Signatures"
+msgstr ""
+
+#: wbcompliance/viewsets/menu/compliance_form.py:34
+msgid "Form Types"
+msgstr ""
+
+#: wbcompliance/viewsets/menu/compliance_form.py:41
+msgid "Add Form Type"
+msgstr ""
+
+#: wbcompliance/viewsets/menu/compliance_task.py:19
+msgid "Add Group Indicator"
+msgstr ""
+
+#: wbcompliance/viewsets/menu/compliance_task.py:33
+msgid "Add Indicator"
+msgstr ""
+
+#: wbcompliance/viewsets/menu/compliance_task.py:40
+#: wbcompliance/viewsets/titles/compliance_task.py:47
+msgid "Instances Indicator"
+msgstr ""
+
+#: wbcompliance/viewsets/menu/compliance_task.py:49
+#: wbcompliance/viewsets/titles/compliance_task.py:9
+msgid "Indicator Matrix"
+msgstr ""
+
+#: wbcompliance/viewsets/menu/compliance_task.py:62
+msgid "Actions"
+msgstr ""
+
+#: wbcompliance/viewsets/menu/compliance_task.py:69
+msgid "Add Compliance Action"
+msgstr ""
+
+#: wbcompliance/viewsets/menu/compliance_task.py:76
+#: wbcompliance/viewsets/menu/compliance_task.py:91
+msgid "Events"
+msgstr ""
+
+#: wbcompliance/viewsets/menu/compliance_task.py:82
+#: wbcompliance/viewsets/menu/compliance_task.py:95
+msgid "Add Compliance Event"
+msgstr ""
+
+#: wbcompliance/viewsets/menu/compliance_task.py:102
+#: wbcompliance/viewsets/menu/compliance_task.py:114
+msgid "Reports"
+msgstr ""
+
+#: wbcompliance/viewsets/menu/compliance_task.py:106
+msgid "Add Report Indicator"
+msgstr ""
+
+#: wbcompliance/viewsets/menu/compliance_task.py:124
+msgid "Settings"
+msgstr ""
+
+#: wbcompliance/viewsets/menu/compliance_type.py:7
+msgid "Administrators"
+msgstr ""
+
+#: wbcompliance/viewsets/menu/compliance_type.py:14
+msgid "Add Compliance Type"
+msgstr ""
+
+#: wbcompliance/viewsets/menu/risk_management.py:16
+msgid "Add Rule"
+msgstr ""
+
+#: wbcompliance/viewsets/menu/risk_management.py:54
+msgid "Incident Table"
+msgstr ""
+
+#: wbcompliance/viewsets/titles/compliance_form.py:15
+msgid "Compliance Form: {{title}} - version {{version}}"
+msgstr ""
+
+#: wbcompliance/viewsets/titles/compliance_form.py:18
+msgid "Compliance Forms"
+msgstr ""
+
+#: wbcompliance/viewsets/titles/compliance_form.py:21
+msgid "New Compliance Form"
+msgstr ""
+
+#: wbcompliance/viewsets/titles/compliance_form.py:26
+msgid ""
+"Compliance Form Signature: {{_compliance_form.title}} - version "
+"{{_compliance_form.version}}"
+msgstr ""
+
+#: wbcompliance/viewsets/titles/compliance_form.py:29
+msgid "Compliance Form Signatures"
+msgstr ""
+
+#: wbcompliance/viewsets/titles/compliance_form.py:32
+msgid "New Compliance Form Signature"
+msgstr ""
+
+#: wbcompliance/viewsets/titles/compliance_form.py:39
+msgid "Compliance Form Section: {} of Compliance Form: - version {}"
+msgstr ""
+
+#: wbcompliance/viewsets/titles/compliance_form.py:43
+msgid "Compliance Form Section: {{name}}"
+msgstr ""
+
+#: wbcompliance/viewsets/titles/compliance_form.py:48
+#: wbcompliance/viewsets/titles/compliance_form.py:70
+msgid "Compliance Form: {} - version {}"
+msgstr ""
+
+#: wbcompliance/viewsets/titles/compliance_form.py:49
+msgid "Compliance Form Sections"
+msgstr ""
+
+#: wbcompliance/viewsets/titles/compliance_form.py:54
+msgid "New Section of Compliance Form: {} - version {}"
+msgstr ""
+
+#: wbcompliance/viewsets/titles/compliance_form.py:57
+msgid "New Section"
+msgstr ""
+
+#: wbcompliance/viewsets/titles/compliance_form.py:64
+msgid "Compliance Form Rule: {} of Section: {}"
+msgstr ""
+
+#: wbcompliance/viewsets/titles/compliance_form.py:65
+msgid "Compliance Form Rule: {{id}}"
+msgstr ""
+
+#: wbcompliance/viewsets/titles/compliance_form.py:73
+msgid "Compliance Form Rules"
+msgstr ""
+
+#: wbcompliance/viewsets/titles/compliance_form.py:78
+#: wbcompliance/viewsets/titles/compliance_form.py:101
+msgid "New Rule of Section: {}"
+msgstr ""
+
+#: wbcompliance/viewsets/titles/compliance_form.py:79
+#: wbcompliance/viewsets/titles/compliance_form.py:102
+msgid "New Rule"
+msgstr ""
+
+#: wbcompliance/viewsets/titles/compliance_form.py:86
+msgid "Compliance Form Signature Rule: {} of Section: {}"
+msgstr ""
+
+#: wbcompliance/viewsets/titles/compliance_form.py:87
+msgid "Compliance Form Signature Rule: {{id}}"
+msgstr ""
+
+#: wbcompliance/viewsets/titles/compliance_form.py:92
+msgid "Compliance Form Signature: {} - version {}"
+msgstr ""
+
+#: wbcompliance/viewsets/titles/compliance_form.py:96
+msgid "Compliance Form Signature Rules"
+msgstr ""
+
+#: wbcompliance/viewsets/titles/compliance_task.py:16
+msgid "Indicators of Group: {}"
+msgstr ""
+
+#: wbcompliance/viewsets/titles/compliance_task.py:22
+msgid "Indicator: {{title}}"
+msgstr ""
+
+#: wbcompliance/viewsets/titles/compliance_task.py:28
+msgid "New Indicator"
+msgstr ""
+
+#: wbcompliance/viewsets/titles/compliance_task.py:33
+msgid "Group Indicator: {{name}}"
+msgstr ""
+
+#: wbcompliance/viewsets/titles/compliance_task.py:39
+msgid "New Group Indicator"
+msgstr ""
+
+#: wbcompliance/viewsets/titles/compliance_task.py:44
+msgid "Instance Indicator: {{_task.title}} -  {{occured}}"
+msgstr ""
+
+#: wbcompliance/viewsets/titles/compliance_task.py:50
+msgid "New Instance Indicator"
+msgstr ""
+
+#: wbcompliance/viewsets/titles/compliance_task.py:55
+msgid "Report Indicator: {{computed_str}}"
+msgstr ""
+
+#: wbcompliance/viewsets/titles/compliance_task.py:58
+msgid "Reports Indicator"
+msgstr ""
+
+#: wbcompliance/viewsets/titles/compliance_task.py:61
+msgid "New Report Indicator"
+msgstr ""
+
+#: wbcompliance/viewsets/titles/compliance_type.py:7
+msgid "Compliance Administrator: {{name}}"
+msgstr ""
+
+#: wbcompliance/viewsets/titles/compliance_type.py:10
+msgid "Compliance Administrators"
+msgstr ""
+
+#: wbcompliance/viewsets/titles/compliance_type.py:13
+msgid "New Compliance Administrator"
+msgstr ""
+
+#: wbcompliance/viewsets/titles/risk_managment/tables.py:7
+msgid "Risk Managements incident table"
+msgstr ""
