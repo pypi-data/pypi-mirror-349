@@ -1,0 +1,12 @@
+tstr/__init__.py,sha256=hI_MhgCB8ZiU1p964IU7GmCsGmuxv2YF_g8O0o0f-rE,686
+tstr/_compat.py,sha256=Gizkr2G1y-60nqbdoBrRnvYxvUx3U5eGmKm9KoKZhcY,4446
+tstr/_html.py,sha256=vbeRRb_PJf81qPuSqqCE5XRo8xPJ3A0h_aFwSqObHMw,3151
+tstr/_logging.py,sha256=RyEckE5lM265ZHvoya6oSfoeBqIadly_NnGnWQzVIcc,2604
+tstr/_sqlite.py,sha256=zlz5fNNq7SCZs5NNmb0i6gapB9hvlhL6jx03OpgpH7M,1141
+tstr/_template.py,sha256=HKbQOIUUS6D5cEjJQTq6lj1Ggoc0KxS_QjOTiKCaOZk,689
+tstr/_template.pyi,sha256=07CShZE3mI_b_ej1CYqe9TPOvMamGWplob0LM3kMqjg,2271
+tstr/_utils.py,sha256=jEYg_8lCYsilFvhRnUTXq7SYTkt0V86_1o0mDfN0Mic,12218
+tstr-0.2.0.dist-info/METADATA,sha256=s47GSDSXNkXO-SXuafbcF3rZPbr21JPHIjp-ad4VBqs,4962
+tstr-0.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+tstr-0.2.0.dist-info/licenses/LICENSE,sha256=WNHhf_5RCaeuKWyq_K39vmp9F28LxKsB4SpomwSZ2L0,11357
+tstr-0.2.0.dist-info/RECORD,,
