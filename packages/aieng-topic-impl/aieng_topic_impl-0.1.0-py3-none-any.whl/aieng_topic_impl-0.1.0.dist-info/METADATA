@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: aieng-topic-impl
+Version: 0.1.0
+Summary: AI Engineering example implementation
+Author-email: Vector AI Engineering <ai_engineering@vectorinstitute.ai>
+License-Expression: MIT
+Requires-Python: <4.0,>=3.11
+Description-Content-Type: text/markdown
+
+## aieng-topic-impl
