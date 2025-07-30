@@ -1,0 +1,5 @@
+#USER INPUT# -> :"dl"
+#USER INPUT# -> :"coin"
+#USER INPUT# -> :"gen rng"
+#USER INPUT# -> :"0.01"
+#USER INPUT# -> :"0.29"
