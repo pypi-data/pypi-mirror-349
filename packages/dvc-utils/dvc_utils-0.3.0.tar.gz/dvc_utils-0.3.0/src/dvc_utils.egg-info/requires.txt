@@ -1,0 +1,8 @@
+click
+dffs>=0.0.5
+pyyaml
+utz>=0.20.0
+
+[ci]
+bmdf==0.5.2
+dvc-s3
