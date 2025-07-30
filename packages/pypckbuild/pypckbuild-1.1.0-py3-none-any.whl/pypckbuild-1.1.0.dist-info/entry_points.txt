@@ -1,0 +1,2 @@
+[console_scripts]
+pypckbuild = pypckbuild.cli:Pypck
