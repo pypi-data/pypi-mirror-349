@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+airflow_provider_carbonaware.egg-info/PKG-INFO
+airflow_provider_carbonaware.egg-info/SOURCES.txt
+airflow_provider_carbonaware.egg-info/dependency_links.txt
+airflow_provider_carbonaware.egg-info/entry_points.txt
+airflow_provider_carbonaware.egg-info/requires.txt
+airflow_provider_carbonaware.egg-info/top_level.txt
+carbonaware_provider/__init__.py
+carbonaware_provider/example_dags/carbonaware.py
+carbonaware_provider/example_dags/carbonaware_introspection.py
+carbonaware_provider/operators/__init__.py
+carbonaware_provider/operators/carbonaware.py
