@@ -1,0 +1,33 @@
+Metadata-Version: 2.4
+Name: dendritic
+Version: 0.1.0
+Summary: [UNSTABLE] Network graph data structures, interfaces, utilities.
+Project-URL: homepage, https://pypi.org/project/dendritic
+Project-URL: documentation, https://harttraveller.github.io/dendritic
+Project-URL: repository, https://github.com/harttraveller/dendritic
+Author-email: Hart Traveller <ruling_fiction.0b@icloud.com>
+License-Expression: MIT
+License-File: LICENSE
+Requires-Python: >=3.11
+Requires-Dist: networkx>=3.4.2
+Requires-Dist: rustworkx>=0.16.0
+Provides-Extra: dev
+Requires-Dist: charset-normalizer>=3.4.2; extra == 'dev'
+Requires-Dist: cyclopts>=3.16.1; extra == 'dev'
+Requires-Dist: lark>=1.2.2; extra == 'dev'
+Requires-Dist: numpy>=2.2.5; extra == 'dev'
+Requires-Dist: rich>=14.0.0; extra == 'dev'
+Requires-Dist: tqdm>=4.67.1; extra == 'dev'
+Provides-Extra: doc
+Requires-Dist: mkdocs-jupyter>=0.25.1; extra == 'doc'
+Requires-Dist: mkdocs-material>=9.6.14; extra == 'doc'
+Requires-Dist: mkdocs-roamlinks-plugin>=0.3.2; extra == 'doc'
+Requires-Dist: mkdocstrings[python]>=0.29.1; extra == 'doc'
+Provides-Extra: nb
+Requires-Dist: ipykernel>=6.29.5; extra == 'nb'
+Requires-Dist: ipysigma>=0.24.5; extra == 'nb'
+Provides-Extra: rep
+Requires-Dist: grand-cypher>=0.13.0; extra == 'rep'
+Provides-Extra: test
+Requires-Dist: hypothesis>=6.131.17; extra == 'test'
+Requires-Dist: pytest>=8.3.5; extra == 'test'

@@ -1,0 +1,43 @@
+[project.urls]
+homepage = "https://pypi.org/project/dendritic"
+documentation = "https://harttraveller.github.io/dendritic"
+repository = "https://github.com/harttraveller/dendritic"
+
+[project]
+name = "dendritic"
+version = "0.1.0"
+description = "[UNSTABLE] Network graph data structures, interfaces, utilities."
+readme = "README.md"
+license = "MIT"
+authors = [{ name = "Hart Traveller", email = "ruling_fiction.0b@icloud.com" }]
+requires-python = ">=3.11"
+dependencies = ["networkx>=3.4.2", "rustworkx>=0.16.0"]
+
+[project.optional-dependencies]
+nb = ["ipykernel>=6.29.5", "ipysigma>=0.24.5"]
+rep = [
+    "grand-cypher>=0.13.0",
+]
+dev = [
+    "numpy>=2.2.5",
+    "rich>=14.0.0",
+    "tqdm>=4.67.1",
+    "charset-normalizer>=3.4.2",
+    "cyclopts>=3.16.1",
+    "lark>=1.2.2",
+]
+doc = [
+    "mkdocs-jupyter>=0.25.1",
+    "mkdocs-material>=9.6.14",
+    "mkdocs-roamlinks-plugin>=0.3.2",
+    "mkdocstrings[python]>=0.29.1",
+]
+test = ["hypothesis>=6.131.17", "pytest>=8.3.5"]
+
+
+# [project.scripts]
+# dendritic = "dendritic.__main__:cli"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
