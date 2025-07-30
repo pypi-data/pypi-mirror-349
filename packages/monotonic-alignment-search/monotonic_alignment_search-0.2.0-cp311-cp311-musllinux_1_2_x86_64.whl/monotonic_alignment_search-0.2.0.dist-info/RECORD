@@ -1,0 +1,12 @@
+monotonic_alignment_search/core.c,sha256=sRjoYzdx3V0iGTmYgz3HWdtat8L9sl7XSDAMop__SKU,1148421
+monotonic_alignment_search/__init__.py,sha256=XPeyXaQitKdvvaXGTuePEpfOj2jp7V35qDZlIDj_iz8,296
+monotonic_alignment_search/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+monotonic_alignment_search/path.py,sha256=h6JXfTDRm6iNI2Wj_podR_9MDRvXSMoI36TwVaW6Kyk,3203
+monotonic_alignment_search/core.pyx,sha256=HtBFR4vMRMzrK7ireQCXwsnuQvFo4RYVQY1_ovP7Un4,1431
+monotonic_alignment_search/core.pyi,sha256=OR0fCZg_HxT04LDlS83_RYNypbCo5c_NzIEVCMn47Ro,319
+monotonic_alignment_search/core.cpython-311-x86_64-linux-musl.so,sha256=zZkzmRLCulHmZW6NnW_wi8dteS3FSD-4phFbUes4btA,1137288
+monotonic_alignment_search-0.2.0.dist-info/WHEEL,sha256=JT7Cx1zQLY_ZeOXTkFaXD-OpCAR8hklSrqBr5wmC9lU,112
+monotonic_alignment_search-0.2.0.dist-info/METADATA,sha256=lRNBvo_0spGewdBR7sR3eS4QMi8Kpg24rgvLIiFoBLo,3612
+monotonic_alignment_search-0.2.0.dist-info/RECORD,,
+monotonic_alignment_search-0.2.0.dist-info/top_level.txt,sha256=b0B10g3GxZNxpVWEbQQ7zNfIMLZCxNNJeuN7DUPLobg,27
+monotonic_alignment_search-0.2.0.dist-info/licenses/LICENSE,sha256=uoqeDiYI36povJu1ikIUk86TkXMHJC8nvxjOP7TpR7s,1069
