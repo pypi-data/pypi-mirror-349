@@ -1,0 +1,214 @@
+Metadata-Version: 2.4
+Name: nima
+Version: 0.11.1
+Summary: Numerical IMage Analyses.
+Project-URL: Bug Tracker, https://github.com/darosio/nima/issues
+Project-URL: Changelog, https://github.com/darosio/nima/blob/main/CHANGELOG.md
+Project-URL: Documentation, https://nima.readthedocs.io
+Project-URL: Github releases, https://github.com/darosio/nima/releases
+Project-URL: Homepage, https://github.com/darosio/nima
+Project-URL: repository, https://github.com/darosio/nima/
+Author-email: daniele arosio <daniele.arosio@cnr.it>
+License-Expression: BSD-3-Clause
+License-File: LICENSE.txt
+Keywords: ClopHensor,chloride,image analysis,pH,ratio imaging
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Unix Shell
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.11
+Requires-Dist: bioio-tifffile>=1.1.0
+Requires-Dist: click>=8.2.1
+Requires-Dist: dask[distributed]>=2025.5.1
+Requires-Dist: matplotlib>=3.10.3
+Requires-Dist: numpy>=2.2.6
+Requires-Dist: pandas>=2.2.3
+Requires-Dist: pims>=0.7
+Requires-Dist: pyarrow>=20.0.0
+Requires-Dist: s3fs>=2025.5.0
+Requires-Dist: scikit-image>=0.25.2
+Requires-Dist: scipy>=1.15.3
+Requires-Dist: sigfig>=1.3.19
+Requires-Dist: tifffile>=2025.5.21
+Requires-Dist: xmltodict>=0.14.2
+Provides-Extra: dev
+Requires-Dist: git-cliff>=2.8.0; extra == 'dev'
+Requires-Dist: mdformat-gfm==0.4.1; extra == 'dev'
+Requires-Dist: mdformat==0.7.22; extra == 'dev'
+Requires-Dist: pylsp-mypy==0.7.0; extra == 'dev'
+Requires-Dist: ruff-lsp==0.0.62; extra == 'dev'
+Requires-Dist: ruff==0.11.10; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: autodocsumm==0.2.14; extra == 'docs'
+Requires-Dist: bokeh==3.7.3; extra == 'docs'
+Requires-Dist: dask-image==2024.5.3; extra == 'docs'
+Requires-Dist: holoviews==1.20.2; extra == 'docs'
+Requires-Dist: hvplot==0.11.3; extra == 'docs'
+Requires-Dist: impy-array==2.4.9; extra == 'docs'
+Requires-Dist: ipykernel==6.29.5; extra == 'docs'
+Requires-Dist: jupyter==1.1.1; extra == 'docs'
+Requires-Dist: nbsphinx==0.9.7; extra == 'docs'
+Requires-Dist: pydata-sphinx-theme==0.16.1; extra == 'docs'
+Requires-Dist: pygments==2.19.1; extra == 'docs'
+Requires-Dist: pympler==1.1; extra == 'docs'
+Requires-Dist: seaborn==0.13.2; extra == 'docs'
+Requires-Dist: selenium==4.32.0; extra == 'docs'
+Requires-Dist: sphinx-autodoc-typehints<3.2; extra == 'docs'
+Requires-Dist: sphinx-click==6.0.0; extra == 'docs'
+Requires-Dist: sphinx<8.2; extra == 'docs'
+Requires-Dist: statsmodels==0.14.4; extra == 'docs'
+Provides-Extra: hatch
+Requires-Dist: hatch>=1.14.1; extra == 'hatch'
+Provides-Extra: lint
+Requires-Dist: pre-commit==4.2.0; extra == 'lint'
+Provides-Extra: tests
+Requires-Dist: coverage[toml]>=7.8.1; extra == 'tests'
+Requires-Dist: mypy>=1.15.0; extra == 'tests'
+Requires-Dist: pandas-stubs>=2.2.3.250308; extra == 'tests'
+Requires-Dist: pygments>=2.19.1; extra == 'tests'
+Requires-Dist: pypdf>=5.5.0; extra == 'tests'
+Requires-Dist: pytest>=8.3.5; extra == 'tests'
+Requires-Dist: xdoctest>=1.2.0; extra == 'tests'
+Description-Content-Type: text/markdown
+
+# NImA
+
+[![PyPI](https://img.shields.io/pypi/v/nima.svg)](https://pypi.org/project/nima/)
+[![CI](https://github.com/darosio/nima/actions/workflows/ci.yml/badge.svg)](https://github.com/darosio/nima/actions/workflows/ci.yml)
+[![codecov](https://codecov.io/gh/darosio/nima/branch/main/graph/badge.svg?token=OU6F9VFUQ6)](https://codecov.io/gh/darosio/nima)
+[![RtD](https://readthedocs.org/projects/nima/badge/)](https://nima.readthedocs.io/)
+
+A library and a command-line interface (CLI) designed to assist with image
+analysis tasks using scipy.ndimage and scikit-image.
+
+- Version: “0.10.2”
+
+## Features
+
+- Bias and Flat Correction
+- Automatic Cell Segmentation
+- Multi-Ratio Ratiometric Imaging, enabling users to analyze multiple ratios
+  with ease.
+
+## Installation
+
+You can get the library directly from [PyPI](https://pypi.org/project/nima/)
+using `pip`:
+
+```
+pip install nima
+```
+
+Alternatively, you can use [pipx](https://pypa.github.io/pipx/) to install it in
+an isolated environment:
+
+```
+pipx install nima
+```
+
+To enable auto completion for the `nima` command, follow these steps:
+
+1. Generate the completion script by running the following command:
+
+   ```
+   _CLOP_COMPLETE=bash_source nima > ~/.local/bin/nima-complete.bash
+   ```
+
+1. Source the generated completion script to enable auto completion:
+
+   ```
+   source ~/.local/bin/nima-complete.bash
+   ```
+
+## Usage
+
+### Library
+
+To use nima in your python code, import it as follows:
+
+```
+from nima import nima, generat, utils
+```
+
+### Command-Line Interface (CLI)
+
+The CLI for this project provides two main commands: `nima` and `bima`. You can
+find detailed usage information and examples in the
+[documentation](https://nima.readthedocs.io/en/latest/click.html). Here are some
+examples of how to use each command:
+
+#### nima
+
+The `nima` command is used to perform multi-ratio ratiometric imaging analyses
+on multi-channel TIFF time-lapse stacks.
+
+To perform multi-ratio ratiometric imaging analyses on a multichannel TIFF
+time-lapse stack, use the following command:
+
+```
+nima <TIFFSTK> CHANNELS
+```
+
+Replace \<TIFFSTK> with the path to the TIFF time-lapse stack file, and `CHANNELS`
+with the channel names. By default, the channels are set to ["G", "R", "C"].
+
+#### bima
+
+The `bima` command is used to compute bias, dark, and flat corrections.
+
+To estimate the detector bias frame:
+
+```
+bima bias <FPATH>
+```
+
+Replace \<FPATH> with the paths to the bias stack (Light Off - 0 acquisition time).
+
+To estimate the system dark (multi-channel) frame:
+
+```
+bima dark <FPATH>
+```
+
+Replace \<FPATH> with the paths to the dark stack (Light Off - Long acquisition time).
+
+Note: The estimation of the system dark may be removed in future versions
+because it risks being redundant with the flat estimation. It is likely to be
+removed soon.
+
+To estimate the system flat (multi-channel) frame:
+
+```
+bima flat --bias <BIAS_PATH> <FPATH>
+```
+
+Replace \<FPATH> with the path to the tf8 stack and \<BIAS_PATH> with the path to
+the bias image.
+
+## Contributing
+
+Contributions to the project are welcome!
+
+If you are interested in contributing to the project, please read our
+[contributing](https://darosio.github.io/ClopHfit/references/contributing.html)
+and [development
+environment](https://darosio.github.io/ClopHfit/references/development.html)
+guides, which outline the guidelines and conventions that we follow for
+contributing code, documentation, and other resources.
+
+## License
+
+We use a shared copyright model that enables all contributors to maintain the
+copyright on their contributions - see the [revised BSD license](LICENSE.txt)
+for details.
+
+## Acknowledgments
+
+Special thanks to the developers of scipy.ndimage and scikit-image for their
+invaluable contributions to image processing in Python.
