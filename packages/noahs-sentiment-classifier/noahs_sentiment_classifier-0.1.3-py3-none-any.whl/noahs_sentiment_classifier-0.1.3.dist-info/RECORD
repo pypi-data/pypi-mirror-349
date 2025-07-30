@@ -1,0 +1,10 @@
+noahs_sentiment_classifier/__init__.py,sha256=KJ44KCwNLfVrQwcvZhbWK5fuirmNm3pAX8tznQKudWU,348
+noahs_sentiment_classifier/classifier.py,sha256=2mbaVluStBeVWrLsHHEBDfO26KHBkkQC-PdwdYIz-TI,5038
+noahs_sentiment_classifier/roberta_classifier.py,sha256=OGX8hOfYWelcRWdQeATEhMeiDlpxsj8Di45JT3-PsuI,832
+noahs_sentiment_classifier/textblob_classifier.py,sha256=k9TLRh-FsMZ9pR5aNSE7_o0OpXrDwCpfudJZWf8wjqs,600
+noahs_sentiment_classifier/transformers_classifier.py,sha256=BdYt7oFgOSYKs17DxJ_4ZPOeqooJCoZA2Fwl2Ro-i7I,708
+noahs_sentiment_classifier/vader_classifier.py,sha256=NDIVyXsU9AUg4eqGlhmxWrcfVMvQXzl1hGvY0q1LYG4,1528
+noahs_sentiment_classifier-0.1.3.dist-info/METADATA,sha256=m70EvnuSUVYgJp6QGRoajwK8mYEHG1Ke33qafL2B9Tg,1136
+noahs_sentiment_classifier-0.1.3.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+noahs_sentiment_classifier-0.1.3.dist-info/top_level.txt,sha256=wUV2UmzO0APWYQmw-IfpxyW35_ZYZ2Nh9Rnx5H60GgE,27
+noahs_sentiment_classifier-0.1.3.dist-info/RECORD,,
