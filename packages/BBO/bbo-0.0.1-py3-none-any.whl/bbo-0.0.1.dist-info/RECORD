@@ -1,0 +1,12 @@
+bbo/__init__.py,sha256=MMw7e45NoFnaFO8ji0qwdLYqNSANydjdKeSQXAiCppU,3014
+bbo/_approx_hull_ndim.py,sha256=Kd0Pl2_z4qnywqOPHU8Vgx75yHdL1ABReE2GIdkzei0,4245
+bbo/exception.py,sha256=UCVfrwdOJTVQoi0_lxXnKqmdMVGOCfLHUQVYL-Q_NOA,617
+bbo/hull.py,sha256=u3M5wsUpmYqo2IXqc6ypAbKZj_lc6cyBxuGV6nCEEZA,9474
+bbo/output.py,sha256=qZ9jlsM7OaJFet1wVsPtkhm5PaPYd0KQHKa7rcEsA4g,1257
+bbo/pca.py,sha256=rwjhCQrc953jC1ZmID9b_U_nF-P3I478e0gs7qU5nEE,3973
+bbo/typing.py,sha256=YdRzS4MALcq-ZIgPD3wrfA2wEl5-0MWpII8iKRQTrt4,485
+bbo/util.py,sha256=KNpm6GtxS25iKl1NeJkfVC0h_JnumRZgV3_PkzBa2AU,2204
+bbo-0.0.1.dist-info/METADATA,sha256=wkckDPcirnUZMRf2E4xWYQqZ9dGJCXBr3mj1O1vj2x4,208
+bbo-0.0.1.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+bbo-0.0.1.dist-info/top_level.txt,sha256=ExjztmoVukAYDsxt4duRdY-6-d82DLGQlF6FaN1r7Gg,4
+bbo-0.0.1.dist-info/RECORD,,

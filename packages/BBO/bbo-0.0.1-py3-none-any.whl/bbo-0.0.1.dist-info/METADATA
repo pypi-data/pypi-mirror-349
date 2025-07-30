@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: BBO
+Version: 0.0.1
+Requires-Python: >=3.10
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: jax
+Requires-Dist: arrayer<0.2
+Requires-Dist: beartype
+Requires-Dist: jaxtyping
