@@ -1,0 +1,6 @@
+pytest_result_sender_jms-0.1.6.dist-info/METADATA,sha256=BGPD27o_7zaL4V4KjWUdOZ5AfCxV5GLF37wsn_aofnM,1838
+pytest_result_sender_jms-0.1.6.dist-info/WHEEL,sha256=tSfRZzRHthuv7vxpI4aehrdN9scLjk-dCJkPLzkHxGg,90
+pytest_result_sender_jms-0.1.6.dist-info/entry_points.txt,sha256=4GfOJTn9KmSJmN4rMyOVjqb7T08fqZxlJ-5FYyFU3e8,91
+pytest_result_sender_jms/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+pytest_result_sender_jms/plugin.py,sha256=fSR3ABea8_6xez67SEFeMBa8HzO2nl1FXE8giIBC_W0,4437
+pytest_result_sender_jms-0.1.6.dist-info/RECORD,,
