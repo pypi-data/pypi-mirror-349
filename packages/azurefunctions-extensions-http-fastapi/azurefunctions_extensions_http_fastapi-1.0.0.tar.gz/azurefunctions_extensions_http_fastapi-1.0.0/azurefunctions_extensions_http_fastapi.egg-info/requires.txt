@@ -1,0 +1,13 @@
+azurefunctions-extensions-base
+fastapi~=0.115.0
+uvicorn~=0.32.0
+pydantic~=2.10.0
+
+[dev]
+flake8
+mypy
+pytest
+pytest-cov
+coverage
+pytest-instafail
+pre-commit
