@@ -1,0 +1,12 @@
+[project]
+name = "groomhi-utils"
+version = "0.1.0"
+description = "Prints hello groom worlds"
+authors = [{name="aks", email="123456aks28@gmail.com"}]
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.7"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
