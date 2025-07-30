@@ -1,0 +1,21 @@
+[project]
+name = "osc-data"
+version = "0.1.6"
+description = "data represent, processing"
+readme = "README.md"
+authors = [
+    { name = "wangmengdi", email = "790990241@qq.com" }
+]
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+osc-data = "osc_data:main"
+
+[tool.maturin]
+module-name = "osc_data._core"
+python-packages = ["osc_data"]
+
+[build-system]
+requires = ["maturin>=1.0,<2.0"]
+build-backend = "maturin"
