@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+setup.py
+python_soundcard/__init__.py
+python_soundcard.egg-info/PKG-INFO
+python_soundcard.egg-info/SOURCES.txt
+python_soundcard.egg-info/dependency_links.txt
+python_soundcard.egg-info/top_level.txt
