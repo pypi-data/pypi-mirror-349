@@ -1,0 +1,8 @@
+fastapi
+uvicorn[standard]
+jinja2
+matplotlib
+mpld3
+scipy
+numpy
+pandas
