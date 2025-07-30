@@ -1,0 +1,11 @@
+PyBreathParams/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+PyBreathParams/activity_classifier.py,sha256=usUpHo5AB5PShRqcDp6FUQeeD80sVKCjzqLTEqeyufw,5764
+PyBreathParams/get_breath_params.py,sha256=RbyxY9ozLxi2uXTDNPlPvxP-IT6V0xviq2vcCHznOZs,1841
+PyBreathParams/ie_classifier.py,sha256=vuKIfyxqETfmvcekJfnipLOO6XIsBXgUo92h_xvsWZI,5682
+PyBreathParams/model_ar.joblib,sha256=Q6Jz7-Z3lsM61LJkrnHX4sDsYvuoUBp7z-ngmtwmIfs,2606
+PyBreathParams/model_ie.joblib,sha256=0msIQIPXF6In28_UNBx-ub6ee1AYO83mOO7aHkhPKKk,2606
+pybreathparams-1.0.2.dist-info/licenses/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+pybreathparams-1.0.2.dist-info/METADATA,sha256=U1GcjnkjcVNqWbcU-P87kquMh29XRdFoZEL4x5HsHq8,962
+pybreathparams-1.0.2.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+pybreathparams-1.0.2.dist-info/top_level.txt,sha256=ltZ0pCH5cFaDdLei46yGmbPmZQ3T3qVa9zPw4IH9YSI,15
+pybreathparams-1.0.2.dist-info/RECORD,,
