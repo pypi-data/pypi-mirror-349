@@ -1,0 +1,8 @@
+diffwhisperer/__init__.py,sha256=5auEUqq8HznumZ4uJuXK3G_s5qkUIiMB-oOpkcnFtfU,105
+diffwhisperer/analyzer.py,sha256=9juj4R9DyHjXlCzCu8eY9CffNMxqwbOGRqDFz7v0Qdg,8532
+diffwhisperer/cli.py,sha256=31cIPRkWqbVMWdVinKmuQJW1L0FpArfF1mjWmidCDTc,2562
+diffwhisperer-1.1.1.dist-info/METADATA,sha256=m-UcB6jaxBS7DhWUwU3DBdWUthvRATBbnFpNcik9JAU,4289
+diffwhisperer-1.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+diffwhisperer-1.1.1.dist-info/entry_points.txt,sha256=jWSP8rifTfzQr183U6kKdEl2ybWVVpSAN1JsSOOFR6I,56
+diffwhisperer-1.1.1.dist-info/licenses/LICENSE,sha256=dJ1QWU4Db_Bs03pYFD_e5ICNCPON78q9T8o6EU3kcs0,11356
+diffwhisperer-1.1.1.dist-info/RECORD,,
