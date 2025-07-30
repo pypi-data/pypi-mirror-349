@@ -1,0 +1,28 @@
+[project]
+name = "mcp-calpower-server"
+version = "0.2.0"
+description = "A Model Context Protocol server for power calculating"
+readme = "README.md"
+requires-python = ">=3.10"
+keywords = ["mcp", "llm", "math", "calculator", "power"]
+license = { text = "MIT" }
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+]
+dependencies = [
+    "mcp>=1.4.1",
+]
+
+[project.scripts]
+mcp-calpower-server = "mcp_calpower_server:main"
+
+[project.entry-points."mcp.tools"]
+calculator = "mcp_calpower_server:calculate"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

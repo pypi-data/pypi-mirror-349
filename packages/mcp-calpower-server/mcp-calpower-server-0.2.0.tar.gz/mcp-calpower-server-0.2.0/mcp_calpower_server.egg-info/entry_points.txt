@@ -1,0 +1,5 @@
+[console_scripts]
+mcp-calpower-server = mcp_calpower_server:main
+
+[mcp.tools]
+calculator = mcp_calpower_server:calculate
