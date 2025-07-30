@@ -1,0 +1,19 @@
+Metadata-Version: 2.3
+Name: webook
+Version: 0.2.0
+Summary: 
+Author: Liu Xiang
+Author-email: liuxiang921@gmail.com
+Requires-Python: >=3.9,<3.12
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: mistletoe (>=1.4.0,<2.0.0)
+Requires-Dist: pillow (>=11.2.1,<12.0.0)
+Requires-Dist: playwright (>=1.52.0,<2.0.0)
+Requires-Dist: pypdf2 (>=3.0.1,<4.0.0)
+Requires-Dist: requests (>=2.32.3,<3.0.0)
+Description-Content-Type: text/markdown
+
+
