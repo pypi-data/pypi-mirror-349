@@ -1,0 +1,12 @@
+numpy<2.0,>=1.21
+astropy>=5.0
+matplotlib>=3.5
+scipy>=1.8
+torch>=1.13
+torchvision>=0.14
+
+[dev]
+pytest
+jupyter
+pyklip
+scikit-image
