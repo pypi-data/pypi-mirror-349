@@ -1,0 +1,54 @@
+Metadata-Version: 2.4
+Name: greenpak
+Version: 0.0.30
+Summary: An easy to use Python API for programming and accessing Renesas's GreenPak SPLD devices.
+Project-URL: Homepage, https://github.com/zapta/greenpak
+Project-URL: Documentation, https://greenpak.readthedocs.io/en/latest/
+Project-URL: Bug Tracker, https://github.com/zapta/greenpak/issues
+Author-email: Zapta <zapta@zapta.com>
+License-File: LICENSE
+Classifier: License :: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Requires-Dist: hackpyratebus>=0.0.6
+Requires-Dist: i2c-adapter>=0.0.4
+Requires-Dist: i2cdriver>=1.0.1
+Requires-Dist: intelhex>=2.3.0
+Requires-Dist: smbus2==0.4.3
+Requires-Dist: typing-extensions>=4.7.1
+Description-Content-Type: text/markdown
+
+# GreenPak Driver
+A Python package to access and program Renesas GreenPak SPLD's.
+
+This Python package provides a simple to use API to read/write/program Renseas GreenPak PLDs over a USB to I2C link. 
+
+As of May 2025, the package supports the following USB to I2C interfaces and new ones can be easily added based on the examples in [i2c.py](https://github.com/zapta/greenpak/blob/main/src/greenpak/i2c.py): 
+* [I2C Driver](https://pypi.org/project/i2cdriver/) (two variants, mini and full.)
+* [I2C Adapter](https://pypi.org/project/i2c-adapter/) (four variants, including a bare Raspberry Pico.)
+* [Bus Pirate](https://en.wikipedia.org/wiki/Bus_Pirate) (v2, v3 and v4)
+
+Sample usage using an [I2C Adapter](https://pypi.org/project/i2c-adapter):
+
+```python
+from greenpak import driver, i2c, utils
+
+print("Connecting.")
+i2c_driver = i2c.GreenPakI2cAdapter(port="COM17")
+gp_driver = driver.GreenpakDriver(i2c_driver, device="SLG46826", control_code=0b0001)
+
+print("Loading configuration.")
+data = utils.read_bits_file("test_data/slg46826_blinky_fast.txt")
+utils.hex_dump(data)
+
+print("Programming the NVM.")
+gp_driver.program_nvm_pages(0, data)
+
+print("Resetting the device.")
+gp_driver.reset_device()
+```
+
+<br>
+
+For full documentation see https://greenpak.readthedocs.io/en/latest
