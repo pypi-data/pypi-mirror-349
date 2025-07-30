@@ -1,0 +1,11 @@
+PPIFold/File_proteins.py,sha256=vPc2a0E3GXZHNKIdAAgZEDhS8I-xSY7z5nIh-VeFT5U,13979
+PPIFold/PPIFold.py,sha256=ZUi_WL02kr-jIzKvirxjltCJeC_UxqriuJpmBdzUR70,3066
+PPIFold/Utils.py,sha256=h8aRSQ9zQzCvs1ZoSmlSPeuwEv9NI0VsjTFfesMLxSk,40751
+PPIFold/__init__.py,sha256=N69lQBtbXE1yzKnQBaE1EUg6VzTcgX_HTioZXEvpEYc,14
+PPIFold/create_individual_feature_modif.py,sha256=crmduCs6gFWmzAQUK_1hVcl0mwNOPL78qKzQLhN-rK4,21292
+ppifold-0.4.9.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+ppifold-0.4.9.dist-info/METADATA,sha256=7JnMSoOyCsvbmEHfo7-p_xCbrYXZsMQpMZ58PG19ce8,527
+ppifold-0.4.9.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+ppifold-0.4.9.dist-info/entry_points.txt,sha256=Chy41cVE_EyFnXNOhsLR6mtYD-baNqyuBFI7TXA9IHw,49
+ppifold-0.4.9.dist-info/top_level.txt,sha256=n8KWbQKuD4AI-rlv5VsDSqXquuTX9FpC-LI8GJumaU4,8
+ppifold-0.4.9.dist-info/RECORD,,
