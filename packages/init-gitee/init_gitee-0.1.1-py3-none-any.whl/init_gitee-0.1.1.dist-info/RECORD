@@ -1,0 +1,11 @@
+commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+commands/create_repo.py,sha256=iEKQWh0gZp1Ncwm9l6gzXelRQVH32-g8iq4b359-GpU,1833
+commands/delete_repos.py,sha256=seDNSKkaHHe1TxctoD0GTKCXyyVSiNcuoPCyQNxVheM,591
+commands/init_git.py,sha256=RhApvqA9LmAQJx9fBhcTg1q66UIf8coKUMmvAa1QOFs,635
+commands/list_repos.py,sha256=-hITBffaUVkLgGBi0fI_iY1Neda-4kMaXnDwDQqcb44,906
+commands/main.py,sha256=Lc1zzU5EbzxGe6sqiXi3LjLUkiSjO30GBG9PMU_FDNQ,1274
+init_gitee-0.1.1.dist-info/METADATA,sha256=BngAhLp2kQgYB8wBdcne-hxV5r_loAToINQoAgM1dNA,1784
+init_gitee-0.1.1.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+init_gitee-0.1.1.dist-info/entry_points.txt,sha256=sHmYfsUHFQynhmb_GQFROLYA2_8chwb3sJuWa9TSTOY,87
+init_gitee-0.1.1.dist-info/top_level.txt,sha256=6dNUbRvZAy7fLWNbD4YeUosLYwGk-SVew-Swd5CfFkg,9
+init_gitee-0.1.1.dist-info/RECORD,,

@@ -1,0 +1,3 @@
+[console_scripts]
+init-git = commands.init_git:init_git
+init-gitee = commands.main:cli
