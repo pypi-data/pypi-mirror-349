@@ -1,0 +1,15 @@
+fps/__init__.py,sha256=hca3wgRgsFAsLVqwTeuCixFzcrpYnYi_z0KoFZNUN-U,378
+fps/_config.py,sha256=-qNSXbp477db4E3STEDdpU4pbu3TICBoCy3j_yPfGqQ,3241
+fps/_context.py,sha256=PB5iAIi5IMcbaqf7k4fnwOW0o8Lk8uyR5PDfFR8Iicg,12794
+fps/_importer.py,sha256=klrJeKL-3lRP2wdy5JwMZCus4-MZPmVG3fdwYrjB4aQ,1505
+fps/_module.py,sha256=u8SzdRzVwAR-n60yO1Npy9-U60rfN4PCEf2-kI-qoGU,22376
+fps/_signal.py,sha256=sTgQ6GDVQ_7C97-nxBofWBToV6ME1QCnGazhnKvBL9w,1765
+fps/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fps/cli/_cli.py,sha256=1vMsLj8I-Wi2PHC0MoUFRqS_jv8yqyRg7fybu7ou5xQ,2863
+fps/web/fastapi.py,sha256=azhOU5bE8dc8-l6m2Zae1E8ufvnXgPjzmzC8E4WX-rQ,489
+fps/web/server.py,sha256=dvgyCmc7WT4Wgudnu2JeLWEoCkg5uo03UWQLExcVNTI,1422
+fps-0.4.0.dist-info/METADATA,sha256=cQGQKI9Dip73QVsxjOTSkVTU8gGKuTto9Jsjo85Gxwo,5088
+fps-0.4.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+fps-0.4.0.dist-info/entry_points.txt,sha256=90BuQ1lU5lHYlMYVUa4UnovNFdgLJ82qZekws22fE2g,81
+fps-0.4.0.dist-info/licenses/LICENSE,sha256=mhO0ZW9EiWOPg0dUgB-lNbJ0CGwRmTdbeAg_se1SOnY,2833
+fps-0.4.0.dist-info/RECORD,,
