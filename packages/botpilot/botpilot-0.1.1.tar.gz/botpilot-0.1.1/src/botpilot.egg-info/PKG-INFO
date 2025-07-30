@@ -1,0 +1,54 @@
+Metadata-Version: 2.4
+Name: botpilot
+Version: 0.1.1
+Summary: A CLI toolkit for automating web bots and reconciliation bots.
+Author-email: Patrick Adu-Amankwah <adu-amankwahp@stanbic.com.gh>
+License: MIT
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: typer[all]
+Requires-Dist: jinja2
+Requires-Dist: python-decouple
+Requires-Dist: pandas
+Requires-Dist: oracledb
+Requires-Dist: requests
+Dynamic: license-file
+
+readme = '''# BotPilot
+
+**BotPilot** is a Python CLI tool for automating organizational tasks using Selenium, pandas, and Oracle connections. It can scaffold web bots and reconciliation bots with optional emailer, logging, and database support.
+
+## 🚀 Installation
+
+```bash
+pip install botpilot
+
+
+git clone https://github.com/your-org/botpilot.git
+cd botpilot
+pip install .
+
+🛠 Usage
+botpilot init web-bot 
+botpilot init recon-bot 
+
+
+Options
+--with-db: Include database connection scaffolding
+
+--emailer: Include emailer utility
+
+Logging is enabled by default and stored in /logs.
+
+
+
+📁 Generated Structure
+MyBot/
+├── main.py
+├── downloads/
+├── assets/
+│   └── app.ini
+├── logs/
+├── reports/
+└── shared/
