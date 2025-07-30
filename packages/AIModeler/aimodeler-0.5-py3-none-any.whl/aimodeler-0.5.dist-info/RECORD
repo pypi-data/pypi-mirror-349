@@ -1,0 +1,7 @@
+aimodeler/__init__.py,sha256=wvAaa0r_OpVL0rJmc2qI1Pf2l8wFFQBz6UmU25oRnPc,75
+aimodeler/document_parsing.py,sha256=lTjhzwD2fLjw3SrDfzuMPulTFHUL8HMrV3_yM6Bvwe0,468
+aimodeler/text_chunking.py,sha256=9n7QzKz6YX4NN4nxNESJ_Xyeec899EdvDW1Lutyto0A,694
+aimodeler-0.5.dist-info/METADATA,sha256=u7ISvIdHBjPXLLa9sqyYSHm_9KEL3AE2IDgF4YANXxk,1011
+aimodeler-0.5.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+aimodeler-0.5.dist-info/top_level.txt,sha256=huf4nQ0Fhd-kj853zxm3SCWsacbo0oUMPPUelkEekqg,10
+aimodeler-0.5.dist-info/RECORD,,
