@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+setup.py
+redirect_stdout/__init__.py
+redirect_stdout.egg-info/PKG-INFO
+redirect_stdout.egg-info/SOURCES.txt
+redirect_stdout.egg-info/dependency_links.txt
+redirect_stdout.egg-info/top_level.txt
