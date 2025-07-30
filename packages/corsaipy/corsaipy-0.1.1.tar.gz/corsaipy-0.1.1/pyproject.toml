@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "corsaipy"
+version = "0.1.1"
+authors = [{name = "Stephan Balduin", email = "stephan.balduin@offis.de" }]
+description = "A correlation-based sampling algorithm"
+readme = "README.md"
+requires-python = ">=3.10"
+
+dependencies = [
+    "numpy",
+]
+
+[project.optional-dependencies]
+dev = [
+    "black==22.3.0",
+    "wheel",
+    "flake8",
+]
+
+[tool.black]
+line-length = 79
+preview = true

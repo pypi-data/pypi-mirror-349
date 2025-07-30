@@ -1,0 +1,6 @@
+numpy
+
+[dev]
+black==22.3.0
+wheel
+flake8
