@@ -1,0 +1,10 @@
+cursor_notebook_mcp/__init__.py,sha256=Uv1bcLhkTpurdiBmhJBDo4xOyMdfrrj8rByj4Z4HBUI,303
+cursor_notebook_mcp/notebook_ops.py,sha256=4mY02TFDJFsEtYtvOOmI8_YQhSWiRHoScBm5B8_Z0Yw,18973
+cursor_notebook_mcp/server.py,sha256=bNNMpi9xAPh-COK8szwNcGs0i3KbcUww9MP7XD7IFzU,19009
+cursor_notebook_mcp/sftp_manager.py,sha256=lqd9soOoFZ2-TJgafwQ1iGlSYREejxoJhQdCe_DFqqI,60857
+cursor_notebook_mcp/tools.py,sha256=uW0eANvPlHSnzHe_kadXpwgUf7TWgPO82Q1KWYOpljc,143980
+cursor_notebook_mcp-0.3.0.dist-info/METADATA,sha256=0DWYM6wsUeK_BeRR53MQHNHNj4Eya9YG1bfg116yiWw,64661
+cursor_notebook_mcp-0.3.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+cursor_notebook_mcp-0.3.0.dist-info/entry_points.txt,sha256=Y7hHohpFcTgTR1fQZImTAAuDyDGkOB7NslZ3LU1HGmk,72
+cursor_notebook_mcp-0.3.0.dist-info/licenses/LICENSE,sha256=lQmRu6S5S7RqozsKQjZ0lj1dSEyS1_rKz3GP6b8VyxU,19788
+cursor_notebook_mcp-0.3.0.dist-info/RECORD,,
