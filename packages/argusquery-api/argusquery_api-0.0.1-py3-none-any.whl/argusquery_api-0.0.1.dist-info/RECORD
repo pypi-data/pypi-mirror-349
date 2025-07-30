@@ -1,0 +1,8 @@
+argusquery_api/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+argusquery_api/auth.py,sha256=CU6H7ZTNUtnVJCdUY-5JESotcAo3a-UVKPD5ZwbCOJU,1078
+argusquery_api/create_file_category_and_app.py,sha256=ofHwIKvtHKMgLZs0UzxFHd1uNuoBKwbAH2qNlivOZzA,9025
+argusquery_api/semantic_search.py,sha256=4GPnp8_u6-LvJo-KbmwoVDqjxYzs-_YebEtZ9bVpACE,5660
+argusquery_api-0.0.1.dist-info/LICENSE,sha256=iyhLqRDmMTKnH8p5j2K8zWK4kfgGmNwZn5mIrCYUolA,1070
+argusquery_api-0.0.1.dist-info/METADATA,sha256=fVK4ZrlnxI1OnysNYYf6I0K_LCCZHFSzZ8pUP99wj2s,4198
+argusquery_api-0.0.1.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+argusquery_api-0.0.1.dist-info/RECORD,,
