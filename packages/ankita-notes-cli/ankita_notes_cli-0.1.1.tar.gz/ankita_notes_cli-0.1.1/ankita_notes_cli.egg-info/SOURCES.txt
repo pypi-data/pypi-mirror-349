@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+ankita_notes_cli.egg-info/PKG-INFO
+ankita_notes_cli.egg-info/SOURCES.txt
+ankita_notes_cli.egg-info/dependency_links.txt
+ankita_notes_cli.egg-info/entry_points.txt
+ankita_notes_cli.egg-info/requires.txt
+ankita_notes_cli.egg-info/top_level.txt
+notes_cli/__init__.py
+notes_cli/cli.py

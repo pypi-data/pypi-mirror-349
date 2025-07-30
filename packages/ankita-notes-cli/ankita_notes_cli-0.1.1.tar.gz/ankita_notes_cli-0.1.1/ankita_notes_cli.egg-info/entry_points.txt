@@ -1,0 +1,2 @@
+[console_scripts]
+ankita-notes-cli = notes_cli.cli:app
