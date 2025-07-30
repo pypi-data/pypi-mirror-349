@@ -1,0 +1,10 @@
+uniform_vlm_infer/__init__.py,sha256=Jm45CRsG2H2jTp1NOndM2K9hPdjr2X8N0Wz0DcgTra8,185
+uniform_vlm_infer/cli.py,sha256=v-rnrjRvIo1tagnSsuR2GW49THjfI-IXKEEhVrFnya0,1298
+uniform_vlm_infer/dataset.py,sha256=9moEPkCCGyDJ9G7tA9WdjFPzENJCk9Wvgn0PdNvZnTw,2480
+uniform_vlm_infer/format.py,sha256=eUmvg0UxfP7Qnyf_z7YxsIjrmPfsO-7bbuahN9SluTQ,1017
+uniform_vlm_infer/infer.py,sha256=H_uYD6E8Jdh2Fx8l6vccrDFaxJ044NffpVX8vTCYnc8,2813
+uniform_vlm_infer-0.1.0.dist-info/METADATA,sha256=6munBEyhIAAwgXTqedn34CFCX8q22aljNDgr_gTSxws,664
+uniform_vlm_infer-0.1.0.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+uniform_vlm_infer-0.1.0.dist-info/entry_points.txt,sha256=PCYWNoyQofxfnwm4p_0dLlcZjtpQy-HU1RgLc1gTICI,65
+uniform_vlm_infer-0.1.0.dist-info/top_level.txt,sha256=8brCCfvvRlWcIEszv4G3aIfunttUjzQsdspGm5uSGNE,18
+uniform_vlm_infer-0.1.0.dist-info/RECORD,,
