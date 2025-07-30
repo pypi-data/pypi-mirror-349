@@ -1,0 +1,132 @@
+Metadata-Version: 2.4
+Name: mcp-hybrid-search
+Version: 1.0.2
+Summary: Hybrid Search RAG - A Model Context Protocol (MCP) server for RAG-based document search
+Author: Jay Pak
+Author-email: Jay Pak <jaypark@forestsoft.co.kr>
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: mcp[cli]
+Requires-Dist: langchain>=0.3.0
+Requires-Dist: langchain-community>=0.3.11
+Requires-Dist: langchain-openai>=0.2.11
+Requires-Dist: langchain-core>=0.3.24
+Requires-Dist: langchain-chroma>=0.1.4
+Requires-Dist: langchain-text-splitters>=0.3.2
+Requires-Dist: pdfplumber>=0.11.0
+Requires-Dist: python-dotenv>=1.0.0
+Requires-Dist: openai>=1.0.0
+Dynamic: license-file
+
+# RAG-based MCP Server
+
+[ENG](#english) | [KOR](#한국어)
+
+---
+
+## English
+
+This package provides an MCP (Model Context Protocol) server that uses a Retrieval Augmented Generation (RAG) approach. It allows you to specify a folder containing PDF files for augmentation, and leverages an OpenAI API key to perform hybrid search.
+
+### Installation
+
+Install the package from PyPI using UV or pip:
+
+```bash
+uv pip install mcp-hybrid-search
+```
+
+or
+
+```bash
+pip install mcp-hybrid-search
+```
+
+### Configuration
+
+To run your project in the Claude app, add the following entry to your `claude_desktop_config.json`:
+
+```json
+{
+  "rag-mcp": {
+    "command": "uvx",
+    "args": [
+      "mcp-hybrid-search",
+      "path/to/your/allowed/folder"
+    ],
+    "env": {
+      "OPENAI_API_KEY": "YOUR_OPENAI_API_KEY"
+    }
+  }
+}
+```
+
+* Replace `path/to/your/allowed/folder` with the actual path where you want to store and access your data.
+* In that folder, create a subfolder named `data` and place any PDF files you want to use for augmentation in this `data` folder.
+
+### Usage
+
+1. Install and configure the server as described above.
+2. Start or restart your MCP setup or application to enable the RAG-based MCP server.
+3. The server will use the PDF files within the `data` folder to generate context and augment your prompts.
+
+### License
+
+MIT
+
+---
+
+## 한국어
+
+이 패키지는 RAG(Retrieval Augmented Generation) 방식을 사용하는 MCP(Model Context Protocol) 서버를 제공합니다. PDF 파일을 증강 자료로 활용할 수 있도록 설정된 폴더를 지정하고, OpenAI API 키를 이용하여 하이브리드 검색을 수행합니다.
+
+### 설치 방법
+
+UV 또는 pip를 이용하여 PyPI에서 패키지를 설치합니다:
+
+```bash
+uv pip install mcp-hybrid-search
+```
+
+또는
+
+```bash
+pip install mcp-hybrid-search
+```
+
+### 설정 방법
+
+Claude 앱에서 프로젝트를 실행하기 위해 `claude_desktop_config.json`에 다음과 같이 설정을 추가하세요:
+
+```json
+{
+  "rag-mcp": {
+    "command": "uvx",
+    "args": [
+      "mcp-hybrid-search",
+      "접근을 허용할 폴더 경로"
+    ],
+    "env": {
+      "OPENAI_API_KEY": "YOUR_OPENAI_API_KEY"
+    }
+  }
+}
+```
+
+* `접근을 허용할 폴더 경로` 부분을 실제 PDF 파일을 저장할 경로로 바꾸세요.
+* 해당 폴더 안에 `data`라는 이름의 하위 폴더를 만들고, 여기에 증강 자료로 사용할 PDF 파일을 넣으세요.
+
+### 사용 방법
+
+1. 위 설치 및 설정 과정을 완료합니다.
+2. MCP 설정을 실행하거나 애플리케이션을 재시작하여 RAG 기반 MCP 서버를 활성화하세요.
+3. `data` 폴더 내 PDF 파일을 이용하여 메시지에 대한 맥락을 생성하고 증강된 응답을 받아볼 수 있습니다.
+
+### 라이센스
+
+MIT
