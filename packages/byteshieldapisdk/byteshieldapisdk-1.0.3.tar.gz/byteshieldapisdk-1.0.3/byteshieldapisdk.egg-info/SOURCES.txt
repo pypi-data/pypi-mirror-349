@@ -1,0 +1,8 @@
+LICENSE
+setup.py
+byteshieldapisdk/__init__.py
+byteshieldapisdk/signer.py
+byteshieldapisdk.egg-info/PKG-INFO
+byteshieldapisdk.egg-info/SOURCES.txt
+byteshieldapisdk.egg-info/dependency_links.txt
+byteshieldapisdk.egg-info/top_level.txt
