@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+pyatomix/__init__.py
+pyatomix.egg-info/PKG-INFO
+pyatomix.egg-info/SOURCES.txt
+pyatomix.egg-info/dependency_links.txt
+pyatomix.egg-info/requires.txt
+pyatomix.egg-info/top_level.txt
