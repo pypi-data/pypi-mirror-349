@@ -1,0 +1,2 @@
+[console_scripts]
+jewei-mssql-mcp-server = src.mcp_server_jewei.server:main
