@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: fixed_income_cl
+Version: 0.0.1.2
+Author: Manuel Progaska
+Description-Content-Type: text/markdown
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: requests
+Dynamic: author
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: requires-dist
+
+# Fixed Income CL
+
+Módulo en Desarrollo...
