@@ -1,0 +1,65 @@
+[build-system]
+build-backend = 'setuptools.build_meta'
+requires = ["setuptools >= 62.0"]
+
+[project]
+name = "cls-clear"
+description = "A simple program to clear the console screen."
+readme = "README.md"
+requires-python = ">=3.0"
+keywords = [
+    "python",
+    "cls",
+    "clear",
+    "cls-clear",
+    "console",
+    "screen",
+    "clear-screen",
+    "terminal",
+    "command-line",
+
+]
+authors = [{ name = "Riccardo Belli" }]
+classifiers = [
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Environment :: Console",
+    "Typing :: Typed",
+    "Operating System :: OS Independent",
+]
+license = "Unlicense"
+dependencies = []
+dynamic = ["version"]
+
+[project.optional-dependencies]
+dev = ["ruff==0.7.4"]
+
+[project.urls]
+Documentation = "https://github.com/belliriccardo/cls-clear#readme"
+Issues = "https://github.com/belliriccardo/cls-clear/issues"
+Source = "https://github.com/belliriccardo/cls-clear"
+Homepage = "https://github.com/belliriccardo/cls-clear"
+"Personal Homepage" = "https://www.riccardobelli.it"
+
+[tool.setuptools]
+zip-safe = false
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+cls = ["py.typed", "*.pyi"]
+
+[tool.setuptools.dynamic]
+version = { attr = "cls.__version__" }
+
+[tool.ruff]
+line-length = 120
+
+select = ["ALL"]
+ignore = ["UP032"]
+
+# Enable strict type checking
+[tool.pyright]
+strict = ["**/*.py"]
