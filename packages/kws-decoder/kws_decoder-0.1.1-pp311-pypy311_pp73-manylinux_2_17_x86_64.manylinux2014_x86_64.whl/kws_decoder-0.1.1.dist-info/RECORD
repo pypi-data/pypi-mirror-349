@@ -1,0 +1,7 @@
+kws_decoder/__init__.py,sha256=vwGMQC4oOVgSOBcslafYqTZ_rGvEKvmZ9qTb26yiq5A,42
+kws_decoder/kws_decoder.cpython-311-x86_64-linux-gnu.so,sha256=aCTx9lRTtxlpQjyW8yrFTJpwn0ZW4jjGJxvb9LsznPo,336168
+kws_decoder/kws_decoder.pypy311-pp73-x86_64-linux-gnu.so,sha256=JJRtsNcP1xAplJvlxXoqcE4N73SX5OEYuRHZGuOgwLE,336168
+kws_decoder-0.1.1.dist-info/METADATA,sha256=DkY2s09eugy1yE5Qh45Y4IvNRa-PL1UAT3oRQIyVNOc,5410
+kws_decoder-0.1.1.dist-info/WHEEL,sha256=ADT2_NOh0DweuH3Lf6WgLe3OIudzbhh8hjgFZ2220-c,170
+kws_decoder-0.1.1.dist-info/RECORD,,
+kws_decoder-0.1.1.dist-info/licenses/LICENSE,sha256=vfgRJOdRTyg34zpMiraycFdWrF1x9TJBJtLHtkr-6Ss,1084
