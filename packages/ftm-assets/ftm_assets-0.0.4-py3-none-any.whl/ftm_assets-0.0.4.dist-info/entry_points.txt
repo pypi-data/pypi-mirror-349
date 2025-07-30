@@ -1,0 +1,3 @@
+[console_scripts]
+ftm-assets=ftm_assets.cli:cli
+
