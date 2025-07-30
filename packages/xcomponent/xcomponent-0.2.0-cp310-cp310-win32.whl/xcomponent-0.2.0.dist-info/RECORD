@@ -1,0 +1,10 @@
+xcomponent-0.2.0.dist-info/METADATA,sha256=dbTY7Hd1_7_-Illyk0AvpdI448hpUyGx3DiIQmY8gfI,824
+xcomponent-0.2.0.dist-info/WHEEL,sha256=2I8FMXqttZIv4Ceqp7SSjsZUyiuHAyz-otzopz4PdFA,92
+xcomponent-0.2.0.dist-info/licenses/LICENSE,sha256=5KBXh5NnraCUd4zrqTWpAChTkR_KO9fzRPUXwgirN5A,1096
+xcomponent/__init__.py,sha256=jPqJhPvKZMWMO0TXFQ9qLfjfE2cDAnl5pwQoEWFXLRw,196
+xcomponent/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+xcomponent/service/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+xcomponent/service/catalog.py,sha256=-osgnYWaKCYs0ZhxZccQcvqE7sl-w-Wyjph1Q7L0A2A,3656
+xcomponent/xcore.cp310-win32.pyd,sha256=8XZgLew2EL4hcYBYR7iEOWZoQayGAPsnQFrzY-0NTQk,1807360
+xcomponent/xcore.pyi,sha256=bq-SXl-ddGtTOz_W6xNZtEGmX88BN8pdj81SOPowPfc,2339
+xcomponent-0.2.0.dist-info/RECORD,,
