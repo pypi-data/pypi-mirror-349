@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "preeii"
+version = "1.2025.522"
+authors = [
+  { name="Mauricio Andres Zamora Hernandez", email="mauricio.zamora@gmail.com" },
+]
+description = "Software de soporte de revisión de pre-matrículas para la escuela de ingeniería industrial"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Education",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: Spanish"
+]
+dependencies = [
+     "pyperclip","requests","termcolor","XlsxWriter",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/mauricio-zamora/preeii"
+"Bug Tracker" = "https://github.com/mauricio-zamora/preeii/issues"
