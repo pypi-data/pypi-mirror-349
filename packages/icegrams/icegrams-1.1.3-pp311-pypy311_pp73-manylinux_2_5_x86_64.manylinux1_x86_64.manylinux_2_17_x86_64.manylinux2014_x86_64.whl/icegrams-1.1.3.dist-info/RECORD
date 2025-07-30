@@ -1,0 +1,14 @@
+icegrams/__init__.py,sha256=soyJrQGvIJXq1baY4Oh62f1tQN6PMrZpDNgvznb3nD0,1734
+icegrams/_trie.pypy311-pp73-x86_64-linux-gnu.so,sha256=zkZ3QFkpODIFLPAWNGLsRBmOtbF_gw-EblhLn6QWDDs,18744
+icegrams/ngrams.py,sha256=QdRtmN5UqlrkF0Au-JsdUx0KfBd0mMCT6Hgv8z1hl0k,69723
+icegrams/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+icegrams/trie.cpp,sha256=6ZPGYJCnSL8ANAgBFi_6H5nlouQoq8-DYVnDaZDkLXI,25086
+icegrams/trie.h,sha256=7pdT3VQ1oQI9Ew-1L0R8YHVN3ZKbqnm2Fxdsc_iDiIg,3711
+icegrams/trie.py,sha256=NOuj6VlJ7la2ZkX46p2V6Vt48jIotyVoqYOqJodm6cc,12966
+icegrams/trie_build.py,sha256=Wujg1ZahSy4Pz2LLZvE_N0Do5z0g53o_l_Rf7FtTYns,4628
+icegrams/resources/trigrams.bin,sha256=8wySmLcZDt_JCRxiJzMEPOEKoHVcnAuJF3UlvRTK-hI,43064803
+icegrams-1.1.3.dist-info/METADATA,sha256=wYLvwnhAsi4a3fUTzj8PVFr0rp29b1TQpoB5Y6GLZM0,16551
+icegrams-1.1.3.dist-info/WHEEL,sha256=EdHuO8Q66ToCwDAiX3CP3wT2A3JxnQX1n5SARGa60EI,252
+icegrams-1.1.3.dist-info/top_level.txt,sha256=SA2bwH1rt9hJ9qN0w-ErBpG26DHyvl7NrSA6vCdOn3s,9
+icegrams-1.1.3.dist-info/RECORD,,
+icegrams-1.1.3.dist-info/licenses/LICENSE.txt,sha256=ky-yEOe6oTAmfmuQainEttdhRRZ9_KtFEF6Nnce-3og,1113
