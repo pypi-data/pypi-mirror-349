@@ -1,0 +1,244 @@
+Metadata-Version: 2.4
+Name: cefeste
+Version: 2.0.0
+Summary: Feature Selection and Elimination
+Home-page: https://dev.azure.com/credem-data/DAT/_git/ce-feste
+Author: DAT Team
+Project-URL: Homepage, https://dev.azure.com/credem-data/DAT/_git/ce-feste
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9, <4
+Description-Content-Type: text/markdown
+License-File: LICENCE
+Requires-Dist: typed-ast>=1.5.4
+Requires-Dist: numpy==1.22.4
+Requires-Dist: pandas>=1.4.2
+Requires-Dist: scikit-learn>=1.1.1
+Requires-Dist: scipy>=1.8.1
+Requires-Dist: statsmodels>=0.13.2
+Requires-Dist: PyYAML>=6.0
+Requires-Dist: shap==0.41.0
+Requires-Dist: ipython
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+
+# **C**redito **E**miliano -  **Fe**ature **S**election, **T**ransformation and **E**limination (CE - FeSTE)
+
+La repository contiene il codice per implementare la manipolazione delle feature dei dati utilizzati nei sistemi di ML in produzione con 4 moduli:
+
+- **Analisi**: contiene le funzioni di analisi delle feature
+- **Selezione**: contiene le funzioni di selezione preliminare delle feature 
+- **Trasformazione**: contiene le funzioni di pre-processing delle feature
+- **Eliminazione**: contiene le funzioni di eliminazione delle feature
+
+## Analisi
+
+La classe principale di questo modulo è FeatureAnalysis, nonchè la classe madre delle classi presenti nei moduli Elimination e Selection. Utile per ottenere analisi di base dalle feature o gestire i parametri della classe.
+
+Contiene dei metodi per ottenere o settare gli attributi della classe e un metodo che per ogni feature:
+
+- feature categorica: fornisce il conteggio di ogni valore.
+- feature numerica: fornisce il conteggio dei valori e statistiche descrittive come media, deviazione standard, quantili e valori min/max.
+
+
+## Selezione
+
+La classe principale di questo modulo è FeatureSelection. Applica diversi filtri che possono essere raggruppati come segue:
+
+- Filtri univariati:
+    - Nessuna feature con valore costante
+    - Nessuna feature con numero di valori distinti troppo basso
+    - Nessuna feature con numero di valori mancanti troppo alto
+    - Nessuna feature con un valore troppo frequente
+    - Nessuna feature con instabilità tra le distribuzioni dei dati di train e valid
+- Filtri multivariati:
+    - Correlazione di Spearman per feature numeriche
+    - V di Cramer per feature categoriche
+    - R2 per feature miste
+    - VIF per feature collineari
+- Filtri esplicativi:
+    - AUROC della feature per la classificazione del target
+    - Correlazione della feature con il target per la regressione
+
+## Trasformazione
+
+È più un modulo tecnico che contiene 6 classi utili per generare la pipeline di produzione:
+
+- ColumnExtractor: per estrarre colonne da un dataset
+- ColumnRenamer: per rinominare colonne di un dataset
+- Categorizer: per trasformare il dtype delle colonne di un dataset da 'object' a 'category'
+- Dummitizer: per trasformare le feature in variabili dummy rispetto ad un valore di base.
+- ManageOutlier: per gestire gli outlier tramite capping.
+- LogTransformer: per applicare una trasformazione logaritmica alle feature numeriche.
+
+## Eliminazione
+
+La classe principale di questo modulo è FeatureElimination, utile per selezionare le feature più utili da mantenere nel modello utilizzando la tecnica RFE.
+
+È un metodo ricorsivo che ad ogni iterazione può:
+
+- Addestrare un modello ottimizzando gli iperparametri con modello, griglia, metodo di ricerca e metrica di valutazione definiti dall'utente.
+- Calcolare il valore di importanza shap delle feature.
+- Identificare l'ultima/e feature(/s) per importanza ed eliminarla/e per l'iterazione successiva.
+
+## Guida per sviluppatori
+
+- _main_ branch ha una Policy che evita di inserire codice direttamente su di esso. Sono consentite solo Pull requests. Le Pull requests devono essere approvate da almeno 2 revisori, uno dei quali può essere il richiedente.
+- Come best practice, il nome del ramo dovrebbe seguire questa convenzione di denominazione: **NNN-related_work_item** dove NNN è il numero assegnato da Azure all'elemento di lavoro correlato al ramo e related_work_item è il nome dell'elemento di lavoro sostituendo ' ' (spazi bianchi) con '_' (underscores). Tra il numero e il nome usa '-' (segno meno).
+- Usa un virtual environment dedicato ([guarda le note](https://docs.google.com/document/d/163Rk4YRbDgbIJK-x3qfA78rGbGtvqMHGnqBD4iomNJU/edit) per il codice).
+- Ricorda di riempire ed installare in modo opportuno i requirements.
+```
+pip install -r requirements_dev.txt  --trusted-host artifactory.group.credem.net  -i https://artifactory.group.credem.net/artifactory/api/pypi/virtualPypi/simple
+```
+- Ricorda di intallare il pre-commit (solo per la prima volta)
+```
+pre-commit install
+```
+- Si noti che il pacchetto cefeste viene installato automaticamente installando i requirements. Se i requirements non vengono utilizzati, eseguire quanto segue per installare in editable mode:
+```
+pip install -e .
+```
+
+# Documentazione
+(Visualizza la documentazione a questo [link](https://doc-cf.readthedocs.io/en/latest/)).
+
+La documentazione del codice viene generata automaticamente utilizzando Sphinx in formato HTML.
+I passaggi per generare la documetazione sono i seguenti:
+
+1. Installa Sphinx presente nel file di `requirements_dev.txt`:
+
+```bash
+pip install -r requirements_dev.txt
+```
+
+2. Installa il codice come developer:
+```bash
+pip install -e .
+```
+3. Crea un folder `docs/` ed entra digitando da terminale:
+```bash
+cd docs/
+```
+4. Inizializza sphinx, se la prima volta, digitando da terminale:
+```bash
+sphinx-quickstart
+```
+Questo comando, dopo alcune domande, creerà una struttura del tipo:
+```
+source/          
+|
+└─── conf.py      
+|
+└─── index.rst
+|
+└─── _static/
+|
+└─── _templates/
+build/    
+Makefile
+make.bat
+```
+Nel file `docs/source/conf.py`, puoi configurare Sphinx. Un esempio di `conf.py` può essere:
+```python
+import pathlib
+import sys
+
+sys.path.insert(0, pathlib.Path(__file__).parents[2].resolve().as_posix() + "/src/cefeste")
+project = "documentazione_ce-feste"
+copyright = "2025, Team AIS"
+author = "Team AIS"
+
+# -- General configuration ---------------------------------------------------
+# https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
+
+extensions = ["sphinx.ext.autodoc", "sphinx.ext.autosummary", "sphinx.ext.napoleon", "custom_extension"]
+
+templates_path = ["_templates"]
+
+# -- Options for HTML output -------------------------------------------------
+# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
+
+autosummary_generate = True
+html_theme = "classic"
+html_static_path = ["_static"]
+
+```
+Nei file `index.rst` e nei `_templates/` si può configurare l'autogenerazione della documentazione e i template da usare per farlo.
+
+4. Builda la documentazione, digitando da terminale:
+```bash
+sphinx-build -b html source build
+```
+Il risultato sarà in `docs/build/index.html`.
+
+Una volta creata la documentazione questa viene inserita in un progetto [GitHub](https://github.com/UT86437/doc_cf/) per poterla collegare ad un sito di hosting (es. ReadTheDocs). Per avere un risultato sempre aggiornato bisogna cambiare ad ogni modifica i file html inseriti nel progetto GitHub (ReadTheDocs in automatico si accorge dei cambiamenti e aggiorna la documentazione).
+
+## Struttura
+```
+ce-feste/
+|
+└─── .pre-commit-config.yaml
+|
+└─── pyproject.toml
+|
+└─── LICENCE
+|
+└─── MANIFEST.in
+|
+└─── README.md
+|
+└─── requirements_dev.txt
+|
+└─── setup.py
+|
+└─── .gitignore
+|
+└─── docs/
+|   |── build/
+|   |   └── (Generated HTML output will be here)
+|   └── source/
+|   |   ├── _ext/
+|   |   |   └── custom_extension.py
+|   |   ├── _static/
+|   |   |   └── (Static files)
+|   |   ├── _templates/
+|   |   |   └── autosummary/
+|   |   |       ├── class.rst
+|   |   |       ├── base.rst
+|   |   |       └── module.rst
+|   |   ├── conf.py
+|   |   ├── index.rst
+|   |   └── modules/
+|   |       └── (Autogenerated rst files will be here)
+|   |
+|   └── Makefile
+|   |
+|   └── make.bat
+|
+└─── src/
+    |
+    └─── cefeste/
+        |
+        └─── __init__.py
+        |
+        └─── custom_extension.py
+        |
+        └─── config.py
+        |
+        └─── utils.py
+        |
+        └─── config
+        |       params.yml
+        └─── elimination
+        |       __init__.py
+        |       shap_rfe.py
+        └─── selection
+        |       __init__.py
+        |       explanatory.py
+        |       multivariate.py
+        |       univariate.py
+        └─── transform
+        |       __init__.py
+```
