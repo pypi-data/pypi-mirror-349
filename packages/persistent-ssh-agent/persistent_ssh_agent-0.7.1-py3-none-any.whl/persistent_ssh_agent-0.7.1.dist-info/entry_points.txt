@@ -1,0 +1,3 @@
+[console_scripts]
+persistent_ssh_agent=persistent_ssh_agent.cli:main
+
