@@ -1,0 +1,13 @@
+react_native_debugger_client/__init__.py,sha256=lAdjd28BN3T1xIoNT1i92vIaWmAc-NJcQ6y0c3cDlBc,242
+react_native_debugger_client/client.py,sha256=Rhg17RN_HkZH8rtswFbrZFy-UPaBBbN7Osi49xYyQRA,26770
+react_native_debugger_client/javascript_executor.py,sha256=4b7OmANlZn3pJgKY31hg04Mee6Hzqvw8yOIJXxfLnnQ,2981
+react_native_debugger_client/js_snippets/__init__.py,sha256=GVjLsxtEOJGi4wp5HSnh7zux1NuohdAR3_SYSo7XB7E,342
+react_native_debugger_client/js_snippets/interaction.py,sha256=8VTY9DaPi4E9DAIMAlA8ylJjFxl-YSlykFVDkmgtwvk,34931
+react_native_debugger_client/js_snippets/ui.py,sha256=49SsfZHXl7KPqssTfmGUZRFWI-_TqKsZZcVhzzJVOVw,15077
+react_native_debugger_client-0.0.1.dev1.dist-info/licenses/LICENSE,sha256=AuK-Xuoe1Igu1eOVnus5dpY9R7PUBDqku0uZrPEnLXA,1084
+tests/__init__.py,sha256=nomaXrVg-9k5VIl3lGIujrGOv6I3espoeddF1C8Vfoo,53
+tests/test_debugger_client.py,sha256=7Jz3cCLNA1meH81izyokp0jv3d3UH6Q4MAhQLxEKYbA,1726
+react_native_debugger_client-0.0.1.dev1.dist-info/METADATA,sha256=L3wnLEFbDUd-ZIHguLPrhjfrGCT2pWNXmBPxdO1LREA,4886
+react_native_debugger_client-0.0.1.dev1.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+react_native_debugger_client-0.0.1.dev1.dist-info/top_level.txt,sha256=XrmkZj75yTiOJ3Or-QYkAbw11NtQZEMfAj4_p5Wcu2I,35
+react_native_debugger_client-0.0.1.dev1.dist-info/RECORD,,
