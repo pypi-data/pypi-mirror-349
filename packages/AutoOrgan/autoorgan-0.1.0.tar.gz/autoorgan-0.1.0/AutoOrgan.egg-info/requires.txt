@@ -1,0 +1,5 @@
+onnxruntime-gpu
+scipy
+scikit-image
+munch
+tqdm
