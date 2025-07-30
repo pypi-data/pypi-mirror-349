@@ -1,0 +1,78 @@
+commands:
+- rm -rf build/
+- rm -rf dist/
+components:
+  jupyter:
+    folder: notebooks/
+    lab: false
+    mappings:
+    - ~/test:/app/test
+    port: 1127
+contact: megaman@cars.com
+dependencies:
+- pyyaml
+- artifactory
+- argparse
+- coverage
+- pytest
+description: test cases
+gpu: false
+ignores:
+- '**/*.zip'
+- '**/*.pkl'
+- '**/*.csv'
+- '**/*.model'
+- '**/*.pyc'
+jobs:
+- args:
+  - name: version
+  help: Build
+  ignores:
+  - data/bigFile.pkl
+  - data/evenBiggerFile.pkl
+  mappings:
+  - data/
+  - output/
+  - temp/
+  mode: i
+  name: build
+  native: optional
+  params:
+  - alt: e
+    choices:
+    - local
+    - dev
+    - prod
+    default: local
+    name: env
+  source: build.sh
+- help: Direct command test
+  mode: i
+  name: test-direct-command
+  native: optional
+  source: echo Hello
+- help: Test passing short params
+  mode: i
+  name: test-short-param
+  native: optional
+  params:
+  - choices:
+    - csv
+    - parquet
+    default: csv
+    name: f
+  source: test_short.sh
+maintainer: Mega Man
+name: test
+params:
+- alt: l
+  choices:
+  - debug
+  - info
+  - warn
+  - error
+  default: info
+  name: log
+primaryExe: CMD
+primaryJob: build
+pythonVersion: '3.9'

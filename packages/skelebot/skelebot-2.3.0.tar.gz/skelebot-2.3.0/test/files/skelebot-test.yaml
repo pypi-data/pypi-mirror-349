@@ -1,0 +1,21 @@
+ephemeral: true
+ignores:
+- 'data/'
+- 'libs/'
+components:
+  registry:
+    host: test
+    aws:
+      region: us-east-1
+      profile: dev
+  jupyter:
+    folder: notebooks/
+    port: 1128
+  repository:
+    artifactory:
+        path: test
+        repo: cars-ml-core
+        url: https://repository.cars.com/artifactory
+    artifacts:
+    - file: test
+      name: test
