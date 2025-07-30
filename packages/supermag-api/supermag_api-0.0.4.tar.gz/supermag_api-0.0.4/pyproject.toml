@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "supermag_api"
+version = "0.0.4"
+authors = [
+    {name = "Sandy Antunes", email = "sandy.antunes@jhuapl.edu"},
+]
+description = "Python software to fetch SuperMag data"
+readme = "README.md"
+requires-python = ">=3.8"
+keywords = ["SUPERMAG"]
+license = {text = "BSD 3-Clause"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "certifi",
+    "pandas",
+]
+
+[project.urls]
+Homepage = "https://github.com/elwinter/supermag_api"
