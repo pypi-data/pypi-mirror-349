@@ -1,0 +1,2 @@
+recursive-exclude ibioml *.png *.jpg *.jpeg *.gif
+prune docs/images
