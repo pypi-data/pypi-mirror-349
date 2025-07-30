@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+easysweeps/__init__.py
+easysweeps/cli.py
+easysweeps/config.py
+easysweeps/launch_agents.py
+easysweeps/launch_sweeps.py
+easysweeps/utils.py
+easysweeps.egg-info/PKG-INFO
+easysweeps.egg-info/SOURCES.txt
+easysweeps.egg-info/dependency_links.txt
+easysweeps.egg-info/entry_points.txt
+easysweeps.egg-info/requires.txt
+easysweeps.egg-info/top_level.txt
