@@ -1,0 +1,8 @@
+dinger_payment/__init__.py,sha256=NVwVkZDibJxWSDrL-DY7xb5Y7ThbyZlC48sxpFy2nNM,113
+dinger_payment/decrypt.py,sha256=AVQMpib5-vyON_zu2vDeOW029p4SwyOw_ZNkYYRpPvM,882
+dinger_payment/encrypt.py,sha256=uISdqICQKIEifAa6NEpTvwoJXiZJvxs7yaEptqu3hdQ,580
+dinger_payment/prebuild.py,sha256=FL3pTubZwCwT95OPeCV5U_dPMVWHQEjp18TNTKPoLSA,668
+dinger_payment/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dinger_payment-2.0.8.dist-info/METADATA,sha256=Uk9WyvIt-3eh7jMbjB6ABSBjKZI4qhOvMI8VY_u5NDU,2325
+dinger_payment-2.0.8.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+dinger_payment-2.0.8.dist-info/RECORD,,
