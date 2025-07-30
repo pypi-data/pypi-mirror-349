@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+vcut/__init__.py
+vcut/main.py
+vcut/processor.py
+vcut/transitions.py
+vcut.egg-info/PKG-INFO
+vcut.egg-info/SOURCES.txt
+vcut.egg-info/dependency_links.txt
+vcut.egg-info/entry_points.txt
+vcut.egg-info/requires.txt
+vcut.egg-info/top_level.txt

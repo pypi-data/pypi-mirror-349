@@ -1,0 +1,39 @@
+Metadata-Version: 2.4
+Name: vcut
+Version: 0.0.3
+Summary: Video transition and splicing tool
+Author-email: Casper <solitaryreach@gmail.com>
+Keywords: mcp
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: opencv-python>=4.5.0
+Requires-Dist: numpy>=1.19.0
+Requires-Dist: mcp[cli]>=1.6.0
+Requires-Dist: twine>=6.1.0
+Requires-Dist: build>=1.2.2.post1
+
+## Quickstart
+
+Install `uv` (Python package manager), install with `curl -LsSf https://astral.sh/uv/install.sh | sh`
+
+### Claude Desktop
+
+Go to Claude > Settings > Developer > Edit Config > claude_desktop_config.json to include the following:
+```json
+{
+  "mcpServers": {
+    "VCut": {
+      "command": "uvx",
+      "args": ["vcut"]
+    }
+  }
+}
+```
+
+If you're using Windows, you will have to enable "Developer Mode" in Claude Desktop to use the MCP server. Click "Help" in the hamburger menu in the top left and select "Enable Developer Mode".
+
+### Cursor
+Go to Cursor -> Preferences -> Cursor Settings -> MCP -> Add new global MCP Server to add above config.
+
+That's it. Your MCP client can now interact with VCut.
+

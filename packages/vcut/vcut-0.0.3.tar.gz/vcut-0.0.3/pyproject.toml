@@ -1,0 +1,35 @@
+[project]
+name = "vcut"
+version = "0.0.3"
+description = "Video transition and splicing tool"
+
+authors = [
+    {name = "Casper", email = "solitaryreach@gmail.com"}
+]
+
+readme = "README.md"
+requires-python = ">=3.6"
+dependencies = [
+    "opencv-python>=4.5.0",
+    "numpy>=1.19.0",
+    "mcp[cli]>=1.6.0",
+    "twine>=6.1.0",
+    "build>=1.2.2.post1",
+]
+
+keywords = [
+    "mcp",
+]
+
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["vcut*"]
+
+[project.scripts]
+vcut = "vcut.main:main"
