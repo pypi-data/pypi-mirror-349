@@ -1,0 +1,19 @@
+Metadata-Version: 2.3
+Name: memoryos-core
+Version: 0.0.1
+Summary: Core module for memoryos.
+Author: dany
+Author-email: 973031439@qq.com
+Requires-Python: >=3.10
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Description-Content-Type: text/markdown
+
+# memoryos-core
+
+This package name has been reserved for future use.
+
+
