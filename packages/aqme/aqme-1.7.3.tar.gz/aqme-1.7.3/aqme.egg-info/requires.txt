@@ -1,0 +1,8 @@
+PyYAML
+pandas==2.2.3
+progress
+numpy==1.26.4
+rdkit==2024.3.3
+cclib==1.7.2
+cffi
+morfeus-ml==0.7.2
