@@ -1,0 +1,24 @@
+Metadata-Version: 2.4
+Name: netlite
+Version: 0.0.1
+Summary: A small white-box training framework for neural networks for education.
+Project-URL: Homepage, https://github.com/haho12/netlite
+Project-URL: Issues, https://github.com/haho12/netlite/issues
+Author-email: Hanno Homann <hanno.homann@example.com>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# NetLite
+
+A small white-box training framework for neural networks for education.
+
+
+
+## References
+
+[LeNet5](https://github.com/chuanqi305/LeNet5): A plain numpy implementation of LeNet5 with convolutional layers.  
+[JB Grabowski](http://www.jbgrabowski.com/notebooks/neural-net/): A Jupyter notebook using ADAM optimization for fully connected layers.
