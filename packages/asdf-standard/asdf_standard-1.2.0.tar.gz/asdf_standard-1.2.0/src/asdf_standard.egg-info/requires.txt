@@ -1,0 +1,15 @@
+
+[docs]
+tomli
+sphinx>=4.0
+sphinx-asdf>=0.1.3
+graphviz
+matplotlib
+docutils
+furo
+
+[test]
+pytest
+pyyaml
+asdf>=3.0.0
+packaging>=16.0
