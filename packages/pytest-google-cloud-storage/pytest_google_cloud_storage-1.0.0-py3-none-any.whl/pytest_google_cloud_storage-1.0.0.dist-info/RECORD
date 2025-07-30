@@ -1,0 +1,13 @@
+pytest_gcs/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytest_gcs/storage/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytest_gcs/storage/logging_strings.py,sha256=hwGBm8266Cm9vQ5ZeGN-q_7IH1A2twM06raE_cfOHSo,171
+pytest_gcs/storage/plugin.py,sha256=IszPjvEzzwev1LXqpHSv9OlTlv5guL82GpqOGcSj9o8,6515
+pytest_gcs/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytest_gcs/tests/conftest.py,sha256=Pxu9eCiUajMAvND99-ykGXGVIld0iGkEgCOLKW41Sfc,159
+pytest_gcs/tests/test_common_usage.py,sha256=VMAmAJdQnFkBvrQFr6v1_b5Mxrjq0m37Nqw53Vf6Akg,1365
+pytest_google_cloud_storage-1.0.0.dist-info/licenses/LICENSE,sha256=y-Tpshdjupp8sT1hyiACbXuPGpK5JX12tXljn0R5Pho,1064
+pytest_google_cloud_storage-1.0.0.dist-info/METADATA,sha256=ZacciR-RmFOj1Bm9ao5249WvCtrnvV1ruuiJXnQmtso,4344
+pytest_google_cloud_storage-1.0.0.dist-info/WHEEL,sha256=Nw36Djuh_5VDukK0H78QzOX-_FQEo6V37m3nkm96gtU,91
+pytest_google_cloud_storage-1.0.0.dist-info/entry_points.txt,sha256=mn8LQlt3kSN9KW3VMrhhXVnK2ilrD1TWU9XH4E3ysJY,47
+pytest_google_cloud_storage-1.0.0.dist-info/top_level.txt,sha256=bPxpxxGKKb86qtYqilooj4LbydxX2Z-OUqrQHJ0hU-w,11
+pytest_google_cloud_storage-1.0.0.dist-info/RECORD,,
