@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/PyBreathParams/__init__.py
+src/PyBreathParams/activity_classifier.py
+src/PyBreathParams/get_breath_params.py
+src/PyBreathParams/ie_classifier.py
+src/PyBreathParams.egg-info/PKG-INFO
+src/PyBreathParams.egg-info/SOURCES.txt
+src/PyBreathParams.egg-info/dependency_links.txt
+src/PyBreathParams.egg-info/requires.txt
+src/PyBreathParams.egg-info/top_level.txt
