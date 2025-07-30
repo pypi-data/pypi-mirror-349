@@ -1,0 +1,17 @@
+pxr-js/cmake/pxr-js/pxr-js-config-version.cmake,sha256=I6Zxd_6AP9A7_MIOrsDz917maCG4X_J8KOh8Zt5e5Z0,1862
+pxr-js/cmake/pxr-js/pxr-js-config.cmake,sha256=NSYjIGuR5s-CsowwkZRaPBmDJ2bcRdVnGWMFCjxFAj0,1055
+pxr-js/cmake/pxr-js/pxr-js-targets-release.cmake,sha256=lyL3-1Z0qiCD2NF0bXr7nlKZhlkL8agtDNuFdOTdMrU,828
+pxr-js/cmake/pxr-js/pxr-js-targets.cmake,sha256=W9UXUcSGYdAvBFCm4Hm0xSCdB9ai3QK2h8E5D_c8Ry4,4147
+pxr-js/include/pxr/js/api.h,sha256=MwuW8f-kEyqCsPNrjJ_dycPvJfosW-u1Xvf4BatT_PM,903
+pxr-js/include/pxr/js/converter.h,sha256=U4beJNazB_71x_21gWNZ3mPMh43kTCrFk1Et15i5dco,4409
+pxr-js/include/pxr/js/json.h,sha256=dAhK4PUu2KNKZnEm1w_CieuMJXraqSYhIJCyliAncKc,6232
+pxr-js/include/pxr/js/pch.h,sha256=Ma6-7Q9kHCCjwbH8An7B_wO-Ump3zT3ro4ij4Lwtgrs,823
+pxr-js/include/pxr/js/types.h,sha256=GnFSg-CN_e4law4FaO8wpd367pOUP8B0Gu0VLq1lo4Q,459
+pxr-js/include/pxr/js/utils.h,sha256=ZygxIMox1fRuxlht0bBJZMBQsFXhr1tndEgxwhBzTlI,829
+pxr-js/include/pxr/js/value.h,sha256=swuEu1iDXpVte1fMZ9TUiq4hXtKHvmY6tzdiitVYMiY,9327
+pxr-js/lib/libPxrJs.dylib,sha256=xLt0-4f9bqF-VoaM7WOZxKec5XqRkHazJDyd2OzAbv8,253488
+pxr_js_dev-25.5.1.1.dist-info/METADATA,sha256=m5nc9Cm30S-PRHsTSk5T9lIHfhUacLwkiPUCQsihR4w,2041
+pxr_js_dev-25.5.1.1.dist-info/WHEEL,sha256=5eBFX53XdFp7rnXTQzz3GsPBwl8W8wQhi8szJ6oUepM,119
+pxr_js_dev-25.5.1.1.dist-info/licenses/NOTICE.txt,sha256=k6ldE5TIDcCuglcT9C5Yod0oPtv0Ta_x8-h6HZ3y3n4,149
+pxr_js_dev-25.5.1.1.dist-info/licenses/LICENSE.txt,sha256=ZwtoQ2WAzeEDPUjif6rvCGcw_H9TOi6b2qGwP_ZDbsE,15596
+pxr_js_dev-25.5.1.1.dist-info/RECORD,,
