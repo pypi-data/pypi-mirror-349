@@ -1,0 +1,115 @@
+[build-system]
+build-backend = 'flit_core.buildapi'
+requires = ['flit_core >=3.4,<4']
+
+[project]
+authors = [{name = 'Sebastiaan P. Huber', email = 'mail@sphuber.net'}]
+classifiers = [
+  'Development Status :: 5 - Production/Stable',
+  'Framework :: AiiDA',
+  'License :: OSI Approved :: MIT License',
+  'Operating System :: POSIX :: Linux',
+  'Operating System :: MacOS :: MacOS X',
+  'Programming Language :: Python',
+  'Programming Language :: Python :: 3.9',
+  'Programming Language :: Python :: 3.10',
+  'Programming Language :: Python :: 3.11',
+  'Programming Language :: Python :: 3.12',
+  'Programming Language :: Python :: 3.13'
+]
+dependencies = [
+  'aiida-core~=2.6',
+  'click~=8.0,<8.2',
+  'pint>=0.23.0,<0.25.0',
+  'requests~=2.20'
+]
+dynamic = ['description', 'version']
+keywords = ['aiida', 'pseudopotentials']
+license = {file = 'LICENSE.txt'}
+name = 'aiida-pseudo'
+readme = 'README.md'
+requires-python = '>=3.9'
+
+[project.entry-points.'aiida.data']
+'pseudo' = 'aiida_pseudo.data.pseudo.pseudo:PseudoPotentialData'
+'pseudo.jthxml' = 'aiida_pseudo.data.pseudo.jthxml:JthXmlData'
+'pseudo.psf' = 'aiida_pseudo.data.pseudo.psf:PsfData'
+'pseudo.psml' = 'aiida_pseudo.data.pseudo.psml:PsmlData'
+'pseudo.psp8' = 'aiida_pseudo.data.pseudo.psp8:Psp8Data'
+'pseudo.upf' = 'aiida_pseudo.data.pseudo.upf:UpfData'
+'pseudo.vps' = 'aiida_pseudo.data.pseudo.vps:VpsData'
+
+[project.entry-points.'aiida.groups']
+'pseudo.family' = 'aiida_pseudo.groups.family.pseudo:PseudoPotentialFamily'
+'pseudo.family.cutoffs' = 'aiida_pseudo.groups.family.cutoffs:CutoffsPseudoPotentialFamily'
+'pseudo.family.pseudo_dojo' = 'aiida_pseudo.groups.family.pseudo_dojo:PseudoDojoFamily'
+'pseudo.family.sssp' = 'aiida_pseudo.groups.family.sssp:SsspFamily'
+
+[project.optional-dependencies]
+dev = [
+  'pre-commit~=2.2',
+  'pytest>=6.0'
+]
+docs = [
+  'sphinx~=6.0',
+  'sphinx-copybutton~=0.5.0',
+  'sphinx-book-theme~=1.0',
+  'sphinx-autoapi~=3.3.3',
+  'sphinx-click~=4.0'
+]
+
+[project.scripts]
+aiida-pseudo = 'aiida_pseudo.cli:cmd_root'
+
+[project.urls]
+Documentation = 'https://aiida-pseudo.readthedocs.io'
+Home = 'https://github.com/aiidateam/aiida-pseudo'
+Source = 'https://github.com/aiidateam/aiida-pseudo'
+
+[tool.flit.module]
+name = 'aiida_pseudo'
+
+[tool.flit.sdist]
+exclude = [
+  '.github/',
+  'docs/',
+  'tests/'
+]
+
+[tool.pytest.ini_options]
+filterwarnings = [
+  'ignore:Creating AiiDA configuration folder.*:UserWarning',
+  'ignore:.*:sqlalchemy.exc.SAWarning'
+]
+minversion = '6.0'
+testpaths = [
+  'tests'
+]
+
+[tool.ruff]
+ignore = [
+  'F403',  # Star imports unable to detect undefined names
+  'F405',  # Import may be undefined or defined from star imports
+  'PLR0911',  # Too many return statements
+  'PLR0912',  # Too many branches
+  'PLR0913',  # Too many arguments in function definition
+  'PLR0915',  # Too many statements
+  'PLR2004'  # Magic value used in comparison
+]
+line-length = 120
+select = [
+  'E',  # pydocstyle
+  'W',  # pydocstyle
+  'F',  # pyflakes
+  'I',  # isort
+  'N',  # pep8-naming
+  'FLY',  # flynt (prefer f-strings)
+  'PLC',  # pylint-convention
+  'PLE',  # pylint-error
+  'PLR',  # pylint-refactor
+  'PLW',  # pylint-warning
+  'RUF'  # ruff
+]
+
+[tool.ruff.format]
+quote-style = 'single'
