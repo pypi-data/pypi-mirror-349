@@ -1,0 +1,11 @@
+pygame3d/__init__.py,sha256=dnw1CDRk6HV-dDrKpl3RMysilqmgHrdaO-w2RZj5oio,134
+pygame3d/camera.py,sha256=KIsQckHkPknOwnbSFU5liFfNmHCdXQvY6xk-Xdffoeg,697
+pygame3d/entity.py,sha256=_c6M02qnrrohtdHs0EEqQVTzS3qEaWsqd7vHs7fAdA8,626
+pygame3d/light.py,sha256=whyn2r9DGPrayFuD_exHKUTNTeKJRJYXN47nf1R-YZA,903
+pygame3d/mesh.py,sha256=A3V3IvXy_4m62z9wABJYiBrbLFhk9RzL4j_oEbn0gpM,276
+pygame3d/surface3d.py,sha256=2ly1fZj_meYjrokCVz-axhJdl_IMPrllIs9V1OyZdG8,3789
+pygame3d-0.1.dist-info/licenses/LICENSE,sha256=YbHTR7SMHyQh4Uj7-K2COFgPqt2Zg2N8C0N9L91bo74,1064
+pygame3d-0.1.dist-info/METADATA,sha256=7Zb0YczHeHjjj1FYREHYywYLko_9XiGF_SDerU-Bj5A,1203
+pygame3d-0.1.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+pygame3d-0.1.dist-info/top_level.txt,sha256=duAOui4h3d3pQ2GaVKv61S6ZvEHpvbtA11cXNclikeg,9
+pygame3d-0.1.dist-info/RECORD,,
