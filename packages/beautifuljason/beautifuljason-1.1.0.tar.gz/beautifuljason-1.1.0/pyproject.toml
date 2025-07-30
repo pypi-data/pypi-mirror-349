@@ -1,0 +1,37 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "beautifuljason"
+version = "1.1.0"
+description = "A Python Interface for JASON Software by JEOL"
+authors = [{ name = "Nikolay Larin", email = "nikolay.larin@jeoluk.com" }]
+readme = "README.rst"
+license = { file = "LICENSE" }
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Science/Research",
+    "Natural Language :: English",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Scientific/Engineering :: Chemistry",
+    "Topic :: Scientific/Engineering :: Physics",
+    "Topic :: Scientific/Engineering :: Visualization",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+dependencies = ["h5py>=3.11.0", "numpy", "colorama", "pillow"]
+requires-python = ">=3.10"
+
+[project.urls]
+# Add any relevant URLs for your project here (documentation, repository, etc.)
+
+[project.scripts]
+jason_batch_convert = "beautifuljason.tools.jason_batch_convert:main"
+jason_config = "beautifuljason.tools.jason_config:main"
+batch_extract_integrals = "beautifuljason.tools.batch_extract_integrals:main"
+jason_watchdog = "beautifuljason.tools.jason_watchdog:main"
