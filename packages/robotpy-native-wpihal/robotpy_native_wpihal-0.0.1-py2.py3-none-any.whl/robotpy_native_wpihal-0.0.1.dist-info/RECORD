@@ -1,0 +1,6 @@
+./PKG-INFO,sha256=CiZkIsZg8XgbujqGE4DO0I49-lI0gaQTEP9P-JmDBZk,128
+./dist.sh,sha256=Tb_RdOJeBel0g_by56KGJ3ElT3R1ITVF5NsjXrxXsws,63
+./pyproject.toml,sha256=rUs-xQ5hykaZE8Oq5Ljf91N0GpSSR7UawmowbrFysHg,264
+robotpy_native_wpihal-0.0.1.dist-info/METADATA,sha256=CiZkIsZg8XgbujqGE4DO0I49-lI0gaQTEP9P-JmDBZk,128
+robotpy_native_wpihal-0.0.1.dist-info/WHEEL,sha256=tkmg4JIqwd9H8mL30xA7crRmoStyCtGp0VWshokd1Jc,105
+robotpy_native_wpihal-0.0.1.dist-info/RECORD,,
