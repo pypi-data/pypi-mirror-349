@@ -1,0 +1,6 @@
+README.md
+setup.py
+content_accessibilty_utility_on_aws.egg-info/PKG-INFO
+content_accessibilty_utility_on_aws.egg-info/SOURCES.txt
+content_accessibilty_utility_on_aws.egg-info/dependency_links.txt
+content_accessibilty_utility_on_aws.egg-info/top_level.txt
