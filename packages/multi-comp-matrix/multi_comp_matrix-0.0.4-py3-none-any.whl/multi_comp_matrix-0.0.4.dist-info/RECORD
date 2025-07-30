@@ -1,0 +1,10 @@
+multi_comp_matrix/MCM.py,sha256=4HvULhuDUU8dIwwEsZXo294SvpDFB3mGIEZ8m8KIXVs,31883
+multi_comp_matrix/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+multi_comp_matrix/utils.py,sha256=p03S8PalqIyjsVGoC1mZbxru9ldkLf761kGiYWjB2ZM,26042
+multi_comp_matrix/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+multi_comp_matrix/tests/test_mcm.py,sha256=HmmFKpWrbDkbBFpIONAjYoWepWfpW68S7VhucoVXU04,1937
+multi_comp_matrix-0.0.4.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+multi_comp_matrix-0.0.4.dist-info/METADATA,sha256=VxY-PqvCzMrhQdI6z_ZiVvTzeqDiAck5utkBqnBF920,11214
+multi_comp_matrix-0.0.4.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+multi_comp_matrix-0.0.4.dist-info/top_level.txt,sha256=RZRLq5Oedie_zhs_GkVfL3R545xDGEZImJFMi9N3ew0,18
+multi_comp_matrix-0.0.4.dist-info/RECORD,,
