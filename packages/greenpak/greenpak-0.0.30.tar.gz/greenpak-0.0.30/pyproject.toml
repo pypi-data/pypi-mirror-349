@@ -1,0 +1,53 @@
+# Doc:
+# https://hatch.pypa.io/latest/config/build/
+#
+# Examples:
+# https://github.com/pypa/hatch/blob/master/pyproject.toml
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "greenpak"
+version = "0.0.30"
+authors = [
+  { name="Zapta", email="zapta@zapta.com" },
+]
+description = "An easy to use Python API for programming and accessing Renesas's GreenPak SPLD devices."
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    "i2c_adapter >=0.0.4",
+    "i2cdriver >=1.0.1",
+    "intelhex>=2.3.0",
+    "smbus2==0.4.3",
+    "hackPyrateBus>=0.0.6",
+    "typing_extensions>=4.7.1",
+]
+
+[tool.hatch.build.targets.sdist]
+# NOTE: The package directory below must match the project name above.
+include = [
+  "LICENSE",
+  "/src/greenpak",
+]
+# NOTE: root .gitignore can't be excluded per 
+# https://github.com/pypa/hatch/discussions/368
+exclude = [
+  ".gitignore",
+  ".vscode",
+  ".*.sh",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/zapta/greenpak"
+"Documentation" = "https://greenpak.readthedocs.io/en/latest/"
+"Bug Tracker" = "https://github.com/zapta/greenpak/issues"
+
