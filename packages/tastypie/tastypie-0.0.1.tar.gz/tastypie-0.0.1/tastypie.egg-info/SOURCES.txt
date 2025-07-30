@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+setup.py
+tastypie/__init__.py
+tastypie.egg-info/PKG-INFO
+tastypie.egg-info/SOURCES.txt
+tastypie.egg-info/dependency_links.txt
+tastypie.egg-info/top_level.txt
