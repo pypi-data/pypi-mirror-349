@@ -1,0 +1,10 @@
+LICENSE
+README.rst
+THIRD-PARTY_LICENSES.txt
+pyproject.toml
+src/pytapas.egg-info/PKG-INFO
+src/pytapas.egg-info/SOURCES.txt
+src/pytapas.egg-info/dependency_links.txt
+src/pytapas.egg-info/entry_points.txt
+src/pytapas.egg-info/requires.txt
+src/pytapas.egg-info/top_level.txt
