@@ -1,0 +1,10 @@
+captcha_prune/__init__.py,sha256=JerrqDuZCUa8pj_9pEv68rnlPsiXovRP4biKpCqyThs,61
+captcha_prune/apps.py,sha256=WVAz3WWaPAgM7-Ojd_Cl2KVdcub1n-03qpnRyu2ToTo,422
+captcha_prune/asgi.py,sha256=JoxjDwB6GttsGjXKPxEAR0-r8HAFgdg7QNQ36LQpbxw,174
+captcha_prune/settings.py,sha256=YEZHEjYYYK-cH3gSLIR3a7g4Bypnuf_5eMTTcm719CE,3395
+captcha_prune/utils.py,sha256=0wgRNCfmAAugFh5sw3qk-YqvNMiMZgJRtd6QlpRa-D8,1861
+captcha_prune/wsgi.py,sha256=9Voquvmt99N0h_URABBvpZUpg9zcx3e5yLJ7M33xzWY,174
+prune_captcha-1.14.0.dist-info/METADATA,sha256=_NhyAu6m1CN1PHLSA4d3RdBqzHcd--8W3Hx8O6L5Xi4,3769
+prune_captcha-1.14.0.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+prune_captcha-1.14.0.dist-info/top_level.txt,sha256=01HnLL5Bu66yMBCvNpNBzN0L6AxTdG1_1YFSJr3dI2w,14
+prune_captcha-1.14.0.dist-info/RECORD,,
