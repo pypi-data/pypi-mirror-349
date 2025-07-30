@@ -1,0 +1,7 @@
+datum-authorization/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+datum-authorization/azure_validator.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+datum-authorization/keycloak_validator.py,sha256=dJmhPglw2B1CkZ9qYiRukdPbKKTAPGwR6vVkZvOWLZ8,8357
+authorization_module-0.1.1.dist-info/METADATA,sha256=rB5e9bSHL35NIUSFpIwQ-rPCcc6ZjDBekuO1D7BvoCQ,274
+authorization_module-0.1.1.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+authorization_module-0.1.1.dist-info/top_level.txt,sha256=6aHiJMfytRwmxASubsIncZiDWoLFRZxFzJ-yLwzqVAY,20
+authorization_module-0.1.1.dist-info/RECORD,,
