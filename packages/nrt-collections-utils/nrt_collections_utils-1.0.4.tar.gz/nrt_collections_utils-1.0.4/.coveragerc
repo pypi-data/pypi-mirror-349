@@ -1,0 +1,24 @@
+[run]
+branch = True
+
+source = nrt_collections_utils/
+
+omit =
+    venv/*
+    tests/*
+    */__init__.py
+    */tests_execution.py
+
+[report]
+exclude_lines =
+    if __name__ == .__main__.:
+
+[html]
+directory = coverage_report/html
+
+[json]
+output = coverage_report/report.json
+pretty_print = true
+
+[lcov]
+output = coverage_report/lcov.info

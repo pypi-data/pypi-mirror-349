@@ -1,0 +1,435 @@
+{
+    "meta": {
+        "format": 2,
+        "version": "7.5.3",
+        "timestamp": "2025-05-21T22:12:36.492849",
+        "branch_coverage": true,
+        "show_contexts": false
+    },
+    "files": {
+        "nrt_collections_utils\\collections_utils.py": {
+            "executed_lines": [
+                3,
+                5,
+                6,
+                7,
+                9,
+                10,
+                12,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                21,
+                23,
+                24,
+                25,
+                26,
+                28,
+                29,
+                31,
+                32,
+                34,
+                35,
+                37,
+                38,
+                40,
+                42,
+                43,
+                44,
+                46,
+                47,
+                48,
+                50,
+                52
+            ],
+            "summary": {
+                "covered_lines": 35,
+                "num_statements": 35,
+                "percent_covered": 100.0,
+                "percent_covered_display": "100",
+                "missing_lines": 0,
+                "excluded_lines": 0,
+                "num_branches": 32,
+                "num_partial_branches": 0,
+                "covered_branches": 32,
+                "missing_branches": 0
+            },
+            "missing_lines": [],
+            "excluded_lines": [],
+            "executed_branches": [
+                [
+                    6,
+                    5
+                ],
+                [
+                    6,
+                    14
+                ],
+                [
+                    9,
+                    10
+                ],
+                [
+                    9,
+                    12
+                ],
+                [
+                    15,
+                    14
+                ],
+                [
+                    15,
+                    23
+                ],
+                [
+                    24,
+                    23
+                ],
+                [
+                    24,
+                    42
+                ],
+                [
+                    25,
+                    26
+                ],
+                [
+                    25,
+                    28
+                ],
+                [
+                    28,
+                    29
+                ],
+                [
+                    28,
+                    31
+                ],
+                [
+                    29,
+                    -29
+                ],
+                [
+                    29,
+                    -23
+                ],
+                [
+                    29,
+                    29
+                ],
+                [
+                    31,
+                    32
+                ],
+                [
+                    31,
+                    34
+                ],
+                [
+                    32,
+                    -32
+                ],
+                [
+                    32,
+                    -23
+                ],
+                [
+                    32,
+                    32
+                ],
+                [
+                    34,
+                    35
+                ],
+                [
+                    34,
+                    37
+                ],
+                [
+                    35,
+                    -35
+                ],
+                [
+                    35,
+                    -23
+                ],
+                [
+                    35,
+                    35
+                ],
+                [
+                    37,
+                    38
+                ],
+                [
+                    37,
+                    40
+                ],
+                [
+                    38,
+                    -38
+                ],
+                [
+                    38,
+                    -23
+                ],
+                [
+                    38,
+                    38
+                ],
+                [
+                    43,
+                    -3
+                ],
+                [
+                    43,
+                    42
+                ],
+                [
+                    46,
+                    47
+                ],
+                [
+                    46,
+                    50
+                ],
+                [
+                    47,
+                    48
+                ],
+                [
+                    47,
+                    52
+                ]
+            ],
+            "missing_branches": []
+        },
+        "nrt_collections_utils\\dict_utils.py": {
+            "executed_lines": [
+                3,
+                5,
+                6,
+                8,
+                9,
+                11,
+                12,
+                13,
+                15,
+                17
+            ],
+            "summary": {
+                "covered_lines": 10,
+                "num_statements": 10,
+                "percent_covered": 100.0,
+                "percent_covered_display": "100",
+                "missing_lines": 0,
+                "excluded_lines": 0,
+                "num_branches": 8,
+                "num_partial_branches": 0,
+                "covered_branches": 8,
+                "missing_branches": 0
+            },
+            "missing_lines": [],
+            "excluded_lines": [],
+            "executed_branches": [
+                [
+                    6,
+                    -3
+                ],
+                [
+                    6,
+                    5
+                ],
+                [
+                    8,
+                    9
+                ],
+                [
+                    8,
+                    11
+                ],
+                [
+                    11,
+                    12
+                ],
+                [
+                    11,
+                    17
+                ],
+                [
+                    12,
+                    13
+                ],
+                [
+                    12,
+                    15
+                ]
+            ],
+            "missing_branches": []
+        },
+        "nrt_collections_utils\\list_utils.py": {
+            "executed_lines": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                9,
+                10,
+                11,
+                13,
+                14,
+                15,
+                17,
+                19,
+                20,
+                21,
+                23,
+                24,
+                25,
+                27,
+                28,
+                29,
+                31,
+                32,
+                33
+            ],
+            "summary": {
+                "covered_lines": 24,
+                "num_statements": 24,
+                "percent_covered": 100.0,
+                "percent_covered_display": "100",
+                "missing_lines": 0,
+                "excluded_lines": 0,
+                "num_branches": 24,
+                "num_partial_branches": 0,
+                "covered_branches": 24,
+                "missing_branches": 0
+            },
+            "missing_lines": [],
+            "excluded_lines": [],
+            "executed_branches": [
+                [
+                    5,
+                    4
+                ],
+                [
+                    5,
+                    19
+                ],
+                [
+                    6,
+                    7
+                ],
+                [
+                    6,
+                    9
+                ],
+                [
+                    9,
+                    10
+                ],
+                [
+                    9,
+                    13
+                ],
+                [
+                    10,
+                    9
+                ],
+                [
+                    10,
+                    11
+                ],
+                [
+                    13,
+                    14
+                ],
+                [
+                    13,
+                    17
+                ],
+                [
+                    14,
+                    13
+                ],
+                [
+                    14,
+                    15
+                ],
+                [
+                    20,
+                    19
+                ],
+                [
+                    20,
+                    23
+                ],
+                [
+                    21,
+                    -21
+                ],
+                [
+                    21,
+                    -19
+                ],
+                [
+                    21,
+                    21
+                ],
+                [
+                    24,
+                    23
+                ],
+                [
+                    24,
+                    27
+                ],
+                [
+                    25,
+                    -25
+                ],
+                [
+                    25,
+                    -23
+                ],
+                [
+                    25,
+                    25
+                ],
+                [
+                    28,
+                    27
+                ],
+                [
+                    28,
+                    31
+                ],
+                [
+                    32,
+                    -3
+                ],
+                [
+                    32,
+                    31
+                ]
+            ],
+            "missing_branches": []
+        }
+    },
+    "totals": {
+        "covered_lines": 69,
+        "num_statements": 69,
+        "percent_covered": 100.0,
+        "percent_covered_display": "100",
+        "missing_lines": 0,
+        "excluded_lines": 0,
+        "num_branches": 64,
+        "num_partial_branches": 0,
+        "covered_branches": 64,
+        "missing_branches": 0
+    }
+}
