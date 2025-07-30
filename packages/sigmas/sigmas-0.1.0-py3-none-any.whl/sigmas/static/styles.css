@@ -1,0 +1,219 @@
+:root {
+    /* Catppuccin Mocha palette */
+    --base: #303446;
+    --mantle: #292c3c;
+    --crust: #232634;
+    --text: #c6d0f5;
+    --subtext1: #b5bfe2;
+    --surface0: #414559;
+    --surface1: #51576d;
+    --blue: #8caaee;
+    --lavender: #babbf1;
+    --pink: #f4b8e4;
+}
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('/static/fonts/JetBrainsMono-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('/static/fonts/JetBrainsMono-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+    background-color: var(--base);
+    color: var(--text);
+    font-family: 'JetBrains Mono', monospace; 
+    margin: 0;
+    padding: 2rem;
+}
+
+h1 {
+    text-align: center;
+    font-size: x-large;
+    color: var(--lavender);
+    margin-bottom: 4rem;
+}
+
+.form-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.form-left{
+    display: flex;
+    margin-left: 9%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1em;
+}
+
+.form-right{
+    display: flex;
+    margin-right: 9%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1em;
+}
+
+.choose{
+    margin-left: 9%;
+    margin-bottom: 2rem;
+}
+
+.submit-row {
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+
+input[type="number"], select {
+    background-color: var(--surface0);
+    border: 1px solid var(--surface1);
+    border-radius: 8px;
+    color: var(--text);
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+}
+
+input[type="submit"] {
+    background-color: var(--blue);
+    color: var(--base);
+    border: none;
+    border-radius: 8px;
+    padding: 0.8rem 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--lavender);
+}
+
+.js9-container {
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-start;
+    align-items: center;
+    margin-top: 2rem;
+    background-color: var(--mantle);
+    padding: 1.5rem;
+    border-radius: 12px;
+}
+
+.sim_text {
+    margin-bottom: 1em;
+    color: var(--subtext1);
+    text-align: center;
+}
+
+label {
+    color: var(--subtext1);
+    margin-bottom: 0.5rem;
+    display: inline-block;
+}
+
+/* JS9 specific overrides */
+.JS9Menubar {
+    background-color: var(--surface0) !important;
+    border-radius: 8px 8px 0 0;
+}
+
+.JS9 {
+    background-color: var(--surface0) !important;
+    border-radius: 0 0 8px 8px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.welcome-button {
+    background-color: var(--blue);
+    color: var(--base);
+    border: none;
+    border-radius: 8px;
+    padding: 1.2rem 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.welcome-button:hover {
+    background-color: var(--lavender);
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.welcome-button {
+    background-color: var(--blue);
+    color: var(--base);
+    border: none;
+    border-radius: 8px;
+    padding: 1.2rem 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.welcome-button:hover {
+    background-color: var(--lavender);
+}
+
+.home-button {
+    position: fixed;
+    top: 2.8rem;  /* Slightly adjusted to align with title */
+    left: 2rem;
+    background-color: var(--surface0);
+    color: var(--text);
+    border: none;
+    border-radius: 8px;
+    padding: 0.2rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+}
+
+.home-button:hover {
+    background-color: var(--lavender);
+    color: var(--base);
+}
+
+.flashes {
+    margin: 0;
+    padding: 0;
+    margin-left: 9%;
+    color: var(--text);
+}
+
+.flashes li {
+    margin-bottom: 1rem;
+}
