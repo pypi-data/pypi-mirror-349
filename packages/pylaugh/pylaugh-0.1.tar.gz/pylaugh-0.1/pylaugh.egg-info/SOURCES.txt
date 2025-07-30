@@ -1,0 +1,9 @@
+LICENSE.txt
+README.md
+setup.py
+pylaugh/__init__.py
+pylaugh/humor.py
+pylaugh.egg-info/PKG-INFO
+pylaugh.egg-info/SOURCES.txt
+pylaugh.egg-info/dependency_links.txt
+pylaugh.egg-info/top_level.txt
