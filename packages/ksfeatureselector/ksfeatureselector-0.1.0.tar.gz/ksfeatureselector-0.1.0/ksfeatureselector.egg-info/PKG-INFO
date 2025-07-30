@@ -1,0 +1,59 @@
+Metadata-Version: 2.4
+Name: ksfeatureselector
+Version: 0.1.0
+Summary: Select features using Kolmogorov–Smirnov (K-S) test for binary classification tasks.
+Author: V Subrahmanya Raghu Ram Kishore Parupudi
+Author-email: V Subrahmanya Raghu Ram Kishore Parupudi <pvsrrkishore@gmail.com>
+License: MIT
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: pandas>=1.0.0
+Requires-Dist: scipy>=1.5.0
+Dynamic: author
+Dynamic: requires-python
+
+## KSFeatureSelector
+
+`KSFeatureSelector` is a lightweight Python package for selecting the most discriminatory features 
+in a binary classification problem using the Kolmogorov–Smirnov (K-S) test.
+
+## Features
+
+- Uses the K-S test to rank features by their ability to separate classes.
+- Supports filtering features by:
+  - A maximum p-value threshold.
+  - A fixed number of top features.
+- Easy-to-read, numpy-style docstrings and validations.
+- Pure Python + `pandas` + `scipy`.
+
+## Installation
+
+- bash
+    pip install ksfeatureselector
+
+- local
+    pip install .
+
+## Usage
+
+    from ksfeatureselector import select_ks_features
+
+    # Your DataFrame `df` should contain numerical features and a binary target column
+    x_cols = ['feature1', 'feature2', 'feature3']
+    y_var = 'target'
+
+    # Select top features based on p-value or top-n count
+    select_ks_features(df, x_cols, y_var, top_p=0.05)
+    # or
+    select_ks_features(df, x_cols, y_var, top_n=5)
+
+## License
+    - MIT License
+
+## Author
+    -- V Subrahmanya Raghu Ram Kishore Parupudi
+    -- email: pvsrrkishore@gmail.com
+
+
+
+
