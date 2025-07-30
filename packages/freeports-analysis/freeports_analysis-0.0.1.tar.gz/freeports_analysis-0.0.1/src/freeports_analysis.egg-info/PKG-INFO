@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: freeports_analysis
+Version: 0.0.1
+Summary: "Script for dumping a csv from different finance reports about ethical aspects"
+Author: "Oreste Sciacqualegni"
+Author-email: "orestesciacqualegni@tutanota.com"
+Maintainer: "Oreste Sciacqualegni"
+Maintainer-email: "orestesciacqualegni@tutanota.com"
+License-File: LICENSE
+Requires-Dist: importlib_resources
+Requires-Dist: rapidfuzz
+Requires-Dist: dotenv
+Requires-Dist: pyyaml
+Requires-Dist: pandas
+Requires-Dist: requests
+Requires-Dist: PyMuPDF
+Requires-Dist: lxml
+Dynamic: license-file
