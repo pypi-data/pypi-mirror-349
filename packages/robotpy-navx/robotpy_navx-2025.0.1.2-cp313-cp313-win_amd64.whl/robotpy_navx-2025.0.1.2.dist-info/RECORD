@@ -1,0 +1,15 @@
+navx/__init__.py,sha256=PGGTTyn7eUl8USrRsTobqO6jH3ZRuDDPIDG_4dPy7E4,185
+navx/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+navx/version.py,sha256=WiQMPGULBEPld1hkbMjyzO3pW0aiiWoNvAh2Dngt1MA,543
+navx/src/rpy/navx.cpp,sha256=cNvAI75FlFDAbBCu8xwXDTWLizHgTlrdrnOO1r9x1ns,90
+navx/_init__navx.py,sha256=a_9tExj7ONI_w2dyMMKDGDP_QxBXi8ieW6dVB3vIeBg,96
+navx/_navx.cp313-win_amd64.lib,sha256=9dtdNrDknGzA9CgIoSyWflzmQXZnDW4O2jTk4rWUhFI,19672
+navx/_navx.cp313-win_amd64.pyd,sha256=1fqZnZd4pQg-waNFQQ20hGtazAbogakdm09QhxuXO2U,375808
+navx/_navx.pyi,sha256=CMNaJvcGG_mp9iqd3s4eoxFrbiiaBYfE4NqatFjrbDE,36203
+navx/navx.pc,sha256=W6VFJgFtMuQpyG1ifwG894Qpop6HIKqykEq-1Egv9VE,258
+navx/trampolines/__studica__AHRS.hpp,sha256=OsSbb6lNqy9KJflcEmgu-AIyWYET_LiB-hIXoE5D1Pc,1782
+navx/trampolines/__studica__AHRS__BoardYawAxis.hpp,sha256=K3n65r-w9BRjcQ8wAwlceER6i9lLRKFd_RDMt19HSws,268
+robotpy_navx-2025.0.1.2.dist-info/METADATA,sha256=bGkYLV46Mw8g7pqdf6U0WgBVwEcfFonpdz1Eojxw9n8,308
+robotpy_navx-2025.0.1.2.dist-info/WHEEL,sha256=O7AUB0KTOxr_I9NzV8XaS6URMp4gsOs4mqmM2xDsrc0,97
+robotpy_navx-2025.0.1.2.dist-info/entry_points.txt,sha256=sHnA241Yf076pAjaU5EaKDJXEy_HIR9GltjNcz68Ffk,25
+robotpy_navx-2025.0.1.2.dist-info/RECORD,,
