@@ -1,0 +1,17 @@
+pymodularizer/__init__.py,sha256=5yWZQatgfgRUPz306IJtTPMNRYqgDIFZlxU5wFHuulc,94
+pymodularizer/__main__.py,sha256=1iVOwYnBAS_2XbctTIQViyW72AI8Cd2GNqadLn1m5W4,66
+pymodularizer/core/__init__.py,sha256=jSjtPXDJrn8v0NusBrx1QHxdf_l50rT1VomNZE2SizQ,73
+pymodularizer/core/cli.py,sha256=SZ_U4hE20IzkaSP61pmcWw4w0cHrII6FFEAs0VLzdfQ,3511
+pymodularizer/core/default_config.py,sha256=TjUBjdhVGrZK6J6pBw5n7dLFyupav7ucx1MZE4p1d18,139
+pymodularizer/core/generator.py,sha256=UWSLuJcrjmFVPhaTpx3PtVWVoClc_sjKk8-MvYtFPfc,577
+pymodularizer/core/utils.py,sha256=U1Ke_CPOOUDeG3EDMAVmZUORslwc9bihCD1S7OxNI3A,1054
+pymodularizer/helpers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pymodularizer/helpers/files.py,sha256=34fNp3Pm8scca88uugF3ARugYKwGe6XhJDIVP-Pe-DI,204
+pymodularizer/helpers/module.py,sha256=a1tV0kr_y3d-LA0l0UoXP2woOl6bK8-7AkUDCczbyww,397
+pymodularizer/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pymodularizer-1.0.2.dist-info/licenses/LICENSE,sha256=cZXLlKAWMFbx3udGJwa3s3lMz0BzVa6f5o7LILl2NcY,1099
+pymodularizer-1.0.2.dist-info/METADATA,sha256=IiqBAO4gEFIh3qBhs6a-qcAR3rTDa2NQS3xe2nkT_Gw,7292
+pymodularizer-1.0.2.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+pymodularizer-1.0.2.dist-info/entry_points.txt,sha256=b2ib52oxhwMIjv8L-qQUhWlJl57s1KC5LEd5_kULS0U,94
+pymodularizer-1.0.2.dist-info/top_level.txt,sha256=91YauxA_fPlkPj9nbi9DtF2Eei75uVk50xPq8Uzk5d0,14
+pymodularizer-1.0.2.dist-info/RECORD,,
