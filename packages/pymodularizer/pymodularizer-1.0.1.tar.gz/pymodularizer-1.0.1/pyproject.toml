@@ -1,0 +1,26 @@
+[project]
+name = "pymodularizer"
+version = "1.0.1"
+description = "Gerador de projetos Python modularizados"
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [
+  { name = "Hermes A. V. Urquijo", email = "hvurquijo@gmail.com" }
+]
+requires-python = ">=3.8"
+
+dependencies = [
+  "typer[all]",
+]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project.scripts]
+pymodularizer = "pymodularizer.core.cli:app"
+pym = "pymodularizer.core.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["pymodularizer*"]

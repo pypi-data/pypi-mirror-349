@@ -1,0 +1,3 @@
+[console_scripts]
+pym = pymodularizer.core.cli:app
+pymodularizer = pymodularizer.core.cli:app
