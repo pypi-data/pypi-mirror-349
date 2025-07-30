@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+CRPTBacktest/PyStrategy.py
+CRPTBacktest/__init__.py
+CRPTBacktest/python_simulator.cpython-312-x86_64-linux-gnu.so
+CRPTBacktest.egg-info/PKG-INFO
+CRPTBacktest.egg-info/SOURCES.txt
+CRPTBacktest.egg-info/dependency_links.txt
+CRPTBacktest.egg-info/top_level.txt
