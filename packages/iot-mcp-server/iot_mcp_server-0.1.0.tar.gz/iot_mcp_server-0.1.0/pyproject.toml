@@ -1,0 +1,22 @@
+[project]
+name = "iot-mcp-server"
+version = "0.1.0"
+description = "MCP server for IoT Cloud"
+readme = "README.md"
+authors = [
+    { name = "Johnson Lau", email = "gatement@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "mcp[cli]>=1.9.0",
+    "pyjwt>=2.10.1",
+    "requests>=2.32.3",
+]
+
+[project.scripts]
+iot-mcp-server = "iot_mcp_server:main"
+test = "iot_mcp_server.test:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
