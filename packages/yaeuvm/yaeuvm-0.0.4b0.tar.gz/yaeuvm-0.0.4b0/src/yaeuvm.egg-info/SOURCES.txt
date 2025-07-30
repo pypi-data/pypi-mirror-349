@@ -1,0 +1,17 @@
+LICENSE.txt
+README.md
+pyproject.toml
+src/yaeuvm/__init__.py
+src/yaeuvm/_misc.py
+src/yaeuvm/_yaeuvm_ba.py
+src/yaeuvm/_yaeuvm_br.py
+src/yaeuvm/_yaeuvm_r.py
+src/yaeuvm.egg-info/PKG-INFO
+src/yaeuvm.egg-info/SOURCES.txt
+src/yaeuvm.egg-info/dependency_links.txt
+src/yaeuvm.egg-info/requires.txt
+src/yaeuvm.egg-info/top_level.txt
+src/yaeuvm/_coeffs/_yaeuvm_ba_coeffs.nc
+src/yaeuvm/_coeffs/_yaeuvm_br_coeffs.nc
+src/yaeuvm/_coeffs/_yaeuvm_r_coeffs.nc
+tests/test.py
