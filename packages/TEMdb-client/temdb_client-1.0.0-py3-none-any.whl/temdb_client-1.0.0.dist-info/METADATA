@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: TEMdb_client
+Version: 1.0.0
+Author-email: Derrick Brittain <derrickb@alleninstitute.org>
+Requires-Dist: httpx
+Requires-Dist: tenacity
+Requires-Dist: pydantic
+Provides-Extra: test
+Requires-Dist: pytest; extra == "test"
+Requires-Dist: pytest-asyncio; extra == "test"
