@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+ai_git_assistant/__init__.py
+ai_git_assistant/__main__.py
+ai_git_assistant.egg-info/PKG-INFO
+ai_git_assistant.egg-info/SOURCES.txt
+ai_git_assistant.egg-info/dependency_links.txt
+ai_git_assistant.egg-info/entry_points.txt
+ai_git_assistant.egg-info/requires.txt
+ai_git_assistant.egg-info/top_level.txt
+tests/__init__.py
+tests/tests_cli.py
+tests/tests_git_utils.py
