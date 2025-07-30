@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: nearest_neighbor_acoustic_interpolation
+Version: 0.1.2
+Summary: This is the code behind the paper 'Translating jet noise measurement to near-field level maps with nearest neighbor bilinear smoothing interpolation'
+Keywords: interpolation,acoustic
+Author-Email: frankmobley <mobssoft@gmail.com>, "Dr. Frank Mobley" <frank.mobley.1@afrl.af.mil>
+License: MIT
+Project-URL: Homepage, https://gitlab.com/acousticprocessing/nearest-neighbor-interpolation
+Requires-Python: >=3.9
+Requires-Dist: numpy>=1.21.5
+Requires-Dist: pandas>=1.4.3
+Requires-Dist: scipy>=1.9.1
+Description-Content-Type: text/markdown
+
+# Nearest Neighbor Bi-linear Acoustic Interpolation
+
+This code based was used for the development of near-field acoustic level maps associated with the paper: Mobley, Frank S., Alan T. Wall, and Stephen C. Campbell. "Translating jet noise measurements to near-field level maps with nearest neighbor bilinear smoothing interpolation." The Journal of the Acoustical Society of America 150.2 (2021): 687-693.
+
+This code applies an image interpolation to a sparse matrix of acoustic levels. Then interpolates the dense matrix interatively to reduce the blockiness of the level maps. Each iteration, the known values from the sparse matrix are replaced to ensure that the values are not smoothed away.
+
+This work was completed in association with research conducted at Wright-Patteron Air Force Base while employed at the 711 Human Performance Wing. It was cleared for public release with the public affairs clearance number AFRL-2025-2605 on 21 May 2025.
