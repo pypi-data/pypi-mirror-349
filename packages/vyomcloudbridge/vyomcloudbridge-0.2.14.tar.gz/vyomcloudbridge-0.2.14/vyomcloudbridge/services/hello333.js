@@ -1,0 +1,1 @@
+hhelo = {'id': 174782211404960, 'name': 'Mission_20250521_100834_049_UTC', 'description': None, 'creator_id': 1, 'owner_id': 1, 'mission_status': 1, 'campaign_id': <class 'ModuleNotFoundError'>, 'mission_date': '2025-05-21', 'start_time': '2025-05-21T10:08:34.049722+00:00', 'end_time': None, 'mission_type': '', 'machine_id': 60, 'json_data': {}}
