@@ -1,0 +1,12 @@
+db_provider_postgres/__init__.py,sha256=yKlxmS8X9Xc5Ywv5IByA86s0lZZigKs0g0-M91z-Q2A,205
+db_provider_postgres/config.py,sha256=Rm9OjcoYFsMWGR_bjCBpmSW1aKs8TSXHjhjcRNcIUQI,2195
+db_provider_postgres/exceptions.py,sha256=NnT2avpy9X81_1yahujEVv02kwrKJIf4FXwzXE3K1wQ,395
+db_provider_postgres/utils.py,sha256=JV24ggsOWRTXSUl_9M0BZD5ExE-agmiBd2i4p3KF4tk,2145
+db_provider_postgres/providers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+db_provider_postgres/providers/base.py,sha256=OWiH8YY02Ahz0v2G0SqcejsR8qsDIbVcH01BQjQjtdY,2030
+db_provider_postgres/providers/postgres.py,sha256=wy2cjYCwYIX_MPEEZ2NSUuau8StL-_tL5puwXsjDgpE,5303
+db_provider_postgres-0.0.3.dist-info/licenses/LICENSE,sha256=6kbiFSfobTZ7beWiKnHpN902HgBx-Jzgcme0SvKqhKY,1091
+db_provider_postgres-0.0.3.dist-info/METADATA,sha256=09pDQkPiTC2XTdAMhl6nqGFv8sXbzU9XvyLbxEqMFI4,506
+db_provider_postgres-0.0.3.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+db_provider_postgres-0.0.3.dist-info/top_level.txt,sha256=eAA5-C3KTW_oSKKwoQkmhrfSZLoAofvYSV_ZaDmQFzY,21
+db_provider_postgres-0.0.3.dist-info/RECORD,,
