@@ -1,0 +1,32 @@
+[project]
+name = "redlines"
+version = "0.5.2"
+description = "Compare text, and produce human-readable differences or deltas which look like track changes in Microsoft Word."
+readme = "README.md"
+authors = [
+    { name = "houfu", email = "houfu@outlook.sg" }
+]
+license = { text = "MIT" }
+requires-python = ">=3.8"
+dependencies = [
+    "click>=8.1.7",
+    "rich-click>=1.6.1",
+    "rich>=13.3.5",
+]
+urls = { homepage = "https://houfu.github.io/redlines/", repository = "https://github.com/houfu/redlines" }
+
+[project.scripts]
+redlines = 'redlines.cli:cli'
+
+[tool.uv]
+dev-dependencies = [
+    "pdoc>=14.1.0",
+    "pytest>=7.4.2",
+    "pytest-cov>=3.0.0",
+    "pytest-sugar>=0.9.7",
+    "tox>=3.28.0",
+]
+
+[build-system]
+requires = ["hatchling>=1.18.0"]
+build-backend = "hatchling.build"
