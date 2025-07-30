@@ -1,0 +1,15 @@
+[project]
+name = "dcap-qvl-x86"
+version = "0.0.1"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10,<=3.14"
+dependencies = ["maturin>=1.8.2", "twine>=6.1.0"]
+
+[build-system]
+requires = ["maturin>=1.0,<2.0"]
+build-backend = "maturin"
+
+[tool.maturin]
+features = ["pyo3/extension-module"]
+compatibility = "manylinux2014"

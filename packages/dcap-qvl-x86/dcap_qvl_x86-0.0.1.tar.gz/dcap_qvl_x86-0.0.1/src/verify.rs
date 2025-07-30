@@ -1,0 +1,267 @@
+use anyhow::{anyhow, bail, Context, Result};
+use pyo3::exceptions::{PyException, PyRuntimeError, PyValueError};
+use pyo3::prelude::*;
+use scale::Decode;
+use std::time::SystemTime;
+
+use {
+    crate::constants::*, crate::tcb_info::TcbInfo, alloc::borrow::ToOwned, alloc::string::String,
+    alloc::vec::Vec,
+};
+
+pub use crate::quote::{AuthData, EnclaveReport, Quote};
+use crate::{collateral::get_collateral_from_pcs, QuoteCollateralV3};
+use crate::{
+    quote::Report,
+    utils::{self, encode_as_der, extract_certs, verify_certificate_chain},
+};
+use serde::{Deserialize, Serialize};
+
+#[cfg(feature = "js")]
+use wasm_bindgen::prelude::*;
+
+#[derive(Debug, Clone, Deserialize, Serialize)]
+pub struct VerifiedReport {
+    pub status: String,
+    pub advisory_ids: Vec<String>,
+    pub report: Report,
+}
+
+#[cfg(feature = "js")]
+#[wasm_bindgen]
+pub fn js_verify(
+    raw_quote: JsValue,
+    quote_collateral: JsValue,
+    now: u64,
+) -> Result<JsValue, JsValue> {
+    let raw_quote: Vec<u8> = serde_wasm_bindgen::from_value(raw_quote)
+        .map_err(|_| JsValue::from_str("Failed to decode raw_quote"))?;
+    let quote_collateral_bytes: Vec<u8> = serde_wasm_bindgen::from_value(quote_collateral)
+        .map_err(|_| JsValue::from_str("Failed to decode quote_collateral"))?;
+    let quote_collateral = QuoteCollateralV3::decode(&mut quote_collateral_bytes.as_slice())
+        .map_err(|_| JsValue::from_str("Failed to decode quote_collateral_bytes"))?;
+
+    let verified_report = verify(&raw_quote, &quote_collateral, now).map_err(|e| {
+        serde_wasm_bindgen::to_value(&e)
+            .unwrap_or_else(|_| JsValue::from_str("Failed to encode Error"))
+    })?;
+
+    serde_wasm_bindgen::to_value(&verified_report)
+        .map_err(|_| JsValue::from_str("Failed to encode verified_report"))
+}
+
+fn hex_decode(input: &[u8], is_hex: bool) -> Result<Vec<u8>> {
+    if is_hex {
+        let input = input.strip_prefix(b"0x").unwrap_or(input);
+        let input = input.strip_suffix(b"\n").unwrap_or(input);
+        hex::decode(input).map_err(|e| anyhow!("Failed to decode quote file: {}", e))
+    } else {
+        Ok(input.to_vec())
+    }
+}
+
+#[pyfunction]
+pub fn verify_quote(hex_raw_quote: &[u8]) -> PyResult<String> {
+    // Decode the quote
+    let quote = hex_decode(hex_raw_quote, true)
+        .map_err(|e| PyValueError::new_err(format!("Failed to decode quote: {}", e)))?;
+
+    // Get collateral data
+    let quote_collateral = get_collateral_from_pcs(&quote, std::time::Duration::from_secs(60))
+        .map_err(|e| PyRuntimeError::new_err(format!("Failed to get collateral: {}", e)))?;
+
+    // Get current UNIX timestamp safely
+    let now = SystemTime::now()
+        .duration_since(SystemTime::UNIX_EPOCH)
+        .map_err(|e| PyException::new_err(format!("System time error: {}", e)))?
+        .as_secs();
+
+    // Verify the quote
+    let res = verify(&quote, &quote_collateral, now)
+        .map_err(|e| PyRuntimeError::new_err(format!("Quote verification failed: {}", e)))?;
+
+    // Serialize result to JSON
+    serde_json::to_string(&res)
+        .map_err(|e| PyException::new_err(format!("JSON serialization error: {}", e)))
+}
+
+#[pymodule]
+pub fn dcap_qvl_x86(m: &Bound<'_, PyModule>) -> PyResult<()> {
+    m.add_function(wrap_pyfunction!(verify_quote, m)?)?;
+    Ok(())
+}
+
+/// Verify a quote
+///
+/// # Arguments
+///
+/// * `raw_quote` - The raw quote to verify. Supported SGX and TDX quotes.
+/// * `quote_collateral` - The quote collateral to verify. Can be obtained from PCCS by `get_collateral`.
+/// * `now` - The current time in seconds since the Unix epoch
+///
+/// # Returns
+///
+/// * `Ok(VerifiedReport)` - The verified report
+/// * `Err(Error)` - The error
+pub fn verify(
+    raw_quote: &[u8],
+    quote_collateral: &QuoteCollateralV3,
+    now: u64,
+) -> Result<VerifiedReport> {
+    // Parse data
+    let mut quote = raw_quote;
+    let quote = Quote::decode(&mut quote).context("Failed to decode quote")?;
+    let signed_quote_len = quote.signed_length();
+
+    let tcb_info = serde_json::from_str::<TcbInfo>(&quote_collateral.tcb_info)
+        .context("Failed to decode TcbInfo")?;
+
+    let next_update = chrono::DateTime::parse_from_rfc3339(&tcb_info.next_update)
+        .ok()
+        .context("Failed to parse next update")?;
+    if now > next_update.timestamp() as u64 {
+        bail!("TCBInfo expired");
+    }
+
+    let now_in_milli = now * 1000;
+
+    // Verify enclave
+
+    // Seems we verify MR_ENCLAVE and MR_SIGNER is enough
+    // skip verify_misc_select_field
+    // skip verify_attributes_field
+
+    // Verify integrity
+
+    // Check TCB info cert chain and signature
+    let leaf_certs = extract_certs(quote_collateral.tcb_info_issuer_chain.as_bytes())?;
+    if leaf_certs.len() < 2 {
+        bail!("Certificate chain is too short in quote_collateral");
+    }
+    let leaf_cert: webpki::EndEntityCert = webpki::EndEntityCert::try_from(&leaf_certs[0])
+        .context("Failed to parse leaf certificate in quote_collateral")?;
+    let intermediate_certs = &leaf_certs[1..];
+    verify_certificate_chain(&leaf_cert, intermediate_certs, now_in_milli)?;
+    let asn1_signature = encode_as_der(&quote_collateral.tcb_info_signature)?;
+    if leaf_cert
+        .verify_signature(
+            webpki::ring::ECDSA_P256_SHA256,
+            quote_collateral.tcb_info.as_bytes(),
+            &asn1_signature,
+        )
+        .is_err()
+    {
+        return Err(anyhow!(
+            "Rsa signature is invalid for tcb_info in quote_collateral"
+        ));
+    }
+
+    // Check quote fields
+    if ![3, 4, 5].contains(&quote.header.version) {
+        return Err(anyhow!("Unsupported DCAP quote version"));
+    }
+    // We only support ECDSA256 with P256 curve
+    if quote.header.attestation_key_type != ATTESTATION_KEY_TYPE_ECDSA256_WITH_P256_CURVE {
+        bail!("Unsupported DCAP attestation key type");
+    }
+
+    // Extract Auth data from quote
+    let auth_data = quote.auth_data.into_v3();
+    let certification_data = auth_data.certification_data;
+
+    // We only support 5 -Concatenated PCK Cert Chain (PEM formatted).
+    if certification_data.cert_type != PCK_CERT_CHAIN {
+        bail!("Unsupported DCAP PCK cert format");
+    }
+
+    let certification_certs = extract_certs(&certification_data.body.data)?;
+    if certification_certs.len() < 2 {
+        bail!("Certificate chain is too short in quote");
+    }
+    // Check certification_data
+    let leaf_cert: webpki::EndEntityCert = webpki::EndEntityCert::try_from(&certification_certs[0])
+        .context("Failed to parse leaf certificate in quote")?;
+    let intermediate_certs = &certification_certs[1..];
+    verify_certificate_chain(&leaf_cert, intermediate_certs, now_in_milli)?;
+
+    // Check QE signature
+    let asn1_signature = encode_as_der(&auth_data.qe_report_signature)?;
+    if leaf_cert
+        .verify_signature(
+            webpki::ring::ECDSA_P256_SHA256,
+            &auth_data.qe_report,
+            &asn1_signature,
+        )
+        .is_err()
+    {
+        return Err(anyhow!("Rsa signature is invalid for qe_report in quote"));
+    }
+
+    // Extract QE report from quote
+    let mut qe_report = auth_data.qe_report.as_slice();
+    let qe_report = EnclaveReport::decode(&mut qe_report).context("Failed to decode QE report")?;
+
+    // Check QE hash
+    let mut qe_hash_data = [0u8; QE_HASH_DATA_BYTE_LEN];
+    qe_hash_data[0..ATTESTATION_KEY_LEN].copy_from_slice(&auth_data.ecdsa_attestation_key);
+    qe_hash_data[ATTESTATION_KEY_LEN..].copy_from_slice(&auth_data.qe_auth_data.data);
+    let qe_hash = ring::digest::digest(&ring::digest::SHA256, &qe_hash_data);
+    if qe_hash.as_ref() != &qe_report.report_data[0..32] {
+        bail!("QE report hash mismatch");
+    }
+
+    // Check signature from auth data
+    let mut pub_key = [0x04u8; 65]; //Prepend 0x04 to specify uncompressed format
+    pub_key[1..].copy_from_slice(&auth_data.ecdsa_attestation_key);
+    let peer_public_key =
+        ring::signature::UnparsedPublicKey::new(&ring::signature::ECDSA_P256_SHA256_FIXED, pub_key);
+    peer_public_key
+        .verify(
+            &raw_quote
+                .get(..signed_quote_len)
+                .ok_or(anyhow!("Failed to get signed quote"))?,
+            &auth_data.ecdsa_signature,
+        )
+        .map_err(|_| anyhow!("Isv enclave report signature is invalid"))?;
+
+    // Extract information from the quote
+
+    let extension_section = utils::get_intel_extension(&certification_certs[0])?;
+    let cpu_svn = utils::get_cpu_svn(&extension_section)?;
+    let pce_svn = utils::get_pce_svn(&extension_section)?;
+    let fmspc = utils::get_fmspc(&extension_section)?;
+
+    let tcb_fmspc = hex::decode(&tcb_info.fmspc)
+        .ok()
+        .context("Failed to decode TCB FMSPC")?;
+    if fmspc != tcb_fmspc[..] {
+        bail!("Fmspc mismatch");
+    }
+
+    // TCB status and advisory ids
+    let mut tcb_status = "Unknown".to_owned();
+    let mut advisory_ids = Vec::<String>::new();
+    for tcb_level in &tcb_info.tcb_levels {
+        if pce_svn >= tcb_level.tcb.pce_svn {
+            if cpu_svn
+                .iter()
+                .zip(&tcb_level.tcb.components)
+                .any(|(a, b)| a < &b.svn)
+            {
+                continue;
+            }
+
+            tcb_status = tcb_level.tcb_status.clone();
+            tcb_level
+                .advisory_ids
+                .iter()
+                .for_each(|id| advisory_ids.push(id.clone()));
+            break;
+        }
+    }
+    Ok(VerifiedReport {
+        status: tcb_status,
+        advisory_ids,
+        report: quote.report,
+    })
+}
