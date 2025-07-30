@@ -1,0 +1,280 @@
+Metadata-Version: 2.4
+Name: eol-timeline
+Version: 0.1.0
+Summary: A tool for tracking software end-of-life dates
+Home-page: 
+Author: EOL Timeline Contributors
+Author-email: 
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: typer>=0.9.0
+Requires-Dist: rich>=13.5.0
+Requires-Dist: pyyaml>=6.0
+Requires-Dist: python-dateutil>=2.8.2
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: pytest-cov>=3.0.0; extra == "dev"
+Requires-Dist: black>=23.0.0; extra == "dev"
+Requires-Dist: isort>=5.12.0; extra == "dev"
+Requires-Dist: mypy>=1.0.0; extra == "dev"
+Requires-Dist: flake8>=6.0.0; extra == "dev"
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# EOL Timeline
+
+A command-line tool for tracking software end-of-life (EOL) dates across multiple products.
+
+## Features
+
+- **Track EOL dates** for hundreds of software products in one place
+- **Display upcoming EOL dates** chronologically, with urgency indicators
+- **Export data** to CSV or JSON for further analysis
+- **Configurable EOL policies** for different products
+- **Colorized output** for easy identification of urgent EOLs
+- **List all products** with optional YAML output
+- **Filter by YAML file** for multiple product names
+
+## Installation
+
+### From PyPI (recommended)
+
+```bash
+pip install eol-timeline
+```
+
+### From Source
+
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/endoflife-timeline.git
+cd endoflife-timeline
+
+# Install the package with development dependencies
+pip install -e ".[dev]"
+```
+
+### Requirements
+
+- Python 3.12+
+- Dependencies listed in `requirements.txt`
+
+## Local Development
+
+### Setting up the Development Environment
+
+1. Create a virtual environment:
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
+
+2. Install development dependencies:
+```bash
+pip install -r requirements.txt
+pip install -r requirements-dev.txt
+```
+
+3. Set up the release data directory:
+```bash
+mkdir -p release-data-main/2025-05-19/releases
+```
+
+### Running the Application
+
+1. Basic usage:
+```bash
+# List upcoming EOL dates
+eol list --root release-data-main
+
+# List all products
+eol products --root release-data-main
+```
+
+2. Using a policy file:
+```bash
+# Create a policy file
+echo "defaults:
+  years_after_release: 3" > eol_policies.yaml
+
+eol list --root release-data-main --policy eol_policies.yaml
+```
+
+3. Using a YAML products file:
+```bash
+# Create a products file
+echo "products:
+  - Python
+  - Ubuntu" > products.yaml
+
+eol list --root release-data-main --products-yaml products.yaml
+```
+
+4. Exporting data:
+```bash
+eol export --root release-data-main --format csv --out eol_data.csv
+```
+
+### Testing
+
+Run tests using pytest:
+```bash
+pytest eol_timeline/tests/ -v
+```
+
+### Using Docker
+
+1. Build and run with Docker:
+```bash
+# Build development container
+docker build -f Dockerfile.dev -t eol-timeline-dev .
+
+# Run tests in Docker
+docker run --rm -v "$PWD":/app -e PYTHONPATH=/app eol-timeline-dev pytest eol_timeline/tests/ -v
+
+# Run the application
+docker run --rm -v "$PWD":/app -e PYTHONPATH=/app eol-timeline-dev eol list --root release-data-main
+```
+
+2. Build production container:
+```bash
+docker build -f Dockerfile -t eol-timeline .
+```
+
+### Environment Variables
+
+- `EOL_DATA_ROOT`: Root directory containing release-data
+- `PYTHONPATH`: Python path for module imports
+
+## Usage
+
+### Basic Command
+
+```bash
+# List all upcoming EOL dates starting from today
+eol list --root /path/to/release-data-main
+```
+
+### Command-line Options
+
+```
+Usage: eol [OPTIONS] COMMAND [ARGS]...
+
+Options:
+  --root TEXT              Root directory containing release-data. [env: EOL_DATA_ROOT]
+  --today DATE             Override today's date (YYYY‑MM‑DD).
+  --policy FILE            YAML file defining EOL rules.
+  --verbose / --quiet      
+  --log-json               Emit structured logs to STDERR.
+  --version                Show app version.
+
+Commands:
+  list       Display upcoming EOL dates.
+  products    List all available products.
+  export     Write results to CSV/JSON.
+  validate   Sanity‑check JSON dataset and policy file.
+```
+
+### Examples
+
+```bash
+# List EOL dates for specific products
+eol list --product "Python" --product "Ubuntu"
+
+# Filter by YAML file
+eol list --products-yaml products.yaml
+
+# List all available products
+eol products
+
+# Save products to YAML file
+eol products --output products.yaml
+
+# Filter by date range
+eol list --from 2025-06-01 --to 2025-12-31
+
+# Filter by time period from today
+eol list --max-age 1m  # Show EOL dates within 1 month
+eol list --max-age 1y  # Show EOL dates within 1 year
+
+# Export to CSV
+eol export --format csv --out eol_data.csv
+
+# Validate data and policy files
+eol validate --policy custom_policy.yaml
+```
+
+## Customizing EOL Policies
+
+Create a YAML policy file (`eol_policies.yaml`) to define custom EOL rules:
+
+```yaml
+defaults:
+  years_after_release: 3
+products:
+  Ubuntu:
+    lts_years: 10
+  amazon-cdk:
+    years_after_release: 1
+```
+
+## Data Directory Structure
+
+The application expects a specific directory structure:
+
+```
+release-data-main/
+└── YYYY-MM-DD/
+    └── releases/
+        ├── product-1.json
+        ├── product-2.json
+        └── ...
+```
+
+Each JSON file should follow one of these formats:
+
+1. With explicit EOL dates:
+```json
+{
+  "releases": {
+    "3.9": {
+      "name": "3.9",
+      "releaseDate": "2020-10-05",
+      "eol": "2025-10-31"
+    }
+  },
+  "versions": {
+    "3.9.20": {
+      "name": "3.9.20",
+      "date": "2024-09-06"
+    }
+  }
+}
+```
+
+2. With only release dates:
+```json
+{
+  "releases": {},
+  "versions": {
+    "2.196.0": {
+      "name": "2.196.0",
+      "date": "2025-05-15"
+    }
+  }
+}
+```
+
+## License
+
+MIT License

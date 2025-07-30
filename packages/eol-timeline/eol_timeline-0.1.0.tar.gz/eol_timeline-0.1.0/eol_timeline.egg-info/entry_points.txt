@@ -1,0 +1,2 @@
+[console_scripts]
+eol = eol_timeline.cli:main
