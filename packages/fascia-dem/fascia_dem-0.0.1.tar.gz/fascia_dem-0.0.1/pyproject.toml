@@ -1,0 +1,16 @@
+[project]
+name = "fascia_dem"
+version = "0.0.1"
+authors = [
+  { name="Lagache Alexandre", email="alexandre.lagache@ensam.eu" },
+]
+description = "A package allowing to create my fascia domaina nd to run the discrete element model simulation."
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+
