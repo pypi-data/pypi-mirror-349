@@ -1,0 +1,12 @@
+cli/get_config.py,sha256=o2Tx723ztSNcuxpQQahiDOcq3HGoV7mtax8ve6ezl-Q,7122
+cli/pe_cli.py,sha256=798SOky7boyO_M2HT_uhfyT_GUQA3iqtbr6S7puGeLQ,815
+pattan_sendgrid/PattanEmail.py,sha256=yabyZGLYQJUORt_r4XnyPyELIIVIaO2tjldzAX8UxiY,4368
+pattan_sendgrid/__init__.py,sha256=i5z3Z26uGaLrWnKPtDKCrenLope6C39AZ6RWVPH95ko,36
+pattan_sendgrid/exceptions.py,sha256=W56ws7TDUdJqB3ovV5Qm3xUrATfrKj9bdsGd_zscHIs,1145
+pattan_sendgrid/models.py,sha256=Bqa1gWzplRwvk5GP6uny1jF3nxUcWNS0qsHZFloMwTo,1233
+pattan_sendgrid-2.0.3.dist-info/licenses/LICENSE,sha256=rW7MugvQcZSr8rEa5SwtgpBCquccqPVKVgE9kaJBBWU,1497
+pattan_sendgrid-2.0.3.dist-info/METADATA,sha256=jh5wkcGznG_pjLsZJJ8JO_sU-ft2omg-exORFHKieyE,1489
+pattan_sendgrid-2.0.3.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+pattan_sendgrid-2.0.3.dist-info/entry_points.txt,sha256=x0nMd95O9uP4SdU0eC0MqlexvEHdwdyh-qOXQiov844,41
+pattan_sendgrid-2.0.3.dist-info/top_level.txt,sha256=Do25-Oy6-FTxGHSZro5hwbSeTmLruGWcE4QMuSdfD3o,20
+pattan_sendgrid-2.0.3.dist-info/RECORD,,
