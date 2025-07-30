@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: cka-analyzer
+Version: 0.1.1
+Summary: Layer-wise CKA similarity analyzer for LLM patching
+Author-email: XiaoyuXu <xuxiaoyu200@gmail.com>
+License: MIT
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: torch
+Requires-Dist: transformers
+Requires-Dist: datasets
+Requires-Dist: matplotlib
+Requires-Dist: scikit-learn
+Requires-Dist: pandas
+Requires-Dist: flash-attn
