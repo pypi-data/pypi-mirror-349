@@ -1,0 +1,2 @@
+[console_scripts]
+douyin-wenan-mcp-server = douyin_wenan_mcp_server.server:main
