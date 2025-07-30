@@ -1,0 +1,43 @@
+{
+    "exclude_stations_id_from_climatology": [
+        "0-20000-0-07617-A"
+    ],
+    "parameters": {
+        "CHM15k": {
+            "inversion": {
+                "method": "forward",
+                "apriori": {
+                    "var": "lr",
+                    "cfg": "aer_ifs.json"
+                }
+            },
+            "cloud": {
+                "method": "dec"
+            }
+        },
+        "Mini-MPL": {
+            "inversion": {
+                "method": "forward",
+                "apriori": {
+                    "var": "lr",
+                    "cfg": "aer_ifs.json"
+                }
+            },
+            "cloud": {
+                "method": "vg"
+            }
+        },
+        "CL61": {
+            "inversion": {
+                "method": "forward",
+                "apriori": {
+                    "var": "lr",
+                    "cfg": "aer_ifs.json"
+                }
+            },
+            "cloud": {
+                "method": "dec"
+            }
+        }
+    }
+}
