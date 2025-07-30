@@ -1,0 +1,13 @@
+close_encounters/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+close_encounters/brute_force.py,sha256=KVYGM1ledf-c8FnXdJzYYaBbnuIsyvIDRXJrCJ4K6t4,10488
+close_encounters/h3_full_disk.py,sha256=ajWJbGP40gR2M7xn0WMbVDb5skhimRMn5sE3u7Z4flk,12606
+close_encounters/h3_half_disk.py,sha256=hRkyQmImwyPnfn04w7ZmZDiG9LTIoTVChQQOgAblFrY,12534
+close_encounters/helpers.py,sha256=VzJgQziK0YivnO5iNEeMb6ymYmEJzRvEKsd9SbHv-Rw,2180
+close_encounters/data/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+close_encounters/data/h3_edgelengths.csv,sha256=Cvi9qNjmumql-quQklCunuJWbyBU90w9dsX9NruoJos,1696
+close_encounters/data/sample_trajectories.parquet,sha256=HiQVLkEWNXFFGT6Dyt1e2dWg-WfEY-THmJpg2uhN744,7828674
+close_encounters-0.0.7.dist-info/licenses/LICENSE,sha256=FnyNZK2jjInnjbYhKjc-jUgMeGt-zqYjS3BCK9IkVG0,1097
+close_encounters-0.0.7.dist-info/METADATA,sha256=TrbGcPJOv4CXfWdIvnwfbAFm1AL0zFo2lEtaE7FgFM8,11217
+close_encounters-0.0.7.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+close_encounters-0.0.7.dist-info/top_level.txt,sha256=BzjkpmckayzHNU-2u4ZBqq_p-WT1yUEEkf-oI8RxHOg,17
+close_encounters-0.0.7.dist-info/RECORD,,
