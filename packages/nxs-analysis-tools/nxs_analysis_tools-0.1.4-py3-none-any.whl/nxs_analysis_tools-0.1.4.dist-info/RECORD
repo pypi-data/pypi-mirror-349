@@ -1,0 +1,11 @@
+_meta/__init__.py,sha256=o4CUg4WvH362OKDTpP79g3gJNh8m8f690oZznkfuXoc,346
+nxs_analysis_tools/__init__.py,sha256=3UFf4nxseTCfsPDSluxupmpd0Es55F9_du5T8-z4CsE,570
+nxs_analysis_tools/chess.py,sha256=Yi33jFtsuBieadG5X-Sbip9ioyDzjrIBhTq2a_Ia4ao,26930
+nxs_analysis_tools/datareduction.py,sha256=EVluTVGedr4R6PxZHTreyweN8IUuKPOIcx0ZDPL9SDE,49229
+nxs_analysis_tools/fitting.py,sha256=xkx66AJiJJO_kC1OBa3bcSDwVV20MEowRa59K-yFlqg,8551
+nxs_analysis_tools/pairdistribution.py,sha256=wDH5qGN3jpo4gSKnUBxNkGbX-qUOEQaSOyvOQ_V4IbE,60720
+nxs_analysis_tools-0.1.4.dist-info/licenses/LICENSE,sha256=bE6FnYixueAGAnEfUuumbkSeMgdBguAAkheVgjv47Jo,1086
+nxs_analysis_tools-0.1.4.dist-info/METADATA,sha256=6VSwbPQAPARxE2Tlgot70lUcNRCKbY-TNviyO2R6_JM,4471
+nxs_analysis_tools-0.1.4.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+nxs_analysis_tools-0.1.4.dist-info/top_level.txt,sha256=8U000GNPzo6T6pOMjRdgOSO5heMzLMGjkxa1CDtyMHM,25
+nxs_analysis_tools-0.1.4.dist-info/RECORD,,
