@@ -1,0 +1,99 @@
+{
+    "merge_write": [
+        "merge into",
+        "upsert",
+        "bulk_update",
+        "sparkupsertcommitactionexecutor",
+        "rewritepartition",
+        "commit metadata",
+        "finalizewrite",
+        "sparkupsertpreppeddeltacommitactionexecutor",
+        "sparkdeletecommitactionexecutor",
+        "sparkclusteringcommitactionexecutor",
+        "rewritemanifests",
+        "rewriteposdeletefiles"
+    ],
+    "insert_write": [
+        "bulk_insert",
+        "insert overwrite",
+        "insert into",
+        "append",
+        "sparkbulkinsert",
+        "rowleveloperationswriter",
+        "sparkbulkinsertcommitactionexecutor",
+        "positiondeltawriter",
+        "sparkrowwriter",
+        "replace partitions"
+    ],
+    "scan": [
+        "tablescan",
+        "datasource_scan",
+        "file_scan",
+        "sparkfilescan",
+        "recordreaderiterator",
+        "icebergfilescan",
+        "hoodierecordreader",
+        "parquet.read"
+    ],
+    "transform": [
+        "aggregate",
+        "groupby",
+        "window",
+        "pivot",
+        "explode",
+        "repartition",
+        "coalesce",
+        "sort",
+        "limit",
+        "sample"
+    ],
+    "join": [
+        "sortmergejoin",
+        "broadcast hash join",
+        "nestedloopjoin",
+        "broadcasthashjoin",
+        "shuffledhashjoin"
+    ],
+    "indexing": [
+        "building workload profile",
+        "taglocation",
+        "bloomindex",
+        "record_level_index",
+        "global_index",
+        "manifestmergeindex",
+        "partition_stats",
+        "bucketindex",
+        "hbaseindex",
+        "simpleindex",
+        "partition_summary"
+    ],
+    "metadata": [
+        "metadata table",
+        "hoodiebackedtablemetadatawriter",
+        "directwritemarkers",
+        "marker files",
+        "iceberg table metadata",
+        "snapshot metadata",
+        "manifestlistwriter",
+        "metadatasync",
+        "partition_stats",
+        "cleanplanner",
+        "cleanactionexecutor",
+        "filesystembackedtablemetadata",
+        "expiresnapshots",
+        "removeorphanfiles",
+        "rewritemanifests",
+        "snapshotproducer"
+    ],
+    "clustering_compaction": [
+        "scheduleclustering",
+        "runclustering",
+        "schedulecompaction",
+        "runcompaction",
+        "sparkclusteringcommitactionexecutor",
+        "compactionplan",
+        "compactioncommit",
+        "rewritedatafiles",
+        "binpackstrategy"
+    ]
+} 
