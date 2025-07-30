@@ -1,0 +1,6 @@
+# # ? positive, pos
+# class positive(Generic[N]): ...
+
+
+# # ? negative, neg
+# class negative(Generic[N]): ...
