@@ -1,0 +1,2 @@
+[console_scripts]
+opentrons_analyze = analyze:analyze
