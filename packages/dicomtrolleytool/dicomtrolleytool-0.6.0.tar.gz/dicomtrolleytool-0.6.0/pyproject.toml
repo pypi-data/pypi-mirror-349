@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "dicomtrolleytool"
+version = "0.6.0"
+description = "Command line tool for dicom query and download"
+authors = ["sjoerdk <sjoerd.kerkstra@radboudumc.nl>"]
+license = "Apache-2.0"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+keyring = "^23.11.0"
+pydantic = "^2.11.4"
+dicomtrolley = "^3.0.4"
+PyYAML = "^6.0"
+click = "^8.1.3"
+tabulate = "^0.9.0"
+coloredlogs = "^15.0.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.2.0"
+factory-boy = "^3.2.1"
+
+[tool.poetry.scripts]
+trolley = "dicomtrolleytool.cli.entrypoint:main"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
