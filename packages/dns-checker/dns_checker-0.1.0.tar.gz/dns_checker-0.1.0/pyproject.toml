@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dns-checker"
+version = "0.1.0"
+description = "DNS record checker with IPv4/IPv6/SPF filtering"
+readme = "README.md"
+requires-python = ">=3.7"
+license = {text = "MIT"}
+authors = [
+    {name = "Daniel", email = "daniel@danielf.ch"}
+]
+dependencies = [
+    "dnspython>=2.4.2"
+]
+
+[project.scripts]
+dns-checker = "dns_checker.core:main"

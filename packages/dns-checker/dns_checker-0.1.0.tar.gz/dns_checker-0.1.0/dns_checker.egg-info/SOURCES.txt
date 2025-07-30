@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+dns_checker/__init__.py
+dns_checker/core.py
+dns_checker.egg-info/PKG-INFO
+dns_checker.egg-info/SOURCES.txt
+dns_checker.egg-info/dependency_links.txt
+dns_checker.egg-info/entry_points.txt
+dns_checker.egg-info/requires.txt
+dns_checker.egg-info/top_level.txt
