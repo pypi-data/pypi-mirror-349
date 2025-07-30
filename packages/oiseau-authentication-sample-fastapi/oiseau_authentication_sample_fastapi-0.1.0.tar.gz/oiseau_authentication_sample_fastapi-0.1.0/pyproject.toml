@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "oiseau-authentication-sample-fastapi"
+version = "0.1.0"
+description = "projet exemple utilisation du package authentification fastapi"
+authors = ["your name <you@example.com>"]
+readme = "readme.md"
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.115.4"
+uvicorn = "^0.32.0"
+#oiseau-authentification={ path = "../../" }
+oiseau-authentification="0.2.0"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.10.0"
+pylint = "^3.3.1"
+
+[[tool.poetry.source]]
+name = "nexus-internal"
+url = "https://nexus.insee.fr/repository/pypi-internal/simple"
+priority = "primary"
+
+
+[[tool.poetry.source]]
+name = "nexus-proxy"
+url = "https://nexus.insee.fr/repository/pypi-proxy/simple"
+priority = "supplemental"
+
+
+[[tool.poetry.source]]
+name = "pypi"
+priority = "supplemental"
+
+
+[build-system]
+requires = ["poetry-core"]
