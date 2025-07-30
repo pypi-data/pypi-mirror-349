@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: avs-rvtools-analyzer
+Version: 2025.5.0
+Summary: A tool for analyzing RVTools data.
+Author: Ludovic Rivallain
+Author-email: ludovic.rivallain+pip@gmail.com
+Requires-Dist: flask
+Requires-Dist: pandas
+Requires-Dist: openpyxl
+Requires-Dist: xlrd
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-dist
+Dynamic: summary
