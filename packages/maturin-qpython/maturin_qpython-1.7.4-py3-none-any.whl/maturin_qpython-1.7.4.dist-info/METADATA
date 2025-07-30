@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: maturin-qpython
+Version: 1.7.4
+Summary: Build and publish crates with pyo3, cffi and uniffi bindings as well as rust binaries as python packages with minimal configuration.
+Author-email: The QPYPI Team <qpypi@qpython.org>
+License: MIT AND (Apache-2.0 OR BSD-2-Clause)
+Project-URL: Homepage, https://qpypi.qpython.org/project/maturin-qpython/
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: Android
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development
+Requires-Python: ==3.12.*
+Description-Content-Type: text/markdown
+
+This project is a branch of <a target="_blank" rel="noopener" href="https://pypi.org/project/maturin/">maturin</a> on <a href="https://www.qpython.org">QPython</a>.
+
+Build and publish crates with pyo3, cffi and uniffi bindings as well as rust binaries as python packages with minimal configuration. It supports building wheels for python 3.8+ on Windows, Linux, macOS and FreeBSD, can upload them to pypi and has basic PyPy and GraalPy support.
