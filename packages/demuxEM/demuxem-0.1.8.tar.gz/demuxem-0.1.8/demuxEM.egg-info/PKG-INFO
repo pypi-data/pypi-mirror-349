@@ -1,0 +1,64 @@
+Metadata-Version: 2.4
+Name: demuxEM
+Version: 0.1.8
+Summary: demuxEM is the demultiplexing module of Pegasus
+Home-page: https://github.com/lilab-bcb/demuxEM
+Author: Yiming Yang, Asma Bankapur, Joshua Gould and Bo Li
+Author-email: cumulus-support@googlegroups.com
+Keywords: demultiplexing cell/nucleus hashing single-cell data
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: Jupyter
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Requires-Python: ~=3.8
+License-File: LICENSE
+Requires-Dist: docopt
+Requires-Dist: numpy
+Requires-Dist: pandas>=1.5.0
+Requires-Dist: scipy
+Requires-Dist: scikit-learn
+Requires-Dist: seaborn
+Requires-Dist: pegasusio>=0.10.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+==================================================================
+demuxEM for demultiplexing cell/nucleus hashing single-cell data
+==================================================================
+
+|PyPI| |Conda| |Python| |License| |Docs|
+
+.. |PyPI| image:: https://img.shields.io/pypi/v/demuxEM.svg
+   :target: https://pypi.org/project/demuxEM
+
+.. |Conda| image:: https://img.shields.io/conda/v/bioconda/demuxem
+   :target: https://anaconda.org/bioconda/demuxem
+
+.. |Python| image:: https://img.shields.io/pypi/pyversions/demuxEM.svg
+   :target: https://pypi.org/project/demuxEM
+
+.. |Docs| image:: https://readthedocs.org/projects/demuxem/badge/?version=latest
+   :target: https://demuxEM.readthedocs.io
+
+.. |License| image:: https://img.shields.io/github/license/lilab-bcb/demuxEM
+   :target: https://github.com/lilab-bcb/demuxEM/blob/master/LICENSE
+
+demuxEM is the demultiplexing module of Pegasus.
+
+`Read documentation <https://demuxEM.readthedocs.io>`__
