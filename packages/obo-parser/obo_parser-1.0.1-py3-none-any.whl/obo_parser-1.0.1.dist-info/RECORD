@@ -1,0 +1,10 @@
+obo_parser/__init__.py,sha256=Cm8ECBcu2oaMJpxXdLHqMAqDQiZVLSkzskMPU7BnsOA,188
+obo_parser/bin.py,sha256=FPLlRoIs_O8koTffD3GrIeC3C4KldZaTdwydGxFEuk4,2137
+obo_parser/parser.py,sha256=YCcDoh4kaOxTVXt5mFkrcJcvJSfaQ8WHkOdpq3wMoX8,1905
+obo_parser/utils.py,sha256=YNqZi7dSQPa-OL3bZxsbQofFYwGtLs2MIfGzZjhj9JM,693
+obo_parser/version.json,sha256=QtrzcO0XkS2U118FaBvI_DDvsp26YVNNc26Rw--lxO4,283
+obo_parser-1.0.1.dist-info/METADATA,sha256=z2BZxpQ4rgWL02P-yjFThoPokP46DcvweydI49cqLrg,1501
+obo_parser-1.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+obo_parser-1.0.1.dist-info/entry_points.txt,sha256=ADqI8GX5xTBMbuE054To1i40ydtHDQ30KYOyTcGRMrY,52
+obo_parser-1.0.1.dist-info/top_level.txt,sha256=inVa460Po91W5vj0Et6FsPvXEaocSzNn0pyEeBDA7Ns,11
+obo_parser-1.0.1.dist-info/RECORD,,
