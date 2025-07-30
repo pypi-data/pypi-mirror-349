@@ -1,0 +1,10 @@
+pyquickbench/__init__.py,sha256=VJbENC8NUssob3XwwTPvF2WIc-0ss974uOtYLDX8N-c,5792
+pyquickbench/_benchmark.py,sha256=K_N22ES6T84xAKKO_UeXDnR5zOmLrDzmOnXWOM9u5DU,65086
+pyquickbench/_defaults.py,sha256=sqdvls5_nbtrJecuBQ-iFuMmFT9_diJ5g--1QZE4DcM,4645
+pyquickbench/_time_train.py,sha256=4EV953rmcbGB9wkxQFn_nYUXUggvMAmIk0NOnfcjs2U,14329
+pyquickbench/_utils.py,sha256=sYoB12anKEoTS1QOf8zyEJdui2DMzZgbxEHhmJ87vpA,21166
+pyquickbench-0.2.5.dist-info/licenses/LICENSE,sha256=nfJqwEc0fw4kKmZAzMwRJfCzGGEYDZ6_Gx-qi_k7W1w,1326
+pyquickbench-0.2.5.dist-info/METADATA,sha256=QooJtedZl4epRluidPtv0dIGrx-8GyN2ncA8Xis3REk,6665
+pyquickbench-0.2.5.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+pyquickbench-0.2.5.dist-info/top_level.txt,sha256=xlVSvMQlPFanqlbCjk1qQEKN02673kb1cQfhPkbyC0M,13
+pyquickbench-0.2.5.dist-info/RECORD,,
