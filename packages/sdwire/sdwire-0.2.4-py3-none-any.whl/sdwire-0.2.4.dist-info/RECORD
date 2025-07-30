@@ -1,0 +1,14 @@
+sdwire/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sdwire/backend/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sdwire/backend/detect.py,sha256=jiQ2JS9sMGUuymwyUO4FaGzIkXK3J7Ci45V1X8c94b4,2931
+sdwire/backend/device/sdwire.py,sha256=5Glk4M20sY7EJA5XDewT1F5F1-AUW1fG7mI9_wrABoM,1518
+sdwire/backend/device/sdwirec.py,sha256=imkj2ObrgowiM7DP9TnVbCES-8bju0T69Qzdw5OURgE,1657
+sdwire/backend/device/usb_device.py,sha256=5sdyOyPikIpFydKywzDkvvgLHFdMcsBC8tKosHRhfvQ,808
+sdwire/backend/utils.py,sha256=kMEyBbRO91REgvgICuBONGiImO6jTr6EpqkZaxQH4aU,1507
+sdwire/constants.py,sha256=s5mCx5NlJUM3aBbCPq2y3oOFoPPJ5wA3BR1snyK-cMg,119
+sdwire/main.py,sha256=G1WaVd4kBR3bTfbmHekjx1yObiz4f1NLGqznFepd2NY,2132
+sdwire-0.2.4.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+sdwire-0.2.4.dist-info/METADATA,sha256=ZtSg0QMJGsQF52Aa_GlRkwbjn6mxK0EAiv15r_ITW-E,3104
+sdwire-0.2.4.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+sdwire-0.2.4.dist-info/entry_points.txt,sha256=pxy0zJKVcNWXPk5PtNjTLExOBpqFNth37wtdYdYRXCE,43
+sdwire-0.2.4.dist-info/RECORD,,
