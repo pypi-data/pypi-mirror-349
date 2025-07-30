@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: mcpf-db-influx
+Version: 0.1.0rc1
+Summary: Minimalist Configurable Pipelineing Framework -- Influx-specific Database Functions
+Author: Karoly Bosa
+Author-email: karoly.bosa@risc-software.at
+Requires-Python: >=3.10,<3.11
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: influxdb-client (>=1.22.0,<2.0.0)
+Requires-Dist: mcpf-core (>=0.1.0rc2,<0.2.0)
+Requires-Dist: mcpf-db (>=0.1.0rc2,<0.2.0)
+Requires-Dist: pandas (>=1.4.0)
