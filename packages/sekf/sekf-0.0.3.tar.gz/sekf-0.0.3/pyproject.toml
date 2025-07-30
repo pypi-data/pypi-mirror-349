@@ -1,0 +1,81 @@
+[project]
+name = "sekf"
+version = "0.0.3"
+# dynamic = ["version"]
+description = "The Subset Extended Kalman Filter for online updates to neural network models as systems evolve."
+keywords = [
+    "subset extended kalman filter",
+    "kalman filter",
+    "ekf",
+    "extended kalman filter",
+    "sequential learning",
+    "online learning",
+    "sequential bayesian inference",
+    "bayesian inference"
+]
+authors = [
+    {name="Joshua Hammond", email="joshua.hammond@utexas.edu"}
+]
+readme = "README.md"
+license = "MIT"  # Possibly Apache which explicitly disallows trademarking
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence"
+]
+requires-python = ">=3.8"
+dependencies = [
+    "joshuaeh.jtoolbox",
+    "jupyter>=1.1.1",
+    "matplotlib",
+    "numpy>=1.24.4",
+    "pandas>=2.0.3",
+    "scikit-learn>=1.3.2",
+    "scipy>=1.10.1",
+    "seaborn",
+    "torch>=2.5.1",
+    "tqdm>=4.67.1"
+]
+[project.optional-dependencies]
+dev = [
+    "pytest"
+]
+
+[project.urls]
+Homepage = "https://github.com/joshuaeh/Subset-Extended-Kalman-Filter/"
+Issues = "https://github.com/joshuaeh/Subset-Extended-Kalman-Filter/issues/"
+
+[tool.uv.sources]
+jtoolbox = { git = "https://github.com/joshuaeh/jtoolbox/" }
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.sdist]
+exclude = [
+    ".devcontainer/",
+    ".github/",
+    ".venv/",
+    "docs/",
+    "examples/",
+    "figures/",
+    "notebooks/",
+    "scripts/",
+    "tests/",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/sekf"]
+
+[tool.hatch.metadata]
+allow-direct-references = true
