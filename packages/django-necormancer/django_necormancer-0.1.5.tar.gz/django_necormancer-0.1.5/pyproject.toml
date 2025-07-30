@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "django-necormancer"
+version = "0.1.5"
+description = "A short description of your package"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "Byron Farrell", email = "byronfarrell22@email.com"}]
+requires-python = ">=3.7"
+dependencies = [
+  "typer",
+  "InquirerPy"
+]
+
+[project.urls]
+Homepage = "https://github.com/Byron-Farrell/necromancer"
+
+[project.scripts]
+necromancer = "cli.main:app"
