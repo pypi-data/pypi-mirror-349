@@ -1,0 +1,40 @@
+[tool.poetry]
+name = "botrun-hatch-client"
+version = "5.5.211"
+description = "A client library for interacting with the BotRun API"
+authors = ["sebastian-hsu <sebastian.hsu@gmail.com>"]
+readme = "README.md"
+packages = [{include = "botrun_hatch_client", from = "src"}]
+license = "MIT"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+]
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.13"
+aiohttp = "^3.11.13"
+dotenv = "^0.9.9"
+botrun-hatch = "^5.5.201"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.7.0"
+isort = "^5.12.0"
+mypy = "^1.5.1"
+build = "^1.2.2.post1"
+twine = "^6.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
+target-version = ["py311"]
+
+[tool.isort]
+profile = "black"
+line_length = 88
