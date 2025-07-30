@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+src/project_managerz/__init__.py
+src/project_managerz/__main__.py
+src/project_managerz.egg-info/PKG-INFO
+src/project_managerz.egg-info/SOURCES.txt
+src/project_managerz.egg-info/dependency_links.txt
+src/project_managerz.egg-info/top_level.txt
