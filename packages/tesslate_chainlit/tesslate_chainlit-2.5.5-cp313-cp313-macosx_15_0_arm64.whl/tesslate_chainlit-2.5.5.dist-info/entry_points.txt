@@ -1,0 +1,4 @@
+[console_scripts]
+chainlit=tesslate_chainlit.cli:cli
+tesslate_chainlit=tesslate_chainlit.cli:cli
+
