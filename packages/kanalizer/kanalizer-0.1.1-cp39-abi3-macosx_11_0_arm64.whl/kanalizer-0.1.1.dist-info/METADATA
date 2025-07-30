@@ -1,0 +1,33 @@
+Metadata-Version: 2.4
+Name: kanalizer
+Version: 0.1.1
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+License-File: LICENSE
+License-File: NOTICE.md
+Summary: 英単語から読みへの変換を行うライブラリ
+License: MIT
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Project-URL: Source Code, https://github.com/VOICEVOX/kanalizer
+
+# kanalizer
+
+英単語から読みへの変換を行うライブラリ。\
+[kanalizer](https://github.com/VOICEVOX/kanalizer/tree/main/infer/crates/kanalizer-rs)のPythonバインディングです。
+
+## 使い方
+
+```py
+# 文字列をカタカナに変換する例
+import kanalizer
+
+word = "kanalizer"
+print(kanalizer.convert(word)) # => カナライザー
+```
+
+## ライセンス
+
+MIT License にて公開しています。
+Rustで依存しているクレートのライセンスは、生成されるNOTICE.mdを参照してください。
+
