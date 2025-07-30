@@ -1,0 +1,2 @@
+[console_scripts]
+osc-data=osc_data:main
