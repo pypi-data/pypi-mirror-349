@@ -1,0 +1,4 @@
+include DESCRIPTION.md
+exclude README.md
+exclude tests
+exclude Makefile
