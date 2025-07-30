@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+cleartrack/__init__.py
+cleartrack/cli.py
+cleartrack.egg-info/PKG-INFO
+cleartrack.egg-info/SOURCES.txt
+cleartrack.egg-info/dependency_links.txt
+cleartrack.egg-info/entry_points.txt
+cleartrack.egg-info/top_level.txt
+tests/test_cli.py
