@@ -1,0 +1,2 @@
+[console_scripts]
+apikey-service = apikey.cli:main
