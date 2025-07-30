@@ -1,0 +1,3 @@
+[console_scripts]
+nequip_eqx_test = nequip_eqx.test:main
+nequip_eqx_train = nequip_eqx.train:main

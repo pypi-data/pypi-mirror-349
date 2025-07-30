@@ -1,0 +1,11 @@
+nequip_eqx/__init__.py,sha256=A4ujHRxM44Wtl6GnuceR9KlCE8_cvgTdKwVS3xbAhJw,227
+nequip_eqx/calculator.py,sha256=64qhvW7heUPwK728ovJMILXoZBXPuuvf_BDWRKoCPRA,1092
+nequip_eqx/data.py,sha256=DhDrd9--AElfPYd9EnIl7C5OAKivxbZU1ma0RQQTwa8,6167
+nequip_eqx/model.py,sha256=xI6i7aRar9SFz5t4xHrIeba0ljT3NBvRW-FWJd5hilw,12019
+nequip_eqx/test.py,sha256=DxjFV4sMsy_NScu6n4B3cVFovD7Fxi3SH6Yi-u7yHLc,874
+nequip_eqx/train.py,sha256=zrjUAIwiwX1NIsLhgZhV9B46zanSZ9Sn-q7tqkcm9Ak,9397
+nequip_eqx-0.1.0.dist-info/METADATA,sha256=fR3g1Yn7ns0GIDXp_0SdJrnnjpEwtJdbx3X6fSSlY68,7556
+nequip_eqx-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+nequip_eqx-0.1.0.dist-info/entry_points.txt,sha256=HFvnatnSEpo2Cqiw3UW01CqYwmX6AVVzlTZaZj0fYog,98
+nequip_eqx-0.1.0.dist-info/licenses/LICENSE,sha256=mZ-9zE5-1N7O7mKZ9_4VBLHGMDPDL3UTLkgJQOQ_NWI,1068
+nequip_eqx-0.1.0.dist-info/RECORD,,
