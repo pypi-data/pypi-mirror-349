@@ -1,0 +1,7 @@
+Metadata-Version: 2.4
+Name: uv-lgh-test-package1
+Version: 0.2.0
+Summary: Add your description here
+Author-email: Johnson Liu <johnson.liu@quectel.com>
+Requires-Python: >=3.12
+Requires-Dist: requests>=2.32.3
