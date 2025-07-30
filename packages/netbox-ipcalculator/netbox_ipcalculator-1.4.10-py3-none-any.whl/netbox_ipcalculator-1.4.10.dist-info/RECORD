@@ -1,0 +1,17 @@
+netbox_ipcalculator/__init__.py,sha256=4xrQHVh7uwr8ecBBM8cwW8rTVFBENPaaxRx6UGw8a10,896
+netbox_ipcalculator/navigation.py,sha256=TbbOYc7DeXor_WbU4JY5dr5OxpUtjpaV4R8LnEGIgWo,300
+netbox_ipcalculator/pluginvars.json,sha256=m9e6hHhKq0tGzi5QvW6ej5fK9ymi3HmxMvhWJqg1C0w,381
+netbox_ipcalculator/template_content.py,sha256=nQp1RS4gyJMkjK030rcY4rWi7Y2YMBUiDvgw2biJXlw,1725
+netbox_ipcalculator/urls.py,sha256=B3eR2WgzzfsXqW-Adjmog1wcd8pF4XHIgfI0HWZ6RPU,143
+netbox_ipcalculator/views.py,sha256=rMbFIKJyNG_D8LrgyoKOURiWkZNR4IIE38CxOVxPtZ8,216
+netbox_ipcalculator/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+netbox_ipcalculator/static/netbox_ipcalculator/jquery-3.6.0.min.js,sha256=_xUj-3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej_m4,89501
+netbox_ipcalculator/templates/netbox_ipcalculator/ipcalcbase.html,sha256=_uzzuD8TVfp8Ji_cxcFA7G_59NBTcoA7ODIzIN3g2Qk,292
+netbox_ipcalculator/templates/netbox_ipcalculator/core/ipcalc.html,sha256=29xFjoJHnPefYaJ4q2x59TEGbLPq2PTY4Rtp5JU2OE0,2577
+netbox_ipcalculator/templates/netbox_ipcalculator/core/ipcalc.js,sha256=Smw3Rt8Wr5TSTCjQ6VJkc6yHU5mCgHb9l77v0JNp1q0,9892
+netbox_ipcalculator/templates/netbox_ipcalculator/core/subnets.html,sha256=6zXrlEdKtMoOu_yb2g6GGXLVtv0raneQIpqiOsp8jlE,18908
+netbox_ipcalculator-1.4.10.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+netbox_ipcalculator-1.4.10.dist-info/METADATA,sha256=pEiCF5-kA8KmuebLtcnfQO9mK0zoDAqXHskkwCZjf0c,2207
+netbox_ipcalculator-1.4.10.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+netbox_ipcalculator-1.4.10.dist-info/top_level.txt,sha256=FCV_Ku5jAQa2jAYnYjr7IUq9_2X6pkJdwIX3T9Lond0,20
+netbox_ipcalculator-1.4.10.dist-info/RECORD,,
