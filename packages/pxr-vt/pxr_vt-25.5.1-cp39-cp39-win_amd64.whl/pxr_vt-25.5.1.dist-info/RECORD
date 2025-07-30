@@ -1,0 +1,9 @@
+pxr/.libs/PxrVt.dll,sha256=gE8kG-MBCj1gZvDrzfb_aR67nD9gY68Ifg8lNtw2TOM,1188864
+pxr/.libs/PxrVt.lib,sha256=bwmvlxRap40O1hlVT7IHHU-8GHm-lnC6fBPDB8JYjqg,1383794
+pxr/Vt/__init__.py,sha256=evVUsZJOwa6NAkck1bVUqdxdLlV9sQJfrziRygYrgFM,1239
+pxr/Vt/_vt.pyd,sha256=K9KOlbobzsV_E_gJuWGBucRST1-E7I5nozPGdNH5BC8,3151872
+pxr_vt-25.5.1.dist-info/METADATA,sha256=wH_XJQoh5Nss_av7txszKrh51EnrM_hOA2VbKhi2LxM,2101
+pxr_vt-25.5.1.dist-info/WHEEL,sha256=xQ-xCmlF4qxouQAzuoL89aPcFWjT6GFALxrEZjPUtFk,104
+pxr_vt-25.5.1.dist-info/licenses/LICENSE.txt,sha256=YPLBSHtQR-x2aruye4FQvXq5hnkM_ri_8DEaJHxZvEQ,10496
+pxr_vt-25.5.1.dist-info/licenses/NOTICE.txt,sha256=U98taMOnTtp0jCAO-q8HycIJmAy-ZNQkrhYCAPIfp3E,157
+pxr_vt-25.5.1.dist-info/RECORD,,
