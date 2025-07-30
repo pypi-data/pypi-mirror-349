@@ -1,0 +1,2 @@
+[console_scripts]
+rios-plc-test = rios_plc_test.cli:main
