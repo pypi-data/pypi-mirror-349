@@ -1,0 +1,11 @@
+airflow_provider_carbonaware-0.1.1.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+carbonaware_provider/__init__.py,sha256=ZtuLpj7jhd5gvZhr3mRESV6Sj26owztqwKENI4SNNlo,564
+carbonaware_provider/example_dags/carbonaware.py,sha256=P97jyprjfNzX1XUS-F8eeHSi2sCD6nj5zpgQfc0q9rQ,2844
+carbonaware_provider/example_dags/carbonaware_introspection.py,sha256=gNDXN2xmfIfv3tz7Kl7LPC6xpbrXQGmT504rSvzDw2g,2630
+carbonaware_provider/operators/__init__.py,sha256=F2wM_lEuWzK_bXlraYErtv0H16uM2NaGt7iqTANMjmg,110
+carbonaware_provider/operators/carbonaware.py,sha256=56g0VIUqxi9QtoTvpE99jmF4mfnc0slETT34o-Bm5k4,5365
+airflow_provider_carbonaware-0.1.1.dist-info/METADATA,sha256=uy59pb_Uo2AqeCSek30tEwIvuORc79q9GTvAA3ZjWuY,6004
+airflow_provider_carbonaware-0.1.1.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+airflow_provider_carbonaware-0.1.1.dist-info/entry_points.txt,sha256=59V0L8UKe3jwufVw5_FoB5IjfB0f6FeUYXWACNDeTaY,90
+airflow_provider_carbonaware-0.1.1.dist-info/top_level.txt,sha256=Wr0iu0M2m2E0aedn5SJXVYGBj9yE0y_J3-cbOgxDeoA,21
+airflow_provider_carbonaware-0.1.1.dist-info/RECORD,,
