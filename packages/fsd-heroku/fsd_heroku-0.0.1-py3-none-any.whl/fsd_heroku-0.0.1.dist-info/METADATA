@@ -1,0 +1,33 @@
+Metadata-Version: 2.4
+Name: fsd-heroku
+Version: 0.0.1
+Summary: A plugin for flask-simple-deploy, supporting deployments to Heroku.
+Author-email: Eric Matthes <ehmatthes@gmail.com>
+Keywords: flask,deployment
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: flask>=3.0
+Requires-Dist: pluggy>=1.5.0
+Requires-Dist: toml>=0.10.2
+Requires-Dist: requests>=2.32.2
+Requires-Dist: flask-simple-deploy>=0.0.1
+Provides-Extra: dev
+Requires-Dist: black>=24.1.0; extra == "dev"
+Requires-Dist: build>=1.2.1; extra == "dev"
+Requires-Dist: pytest>=8.3.0; extra == "dev"
+Requires-Dist: twine>=5.1.1; extra == "dev"
+
+fsd-heroku
+===
+
+A demo plugin for [flask-simple-deploy](https://github.com/ehmatthes/flask-simple-deploy).
