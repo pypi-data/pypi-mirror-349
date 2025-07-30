@@ -1,0 +1,2 @@
+[console_scripts]
+sc-analyzer-base = sc_analyzer_base.main:main
