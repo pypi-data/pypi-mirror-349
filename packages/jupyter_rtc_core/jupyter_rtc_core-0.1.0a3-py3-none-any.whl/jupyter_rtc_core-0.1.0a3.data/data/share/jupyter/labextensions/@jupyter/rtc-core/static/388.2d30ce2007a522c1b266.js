@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_jupyter_rtc_core=self.webpackChunk_jupyter_rtc_core||[]).push([[7,388],{7:(e,o,r)=>{r.r(o),r.d(o,{ICollaborativeContentProvider:()=>n,IGlobalAwareness:()=>a});var t=r(262);const n=new t.Token("@jupyter/collaboration-extension:ICollaborativeContentProvider"),a=new t.Token("@jupyter/collaboration:IGlobalAwareness")}}]);
