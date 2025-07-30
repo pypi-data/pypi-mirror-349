@@ -1,0 +1,25 @@
+Metadata-Version: 2.4
+Name: FlapKine
+Version: 0.2.0
+Author: Kalbhavi Vadhiraj
+Author-email: raj.31@iitj.ac.in
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Requires-Python: ==3.10.3
+License-File: LICENSE
+Requires-Dist: pandas==2.0.2
+Requires-Dist: numpy==1.26.4
+Requires-Dist: numpy-stl==3.1.1
+Requires-Dist: scipy==1.10.1
+Requires-Dist: scikit-learn==1.5.2
+Requires-Dist: PyQt5==5.15.9
+Requires-Dist: QtAwesome==1.4.0
+Requires-Dist: vtk==9.4.1
+Requires-Dist: opencv-python-headless==4.10.0.84
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
