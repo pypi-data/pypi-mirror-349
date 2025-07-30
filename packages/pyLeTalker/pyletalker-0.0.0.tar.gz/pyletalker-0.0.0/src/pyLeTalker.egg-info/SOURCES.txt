@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+src/letalker/__init__.py
+src/pyLeTalker/__init__.py
+src/pyLeTalker.egg-info/PKG-INFO
+src/pyLeTalker.egg-info/SOURCES.txt
+src/pyLeTalker.egg-info/dependency_links.txt
+src/pyLeTalker.egg-info/requires.txt
+src/pyLeTalker.egg-info/top_level.txt
