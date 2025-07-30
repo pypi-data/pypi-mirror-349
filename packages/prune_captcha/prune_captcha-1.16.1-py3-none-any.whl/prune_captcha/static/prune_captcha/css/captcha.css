@@ -1,0 +1,23 @@
+.puzzle-container {
+    position: relative;
+}
+
+.puzzle-background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-repeat: no-repeat;
+}
+
+.puzzle-mask {
+    background-color: var(--celadon-200);
+    position: absolute;
+    z-index: 1;
+}
+
+.puzzle-piece {
+    border: 1px solid var(--celadon-200);
+    position: absolute;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
