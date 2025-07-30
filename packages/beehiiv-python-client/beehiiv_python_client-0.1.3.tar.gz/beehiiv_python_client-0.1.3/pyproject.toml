@@ -1,0 +1,61 @@
+[tool.poetry]
+name = "beehiiv-python-client"
+version = "0.1.3" # Updated version
+description = "A Python client for the Beehiiv API v2."
+authors = ["Salah El. Elnabrawy <salah.nb.03@gmail.com>"] # Update email if you have one, or remove
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/salah55s/beehiiv-python-client" # Example, change to your actual repo
+repository = "https://github.com/salah55s/beehiiv-python-client" # Example, change to your actual repo
+keywords = ["beehiiv", "api", "client", "newsletter"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8", # Keep if you still support 3.8.x (where x >= 1)
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+    "Topic :: Communications :: Email",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[tool.poetry.dependencies]
+python = "^3.8.1"
+requests = "^2.31.0"
+#python-dotenv = "^1.0.0" # For loading API keys from .env in examples
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.0"
+pytest-cov = "^4.0" # For coverage reports
+responses = "^0.23.0" # For mocking HTTP requests in tests
+flake8 = "^7.0" # Updated from 6.0
+black = {extras = ["d"], version = "^24.3.0"} # Updated from 23.0, ensure consistency with pre-commit
+isort = "^5.13.2" # Updated from 5.0
+mypy = "^1.9.0" # Updated from 1.0
+types-requests = "^2.31.0" # For mypy with requests
+pre-commit = "^3.0"
+python-dotenv = "^1.0.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
+target-version = ['py38', 'py39', 'py310', 'py311', 'py312']
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+ignore_missing_imports = true # Can be strict later
+# Add this for plugins if needed, e.g. for Pydantic:
+# plugins = pydantic.mypy
