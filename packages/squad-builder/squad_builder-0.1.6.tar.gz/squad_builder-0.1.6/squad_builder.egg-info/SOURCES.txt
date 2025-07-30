@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+examples/storage_client_example.py
+squad_builder/__init__.py
+squad_builder.egg-info/PKG-INFO
+squad_builder.egg-info/SOURCES.txt
+squad_builder.egg-info/dependency_links.txt
+squad_builder.egg-info/requires.txt
+squad_builder.egg-info/top_level.txt
+squad_builder/api/__init__.py
+squad_builder/api/cli.py
+squad_builder/api/decorators.py
+squad_builder/data_client/__init__.py
+squad_builder/data_client/client.py
