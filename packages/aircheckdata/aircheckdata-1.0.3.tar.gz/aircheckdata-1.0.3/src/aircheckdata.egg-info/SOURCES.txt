@@ -1,0 +1,17 @@
+.gitignore
+LICENSE
+README.md
+pyproject.toml
+requirements.txt
+test_data.py
+src/aircheckdata/__init__.py
+src/aircheckdata/cli.py
+src/aircheckdata/main.py
+src/aircheckdata.egg-info/PKG-INFO
+src/aircheckdata.egg-info/SOURCES.txt
+src/aircheckdata.egg-info/dependency_links.txt
+src/aircheckdata.egg-info/entry_points.txt
+src/aircheckdata.egg-info/requires.txt
+src/aircheckdata.egg-info/top_level.txt
+tests/__init__.py
+tests/test_reader.py
