@@ -1,0 +1,2 @@
+[console_scripts]
+uniform-vlm = uniform_vlm.cli:main
