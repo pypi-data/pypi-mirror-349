@@ -1,0 +1,4 @@
+[console_scripts]
+openstack_optimization = src.openstack_optimization:main
+openstack_summary = src.openstack_summary:main
+weekly_notification_optimization = src.weekly_notification_optimization:main
