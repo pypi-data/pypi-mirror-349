@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+setup.py
+postal_parser/__init__.py
+postal_parser.egg-info/PKG-INFO
+postal_parser.egg-info/SOURCES.txt
+postal_parser.egg-info/dependency_links.txt
+postal_parser.egg-info/top_level.txt
