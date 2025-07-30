@@ -1,0 +1,16 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+pyproject.toml
+src/gemmm/__init__.py
+src/gemmm/fetch_data.py
+src/gemmm/model.py
+src/gemmm/tables.py
+src/gemmm.egg-info/PKG-INFO
+src/gemmm.egg-info/SOURCES.txt
+src/gemmm.egg-info/dependency_links.txt
+src/gemmm.egg-info/requires.txt
+src/gemmm.egg-info/top_level.txt
+src/gemmm/data/__init__.py
+src/gemmm/data/msoa_table.parquet
+tests/test_model.py
