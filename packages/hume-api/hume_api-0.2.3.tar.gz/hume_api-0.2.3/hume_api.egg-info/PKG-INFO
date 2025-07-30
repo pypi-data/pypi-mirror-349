@@ -1,0 +1,51 @@
+Metadata-Version: 2.4
+Name: hume_api
+Version: 0.2.3
+Summary: Simple client for Hume API with audio support
+Home-page: https://github.com/yourusername/hume_api
+Author: Your Name
+Author-email: your@email.com
+License: MIT
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: websocket-client
+Requires-Dist: pyaudio
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# hume_api
+
+A simple Python client for the Hume API with audio streaming support.
+
+## Installation
+
+```sh
+pip install hume_api
+```
+
+## Usage
+
+```python
+from hume_api import HumeClient
+
+client = HumeClient(
+    api_url="wss://hume-8cac.onrender.com",
+    access_token="YOUR_TOKEN",
+    enable_audio=True
+)
+
+response = client.responses_create(
+    input="Write a one-sentence bedtime story about a unicorn."
+)
+
+print(response.output_text)
+```
