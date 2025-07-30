@@ -1,0 +1,10 @@
+azvalidator/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+azvalidator/apps.py,sha256=MyNep2dwS37DOzmm0O6a2UMUDhoB_RNuQcsI8awEcC0,154
+azvalidator/middleware.py,sha256=NNF-4P6mUobyZdNZVob2yMUNknjVpPcf_12vm5RBNPw,6087
+azvalidator/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+azvalidator/utils/__init__.py,sha256=pJ_yyeekeSPkmmz902Zjpfu5_YKLFyV8_G85jLGajuo,2055
+django_azuread_token_validator-0.1.2.dist-info/licenses/LICENSE,sha256=CMuqsE-KvwcghhizkasVK36WtY5g1WumUadinAP7RzM,1070
+django_azuread_token_validator-0.1.2.dist-info/METADATA,sha256=4eG0BPG9zaca3AWx6B3JHO73WEMib5SJY1x8lqQ-gsY,8681
+django_azuread_token_validator-0.1.2.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+django_azuread_token_validator-0.1.2.dist-info/top_level.txt,sha256=bVnEUX7l42d2S7MuBSYyEzDR1vwSfO5cRVldtuT-Svk,12
+django_azuread_token_validator-0.1.2.dist-info/RECORD,,
