@@ -1,0 +1,10 @@
+[workspace.package]
+version = "0.1.1"
+edition = "2024"
+description = "英単語から読みへの変換を行うライブラリ"
+repository = "https://github.com/VOICEVOX/kanalizer"
+license = "MIT"
+
+[workspace]
+members = ["crates/kanalizer-py"]
+resolver = "3"
