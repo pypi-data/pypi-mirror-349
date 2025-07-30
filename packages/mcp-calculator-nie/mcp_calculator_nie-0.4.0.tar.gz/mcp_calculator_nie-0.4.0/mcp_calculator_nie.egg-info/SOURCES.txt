@@ -1,0 +1,9 @@
+README.md
+calculator.py
+pyproject.toml
+mcp_calculator_nie.egg-info/PKG-INFO
+mcp_calculator_nie.egg-info/SOURCES.txt
+mcp_calculator_nie.egg-info/dependency_links.txt
+mcp_calculator_nie.egg-info/entry_points.txt
+mcp_calculator_nie.egg-info/requires.txt
+mcp_calculator_nie.egg-info/top_level.txt
