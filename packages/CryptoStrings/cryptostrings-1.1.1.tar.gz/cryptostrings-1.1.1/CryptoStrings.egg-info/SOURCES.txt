@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+CryptoStrings/__init__.py
+CryptoStrings/core.py
+CryptoStrings.egg-info/PKG-INFO
+CryptoStrings.egg-info/SOURCES.txt
+CryptoStrings.egg-info/dependency_links.txt
+CryptoStrings.egg-info/top_level.txt
