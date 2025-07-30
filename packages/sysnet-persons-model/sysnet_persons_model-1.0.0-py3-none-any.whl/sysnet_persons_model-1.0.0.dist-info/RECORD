@@ -1,0 +1,13 @@
+persons_model/__init__.py,sha256=oozOr_DKhenkM9BDaPOmtbLXhP5vtMUCjBPEjZDW4GQ,167
+persons_model/common.py,sha256=dJQL1Hn_dMsDp4fQ9jmGD5wP6EDTxTDhHjOta9Nk2XU,4814
+persons_model/config.py,sha256=voUKQF_yvpES3JzXntxtOCCt4jckDxk1FPKfCFaxtsE,192
+persons_model/context.py,sha256=Tb4P6m9qNcOyFQQ3B4pAzUSmnP-a48YQDvIDGsv7Q-A,1649
+persons_model/individual.py,sha256=HDCMwQ6Fmi-Fs-t-G-_yKe6IqFPLYHoz_uQ-F5-cxKI,2996
+persons_model/person.py,sha256=_1B2K5jU7cXibgNgeM_GxDggdAS0ZFTEfLm-wZznqj4,4444
+persons_model/role.py,sha256=4eJrT5cwGPneWWA9Ry5WdTDjjnvvzNJCihxMUBZ4klg,2697
+persons_model/tag.py,sha256=SbNNpMFIlZ6X8pdGE1Y5Hld_MebxoFdRFpX-eMGTriU,823
+sysnet_persons_model-1.0.0.dist-info/licenses/LICENSE,sha256=bx5iLIKjgAdYQ7sISn7DsfHRKkoCUm1154sJJKhgqnU,35184
+sysnet_persons_model-1.0.0.dist-info/METADATA,sha256=w-9Fqz32WzFrz0SYZ-fcp_Ur9QyV1GNyJh6CPiVteN0,1782
+sysnet_persons_model-1.0.0.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+sysnet_persons_model-1.0.0.dist-info/top_level.txt,sha256=7cIOBMUa_nlHFjlUN5gDtP2brOucTEB7yLrTWyFf-NQ,14
+sysnet_persons_model-1.0.0.dist-info/RECORD,,
