@@ -1,0 +1,7 @@
+Metadata-Version: 2.4
+Name: kati
+Version: 0.0.20190923
+Summary: An experimental GNU make clone
+Author-Email: Delilah Hoare <delilah@dhoare.me>, Koichi Shiraishi <zchee.io@gmail.com>, Kouhei Sutou <kou@cozmixng.org>, Po Hu <hupo1985@gmail.com>
+License-Expression: Apache-2.0
+
