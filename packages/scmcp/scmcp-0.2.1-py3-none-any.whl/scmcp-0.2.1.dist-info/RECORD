@@ -1,0 +1,8 @@
+scmcp/__init__.py,sha256=tC9CwL4Nm8brVXJnZNGk_eoZaJj6eOtLKtOrdJMrpoI,21
+scmcp/cli.py,sha256=ZThr44IDnwlHx0NMbvLhPXsem2pyIKG9EpemCTO2w4Y,2521
+scmcp/server/__init__.py,sha256=vaulyBUeBxWnBIzkKR6Tlrsl_hDDm2mwwSGPH8cSgRE,1126
+scmcp-0.2.1.dist-info/METADATA,sha256=aD0Trg_q7xEb1Yq8Tu3NGtTelANIjZ1h3RC72IzGHUc,3933
+scmcp-0.2.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+scmcp-0.2.1.dist-info/entry_points.txt,sha256=g7hJ91WItmaakB5Vfst8khr-ki5lJsANKE6n9z08f8Y,40
+scmcp-0.2.1.dist-info/licenses/LICENSE,sha256=7lSVhaHrQAdgqQ5HjlqfN2IejzTqIXM3Xy-3fth6oUA,1495
+scmcp-0.2.1.dist-info/RECORD,,
