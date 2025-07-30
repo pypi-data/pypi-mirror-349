@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: kry-test
+Version: 2000.1.1
+Summary: kry.py - Simple cryptography library
+License: 0BSD
+Project-URL: homepage, https://github.com/krylib/kry
+Classifier: Topic :: Security :: Cryptography
+
+kry.py - Simple cryptography library
+
+print(123)
