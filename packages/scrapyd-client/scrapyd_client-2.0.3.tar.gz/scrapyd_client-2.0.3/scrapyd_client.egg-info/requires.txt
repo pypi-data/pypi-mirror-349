@@ -1,0 +1,11 @@
+pip
+requests
+scrapy>=0.17
+setuptools
+uberegg>=0.1.1
+
+[test]
+coverage
+pytest
+pytest-console-scripts
+pytest-mock
