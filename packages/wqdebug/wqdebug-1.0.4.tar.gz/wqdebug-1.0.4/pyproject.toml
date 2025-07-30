@@ -1,0 +1,10 @@
+[project]
+name = "wqdebug"
+version = "1.0.4"
+description = "wuqi debug tool"
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = [
+    "tomli>=2.0.1",
+    "wqgdb>=1.0.2",
+]
