@@ -1,0 +1,34 @@
+Metadata-Version: 2.4
+Name: zhxg-mcp-server
+Version: 0.1.0
+Summary: The ZHXG MCP Server
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: aiohttp>=3.11.18
+Requires-Dist: argparse>=1.4.0
+Requires-Dist: logging>=0.4.9.6
+Requires-Dist: mcp>=1.9.0
+Requires-Dist: pydantic>=2.11.4
+Requires-Dist: typing>=3.10.0.0
+
+
+# MCP Inspector
+
+export ZHXG_API_KEY=<YOUR_API_KEY>
+
+npx -y @modelcontextprotocol/inspector uv run ./src/zhxg_mcp_server/server.py
+
+# MCP Servers Config
+
+{
+  "mcpServers": {
+    "zhxg_mcp_server": {
+      "command": "uvx",
+      "args": [
+        "zhxg_mcp_server"
+      ],
+      "env": {
+        "ZHXG_API_KEY": "<YOUR_API_KEY>"
+      }
+    }
+}
