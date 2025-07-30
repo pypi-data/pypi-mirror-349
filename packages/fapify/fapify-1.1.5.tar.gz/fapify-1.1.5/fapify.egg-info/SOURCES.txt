@@ -1,0 +1,10 @@
+README.md
+fapify.py
+pyproject.toml
+setup.cfg
+fapify.egg-info/PKG-INFO
+fapify.egg-info/SOURCES.txt
+fapify.egg-info/dependency_links.txt
+fapify.egg-info/entry_points.txt
+fapify.egg-info/requires.txt
+fapify.egg-info/top_level.txt
