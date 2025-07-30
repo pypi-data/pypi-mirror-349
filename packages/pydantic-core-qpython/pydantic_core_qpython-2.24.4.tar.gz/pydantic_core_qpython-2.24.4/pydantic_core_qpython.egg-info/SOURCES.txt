@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+pydantic_core/__init__.py
+pydantic_core/_pydantic_core.cpython-312.so
+pydantic_core/core_schema.py
+pydantic_core/py.typed
+pydantic_core_qpython.egg-info/PKG-INFO
+pydantic_core_qpython.egg-info/SOURCES.txt
+pydantic_core_qpython.egg-info/dependency_links.txt
+pydantic_core_qpython.egg-info/requires.txt
+pydantic_core_qpython.egg-info/top_level.txt
