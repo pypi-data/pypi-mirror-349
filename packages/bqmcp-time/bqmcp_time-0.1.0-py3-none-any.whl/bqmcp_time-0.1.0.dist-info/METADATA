@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: bqmcp-time
+Version: 0.1.0
+Summary: A Model Context Protocol server providing tools for time queries and timezone conversions for LLMs
+Author-email: Ricky Li <lingyuli513125@gmail.com>
+License-File: LICENSE
+Keywords: llm,mcp,time,timezone
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.11
+Requires-Dist: aiofiles>=24.1.0
+Requires-Dist: httpx>=0.28.1
+Requires-Dist: jieba>=0.42.1
+Requires-Dist: mcp[cli]>=1.9.0
+Requires-Dist: openai>=1.79.0
+Requires-Dist: pydantic>=2.11.4
+Requires-Dist: pymupdf>=1.25.5
+Requires-Dist: python-multipart>=0.0.20
+Requires-Dist: structlog>=25.3.0
+Requires-Dist: typing-extensions>=4.13.2
