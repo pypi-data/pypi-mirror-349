@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+src/__init__.py
+src/model_mapping.py
+sunra_apispec.egg-info/PKG-INFO
+sunra_apispec.egg-info/SOURCES.txt
+sunra_apispec.egg-info/dependency_links.txt
+sunra_apispec.egg-info/requires.txt
+sunra_apispec.egg-info/top_level.txt
