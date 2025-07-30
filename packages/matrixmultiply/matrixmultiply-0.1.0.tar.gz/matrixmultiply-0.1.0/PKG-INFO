@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: matrixmultiply
+Version: 0.1.0
+Summary: A simple Python package for matrix multiplication with validation
+Author: Samuel Mugisha
+Author-email: m.samuel@alustudent.com
+Requires-Python: >=3.6
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-python
+Dynamic: summary

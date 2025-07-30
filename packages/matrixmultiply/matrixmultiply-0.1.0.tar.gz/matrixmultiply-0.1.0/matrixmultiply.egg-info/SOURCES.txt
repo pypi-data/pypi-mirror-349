@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.py
+matrixmultiply/__init__.py
+matrixmultiply/multiply.py
+matrixmultiply.egg-info/PKG-INFO
+matrixmultiply.egg-info/SOURCES.txt
+matrixmultiply.egg-info/dependency_links.txt
+matrixmultiply.egg-info/top_level.txt
+tests/test_multiply.py
