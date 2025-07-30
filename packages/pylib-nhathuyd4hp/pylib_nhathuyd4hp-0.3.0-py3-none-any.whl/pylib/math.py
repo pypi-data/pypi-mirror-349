@@ -1,0 +1,11 @@
+def sum(*args: int | float) -> int | float:
+    sum = 0
+    for p in args:
+        sum = sum + p
+    return sum
+
+def tich(*args):
+    result = 1
+    for p in args:
+        result = result * p
+    return result
