@@ -1,0 +1,15 @@
+setup.py
+odoo/addons/knowledge_translatable_pages/CHANGELOG.md
+odoo/addons/knowledge_translatable_pages/README.rst
+odoo/addons/knowledge_translatable_pages/__init__.py
+odoo/addons/knowledge_translatable_pages/__manifest__.py
+odoo/addons/knowledge_translatable_pages/models/__init__.py
+odoo/addons/knowledge_translatable_pages/models/document_page.py
+odoo/addons/knowledge_translatable_pages/static/description/icon.png
+odoo/addons/knowledge_translatable_pages/views/document_page_view.xml
+odoo_addon_knowledge_translatable_pages.egg-info/PKG-INFO
+odoo_addon_knowledge_translatable_pages.egg-info/SOURCES.txt
+odoo_addon_knowledge_translatable_pages.egg-info/dependency_links.txt
+odoo_addon_knowledge_translatable_pages.egg-info/not-zip-safe
+odoo_addon_knowledge_translatable_pages.egg-info/requires.txt
+odoo_addon_knowledge_translatable_pages.egg-info/top_level.txt
