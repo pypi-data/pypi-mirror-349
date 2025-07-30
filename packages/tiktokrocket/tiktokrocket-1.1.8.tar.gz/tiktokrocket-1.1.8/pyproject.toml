@@ -1,0 +1,42 @@
+[project]
+name = "tiktokrocket"
+version = "1.1.8"
+description = ""
+authors = [
+    {name = "eugconrad"}
+]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "aiohttp (>=3.11.16,<4.0.0)",
+    "blinker (==1.7.0)",
+    "loguru (>=0.7.3,<0.8.0)",
+    "platformdirs (>=4.3.7,<5.0.0)",
+    "python-dotenv (>=1.0.1,<2.0.0)",
+    "requests (>=2.32.3,<3.0.0)",
+    "selenium (==4.23.0)",
+    "selenium-stealth (==1.0.6)",
+    "selenium-wire (==5.1.0)",
+    "setuptools (>=75.8.0,<76.0.0)",
+    "ua-generator (>=2.0.5,<3.0.0)",
+    "undetected-chromedriver (==3.5.5)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.poetry.dependencies]
+python = ">=3.11,<4.0"
+
+
+[tool.pylint.messages_control]
+disable = [
+    "arguments-differ",
+    "signature-differ",
+    "line-too-long",
+    "broad-exception-raised",
+    "broad-exception-caught"
+]
