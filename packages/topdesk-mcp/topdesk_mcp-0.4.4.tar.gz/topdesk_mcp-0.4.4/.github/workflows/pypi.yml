@@ -1,0 +1,31 @@
+on:
+  release:
+    types: [created]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: write
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+        cache: pip
+        cache-dependency-path: '**/pyproject.toml'
+    - name: Build
+      run: |
+        pip install uv
+        uv venv
+        uv pip install setuptools wheel build
+        uv version ${{ github.event.release.tag_name }}
+        uv build
+
+    - name: Publish
+      uses: pypa/gh-action-pypi-publish@release/v1
+
+    # Commit all changed files back to the repository
+    - uses: stefanzweifel/git-auto-commit-action@v5
