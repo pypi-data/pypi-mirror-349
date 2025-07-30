@@ -1,0 +1,261 @@
+This Python SDK that provides convenient clients for interacting with the **LLM-HUB** – a centralized backend service. Your Python applications can use this SDK to send chat completion requests to the LLM-HUB, which manages and routes these requests to its integrated LLM providers and their models (e.g., models from Anthropic, Google's Gemini, and OpenAI).
+
+**Note:** This SDK communicates with _your specific LLM-HUB API_, not directly with the individual LLM providers. Your LLM-HUB service handles the authentication and interaction with the final LLM APIs it manages.
+
+## Features
+
+- Provider-specific clients (`GeminiClient`, `OpenAIClient`, `AnthropicClient`) for clear usage when targeting specific provider capabilities through the LLM-HUB.
+- Handles communication with the LLM-HUB's chat endpoint (typically `/v1/chat`).
+- Configuration of the LLM-HUB API URL via environment variables (`CHAT_API_BASE_URL`).
+- Optional authentication with the LLM-HUB API via environment variables (`SDK_CHAT_API_KEY`) or direct initialization.
+- Built-in custom exceptions (`APIRequestError`, `ConnectionError`, `TimeoutError`, `SDKError`) for easier error handling.
+- Based on the robust `requests` library for HTTP communication.
+
+<!-- Project Structure section is omitted as it's less relevant for SDK users -->
+
+## Getting Started
+
+### Prerequisites
+
+- Python 3.8+
+- `pip` package manager
+- Access to a running instance of your LLM-HUB API that this SDK is designed to talk to.
+
+### Installation
+
+1.  **Set up a Virtual Environment (Recommended):**
+    It's highly recommended to use a virtual environment to manage your project's dependencies and avoid conflicts with other Python projects.
+
+        - **Create the virtual environment:**
+          Open your terminal or command prompt in your project's root directory and run:
+
+          ```bash
+          python -m venv .venv
+          # Or, if you have multiple Python versions, you might use:
+          # python3 -m venv .venv
+          # On Windows, you can also use the py launcher:
+          # py -m venv .venv
+          ```
+
+          This will create a directory named `.venv` (or your chosen name) containing the virtual environment.
+
+        - **Activate the virtual environment:**
+          You need to activate the environment in each new terminal session where you want to use it.
+
+          - **On Windows (Command Prompt or PowerShell):**
+            ```bash
+            .venv\Scripts\activate
+            ```
+          - **On macOS and Linux (bash/zsh):**
+            `bash
+
+    source .venv/bin/activate
+    `        Once activated, your terminal prompt will usually change to indicate that you are in the virtual environment (e.g.,`(.venv) Your-User@Your-Machine:...$`).
+
+2.  **Install the SDK:**
+    With your virtual environment activated, you can now install the SDK.
+
+    ```bash
+    pip install llm-unified-sdk  # Replace llm-unified-sdk with your actual package name
+    ```
+
+    This will automatically install the required `requests` library within your active virtual environment.
+
+3.  **(Optional) Install `python-dotenv`:**
+    If you plan to manage configuration using a `.env` file in your application, install `python-dotenv` into your virtual environment:
+    ```bash
+    pip install python-dotenv
+    ```
+
+## Configuration
+
+The SDK needs to know the URL of your LLM-HUB API. This is typically configured in the environment of the application _using_ the SDK.
+
+1.  **Create a `.env` file** in the root directory of _your application project_:
+
+    ```dotenv
+    # .env file for YOUR application
+
+    # REQUIRED: The full base URL of your running LLM-HUB API
+    # Example: CHAT_API_BASE_URL="http://localhost:8000"
+    # Example: CHAT_API_BASE_URL="https://your-llm-hub-api.com"
+    CHAT_API_BASE_URL="YOUR_LLM_HUB_API_URL_HERE"
+
+    # OPTIONAL: API key required BY YOUR LLM-HUB API itself (if it's protected)
+    # The SDK will use this as a fallback if no api_key is passed during init.
+    # Leave blank or omit if your LLM-HUB doesn't require a key from clients.
+    # SDK_CHAT_API_KEY="YOUR_LLM_HUB_API_ACCESS_KEY_HERE"
+    ```
+
+2.  **Load the `.env` file** in your application code _before_ initializing the SDK client:
+
+    ```python
+    from dotenv import load_dotenv
+    import os
+
+    load_dotenv() # Loads variables from .env into the environment
+
+    # Retrieve the base URL for the SDK
+    api_url = os.getenv("CHAT_API_BASE_URL")
+
+    if not api_url:
+        print("Error: CHAT_API_BASE_URL is not set in the environment!")
+        # Handle error appropriately
+    ```
+
+## Usage Example
+
+This example demonstrates how to dynamically select an LLM provider (available through your LLM-HUB), initialize its client, send a chat request via the LLM-HUB, and handle potential errors. Save this as `app.py` or similar in your project.
+
+```python
+import os
+import logging
+import json
+from dotenv import load_dotenv
+import importlib # Often useful for more dynamic imports if needed, but getattr might suffice
+
+# --- Import the main SDK package ---
+# This assumes SDK/__init__.py makes submodules available (e.g., SDK.gemini)
+import SDK
+
+# --- Configuration ---
+load_dotenv()
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+API_URL = os.getenv("CHAT_API_BASE_URL") # This should be your LLM-HUB URL
+if not API_URL:
+    logging.error("FATAL: CHAT_API_BASE_URL (LLM-HUB URL) environment variable not set.")
+    exit(1)
+
+# --- DYNAMIC PROVIDER & EXCEPTION SETUP ---
+# This section demonstrates selecting a client type that corresponds to
+# how your LLM-HUB might differentiate requests for different underlying providers.
+
+# 1. Choose the provider type this request is intended for via the LLM-HUB
+SELECTED_PROVIDER_NAME = "openai" # CHANGE THIS to 'openai', 'anthropic', 'gemini' etc.
+                                  # This tells the SDK which client type to use,
+                                  # which then tells your LLM-HUB how to route the request.
+
+try:
+    # 2. Get the specific provider client module from the SDK package
+    provider_module = getattr(SDK, SELECTED_PROVIDER_NAME)
+
+    # 3. Get the correct client class from the module
+    client_class_name = f"{SELECTED_PROVIDER_NAME.capitalize()}Client"
+    if SELECTED_PROVIDER_NAME == "openai":
+        client_class_name = "OpenAIClient"
+
+    ClientClass = getattr(provider_module, client_class_name)
+
+    # 4. Assign the exceptions from THAT module to local variables for easier catch blocks
+    APIRequestError = provider_module.APIRequestError
+    ConnectionError = provider_module.ConnectionError
+    TimeoutError = provider_module.TimeoutError
+    SDKError = provider_module.SDKError
+
+except (AttributeError, ImportError) as e:
+    logging.error(f"Could not load SDK module/class/exceptions for provider '{SELECTED_PROVIDER_NAME}': {e}")
+    exit(1)
+
+# --- END DYNAMIC SETUP ---
+
+
+# --- Initialize the Dynamically Selected Client ---
+# The 'model' parameter here would be a model identifier known to your LLM-HUB.
+try:
+    if SELECTED_PROVIDER_NAME == "gemini":
+        target_model_name = "gemini-1.5-flash-latest" # Example model identifier for Gemini via LLM-HUB
+    elif SELECTED_PROVIDER_NAME == "openai":
+        target_model_name = "gpt-4o" # Example model identifier for OpenAI via LLM-HUB
+    elif SELECTED_PROVIDER_NAME == "anthropic":
+        target_model_name = "claude-3-haiku-20240307" # Example model identifier for Anthropic via LLM-HUB
+    else:
+        target_model_name = "default-model-on-hub"
+        logging.warning(f"Unknown provider selection '{SELECTED_PROVIDER_NAME}', using default model name.")
+
+    chat_client = ClientClass(
+        base_url=API_URL, # URL of your LLM-HUB
+        model=target_model_name
+    )
+    logging.info(f"{client_class_name} initialized for model '{target_model_name}', targeting LLM-HUB: {API_URL}")
+
+except (ValueError, TypeError) as e:
+    logging.error(f"Failed to initialize client: {e}")
+    exit(1)
+
+# --- Main Interaction Loop ---
+if __name__ == "__main__":
+    logging.info(f"Starting chat interaction via LLM-HUB (using {SELECTED_PROVIDER_NAME}-like client for model '{target_model_name}'). Type 'quit' or 'exit' to stop.")
+
+    messages_history = []
+
+    while True:
+        try:
+            user_prompt = input("You: ")
+            if user_prompt.lower() in ['quit', 'exit']:
+                logging.info("Exiting chat.")
+                break
+            if not user_prompt:
+                continue
+
+            messages_payload = [{"role": "user", "content": user_prompt}]
+
+            logging.info(f"Sending request via {SELECTED_PROVIDER_NAME} client to model {target_model_name} through LLM-HUB...")
+
+            api_response = chat_client.chat(
+                messages=messages_payload,
+                temperature=0.7
+            )
+
+            logging.info("Received response from LLM-HUB.")
+
+            assistant_message = None
+            try:
+                # Response parsing depends on how YOUR LLM-HUB formats the final response
+                # after getting it from the underlying LLM.
+                # The examples below are common patterns from direct LLM APIs,
+                # your LLM-HUB might standardize this.
+                if "choices" in api_response and api_response["choices"]: # OpenAI-like
+                    msg_obj = api_response["choices"][0].get("message")
+                    if msg_obj and "content" in msg_obj:
+                        assistant_message = msg_obj["content"]
+                elif "content" in api_response and isinstance(api_response["content"], list): # Anthropic-like
+                    assistant_message = "".join([block.get("text", "") for block in api_response["content"] if block.get("type") == "text"])
+                elif "candidates" in api_response and api_response["candidates"]: # Gemini-like
+                    content = api_response["candidates"][0].get("content")
+                    if content and "parts" in content and content["parts"]:
+                        assistant_message = content["parts"][0].get("text")
+
+                if assistant_message:
+                    print(f"Assistant: {assistant_message}")
+                else:
+                    print(f"Assistant (raw/unparsed from LLM-HUB): {json.dumps(api_response, indent=2)}")
+            except Exception as parse_e:
+                 logging.error(f"Error parsing response from LLM-HUB: {parse_e}")
+                 print(f"Assistant (raw/error parsing from LLM-HUB): {json.dumps(api_response, indent=2)}")
+
+        except APIRequestError as e:
+            logging.error(f"API Error from LLM-HUB: {e.status_code} - {e.details if e.details else e.message}")
+            print(f"Assistant Error: API request to LLM-HUB failed ({e.status_code}). Check logs.")
+        except ConnectionError as e:
+            logging.error(f"Connection Error to LLM-HUB: {e}")
+            print("Assistant Error: Could not connect to the LLM-HUB. Check the URL and network.")
+            break
+        except TimeoutError as e:
+            logging.error(f"Timeout Error with LLM-HUB: {e}")
+            print("Assistant Error: The request to the LLM-HUB timed out.")
+        except SDKError as e:
+            logging.error(f"Generic SDK Error: {e}")
+            print("Assistant Error: An unexpected SDK error occurred when communicating with the LLM-HUB.")
+        except KeyboardInterrupt:
+             logging.info("\nExiting chat due to user interrupt (Ctrl+C).")
+             break
+        except Exception as e:
+            logging.exception(f"An unexpected non-SDK error occurred: {e}")
+            print("Assistant Error: A critical unexpected error occurred. Check logs.")
+
+## License
+
+Copyright (c) 2025 NTV360. All rights reserved.
+
+This software is proprietary and is distributed without any license granting rights to use, copy, modify, or distribute. Use of this software requires specific permission from the copyright holder. Please refer to the NOTICE file (if provided) or contact the copyright holder for terms of use.
+```
