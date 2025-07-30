@@ -1,0 +1,33 @@
+[build-system]
+requires    = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name            = "nimmunize"
+version         = "1.0.4"
+description     = "Nigeria immunisation scheduling & survey analytics package"
+readme          = "README.md"
+license         = "GPL-3.0-or-later"              # use an SPDX string, not a table
+license-files   = ["LICENSE"]
+authors         = [{ name="Daniel T. Omole", email="topeomole55@gmail.com" }]
+requires-python = ">=3.9"
+dependencies    = [
+    "pandas>=2",
+    "click>=8",
+    "python-dateutil",
+]
+
+[project.urls]
+Homepage      = "https://github.com/Nerdthink/nimmunize"
+Source        = "https://github.com/Nerdthink/nimmunize"
+Issues        = "https://github.com/Nerdthink/nimmunize/issues"
+Documentation = "https://nimmunize.readthedocs.io"
+
+# Tell setuptools to include all packages found in the repo root
+[tool.setuptools.packages.find]
+where  = ["."]
+include = ["nimmunize", "nimmunize.*"]
+
+# Bundle the JSON schedule file
+[tool.setuptools.package-data]
+"nimmunize" = ["data/*.json"]

@@ -1,0 +1,332 @@
+{
+  "version": "2024‑12‑18‑NPHCDA‑poster",
+  "source": {
+    "title": "Routine Immunisation Schedule (poster)",
+    "publisher": "National Primary Health Care Development Agency (NPHCDA)",
+    "published": "2024‑12‑18",
+    "url": "https://x.com/NphcdaNG/status/1869324209891221845/photo/1",
+    "image_url": "https://pbs.twimg.com/media/GfEsdOzXAAEVi69?format=jpg&name=large"
+  },
+  "antigens": [
+    {
+      "name": "hep_b_birth",
+      "display_name": "Hepatitis B (birth)",
+      "doses": [
+        {
+          "sequence": 1,
+          "age_weeks": 0,
+          "dosage": "0.5 ml",
+          "route": "Intramuscular",
+          "site": "Anterolateral aspect of right thigh",
+          "diseases_prevented": ["Hepatitis B"]
+        }
+      ]
+    },
+    {
+      "name": "bcg",
+      "display_name": "BCG",
+      "doses": [
+        {
+          "sequence": 1,
+          "age_weeks": 0,
+          "dosage": "0.05 ml",
+          "route": "Intradermal",
+          "site": "Left upper arm",
+          "diseases_prevented": ["Tuberculosis"]
+        }
+      ]
+    },
+    {
+      "name": "opv",
+      "display_name": "OPV",
+      "doses": [
+        {
+          "sequence": 0,
+          "age_weeks": 0,
+          "dosage": "2 drops",
+          "route": "Oral",
+          "site": "Mouth",
+          "diseases_prevented": ["Polio"]
+        },
+        {
+          "sequence": 1,
+          "age_weeks": 6,
+          "dosage": "2 drops",
+          "route": "Oral",
+          "site": "Mouth",
+          "diseases_prevented": ["Polio"]
+        },
+        {
+          "sequence": 2,
+          "age_weeks": 10,
+          "dosage": "2 drops",
+          "route": "Oral",
+          "site": "Mouth",
+          "diseases_prevented": ["Polio"]
+        },
+        {
+          "sequence": 3,
+          "age_weeks": 14,
+          "dosage": "2 drops",
+          "route": "Oral",
+          "site": "Mouth",
+          "diseases_prevented": ["Polio"]
+        }
+      ]
+    },
+    {
+      "name": "pentavalent",
+      "display_name": "Pentavalent (DPT‑HepB‑Hib)",
+      "doses": [
+        {
+          "sequence": 1,
+          "age_weeks": 6,
+          "dosage": "0.5 ml",
+          "route": "Intramuscular",
+          "site": "Anterolateral aspect of left thigh",
+          "diseases_prevented": [
+            "Diphtheria",
+            "Pertussis",
+            "Tetanus",
+            "Hepatitis B",
+            "Haemophilus influenzae type b"
+          ]
+        },
+        {
+          "sequence": 2,
+          "age_weeks": 10,
+          "dosage": "0.5 ml",
+          "route": "Intramuscular",
+          "site": "Anterolateral aspect of left thigh",
+          "diseases_prevented": [
+            "Diphtheria",
+            "Pertussis",
+            "Tetanus",
+            "Hepatitis B",
+            "Haemophilus influenzae type b"
+          ]
+        },
+        {
+          "sequence": 3,
+          "age_weeks": 14,
+          "dosage": "0.5 ml",
+          "route": "Intramuscular",
+          "site": "Anterolateral aspect of left thigh",
+          "diseases_prevented": [
+            "Diphtheria",
+            "Pertussis",
+            "Tetanus",
+            "Hepatitis B",
+            "Haemophilus influenzae type b"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pcv",
+      "display_name": "Pneumococcal Conjugate Vaccine (PCV)",
+      "doses": [
+        {
+          "sequence": 1,
+          "age_weeks": 6,
+          "dosage": "0.5 ml",
+          "route": "Intramuscular",
+          "site": "Anterolateral aspect of right thigh",
+          "diseases_prevented": ["Pneumonia", "Meningitis"]
+        },
+        {
+          "sequence": 2,
+          "age_weeks": 10,
+          "dosage": "0.5 ml",
+          "route": "Intramuscular",
+          "site": "Anterolateral aspect of right thigh",
+          "diseases_prevented": ["Pneumonia", "Meningitis"]
+        },
+        {
+          "sequence": 3,
+          "age_weeks": 14,
+          "dosage": "0.5 ml",
+          "route": "Intramuscular",
+          "site": "Anterolateral aspect of right thigh",
+          "diseases_prevented": ["Pneumonia", "Meningitis"]
+        }
+      ]
+    },
+    {
+      "name": "ipv",
+      "display_name": "IPV",
+      "doses": [
+        {
+          "sequence": 1,
+          "age_weeks": 6,
+          "dosage": "0.5 ml",
+          "route": "Intramuscular",
+          "site": "Anterolateral aspect of right thigh (2.5 cm apart from PCV)",
+          "diseases_prevented": ["Polio"]
+        },
+        {
+          "sequence": 2,
+          "age_weeks": 14,
+          "dosage": "0.5 ml",
+          "route": "Intramuscular",
+          "site": "Anterolateral aspect of right thigh (2.5 cm apart from PCV)",
+          "diseases_prevented": ["Polio"]
+        }
+      ]
+    },
+    {
+      "name": "rotavirus",
+      "display_name": "Rotavirus",
+      "doses": [
+        {
+          "sequence": 1,
+          "age_weeks": 6,
+          "dosage": "5 drops",
+          "route": "Oral",
+          "site": "Mouth",
+          "diseases_prevented": ["Diarrhoea"]
+        },
+        {
+          "sequence": 2,
+          "age_weeks": 10,
+          "dosage": "5 drops",
+          "route": "Oral",
+          "site": "Mouth",
+          "diseases_prevented": ["Diarrhoea"]
+        },
+        {
+          "sequence": 3,
+          "age_weeks": 14,
+          "dosage": "5 drops",
+          "route": "Oral",
+          "site": "Mouth",
+          "diseases_prevented": ["Diarrhoea"]
+        }
+      ]
+    },
+    {
+      "name": "malaria_rts_s",
+      "display_name": "Malaria‑RTS,S",
+      "doses": [
+        {
+          "sequence": 1,
+          "age_weeks": 22,
+          "dosage": "0.5 ml",
+          "route": "Intramuscular",
+          "site": "Anterolateral aspect of right thigh",
+          "diseases_prevented": ["Malaria"]
+        },
+        {
+          "sequence": 2,
+          "age_weeks": 26,
+          "dosage": "0.5 ml",
+          "route": "Intramuscular",
+          "site": "Anterolateral aspect of right thigh",
+          "diseases_prevented": ["Malaria"]
+        },
+        {
+          "sequence": 3,
+          "age_weeks": 30,
+          "dosage": "0.5 ml",
+          "route": "Intramuscular",
+          "site": "Anterolateral aspect of right thigh",
+          "diseases_prevented": ["Malaria"]
+        },
+        {
+          "sequence": 4,
+          "age_weeks": 65,
+          "dosage": "0.5 ml",
+          "route": "Intramuscular",
+          "site": "Deltoid muscle (left upper arm)",
+          "diseases_prevented": ["Malaria"]
+        }
+      ]
+    },
+    {
+      "name": "vitamin_a",
+      "display_name": "Vitamin A",
+      "doses": [
+        {
+          "sequence": 1,
+          "age_weeks": 26,
+          "dosage": "100,000 IU",
+          "route": "Oral",
+          "site": "Mouth",
+          "diseases_prevented": ["Nutritional supplement", "Malaria"]
+        },
+        {
+          "sequence": 2,
+          "age_weeks": 39,
+          "dosage": "200,000 IU",
+          "route": "Oral",
+          "site": "Mouth",
+          "diseases_prevented": ["Nutritional supplement"]
+        }
+      ]
+    },    
+    {
+      "name": "measles_rubella",
+      "display_name": "Measles‑Rubella",
+      "doses": [
+        {
+          "sequence": 1,
+          "age_weeks": 39,
+          "dosage": "0.5 ml",
+          "route": "Subcutaneous",
+          "site": "Left upper arm",
+          "diseases_prevented": ["Measles"]
+        },
+        {
+          "sequence": 2,
+          "age_weeks": 65,
+          "dosage": "0.5 ml",
+          "route": "Subcutaneous",
+          "site": "Left upper arm",
+          "diseases_prevented": ["Measles"]
+        }
+      ]
+    },
+    {
+      "name": "yellow_fever",
+      "display_name": "Yellow Fever",
+      "doses": [
+        {
+          "sequence": 1,
+          "age_weeks": 39,
+          "dosage": "0.5 ml",
+          "route": "Subcutaneous",
+          "site": "Right upper arm",
+          "diseases_prevented": ["Yellow Fever"]
+        }
+      ]
+    },
+    {
+      "name": "men_a",
+      "display_name": "Meningitis A (MenA)",
+      "doses": [
+        {
+          "sequence": 1,
+          "age_weeks": 39,
+          "dosage": "0.5 ml",
+          "route": "Intramuscular",
+          "site": "Anterolateral aspect of left thigh",
+          "diseases_prevented": ["Meningitis"]
+        }
+      ]
+    },
+    {
+      "name": "hpv",
+      "display_name": "HPV",
+      "doses": [
+        {
+          "sequence": 1,
+          "age_weeks": 468,
+          "dosage": "0.5 ml",
+          "route": "Intramuscular",
+          "site": "Deltoid muscle (left upper arm)",
+          "diseases_prevented": ["Human papillomavirus"]
+        }
+      ]
+    }
+  ]
+}
