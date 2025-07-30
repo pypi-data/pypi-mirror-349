@@ -1,0 +1,85 @@
+Metadata-Version: 2.4
+Name: stis_cti
+Version: 1.6.2
+Summary: Pixel-based CTI-correction for HST/STIS CCD data
+Home-page: https://www.stsci.edu/hst/instrumentation/stis/data-analysis-and-software-tools/pixel-based-cti
+Author: Sean Lockwood, Phil Hodge, Pey Lian Lim, W.J. Hack, J. Anderson, Matt Davis
+Author-email: lockwood@stsci.edu
+Maintainer: Sean Lockwood
+Maintainer-email: lockwood@stsci.edu
+License: BSD-new
+Project-URL: Homepage, https://www.stsci.edu/hst/instrumentation/stis/data-analysis-and-software-tools/pixel-based-cti
+Project-URL: Documentation, https://stis-cti.readthedocs.io
+Project-URL: Help Desk, https://hsthelp.stsci.edu
+Project-URL: Source Code, https://github.com/spacetelescope/stis_cti
+Project-URL: Issues, https://github.com/spacetelescope/stis_cti/issues
+Keywords: astronomy
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: C
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Astronomy
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/x-rst
+License-File: LICENSE.txt
+Requires-Dist: setuptools
+Requires-Dist: numpy
+Requires-Dist: astropy>=4.0
+Requires-Dist: stistools>=1.2
+Requires-Dist: refstis>=0.8.1
+Requires-Dist: crds
+Requires-Dist: stsci.tools>=3.2.2
+Requires-Dist: six
+Provides-Extra: docs
+Requires-Dist: sphinx; extra == "docs"
+Provides-Extra: test
+Requires-Dist: pytest; extra == "test"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: license-file
+Dynamic: maintainer
+Dynamic: maintainer-email
+Dynamic: project-url
+Dynamic: requires-dist
+Dynamic: summary
+
+HST/STIS Pixel-Based CTI-Correction Scripts
+===========================================
+
+Utilities needed to correct for Charge Transfer Inefficiency (CTI) in the Hubble
+Space Telescope (HST) STIS CCD.
+
+Scripts installed in shell:
+
+  * stis_cti  -- Runs CTI correction on raw files, handling super-dark creation
+  * archive_dark_query -- Determines component darks needed to remake a super-dark
+
+For more information, type:
+
+  ``stis_cti --help``
+
+Python usage::
+
+  import stis_cti
+  stis_cti.stis_cti(...)
+
+Other utilities:
+
+  * stis_cti.StisPixCteCorr(...) -- Code to run pixel-based CTI-correction on intermediate products
+  * stis_cti.viable_ccd_file(...) -- Test to see which FITS files on which to run the correction
+  * stis_cti.archive_dark_query(...) -- Utility to query MAST for needed component darks
+  * stis_cti.custom_superdark_info() -- Print information on manually creating/implementing a corrected super-dark
+
+See documentation at https://stis-cti.readthedocs.io
+
+Project page:  http://www.stsci.edu/hst/instrumentation/stis/data-analysis-and-software-tools/pixel-based-cti
+
+Code repository:  https://github.com/spacetelescope/stis_cti

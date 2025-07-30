@@ -1,0 +1,14 @@
+setuptools
+numpy
+astropy>=4.0
+stistools>=1.2
+refstis>=0.8.1
+crds
+stsci.tools>=3.2.2
+six
+
+[docs]
+sphinx
+
+[test]
+pytest
