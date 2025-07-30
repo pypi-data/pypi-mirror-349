@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/jv_tts_azure/__init__.py
+src/jv_tts_azure/azure_tts.py
+src/jv_tts_azure.egg-info/PKG-INFO
+src/jv_tts_azure.egg-info/SOURCES.txt
+src/jv_tts_azure.egg-info/dependency_links.txt
+src/jv_tts_azure.egg-info/top_level.txt
