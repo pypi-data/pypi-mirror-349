@@ -1,0 +1,17 @@
+[project]
+name = "uv-lgh-test-package1"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Johnson Liu", email = "johnson.liu@quectel.com" }
+]
+requires-python = ">=3.12"
+dependencies = []
+
+[project.scripts]
+uv-lgh-test-package1 = "uv_lgh_test_package1:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
