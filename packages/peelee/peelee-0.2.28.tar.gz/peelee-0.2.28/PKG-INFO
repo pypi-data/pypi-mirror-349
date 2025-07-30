@@ -1,0 +1,18 @@
+Metadata-Version: 2.3
+Name: peelee
+Version: 0.2.28
+Summary: A python library to create countless palettes.
+License: MIT
+Author: Bruce Wen
+Author-email: wenijinew@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Description-Content-Type: text/markdown
+
+# eu.palette
+
+A python library to create countless palette.
+
