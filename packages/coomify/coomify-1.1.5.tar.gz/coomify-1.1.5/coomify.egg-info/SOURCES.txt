@@ -1,0 +1,10 @@
+README.md
+coomify.py
+pyproject.toml
+setup.cfg
+coomify.egg-info/PKG-INFO
+coomify.egg-info/SOURCES.txt
+coomify.egg-info/dependency_links.txt
+coomify.egg-info/entry_points.txt
+coomify.egg-info/requires.txt
+coomify.egg-info/top_level.txt
