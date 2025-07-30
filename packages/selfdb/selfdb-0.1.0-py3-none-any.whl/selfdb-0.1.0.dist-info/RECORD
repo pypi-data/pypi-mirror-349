@@ -1,0 +1,12 @@
+selfdb/__init__.py,sha256=QPhZOIjbZXJPoly-Ye5BmNO03dF3Qmi9p-ZbMVKfczk,135
+selfdb/auth.py,sha256=ocgE5WYKtX05VciGrgGXe0mtyqPWcDkEdxbWyAeMMYo,2706
+selfdb/client.py,sha256=VqryGyIE640zTSLnuNRV7_JNndEH6FK0jTPXl1MSPyw,5556
+selfdb/exceptions.py,sha256=XRmYzw8IphwRGzZdCRMV1hSV3LztAxKsApaajvDr12Y,758
+selfdb/functions.py,sha256=SdhaXEpP75Gt-EQ_70qm1WMyveizFq8cf1OniLzDgng,412
+selfdb/query.py,sha256=shIwZAaIqlOSE-afir65KYT-GjDO0YbUnXfd0Mx6UsU,2974
+selfdb/storage.py,sha256=EZJ4dPqIAx58B2RgImCa5GIh-rHw1wpkwfiBkTVitDY,5666
+selfdb/tables.py,sha256=dThKurph0jRV5EdbVIUp14bYRzFP_OEITTNY3fezNgg,6112
+selfdb-0.1.0.dist-info/METADATA,sha256=vFctQMYv35SoHg2VI5OXUDtz2AWdZfAOPAOaexdweRY,4604
+selfdb-0.1.0.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+selfdb-0.1.0.dist-info/top_level.txt,sha256=r-hOLR33yaD_RRvIKSbtcBcykYcl9IlgMmZJ9s26RbA,7
+selfdb-0.1.0.dist-info/RECORD,,
