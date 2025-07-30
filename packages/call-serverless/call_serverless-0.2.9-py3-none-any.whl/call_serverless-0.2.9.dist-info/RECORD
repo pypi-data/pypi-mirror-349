@@ -1,0 +1,12 @@
+call_serverless/__init__.py,sha256=-z8k_Y_pHC2xV86mGSmAo7hrAVf3WRo8BcDtx3gLTls,49
+call_serverless/apis.py,sha256=cy-2Zr80jpaqzz58r1atrjTkHBd76VSqpRfgnw9qUFU,7241
+call_serverless/exceptions.py,sha256=Zo9xP3xLJUFjp3isIA93o9N54ADDP8a1AO2xxHcEIBE,139
+call_serverless/formatter.py,sha256=wm5Jkbwp1Giew7d7phzt3chewQxGABFKInvvMCrG7To,1473
+call_serverless/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+call_serverless/response.py,sha256=snf3yUxATyXzItJJNzdDwZOGml1ktvl1itqCubTXB3g,911
+call_serverless/template.py,sha256=DCSPZWC8KZuErm9ILnNUrPtP6Y2aCXnS4c6H07uWMYA,787
+call_serverless-0.2.9.dist-info/licenses/LICENSE,sha256=SEYkLgfDEBRe-WqRGaPNX5_PLarSN9Y7iRVjodBr03w,1073
+call_serverless-0.2.9.dist-info/METADATA,sha256=wSk44JaJtBty70-GwMCax8cBxOrhqKzPBqWhDRZAaCU,4095
+call_serverless-0.2.9.dist-info/WHEEL,sha256=1tXe9gY0PYatrMPMDd6jXqjfpz_B-Wqm32CPfRC58XU,91
+call_serverless-0.2.9.dist-info/top_level.txt,sha256=uqNuZ8lai5IgBAC5PYYSbpFnW7R64Qar8BkOBWk9KjU,16
+call_serverless-0.2.9.dist-info/RECORD,,
