@@ -1,0 +1,13 @@
+genwebpush/__init__.py,sha256=9oMWuY2kDtBuwRHsfCVA1kU3lam0wgP9HTEbJatEXC8,101
+genwebpush/__main__.py,sha256=xNjIbRskseUcSZUNoVvbbszZT5GAymnxoMbGXtXmvjo,2661
+genwebpush/core.py,sha256=sXtnm0kZ2_m0E2oM_lfJIjP5OZ5-S-OZQwMMtCNkEs4,3111
+genwebpush/models.py,sha256=G16SCzp84Ylxe2DI_g6_b7VZDH772_ESBhOyayeFOlw,4008
+genwebpush/assets/index.html,sha256=yj7s6fWB9lf3ZYLyFMm06_RiFHE6yVzy8wldODWufu4,9477
+genwebpush/assets/offline.html,sha256=g2csfTA6E6foWrh8kgBkLKZPlRJnO5fMS_tIYj9Vc5k,1595
+genwebpush/assets/sw.js,sha256=IZS-uz2cdJt0YK8JXiGsyz_Hw1fGZiNwy8y8pg87QKc,2145
+genwebpush-0.1.4.dist-info/licenses/LICENSE.md,sha256=j5o5ucptHxUwItCPQxDJjAajMoDA4dbhXpILuaJ8nqc,5863
+genwebpush-0.1.4.dist-info/METADATA,sha256=Jk1uZ04dsZPjm7h-F-esPwNAoAauOX6JC7hIuUKfOgU,3608
+genwebpush-0.1.4.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+genwebpush-0.1.4.dist-info/entry_points.txt,sha256=nEZsS4fGHB3114LYNwi5Hxoo9NWsu-oDCjzEL-eod1c,56
+genwebpush-0.1.4.dist-info/top_level.txt,sha256=_euwQvPonrAXme_TXlf4N7MAQ0aisF0mkDKpTO3tl5E,11
+genwebpush-0.1.4.dist-info/RECORD,,
