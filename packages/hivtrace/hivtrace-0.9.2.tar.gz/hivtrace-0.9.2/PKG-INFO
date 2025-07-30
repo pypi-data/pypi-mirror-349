@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: hivtrace
+Version: 0.9.2
+Summary: HIV-TRACE
+Home-page: http://www.hivtrace.org
+Author: Joel Wertheim, Sergei Pond, and Steven Weaver
+Author-email: sweaver@temple.edu
+License-File: LICENSE
+License-File: AUTHORS
+Requires-Dist: biopython>=1.58
+Requires-Dist: bioext>=0.21.8
+Requires-Dist: hppy>=0.9.9
+Requires-Dist: tornado>=4.3
+Requires-Dist: hivclustering[edgefiltering]>=1.6.8
