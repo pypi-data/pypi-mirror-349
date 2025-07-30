@@ -1,0 +1,17 @@
+kstash/__init__.py,sha256=mLNBLKDw4-w6Iob6qBtMfm1M0HnaAR5Za0TMJ4oZctU,105
+kstash/address.py,sha256=IpV8ROxxBpr9tgv48bsVUcc_VyQn7WLeb7jB-Jy-34g,1278
+kstash/api.py,sha256=lnnjzDNy8QF7yRblLFWfq4gPYAi-yGR_wFwpDClvpw0,863
+kstash/backend.py,sha256=vqriOD-q32Oxxtzo0FPK2CR_4dR9hn-Y9yi9n5XY9Xg,394
+kstash/backend_base.py,sha256=5F9GZckzfYQ-OTs978Mbt4vtOzxPBsbyfYeYqcxSYhY,2717
+kstash/backend_http.py,sha256=Yra17W3iYAs8V881k2pa--kkPPlQSdAjhE977cLe1_w,2027
+kstash/backend_inline.py,sha256=L7jd_gt1XTty65NNBonwLJYgJSY3ZoWlNV3iUnle2aY,1743
+kstash/backend_mem.py,sha256=3SZKmwetB9dHh_p3bz6W5VuIMARFCwOUkvYLKeLGXbw,1458
+kstash/backend_s3.py,sha256=tiSVzjCkzdp6X-Bi_eYPVQZwY928Wg-4iADPdOJSJWE,3385
+kstash/config.py,sha256=1lNzn20ny_A-fQP3QNoGzQXNF2uZAVNlNGhja5nIwSU,937
+kstash/exceptions.py,sha256=ZXIhmHavJrQaYgUQXC_k1HALUEo_dscLMhYbHA4egt0,187
+kstash/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kstash/stash.py,sha256=CumP4-dLvZJpwrLQQNXXPwM-0L9avUn7-mJvKZUin3Q,2044
+kstash-0.1.0.dist-info/METADATA,sha256=S_kn2hausYU-VWK66YoZ_BESxiUuzT2PDmStw7qBfVc,3673
+kstash-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+kstash-0.1.0.dist-info/licenses/LICENSE,sha256=tnDtw5w4Q6cH0w8yCbazjn7IwzU1ORcFUOX0e1JA_p0,1075
+kstash-0.1.0.dist-info/RECORD,,
