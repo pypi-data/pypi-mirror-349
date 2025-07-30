@@ -1,0 +1,3 @@
+[console_scripts]
+embed-cost=embed_cost.cli:main
+

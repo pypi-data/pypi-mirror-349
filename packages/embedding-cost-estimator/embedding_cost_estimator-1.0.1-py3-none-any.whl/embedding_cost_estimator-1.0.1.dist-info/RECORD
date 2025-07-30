@@ -1,0 +1,8 @@
+embed_cost/__init__.py,sha256=nYlo_w25ktlYZJlBWQq7Mw_hCQqYCbOgCkN_2oRCHKg,182
+embed_cost/cli.py,sha256=pvcp9Bp_6NG9FAyhO31YLEtkqPnNJMXjwTk_fVqBfCw,1097
+embed_cost/estimator.py,sha256=O9VXx8OrSjKV7ZFU5nScNrL5rsZcLcAPJlR-lnilKWo,1424
+embedding_cost_estimator-1.0.1.dist-info/LICENSE,sha256=_z8azmykAs7o-UQfPC8KUbvuh9fcC5khmihjsiUPHcA,1073
+embedding_cost_estimator-1.0.1.dist-info/METADATA,sha256=H0uWmZk0tl1prD18yCi0RQQWYboq7OjRI9W4HhyrJjI,4761
+embedding_cost_estimator-1.0.1.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+embedding_cost_estimator-1.0.1.dist-info/entry_points.txt,sha256=swWmFQO1pg3IOa_Xwn618_yZZCT0jjCwGS3bJ2GHNR8,50
+embedding_cost_estimator-1.0.1.dist-info/RECORD,,
