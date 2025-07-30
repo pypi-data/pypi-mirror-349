@@ -1,0 +1,17 @@
+fetchtastic/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fetchtastic/cli.py,sha256=aSK1EG6QZ-_fUnvjG2AeQp_d-lI6zLYgjj59HCMb2_Y,20427
+fetchtastic/downloader.py,sha256=238YGJ5KkC6IeK2-Oe4kYJDYV9mEKbbeFQEBSlbYURc,48698
+fetchtastic/log_utils.py,sha256=3Rc5eCbyBmZPEaUKei1dvHAa-MCgDqUAkxcFLPCVwoE,3395
+fetchtastic/menu_apk.py,sha256=kwUXL7QYyg7HCiNhlWydMc49XI-ShC-zxoOB8OXfNmI,1940
+fetchtastic/menu_firmware.py,sha256=7hw0EqErY0avI_DfgqEZbNNtvPzuBv1y8xkRJakbJCM,2575
+fetchtastic/menu_repo.py,sha256=n5N-uSZ1alaqTbCaZJ_QjGzRGFXdYUvwja2lstbFlMY,9324
+fetchtastic/repo_downloader.py,sha256=1-WVEv6MVact7-PG_jOD4GhbBb-Y6JTAjbxrzt7IXtY,7437
+fetchtastic/setup_config.py,sha256=xrXJ8RDowE9gDh-wPWogd9l3WiAzeTPvaRhJf_P1Euo,71028
+fetchtastic/tools/__init__.py,sha256=c7elyA42H1-6YfG8Duhj5G-BwxH6zrYrsqlGUG-gegY,1142
+fetchtastic/tools/setup_fetchtastic.sh,sha256=nhydfO0vdzTZGQXyyBQtCKAaIePCHn5lce0i8GWKwxc,3808
+fetchtastic-0.5.1.dist-info/licenses/LICENSE,sha256=spPlGh4STUWH8_Wge3VdIWSjXw8Kiroctn19wOrniMI,1067
+fetchtastic-0.5.1.dist-info/METADATA,sha256=dsiTodU_ET-DMnpiMpHMTRvh9la30kZ7i3vtduTFcx4,10479
+fetchtastic-0.5.1.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+fetchtastic-0.5.1.dist-info/entry_points.txt,sha256=Jxw0eC3-8QJ5TACykhEuOgaPzZ5GabuzhynGysdcDPw,53
+fetchtastic-0.5.1.dist-info/top_level.txt,sha256=ZgWTiXyT_qsQZYL5YKdBTCkkfcSBqEQerdkwAvV5-gQ,12
+fetchtastic-0.5.1.dist-info/RECORD,,
