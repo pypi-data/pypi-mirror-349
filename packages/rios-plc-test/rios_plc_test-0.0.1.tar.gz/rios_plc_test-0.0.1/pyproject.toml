@@ -1,0 +1,7 @@
+[project]
+name = "rios-plc-test"
+version = "0.0.1"
+dependencies = ["pycomm3"]
+
+[project.scripts]
+rios_plc_test = "rios_plc_test.cli:main"
