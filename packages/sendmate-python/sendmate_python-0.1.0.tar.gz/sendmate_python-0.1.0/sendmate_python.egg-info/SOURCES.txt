@@ -1,0 +1,10 @@
+README.md
+setup.py
+sendmate/__init__.py
+sendmate/client.py
+sendmate/types.py
+sendmate_python.egg-info/PKG-INFO
+sendmate_python.egg-info/SOURCES.txt
+sendmate_python.egg-info/dependency_links.txt
+sendmate_python.egg-info/requires.txt
+sendmate_python.egg-info/top_level.txt
