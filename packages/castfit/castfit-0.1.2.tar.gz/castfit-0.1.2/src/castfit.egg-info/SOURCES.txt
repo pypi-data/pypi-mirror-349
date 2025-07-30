@@ -1,0 +1,13 @@
+LICENSE.md
+README.md
+pyproject.toml
+src/castfit/__init__.py
+src/castfit/py.typed
+src/castfit.egg-info/PKG-INFO
+src/castfit.egg-info/SOURCES.txt
+src/castfit.egg-info/dependency_links.txt
+src/castfit.egg-info/requires.txt
+src/castfit.egg-info/top_level.txt
+test/test_is_type.py
+test/test_to_type.py
+test/test_util.py
