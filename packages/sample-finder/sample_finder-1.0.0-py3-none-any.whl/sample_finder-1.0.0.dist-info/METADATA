@@ -1,0 +1,49 @@
+Metadata-Version: 2.4
+Name: sample-finder
+Version: 1.0.0
+Summary: Sample Finder is a modular tool to search for and download malware samples from public malware sources.
+Project-URL: Homepage, https://github.com/joren485/sample-finder
+Requires-Python: >=3.13
+Requires-Dist: loguru>=0.7.3
+Requires-Dist: pyyaml>=6.0.2
+Requires-Dist: pyzipper>=0.3.6
+Requires-Dist: requests>=2.32.3
+Requires-Dist: typer>=0.15.4
+Description-Content-Type: text/markdown
+
+# Sample Finder
+
+Sample Finder is a modular tool to search for and download malware samples from public malware sources.
+
+### Supported sources
+* [Malpedia](https://malpedia.caad.fkie.fraunhofer.de/)
+* [MalShare](https://malshare.com/)
+* [Malware Bazaar](https://bazaar.abuse.ch/)
+* [VirusShare](https://virusshare.com/)
+* [VirusTotal](https://www.virustotal.com)
+* [Triage](https://tria.ge/)
+
+### Installation
+```bash
+$ git clone git@github.com:joren485/sample-finder.git
+$ cd sample-finder
+$ poetry install
+```
+
+### Usage
+```bash
+$ sample-finder --help
+ Usage: sample-finder [OPTIONS]
+
+ Download hashes from multiple sources.
+
+╭─ Options ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ *  --input               -i      FILE       [default: None] [required]                                                                                                                                         │
+│ *  --output              -o      DIRECTORY  [default: None] [required]                                                                                                                                         │
+│    --config              -c      FILE       [default: config.yaml]                                                                                                                                             │
+│    --verbose             -v                                                                                                                                                                                    │
+│    --install-completion                     Install completion for the current shell.                                                                                                                          │
+│    --show-completion                        Show completion for the current shell, to copy it or customize the installation.                                                                                   │
+│    --help                                   Show this message and exit.                                                                                                                                        │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+```
