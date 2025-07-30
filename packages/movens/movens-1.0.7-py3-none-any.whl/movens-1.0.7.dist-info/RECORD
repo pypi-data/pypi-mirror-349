@@ -1,0 +1,10 @@
+movens/__init__.py,sha256=yeEtH3bcuXtMzSQyO6pKDBlP9bGW490aHMu-rStuN1o,95
+movens/about.py,sha256=p_GE_vR2QP5l_tKoe1mwz6Abg6lf4OcC-varkuwyKh0,749
+movens/cli.py,sha256=uh-3LMs8YrO7j5982lyU9JKtFuEEhKMDAtgZLnnUa-M,527
+movens/main.py,sha256=tq16awaVe2WfIpItJVuHKZrnFZjWL2rIoiBnfjMssqc,4513
+movens-1.0.7.dist-info/licenses/LICENSE,sha256=5L33shsrEAcwx5t5pzunTJp6v1B8PtgXZPkaIhiTfhc,1067
+movens-1.0.7.dist-info/METADATA,sha256=PZHDmzUDkYr_yEdh8fp1Y-rjpJvMIaReAV_-vAvbwOw,3339
+movens-1.0.7.dist-info/WHEEL,sha256=lTU6B6eIfYoiQJTZNc-fyaR6BpL6ehTzU3xGYxn2n8k,91
+movens-1.0.7.dist-info/entry_points.txt,sha256=mmU189cJJUX49HmxBDZBT3cCImSUsPB4p_BC-0wZd8g,43
+movens-1.0.7.dist-info/top_level.txt,sha256=mND6Y7PFMpAOuuny1iL1IzisZycOdjL9w7ZXtGM-Vzg,7
+movens-1.0.7.dist-info/RECORD,,
