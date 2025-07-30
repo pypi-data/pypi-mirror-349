@@ -1,0 +1,9 @@
+netlite/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+netlite/dataloader_cifar10.py,sha256=TaK8n27ckYKRiEZ5sb_cg9_XVJLl63e-HbiaXO6AUsI,3371
+netlite/dataloader_mnist.py,sha256=-Ucjd56aArHZkjNcdwFhPmH5vg8-1Aqs_DoJ6MPkV4E,3625
+netlite/netlite.py,sha256=DX0gyoRtugzi5T-70zsqExACsAsrn7A0_7W_SdWxAWg,19276
+netlite/netlite_test_convolution.py,sha256=MAOJRUv3mfvwQNPhiZqJxDKYtkboAfIPXI-TM8Eg3FU,3262
+netlite-0.0.1.dist-info/METADATA,sha256=JZ8HgRgYGqrJuwnC-gjt1-EB8YtrXy-u90e-K8LIYRE,863
+netlite-0.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+netlite-0.0.1.dist-info/licenses/LICENSE,sha256=LjPlYOoBQ4yGo5S6qTr_UM2FQ00SbksNIfVGmVwDs4E,1096
+netlite-0.0.1.dist-info/RECORD,,
