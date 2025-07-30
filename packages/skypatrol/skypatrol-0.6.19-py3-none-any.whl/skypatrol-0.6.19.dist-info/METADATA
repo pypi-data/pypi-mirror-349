@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: skypatrol
+Version: 0.6.19
+Home-page: https://github.com/asas_sn/skypatrol/
+Author: ASAS-SN
+Author-email: kylehart@hawaii.edu
+License: GPL v.3
+License-File: LICENSE
+Requires-Dist: astropy
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: pyarrow
+Requires-Dist: requests
+Requires-Dist: tqdm >=4.65.0
+
