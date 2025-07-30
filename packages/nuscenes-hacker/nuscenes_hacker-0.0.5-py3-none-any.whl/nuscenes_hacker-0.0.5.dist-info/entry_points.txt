@@ -1,0 +1,2 @@
+[console_scripts]
+nuscenes-hacker = nuscenes_hacker.main:main
