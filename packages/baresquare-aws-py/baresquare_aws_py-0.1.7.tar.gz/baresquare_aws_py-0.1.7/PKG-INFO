@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: baresquare-aws-py
+Version: 0.1.7
+Summary: Baresquare's AWS Python utilities
+License-Expression: MIT
+Requires-Python: >=3.12
+Requires-Dist: boto3>=1.28.0
+Provides-Extra: linting
+Requires-Dist: ruff==0.11.9; extra == 'linting'
+Provides-Extra: publishing
+Requires-Dist: baresquare-core-py>=0.1.7; extra == 'publishing'
+Provides-Extra: testing
+Requires-Dist: pytest==8.3.5; extra == 'testing'
+Description-Content-Type: text/markdown
+
+# Baresquare AWS Python Library
+
+AWS-related utilities and functionality for Baresquare Python services.
