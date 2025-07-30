@@ -1,0 +1,2 @@
+class MiniWifiException(Exception):
+    pass

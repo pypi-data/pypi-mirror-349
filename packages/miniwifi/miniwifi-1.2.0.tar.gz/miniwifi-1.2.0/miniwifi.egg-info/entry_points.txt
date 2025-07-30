@@ -1,0 +1,3 @@
+[console_scripts]
+miniwifi-crack = miniwifi.cli:crack_cli
+miniwifi-scan = miniwifi.cli:scan_cli
