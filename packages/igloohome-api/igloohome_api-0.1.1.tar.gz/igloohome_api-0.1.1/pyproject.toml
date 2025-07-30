@@ -1,0 +1,28 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "igloohome-api"
+version = "0.1.1"
+authors = [
+    { name="keithle888", email="keithle888@gmail.com" },
+]
+description = "A python package for using igloohome's API"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "pyjwt>=2.10.1",
+    "dacite>=1.8.1",
+    "aiohttp>=3.11.10"
+]
+
+[project.urls]
+Homepage = "https://github.com/keithle888/igloohome-api"
+Issues = "https://github.com/keithle888/igloohome-api/issues"
+
