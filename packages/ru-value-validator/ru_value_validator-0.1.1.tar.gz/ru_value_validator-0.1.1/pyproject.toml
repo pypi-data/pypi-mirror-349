@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ru-value-validator"
+version = "0.1.1"
+authors = [
+    { name = "Кудрин Артем", email = "yorkwilsa@gmail.com" },
+]
+description = "Валидация для российских идентификаторов"
+readme = "README.md"
+requires-python = ">=3.6"
+
+[project.urls]
+"Homepage" = "https://github.com/Yorkwilsa/ru-value-validator"

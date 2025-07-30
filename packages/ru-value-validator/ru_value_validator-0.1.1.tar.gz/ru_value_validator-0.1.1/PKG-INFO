@@ -1,0 +1,29 @@
+Metadata-Version: 2.4
+Name: ru-value-validator
+Version: 0.1.1
+Summary: Валидация для российских идентификаторов
+Author-email: Кудрин Артем <yorkwilsa@gmail.com>
+Project-URL: Homepage, https://github.com/Yorkwilsa/ru-value-validator
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# ru-value-validator
+Валидация российских идентификаторов
+
+#### Использование
+##### Добавление в проект
+```
+pip install ru-value-validator
+```
+##### Использование в коде
+Строки можно использовать как в стандартном "плоском" виде, так и форматированные.
+```
+import validators
+
+validators.OgrnValidator.validate_ogrn("1245667440963") // возвращает true, если валиден
+validators.OgrnValidator.validate_ogrn("1245667440963", logging=True) // включение дополнительного логгирования
+```
+
+#### Валидаторы
+- СНИЛС
+- ОГРН/ОГРНИП (проверка каждого из типов + универсальная функция validate)
