@@ -1,0 +1,9 @@
+baresquare_core_py/__init__.py,sha256=MUuzLwTjDsKMKZNIYxAH-owjHiX-1MfHVA0UAvKoQV8,184
+baresquare_core_py/logger.py,sha256=RkHIIqLpxlHrJGrewo4Yv2YDx5GvxNEuZ7C1Tjf4uQ8,4928
+baresquare_core_py/middleware/__init__.py,sha256=8hHwFmFahlfntT8L-EhmAm5KPDvhAI9BJ9HK2aWzSEY,207
+baresquare_core_py/middleware/compression.py,sha256=K04t9BgFv70ZmKAoFhywRlg66sUcbpks2PLiPvxm1tc,148
+baresquare_core_py/middleware/cors.py,sha256=dBRnopnIrZZ3tjamFcdg_z6_8AG53Kf7Q6ORZMLKxIM,348
+baresquare_core_py/middleware/request_info.py,sha256=PMpt-WQQCx4BLznOzIMhqAuu_OQzdouZbgET0-6sFT0,992
+baresquare_core_py-0.1.7.dist-info/METADATA,sha256=r5th8vCVaYS3D-DndS6TWj8H4cgmt7s1A73t4Vo-mO4,605
+baresquare_core_py-0.1.7.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+baresquare_core_py-0.1.7.dist-info/RECORD,,
