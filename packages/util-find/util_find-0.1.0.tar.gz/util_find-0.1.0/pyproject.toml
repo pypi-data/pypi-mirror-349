@@ -1,0 +1,21 @@
+[project]
+name = "util-find"
+version = "0.1.0"
+description = "A utility for finding files and directories"
+readme = "README.md"
+requires-python = ">=3.8"
+license-files = ["LICENSE"]
+authors = [
+    {name = "birds", email = "cg626@163.com"},
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+]
+dependencies = []
+
+[build-system]
+requires = ["setuptools>=42"]
+build-backend = "setuptools.build_meta"
+
