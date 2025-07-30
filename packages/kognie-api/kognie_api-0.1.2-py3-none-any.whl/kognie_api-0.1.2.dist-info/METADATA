@@ -1,0 +1,83 @@
+Metadata-Version: 2.1
+Name: kognie-api
+Version: 0.1.2
+Author: Kognie
+Description-Content-Type: text/markdown
+Requires-Dist: setuptools>=65.5.0
+Requires-Dist: requests>=2.32.3
+
+# Kognie Python API
+
+A Python client for interacting with the Kognie API to generate text and images.
+
+## Installation
+
+```bash
+pip install kognie
+```
+
+## Usage
+
+### Importing the library
+
+```python
+from kognie import Kognie
+```
+
+### Initialization
+
+Create a new instance of the Kognie client with your API key.
+
+```python
+kognie_client = Kognie(api_key="your_api_key_here")
+```
+
+### Text Generation
+
+Generate text using models like GPT-4.
+You can get the list of supported models at : https://kognie.com/models
+
+```python
+# Generate text with default model (gpt-4)
+response = kognie_client.generateText("What is the capital of France?")
+print(response)
+
+# Generate text with a specific model
+response = kognie_client.generateText("What is the capital of France?", model="gpt-4o")
+print(response)
+```
+
+#### Parameters
+
+- `question` (str): The prompt for text generation
+- `model` (str, optional): The model to use (default: "gpt-4")
+
+### Image Generation
+
+Generate images using models like DALL-E.
+
+```python
+# Generate image with default parameters
+response = kognie_client.generateImage("A sunset over mountains")
+print(response)
+
+# Generate image with specific parameters
+response = kognie_client.generateImage(
+    question="A sunset over mountains",
+    model="dall-e-2", 
+    response_format="base64", 
+    aspect_ratio="1:1"
+)
+print(response)
+```
+
+#### Parameters
+
+- `question` (str): The prompt for image generation
+- `model` (str, optional): The model to use (default: "dall-e-2")
+- `response_format` (str, optional): Format of the response (default: "base64")
+- `aspect_ratio` (str, optional): Aspect ratio of the generated image (default: "1:1")
+
+## Error Handling
+
+The methods return a dictionary with the API response if successful. If an error occurs, they return a dictionary with an "error" key containing details about the error.
