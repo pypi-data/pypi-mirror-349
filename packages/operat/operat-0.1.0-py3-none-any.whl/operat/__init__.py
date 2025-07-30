@@ -1,0 +1,9 @@
+def operations(oper, num1, num2):
+    if oper == '+':
+        return num1 + num2
+    if oper == "-":
+        return num1 - num2
+    if oper == "/":
+        return num1 / num2
+    if oper == "*":
+        return num1 * num2 
