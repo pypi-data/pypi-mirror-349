@@ -1,0 +1,13 @@
+pyarmor/cli/core/android/__init__.py,sha256=9MBYRWWXyjvey8MxmjXfF2ewd1ZV7CaAr_-SXKMcjjk,22
+pyarmor/cli/core/android/aarch64/pyarmor_runtime.so,sha256=BDDV7YHpzUfHGJQhNyk7UAqwoksrD5AIQR8Adzmgrio,609960
+pyarmor/cli/core/android/aarch64/pytransform3.so,sha256=12CVIP1JkOFWDTeJ6QONdWeQQj1HE7AR4smz5Ef-cI0,457496
+pyarmor/cli/core/android/armv7/pyarmor_runtime.so,sha256=k63tnFJ7MLLHyHtd9i0C2viYkW1mNstTJ5R59Nc6L7o,1161732
+pyarmor/cli/core/android/armv7/pytransform3.so,sha256=50mlRb599MWO8WzFgKFzjDNR3rz6r_1gxtoeZS7eZH0,882844
+pyarmor/cli/core/android/x86/pyarmor_runtime.so,sha256=YzE93CnepHG4wmTOS3SSxbX8pyK36gv2HRlZMuiWO94,907548
+pyarmor/cli/core/android/x86/pytransform3.so,sha256=Zf_9oarBYbbzceMJM-3fdo3U2CWbQQsa853jFmUnkfI,710756
+pyarmor/cli/core/android/x86_64/pyarmor_runtime.so,sha256=fxxvs8hCpS0cZYSqwEaWjo0gA_yRwvplC0fGKkq-7hs,916976
+pyarmor/cli/core/android/x86_64/pytransform3.so,sha256=cYqKhooalv2hufDIayOOQDCTmMq9zgklFGXhwnXVuHs,613352
+pyarmor_cli_core_android-7.6.7.dist-info/METADATA,sha256=Qy7BvuLlcOgUsnvGuW8oi81xgbKUhvpNPfTJO39OdCk,780
+pyarmor_cli_core_android-7.6.7.dist-info/WHEEL,sha256=_UdnwnzEIq0I2KQHgjNmijzbH5R6j9E4EDo_onWvD1I,93
+pyarmor_cli_core_android-7.6.7.dist-info/top_level.txt,sha256=UE1ovZ_90YzwF_lZ3LV7o8HKLe-RgzUaUUvdH5UTUus,8
+pyarmor_cli_core_android-7.6.7.dist-info/RECORD,,
