@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: django-a2a
+Version: 0.0.0
+Summary: Django app for handling a2a communication protocol
+Project-URL: Homepage, https://github.com/ppak10/django-a2a
+Project-URL: Issues, https://github.com/ppak10/django-a2a/issues
+Author-email: Peter Pak <ppak10@gmail.com>
+License-File: LICENSE
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# django-a2a
