@@ -1,0 +1,7 @@
+service/__init__.py,sha256=tYMXeDA1H-0B_Sa_nwoHxhA2An488b4n_Q78xE8gY2Q,286
+service/account.py,sha256=gTUOUr6X-os65OinlHRlKmzdOUa0hPs60eG9J_tOTPA,1651
+service/http_service.py,sha256=TBxiWIRbsgVceH-7lyhqfzv6pJngmB1peZ_tf_BV__I,1393
+hw_oa-0.1.0.dist-info/entry_points.txt,sha256=HQp6W9BcsNfcLBpsg49HMUdM0GPe2vxVgKp_rzCwP1U,35
+hw_oa-0.1.0.dist-info/METADATA,sha256=xNZTgbi0XxRK3KsyZzexyQXSs2FGPU4mIJe2aHhiKgw,535
+hw_oa-0.1.0.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+hw_oa-0.1.0.dist-info/RECORD,,

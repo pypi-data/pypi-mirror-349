@@ -1,0 +1,22 @@
+Metadata-Version: 2.3
+Name: hw-oa
+Version: 0.1.0
+Summary: 通过提示调用不同api，实现请假、考勤、外出等OA功能
+Requires-Python: >=3.12
+Classifier: Environment :: MacOS X
+Requires-Dist: httpx (>=0.28.1)
+Requires-Dist: mcp[cli] (>=1.9.0)
+Project-URL: Homepage, https://gitee.com/chenkunlia/hw-oa
+Description-Content-Type: text/markdown
+
+hw-oa 
+# 项目文档
+
+## 本地运行项目
+uvicorn app.main:app --reload
+
+[uvicorn参考文档](https://www.uvicorn.org/deployment/)
+
+## 项目描述
+- 由cicd工具生成模板
+
