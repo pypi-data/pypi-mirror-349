@@ -1,0 +1,8 @@
+README.md
+main.py
+pyproject.toml
+baiyinnamula_hello_world.egg-info/PKG-INFO
+baiyinnamula_hello_world.egg-info/SOURCES.txt
+baiyinnamula_hello_world.egg-info/dependency_links.txt
+baiyinnamula_hello_world.egg-info/requires.txt
+baiyinnamula_hello_world.egg-info/top_level.txt
