@@ -1,0 +1,5 @@
+corner
+tqdm
+matplotlib
+numpy
+scipy
