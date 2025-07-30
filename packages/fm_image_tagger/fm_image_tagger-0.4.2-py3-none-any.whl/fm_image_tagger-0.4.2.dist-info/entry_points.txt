@@ -1,0 +1,2 @@
+[console_scripts]
+fm_image_tagger = fm_image_tagger.fm_image_tagger:run

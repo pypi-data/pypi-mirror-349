@@ -1,0 +1,16 @@
+fm_image_tagger/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fm_image_tagger/__main__.py,sha256=h5JqiVUnoFT0RjEdAYCPqzS97ioFqOa5GfeyG6FI-h0,113
+fm_image_tagger/command_tagger.py,sha256=D5VEMkW-OuxMAetFGpRAz6svyLMQMb6L3iMJjLjTfsI,1536
+fm_image_tagger/display.py,sha256=Qg2xH85_s9K1wbpq-ioNMx1TSfNtMkJW_a7gjetpx4Q,1155
+fm_image_tagger/fm_image_tagger.py,sha256=mOVZnuyGvgsNKi5fo1Lo1pF6mM65aevUkFs0BCJxWY8,2399
+fm_image_tagger/ollama_caption.py,sha256=j_Xq7ABn7_-X4-a49jvaNEWi73iCwEis8Ftzio7Prdw,1129
+fm_image_tagger/rename.py,sha256=35dzE1UYV2NUbgbkLzAVtZStFRaz38YuATZUjqIVjwc,850
+fm_image_tagger/tag_edit.py,sha256=IWMTqtJog6VFthmQP5ULY_ebrRxMpCyQAskSoM9aBQk,2671
+fm_image_tagger/tagger.py,sha256=-Ts3GBJxrHYoTJ8fhQS06G0xrm-UnIA-49NLlVsPRbc,4910
+fm_image_tagger/total.py,sha256=SFK0J5h1G3uPiLsxlxfZWb0v6kEBngfm6W-Ll7d4-IQ,1135
+fm_image_tagger/tests/test_tag_edit.py,sha256=KAt4NiEzq2GYiPEwVyjz6d1CU2edM5f3RLm8Ar7FM9g,1543
+fm_image_tagger-0.4.2.dist-info/METADATA,sha256=ZGEomvFWVblXO2VxD7-rpXOsbpwQOOJhbm61vnUTzhU,9670
+fm_image_tagger-0.4.2.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+fm_image_tagger-0.4.2.dist-info/entry_points.txt,sha256=GaZT6e476G3P0ZTg8c9TX5wq6aAR3GFram-j85zL0Ts,72
+fm_image_tagger-0.4.2.dist-info/licenses/LICENSE,sha256=N6daAMNrJbCk_sWOJM2MwZus3-GsXGOZ52_-2fZBKao,1084
+fm_image_tagger-0.4.2.dist-info/RECORD,,
