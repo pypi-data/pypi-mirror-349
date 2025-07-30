@@ -1,0 +1,80 @@
+Metadata-Version: 2.4
+Name: hybra
+Version: 2025.5
+Summary: A module for trainable encoder/decoder filterbanks with auditory bias.
+Author: The hybra project maintainers
+License: BSD 3-Clause Clear License
+        
+        Copyright (c) 2024 Austrian Academy of Sciences
+        All rights reserved.
+        
+        Redistribution and use in source and binary forms, with or without modification, are permitted (subject to the limitations in the disclaimer below) provided that the following conditions are met:
+        
+        * Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+        * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+        * Neither the name of Austrian Academy of Sciences nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+        NO EXPRESS OR IMPLIED LICENSES TO ANY PARTY'S PATENT RIGHTS ARE GRANTED BY THIS LICENSE. THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+Project-URL: Repository, https://github.com/danedane-haider/Hybrid-Auditory-Filterbanks.git
+Keywords: Filberbank,Learned Filterbanks,Feauture Extraction,Hybrid Filterbanks,Encoder,Decoder,Auditory,Frames
+Classifier: Programming Language :: Python
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: torch
+Dynamic: license-file
+
+![Logo](https://github.com/danedane-haider/HybrA-Filterbanks/blob/main/HybrA.png)
+
+## About
+This repository contains the official implementaions of [Hybrid Auditory filterbanks](https://arxiv.org/abs/2408.17358) and [ISAC](https://arxiv.org/abs/2505.07709). The modules are designed to be easily usable in the design of PyTorch model designs.
+
+## Documentation
+[https://github.com/danedane-haider/HybrA-Filterbanks](https://danedane-haider.github.io/HybrA-Filterbanks/main/)
+
+## Installation
+We publish all releases on PyPi. You can install the current version by running:
+```
+pip install hybra
+```
+
+## Usage
+This package offers several PyTorch modules to be used in your code performing transformations of an input signal into a time frequency representation.
+```python
+from hybra import HybrA
+
+import soundfile
+import torch
+
+device = "mps"
+
+x, fs = soundfile.read("./audio/crush.wav")
+x = 2 * torch.tensor(x[:, 0], dtype=torch.float32).unsqueeze(0)
+sig_len = x.shape[-1]
+
+filterbank = HybrA(L=sig_len,stride=8,scale='mel').to(device)
+filterbank.plot_response()
+
+out = filterbank(x.to(device))
+```
+
+## Citation
+
+If you find our work valuable, please cite
+
+```
+@article{HaiderTight2024,
+  title={Hold me Tight: Trainable and stable hybrid auditory filterbanks for speech enhancement},
+  author={Haider, Daniel and Perfler, Felix and Lostanlen, Vincent and Ehler, Martin and Balazs, Peter},
+  journal={arXiv preprint arXiv:2408.17358},
+  year={2024}
+}
+@article{HaiderISAC2025,
+      title={ISAC: An Invertible and Stable Auditory Filter Bank with Customizable Kernels for ML Integration}, 
+      author={Daniel Haider and Felix Perfler and Peter Balazs and Clara Hollomey and Nicki Holighaus},
+      year={2025},
+      url={arXiv preprint arXiv:2505.07709}, 
+
+}
+```
