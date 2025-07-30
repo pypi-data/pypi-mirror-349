@@ -1,0 +1,43 @@
+from dataclasses import dataclass
+from typing import Optional
+from ._user import User
+from ._message import Message
+from ._base import Validated
+
+from ..core._bot import Bot
+
+
+@dataclass
+class CallbackQuery(Validated):
+    id: str
+    from_user: Optional[User] = None
+    message: Optional[Message] = None
+    data: Optional[str] = None
+    inline_message_id: Optional[str] = None
+
+    _bot: Optional[object] = None
+
+    @property
+    def bot(self) -> Bot:
+        if self._bot is None:
+            raise AttributeError("Bot instance not set. Use Message._bot first.")
+        return self._bot
+
+    @property
+    def is_inline(self) -> bool:
+        return self.inline_message_id is not None
+
+    def answer(
+        self, text: Optional[str] = None, show_alert: Optional[bool] = None
+    ) -> bool:
+        return self.bot.answer_callback(
+            callback_query_id=self.id, text=text, show_alert=show_alert
+        )
+
+    def __str__(self) -> str:
+        source = (
+            f"inline:{self.inline_message_id}"
+            if self.is_inline
+            else f"msg:{self.message.id}"
+        )
+        return f"CallbackQuery(id={self.id}, from={self.from_user.full_name}, data={self.data}, source={source})"
