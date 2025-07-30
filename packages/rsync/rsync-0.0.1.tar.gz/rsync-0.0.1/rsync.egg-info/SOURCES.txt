@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+setup.py
+rsync/__init__.py
+rsync.egg-info/PKG-INFO
+rsync.egg-info/SOURCES.txt
+rsync.egg-info/dependency_links.txt
+rsync.egg-info/top_level.txt
