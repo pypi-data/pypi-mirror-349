@@ -1,0 +1,2 @@
+[console_scripts]
+imgannotator = imgannotator.cli:app

@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+src/imgannotator/__init__.py
+src/imgannotator/cli.py
+src/imgannotator/filters.py
+src/imgannotator/metadata.py
+src/imgannotator.egg-info/PKG-INFO
+src/imgannotator.egg-info/SOURCES.txt
+src/imgannotator.egg-info/dependency_links.txt
+src/imgannotator.egg-info/entry_points.txt
+src/imgannotator.egg-info/top_level.txt
+src/tests/test_filters.py
+src/tests/test_metadata.py
