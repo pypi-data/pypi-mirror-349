@@ -1,0 +1,12 @@
+[project]
+name = "mcp-clp-server"
+version = "0.1.1"
+description = "Add your description here"
+requires-python = ">=3.12"
+dependencies = [
+    "fastmcp>=2.3.4",
+    "psutil>=7.0.0",
+]
+
+[project.scripts]
+mcp-clp-server = "mcp_clp_server.main:main"
