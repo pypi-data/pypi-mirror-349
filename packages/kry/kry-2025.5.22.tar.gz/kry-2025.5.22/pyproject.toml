@@ -1,0 +1,14 @@
+[project]
+name = "kry"
+version = "2025.5.22"
+description = "kry.py - Simple cryptography library"
+readme = "README"
+license = "Unlicense OR CC0-1.0"
+classifiers = ["Topic :: Security :: Cryptography"]
+
+[project.urls]
+homepage = "https://github.com/krylib/kry"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
