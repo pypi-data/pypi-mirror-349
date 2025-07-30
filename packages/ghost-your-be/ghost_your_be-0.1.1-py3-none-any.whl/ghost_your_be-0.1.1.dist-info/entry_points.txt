@@ -1,0 +1,3 @@
+[console_scripts]
+ghost-your-be=ghost-your-be.cli:cli
+
