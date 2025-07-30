@@ -1,0 +1,12 @@
+aPrioriDNS/DNS.py,sha256=kclAQ7s-2y5ZuYSQ8CywDvFYEC7E1mp2QXqrgHycPds,197968
+aPrioriDNS/NN.py,sha256=Ww8hyCWd-3enkhteIQ5x0zL9D0tbGd-nHEFdhMb31qM,16719
+aPrioriDNS/__init__.py,sha256=8YSdgecHrB1jxoq5uZz-daX2-Dgdwpt-LqXYvjLxj2w,1761
+aPrioriDNS/_data_struct.py,sha256=OEgkXslYO17E_nBCQ8wY5o-lgC-f2zsqaBbKgrdxd8Y,293
+aPrioriDNS/_styles.py,sha256=OL_Wzy4BAd482E_hQWXyfNqi1wzVwj8pBhBJ-60LjiY,871
+aPrioriDNS/_utils.py,sha256=7Z2JGcyS6wTzT9rmx1E7OjXuZx1OzV5tdzuw3dgZoy8,13641
+aPrioriDNS/_variables.py,sha256=oVP1QlEo4SWN-zn3aUQF7BvkSWj2WKVN-w77n8sYPi0,9013
+aPrioriDNS/plot_utilities.py,sha256=vwgxmNJuEOrftALaavR1E4ft_DnboUKnh1uCNbEeYFE,21233
+aprioridns-1.1.10.dist-info/METADATA,sha256=WNWdEHUllmBuHM27hA8pXID-UaF6asx8XLiifXNaFxI,10366
+aprioridns-1.1.10.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+aprioridns-1.1.10.dist-info/licenses/LICENSE,sha256=pZCMMjCSbtgLvFJuFDhkP9mgwl14zBfvqw8DOFmEno4,1068
+aprioridns-1.1.10.dist-info/RECORD,,
