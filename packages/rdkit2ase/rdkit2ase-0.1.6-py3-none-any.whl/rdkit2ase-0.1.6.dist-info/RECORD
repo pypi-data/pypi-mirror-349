@@ -1,0 +1,9 @@
+rdkit2ase/__init__.py,sha256=fa5FPrd6yOpFhHPddKlrJhA2sLOTtJkYV-CpdbM3Z-A,184
+rdkit2ase/rdkit2ase.py,sha256=UBWEmSbpzAfce661fncWJVscLbbvcze1OXh7IkJgMw4,2750
+rdkit2ase/utils/__init__.py,sha256=dypFqUWJ0VaZ-h7sWKf6JcejlpVy3qRLRSABnYE1XGM,135
+rdkit2ase/utils/smiles.py,sha256=G7e0KTbC4qh2OVWGTJ84eTmURW5DmASrniOpqJWty6Y,1929
+rdkit2ase/utils/solvate.py,sha256=i6HIx5AujeRW-WHFe8WO04VxTcI_BlEOMZRocwsNOD0,7549
+rdkit2ase-0.1.6.dist-info/METADATA,sha256=x2MRYk09QaLAJ942AUoOteM1rzxQ1WBg6Cu5IfET4TQ,1497
+rdkit2ase-0.1.6.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+rdkit2ase-0.1.6.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+rdkit2ase-0.1.6.dist-info/RECORD,,
