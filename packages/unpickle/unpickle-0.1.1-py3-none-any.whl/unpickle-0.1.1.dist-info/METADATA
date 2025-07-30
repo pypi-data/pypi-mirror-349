@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: unpickle
+Version: 0.1.1
+Summary: Tools for working with pickled files
+Author-email: generativist <jbn@abreka.com>
+Requires-Python: >=3.10.12
+Requires-Dist: click>=8.2.1
+Requires-Dist: numpy>=2.2.6
+Requires-Dist: torch>=2.7.0
+Description-Content-Type: text/markdown
+
+# unpickle
+
+Tools for working with pickled files.
+
+## Usage
+
+```bash
+uvx unpickle lightning ckpt-to-pth oops/checkpoints/best_model.ckpt ./model.pth
+```
