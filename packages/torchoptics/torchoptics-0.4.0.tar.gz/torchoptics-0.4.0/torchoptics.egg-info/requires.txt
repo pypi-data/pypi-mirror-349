@@ -1,0 +1,10 @@
+torch
+matplotlib
+
+[dev]
+coverage
+pre-commit
+pyright
+pytest
+ruff
+scipy
