@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+grale/__init__.py
+grale/core.py
+grale.egg-info/PKG-INFO
+grale.egg-info/SOURCES.txt
+grale.egg-info/dependency_links.txt
+grale.egg-info/requires.txt
+grale.egg-info/top_level.txt
+tests/test.py
