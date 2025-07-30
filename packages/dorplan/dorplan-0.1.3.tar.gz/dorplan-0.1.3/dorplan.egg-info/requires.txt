@@ -1,0 +1,10 @@
+cornflow-client
+orloge
+PySide6
+
+[reports]
+networkx
+quarto
+quarto-cli
+papermill
+matplotlib

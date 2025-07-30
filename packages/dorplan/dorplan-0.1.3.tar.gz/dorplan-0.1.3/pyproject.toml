@@ -1,0 +1,46 @@
+[project]
+name = "dorplan"
+version = "0.1.3"
+description = "Desktop OR planner"
+requires-python = ">=3.10"
+dependencies = ["cornflow-client", "orloge", "PySide6"]
+authors= [{name= "Franco Peschiera", email= "pchtsp@gmail.com"}]
+maintainers= [{name= "Franco Peschiera", email= "pchtsp@gmail.com"}]
+readme='README.md'
+keywords= ["Mathematical", "Optimization", "solver", "GUI", "desktop", "cross-platform"]
+classifiers= [
+    "Programming Language :: Python",
+    "Topic :: Software Development",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+urls= {source= "https://github.com/pchtsp/orloge", download="https://github.com/pchtsp/orloge/archive/master.zip"}
+
+[project.optional-dependencies]
+reports = ["networkx", "quarto", "quarto-cli", "papermill", "matplotlib"]
+
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = [
+    "dorplan", "dorplan.tests",
+    "dorplan.tests.data.graph_coloring",
+    "dorplan.tests.data.graph_coloring.core",
+    "dorplan.tests.data.graph_coloring.data",
+    "dorplan.tests.data.graph_coloring.schemas",
+    "dorplan.tests.data.graph_coloring.report",
+    "dorplan.tests.data.graph_coloring.solvers"]
+# This is a workaround for https://github.com/astral-sh/uv/issues/9513
+license-files = []
+
+[tool.setuptools.package-data]
+"dorplan.tests.data.graph_coloring.data"= ["*"]
+"dorplan.tests.data.graph_coloring.report"= ["*.qmd"]
+"dorplan.tests.data.graph_coloring.schemas"= ["*.json"]
+
+[dependency-groups]
+# networkx, ortools, quarto are needed for testing with graphcoloring
+dev = ["black", "networkx", "ortools", "quarto"]
