@@ -1,0 +1,39 @@
+Metadata-Version: 2.3
+Name: srcnlpbg
+Version: 0.0.1
+Summary: Poetry Python package for NLP-BG project pipeline for emotion classification deployment
+Author: MarioVelichkov, Vladislav Stoimenov, Petar Paskalev, Raya-Neda Borisova
+Requires-Python: >=3.10,<3.11
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: datasets (==3.3.2)
+Requires-Dist: evaluate (==0.4.3)
+Requires-Dist: matplotlib (==3.9.4)
+Requires-Dist: moviepy (==2.1.2)
+Requires-Dist: numpy (==1.26)
+Requires-Dist: openai-whisper (==20240930)
+Requires-Dist: pandas (==2.2.3)
+Requires-Dist: pydub (==0.25.1)
+Requires-Dist: pytubefix (==8.12.1)
+Requires-Dist: rich (>=14.0.0,<15.0.0)
+Requires-Dist: scikit-learn (==1.6.1)
+Requires-Dist: seaborn (==0.13.2)
+Requires-Dist: sentencepiece (==0.2.0)
+Requires-Dist: sphinx (==7.2.6)
+Requires-Dist: sphinx-autobuild (==2021.3.14)
+Requires-Dist: sphinx-rtd-theme (==1.3.0)
+Requires-Dist: tensorflow (==2.10.0)
+Requires-Dist: tensorflow-io-gcs-filesystem (==0.31.0)
+Requires-Dist: torch (==2.6.0) ; sys_platform != "darwin"
+Requires-Dist: torch (>=2.2.0,<3.0.0) ; sys_platform == "darwin"
+Requires-Dist: torchaudio (==2.6.0) ; sys_platform != "darwin"
+Requires-Dist: torchaudio (>=2.2.0,<3.0.0) ; sys_platform == "darwin"
+Requires-Dist: torchvision (==0.21.0) ; sys_platform != "darwin"
+Requires-Dist: torchvision (>=0.17.0,<0.18.0) ; sys_platform == "darwin"
+Requires-Dist: tqdm (>=4.67.1,<5.0.0)
+Requires-Dist: transformers (==4.49.0)
+Requires-Dist: typer (>=0.15.4,<0.16.0)
+Description-Content-Type: text/markdown
+
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/i4PR14xw)
+
