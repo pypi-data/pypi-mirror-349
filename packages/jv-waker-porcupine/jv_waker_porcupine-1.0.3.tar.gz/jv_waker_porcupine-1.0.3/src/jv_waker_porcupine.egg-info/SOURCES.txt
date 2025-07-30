@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/jv_waker_porcupine/__init__.py
+src/jv_waker_porcupine/porcupine_waker.py
+src/jv_waker_porcupine.egg-info/PKG-INFO
+src/jv_waker_porcupine.egg-info/SOURCES.txt
+src/jv_waker_porcupine.egg-info/dependency_links.txt
+src/jv_waker_porcupine.egg-info/requires.txt
+src/jv_waker_porcupine.egg-info/top_level.txt
