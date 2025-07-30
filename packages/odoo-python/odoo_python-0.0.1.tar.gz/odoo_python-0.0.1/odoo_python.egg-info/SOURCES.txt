@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+setup.py
+odoo_python/__init__.py
+odoo_python.egg-info/PKG-INFO
+odoo_python.egg-info/SOURCES.txt
+odoo_python.egg-info/dependency_links.txt
+odoo_python.egg-info/top_level.txt
