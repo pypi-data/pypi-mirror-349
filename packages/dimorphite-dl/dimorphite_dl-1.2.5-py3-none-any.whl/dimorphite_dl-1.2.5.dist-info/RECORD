@@ -1,0 +1,11 @@
+dimorphite_dl/__init__.py,sha256=iopI2o5nKN7-bEeRaiuBS0v2ROvGBgd6n4AI4NVJtcE,1666
+dimorphite_dl/cli.py,sha256=PpmJa3dV2fiiP9tDGx7JEoBQ9JrVg4w23Dgey9gefBc,10177
+dimorphite_dl/io.py,sha256=das4L_RLkf0dgD8Fhlut_kNAUmje3-uQaENdDpUX70E,8249
+dimorphite_dl/mol.py,sha256=BRrIZY_hDpue9e1JDb1vN27UyOzqwMoJZQPeyifHOLg,20863
+dimorphite_dl/data/site_substructures.smarts,sha256=Mq_Zot58Vbq3DmP5dgtNcx6iZUVYfBInNtgPUiKLG6w,5141
+dimorphite_dl-1.2.5.dist-info/licenses/LICENSE.md,sha256=_-EQFXrKCg35JRb24bagenH4hJEPJ4Q02MXVbDwIYVU,10362
+dimorphite_dl-1.2.5.dist-info/METADATA,sha256=dpE-8qdnNyNXqLo_3oznypSEv0Jlc4UmiJfFoEuYmaA,6910
+dimorphite_dl-1.2.5.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+dimorphite_dl-1.2.5.dist-info/entry_points.txt,sha256=oDTW8Pm3h-Zq2qNRKpJxeQrGMFS6opN60Svj75sPNMU,57
+dimorphite_dl-1.2.5.dist-info/top_level.txt,sha256=AqVpOUbsj_poMMZMASR4qyfpD3Ut9oboirLcJgdh5S8,14
+dimorphite_dl-1.2.5.dist-info/RECORD,,
