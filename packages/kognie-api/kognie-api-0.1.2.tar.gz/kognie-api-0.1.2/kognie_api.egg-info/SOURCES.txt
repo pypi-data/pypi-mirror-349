@@ -1,0 +1,9 @@
+README.md
+setup.py
+kognie-api/__init__.py
+kognie-api/main.py
+kognie_api.egg-info/PKG-INFO
+kognie_api.egg-info/SOURCES.txt
+kognie_api.egg-info/dependency_links.txt
+kognie_api.egg-info/requires.txt
+kognie_api.egg-info/top_level.txt
