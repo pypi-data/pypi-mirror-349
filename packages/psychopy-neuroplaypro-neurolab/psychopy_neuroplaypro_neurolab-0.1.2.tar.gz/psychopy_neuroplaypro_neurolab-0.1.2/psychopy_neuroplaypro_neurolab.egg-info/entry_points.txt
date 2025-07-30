@@ -1,0 +1,2 @@
+[psychopy.experiment.components]
+NeuroplayRecordingComponent = psychopy_neuroplaypro_neurolab:NeuroplayRecordingComponent
