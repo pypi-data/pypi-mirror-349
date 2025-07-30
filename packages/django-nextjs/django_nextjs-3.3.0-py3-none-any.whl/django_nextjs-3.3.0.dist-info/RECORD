@@ -1,0 +1,16 @@
+django_nextjs/__init__.py,sha256=MPSbkJS_-QSkLK7sMlFXFf5iWlbcSL18Dj2ZiMCtS9c,22
+django_nextjs/app_settings.py,sha256=Ns-H5ilx8oXXqkzeo2CFI3iF32ldSB-pupvHtQtvjpk,332
+django_nextjs/apps.py,sha256=nUy5VrtijyRoM2Q0nrveGjRZNyJTr8CaIJOz7oxgPDE,135
+django_nextjs/asgi.py,sha256=WtBagvpzEpwu2q-2sa7Z6Pcg_kPrac-mwfFO5aJCS18,11423
+django_nextjs/exceptions.py,sha256=agHS3xDahRG6cqUGDPj0pXMzzl-mlHhj9dcGVjTEcU0,54
+django_nextjs/proxy.py,sha256=ksDASOaj_H5gwA393wikiviPMWaNmAoYsFrPrN-ZU8Y,2648
+django_nextjs/render.py,sha256=UlR0HTSpbsOC2xb5shBj_yqGK0lwMH-SNTzmivS2c5k,6963
+django_nextjs/urls.py,sha256=ZrE89ZbmGNeSdiFubfJ9QPdjx8v96ZorL61rOez1Nb0,287
+django_nextjs/utils.py,sha256=FuL18q1jdFTXg52hXO-qhNen0sgdNuAbPIRveDDVDPU,351
+django_nextjs/views.py,sha256=dKRKu1FYK5pgc6_dzxkJH0-sTCoGMAiaCHfzrSbS_-w,927
+django_nextjs/templates/django_nextjs/document_base.html,sha256=3lRYAgA741D4G8R7UlGiWgk-c46-b0P4LAAAF9oncJM,246
+django_nextjs-3.3.0.dist-info/licenses/LICENSE,sha256=Jon5tY3n7D9RL90Sbj8LcbTQrbEHUuy-IQIIOJxYwN4,1076
+django_nextjs-3.3.0.dist-info/METADATA,sha256=J6V92ZbwCLguY-S34dTp6NUowjegSO7zjN0L8Cw1G3c,2001
+django_nextjs-3.3.0.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+django_nextjs-3.3.0.dist-info/top_level.txt,sha256=5sXRGP1cvmRM9Sd7AhUZHBYHQhcWVvHpEaQfoyHcMQQ,14
+django_nextjs-3.3.0.dist-info/RECORD,,
