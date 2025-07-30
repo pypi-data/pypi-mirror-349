@@ -1,0 +1,7 @@
+pyserial
+pytest
+piper-tts
+sounddevice
+pyaudio
+huggingface_hub
+requests
