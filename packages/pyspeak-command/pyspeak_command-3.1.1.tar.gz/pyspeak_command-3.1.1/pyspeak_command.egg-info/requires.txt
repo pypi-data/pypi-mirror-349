@@ -1,0 +1,4 @@
+pyttsx3
+pynput
+deep_translator
+ftfy

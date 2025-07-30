@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+pyspeak_command.egg-info/PKG-INFO
+pyspeak_command.egg-info/SOURCES.txt
+pyspeak_command.egg-info/dependency_links.txt
+pyspeak_command.egg-info/entry_points.txt
+pyspeak_command.egg-info/requires.txt
+pyspeak_command.egg-info/top_level.txt
+speak_command/__init__.py
+speak_command/controller.py
+speak_command/main.py
+speak_command/utils.py
