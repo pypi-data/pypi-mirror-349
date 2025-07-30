@@ -1,0 +1,4 @@
+include pydantic_core/_pydantic_core.cpython-312.so
+include pydantic_core/__init__.py
+include pydantic_core/core_schema.py
+include pydantic_core/py.typed

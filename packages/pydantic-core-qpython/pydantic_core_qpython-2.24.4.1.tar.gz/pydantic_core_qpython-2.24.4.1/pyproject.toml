@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pydantic-core-qpython"
+version = "2.24.4.1"
+description = "This package provides the core functionality for pydantic validation and serialization"
+readme = "README.md"
+license = {text = "Python Software Foundation License"}
+requires-python = "==3.12.*"
+authors = [
+    { name = "The QPYPI Team", email = "qpypi@qpython.org" },
+]
+classifiers = [
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "Intended Audience :: Information Technology",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: Android",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development",
+]
+dependencies = [
+    "typing-extensions-qpython>=4.12.2",
+]
+
+[project.urls]
+Homepage = "https://qpypi.qpython.org/project/pydantic-core-qpython/"
