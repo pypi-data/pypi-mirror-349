@@ -1,0 +1,10 @@
+pyspeak_command-3.1.1.dist-info/licenses/LICENSE,sha256=DX7TCuqcm-xwkWarHfGhfPZOr21Z7nSkfU8a4mu28Wk,1080
+speak_command/__init__.py,sha256=ar40JP10XHjGVHIB_KZG3Uo5twk1_mfapgO7iUEihE4,23
+speak_command/controller.py,sha256=P8UpBP_DLN7vlv5QF_6uu_hy6PN90w-O_VAIxUIKNVI,6401
+speak_command/main.py,sha256=NmGc6b1fVDGAoMrtuzqedjvRKwZny64UFFtG2fBTh20,663
+speak_command/utils.py,sha256=RH38IP8egewAK-AKxJ6bL5VTwzuNjFDwinA4mcDT4dI,4347
+pyspeak_command-3.1.1.dist-info/METADATA,sha256=HYztem0KBN5WJM7HTHgMdOLzqEpkGJcSwsteFHDSKQI,3074
+pyspeak_command-3.1.1.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+pyspeak_command-3.1.1.dist-info/entry_points.txt,sha256=sLqN8Z59hDg2q9FWPW5hf_ceKJ_OPcwq794RponAyLc,89
+pyspeak_command-3.1.1.dist-info/top_level.txt,sha256=15B8c9xvNA4BPWWjKvNPU6DjMGquyxHvC5s1DotYhyk,14
+pyspeak_command-3.1.1.dist-info/RECORD,,

@@ -1,0 +1,3 @@
+[console_scripts]
+scmd = speak_command.main:main
+speak_command = speak_command.main:main
