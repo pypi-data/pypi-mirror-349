@@ -1,0 +1,10 @@
+PySide6==6.5.0
+shotgun_api3==3.5.1
+
+[lint]
+ruff
+
+[testing]
+pytest
+pytest-cov
+mock
