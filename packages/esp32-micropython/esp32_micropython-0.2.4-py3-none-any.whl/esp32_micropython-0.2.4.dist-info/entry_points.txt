@@ -1,0 +1,2 @@
+[console_scripts]
+esp32 = esp32_micropython.dm:main
