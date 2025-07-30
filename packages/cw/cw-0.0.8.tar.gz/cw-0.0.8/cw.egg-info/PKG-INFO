@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: cw
+Version: 0.0.8
+Summary: Command line Wizard - Transform your python functions into CLI tools
+Home-page: https://github.com/i2mint/cw
+Author: OtoSense
+License: mit
+Platform: any
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: i2
+Dynamic: license-file
+
+
+# cw
+Command line Wizard - Transform your python functions into CLI tools
+
+
+To install:	```pip install cw```
