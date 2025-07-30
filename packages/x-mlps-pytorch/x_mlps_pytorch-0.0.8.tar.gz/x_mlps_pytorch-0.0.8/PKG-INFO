@@ -1,0 +1,71 @@
+Metadata-Version: 2.4
+Name: x-mlps-pytorch
+Version: 0.0.8
+Summary: A collection of MLPs / Feedforwards for Pytorch
+Project-URL: Homepage, https://pypi.org/project/x-mlps/
+Project-URL: Repository, https://github.com/lucidrains/x-mlps
+Author-email: Phil Wang <lucidrains@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2025 Phil Wang
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+License-File: LICENSE
+Keywords: artificial intelligence,deep learning,feedforwards,mlps
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.8
+Requires-Dist: einops>=0.8.0
+Requires-Dist: torch>=2.4
+Provides-Extra: test
+Requires-Dist: pytest; extra == 'test'
+Description-Content-Type: text/markdown
+
+## x-mlps-pytorch
+
+Just a repository that will house MLPs for Pytorch, from garden variety to the exotic, so as to avoid having to reimplement them again and again for different projects (especially RL)
+
+Will also be the repository I use for testing out [Jules](https://jules.google.com/) and other AI assisted tools.
+
+
+## Install
+
+```bash
+$ pip install x-mlps-pytorch
+```
+
+## Usage
+
+```python
+import torch
+from x_mlps_pytorch import MLP
+
+actor = MLP(10, 16, 5)
+
+critic = MLP(10, 32, 16, 1)
+
+state = torch.randn(10)
+
+action_logits = actor(state) # (5,)
+
+values = critic(state) # (1,)
+```
