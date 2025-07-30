@@ -1,0 +1,15 @@
+[project]
+name = "amapote-moni-mcp-server-xyt"
+version = "0.1.4"
+description = "使用API查询中国境内天气。"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "datetime>=5.5",
+    "httpx>=0.28.1",
+    "mcp[cli]>=1.6.0",
+    "requests>=2.32.3",
+    "requests>=2.32.3",
+]
+[project.scripts]
+amapote-moni-mcp-server-xyt = "weather.__main__:main"
