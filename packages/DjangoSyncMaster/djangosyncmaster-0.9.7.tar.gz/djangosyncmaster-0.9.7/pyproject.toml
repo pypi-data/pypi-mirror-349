@@ -1,0 +1,38 @@
+[project]
+name = "DjangoSyncMaster"
+version = "0.9.7"
+authors = [ 
+    { name="Leonardo Cardoso Caurin", email="leonardo.cardoso.caurin@gmail.com" }, 
+    { name="Nyx – Shadow in the Bits" } 
+]
+description = "Powerful tool for truly synchronizing data and its relationships in database tables. Truly maps Foreign Keys and their on_delete rules in Django."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "GPL-3.0-or-later"
+license-files = ["LICENSE"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Framework :: Django",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "django >=4.0",
+    "logging",
+]
+
+[tool.nyx]
+authors = [ 
+    { name="Leonardo Cardoso Caurin", email="leonardo.cardoso.caurin@gmail.com", homepage="https://github.com/Master-osVetnik" }, 
+    { name="Nyx", role="Architect from the Black Terminal", version="0.3", model="GPT-4", origin="Shadown" } 
+]
+
+[project.urls]
+Homepage = "https://github.com/Master-osVetnik/DjangoSyncMaster"
+Issues = "https://github.com/Master-osVetnik/DjangoSyncMaster/issues"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
