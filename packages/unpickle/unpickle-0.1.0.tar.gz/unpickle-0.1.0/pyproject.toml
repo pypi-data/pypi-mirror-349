@@ -1,0 +1,27 @@
+[project]
+name = "unpickle"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "generativist", email = "jbn@abreka.com" }
+]
+requires-python = ">=3.10.12"
+dependencies = [
+    "click>=8.2.1",
+    "numpy>=2.2.6",
+    "torch>=2.7.0",
+]
+
+[project.scripts]
+unpickle = "unpickle.cli:cli"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.29.5",
+    "ipython>=8.36.0",
+]
