@@ -1,0 +1,37 @@
+Metadata-Version: 2.4
+Name: ord_rxn_converter
+Version: 0.1.1
+Summary: Package for extracting chemical reaction serialized (Google Protocol Buffers mechanism) in Open Reaction Database (ORD) schema to relational database (RDB) and Resource Descriptive Framework (RDF).
+Author-email: "Quynh D. Tran" <qdt@case.edu>, Ethan Tobey <emt101@case.edu>, Holly Schreiber <hls92@case.edu>, "Laura S. Bruckman" <lsh41@case.edu>, "Roger H. French" <rxf131@case.edu>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/cwru-sdle/ord_rxn_converter
+Keywords: chemistry,ord,open-reaction-database,machine-learning,cheminformatics,reaction-data
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: ord_schema
+Requires-Dist: protobuf
+Requires-Dist: pandas
+Requires-Dist: rdkit
+Dynamic: license-file
+
+# This is the README for the ord_rxn_converter package
+ 
+## Working Title: ord_rxn_converter
+### This is a package repo.
+ 
+## Repo Owner: Quynh D. Tran
+### Purpose of this repo: Extract chemical reaction data from ORD schema (serialized in Google Protocol Buffers) into RDB and RDF triples
+### What project or speedtype is this associated withCommittee Member: NAME (DEPT),  NAME (DEPT), NAME (DEPT), NAME (DEPT)  
+
+[Case Western Reserve University, SDLElab] [1]
+ 
+ 
+[1]: http://sdle.case.edu
+
+# Python package documentation
+https://sphinx-rtd-tutorial.readthedocs.io/en/latest/index.html
+
+Testing CI/CD
