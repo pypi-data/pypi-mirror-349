@@ -1,0 +1,4 @@
+torch>=2.1
+metatensor-torch<0.8,>=0.7.6
+metatomic-torch<0.2,>=0.1.1
+featomic<0.7.0,>=0.6.0
