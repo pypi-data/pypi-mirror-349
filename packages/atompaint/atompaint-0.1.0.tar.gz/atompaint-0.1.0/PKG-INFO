@@ -1,0 +1,72 @@
+Metadata-Version: 2.4
+Name: atompaint
+Version: 0.1.0
+Summary: Design macromolecular interactions by in-painting full-atom models.
+Author-email: Kale Kundert <kale@thekunderts.net>
+Requires-Python: ~=3.10
+Description-Content-Type: text/markdown
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE.txt
+Requires-Dist: blosum
+Requires-Dist: einops
+Requires-Dist: escnn_atompaint
+Requires-Dist: fastdigest
+Requires-Dist: lightning
+Requires-Dist: macromol_dataframe
+Requires-Dist: macromol_gym_pretrain
+Requires-Dist: macromol_gym_unsupervised
+Requires-Dist: macromol_voxelize
+Requires-Dist: more_itertools
+Requires-Dist: multipartial
+Requires-Dist: numpy
+Requires-Dist: pipeline_func
+Requires-Dist: polars >= 1.17
+Requires-Dist: scipy
+Requires-Dist: torch
+Requires-Dist: torchmetrics
+Requires-Dist: torchyield
+Requires-Dist: tqdm
+Requires-Dist: tquiet
+Requires-Dist: visible_residues
+Requires-Dist: xxhash
+Requires-Dist: sphinx ; extra == "doc"
+Requires-Dist: sphinx_rtd_theme ; extra == "doc"
+Requires-Dist: autoclasstoc ; extra == "doc"
+Requires-Dist: pytest ; extra == "test"
+Requires-Dist: pytest_tmp_files ; extra == "test"
+Requires-Dist: pytest_unordered ; extra == "test"
+Requires-Dist: parametrize_from_file ; extra == "test"
+Requires-Dist: hypothesis ; extra == "test"
+Requires-Dist: matplotlib ; extra == "test"
+Requires-Dist: colorcet ; extra == "test"
+Requires-Dist: torchtest ; extra == "test"
+Project-URL: Bug Tracker, https://github.com/kalekundert/atompaint/issues
+Project-URL: Continuous Integration, https://github.com/kalekundert/atompaint/actions
+Project-URL: Documentation, https://atompaint.readthedocs.io/en/latest/
+Project-URL: Test Coverage, https://coveralls.io/github/kalekundert/atompaint
+Project-URL: Version Control, https://github.com/kalekundert/atompaint
+Provides-Extra: doc
+Provides-Extra: test
+
+AtomPaint
+=========
+
+[![Last release](https://img.shields.io/pypi/v/atompaint.svg)](https://pypi.python.org/pypi/atompaint)
+[![Python version](https://img.shields.io/pypi/pyversions/atompaint.svg)](https://pypi.python.org/pypi/atompaint)
+[![Documentation](https://img.shields.io/readthedocs/atompaint.svg)](https://torch-fuel.readthedocs.io/en/latest/)
+[![Test status](https://img.shields.io/github/actions/workflow/status/kalekundert/atompaint/test.yml?branch=master)](https://github.com/kalekundert/atompaint/actions)
+[![Test coverage](https://img.shields.io/codecov/c/github/kalekundert/atompaint)](https://app.codecov.io/github/kalekundert/atompaint)
+[![Last commit](https://img.shields.io/github/last-commit/kalekundert/atompaint?logo=github)](https://github.com/kalekundert/atompaint)
+
+*AtomPaint* is a collection of convolutional neural networks (CNNs) meant for 
+learning from 3D images of macromolecular structures.  A unique, unifying 
+feature of many of these networks is that maintain rotational equivariance; 
+that is, they will recognize features no matter what orientation they appear 
+in.  The models are implemented using the [PyTorch](https://pytorch.org) and 
+[ESCNN](https://quva-lab.github.io/escnn/) frameworks.
+
+Below are links to some of the datasets that these models can be trained on:
+
+- [Macromolecular Gym](https://github.com/kalekundert/macromol_gym)
+- [Atom3D](https://www.atom3d.ai/)
+

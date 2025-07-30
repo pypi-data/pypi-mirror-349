@@ -1,0 +1,102 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "atompaint"
+authors = [
+  {name = "Kale Kundert", email = "kale@thekunderts.net"},
+]
+readme = 'README.md'
+dynamic = ["version", "description"]
+requires-python = "~=3.10"
+classifiers = [
+  'Programming Language :: Python :: 3',
+]
+dependencies = [
+  'blosum',
+  'einops',
+  'escnn_atompaint',
+  'fastdigest',
+  'lightning',
+  'macromol_dataframe',
+  'macromol_gym_pretrain',
+  'macromol_gym_unsupervised',
+  'macromol_voxelize',
+  'more_itertools',
+  'multipartial',
+  'numpy',
+  'pipeline_func',
+  'polars >= 1.17',
+  'scipy',
+  'torch',
+  'torchmetrics',
+  'torchyield',
+  'tqdm',
+  'tquiet',
+  'visible_residues',
+  'xxhash',
+]
+
+[project.optional-dependencies]
+test = [
+  'pytest',
+  'pytest_tmp_files',
+  'pytest_unordered',
+  'parametrize_from_file',
+  'hypothesis',
+  'matplotlib',
+  'colorcet',
+  'torchtest',
+]
+doc = [
+  'sphinx',
+  'sphinx_rtd_theme',
+  'autoclasstoc',
+]
+
+[project.urls]
+'Documentation' = 'https://atompaint.readthedocs.io/en/latest/'
+'Version Control' = 'https://github.com/kalekundert/atompaint'
+'Bug Tracker' = 'https://github.com/kalekundert/atompaint/issues'
+'Continuous Integration' = 'https://github.com/kalekundert/atompaint/actions'
+'Test Coverage' = 'https://coveralls.io/github/kalekundert/atompaint'
+
+[tool.ruff.lint]
+select = ["F"]
+ignore = ["F405", "F403"]
+exclude = ['_*.py']
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"]
+
+[tool.pytest.ini_options]
+addopts = "--doctest-modules --doctest-glob='*.rst'"
+doctest_optionflags = 'NORMALIZE_WHITESPACE'
+norecursedirs = ['resources']
+filterwarnings = [
+  'ignore:.*Lazy modules are a new feature.*:UserWarning:torch.nn.modules.lazy',
+  'ignore:Deprecated call to `pkg_resources.declare_namespace:DeprecationWarning',
+  'ignore:pkg_resources is deprecated as an API:DeprecationWarning',
+  'ignore::DeprecationWarning:torch',
+  'ignore::DeprecationWarning:autograd',
+  'ignore:Type google._upb._message.MessageMapContainer uses PyType_Spec with a metaclass that has custom tp_new. This is deprecated and will no longer be allowed in Python 3.14',
+  'ignore:Type google._upb._message.ScalarMapContainer uses PyType_Spec with a metaclass that has custom tp_new. This is deprecated and will no longer be allowed in Python 3.14',
+  "ignore:The 'val_dataloader' does not have many workers which may be a bottleneck.",
+]
+
+[tool.coverage.run]
+branch = true
+parallel = true
+source = ['atompaint']
+
+[tool.coverage.report]
+exclude_lines = [
+    "^\\s*raise AssertionError\\b",
+    "^\\s*raise NotImplementedError\\b",
+]
+
+[tool.semantic_release]
+version_variables = ['atompaint/__init__.py:__version__']
+build_command = 'python -m pip install build && python -m build'
+major_on_zero = false
