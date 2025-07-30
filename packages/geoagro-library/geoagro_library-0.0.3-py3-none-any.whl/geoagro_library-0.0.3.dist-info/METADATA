@@ -1,0 +1,66 @@
+Metadata-Version: 2.2
+Name: geoagro-library
+Version: 0.0.3
+Summary: Librería para el manejo de series de tiempo NDVI/EVI a partir de imágenes satelitales.
+Home-page: https://github.com/CristianR8/geoagro
+Author: Team Agrosavia
+Author-email: crey@agrosavia.co
+License: MIT
+Project-URL: Bug Tracker, https://github.com/CristianR8/geoagro/issues
+Project-URL: Documentation, https://github.com/CristianR8/geoagro#readme
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: GIS
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: rasterio
+Requires-Dist: opencv-python
+Requires-Dist: ipympl
+Requires-Dist: tslearn
+Requires-Dist: scipy
+Requires-Dist: scikit-learn
+Requires-Dist: geopandas
+Requires-Dist: numpy<3.0,>=2.1
+Requires-Dist: matplotlib
+Requires-Dist: shapely
+Requires-Dist: fiona
+Requires-Dist: pyproj
+Requires-Dist: statsmodels
+Requires-Dist: tifffile
+Requires-Dist: Pillow
+Requires-Dist: scikit-image
+Requires-Dist: requests
+Requires-Dist: plotly
+Requires-Dist: futures; python_version < "3.10"
+Provides-Extra: dev
+Requires-Dist: black; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pre-commit; extra == "dev"
+Requires-Dist: build; extra == "dev"
+Requires-Dist: twine; extra == "dev"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: project-url
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# geoagro-library
+
+Librería para el manejo de series de tiempo NDVI/EVI a partir de imágenes satelitales Sentinel-2 y Landsat.
+
+## Instalación
+
+```bash
+pip install geoagro-library
