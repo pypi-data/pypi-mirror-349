@@ -1,0 +1,7 @@
+vlm_navigation/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vlm_navigation/inference.py,sha256=1Ibc38HYMsi_djNC3CMOlCpK5yCMbsGUAcdvZua4rV0,9627
+vlm_navigation/prompt_manager/navigation_prompt.txt,sha256=zHDBcx_jRsmyf7flPjx7J3j6iL9VBj0-YIi-bpKK9-g,6992
+vlm_inference-0.1.10.dist-info/METADATA,sha256=fO2S-R-_tmTP-GNjF8HxYujwWPIZ51yQx3ex33TxSfE,2840
+vlm_inference-0.1.10.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+vlm_inference-0.1.10.dist-info/top_level.txt,sha256=jk5vskTX8G7YuR-QL-knQjGw1wSNDrNJ2kEQl1WOxos,15
+vlm_inference-0.1.10.dist-info/RECORD,,
