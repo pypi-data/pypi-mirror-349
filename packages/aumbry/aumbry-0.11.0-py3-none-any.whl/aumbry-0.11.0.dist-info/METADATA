@@ -1,0 +1,95 @@
+Metadata-Version: 2.1
+Name: aumbry
+Version: 0.11.0
+Summary: Multi-type configuration library for Python
+Home-page: https://github.com/pyarmory/aumbry
+License: Apache v2
+Keywords: configuration,yaml,etcd,json,parameter,store,multiple
+Author: John Vrbanac
+Author-email: john.vrbanac@linux.com
+Requires-Python: >=3.7,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Provides-Extra: cli
+Provides-Extra: consul
+Provides-Extra: etcd2
+Provides-Extra: fernet
+Provides-Extra: param-store
+Provides-Extra: yaml
+Requires-Dist: alchemize (>=0.11.0)
+Requires-Dist: cryptography (>=2.1.2) ; extra == "fernet" or extra == "cli"
+Requires-Dist: deepmerge
+Requires-Dist: pike (>=0.2.0)
+Requires-Dist: pyyaml (>=5.1) ; extra == "yaml" or extra == "cli"
+Description-Content-Type: text/x-rst
+
+Aumbry
+======
+
+.. image:: https://travis-ci.org/pyarmory/aumbry.svg?branch=master
+    :target: https://travis-ci.org/pyarmory/aumbry
+    :alt: Travis CI Build
+
+.. image:: http://codecov.io/github/pyarmory/aumbry/coverage.svg?branch=master
+    :target: http://codecov.io/github/pyarmory/aumbry?branch=master
+    :alt: Coverage
+
+.. image:: https://readthedocs.org/projects/aumbry/badge/?version=latest
+    :target: https://readthedocs.org/projects/aumbry/?badge=latest
+
+.. image:: https://codeclimate.com/github/pyarmory/aumbry/badges/gpa.svg
+   :target: https://codeclimate.com/github/pyarmory/aumbry
+   :alt: Code Climate
+
+
+Aumbry is general purpose library for handling configuration within your
+Python applications. The project was born from constantly needing a simple
+interface for configuration models that came from multiple data sources.
+
+Behind the scenes, Aumbry uses Alchemize to handle the conversion of the
+configuration data into application specific data models for your project.
+
+**Data Sources supported:**
+
+* File
+* Consul
+* Etcd2
+* AWS Parameter Store
+
+**Configuration Formats Supported:**
+
+* Yaml
+* Json
+
+Installation
+------------
+
+.. code-block:: shell
+
+    # Install base package
+    pip install aumbry
+
+    # Install consul support
+    pip install aumbry['consul']
+
+    # Install etcd2 support
+    pip install aumbry['etcd2']
+
+    # Install yaml support
+    pip install aumbry['yaml']
+
+    # Install parameter store dependencies
+    pip install aumbry['param_store']
+
+    # Installing multiple dependencies
+    pip install aumbry['etcd2','yaml']
+
