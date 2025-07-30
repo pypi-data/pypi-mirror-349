@@ -1,0 +1,3 @@
+DLMS-SPODES<0.87,>=0.84.0
+StructResult>=0.4.1
+semver>=3.0.2
