@@ -1,0 +1,10 @@
+persistent_ssh_agent/__init__.py,sha256=9pXi8RFlnFlkgZ2yqheFabUiEiu5SyPRBg0BQBodfoQ,459
+persistent_ssh_agent/__version__.py,sha256=6qL_qyowXO9Pc6v11Zx2s-yd28_548ZZC-OsfzO_Pjc,22
+persistent_ssh_agent/cli.py,sha256=SrjZbLKJLzuY9BhEcmPO9xQAWair9aE4Zh5jKzjyimE,31171
+persistent_ssh_agent/config.py,sha256=pIEsyLX62HVSqADOaCYtmez2Lmy-DMdbS1-IoGhgVeM,671
+persistent_ssh_agent/core.py,sha256=l27KvdDR__U5yu5jxJxa2faAhZzUxwpwOwyhb1ZIdJI,44741
+persistent_ssh_agent-0.7.5.dist-info/LICENSE,sha256=tJf0Pz8q_65AjEkm3872K1cl4jGil28vJO5Ko_LhUqc,1060
+persistent_ssh_agent-0.7.5.dist-info/METADATA,sha256=Skyn5FDtUTPDqtjr0klnPoqc6TuHIKDmiiveUl37lbI,15934
+persistent_ssh_agent-0.7.5.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+persistent_ssh_agent-0.7.5.dist-info/entry_points.txt,sha256=b9wOOdmkNIrb5HSynnNTYiQRjCmSjPxTmYl9Ymhq6qI,121
+persistent_ssh_agent-0.7.5.dist-info/RECORD,,
