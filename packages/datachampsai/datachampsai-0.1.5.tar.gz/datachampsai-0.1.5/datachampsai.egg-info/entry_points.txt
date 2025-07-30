@@ -1,0 +1,2 @@
+[console_scripts]
+datachampsai = datachampsai.app:run_chat_app
