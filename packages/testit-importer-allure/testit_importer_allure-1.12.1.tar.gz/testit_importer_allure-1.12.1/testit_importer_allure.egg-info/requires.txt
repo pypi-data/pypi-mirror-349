@@ -1,0 +1,4 @@
+testit-api-client==6.0.0
+xmltodict
+minio
+pika
