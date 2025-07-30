@@ -1,0 +1,26 @@
+<SideloadingMenuPopup>
+
+<SideloadingButton@FlowButton>
+    tap_flow_id:
+        id_of_flow('open', 'sideloading_menu') if app.app_states['sideloading_active'] else \
+        id_of_flow('start', 'sideloading_server')
+    tap_kwargs: update_tap_kwargs(self)
+    on_alt_tap: app.main_app.change_flow(id_of_flow('open', 'sideloading_menu'), **update_tap_kwargs(self))
+    text: app.main_app.sideloading_file_ext if app.app_states['sideloading_active'] else ""
+    source:
+        "" if app.app_states['sideloading_active'] else \
+        app.main_app.img_file('sideloading_activate', app.app_states['font_size'], \
+        app.app_states['light_theme'])
+    size_hint_x: None
+    width: self.height * (3.003 if app.landscape else 1.002)
+    _progress: app.app_states['sideloading_active']
+    ellipse_fill_ink: app.font_color[:3] + [0.69]
+    ellipse_fill_pos: self.x, self.top - app.app_states['font_size'] / 3.0
+    ellipse_fill_size: self.width * (self._progress and self._progress[0] or 0), app.app_states['font_size'] / 3.0
+    square_fill_ink: app.font_color[:3] + [0.69]
+    square_fill_pos: self.pos
+    square_fill_size: self.width * (self._progress and self._progress[1] or 0), app.app_states['font_size'] / 3.0
+    relief_square_inner_colors:
+        relief_colors((1.0, 1.0, 0.3) if app.app_states['sideloading_active'] else (1.0, 1.0, 1.0))
+    relief_square_inner_lines: int(self.height / (3.6 if app.app_states['sideloading_active'] else 2.1))
+    relief_square_outer_colors: relief_colors()
