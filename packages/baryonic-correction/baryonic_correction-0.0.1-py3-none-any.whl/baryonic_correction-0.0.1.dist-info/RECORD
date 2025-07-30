@@ -1,0 +1,16 @@
+Baryonic_Correction/__init__.py,sha256=tSzjGDLhmykk1neNeroBd3DgOVxMOifVGRSVZ5i9W8c,174
+Baryonic_Correction/abundance_fractions.py,sha256=CzNSar0ldul9_BcOjgvdBPqwV-hA0pWoPKZMyweKASU,4165
+Baryonic_Correction/density_profiles.py,sha256=2Ls8VqLJxZTB8uz7LwDISAzbTnXWaraeaupijavENSQ,17918
+Baryonic_Correction/parameters.py,sha256=6yLileBtWwJVzcid66-pcxXee8vz-oj6p_UiblFCYZA,1091
+Baryonic_Correction/simulations.py,sha256=VuhrtUBr-IrWc1DOef8vzuEE75H1csd3VL6Y56jovkM,54169
+Baryonic_Correction/utils.py,sha256=j0JjC8rukve-HeUFNv4y3AX_Qrgsxf_x1KejQl3TYhs,31469
+Baryonic_Correction/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+Baryonic_Correction/tests/test_abundance_fractions.py,sha256=kg9JLOWvJnHmObh8W4Bbg0HWe0wsw9zTJ2N-gG69rWY,5277
+Baryonic_Correction/tests/test_density_profiles.py,sha256=vd2ptI1zv2yye0_GUL_L54XVTF5775QjFpz3JlBCpEU,8767
+Baryonic_Correction/tests/test_simulation.py,sha256=O1AdsZV2YZlSxJdymmbImgAXBtB9I3dCtX7AMz9MBio,20644
+Baryonic_Correction/tests/test_utils.py,sha256=4UNs39A9Zaaa0-7f8bxqkH8sCQGEC5bGYjQ8VlxeDOQ,11313
+baryonic_correction-0.0.1.dist-info/licenses/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+baryonic_correction-0.0.1.dist-info/METADATA,sha256=4wR-Xuuv0lUa8SvjfzocFYxMBvLQkxFGF_DX7mjzWgw,4736
+baryonic_correction-0.0.1.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+baryonic_correction-0.0.1.dist-info/top_level.txt,sha256=b-Nv53G0L3_OR6M440SHc2gUZw3BZ2hCjCpwNSRIhGA,20
+baryonic_correction-0.0.1.dist-info/RECORD,,
