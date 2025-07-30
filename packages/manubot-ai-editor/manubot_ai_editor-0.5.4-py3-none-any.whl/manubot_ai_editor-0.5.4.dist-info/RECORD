@@ -1,0 +1,11 @@
+manubot_ai_editor/__init__.py,sha256=djwHr_liruGwsYbVpSxUUMHVenAi8vYuJfZkW1ctgRY,141
+manubot_ai_editor/editor.py,sha256=kPpwGZX0UEx4PlzQIdUXsnfykmF4-P6kNP9SxDUrH8k,21185
+manubot_ai_editor/env_vars.py,sha256=p7dkgjSXCqiN-DSvEEkzcsGeimAYA9aMLUV_5CoV0rQ,4642
+manubot_ai_editor/model_providers.py,sha256=HTfQUmg2qZvevJ2i20wacrXMQj6xwZQVTG-hUA_MyX0,9140
+manubot_ai_editor/models.py,sha256=Daxsypi8EpKEhxCQB2b7mDK4BATmFTZW8nfn88TIrpI,30244
+manubot_ai_editor/prompt_config.py,sha256=H5YQV8dubwyiS_1clza6943V8EN565DhaVpYjRVVM3w,8436
+manubot_ai_editor/utils.py,sha256=rSODK6rqcMRESyMO2rrvdw0QatCiif7DHrac9RaqogE,1466
+manubot_ai_editor-0.5.4.dist-info/LICENSE.md,sha256=lhnT8q7QWy2ktjR8Nsnj9ggKcAciJ-Y24l5gYrHIMXo,1598
+manubot_ai_editor-0.5.4.dist-info/METADATA,sha256=PR2i4PVnjlR1xQrvcbagpn9BiEADr6bJcjyGZyWnzhc,13532
+manubot_ai_editor-0.5.4.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+manubot_ai_editor-0.5.4.dist-info/RECORD,,
