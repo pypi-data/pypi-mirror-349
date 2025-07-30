@@ -1,0 +1,2 @@
+[console_scripts]
+mindbank-normalizer = mindbank_poc.cli.normalizer_runner:main
