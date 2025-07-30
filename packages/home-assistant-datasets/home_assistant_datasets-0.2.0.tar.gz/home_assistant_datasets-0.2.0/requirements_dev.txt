@@ -1,0 +1,28 @@
+-e .
+setuptools==80.8.0
+mashumaro==3.16
+pdoc==15.0.3
+mypy==1.15.0
+synthetic_home==4.6.3
+hass-client==1.2.0
+datasets==3.6.0
+pre-commit==4.2.0
+
+# Dependencies for specific ML integrations
+openai==1.81.0
+google-generativeai==0.8.5
+ollama==0.4.8
+anthropic==0.51.0
+
+# Evaluation dependencies
+pytest_homeassistant_custom_component==0.13.245
+syrupy>=4.6.1
+home_assistant_intents
+hassil>=2.0.4
+mutagen
+pyspeex_noise>=1.0.2
+pyrate-limiter==3.7.0
+
+# Rely on home-assistant version to pin these
+PyYAML
+tqdm
