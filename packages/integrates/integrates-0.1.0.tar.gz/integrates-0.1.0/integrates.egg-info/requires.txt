@@ -1,0 +1,13 @@
+httpx>=0.23.0
+
+[all]
+integrates[dev]
+
+[dev]
+black
+isort
+pre-commit
+toml
+pytest
+pytest-cov
+pytest-asyncio
