@@ -1,0 +1,8 @@
+mcp
+langchain
+langchain-experimental
+langchain-openai
+langchain-chroma
+langchain-community
+pypdf
+rank_bm25
