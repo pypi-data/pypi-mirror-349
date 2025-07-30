@@ -1,0 +1,53 @@
+Metadata-Version: 2.4
+Name: cotton-heroicons
+Version: 0.1.2
+Summary: A Django Cotton Component Library of Heroicons
+Project-URL: Homepage, https://github.com/snopoke/cotton-heroicons
+License-Expression: MIT
+License-File: LICENSE
+Keywords: component,cotton,django,heroicons,library
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Requires-Dist: django-cotton>=1.2.1
+Requires-Dist: django>=4.2
+Description-Content-Type: text/markdown
+
+# cotton-heroicons
+
+A [Django Cotton](https://django-cotton.com/) Component Library of [Heroicons](https://heroicons.com/)
+
+## Usage
+
+To use the icons in your templates, simply add the component tag with the icon name as the tag name. The default variant
+is 'outline', but you can specify a different variant using the 'variant' attribute. You can also add additional classes
+using the 'class' attribute.
+
+```html
+<!-- The default variant is 'outline' -->
+<c-heroicon.cloud/>
+
+<!-- Specify the variant with the 'variant' attribute -->
+<c-heroicon.shopping-bag variant="mini"/>
+
+<!-- Add additional classes using the 'class' attribute -->
+<c-heroicon.square-3-stack-3d class="text-violet-700"/>
+```
+
+## Installation
+
+```bash
+pip install cotton-heroicons
+```
+
+Update Django settings:
+
+```python
+INSTALLED_APPS = [
+    ...
+    'django_cotton',
+    'cotton_heroicons',
+    ...
+]
+```
