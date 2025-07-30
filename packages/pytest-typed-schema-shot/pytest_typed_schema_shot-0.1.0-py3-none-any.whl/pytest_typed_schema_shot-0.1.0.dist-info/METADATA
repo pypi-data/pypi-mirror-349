@@ -1,0 +1,73 @@
+Metadata-Version: 2.4
+Name: pytest-typed-schema-shot
+Version: 0.1.0
+Summary: Pytest plugin for automatic JSON Schema generation and validation from examples
+License-Expression: MIT
+License-File: LICENSE
+Keywords: json-schema,plugin,pytest,testing
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# pytest-typed-schema-shot
+
+Плагин для pytest, который автоматически генерирует JSON Schema на основе примеров данных и проверяет соответствие данных сохраненным схемам.
+
+## Возможности
+
+- Автоматическая генерация JSON Schema по примерам данных (на основе библиотеки `genson`)
+- Хранение схем
+- Валидация результатов на основе сохраненных схем
+- Поддержка обновления схем через `--schema-update` (создание новых, удаление неиспользуемых, обновление существующих)
+- Поддержка `async` и `sync` функций
+- Поддержка `Union` типов и опциональных полей
+
+## Установка
+
+```bash
+pip install pytest-typed-schema-shot
+```
+
+## Использование
+
+1. В ваших тестах используйте фикстуру `schemashot`:
+
+```python
+@pytest.mark.asyncio
+async def test_something(schemashot):
+    data = await API.data()
+    schemashot.assert_match(data, "data")
+```
+
+2. При первом запуске используйте флаг `--schema-update` для создания схем:
+
+```bash
+pytest --schema-update
+```
+
+3. В последующих запусках тесты будут проверять соответствие данных сохраненным схемам:
+
+```bash
+pytest
+```
+
+## Особенности
+
+- **Union-типы**: поддержка множественных типов для полей
+- **Опциональные поля**: автоматическое определение обязательных полей
+- **Очистка**: автоматическое удаление неиспользуемых схем при `--schema-update`
+
+## API
+
+### SchemaShot
+
+```python
+class SchemaShot:
+    def assert_match(self, data: Any, name: str) -> None:
+        """
+        Проверяет соответствие данных схеме.
+        
+        Args:
+            data: Данные для проверки
+            name: Имя схемы
+        """
+```
