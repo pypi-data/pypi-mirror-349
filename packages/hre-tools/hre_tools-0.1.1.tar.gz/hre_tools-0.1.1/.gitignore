@@ -1,0 +1,9 @@
+/target
+/venv
+/.vs
+/app
+/src
+__init__.py
+.Cargo.lock
+Dockerfile
+docker-compose.yaml

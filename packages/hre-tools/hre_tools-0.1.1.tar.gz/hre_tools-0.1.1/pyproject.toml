@@ -1,0 +1,25 @@
+[build-system]
+requires = ["maturin>=0.14,<0.15"]
+build-backend = "maturin"
+
+[project]
+name = "hre-tools"
+version = "0.1.1"
+description = "A blazing-fast lightweight Rust hybrid retriever optimized for Real Time search."
+authors = [{name = "Jared Peck", email = "jared7peck@gmail.com"}]
+requires-python = ">=3.7"
+license = {text = "MIT"}
+urls = { repository = "https://github.com/Jmp13033/hre" }
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Rust",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = []

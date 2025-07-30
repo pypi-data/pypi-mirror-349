@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+target/
+.git/
+.env
+dist/
+*.egg-info/
+
