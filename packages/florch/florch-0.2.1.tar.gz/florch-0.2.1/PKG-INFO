@@ -1,0 +1,30 @@
+Metadata-Version: 2.4
+Name: florch
+Version: 0.2.1
+Summary: Florch is a flexible training scaffolding library for PyTorch
+Author-email: István Sárándi <istvan.sarandi@uni-tuebingen.de>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/isarandi/florch
+Project-URL: Repository, https://github.com/isarandi/florch
+Project-URL: Issues, https://github.com/isarandi/florch/issues
+Project-URL: Author, https://istvansarandi.com
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: POSIX :: Linux
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy<2.0
+Requires-Dist: wandb
+Requires-Dist: torch
+Requires-Dist: torchdata
+Requires-Dist: more-itertools
+Requires-Dist: simplepyutils
+Dynamic: license-file
+
+# florch
+
+Florch allows flexible training of PyTorch models. Modeled after my previous project [fleras](https://github.com/isarandi/fleras), which was built on top of Keras.
