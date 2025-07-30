@@ -1,0 +1,37 @@
+[project]
+name = "intermittent-forecast"
+version = "1.0.0"
+description = "Tools for forecasting intermittent time series"
+authors = [
+    {name="Paul Morgan"}
+]
+readme = "README.md"
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<4.0"
+numpy = ">=1.24"
+scipy = ">=1.11"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.9.9"
+mypy = "^1.15.0"
+pytest = "^8.3.5"
+scipy-stubs = "^1.15.3.0"
+pydoc-markdown = "^4.8.2"
+
+[tool.mypy]
+strict = true
+plugins = ["numpy.typing.mypy_plugin"]
+
+[tool.ruff]
+select = ["ALL"]
+line-length = 80
+per-file-ignores = { "tests/*" = ["D101", "D102", "D103"] }
+
+[tool.ruff.lint.pylint]
+max-args = 8
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
