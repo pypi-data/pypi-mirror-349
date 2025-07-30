@@ -1,0 +1,20 @@
+{
+    "result": [
+        {
+            "hot_dog_output": {
+                "CLASS": {
+                    "Hot Dog": 0.9691276550292969,
+                    "Not Hot Dog": 0.030872374773025513
+                }
+            }
+        },
+        {
+            "hot_dog_output": {
+                "CLASS": {
+                    "Hot Dog": 0.03326747938990593,
+                    "Not Hot Dog": 0.9667325615882874
+                }
+            }
+        }
+    ]
+}
