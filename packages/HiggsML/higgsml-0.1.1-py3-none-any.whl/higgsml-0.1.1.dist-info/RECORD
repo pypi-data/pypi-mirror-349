@@ -1,0 +1,12 @@
+HiggsML/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+HiggsML/__version__.py,sha256=5xvN_gb61nKeq5TER5dSfcArTP3DVasZGN_MQq5dNpA,23
+HiggsML/datasets.py,sha256=3uDo0p4lHNul37FDgu1Gqlz0sjA2zo-yk7yqen3O9Yo,12530
+HiggsML/ingestion.py,sha256=4mgpe5dBX6ZYFjoWX6Bnz_8XhWnSHlM1xKgTYkn20t8,8713
+HiggsML/run_competition.py,sha256=SC8p9nuB2fkH9D2XRyp-jFQKEkaztMif6IGmm9YwP9o,4609
+HiggsML/score.py,sha256=vRkjj_9aBsh3mG6nGvrdbhbjJ9-iVGlUfDfWE2CJl6o,18538
+HiggsML/systematics.py,sha256=geKAVzjiMg0bMhG0xmJ6yVi0TFNEL47jVnI1LDeCDys,22724
+HiggsML/visualization.py,sha256=EaU7cBY2F6hY-PEuiXWQW_cvYs-hdd6oPkXxRPBRI7o,27511
+higgsml-0.1.1.dist-info/METADATA,sha256=kSMbAaKncGu9MSzfNgKeD085TlgxaMH4CWupYdrz8wg,2152
+higgsml-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+higgsml-0.1.1.dist-info/licenses/LICENSE,sha256=xn-ZW0wJ_-nlfBj4BLBK760Yxu5nozS5pKe7f-KaQ1U,1089
+higgsml-0.1.1.dist-info/RECORD,,
