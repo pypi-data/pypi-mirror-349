@@ -1,0 +1,2 @@
+[console_scripts]
+xmonkey-namonica = xmonkey_namonica.cli:main

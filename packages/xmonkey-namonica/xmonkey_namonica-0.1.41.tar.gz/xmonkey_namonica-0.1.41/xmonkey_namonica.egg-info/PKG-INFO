@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: xmonkey_namonica
+Version: 0.1.41
+Summary: Purl2Notices - OSS Attribution Generator
+Home-page: https://github.com/Xpertians/xmonkey-namonica
+Author: Oscar Valenzuela
+Author-email: oscar.valenzuela.b@gmail.com
+License: Apache 2.0
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: urllib3
+Requires-Dist: python-magic
+Requires-Dist: beautifulsoup4
+Requires-Dist: tqdm
+Requires-Dist: xmonkey-lidy
+Requires-Dist: setuptools
+
+Xmonkey Namonica - Purl2Notices
+===============================
+
+Summary
+-------
+Xmonkey Namonica (xmonkey-namonica) is a Python tool created to 
+facilitate the generation of Open Source Legal Notices, which 
+contain copyright and license information from Open Source packages. 
+The main goal of the tool is to provide a tool for developers to 
+programmatically generate legal notices for the open-source 
+software shipped in their projects, with fewer requirements 
+and no friction.
+
+The tool uses a few other Xmonkey libraries under the hood, 
+for example:
+
+* Lidy: LiDY - Simplified License Identification Library.

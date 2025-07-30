@@ -1,0 +1,7 @@
+requests
+urllib3
+python-magic
+beautifulsoup4
+tqdm
+xmonkey-lidy
+setuptools
