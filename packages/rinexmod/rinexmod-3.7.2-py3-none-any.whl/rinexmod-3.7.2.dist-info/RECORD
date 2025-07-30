@@ -1,0 +1,13 @@
+rinexmod/__init__.py,sha256=kASaQPz8JQq5v8NE1UV0hmA0Qto2qZ3Etft4kNAqfTw,210
+rinexmod/gamit_meta.py,sha256=WYrAYGyxT1rVkJWG0LJX1PBEnwCyD7wOjvH03DKjbwA,15349
+rinexmod/get_m3g.py,sha256=HRrSlIIyZkqGnlzb_VBBbCVldWD8nT9Hje6NOozN3Zo,9015
+rinexmod/logger.py,sha256=6cQLGws1gjC3laW2R_08kLvTpcL-qUvYBdTKutjw1jk,2037
+rinexmod/metadata.py,sha256=Okak1LzM_cxmtjiwynTtI6QF0U1VLpFUYaFmkh4r8Fg,46950
+rinexmod/rinexfile.py,sha256=XUZfnhVNj3pu70bYeOAV6gu_UediQHzCWRJprjkrFZ0,78841
+rinexmod/rinexmod_api.py,sha256=3dnuFVUlzrZzfIDdERTYSy8RW4ho8XNEAgIrulITscg,59132
+rinexmod-3.7.2.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+rinexmod-3.7.2.dist-info/METADATA,sha256=q_7wOppUNIs0Rvv9gt_-vd6BJwGrE4_JQwbMeL_NWFc,25233
+rinexmod-3.7.2.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+rinexmod-3.7.2.dist-info/entry_points.txt,sha256=aSXotfrEQzywdsj93DrhS_0ZIEOvB2dg5cnlBTopXDA,231
+rinexmod-3.7.2.dist-info/top_level.txt,sha256=1JrhN5jWN6fYs0VDILHN6KFeAr6KlBDVF92eety0VEU,9
+rinexmod-3.7.2.dist-info/RECORD,,
