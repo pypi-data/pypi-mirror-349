@@ -1,0 +1,33 @@
+Metadata-Version: 2.4
+Name: funcn
+Version: 0.1.0
+Summary: Discover and integrate reusable agents and tools into your Python projects
+Author-email: greyhaven-ai <info@funcn.ai>
+License-Expression: MIT
+Requires-Python: <3.13,>=3.12
+License-File: LICENSE
+Requires-Dist: typer[all]<0.13.0,>=0.12.3
+Requires-Dist: httpx<0.28.0,>=0.27.0
+Requires-Dist: pydantic<3.0.0,>=2.5.0
+Requires-Dist: rich<14.0.0,>=13.0.0
+Provides-Extra: dev
+Requires-Dist: argcomplete<4.0.0,>=3.5.0; extra == "dev"
+Requires-Dist: deptry<1.0.0,>=0.23.0; extra == "dev"
+Requires-Dist: icecream<3.0.0,>=2.1.3; extra == "dev"
+Requires-Dist: ipython<9.0.0,>=8.27.0; extra == "dev"
+Requires-Dist: mypy<2.0.0,>=1.14.1; extra == "dev"
+Requires-Dist: pyclean<4.0.0,>=3.0.0; extra == "dev"
+Requires-Dist: pytest-asyncio<1.0.0,>=0.25.2; extra == "dev"
+Requires-Dist: pytest-cov<7.0.0,>=6.0.0; extra == "dev"
+Requires-Dist: pytest<9.0.0,>=8.3.4; extra == "dev"
+Requires-Dist: rich<14.0.0,>=13.8.1; extra == "dev"
+Requires-Dist: ruff>=0.9.5; extra == "dev"
+Provides-Extra: test
+Requires-Dist: coverage<8.0.0,>=7.6.1; extra == "test"
+Requires-Dist: hypothesis[cli]<7.0.0,>=6.112.1; extra == "test"
+Requires-Dist: pytest<9.0.0,>=8.3.3; extra == "test"
+Requires-Dist: pytest-asyncio<1.0.0,>=0.24.0; extra == "test"
+Requires-Dist: pytest-cov>=6.1.1; extra == "test"
+Requires-Dist: pytest-datafiles<4.0.0,>=3.0.0; extra == "test"
+Requires-Dist: pytest-xdist<4.0.0,>=3.6.1; extra == "test"
+Dynamic: license-file
