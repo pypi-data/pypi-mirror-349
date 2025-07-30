@@ -1,0 +1,2 @@
+[pygments.styles]
+rrt-latest = pygments_style_rrt.style:RrtStyle

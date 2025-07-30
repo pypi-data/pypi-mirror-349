@@ -1,0 +1,21 @@
+[project]
+name = "pygments-style-rrt"
+version = "1.3"
+description = "RRT's basic colourful Pygments style"
+license = {text = "MIT"}
+authors = [
+    {name = "Reuben Thomas", email = "rrt@sc3d.org"}
+]
+readme = "README.md"
+urls = {Homepage = "https://github.com/rrthomas/pygments-style-rrt"}
+requires-python = ">= 3.8"
+dependencies = [
+    "pygments",
+]
+classifiers = [
+    "Environment :: Console",
+    "Programming Language :: Python :: 3",
+]
+
+[project.entry-points."pygments.styles"]
+rrt-latest = "pygments_style_rrt.style:RrtStyle"
