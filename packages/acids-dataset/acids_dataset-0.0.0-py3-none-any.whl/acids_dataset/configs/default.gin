@@ -1,0 +1,13 @@
+
+RawParser:
+    chunk_length = %CHUNK_LENGTH
+    hop_length = %HOP_LENGTH
+    sr = %SAMPLE_RATE
+    channels = %CHANNELS 
+    pad_mode = "discard"
+
+LMDBWriter:
+    fragment_class = @AcidsFragment
+    parser = @RawParser
+    
+
