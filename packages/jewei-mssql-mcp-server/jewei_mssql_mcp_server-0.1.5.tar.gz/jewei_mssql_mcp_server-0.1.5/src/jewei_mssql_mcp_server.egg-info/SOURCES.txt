@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+src/jewei_mssql_mcp_server.egg-info/PKG-INFO
+src/jewei_mssql_mcp_server.egg-info/SOURCES.txt
+src/jewei_mssql_mcp_server.egg-info/dependency_links.txt
+src/jewei_mssql_mcp_server.egg-info/entry_points.txt
+src/jewei_mssql_mcp_server.egg-info/requires.txt
+src/jewei_mssql_mcp_server.egg-info/top_level.txt
+src/mcp_server_jewei/__init__.py
+src/mcp_server_jewei/app_config.py
+src/mcp_server_jewei/core.py
+src/mcp_server_jewei/server.py
+tests/test_core.py
