@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+flowcompass/__init__.py
+flowcompass/main.py
+flowcompass.egg-info/PKG-INFO
+flowcompass.egg-info/SOURCES.txt
+flowcompass.egg-info/dependency_links.txt
+flowcompass.egg-info/entry_points.txt
+flowcompass.egg-info/top_level.txt
