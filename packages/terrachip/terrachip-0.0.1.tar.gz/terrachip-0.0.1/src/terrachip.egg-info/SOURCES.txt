@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+src/terrachip.egg-info/PKG-INFO
+src/terrachip.egg-info/SOURCES.txt
+src/terrachip.egg-info/dependency_links.txt
+src/terrachip.egg-info/requires.txt
+src/terrachip.egg-info/top_level.txt
