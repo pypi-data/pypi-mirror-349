@@ -1,0 +1,44 @@
+<html>
+<head>
+  <style>
+    .arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 50px;
+        color: #ccc;
+        cursor: pointer;
+    }
+    .left-arrow {
+        left: 10px;
+    }
+    .right-arrow {
+        right: 10px;
+    }
+    .image-container {
+        position: relative;
+        text-align: center;
+    }
+  </style>
+</head>
+<body style="display:flex;justify-content:center;align-items:center;background:#23241f">
+<div class="arrow left-arrow" onclick="prevImage()">&#10094;</div>
+<div class="arrow right-arrow" onclick="nextImage()">&#10095;</div>
+<img id="currentImage" style="max-height:100%;max-width:100%" src="{{ url }}"></img>
+<script>
+    var images = {% raw urls %};
+    var currentIndex = {{ index }};
+    function showImage(index) {
+        document.getElementById('currentImage').src = images[index];
+    }
+    function nextImage() {
+        currentIndex = (currentIndex + 1) % images.length;
+        showImage(currentIndex);
+    }
+    function prevImage() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        showImage(currentIndex);
+    }
+</script>
+</body>
+</html>

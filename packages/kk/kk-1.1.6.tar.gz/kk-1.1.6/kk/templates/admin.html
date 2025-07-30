@@ -1,0 +1,103 @@
+{% extends base.html %}
+
+{% block content %}
+
+{% set username = current_user.username or current_user.nickName %}
+<div class="layui-col-md4">
+  <div class="user-card">
+      <div class="user-header">
+          <div class="user-avatar">{{ username[0] if username else 'X' }}</div>
+          <div class="user-name">{{ username }}</div>
+          <div class="user-email">{{ current_user.email or '' }}</div>
+      </div>
+      <div class="user-details">
+          <div class="detail-item">
+              <span class="detail-label">用户ID</span>
+              <span class="detail-value">{{ current_user.id }}</span>
+          </div>
+          <div class="detail-item">
+              <span class="detail-label">当月流量</span>
+              <span class="detail-value">{{ handler.convert_size(current_user.visit * 1048576) }}</span>
+          </div>
+          <div class="detail-item">
+              <span class="detail-label">已用容量</span>
+              <span class="detail-value">{{ handler.convert_size(current_user.usage * 1048576) }} / {{ handler.convert_size(handler.opt.quota * 1048576) }}</span>
+          </div>
+          <div class="storage-bar">
+              <div class="storage-progress" style="width: {{ current_user.usage / handler.opt.quota * 100 }}%"></div>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="layui-col-md4">
+  <div class="user-card">
+    <blockquote class="layui-elem-quote">
+      <p>忘记密码请选择 <a href="/reset">重置密码</a></p>
+    </blockquote>
+    <form class="layui-form" action="/user" method="POST">
+      <div class="layui-form-item">
+        <div class="layui-block">
+          <div class="layui-input-wrap">
+            <div class="layui-input-prefix">
+              <i class="layui-icon layui-icon-password"></i>
+            </div>
+            <input type="password" name="old_password" placeholder="原密码" autocomplete="off" class="layui-input" required lay-verify="required" readonly onfocus="this.removeAttribute('readonly');" lay-affix="eye">
+          </div>
+        </div>
+      </div>
+      <div class="layui-form-item">
+        <div class="layui-block">
+          <div class="layui-input-wrap">
+            <div class="layui-input-prefix">
+              <i class="layui-icon layui-icon-password"></i>
+            </div>
+            <input type="password" name="password" placeholder="新密码" autocomplete="off" class="layui-input" required lay-verify="required" readonly onfocus="this.removeAttribute('readonly');" lay-affix="eye">
+          </div>
+        </div>
+      </div>
+      <div class="layui-form-item">
+        <div class="layui-block">
+          <div class="layui-input-wrap">
+            <div class="layui-input-prefix">
+              <i class="layui-icon layui-icon-password"></i>
+            </div>
+            <input type="password" name="confirmPassword" placeholder="确认密码" lay-verify="required|confirmPassword" autocomplete="off" class="layui-input" required lay-verify="required" readonly onfocus="this.removeAttribute('readonly');" lay-affix="eye">
+          </div>
+        </div>
+      </div>
+      <div class="layui-form-item">
+        <div class="layui-input-wrap">
+          <button class="layui-btn layui-btn-fluid" lay-submit lay-filter="default">保存</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="layui-col-md4">
+  <div class="user-card">
+    <blockquote class="layui-elem-quote">
+      <p>开启直链后文件可匿名访问</p>
+    </blockquote>
+    <form class="layui-form" action="/admin" method="POST">
+      <div class="layui-form-item">
+        <label class="layui-form-label">文件直链</label>
+        <div class="layui-input-inline">
+          <input type="checkbox" name="direct_file" lay-skin="switch" lay-text="开启|关闭" {% if current_user.direct_file %}checked{% end %}>
+        </div>
+      </div>
+      <div class="layui-form-item">
+        <label class="layui-form-label">目录直链</label>
+        <div class="layui-input-inline">
+          <input type="checkbox" name="direct_dir" lay-skin="switch" lay-text="开启|关闭" {% if current_user.direct_dir %}checked{% end %}>
+        </div>
+      </div>
+      <div class="layui-form-item">
+        <div class="layui-input-wrap">
+          <button class="layui-btn layui-btn-fluid" lay-submit lay-filter="default">保存</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+{% end %}

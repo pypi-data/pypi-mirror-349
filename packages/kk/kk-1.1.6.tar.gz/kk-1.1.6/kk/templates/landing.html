@@ -1,0 +1,319 @@
+{% extends base.html %}
+{% block css %}
+<style>
+body {
+  overflow-x: hidden;
+}
+.landing-hero {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #2563eb 0%, #60a5fa 100%);
+  color: #fff;
+  border-radius: 24px;
+  margin: 2rem 0;
+  paddding: 2rem;
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.10);
+  position: relative;
+  overflow: hidden;
+}
+.landing-hero h1 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 1.2rem;
+  letter-spacing: 2px;
+  animation: fadeInDown 1s cubic-bezier(.77,0,.18,1) 0.1s both;
+}
+.landing-hero p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  animation: fadeInUp 1.2s cubic-bezier(.77,0,.18,1) 0.2s both;
+}
+.landing-btns {
+  display: flex;
+  gap: 1.5rem;
+  animation: fadeIn 1.5s cubic-bezier(.77,0,.18,1) 0.3s both;
+}
+.landing-btns a {
+  padding: 0.8rem 2.2rem;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  background: #fff;
+  color: #2563eb;
+  text-decoration: none;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  will-change: transform;
+  position: relative;
+  overflow: hidden;
+}
+.landing-btns a:hover {
+  background: #2563eb;
+  color: #fff;
+  transform: scale(1.08) rotate(-2deg);
+  box-shadow: 0 8px 32px 0 rgba(37,99,235,0.18);
+}
+.landing-hero .iconfont {
+  font-size: 4.5rem;
+  margin-bottom: 1.2rem;
+  color: #fff;
+  filter: drop-shadow(0 4px 24px #2563eb88);
+  animation: bounceIn 1.2s cubic-bezier(.77,0,.18,1) 0.1s both;
+}
+.landing-wave {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  width: 100%;
+  height: 90px;
+  pointer-events: none;
+  z-index: 1;
+}
+.landing-particles {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+.landing-features {
+  margin: 3rem auto 0 auto;
+  max-width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+.landing-feature {
+  background: #fff;
+  color: #2563eb;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.06);
+  padding: 2rem 1.5rem;
+  flex: 1 1 260px;
+  min-width: 220px;
+  max-width: 300px;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+  animation: fadeInUp 1.2s cubic-bezier(.77,0,.18,1) both;
+}
+.landing-feature:hover {
+  transform: translateY(-10px) scale(1.04) rotate(-1deg);
+  box-shadow: 0 8px 32px 0 rgba(37,99,235,0.10);
+}
+.landing-feature .iconfont {
+  font-size: 2.5rem;
+  margin-bottom: 0.7rem;
+  color: #60a5fa;
+  filter: drop-shadow(0 2px 8px #2563eb33);
+}
+.landing-feature h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.7rem;
+}
+.landing-feature p {
+  font-size: 1rem;
+  color: #555;
+}
+.landing-logos {
+  margin: 3rem auto 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  opacity: 0.7;
+  filter: grayscale(0.2);
+}
+.landing-logos img {
+  height: 38px;
+  width: auto;
+  filter: drop-shadow(0 2px 8px #2563eb22);
+  transition: filter 0.2s, opacity 0.2s;
+}
+.landing-logos img:hover {
+  filter: none;
+  opacity: 1;
+}
+.landing-footer {
+  margin-top: 3rem;
+  padding: 1.2rem 0 1.2rem 0;
+  text-align: center;
+  color: #888;
+  font-size: 1rem;
+}
+.landing-help {
+  max-width: 900px;
+  margin: 3rem auto 0 auto;
+  background: #f1f5f9;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.04);
+  padding: 2rem 2.5rem;
+  color: #2563eb;
+  font-size: 1.08rem;
+  line-height: 1.8;
+}
+.landing-help h2 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #2563eb;
+}
+.landing-help code {
+  background: #e0e7ef;
+  color: #d97706;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.98em;
+}
+.landing-tutorial {
+  max-width: 900px;
+  margin: 3rem auto 0 auto;
+  background: #f8fafc;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.04);
+  padding: 2rem 2.5rem;
+  color: #2563eb;
+  font-size: 1.08rem;
+  line-height: 1.8;
+}
+.landing-tutorial h2 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 1.2rem;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+.landing-tutorial ol {
+  margin-left: 1.2em;
+}
+.landing-tutorial code {
+  background: #e0e7ef;
+  color: #d97706;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.98em;
+}
+.landing-tutorial-tip {
+  margin-top: 1.5em;
+  background: #e0e7ef;
+  color: #2563eb;
+  border-radius: 6px;
+  padding: 0.7em 1em;
+  font-size: 0.98em;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+.landing-tutorial-tip a {
+  color: #2563eb;
+  text-decoration: underline;
+}
+.landing-tutorial-feature-list {
+  list-style-type: decimal;
+  padding-left: 20px;
+}
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-40px); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes bounceIn {
+  0% { opacity: 0; transform: scale(0.3); }
+  50% { opacity: 1; transform: scale(1.05); }
+  70% { transform: scale(0.95); }
+  100% { transform: scale(1); }
+}
+</style>
+{% end %}
+{% block content %}
+<div class="landing-hero">
+  <span class="iconfont icon-home"></span>
+  <h1>欢迎使用 {{ handler.opt.name }}</h1>
+  <p>一个简单的文件管理与分享平台</p>
+  <div class="landing-btns">
+    <a href="/signin">登录</a>
+    <a href="/signup">注册</a>
+  </div>
+  <canvas class="landing-particles" id="particles"></canvas>
+  <svg class="landing-wave" viewBox="0 0 1440 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path fill="#fff" fill-opacity="1" d="M0,60 C360,120 1080,0 1440,60 L1440,90 L0,90 Z"></path>
+  </svg>
+</div>
+<div class="landing-features">
+  <div class="landing-feature" style="animation-delay:0.1s"><span class="iconfont icon-upload"></span>
+    <h3>极速上传</h3>
+    <p>多线程传输，大文件分片上传，文件夹批量上传</p>
+  </div>
+  <div class="landing-feature" style="animation-delay:0.3s"><span class="iconfont icon-preview"></span>
+    <h3>灵活预览</h3>
+    <p>支持常见文件格式预览，如word、pdf、图片、音乐、视频等</p>
+  </div>
+  <div class="landing-feature" style="animation-delay:0.4s"><span class="iconfont icon-share"></span>
+    <h3>便捷分享</h3>
+    <p>灵活设置有效期，或通过直链开放公众访问</p>
+  </div>
+  <div class="landing-feature" style="animation-delay:0.8s"><span class="iconfont icon-search"></span>
+    <h3>智能搜索</h3>
+    <p>支持模糊检索，快速定位所需文件</p>
+  </div>
+  <div class="landing-feature" style="animation-delay:0.8s"><span class="iconfont icon-layout"></span>
+    <h3>布局切换</h3>
+    <p>支持列表、卡片布局，支持自定义排序及预览</p>
+  </div>
+  <div class="landing-feature" style="animation-delay:0.8s"><span class="iconfont icon-stat"></span>
+    <h3>访问统计</h3>
+    <p>实时统计存储容量及访问量</p>
+  </div>
+</div>
+
+<footer class="landing-footer">
+  <div>© 2024 {{ handler.opt.name }} 文件管理平台
+    {% if handler.opt.beian %}
+    <a target="_blank" href="https://beian.miit.gov.cn">{{ handler.opt.beian }}</a>
+    {% end %}
+  </div>
+</footer>
+<script>
+// 粒子动画
+const canvas = document.getElementById('particles');
+if(canvas) {
+  const ctx = canvas.getContext('2d');
+  let w = canvas.width = canvas.offsetWidth = canvas.parentElement.offsetWidth;
+  let h = canvas.height = canvas.offsetHeight = canvas.parentElement.offsetHeight;
+  let particles = Array.from({length: 36}, () => ({
+    x: Math.random()*w, y: Math.random()*h, r: 1.5+Math.random()*2, dx: (Math.random()-0.5)*0.7, dy: (Math.random()-0.5)*0.7, a: 0.3+Math.random()*0.5
+  }));
+  function draw() {
+    ctx.clearRect(0,0,w,h);
+    for(const p of particles) {
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, 2*Math.PI);
+      ctx.fillStyle = `rgba(96,165,250,${p.a})`;
+      ctx.fill();
+      p.x += p.dx; p.y += p.dy;
+      if(p.x<0||p.x>w) p.dx*=-1;
+      if(p.y<0||p.y>h) p.dy*=-1;
+    }
+    requestAnimationFrame(draw);
+  }
+  draw();
+  window.addEventListener('resize',()=>{
+    w = canvas.width = canvas.offsetWidth = canvas.parentElement.offsetWidth;
+    h = canvas.height = canvas.offsetHeight = canvas.parentElement.offsetHeight;
+  });
+}
+</script>
+{% end %}
