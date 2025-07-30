@@ -1,0 +1,13 @@
+[project]
+name = "whosclient"
+version = "0.1.1"
+dependencies = ["click", "requests", "pandas", "plotly", "nbformat"]
+readme = "README.md"
+authors = [{name = "Instituto Nacional del Agua", email = "jbianchi@ina.gob.ar"}]
+
+[tool.setuptools]
+packages = ["whosclient"]
+package-dir = {"" = "src"}
+
+[project.scripts]
+whosclient = "whosclient.__main__:cli"
