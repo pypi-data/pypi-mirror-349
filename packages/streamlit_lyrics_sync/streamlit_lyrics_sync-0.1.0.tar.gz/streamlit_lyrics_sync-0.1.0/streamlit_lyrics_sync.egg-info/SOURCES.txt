@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+streamlit_lyrics_sync/__init__.py
+streamlit_lyrics_sync/demo.py
+streamlit_lyrics_sync/notes.py
+streamlit_lyrics_sync/phrase.py
+streamlit_lyrics_sync.egg-info/PKG-INFO
+streamlit_lyrics_sync.egg-info/SOURCES.txt
+streamlit_lyrics_sync.egg-info/dependency_links.txt
+streamlit_lyrics_sync.egg-info/requires.txt
+streamlit_lyrics_sync.egg-info/top_level.txt
