@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+setup.py
+mdecimal/__init__.py
+mdecimal.egg-info/PKG-INFO
+mdecimal.egg-info/SOURCES.txt
+mdecimal.egg-info/dependency_links.txt
+mdecimal.egg-info/top_level.txt
