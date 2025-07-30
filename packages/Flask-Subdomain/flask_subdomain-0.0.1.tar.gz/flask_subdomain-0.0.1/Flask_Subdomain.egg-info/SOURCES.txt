@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+setup.py
+Flask_Subdomain/__init__.py
+Flask_Subdomain.egg-info/PKG-INFO
+Flask_Subdomain.egg-info/SOURCES.txt
+Flask_Subdomain.egg-info/dependency_links.txt
+Flask_Subdomain.egg-info/top_level.txt
