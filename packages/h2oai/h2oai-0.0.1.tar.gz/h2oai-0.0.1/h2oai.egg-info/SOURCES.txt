@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+setup.py
+h2oai/__init__.py
+h2oai.egg-info/PKG-INFO
+h2oai.egg-info/SOURCES.txt
+h2oai.egg-info/dependency_links.txt
+h2oai.egg-info/top_level.txt
