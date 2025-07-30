@@ -1,0 +1,14 @@
+__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kg_gen/__init__.py,sha256=D2InGuuPzf7YmEzi6s5v_4Ni_uPY_9YEOdbiheF9Iec,52
+kg_gen/kg_gen.py,sha256=QV5ysOL7oactWCcRIztHvc9Ej_pZl52weLyM-h9MRsU,6890
+kg_gen/models.py,sha256=rulpvrDFMX6-5dC4zEHshYlyg_2wVby1J9vm4VT0GFw,504
+kg_gen/steps/_1_get_entities.py,sha256=cdaVvaZo1W0oZIy8sLsHuYepnVv8dPLrjMJrhXLBpRw,1072
+kg_gen/steps/_2_get_relations.py,sha256=J8cqXmz9IRoQiYe0fqG5FMqxRYVaICEIp9KvbkNWA7o,4053
+kg_gen/steps/_3_cluster_graph.py,sha256=yRpvQuGAy7QTBvzew5SchkthuN6oi8ElN9Lu9y9OJJs,11989
+kg_gen/steps/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kg_gen/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kg_gen/utils/chunk_text.py,sha256=bnh-E_DjnEmQP5z0ZBxAuScZ4XoXZOqwHilGEhioSo4,3296
+kg_gen-0.2.0.dist-info/METADATA,sha256=hWvqKH_C-5oR_coN4fotxE73Zkv9527J6MKoB1sXyWo,9848
+kg_gen-0.2.0.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+kg_gen-0.2.0.dist-info/top_level.txt,sha256=AxHCBW9MQtYkSGXaPs2uAkbTCgi3KRFrXwszvt7skck,16
+kg_gen-0.2.0.dist-info/RECORD,,
