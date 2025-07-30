@@ -1,0 +1,7 @@
+netcat_py/__init__.py,sha256=6972b832e05c30c5f7ad9a62687b401058fd9917cb188fb2dcdb68cf839541c8,2879
+netcat_py/__main__.py,sha256=630da8193d5a7ebcf6781b24cdd3d82fc45e07fde5880a6684590dd846c399ce,59
+netcat_py/py.typed,sha256=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,0
+netcat_py-0.0.2.dist-info/WHEEL,sha256=84b8b4f818af12dc2d0ad99e88c4bc5305fbea25c36935d6b8b251a870de184c,78
+netcat_py-0.0.2.dist-info/entry_points.txt,sha256=27ab1663b2e69201d5f1cbdb381e4aab2a7d2668a8bfea46ed386577befcfff3,46
+netcat_py-0.0.2.dist-info/METADATA,sha256=4895c6b4dae49a0f189a64660b3df565578040e230eda15c61172880e7927a07,288
+netcat_py-0.0.2.dist-info/RECORD,,
