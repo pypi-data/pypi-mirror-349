@@ -1,0 +1,8 @@
+pxr/.libs/libPxrVt.so,sha256=KMpk3fLSjpoHpciYPzjx1vGFnETdxfMnt_wODFbCC9E,2237304
+pxr/Vt/__init__.py,sha256=rNik5ipx66Bfo6SQppDpCR5Pgh7qpWuZYR4KFI4yd8M,1204
+pxr/Vt/_vt.so,sha256=_CiO40P2jYxemwBUtmP4kayAzBC41ZlQcx5A4RqymNA,8111336
+pxr_vt-25.5.1.dist-info/METADATA,sha256=wH_XJQoh5Nss_av7txszKrh51EnrM_hOA2VbKhi2LxM,2101
+pxr_vt-25.5.1.dist-info/WHEEL,sha256=CLEFI4Fed3Jm0zf2SFSOQDWMqwaN3-XCN6j5NMlC2c4,158
+pxr_vt-25.5.1.dist-info/RECORD,,
+pxr_vt-25.5.1.dist-info/licenses/LICENSE.txt,sha256=IZywhnQfpZSF2wtKxwwO_xlFJCCnZJeZXBumMDQlIjQ,10316
+pxr_vt-25.5.1.dist-info/licenses/NOTICE.txt,sha256=k6ldE5TIDcCuglcT9C5Yod0oPtv0Ta_x8-h6HZ3y3n4,149
