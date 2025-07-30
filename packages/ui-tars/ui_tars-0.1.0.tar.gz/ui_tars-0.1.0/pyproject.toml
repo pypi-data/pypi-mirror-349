@@ -1,0 +1,23 @@
+[project]
+name = "ui-tars"
+version = "0.1.0"
+description = "Pioneering automated GUI Interaction with Native Agents"
+readme = "README.md"
+authors = [
+    { name = "jinxin001", email = "jinxin001@bytedance.com" }
+]
+requires-python = ">=3.10,<4.0"
+dependencies = []
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.envs.test.scripts]
+test = "PYTHONPATH=src python -m unittest discover tests '*_test.py'"
+publish = "python -m unittest discover tests '*_test.py' && uv publish"
+
+[tool.black]
+line-length = 88
+target-version = ['py310']
+include = '\.pyi?$'
