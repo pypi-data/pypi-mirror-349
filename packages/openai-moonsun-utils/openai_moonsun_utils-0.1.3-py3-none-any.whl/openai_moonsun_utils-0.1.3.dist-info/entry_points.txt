@@ -1,0 +1,2 @@
+[console_scripts]
+openai-convert = openai_moonsun_utils.main:app
