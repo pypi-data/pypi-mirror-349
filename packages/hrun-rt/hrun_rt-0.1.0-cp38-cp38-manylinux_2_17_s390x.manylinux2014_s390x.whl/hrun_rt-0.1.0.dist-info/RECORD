@@ -1,0 +1,8 @@
+hrun/__init__.py,sha256=onFYJu0XG5ViQ0k4k3fSO1d1pH1EB1KyKhc-_hHERcw,135
+hrun/core.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hrun/hrun.cpython-38-s390x-linux-gnu.so,sha256=F7YFfKxnMUEG8oGZOx0YBRmIokUDAck9dfLGNORNZpk,926176
+hrun/hrun.pyi,sha256=AwBQDAX91sQwR-MRVGjOvVj9g8Qf2M1bdiaVe4bS82o,3460
+hrun/types.py,sha256=3XcRT1dhCxAc6JMJqhjOKMLFkRZRQHxitmg0i43xPIk,98
+hrun_rt-0.1.0.dist-info/METADATA,sha256=Ah_6TU8gaGh1vFvqv_SJQyPq0CLSrh9wnk5NMN-V9ak,1765
+hrun_rt-0.1.0.dist-info/WHEEL,sha256=uEVS-5tISNqbwVDKpVFqBA_qRntuQ113KWPqbD0DDWo,125
+hrun_rt-0.1.0.dist-info/RECORD,,
