@@ -1,0 +1,13 @@
+braindecode
+mne_bids
+numba
+numpy
+pandas
+pybids
+pymongo
+python-dotenv
+s3fs
+scipy
+tqdm
+xarray
+pre-commit
