@@ -1,0 +1,23 @@
+{
+"help_flow#open_file_chooser:sideloading_file_mask": """\
+open/close the file chooser
+window to select the file
+offered via sideloading.""",
+"help_flow#open_iterable_displayer:sideloading file info": """\
+display detailed info
+of the file offered
+via sideloading.""",
+"help_flow#open_qr_displayer:sideloading_url": """\
+display the QR-code of
+the URL of the
+sideloading server.""",
+"help_flow#open_sideloading_menu": """\
+open the menu of the
+sideloading server.""",
+"help_flow#start_sideloading_server": """\
+start the sideloading
+server.""",
+"help_flow#stop_sideloading_server":  """\
+stop the sideloading
+server.""",
+}
