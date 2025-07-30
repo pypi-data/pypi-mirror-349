@@ -1,0 +1,19 @@
+[PYG-371] ➡Query Executor Support Listing Edges with Properties (#472)
+
+# Description
+
+Support for list/aggregate/search views.
+
+## Bump
+
+- [x] Patch
+- [ ] Minor
+- [ ] Skip
+
+## Changelog
+### Added
+
+- [alpha feature] The `QueryExecutor` now supports to
+list/aggregate/search views for edge properties.
+- [alpha feature] The `QueryExecutor` now supports to
+list/aggregate/search views for node and edge properties.
