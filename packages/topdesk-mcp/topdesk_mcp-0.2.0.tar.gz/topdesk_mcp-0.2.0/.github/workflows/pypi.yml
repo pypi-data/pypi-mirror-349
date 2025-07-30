@@ -1,0 +1,26 @@
+on:
+  release:
+    types: [created]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+        cache: pip
+        cache-dependency-path: '**/pyproject.toml'
+    - name: Build
+      run: |
+        pip install uv
+        uv venv
+        uv pip install setuptools wheel build
+        uv build
+
+    - name: Publish
+      uses: pypa/gh-action-pypi-publish@release/v1
