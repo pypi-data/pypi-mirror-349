@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "findacat"
+version = "1.0.0"
+description = "A lightweight Python wrapper for the finda.cat API."
+authors = [
+    { name = "Never" }
+]
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "requests"
+]
+license = { text = "MIT" }
+
+[project.urls]
+Homepage = "https://github.com/raz461/findacat"
+Repository = "https://github.com/raz461/findacat-py"
+BugTracker = "https://github.com/raz461/findacat-py/issues"
