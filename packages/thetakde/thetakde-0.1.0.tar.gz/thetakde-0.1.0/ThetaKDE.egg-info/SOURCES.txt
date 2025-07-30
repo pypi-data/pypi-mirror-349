@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+ThetaKDE.egg-info/PKG-INFO
+ThetaKDE.egg-info/SOURCES.txt
+ThetaKDE.egg-info/dependency_links.txt
+ThetaKDE.egg-info/requires.txt
+ThetaKDE.egg-info/top_level.txt
