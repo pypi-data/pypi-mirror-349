@@ -1,0 +1,273 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-20 09:30+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+#: wbcore/contrib/documents/filters.py:14
+#: wbcore/contrib/documents/serializers/shareable_links.py:15
+#: wbcore/contrib/documents/viewsets/display/shareable_links.py:30
+msgid "Valid"
+msgstr ""
+
+#: wbcore/contrib/documents/filters.py:19
+#: wbcore/contrib/documents/viewsets/display/shareable_links.py:22
+msgid "Link"
+msgstr ""
+
+#: wbcore/contrib/documents/filters.py:50
+#: wbcore/contrib/documents/models/document_types.py:36
+#: wbcore/contrib/documents/viewsets/menu/documents.py:17
+#: wbcore/contrib/documents/viewsets/titles/document_types.py:8
+msgid "Document Types"
+msgstr ""
+
+#: wbcore/contrib/documents/filters.py:70
+#: wbcore/contrib/documents/filters.py:76
+msgid "Document Count"
+msgstr ""
+
+#: wbcore/contrib/documents/models/document_model_relationships.py:31
+msgid "Document Model Relationship"
+msgstr ""
+
+#: wbcore/contrib/documents/models/document_model_relationships.py:32
+msgid "Document Model Relationships"
+msgstr ""
+
+#: wbcore/contrib/documents/models/document_types.py:12
+#: wbcore/contrib/documents/viewsets/display/document_types.py:18
+msgid "Parent"
+msgstr ""
+
+#: wbcore/contrib/documents/models/document_types.py:35
+#: wbcore/contrib/documents/models/documents.py:63
+msgid "Document Type"
+msgstr ""
+
+#: wbcore/contrib/documents/models/documents.py:57
+msgid "Description"
+msgstr ""
+
+#: wbcore/contrib/documents/models/documents.py:58
+msgid "File"
+msgstr ""
+
+#: wbcore/contrib/documents/models/documents.py:65
+#: wbcore/contrib/documents/serializers/documents.py:11
+msgid "System Created"
+msgstr ""
+
+#: wbcore/contrib/documents/models/documents.py:66
+msgid "System Key"
+msgstr ""
+
+#: wbcore/contrib/documents/models/documents.py:68
+#: wbcore/contrib/documents/viewsets/display/documents.py:18
+msgid "Valid From"
+msgstr ""
+
+#: wbcore/contrib/documents/models/documents.py:69
+#: wbcore/contrib/documents/models/shareable_links.py:16
+#: wbcore/contrib/documents/viewsets/display/documents.py:19
+#: wbcore/contrib/documents/viewsets/display/shareable_links.py:20
+msgid "Valid Until"
+msgstr ""
+
+#: wbcore/contrib/documents/models/documents.py:71
+msgid "Created"
+msgstr ""
+
+#: wbcore/contrib/documents/models/documents.py:72
+#: wbcore/contrib/documents/viewsets/display/documents.py:20
+msgid "Updated"
+msgstr ""
+
+#: wbcore/contrib/documents/models/documents.py:237
+msgid "Document"
+msgstr ""
+
+#: wbcore/contrib/documents/models/documents.py:238
+#: wbcore/contrib/documents/viewsets/menu/documents.py:6
+#: wbcore/contrib/documents/viewsets/titles/documents.py:17
+msgid "Documents"
+msgstr ""
+
+#: wbcore/contrib/documents/models/documents.py:270
+msgid "A file was shared with you"
+msgstr ""
+
+#: wbcore/contrib/documents/models/documents.py:275
+#, python-brace-format
+msgid ""
+"\n"
+"        <p>Please find your {document_type} \"{filename}\" under this <a "
+"href={link}>link</a></p>\n"
+"        "
+msgstr ""
+
+#: wbcore/contrib/documents/models/documents.py:281
+#, python-brace-format
+msgid ""
+"\n"
+"        <p>Please find the {document_type} \"{filename}\" attached to this "
+"mail.</p>\n"
+"        "
+msgstr ""
+
+#: wbcore/contrib/documents/models/shareable_links.py:17
+#: wbcore/contrib/documents/viewsets/display/shareable_links.py:21
+msgid "One Time Link"
+msgstr ""
+
+#: wbcore/contrib/documents/models/shareable_links.py:59
+#: wbcore/contrib/documents/viewsets/titles/shareable_links.py:11
+msgid "Shareable Link"
+msgstr ""
+
+#: wbcore/contrib/documents/models/shareable_links.py:60
+#: wbcore/contrib/documents/viewsets/titles/shareable_links.py:8
+msgid "Shareable Links"
+msgstr ""
+
+#: wbcore/contrib/documents/models/shareable_links.py:90
+msgid "Shareable Link Access"
+msgstr ""
+
+#: wbcore/contrib/documents/models/shareable_links.py:91
+msgid "Shareable Link Accesses"
+msgstr ""
+
+#: wbcore/contrib/documents/viewsets/buttons/documents.py:18
+msgid "All Children"
+msgstr ""
+
+#: wbcore/contrib/documents/viewsets/buttons/documents.py:23
+msgid "All Documents"
+msgstr ""
+
+#: wbcore/contrib/documents/viewsets/buttons/documents.py:32
+msgid "Recipient"
+msgstr ""
+
+#: wbcore/contrib/documents/viewsets/buttons/documents.py:38
+msgid "Download"
+msgstr ""
+
+#: wbcore/contrib/documents/viewsets/buttons/documents.py:44
+msgid "Send Mail"
+msgstr ""
+
+#: wbcore/contrib/documents/viewsets/buttons/documents.py:45
+msgid "<p>Send this document as mail?</p>"
+msgstr ""
+
+#: wbcore/contrib/documents/viewsets/buttons/documents.py:46
+msgid "Sending Mail"
+msgstr ""
+
+#: wbcore/contrib/documents/viewsets/buttons/documents.py:47
+msgid "Send document as mail"
+msgstr ""
+
+#: wbcore/contrib/documents/viewsets/buttons/shareable_links.py:15
+#: wbcore/contrib/documents/viewsets/buttons/shareable_links.py:18
+msgid "Invalidate"
+msgstr ""
+
+#: wbcore/contrib/documents/viewsets/buttons/shareable_links.py:17
+msgid "<p> Are you sure you want to invalidate this link? </p>"
+msgstr ""
+
+#: wbcore/contrib/documents/viewsets/buttons/shareable_links.py:19
+msgid "Invalidation"
+msgstr ""
+
+#: wbcore/contrib/documents/viewsets/display/document_model_relationships.py:13
+#: wbcore/contrib/documents/viewsets/display/documents.py:17
+msgid "Type"
+msgstr ""
+
+#: wbcore/contrib/documents/viewsets/display/document_model_relationships.py:14
+msgid "Instance"
+msgstr ""
+
+#: wbcore/contrib/documents/viewsets/display/document_types.py:17
+#: wbcore/contrib/documents/viewsets/display/documents.py:16
+msgid "Name"
+msgstr ""
+
+#: wbcore/contrib/documents/viewsets/display/document_types.py:19
+msgid "Number of Documents"
+msgstr ""
+
+#: wbcore/contrib/documents/viewsets/display/documents.py:28
+msgid "Created By System"
+msgstr ""
+
+#: wbcore/contrib/documents/viewsets/display/shareable_links.py:52
+msgid "Hits"
+msgstr ""
+
+#: wbcore/contrib/documents/viewsets/display/shareable_links.py:60
+msgid "Date"
+msgstr ""
+
+#: wbcore/contrib/documents/viewsets/display/shareable_links.py:61
+msgid "Meta Data"
+msgstr ""
+
+#: wbcore/contrib/documents/viewsets/documents.py:81
+msgid "Document is going to be sent with email"
+msgstr ""
+
+#: wbcore/contrib/documents/viewsets/menu/documents.py:10
+msgid "Create New Document"
+msgstr ""
+
+#: wbcore/contrib/documents/viewsets/menu/documents.py:21
+msgid "Create New Document Type"
+msgstr ""
+
+#: wbcore/contrib/documents/viewsets/titles/document_types.py:11
+msgid "Document Type: {{name}}"
+msgstr ""
+
+#: wbcore/contrib/documents/viewsets/titles/document_types.py:14
+msgid "New Document Type"
+msgstr ""
+
+#: wbcore/contrib/documents/viewsets/titles/documents.py:16
+#, python-brace-format
+msgid "Documents for {object}"
+msgstr ""
+
+#: wbcore/contrib/documents/viewsets/titles/documents.py:20
+msgid "Document: {{name}}"
+msgstr ""
+
+#: wbcore/contrib/documents/viewsets/titles/documents.py:26
+#, python-brace-format
+msgid "New Document for {object}"
+msgstr ""
+
+#: wbcore/contrib/documents/viewsets/titles/documents.py:27
+msgid "New Document"
+msgstr ""
+
+#: wbcore/contrib/documents/viewsets/titles/shareable_links.py:14
+msgid "New Shareable Link"
+msgstr ""
