@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+setup.py
+warnings_filter/__init__.py
+warnings_filter.egg-info/PKG-INFO
+warnings_filter.egg-info/SOURCES.txt
+warnings_filter.egg-info/dependency_links.txt
+warnings_filter.egg-info/top_level.txt
