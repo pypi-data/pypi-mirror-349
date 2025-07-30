@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=42"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["simple_mcp"]
+
+[project]
+name = "simple-mcp-example"
+version = "0.1.0"
+authors = [
+    {name = "Your Name", email = "your.email@example.com"}
+]
+description = "A simple MCP server example"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    "fastmcp>=0.1.0"
+]
