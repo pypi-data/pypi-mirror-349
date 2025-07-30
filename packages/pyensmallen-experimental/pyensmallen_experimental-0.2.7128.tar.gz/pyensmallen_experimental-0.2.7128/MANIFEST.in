@@ -1,0 +1,6 @@
+include pyensmallen_experimental/*.hpp
+include pyensmallen_experimental/*.cpp
+include pyensmallen_experimental/*.h
+include pyensmallen_experimental/meson.build
+include LICENSE
+include README.md
