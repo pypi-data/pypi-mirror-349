@@ -1,0 +1,44 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "p-asm-68000"
+description = "A pre-assembler for 68000 code."
+readme = "README.md"
+requires-python = ">=3.8"
+license = "GPL-3.0-or-later"
+keywords = ["68000", "assembly", "amiga"]
+authors = [
+  { name = "Didier Malenfant", email = "didier@malenfant.net" },
+]
+classifiers = [
+  "Development Status :: 1 - Planning",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+dependencies = []
+
+dynamic = ["version"]
+
+[project.urls]
+"Source Code" = "https://codeberg.org/DidierMalenfant/p-asm"
+"Bug Tracker" = "https://codeberg.org/DidierMalenfant/p-asm/issues"
+
+[tool.setuptools_scm]
+
+[tool.hatch.version]
+path = "p-asm/__about__.py"
+
+[tool.hatch.build.targets.sdist]
+exclude = ["Tests"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["p-asm-68000"]
+
+[tool.hatch.envs.default]
+dependencies = []
+
+[project.scripts]
+p-asm = "p-asm.__main__:main"

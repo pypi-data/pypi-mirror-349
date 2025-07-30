@@ -1,0 +1,9 @@
+{
+  "actions" : {
+    "build" : {
+      "enabled" : true,
+      "script" : "python p-asm\/PyUtilities\/DidierCI.py run mypy flake8 pytest"
+    }
+  },
+  "openLogOnRun" : "fail"
+}

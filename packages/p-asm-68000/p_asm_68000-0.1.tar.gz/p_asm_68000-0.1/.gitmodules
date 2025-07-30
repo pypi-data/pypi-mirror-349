@@ -1,0 +1,3 @@
+[submodule "PyUtilities"]
+	path = PyUtilities
+	url = https://codeberg.org/DidierMalenfant/PyUtilities.git
