@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+fieldreporter/__init__.py
+fieldreporter/__main__.py
+fieldreporter/config.py
+fieldreporter/exceptions.py
+fieldreporter/reporter.py
+fieldreporter.egg-info/PKG-INFO
+fieldreporter.egg-info/SOURCES.txt
+fieldreporter.egg-info/dependency_links.txt
+fieldreporter.egg-info/requires.txt
+fieldreporter.egg-info/top_level.txt
