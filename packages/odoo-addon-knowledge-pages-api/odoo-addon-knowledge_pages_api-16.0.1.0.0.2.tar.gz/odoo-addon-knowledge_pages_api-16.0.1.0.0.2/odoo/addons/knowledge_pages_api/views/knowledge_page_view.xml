@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- View for pages -->
+        <record id="knowledge_document_pages_view_form" model="ir.ui.view">
+            <field name="name">document.page.form</field>
+            <field name="model">document.page</field>
+            <field name="inherit_id" ref="document_page.view_wiki_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='tag_ids']" position="before">
+                    <field name="is_api_available" string="Is available in API" />
+                </xpath>
+                <xpath expr="//field[@name='tag_ids']" position="after">
+                    <field name="is_api_available" invisible="1" />
+                    <field
+                        name="api_reference"
+                        string="Reference API"
+                        attrs="{'invisible': [('is_api_available', '=', False)], 'required': [('is_api_available', '=', True)]}"
+                    />
+                    <field
+                        name="api_highlighted_ids"
+                        widget="many2many_tags"
+                        options="{'color_field': 'color', 'no_create_edit': True}"
+                    />
+                </xpath>
+            </field>
+        </record>
+        <!-- View for categories -->
+        <record id="knowledge_document_categories_view_form" model="ir.ui.view">
+            <field name="name">document.category.form</field>
+            <field name="model">document.page</field>
+            <field name="inherit_id" ref="document_page.view_category_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//h1[field[@name='name']]" position="after">
+                    <br/>
+                    <label for="is_api_available"/>
+                    <field name="is_api_available" string="Is available in API" />
+                    <br/>
+                    <label
+                        for="api_reference"
+                        class="oe_edit_only"
+                        attrs="{'invisible': [('is_api_available', '=', False)]}"
+                    />
+                    <field
+                        name="api_reference"
+                        string="Reference API"
+                        attrs="{'invisible': [('is_api_available', '=', False)], 'required': [('is_api_available', '=', True)]}"
+                    />
+                </xpath>
+            </field>
+        </record>
+
+        <record id="knowledge_document_page_view_tree" model="ir.ui.view">
+            <field name="name">document.page.tree</field>
+            <field name="model">document.page</field>
+            <field name="inherit_id" ref="document_page.view_wiki_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="before">
+                    <field name="api_sequence" widget="handle" string="API Order"/>
+                </xpath>
+                <xpath expr="//field[@name='parent_id']" position="after">
+                    <field name="is_api_available" string="Is available in API" />
+                    <field name="api_highlighted_ids"
+                    widget="many2many_tags"
+                    options="{'color_field': 'color'}"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="knowledge_document_category_view_tree" model="ir.ui.view">
+            <field name="name">document.category.tree</field>
+            <field name="model">document.page</field>
+            <field name="inherit_id" ref="document_page.view_category_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="before">
+                    <field name="api_sequence" widget="handle" string="API Order"/>
+                </xpath>
+                <xpath expr="//field[@name='parent_id']" position="after">
+                    <field name="is_api_available" string="Is available in API" />
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

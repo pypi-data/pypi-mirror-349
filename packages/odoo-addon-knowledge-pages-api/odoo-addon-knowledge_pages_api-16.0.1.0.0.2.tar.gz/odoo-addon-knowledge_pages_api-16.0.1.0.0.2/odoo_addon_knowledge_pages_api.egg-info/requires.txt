@@ -1,0 +1,8 @@
+odoo-addon-api_common_base<16.1dev,>=16.0dev
+odoo-addon-auth_api_key<16.1dev,>=16.0dev
+odoo-addon-base_rest<16.1dev,>=16.0dev
+odoo-addon-document_knowledge<16.1dev,>=16.0dev
+odoo-addon-document_page<16.1dev,>=16.0dev
+odoo-addon-document_page_tag<16.1dev,>=16.0dev
+odoo-addon-knowledge_translatable_pages<16.1dev,>=16.0dev
+odoo<16.1dev,>=16.0a

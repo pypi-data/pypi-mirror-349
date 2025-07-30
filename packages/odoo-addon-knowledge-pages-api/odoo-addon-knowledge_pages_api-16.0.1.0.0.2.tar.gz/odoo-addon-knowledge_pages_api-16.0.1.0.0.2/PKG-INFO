@@ -1,0 +1,112 @@
+Metadata-Version: 1.2
+Name: odoo-addon-knowledge_pages_api
+Version: 16.0.1.0.0.2
+Summary: REST API for Knowledge Pages
+Home-page: https://gitlab.com/somitcoop/erp-research/odoo-helpdesk
+Author: Som It Cooperatiu SCCL, Som Connexió SCCL, Odoo Community Association (OCA)
+Author-email: support@odoo-community.org
+License: AGPL-3
+Description: #####################
+         Knowledge Pages API
+        #####################
+        
+        This module adds a REST API for knowledge pages. It allows you to
+        retrieve categories and their child pages, as well as the details of a
+        specific page.
+        
+        **Table of contents**
+        
+        .. contents::
+           :local:
+        
+        ***************
+         Configuration
+        ***************
+        
+        No configuration needed for this module.
+        
+        *******
+         Usage
+        *******
+        
+        To use this module, you can make requests to the following endpoints
+        after installed:
+        
+        -  api/knowledge/categories?category_initial={category_initial}&lang={lang}
+        -  api/knowledge/categories/{api_reference}?&lang={lang}
+        -  api/knowledge/page/{api_reference}?lang={lang}
+        -  api/knowledge/page/{tag}?lang={lang}
+        -  api/knowledge/search/{search+terms}?lang={lang}
+        -  api/knowledge/highlighted/{code}?lang={lang}
+        
+        For the record, `category_initial` and `api_reference` are both the API
+        unique identification string assigned ot the page or category.
+        
+        It's worth mentioning that the {search+terms} param is url encoded text
+        so for special characters (other than spaces which translates to the
+        plus sign) have to be encoded in the url.
+        
+        ************************
+         Known issues / Roadmap
+        ************************
+        
+        There are no known issues for this module.
+        
+        *************
+         Bug Tracker
+        *************
+        
+        Bugs are tracked on `GitLab Issues
+        <https://gitlab.com/somitcoop/erp-research/odoo-helpdesk/-/issues>`_. In
+        case of trouble, please check there if your issue has already been
+        reported. If you spotted it first, help us smashing it by providing a
+        detailed and welcomed feedback.
+        
+        Do not contact contributors directly about support or help with
+        technical issues.
+        
+        *********
+         Credits
+        *********
+        
+        Authors
+        =======
+        
+        -  SomIT SCCL
+        -  Som Connexio SCCL
+        
+        Contributors
+        ============
+        
+        -  `SomIT SCCL <https://somit.coop>`_:
+        
+              -  José Robles <jose.robles@somit.coop>
+              -  Álvaro García <alvaro.garcia@somit.coop>
+              -  Juan Manuel Regalado <juanmanuel.regalado@somit.coop>
+        
+        -  `Som Connexio SCCL <https://somconnexio.coop>`_:
+        
+              -  Gerard Funosas <gerard.funosas@somconnexio.coop>
+        
+        Maintainers
+        ===========
+        
+        This module is maintained by the OCA.
+        
+        .. image:: https://odoo-community.org/logo.png
+           :alt: Odoo Community Association
+           :target: https://odoo-community.org
+        
+        OCA, or the Odoo Community Association, is a nonprofit organization
+        whose mission is to support the collaborative development of Odoo
+        features and promote its widespread use.
+        
+        You are welcome to contribute. To learn how please visit
+        https://odoo-community.org/page/Contribute.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Classifier: Framework :: Odoo :: 16.0
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Requires-Python: >=3.10
