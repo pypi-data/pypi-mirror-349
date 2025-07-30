@@ -1,0 +1,2 @@
+[console_scripts]
+necromancer = src.cli.main:app
