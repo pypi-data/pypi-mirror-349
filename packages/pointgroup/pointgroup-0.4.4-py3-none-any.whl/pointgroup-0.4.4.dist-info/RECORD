@@ -1,0 +1,10 @@
+pointgroup/__init__.py,sha256=L5ScB2hTjliNFkEoS9TGTbvfWcdnXQr22IIS61I8pSY,15591
+pointgroup/element_data.py,sha256=Dsr-WTRpBtOhJrH35eFRg8U4QS3MCfsqNkoNgYVp9IA,6808
+pointgroup/grid.py,sha256=b8x8CAhwJBnIEeWp3VSzKrBL8nyyv39U_ev3AX8ey08,2355
+pointgroup/operations.py,sha256=Fb4U6fXYMNkWBB42ZlfbfmJHop8l6dR4rTnMrVTSKLE,1106
+pointgroup/tools.py,sha256=hwGUc5qllKAd1LZANeZklVXlYtdBMqBEGMpVxeKhSsQ,3042
+pointgroup-0.4.4.dist-info/licenses/LICENSE,sha256=Q2jCpf50UdHXT1gESU7_wPV--nU4qSJlxFuDvcQIOkg,1096
+pointgroup-0.4.4.dist-info/METADATA,sha256=R1E9_UnUA7Y4lR9AgvOIcluqsUlQCyqr_NKayIaoqY8,1865
+pointgroup-0.4.4.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+pointgroup-0.4.4.dist-info/top_level.txt,sha256=FG9EWy7VYGkqCVrDS_SwP4p9NBmPkjcIPEU2mpQ406c,11
+pointgroup-0.4.4.dist-info/RECORD,,
