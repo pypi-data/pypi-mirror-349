@@ -1,0 +1,5 @@
+wheel
+setuptools
+pyverilog
+nl2bench==0.8.0
+find_libpython
