@@ -1,0 +1,13 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+ApiKeyAJM/ApiKeyAJM.py
+ApiKeyAJM/__init__.py
+ApiKeyAJM/_version.py
+ApiKeyAJM.egg-info/PKG-INFO
+ApiKeyAJM.egg-info/SOURCES.txt
+ApiKeyAJM.egg-info/dependency_links.txt
+ApiKeyAJM.egg-info/top_level.txt
+tests/test_ApiKeyAJM.py
