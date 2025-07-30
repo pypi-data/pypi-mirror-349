@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mooseherder"
+version = "2025.5.0"
+description = "A herder for calling MOOSE and gmsh to run parallel parametric sweeps of multi-physics simulations."
+authors = [
+  { name = "thescepticalrabbit", email = "thescepticalrabbit@gmail.com" },
+  { name = "fusmatrs", email = "rory.spencer@ukaea.uk"},
+  { name = "lukethehuman", email = "luke.humphrey@ukaea.uk"},
+]
+license = { file = "LICENSE" }
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "numpy<2.0.0",
+  "netCDF4>=1.6.5"
+]
+
+[project.urls]
+"Repository" = "https://github.com/Computer-Aided-Validation-Laboratory/mooseherder"
+"Issue Tracker" = "https://github.com/Computer-Aided-Validation-Laboratory/mooseherder/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
