@@ -1,0 +1,11 @@
+trainloop_cli/__init__.py,sha256=2gf69x11y44QC0nJiNyzI790EReuH6triY5RW50Pi0A,41
+trainloop_cli/__main__.py,sha256=hxoVEtHlrv4pieULJPzvc0apkVW_fDHD6zd1LQ0Ltyw,1408
+trainloop_cli/commands/__init__.py,sha256=_vYwPTEn_43Usbp1Ln7qJfPwgJ7LdmrpAIeIbopbdlo,228
+trainloop_cli/commands/eval.py,sha256=RhJ1TtHFOhA0PEqrATKQ2fJXJz7Yk2yvEfKhfmjot48,1006
+trainloop_cli/commands/init.py,sha256=IbvGnBr9OrOOoTzcrYLozADSqoGCLqMZuNxbQjwAcok,7987
+trainloop_cli/commands/studio.py,sha256=YnbSO_bWC26PGlMdZZW_Qq3nzPYP37GlIDZwO3hlsXM,3941
+trainloop_cli/commands/utils.py,sha256=p77Nmk2hNg4rdGothVNPNtz9rVNi_-gPNDnW2F9CJ0M,1991
+trainloop_cli-0.3.8.dist-info/METADATA,sha256=yJHREFQUxxrHPtuM0BBEkEZdfaaBYU-J6O1HYSkX3cM,2212
+trainloop_cli-0.3.8.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+trainloop_cli-0.3.8.dist-info/entry_points.txt,sha256=wVte_uf3-5W4RdPcJoWKLXzcxa1vP0WqGH8RrHf4GYs,57
+trainloop_cli-0.3.8.dist-info/RECORD,,
