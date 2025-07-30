@@ -1,0 +1,2 @@
+[console_scripts]
+feature-analyzer = feature_analysis_tools.feature_analysis:main

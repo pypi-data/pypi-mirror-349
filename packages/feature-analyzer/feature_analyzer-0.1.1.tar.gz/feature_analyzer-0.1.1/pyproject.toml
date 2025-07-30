@@ -1,0 +1,23 @@
+[project]
+name = "feature-analyzer"
+version = "0.1.1"
+description = "feature analyzer for LLM"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{ name = "XiaoyuXu", email = "xuxiaoyu200@gmail.com" }]
+requires-python = ">=3.10"
+dependencies = [
+    "torch",
+    "transformers",
+    "datasets",
+    "matplotlib",
+    "scikit-learn",
+    "pandas"
+]
+
+[project.scripts]
+feature-analyzer = "feature_analysis_tools.feature_analysis:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
