@@ -1,0 +1,3 @@
+[console_scripts]
+sunray=sunray.__main__:cli
+
