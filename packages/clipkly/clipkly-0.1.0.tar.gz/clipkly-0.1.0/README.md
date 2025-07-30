@@ -1,0 +1,183 @@
+
+# 🎬 Clipkly
+
+`Clipkly` es una herramienta en Python para cortar automáticamente clips desde dos versiones de un mismo video (horizontal y vertical), usando un archivo `.json` con los timecodes de los mejores momentos.
+
+Soporta desfase (`--offset`) cuando el video vertical empieza en un punto diferente al horizontal (por ejemplo, por edición o plataformas como TikTok).
+
+---
+
+## 🚀 Uso rápido
+
+```bash
+python clipkly.py --offset 403.025 --vertical video_v.mp4
+```
+
+Esto generará clips desde:
+
+- `video_v.mp4` (con offset aplicado) → en `clips/vertical/`
+
+Si también incluyes `--horizontal`, generará clips desde `video_h.mp4` (sin offset) → en `clips/horizontal/`.
+
+---
+
+## 🧾 Formato del archivo clips.json
+
+```json
+[
+  {
+    "start": "01:46:31.760",
+    "end": "01:47:17.199",
+    "slug": "titulo_del_video",
+    "titulo": "titulo del video optimizado para SEO",
+    "descripcion": "breve descripción del contenido del clip",
+    "feeling": "sentimiento del clip",
+    "category" : "categoria del clip"
+  }
+]
+```
+
+🧠 Puedes generar este archivo a partir de los subtítulos de YouTube (ver más abajo).
+
+📥 Cómo obtener los subtítulos (`.srt`):
+
+1. Ve a https://www.downloadyoutubesubtitles.com/es  
+2. Pega el enlace del video de YouTube  
+3. Descarga el archivo en formato `.srt` (idealmente en español)  
+4. Abre Google AI Studio  
+5. Usa este prompt:
+
+```plaintext
+Estos son los subtítulos de la transmisión, puede darme la lista de los mejores momentos para sacar los clips, también en formato JSON:
+
+{
+  "start": "01:46:31.760",
+  "end": "01:47:17.199",
+  "slug": "titulo_del_video",
+  "titulo": "titulo del video optimizado para seo",
+  "description": "descripción o sinapsis del video",
+  "feeling": "sentimiento del clip",
+  "category" : " categoria del clip"
+}
+```
+
+---
+
+## ⚙️ Argumentos del script
+
+```bash
+python clipkly.py [opciones]
+```
+
+| Opción           | Descripción                                                                 |
+|------------------|-----------------------------------------------------------------------------|
+| `--offset`       | Offset en segundos solo para el video vertical (default: 0.0)               |
+| `--horizontal`   | Ruta al video horizontal (opcional)                                         |
+| `--vertical`     | Ruta al video vertical (opcional)                                           |
+| `--json`         | Ruta al archivo JSON con los timecodes (default: `clips.json`)             |
+| `--filter`       | Filtra los clips por categoría (`inspiracional`, `tips`, etc.)             |
+| `--duracion`     | Filtra clips por duración: `muy_corto`, `ideal`, `largo`, `muy_largo`      |
+| `--dry-run`      | Muestra los comandos sin ejecutarlos                                        |
+| `--version`, `-v`| Muestra la versión del script                                               |
+
+---
+
+## 📁 Estructura generada
+
+```plaintext
+📁 clips/
+ ├── 📁 horizontal/     ← Clips del video horizontal (sin offset)
+ ├── 📁 vertical/       ← Clips del video vertical (con offset)
+ └── 📄 estado_clips.xlsx  ← Archivo Excel con metadatos editoriales
+```
+
+Este Excel incluye:
+
+- duración del clip en segundos (`duracion_segundos`)
+- duración en formato `min:seg` (`duracion_mmss`)
+- clasificación automática:
+  - `muy_corto`: hasta 30s
+  - `ideal`: entre 31s y 90s
+  - `largo`: entre 91s y 179s
+  - `muy_largo`: más de 3 minutos
+
+---
+
+## 📦 Requisitos
+
+- Python 3.7+
+- `ffmpeg` instalado y en el PATH
+- Ejecutar: `pip install -r requirements.txt` para instalar dependencias
+
+Dependencias mínimas:
+
+```
+pandas
+tqdm
+openpyxl
+```
+
+---
+
+## 💡 Funcionalidades
+
+- ✂️ Corta clips precisos con FFmpeg sin recodificar (`-c copy`)
+- 🕒 Aplica offset únicamente al video vertical
+- 📁 Genera carpetas separadas para cada versión (`clips/horizontal` y `clips/vertical`)
+- 🧼 Limpia automáticamente los nombres de archivo
+- 🧠 Exporta Excel para planeación editorial (`estado_clips.xlsx`)
+- 🔍 Filtros por duración y categoría
+- 🔄 Modo `--dry-run` para validar sin ejecutar
+- 🧾 Modo CLI personalizable
+
+---
+
+## 🖥️ Alias útil en consola
+
+Powershell:
+
+```powershell
+Set-Alias clipkly python ./clipkly.py
+```
+
+Linux/Bash:
+
+```bash
+alias clipkly='python ./clipkly.py'
+```
+
+Entonces puedes correr:
+
+```bash
+clipkly --offset 3.25 --vertical video_v.mp4
+```
+
+---
+
+## 📌 Ejemplo completo
+
+```bash
+python clipkly.py --offset 403.025 --horizontal video_h.mp4 --vertical video_v.mp4 --json clips.json --duracion ideal
+```
+
+---
+
+## 🔜 Próximas mejoras sugeridas
+
+- 🎞️ Subtítulos quemados en los clips
+- 📸 Generación de miniaturas automáticas
+- 🌐 Interfaz gráfica simple con Gradio
+- 📊 Dashboard para gestión de clips y publicaciones
+- ☁️ Integración con plataformas como Notion o Google Sheets
+
+---
+
+## 🙌 Créditos
+
+Este proyecto fue creado por **Julian Dario Luna Patiño**, ingeniero de software, arquitecto de soluciones en la nube y creador de contenido en [TryCatch.tv](https://trycatch.tv).
+
+**clipkly** nació como una herramienta práctica para automatizar la creación de clips a partir de transmisiones en vivo, especialmente útil para quienes trabajan con contenido en plataformas como YouTube, TikTok e Instagram.
+
+Contacto: [judlup@trycatch.tv](mailto:judlup@trycatch.tv)
+
+✨ Dedicado con cariño a **Nikol Daniela** ❤️
