@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+templatree/__init__.py
+templatree/cli.py
+templatree/generator.py
+templatree.egg-info/PKG-INFO
+templatree.egg-info/SOURCES.txt
+templatree.egg-info/dependency_links.txt
+templatree.egg-info/entry_points.txt
+templatree.egg-info/top_level.txt
+templatree/templates/main.py
+templatree/templates/static/index.html
