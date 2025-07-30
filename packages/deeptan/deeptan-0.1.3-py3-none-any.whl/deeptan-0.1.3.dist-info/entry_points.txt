@@ -1,0 +1,8 @@
+[console_scripts]
+deeptan-fit = deeptan.cli.deeptan_fit:deeptan_fit_tune
+deeptan-litdata = deeptan.cli.deeptan_litdata:deeptan_litdata
+deeptan-perturb = deeptan.cli.deeptan_perturb:deeptan_perturb
+deeptan-pkl2h5 = deeptan.cli.deeptan_pkl2h5:convert_pkl_to_h5
+deeptan-predict = deeptan.cli.deeptan_predict:deeptan_predict
+hello_deeptan = deeptan.cli.hello:hello
+print_sc_h5 = deeptan.cli.print_sc_h5:print_sc_h5
