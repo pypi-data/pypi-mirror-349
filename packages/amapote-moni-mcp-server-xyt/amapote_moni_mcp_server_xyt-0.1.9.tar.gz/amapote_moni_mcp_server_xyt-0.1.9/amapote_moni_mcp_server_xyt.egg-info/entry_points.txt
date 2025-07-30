@@ -1,0 +1,2 @@
+[console_scripts]
+amapote-moni-mcp-server-xyt = weather
