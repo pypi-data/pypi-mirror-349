@@ -1,0 +1,105 @@
+Metadata-Version: 2.4
+Name: blockchain_linker
+Version: 0.1.0
+Summary: 사용자 정보를 블록체인으로 만들어주는 Python 패키지
+Home-page: https://github.com/lee-seokmin/blockchain_linker
+Author: lee-seokmin
+Author-email: dltjrals13@naver.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-python
+Dynamic: summary
+
+# blockchain-linker 
+
+[한국어](README.md) | [영어](README_EN.md)
+
+사용자 정보를 블록체인으로 안전하게 저장하고 관리할 수 있는 Python 패키지입니다. 간단한 인터페이스로 블록체인 구조를 이해하고, 데이터의 무결성을 직접 확인할 수 있습니다.
+
+## 주요 특징
+- 사용자 정보 등 임의의 데이터를 블록체인에 저장
+- 블록체인 유효성 검증 기능 제공
+- 블록체인 저장 및 불러오기 지원 (JSON 파일)
+- 블록 데이터 수정 및 체인 재계산 기능
+- 직관적인 API와 예제 코드 제공
+
+## 설치 방법
+```bash
+pip install blockchain_linker
+```
+
+## 빠른 시작 예제
+```python
+from blockchain_linker import make_blockchain
+
+users = [
+    {"name": "Alice", "age": 30},
+    {"name": "Bob", "age": 25}
+]
+
+chain = make_blockchain(users)
+print(chain.to_list())
+print('유효한 체인:', chain.is_valid())
+
+# 체인 저장 및 불러오기
+chain.save('chain.json')
+loaded = chain.load('chain.json')
+print(loaded.to_list())
+```
+
+## 주요 API
+### Block
+- 블록의 인덱스, 타임스탬프, 데이터, 이전 해시, 해시 정보를 가짐
+- `to_dict()`: 블록 정보를 딕셔너리로 반환
+
+### Blockchain
+- `add_block(data)`: 새 블록 추가
+- `is_valid()`: 체인 유효성 검사
+- `to_list()`: 전체 체인을 리스트로 반환
+- `save(filename)`: 체인 저장 (JSON)
+- `load(filename)`: 저장된 체인 불러오기 (클래스 메서드)
+- `modify_block_data(index, new_data)`: 특정 블록 데이터 수정 및 해시 재계산
+
+### make_blockchain(user_list)
+- 사용자 리스트로 블록체인 객체 생성
+
+## 고급 사용 예시
+```python
+from blockchain_linker import make_blockchain
+
+users = [
+    {"name": "Alice", "age": 30},
+    {"name": "Bob", "age": 25}
+]
+chain = make_blockchain(users)
+
+print("수정 전:", chain.to_list())
+
+# 1번 블록(= Alice)의 데이터를 수정
+new_data = {"name": "Alice", "age": 31, "city": "Seoul"}
+success = chain.modify_block_data(1, new_data)
+print("수정 성공 여부:", success)
+print("수정 후:", chain.to_list())
+print('유효한 체인:', chain.is_valid())
+```
+
+## 예제 실행
+```bash
+python examples/index.py
+```
+
+## 기여 방법
+1. 이슈/PR을 통해 자유롭게 의견을 남겨주세요.
+2. 코드 기여 전 반드시 테스트를 통과해주세요.
+
+## 라이선스
+MIT License
