@@ -1,0 +1,29 @@
+Metadata-Version: 2.4
+Name: PyBreathParams
+Version: 1.0.1
+Summary: Tool for defining parameters of breath from audio files
+Author-email: Ilya Shlom <ilyashlom32@gmail.com>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/ilya-shlom/breathing-analysis
+Project-URL: Issues, https://github.com/ilya-shlom/breathing-analysis/issues
+Keywords: Breath,Breathe,inhale,exhale
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pydub==0.25.1
+Requires-Dist: scikit-learn==1.5.2
+Requires-Dist: numpy
+Requires-Dist: librosa
+Requires-Dist: joblib==1.4.2
+Dynamic: license-file
+
+# PyBreathParams
+[![PyPi](https://img.shields.io/badge/pypi-0.7.0-blue)](https://test.pypi.org/project/PyBreathTranscript/)
+
+
+
+This package is used for defining parameters of breath recordings (captured using an in-ear microphone).
+
+TBA
