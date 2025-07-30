@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: simplepyutils
+Version: 0.2.1
+Summary: Simple utilities for Python
+Author-email: István Sárándi <istvan.sarandi@uni-tuebingen.de>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/isarandi/simplepyutils
+Project-URL: Repository, https://github.com/isarandi/simplepyutils
+Project-URL: Issues, https://github.com/isarandi/simplepyutils/issues
+Project-URL: Author, https://istvansarandi.com
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: POSIX :: Linux
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: tqdm
+Requires-Dist: numpy
+Dynamic: license-file
