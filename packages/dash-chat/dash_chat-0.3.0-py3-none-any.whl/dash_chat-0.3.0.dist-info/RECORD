@@ -1,0 +1,15 @@
+dash_chat/ChatComponent.py,sha256=oLbxB4-EGUIRJl48LfXoXsok4vm9kSWqFVFK1JmbjyM,4904
+dash_chat/ChatMessageInput.py,sha256=MhqlzNMMhxh4gdEA6vcRn5QJAvxdx7mL0fG_Fn9QP8Q,2007
+dash_chat/DotsIndicator.py,sha256=lSVYPZzd56ZnmQeyKbNLc3lm4NTw1VyKHkEplwSg96U,948
+dash_chat/SpinnerIndicator.py,sha256=Lwup-x5rnA93E4BEDNSIeG1mszhb9p5lDW2WcombVMM,1071
+dash_chat/__init__.py,sha256=J-Te5sNjkKn1HqxKexry4UdZE_zVqkBtmZurH0h-2N8,2191
+dash_chat/_imports_.py,sha256=RhtO54acLT33dXOkSiQI0Xz8wXNgmIhuOACogX1NP1U,75
+dash_chat/dash_chat.min.js,sha256=nLjZ299aWcwg7FUCbxHBfSeBTY0I9vLfiGAb2c3FRik,4675777
+dash_chat/dash_chat.min.js.map,sha256=TxRBJ0mrteb8Kf6p0lyzivmEUMXVTbVD6_VcxDiqX3g,19132419
+dash_chat/metadata.json,sha256=MJEr1H_u3mJ8ciE_iEOvz7GeSXCe4L4FAomdsdTgm9U,4934
+dash_chat/package-info.json,sha256=GfFzC1E_2yWqXB71SN7NJxgwY7xf2pK7l0ClIhJjBOg,2454
+dash_chat-0.3.0.dist-info/licenses/LICENSE.txt,sha256=1cf8--gAjSnlv82iWdBZZ1XqVEiyhN1T6gim3lsYL2g,1072
+dash_chat-0.3.0.dist-info/METADATA,sha256=bXZ32Xuy_kLoYZlWmu_xVMvzdqNMF6ZbbXPenEUTQQ0,16030
+dash_chat-0.3.0.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+dash_chat-0.3.0.dist-info/top_level.txt,sha256=mSZtvSWUbT6LdPhYY16Bowb7i_PJzwRvd036vFNt-7c,10
+dash_chat-0.3.0.dist-info/RECORD,,
