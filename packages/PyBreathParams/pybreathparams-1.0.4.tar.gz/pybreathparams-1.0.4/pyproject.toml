@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = ["PyBreathParams"]
+
+[tool.setuptools.package-data]
+"PyBreathParams" = ["model_ie.joblib", "model_ar.joblib"]
+
+[project]
+name = "PyBreathParams"
+version = "1.0.4"
+dependencies = [
+    "pydub==0.25.1",
+    "scikit-learn==1.5.2",
+    "numpy",
+    "librosa",
+    "joblib==1.4.2"
+]
+authors = [
+  { name="Ilya Shlom", email="ilyashlom32@gmail.com" },
+]
+description = "Tool for defining parameters of breath from audio files"
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+keywords = ["Breath", "Breathe", "inhale", "exhale"]
+
+
+[project.urls]
+Homepage = "https://github.com/ilya-shlom/breathing-analysis"
+Issues = "https://github.com/ilya-shlom/breathing-analysis/issues"
