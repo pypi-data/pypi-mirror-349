@@ -1,0 +1,36 @@
+Metadata-Version: 2.4
+Name: flask-simple-deploy
+Version: 0.0.1
+Summary: Deployment, for Flask developers with deadlines.
+Author-email: Eric Matthes <ehmatthes@gmail.com>
+Project-URL: GitHub, https://github.com/ehmatthes/flask-simple-deploy
+Keywords: flask,deployment
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: flask>=3.0
+Requires-Dist: click>=8.2
+Requires-Dist: pluggy>=1.5.0
+Requires-Dist: toml>=0.10.2
+Requires-Dist: requests>=2.32.2
+Provides-Extra: heroku
+Requires-Dist: fsd-heroku; extra == "heroku"
+Provides-Extra: dev
+Requires-Dist: black>=24.1.0; extra == "dev"
+Requires-Dist: build>=1.2.1; extra == "dev"
+Requires-Dist: pytest>=8.3.0; extra == "dev"
+Requires-Dist: twine>=5.1.1; extra == "dev"
+
+flask-simple-deploy
+===
+
+A trimmed-down prototype of [django-simple-deploy](https://github.com/django-simple-deploy/django-simple-deploy/). This is a brief experiment to see if a similar approach to building a plugin-based deployment tool might work in Flask.
