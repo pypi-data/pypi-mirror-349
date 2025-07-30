@@ -1,0 +1,17 @@
+LICENSE.txt
+README.md
+setup.py
+ai_toolkit/__init__.py
+ai_toolkit/ai_service.py
+ai_toolkit/cli.py
+ai_toolkit/config_manager.py
+ai_toolkit/git_utils.py
+ai_toolkit/setup.py
+ai_toolkit/ui_utils.py
+ai_toolkit/utils.py
+git_ai_toolkit.egg-info/PKG-INFO
+git_ai_toolkit.egg-info/SOURCES.txt
+git_ai_toolkit.egg-info/dependency_links.txt
+git_ai_toolkit.egg-info/entry_points.txt
+git_ai_toolkit.egg-info/requires.txt
+git_ai_toolkit.egg-info/top_level.txt
