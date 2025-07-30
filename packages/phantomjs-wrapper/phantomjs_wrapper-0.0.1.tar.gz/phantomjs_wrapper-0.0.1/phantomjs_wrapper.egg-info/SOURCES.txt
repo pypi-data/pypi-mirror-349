@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+setup.py
+phantomjs_wrapper/__init__.py
+phantomjs_wrapper.egg-info/PKG-INFO
+phantomjs_wrapper.egg-info/SOURCES.txt
+phantomjs_wrapper.egg-info/dependency_links.txt
+phantomjs_wrapper.egg-info/top_level.txt
