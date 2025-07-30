@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dg-ignition-selenium"
+version = "0.1.0"
+description = "Automation library for Ignition Perspective based on Inductive Automation's ignition-automation-tools."
+readme = "README.md"
+authors = [
+    {name = "Design Group", email = "keith.gamble@bwdesigngroup.com"}
+]
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "selenium>=4.0.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/design-group/dg-ignition-selenium"
+"Bug Tracker" = "https://github.com/design-group/dg-ignition-selenium/issues"
