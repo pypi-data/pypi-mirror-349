@@ -1,0 +1,12 @@
+openpyxl
+pandas
+requests
+matplotlib
+pillow
+numpy
+requests_cache
+bs4
+lxml
+
+[:python_version < "3.9"]
+importlib_resources
