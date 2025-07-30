@@ -1,0 +1,17 @@
+intermittent_forecast/__init__.py,sha256=z2nFVvvIzirxklQ9i5-F1nR-WOgcDttYtog_jx4yN5I,12
+intermittent_forecast/aggregators/__init__.py,sha256=RdFYUz8z7nuPZoTZS9M4GIB2KQ4qY1Xjmj0WseVtVtI,66
+intermittent_forecast/aggregators/adida.py,sha256=Cs4zceRblaBizQl48oXEFz9xPI3zEira52hcp0fSN4Y,15085
+intermittent_forecast/core/__init__.py,sha256=z2nFVvvIzirxklQ9i5-F1nR-WOgcDttYtog_jx4yN5I,12
+intermittent_forecast/core/_types.py,sha256=6GD3-a6WmZrNL7hJJGiBIcuQb9cDPmoAApFfV71Dy30,162
+intermittent_forecast/core/error_metrics.py,sha256=lwms1ql7so1Is2_drmhH4tbNkEx4PRu3HiVSTHMeZqM,4626
+intermittent_forecast/core/utils.py,sha256=MWfO5Qpblw7FK60Sn21iBdlQSpGexiEOE0XtV2Bjwq0,2989
+intermittent_forecast/forecasters/__init__.py,sha256=HsUAyxwHeqA-0T5Q6EgJXFHIE1UNtFdQWI7sq2mDcF0,381
+intermittent_forecast/forecasters/_base_forecaster.py,sha256=aWIug9PUdV5mDIsF5_S1JiYHDSKA0lNmLm2xXNnhWj8,1144
+intermittent_forecast/forecasters/croston.py,sha256=WyfYRYOdTjg0QO2BhUd-7CQwiq0q-R8XKqwG9ifiQqI,16273
+intermittent_forecast/forecasters/double_exponential_smoothing.py,sha256=fJCg_Ua77tde73PLjkmU7xcGKdFmhI2hA-n_jiIBaTk,10252
+intermittent_forecast/forecasters/simple_exponential_smoothing.py,sha256=cVTqMEgp282ujgnkxrJRjcMU0xV_2u2V4XLsxuHfJCQ,8324
+intermittent_forecast/forecasters/triple_exponential_smoothing.py,sha256=-4ww-Ac_po5mZAO7HWiv2rMbs1Lmkt9pOqTosnD-JzA,21239
+intermittent_forecast-1.0.0.dist-info/LICENSE,sha256=nMJ5LWXOzFK84mY-d3Z-a4Uib5qkD2yV52Q-lBpAFE0,1055
+intermittent_forecast-1.0.0.dist-info/METADATA,sha256=yBCHaaFs9S187v619fi2CnW2huXvrVkySNh1AjNlPO0,24329
+intermittent_forecast-1.0.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+intermittent_forecast-1.0.0.dist-info/RECORD,,
