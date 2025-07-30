@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/romgeo/__init__.py
+src/romgeo/crs.py
+src/romgeo/projections.py
+src/romgeo/transformations.py
+src/romgeo.egg-info/PKG-INFO
+src/romgeo.egg-info/SOURCES.txt
+src/romgeo.egg-info/dependency_links.txt
+src/romgeo.egg-info/requires.txt
+src/romgeo.egg-info/top_level.txt
+src/romgeo/cuda/__init__.py
+src/romgeo/cuda/projections.py
+src/romgeo/cuda/transformations.py
