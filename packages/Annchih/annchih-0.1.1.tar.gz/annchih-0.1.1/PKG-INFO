@@ -1,0 +1,44 @@
+Metadata-Version: 2.4
+Name: Annchih
+Version: 0.1.1
+Summary: Утилита для извлечения ключевых слов и краткого резюме из текста
+Home-page: https://github.com/yourusername/Annchih
+Author: Annchih
+Author-email: you@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: summary
+
+# Annchih
+
+рџ“љ РЈС‚РёР»РёС‚Р° РґР»СЏ РёР·РІР»РµС‡РµРЅРёСЏ РєР»СЋС‡РµРІС‹С… СЃР»РѕРІ Рё РєСЂР°С‚РєРѕРіРѕ СЂРµР·СЋРјРµ РёР· С‚РµРєСЃС‚Р°.
+
+## РЈСЃС‚Р°РЅРѕРІРєР°
+pip install Annchih
+
+from annchih import summarize_text, extract_keywords
+
+text = """
+1. Р§РёС‚Р°Р№, РЅРѕ РЅРµ Р·Р°СѓС‡РёРІР°Р№ вЂ” РґСѓРјР°Р№!
+РќР°С‡РЅРё СЃ РїСЂРѕСЃС‚С‹С… Рё СѓРІР»РµРєР°С‚РµР»СЊРЅС‹С… РєРЅРёРі:
+
+"РђРїРѕР»РѕРіРёСЏ РЎРѕРєСЂР°С‚Р°" РџР»Р°С‚РѕРЅР° вЂ” РєРѕСЂРѕС‚РєР°СЏ, РЅРѕ РјРѕС‰РЅР°СЏ РІРµС‰СЊ Рѕ РїРѕРёСЃРєРµ РёСЃС‚РёРЅС‹.
+
+"РњРёСЂ РЎРѕС„РёРё" Р®СЃС‚РµР№РЅР° Р“РѕСЂРґРµСЂР° вЂ” С…СѓРґРѕР¶РµСЃС‚РІРµРЅРЅС‹Р№ СЂРѕРјР°РЅ-СЌРєСЃРєСѓСЂСЃ РІ РёСЃС‚РѕСЂРёСЋ С„РёР»РѕСЃРѕС„РёРё.
+
+"РўР°Рє РіРѕРІРѕСЂРёР» Р—Р°СЂР°С‚СѓСЃС‚СЂР°" РќРёС†С€Рµ вЂ” РЅРµРјРЅРѕРіРѕ СЃР»РѕР¶РЅРµРµ, РЅРѕ РІРґРѕС…РЅРѕРІР»СЏРµС‚ РЅР° СЂР°Р·РјС‹С€Р»РµРЅРёСЏ.
+
+"Р§С‚Рѕ С‚Р°РєРѕРµ С„РёР»РѕСЃРѕС„РёСЏ?" Р”Рµ Р›РµРѕР·Р° Рё Р“РІР°С‚С‚Р°СЂРё вЂ” РµСЃР»Рё С…РѕС‡РµС‚СЃСЏ Р±РѕР»РµРµ СЃРІРµР¶РµРіРѕ РІР·РіР»СЏРґР°.
+"""
+
+print("Summary:", summarize_text(text))
+print("Keywords:", extract_keywords(text))
+
+ 
