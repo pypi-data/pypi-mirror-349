@@ -1,0 +1,28 @@
+{% extends "enap_designsystem/base.html" %}
+{% load wagtailcore_tags wagtailimages_tags %}
+{% block content %}
+
+
+<div class="citizen-server-block style-{{ value.style_choice }}">
+    {% if value.background_image %}
+        {% image value.background_image fill-1200x600 as bg_img %}
+        <div class="background-image" style="background-image: url('{{ bg_img.url }}');"></div>
+    {% endif %}
+    
+    <div class="content-wrapper">
+        {% if value.small_text %}
+            <div class="small-text-wrapper">
+                <div class="small-text">{{ value.small_text }}</div>
+            </div>
+        {% endif %}
+        
+        <h2 class="title">{{ value.title }}</h2>
+        
+        <div class="description">
+            {{ value.description|richtext }}
+        </div>
+        
+    </div>
+</div>
+
+{% endblock %}
