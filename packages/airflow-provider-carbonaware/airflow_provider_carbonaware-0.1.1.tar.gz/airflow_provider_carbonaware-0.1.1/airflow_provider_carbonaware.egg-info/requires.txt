@@ -1,0 +1,2 @@
+apache-airflow>=2.4
+carbonaware-scheduler-client>=0.1.2

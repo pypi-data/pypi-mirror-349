@@ -1,0 +1,57 @@
+[build-system]
+requires = [
+    "setuptools",
+    "wheel"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "airflow-provider-carbonaware"
+authors = [
+    { name = "Ryan Singman", email = "ryan@carbonaware.dev" },
+
+]
+license = { text = "Apache License 2.0" }
+description = "An Apache Airflow provider package for CarbonAware."
+classifiers = [
+    "Framework :: Apache Airflow",
+    "Framework :: Apache Airflow :: Provider",
+]
+dynamic = [
+    "version"
+]
+requires-python = ">=3.9"
+dependencies = [
+    "apache-airflow>=2.4",
+    "carbonaware-scheduler-client>=0.1.2"
+]
+
+[project.urls]
+Homepage = "https://carbonaware.dev"
+Source = "https://github.com/carbon-aware/airflow-provider-carbonaware/"
+
+[project.readme]
+file = "README.md"
+content-type = "text/markdown"
+
+[project.entry-points.apache_airflow_provider]
+provider_info = "carbonaware_provider.__init__:get_provider_info"
+
+[tool.setuptools]
+include-package-data = false
+
+[tool.setuptools.dynamic]
+version = { attr = "carbonaware_provider.__version__" }
+
+[tool.setuptools.packages.find]
+exclude = [
+    "*tests.*",
+    "*tests"
+]
+
+[dependency-groups]
+dev = [
+    "build>=1.2.2.post1",
+    "pytest>=8.3.5",
+    "ruff>=0.11.10",
+]
