@@ -1,0 +1,8 @@
+mkpipe_extractor_sqlserver/__init__.py,sha256=H9IWFGMb0uuIjPROFi_5AP_YS5gLWBEsxE0yaa8GxyY,623
+mkpipe_extractor_sqlserver/jars/com.microsoft.sqlserver_mssql-jdbc-12.8.1.jre11.jar,sha256=5pM8BxHlmKIkBg5S7TE5L3IKSnZk6F2K43xSqFtn67A,1476685
+mkpipe_extractor_sqlserver-0.2.0.dist-info/licenses/LICENSE,sha256=6G5XWHq2ng2Te_IpVeOKvDabtRBPwqaImM7vpke0HOE,11348
+mkpipe_extractor_sqlserver-0.2.0.dist-info/METADATA,sha256=AbKqpx4LsSN8tDi5esrjsDT8-8bf_9t2UhXnwkb5SKI,1331
+mkpipe_extractor_sqlserver-0.2.0.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+mkpipe_extractor_sqlserver-0.2.0.dist-info/entry_points.txt,sha256=YWQKQYSCQl8IVRMiRhLNDIqgf13BuH-L0zKXKSbfpGg,78
+mkpipe_extractor_sqlserver-0.2.0.dist-info/top_level.txt,sha256=z3qdgAYGXAl11etde_yqlXRFJ5xzNl_1Jl-3dVdi0jY,27
+mkpipe_extractor_sqlserver-0.2.0.dist-info/RECORD,,
