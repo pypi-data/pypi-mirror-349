@@ -1,0 +1,13 @@
+packaging<25,==24.2
+cryptography<45,>=44.0.1
+
+[dev]
+black
+ruff
+fakeredis
+coverage
+pre-commit
+pytest
+mypy
+ipython
+ipdb
