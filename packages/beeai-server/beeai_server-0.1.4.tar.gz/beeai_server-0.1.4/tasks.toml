@@ -1,0 +1,95 @@
+# check
+
+["beeai-server:check"]
+depends = ["beeai-server:check:*"]
+
+["beeai-server:check:ruff-check"]
+depends = ["setup:uv"]
+dir = "{{config_root}}/apps/beeai-server"
+run = "uv run python -m ruff check --quiet"
+sources = ["src/**/*.py"]
+outputs = { auto = true }
+
+["beeai-server:check:ruff-format"]
+depends = ["setup:uv"]
+dir = "{{config_root}}/apps/beeai-server"
+run = "uv run python -m ruff format --quiet --check"
+sources = ["src/**/*.py"]
+outputs = { auto = true }
+
+# TODO: Enable and fix issues in separate PR
+# ["beeai-server:check:pyright"]
+# depends = ["setup:uv"]
+# dir = "{{config_root}}/apps/beeai-server"
+# run = "uv run python -m pyright"
+# sources = ["src/**/*.py"]
+# outputs = { auto = true }
+
+# fix
+
+["beeai-server:fix"]
+depends = ["beeai-server:fix:*"]
+
+["beeai-server:fix:ruff-check"]
+depends = ["setup:uv"]
+dir = "{{config_root}}/apps/beeai-server"
+run = "uv run python -m ruff check --quiet --fix"
+sources = ["src/**/*.py"]
+outputs = { auto = true }
+
+["beeai-server:fix:ruff-format"]
+depends = ["setup:uv"]
+dir = "{{config_root}}/apps/beeai-server"
+run = "uv run python -m ruff format --quiet"
+sources = ["src/**/*.py"]
+outputs = { auto = true }
+
+# run
+
+["beeai-server:run"]
+depends = ["setup:uv", "beeai-ui:build"]
+dir = "{{cwd}}"
+run = "uv run beeai-server"
+
+# build
+
+["beeai-server:build"]
+depends = ["setup:uv", "beeai-ui:build"]
+dir = "{{config_root}}/apps/beeai-server"
+run = "rm -rf ./dist && uv build --out-dir dist"
+sources = ["pyproject.toml", "src/**/*.py"]
+outputs = ["dist/**/*"]
+
+# clean
+
+["beeai-server:clean"]
+dir = "{{config_root}}/apps/beeai-server"
+run = "rm -rf ./dist"
+
+# container image
+
+["beeai-server:image:build"]
+depends = ["beeai-server:build"]
+dir = "{{config_root}}"
+run = """
+#!/bin/bash
+PLATFORM={{option(name="platform", default="")}}
+if [ -z "$PLATFORM" ]; then
+    docker build -t ghcr.io/i-am-bee/beeai-platform/beeai-server:local --file=apps/beeai-server/Dockerfile .
+else
+    docker build --platform "$PLATFORM" -t ghcr.io/i-am-bee/beeai-platform/beeai-server:local --file=apps/beeai-server/Dockerfile .
+fi
+"""
+sources = ["apps/beeai-server/Dockerfile", "apps/beeai-server/dist/*.tar.gz"]
+outputs = { auto = true }
+
+["beeai-server:image:save"]
+depends = ["beeai-server:image:build"]
+dir = "{{config_root}}"
+run = """
+#!/bin/bash
+mkdir -p ~/.beeai/images
+docker save --output=$(realpath ~/.beeai/images)/beeai-server.tar ghcr.io/i-am-bee/beeai-platform/beeai-server:local
+"""
+sources = ["apps/beeai-server/dist/*.tar.gz"]
+outputs = ["~/.beeai/images/beeai-server.tar"]
