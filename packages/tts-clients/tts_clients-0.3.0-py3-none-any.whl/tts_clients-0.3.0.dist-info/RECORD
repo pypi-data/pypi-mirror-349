@@ -1,0 +1,14 @@
+tts_clients/__init__.py,sha256=hl4nA64VKn6YNbQ4B5PbOeCy4VqSVpDW48TzK9mfAac,57
+tts_clients/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tts_clients/google/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tts_clients/google/client.py,sha256=kZaTX7M7Y5tV_k3ubbPlkD3bRt6JD6QHDOPxJkV_sZI,1037
+tts_clients/google/models.py,sha256=r9NMvlPMbYOOS__okUVFHh3II7JJtBKz8or6QL8b2Bc,2140
+tts_clients/minmax/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tts_clients/minmax/client.py,sha256=fxl558baMEkLdI0q4ethJg1JnhSpEj93-ozkpvIS5_w,1722
+tts_clients/minmax/models.py,sha256=jh_8LiPMuWIOSaOKn0SdevR4iEOkDCRg2fxjJSQ2ctI,2458
+tts_clients/openai/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tts_clients/openai/client.py,sha256=rJ4zvsFOOaULtNm2iua6LELO5wg30vhORZ6YdoApmqk,536
+tts_clients/openai/models.py,sha256=KBN2dGHP5QnbEE0awD1puUfFVmElciO9XfAytbe1tQk,412
+tts_clients-0.3.0.dist-info/METADATA,sha256=qEI00ocGKF3XgxZkdvMbxuYKvs-5D_9Yyb7_ip8zy_o,721
+tts_clients-0.3.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+tts_clients-0.3.0.dist-info/RECORD,,
