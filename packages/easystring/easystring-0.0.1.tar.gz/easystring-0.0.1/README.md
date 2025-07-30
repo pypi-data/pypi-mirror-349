@@ -1,0 +1,1 @@
+this is a very useful string functions catalogue used to perform basic operations on strings and which will save time.
