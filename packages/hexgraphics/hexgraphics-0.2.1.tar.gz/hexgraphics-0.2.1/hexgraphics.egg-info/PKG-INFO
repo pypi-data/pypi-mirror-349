@@ -1,0 +1,46 @@
+Metadata-Version: 2.4
+Name: hexgraphics
+Version: 0.2.1
+Summary: aka 0xg
+Author: noobiezt0
+License-Expression: MIT
+Project-URL: Source, https://github.com/noobiezt0/0xg
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# hexgraphics
+
+aka 0xg
+
+
+## installation
+
+`pip install hexgraphics`
+
+
+## usage
+
+```python
+from hexgraphics.constants import COLORMAP
+
+print(COLORMAP)
+```
+
+```python
+from hexgraphics import Image0xg
+
+example = bytes([
+    0x0e, 0x0e, 0x0e, 0x0e, 0x0a, 0x10,
+    0x0e, 0x0b, 0x0e, 0x0a, 0x0a, 0x10,
+    0x0e, 0x0e, 0x0e, 0x0e, 0x01, 0x10,
+    0x0a, 0x0a, 0x0a, 0x0a, 0x0a,
+])
+
+Image0xg(example).save('example.0xg')
+
+with open('example.0xg', 'rb') as f:
+    Image0xg(f).convert('example.png')
+```
