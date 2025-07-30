@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+server.py
+lyzr_single_tool.egg-info/PKG-INFO
+lyzr_single_tool.egg-info/SOURCES.txt
+lyzr_single_tool.egg-info/dependency_links.txt
+lyzr_single_tool.egg-info/entry_points.txt
+lyzr_single_tool.egg-info/requires.txt
+lyzr_single_tool.egg-info/top_level.txt

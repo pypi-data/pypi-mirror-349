@@ -1,0 +1,14 @@
+[project]
+name = "lyzr-single-tool"
+version = "0.1.1"
+description = "Single tool call for lyzr"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "mcp[cli]>=1.9.0",
+    "requests>=2.32.3",
+    "twine>=6.1.0",
+]
+
+[project.scripts]
+lyzr-single-tool = "server:main"
