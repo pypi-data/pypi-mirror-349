@@ -1,0 +1,30 @@
+Metadata-Version: 2.4
+Name: vizpanel
+Version: 0.1.0
+Summary: A python package for data visualization panel
+Project-URL: Homepage, https://github.com/randomseed42/vizpanel
+Author-email: randomseed42 <randomseed42@protonmail.com>
+License-File: LICENSE
+Keywords: dashboard,panel,visualization
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=3.12
+Requires-Dist: bokeh>=3.7.3
+Requires-Dist: dbframe>=0.1.3
+Requires-Dist: fastapi>=0.115.12
+Requires-Dist: matplotlib>=3.10.3
+Requires-Dist: openpyxl>=3.1.5
+Requires-Dist: orjsonic>=0.1.6
+Requires-Dist: pandas>=2.2.3
+Requires-Dist: plotly>=6.1.1
+Requires-Dist: pyarrow>=20.0.0
+Requires-Dist: seaborn>=0.13.2
+Requires-Dist: uvicorn>=0.34.2
+Requires-Dist: xlrd>=2.0.1
+Requires-Dist: xlsxwriter>=3.2.3
+Description-Content-Type: text/markdown
+
+# vizpanel
+A python package for data visualization panel
