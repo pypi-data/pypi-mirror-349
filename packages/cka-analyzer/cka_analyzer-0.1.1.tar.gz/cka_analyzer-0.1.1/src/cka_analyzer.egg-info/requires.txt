@@ -1,0 +1,7 @@
+torch
+transformers
+datasets
+matplotlib
+scikit-learn
+pandas
+flash-attn

@@ -1,0 +1,24 @@
+[project]
+name = "cka-analyzer"
+version = "0.1.1"
+description = "Layer-wise CKA similarity analyzer for LLM patching"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{ name = "XiaoyuXu", email = "xuxiaoyu200@gmail.com" }]
+requires-python = ">=3.10"
+dependencies = [
+    "torch",
+    "transformers",
+    "datasets",
+    "matplotlib",
+    "scikit-learn",
+    "pandas",
+    "flash-attn"
+]
+
+[project.scripts]
+cka-analyzer = "cka_analyzer.cli:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
