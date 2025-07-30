@@ -1,0 +1,3 @@
+mopidy>=3.0
+requests
+websockets

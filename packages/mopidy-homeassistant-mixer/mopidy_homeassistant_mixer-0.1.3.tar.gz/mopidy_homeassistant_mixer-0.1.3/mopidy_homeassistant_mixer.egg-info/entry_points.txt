@@ -1,0 +1,2 @@
+[mopidy.ext]
+homeassistant = mopidy_homeassistant:Extension

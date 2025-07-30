@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+mopidy_homeassistant/__init__.py
+mopidy_homeassistant/extension.py
+mopidy_homeassistant/mixer.py
+mopidy_homeassistant_mixer.egg-info/PKG-INFO
+mopidy_homeassistant_mixer.egg-info/SOURCES.txt
+mopidy_homeassistant_mixer.egg-info/dependency_links.txt
+mopidy_homeassistant_mixer.egg-info/entry_points.txt
+mopidy_homeassistant_mixer.egg-info/requires.txt
+mopidy_homeassistant_mixer.egg-info/top_level.txt
