@@ -1,0 +1,21 @@
+[project]
+name = "crsyspqc"
+version = "1.0.0"
+description = "Python interface to CryptoSys PQC"
+authors = [{ name="David Ireland, DI Management Services Pty Ltd t/a CryptoSys" }]
+readme = "README.rst"
+requires-python = ">=3.6"
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = ["crsyspqc"]
+
+[project.urls]
+Homepage = "https://www.cryptosys.net/pqc/"
+Issues = "https://www.cryptosys.net/contact/"

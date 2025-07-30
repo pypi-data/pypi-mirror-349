@@ -1,0 +1,10 @@
+CHANGELOG.rst
+MANIFEST.in
+README.rst
+crsyspqc.py
+pyproject.toml
+crsyspqc.egg-info/PKG-INFO
+crsyspqc.egg-info/SOURCES.txt
+crsyspqc.egg-info/dependency_links.txt
+crsyspqc.egg-info/top_level.txt
+test/test_crsyspqc.py
