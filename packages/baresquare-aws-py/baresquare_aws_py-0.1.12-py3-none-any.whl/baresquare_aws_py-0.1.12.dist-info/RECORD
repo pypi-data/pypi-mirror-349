@@ -1,0 +1,7 @@
+baresquare_aws_py/__init__.py,sha256=LHmPfOR1mM5XRHQAKKFqvGieyR0akKDGEDb8byn9rA8,176
+baresquare_aws_py/authentication.py,sha256=wT46MWy3ZChbIu-wrYpCpxSFAy9IIZmOuByfV27AxIs,6834
+baresquare_aws_py/s3.py,sha256=VaFX8THPQzufK-C99SP8TcxNwT1SQpWBFKa-loA1kWA,1042
+baresquare_aws_py/ssm.py,sha256=-tiS-0v6ZrKhnpEGZb4EJBHqwRVZEgUIKFAIloEA9s8,2598
+baresquare_aws_py-0.1.12.dist-info/METADATA,sha256=epLnhfZsKVj4s2ixwDX59pX4A6HATqq48aeYO4a74dk,551
+baresquare_aws_py-0.1.12.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+baresquare_aws_py-0.1.12.dist-info/RECORD,,
