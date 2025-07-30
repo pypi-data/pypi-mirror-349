@@ -1,0 +1,7 @@
+README.md
+setup.py
+autopr_cli.egg-info/PKG-INFO
+autopr_cli.egg-info/SOURCES.txt
+autopr_cli.egg-info/dependency_links.txt
+autopr_cli.egg-info/entry_points.txt
+autopr_cli.egg-info/top_level.txt
