@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+build/
+dist/
+sdist/
+var/
+wheels/
+.installed.cfg
+
+# Virtual Environment
+.env
+.venv
+env/
+venv/
+ENV/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Virtual environments
+.venv
+*.db
+*.db-shm
+*.db-wal
+*.kv
+src/imsdk/rust_db/RongCloud/*
+lib/rust_db/*
+*.lock
+
+config.json
