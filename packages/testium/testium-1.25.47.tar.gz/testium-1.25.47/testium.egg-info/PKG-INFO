@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: testium
+Version: 1.25.47
+Home-page: https://gitlab.wrccorp.cn/AutoTesting/testium.git
+Author: wrc
+Author-email: a18786478486@163.com
+License: ©2009-2024 wrc All Rights Reserved
+Requires-Dist: selenium==4.12.0
+Requires-Dist: pytest>=5.2.2
+Requires-Dist: retry>=0.9.2
+Requires-Dist: Pillow==10.1.0
+Requires-Dist: Appium-Python-Client==3.1.0
+Requires-Dist: loguru>=0.5.0
+Requires-Dist: jsonpath==0.82.2
+Requires-Dist: requests>=2.23.0
+Requires-Dist: urllib3==1.26.15
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-dist
