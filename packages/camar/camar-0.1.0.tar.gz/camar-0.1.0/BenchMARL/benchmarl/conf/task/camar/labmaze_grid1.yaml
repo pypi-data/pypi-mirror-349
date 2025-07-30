@@ -1,0 +1,10 @@
+max_steps: 4000
+num_maps: 10
+height: 11
+width: 11
+num_agents: 8
+window: 0.3
+# max_free_pos: 40
+
+frameskip: 7
+max_obs: 8

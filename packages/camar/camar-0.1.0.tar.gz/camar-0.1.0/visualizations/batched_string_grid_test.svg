@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	width="512" height="280" viewBox="-0.55 -0.30000000000000004 1.1 0.6000000000000001">
+
+
+<defs>
+<style>
+	.landmark {fill: #84A1AE; r: 0.05;}
+	.agent {r: 0.03;}
+	.goal {stroke: black; stroke-width: 0.003; r: 0.012;}
+</style>
+</defs>
+
+
+<circle class="landmark" cx="-0.500" cy="-0.250">  </circle>
+<circle class="landmark" cx="-0.400" cy="-0.250">  </circle>
+<circle class="landmark" cx="-0.300" cy="-0.250">  </circle>
+<circle class="landmark" cx="-0.200" cy="-0.250">  </circle>
+<circle class="landmark" cx="-0.100" cy="-0.250">  </circle>
+<circle class="landmark" cx="-0.000" cy="-0.250">  </circle>
+<circle class="landmark" cx="0.100" cy="-0.250">  </circle>
+<circle class="landmark" cx="0.200" cy="-0.250">  </circle>
+<circle class="landmark" cx="0.300" cy="-0.250">  </circle>
+<circle class="landmark" cx="0.400" cy="-0.250">  </circle>
+<circle class="landmark" cx="0.500" cy="-0.250">  </circle>
+<circle class="landmark" cx="-0.500" cy="-0.150">  </circle>
+<circle class="landmark" cx="0.500" cy="-0.150">  </circle>
+<circle class="landmark" cx="-0.500" cy="-0.050">  </circle>
+<circle class="landmark" cx="0.500" cy="-0.050">  </circle>
+<circle class="landmark" cx="-0.500" cy="0.050">  </circle>
+<circle class="landmark" cx="0.100" cy="0.050">  </circle>
+<circle class="landmark" cx="0.200" cy="0.050">  </circle>
+<circle class="landmark" cx="0.300" cy="0.050">  </circle>
+<circle class="landmark" cx="0.500" cy="0.050">  </circle>
+<circle class="landmark" cx="-0.500" cy="0.150">  </circle>
+<circle class="landmark" cx="-0.000" cy="0.150">  </circle>
+<circle class="landmark" cx="0.500" cy="0.150">  </circle>
+<circle class="landmark" cx="-0.500" cy="0.250">  </circle>
+<circle class="landmark" cx="-0.400" cy="0.250">  </circle>
+<circle class="landmark" cx="-0.300" cy="0.250">  </circle>
+<circle class="landmark" cx="-0.200" cy="0.250">  </circle>
+<circle class="landmark" cx="-0.100" cy="0.250">  </circle>
+<circle class="landmark" cx="-0.000" cy="0.250">  </circle>
+<circle class="landmark" cx="0.100" cy="0.250">  </circle>
+<circle class="landmark" cx="0.200" cy="0.250">  </circle>
+<circle class="landmark" cx="0.300" cy="0.250">  </circle>
+<circle class="landmark" cx="0.400" cy="0.250">  </circle>
+<circle class="landmark" cx="0.500" cy="0.250">  </circle>
+<circle class="landmark" cx="-100.000" cy="-100.000">  </circle>
+
+
+<circle class="goal" cx="0.100" cy="0.150" fill="hsl(0, 100%, 50%)">  </circle>
+<circle class="goal" cx="0.400" cy="0.050" fill="hsl(72, 100%, 50%)">  </circle>
+<circle class="goal" cx="-0.300" cy="-0.050" fill="hsl(144, 100%, 50%)">  </circle>
+<circle class="goal" cx="-0.200" cy="0.050" fill="hsl(216, 100%, 50%)">  </circle>
+<circle class="goal" cx="-0.300" cy="0.150" fill="hsl(288, 100%, 50%)">  </circle>
+
+
+<circle class="agent" cx="-0.199" cy="0.051" fill="hsl(0, 70%, 50%)">  </circle>
+<circle class="agent" cx="-0.099" cy="-0.049" fill="hsl(72, 70%, 50%)">  </circle>
+<circle class="agent" cx="0.001" cy="0.051" fill="hsl(144, 70%, 50%)">  </circle>
+<circle class="agent" cx="0.101" cy="0.151" fill="hsl(216, 70%, 50%)">  </circle>
+<circle class="agent" cx="0.201" cy="0.151" fill="hsl(288, 70%, 50%)">  </circle>
+</svg>

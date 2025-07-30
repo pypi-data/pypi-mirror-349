@@ -1,0 +1,25 @@
+#movingai
+numpy<=1.26.4
+opencv-python
+
+# CAMAR
+jax[cuda12]
+flax
+
+# torchrl
+torchrl
+
+# baselines
+matplotlib
+pandas
+tqdm
+wandb
+
+# labmaze
+labmaze
+
+# benchmarl
+av<14
+torchvision
+hydra-core
+id-marl-eval

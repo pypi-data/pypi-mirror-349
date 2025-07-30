@@ -1,0 +1,9 @@
+max_steps: 2000
+num_rows: 20
+num_cols: 20
+obstacle_density: 0.05
+num_agents: 10
+grain_factor: 3
+
+frameskip: 7
+max_obs: 8

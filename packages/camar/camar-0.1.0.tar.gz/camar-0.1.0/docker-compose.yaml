@@ -1,0 +1,24 @@
+services:
+  contmapf:
+    build:
+      dockerfile: Dockerfile
+    container_name: contmapf
+    stdin_open: true
+    tty: true
+    user: "${UID}:${GID}"
+    environment:
+      - SSH_AUTH_SOCK=/ssh-agent
+    volumes:
+      - ~/.gitconfig:/root/.gitconfig
+      - .:/root/contmapf
+      - $SSH_AUTH_SOCK:/ssh-agent # ssh agent key forwarding (for github)
+    working_dir: /root/contmapf
+    command: "bash"
+
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              device_ids: ['0']
+              capabilities: [gpu]

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	width="512" height="512" viewBox="-1.1 -1.1 2.2 2.2">
+
+
+<defs>
+<style>
+	.landmark {{ }}
+	.agent {{ }}
+	.goal {stroke: black; stroke-width: 0.005;}
+</style>
+</defs>
+
+
+<circle class="landmark" cx="-1.000" cy="-1.000" r="0.1" fill="#84A1AE">  </circle>
+<circle class="landmark" cx="-0.800" cy="-1.000" r="0.1" fill="#84A1AE">  </circle>
+<circle class="landmark" cx="-0.600" cy="-1.000" r="0.1" fill="#84A1AE">  </circle>
+<circle class="landmark" cx="-0.400" cy="-1.000" r="0.1" fill="#84A1AE">  </circle>
+<circle class="landmark" cx="-0.200" cy="-1.000" r="0.1" fill="#84A1AE">  </circle>
+<circle class="landmark" cx="-0.000" cy="-1.000" r="0.1" fill="#84A1AE">  </circle>
+<circle class="landmark" cx="0.200" cy="-1.000" r="0.1" fill="#84A1AE">  </circle>
+<circle class="landmark" cx="0.400" cy="-1.000" r="0.1" fill="#84A1AE">  </circle>
+<circle class="landmark" cx="0.600" cy="-1.000" r="0.1" fill="#84A1AE">  </circle>
+<circle class="landmark" cx="0.800" cy="-1.000" r="0.1" fill="#84A1AE">  </circle>
+<circle class="landmark" cx="1.000" cy="-1.000" r="0.1" fill="#84A1AE">  </circle>
+<circle class="landmark" cx="-1.000" cy="-0.800" r="0.1" fill="#84A1AE">  </circle>
+<circle class="landmark" cx="1.000" cy="-0.800" r="0.1" fill="#84A1AE">  </circle>
+<circle class="landmark" cx="-1.000" cy="-0.600" r="0.1" fill="#84A1AE">  </circle>
+<circle class="landmark" cx="-0.600" cy="-0.600" r="0.1" fill="#84A1AE">  </circle>
+<circle class="landmark" cx="0.600" cy="-0.600" r="0.1" fill="#84A1AE">  </circle>
+<circle class="landmark" cx="1.000" cy="-0.600" r="0.1" fill="#84A1AE">  </circle>
+<circle class="landmark" cx="-1.000" cy="-0.400" r="0.1" fill="#84A1AE">  </circle>
+<circle class="landmark" cx="-0.600" cy="-0.400" r="0.1" fill="#84A1AE">  </circle>
+<circle class="landmark" cx="0.600" cy="-0.400" r="0.1" fill="#84A1AE">  </circle>
+<circle class="landmark" cx="1.000" cy="-0.400" r="0.1" fill="#84A1AE">  </circle>
+<circle class="landmark" cx="-1.000" cy="-0.200" r="0.1" fill="#84A1AE">  </circle>
+<circle class="landmark" cx="-0.600" cy="-0.200" r="0.1" fill="#84A1AE">  </circle>
+<circle class="landmark" cx="-0.400" cy="-0.200" r="0.1" fill="#84A1AE">  </circle>
+<circle class="landmark" cx="-0.200" cy="-0.200" r="0.1" fill="#84A1AE">  </circle>
+<circle class="landmark" cx="0.200" cy="-0.200" r="0.1" fill="#84A1AE">  </circle>
+<circle class="landmark" cx="0.400" cy="-0.200" r="0.1" fill="#84A1AE">  </circle>
+<circle class="landmark" cx="0.600" cy="-0.200" r="0.1" fill="#84A1AE">  </circle>
+<circle class="landmark" cx="1.000" cy="-0.200" r="0.1" fill="#84A1AE">  </circle>
+<circle class="landmark" cx="-1.000" cy="-0.000" r="0.1" fill="#84A1AE">  </circle>
+<circle class="landmark" cx="-0.600" cy="-0.000" r="0.1" fill="#84A1AE">  </circle>
+<circle class="landmark" cx="1.000" cy="-0.000" r="0.1" fill="#84A1AE">  </circle>
+<circle class="landmark" cx="-1.000" cy="0.200" r="0.1" fill="#84A1AE">  </circle>
+<circle class="landmark" cx="-0.600" cy="0.200" r="0.1" fill="#84A1AE">  </circle>
+<circle class="landmark" cx="0.200" cy="0.200" r="0.1" fill="#84A1AE">  </circle>
+<circle class="landmark" cx="0.400" cy="0.200" r="0.1" fill="#84A1AE">  </circle>
+<circle class="landmark" cx="0.600" cy="0.200" r="0.1" fill="#84A1AE">  </circle>
+<circle class="landmark" cx="1.000" cy="0.200" r="0.1" fill="#84A1AE">  </circle>
+<circle class="landmark" cx="-1.000" cy="0.400" r="0.1" fill="#84A1AE">  </circle>
+<circle class="landmark" cx="-0.600" cy="0.400" r="0.1" fill="#84A1AE">  </circle>
+<circle class="landmark" cx="1.000" cy="0.400" r="0.1" fill="#84A1AE">  </circle>
+<circle class="landmark" cx="-1.000" cy="0.600" r="0.1" fill="#84A1AE">  </circle>
+<circle class="landmark" cx="-0.600" cy="0.600" r="0.1" fill="#84A1AE">  </circle>
+<circle class="landmark" cx="-0.400" cy="0.600" r="0.1" fill="#84A1AE">  </circle>
+<circle class="landmark" cx="-0.200" cy="0.600" r="0.1" fill="#84A1AE">  </circle>
+<circle class="landmark" cx="0.200" cy="0.600" r="0.1" fill="#84A1AE">  </circle>
+<circle class="landmark" cx="1.000" cy="0.600" r="0.1" fill="#84A1AE">  </circle>
+<circle class="landmark" cx="-1.000" cy="0.800" r="0.1" fill="#84A1AE">  </circle>
+<circle class="landmark" cx="1.000" cy="0.800" r="0.1" fill="#84A1AE">  </circle>
+<circle class="landmark" cx="-1.000" cy="1.000" r="0.1" fill="#84A1AE">  </circle>
+<circle class="landmark" cx="-0.800" cy="1.000" r="0.1" fill="#84A1AE">  </circle>
+<circle class="landmark" cx="-0.600" cy="1.000" r="0.1" fill="#84A1AE">  </circle>
+<circle class="landmark" cx="-0.400" cy="1.000" r="0.1" fill="#84A1AE">  </circle>
+<circle class="landmark" cx="-0.200" cy="1.000" r="0.1" fill="#84A1AE">  </circle>
+<circle class="landmark" cx="-0.000" cy="1.000" r="0.1" fill="#84A1AE">  </circle>
+<circle class="landmark" cx="0.200" cy="1.000" r="0.1" fill="#84A1AE">  </circle>
+<circle class="landmark" cx="0.400" cy="1.000" r="0.1" fill="#84A1AE">  </circle>
+<circle class="landmark" cx="0.600" cy="1.000" r="0.1" fill="#84A1AE">  </circle>
+<circle class="landmark" cx="0.800" cy="1.000" r="0.1" fill="#84A1AE">  </circle>
+<circle class="landmark" cx="1.000" cy="1.000" r="0.1" fill="#84A1AE">  </circle>
+
+
+<circle class="goal" cx="0.800" cy="0.800" r="0.02" fill="hsl(0, 100%, 50%)">  </circle>
+<circle class="goal" cx="0.200" cy="-0.800" r="0.02" fill="hsl(36, 100%, 50%)">  </circle>
+<circle class="goal" cx="0.400" cy="0.600" r="0.02" fill="hsl(72, 100%, 50%)">  </circle>
+<circle class="goal" cx="0.800" cy="0.400" r="0.02" fill="hsl(108, 100%, 50%)">  </circle>
+<circle class="goal" cx="0.800" cy="-0.000" r="0.02" fill="hsl(144, 100%, 50%)">  </circle>
+<circle class="goal" cx="0.800" cy="-0.600" r="0.02" fill="hsl(180, 100%, 50%)">  </circle>
+<circle class="goal" cx="-0.400" cy="-0.600" r="0.02" fill="hsl(216, 100%, 50%)">  </circle>
+<circle class="goal" cx="-0.200" cy="-0.000" r="0.02" fill="hsl(252, 100%, 50%)">  </circle>
+<circle class="goal" cx="-0.000" cy="-0.800" r="0.02" fill="hsl(288, 100%, 50%)">  </circle>
+<circle class="goal" cx="0.800" cy="-0.200" r="0.02" fill="hsl(324, 100%, 50%)">  </circle>
+
+
+<circle class="agent" cx="0.800" cy="0.400" r="0.05" fill="hsl(0, 70%, 50%)">  </circle>
+<circle class="agent" cx="-0.800" cy="-0.600" r="0.05" fill="hsl(36, 70%, 50%)">  </circle>
+<circle class="agent" cx="0.200" cy="0.400" r="0.05" fill="hsl(72, 70%, 50%)">  </circle>
+<circle class="agent" cx="0.400" cy="-0.800" r="0.05" fill="hsl(108, 70%, 50%)">  </circle>
+<circle class="agent" cx="0.200" cy="-0.400" r="0.05" fill="hsl(144, 70%, 50%)">  </circle>
+<circle class="agent" cx="0.200" cy="-0.600" r="0.05" fill="hsl(180, 70%, 50%)">  </circle>
+<circle class="agent" cx="-0.800" cy="0.800" r="0.05" fill="hsl(216, 70%, 50%)">  </circle>
+<circle class="agent" cx="-0.400" cy="0.400" r="0.05" fill="hsl(252, 70%, 50%)">  </circle>
+<circle class="agent" cx="-0.200" cy="-0.800" r="0.05" fill="hsl(288, 70%, 50%)">  </circle>
+<circle class="agent" cx="-0.200" cy="-0.400" r="0.05" fill="hsl(324, 70%, 50%)">  </circle>
+</svg>
