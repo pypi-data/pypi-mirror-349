@@ -1,0 +1,45 @@
+[project]
+name = "kstash"
+version = "0.1.0"
+license = "MIT"
+description = "Stashed payloads with nice URIs"
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python"
+]
+readme = "README.md"
+authors = [
+    { name = "Cristiano Cortezia", email = "cristiano.cortezia@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "boto3>=1.38.16",
+    "msgpack>=1.1.0",
+    "requests>=2.32.3",
+    "types-boto3>=1.38.18",
+    "types-boto3-s3>=1.38.0",
+    "types-urllib3>=1.26.25.14",
+]
+
+[project.urls]
+Homepage = "https://github.com/ccortezia/kstash"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pyright]
+include = ["src", "typings"]
+exclude = ["**/node_modules", "**/__pycache__"]
+typeCheckingMode = "strict"
+stubPath = "typings"
+
+[dependency-groups]
+dev = [
+    "debugpy>=1.8.14",
+    "moto[s3]>=5.1.4",
+    "pytest>=8.3.5",
+    "pytest-cov>=6.1.1",
+    "responses>=0.25.7",
+    "ruff>=0.11.10",
+]
