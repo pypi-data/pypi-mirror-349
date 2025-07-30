@@ -1,0 +1,1 @@
+from .humor import tell_joke, generate_pun
