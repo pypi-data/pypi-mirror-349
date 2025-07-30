@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+pylib/__init__.py
+pylib/math.py
+pylib_nhathuyd4hp.egg-info/PKG-INFO
+pylib_nhathuyd4hp.egg-info/SOURCES.txt
+pylib_nhathuyd4hp.egg-info/dependency_links.txt
+pylib_nhathuyd4hp.egg-info/top_level.txt
