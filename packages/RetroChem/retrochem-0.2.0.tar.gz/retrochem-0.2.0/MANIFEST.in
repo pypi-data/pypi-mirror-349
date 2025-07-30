@@ -1,0 +1,7 @@
+include README.md
+include LICENSE
+recursive-include .streamlit *
+recursive-include Images *
+recursive-include RetroChem *.py
+recursive-include RetroChem/Model *.pkl
+recursive-include RetroChem/Data *.csv

@@ -1,0 +1,35 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+retrochem_launcher.py
+setup.py
+.streamlit/config.toml
+Images/Interface guide 1.png
+Images/Interface guide 2.png
+Images/Interface guide 3.png
+Images/Interface guide 4.png
+Images/MLP_architecture1.png
+Images/Prediction_pipeline.png
+Images/ex_reaction_scheme.png
+Images/logo.png
+RetroChem/Retrochem.py
+RetroChem/__init__.py
+RetroChem.egg-info/PKG-INFO
+RetroChem.egg-info/SOURCES.txt
+RetroChem.egg-info/dependency_links.txt
+RetroChem.egg-info/entry_points.txt
+RetroChem.egg-info/requires.txt
+RetroChem.egg-info/top_level.txt
+RetroChem/Data/__init__.py
+RetroChem/Data/combined_data.csv
+RetroChem/Data/reaction_templates_50k_test.csv
+RetroChem/Data/reaction_templates_50k_train.csv
+RetroChem/Data/reaction_templates_50k_valid.csv
+RetroChem/Model/__init__.py
+RetroChem/Model/label_encoder.pkl
+RetroChem/Model/mlp_classifier_model.pkl
+RetroChem/Model/scaler.pkl
+RetroChem/Package_functions/Interface_functions.py
+RetroChem/Package_functions/Model_training_functions.py
+RetroChem/Package_functions/__init__.py
