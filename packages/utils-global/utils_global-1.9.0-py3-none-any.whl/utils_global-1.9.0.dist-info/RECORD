@@ -1,0 +1,9 @@
+automacao_utils/__init__.py,sha256=SnvYk0mgl7NdXCZgBpdyn6v44o7s-4G10_6BAxgRyNM,893
+automacao_utils/download_utils.py,sha256=7PWez6BVfAruHy_eTWaiqoenWHabXyHq_KfLiCNbXoY,21175
+automacao_utils/mover_arquivo_utils.py,sha256=jtZHx4MXQ3n_GfPOEk9j4NNDF0XFqdn2RqTSiE-Z8ZY,6423
+automacao_utils/notificacao_utils.py,sha256=TfoPwqj37hkoLXft4TqWaZH6eqez1LqEQeswm3csvHE,2192
+automacao_utils/selenium_utils.py,sha256=knt86lD41GAW9UG4RVbsHaxTQFYr3lD3xgJUET9IWDY,643
+utils_global-1.9.0.dist-info/METADATA,sha256=I1yGFSjjlsaICJsuc_1wgFeWbgfKrXZppTj3IrHnu6Y,4694
+utils_global-1.9.0.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+utils_global-1.9.0.dist-info/top_level.txt,sha256=-TTj4tBJP9mN8ninuIPFj2wJqxVCqiVyALkyGg6x0WU,16
+utils_global-1.9.0.dist-info/RECORD,,
