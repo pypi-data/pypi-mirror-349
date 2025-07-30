@@ -1,0 +1,2 @@
+[salt.loader]
+saltext.yte = saltext.yte
