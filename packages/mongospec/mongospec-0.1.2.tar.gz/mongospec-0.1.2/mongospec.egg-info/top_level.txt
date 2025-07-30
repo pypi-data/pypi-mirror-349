@@ -1,0 +1,4 @@
+dist
+mongospec
+scripts
+tests
