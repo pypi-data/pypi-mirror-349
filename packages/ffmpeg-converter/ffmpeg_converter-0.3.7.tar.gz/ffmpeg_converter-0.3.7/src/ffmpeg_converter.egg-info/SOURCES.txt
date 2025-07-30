@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+src/ffmpeg_converter/__init__.py
+src/ffmpeg_converter/audio.py
+src/ffmpeg_converter/base.py
+src/ffmpeg_converter/py.typed
+src/ffmpeg_converter/video.py
+src/ffmpeg_converter.egg-info/PKG-INFO
+src/ffmpeg_converter.egg-info/SOURCES.txt
+src/ffmpeg_converter.egg-info/dependency_links.txt
+src/ffmpeg_converter.egg-info/top_level.txt
+tests/test_audio.py
+tests/test_video.py
