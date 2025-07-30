@@ -1,0 +1,2 @@
+[console_scripts]
+uv-lgh-test-package1 = uv_lgh_test_package1.main:main
