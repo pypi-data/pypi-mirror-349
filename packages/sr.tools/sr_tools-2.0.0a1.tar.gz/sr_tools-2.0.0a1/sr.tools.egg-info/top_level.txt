@@ -1,0 +1,6 @@
+build
+docs
+script
+sr
+venv
+wrapper

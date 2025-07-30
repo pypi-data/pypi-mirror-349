@@ -1,0 +1,9 @@
+PyYAML<7,>=5
+pyparsing<3,>=2.0
+six<2,>=1.9
+
+[cam-serial, mcv4b-part-code]
+pyudev
+
+[save-passwords]
+keyring
