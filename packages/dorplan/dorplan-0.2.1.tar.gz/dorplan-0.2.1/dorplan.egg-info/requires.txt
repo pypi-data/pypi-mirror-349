@@ -1,0 +1,15 @@
+cornflow-client
+orloge
+PySide6
+pulp
+highspy
+ortools
+networkx
+
+[reports]
+quarto
+papermill
+matplotlib
+
+[reports:sys_platform == "linux"]
+quarto-cli
