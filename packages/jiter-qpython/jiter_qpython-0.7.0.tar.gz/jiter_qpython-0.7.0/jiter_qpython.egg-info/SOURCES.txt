@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+jiter/__init__.py
+jiter/jiter.cpython-312.so
+jiter_qpython.egg-info/PKG-INFO
+jiter_qpython.egg-info/SOURCES.txt
+jiter_qpython.egg-info/dependency_links.txt
+jiter_qpython.egg-info/requires.txt
+jiter_qpython.egg-info/top_level.txt

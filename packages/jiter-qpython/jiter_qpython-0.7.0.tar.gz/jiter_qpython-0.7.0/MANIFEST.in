@@ -1,0 +1,2 @@
+include jiter/jiter.cpython-312.so
+include jiter/__init__.py
