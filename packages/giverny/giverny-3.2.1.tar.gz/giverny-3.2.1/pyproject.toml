@@ -1,0 +1,54 @@
+[tool.poetry]
+name = "giverny"
+version = "3.2.1"
+description = "library to query the Johns Hopkins Turbulence Database (JHTDB)"
+authors = ["Johns Hopkins Turbulence Database Group"]
+license = "Apache-2.0"
+readme = "README.md"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Atmospheric Science",
+    "Topic :: Scientific/Engineering :: Physics"
+]
+
+[[tool.poetry.packages]]
+include = "giverny"
+from = "src"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+numpy = "^1.23.4"
+scipy = "^1.9.3"
+sympy = "^1.12"
+h5py = "^3.7.0"
+matplotlib = "^3.6.2"
+wurlitzer = "^3.0.3"
+pydantic = "^2.10.6"
+dill = "^0.3.6"
+zarr = "^2.13.3"
+bokeh = "^2.4.3"
+pandas = "^1.5.1"
+pyarrow = "^11.0.0"
+duckdb = "^1.2.2"
+requests = "^2.31.0"
+xarray = "^2022.11.0"
+tqdm = "^4.64.1"
+tenacity = "^8.1.0"
+plotly = "^5.11.0"
+attrs = "^23.2.0"
+jsonschema = "^4.23.0"
+jsonschema-specifications = "^2023.12.1"
+nbformat = "^5.10.4"
+referencing = "^0.35.1"
+rpds-py = "^0.19.1"
+jupyter-core = "^5.7.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.urls]
+"Homepage" = "https://github.com/sciserver/giverny"
+"Bug Tracker" = "https://github.com/sciserver/giverny/issues"
+"Changelog" = "https://github.com/sciserver/giverny/blob/main/CHANGELOG.md"
