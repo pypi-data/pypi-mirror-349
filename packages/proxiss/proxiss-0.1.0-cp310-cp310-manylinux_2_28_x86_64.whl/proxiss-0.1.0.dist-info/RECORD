@@ -1,0 +1,8 @@
+proxi_cpp.cpython-310-x86_64-linux-gnu.so,sha256=7IJjGYoK2jSjzJjZoMhPyfRsfW17HgU79-1rnbYDB_w,432921
+proxiss/ProxiFlat.py,sha256=5VNM1foIhZcj8rmSLpNFCDdR9LRh7ycKkAJ30-ys-is,10752
+proxiss/__init__.py,sha256=_th4boRZBPqxCr2B-x_oiwbVnuTK-1mGN1d3asZM9PQ,32
+proxiss.libs/libgomp-870cb1d0.so.1.0.0,sha256=Ta6ZPLbakQH8LP74JzBt0DuJIBHS4nicjkSCjKnyWDw,253289
+proxiss-0.1.0.dist-info/METADATA,sha256=Y2eCo4huBwznZEy992aQGiRjq3yd1oDU1XmAgGEiSME,9499
+proxiss-0.1.0.dist-info/WHEEL,sha256=D4L5DnSTw2NG27rCpJaSJQB_A_UowSBvn-Sd4l5uvN0,118
+proxiss-0.1.0.dist-info/RECORD,,
+proxiss-0.1.0.dist-info/licenses/LICENSE.txt,sha256=KD6mzCmXoacNoASeCa35MXu2DKG1Enm2UZa4OmnhmWs,11323
