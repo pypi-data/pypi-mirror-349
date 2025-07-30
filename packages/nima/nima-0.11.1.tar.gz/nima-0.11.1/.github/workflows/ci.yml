@@ -1,0 +1,206 @@
+# CI Workflow
+# This workflow runs linting, type checking, and testing (pytest with coverage),
+# builds documentation, and deploys it to GitHub Pages.
+name: CI
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths-ignore:
+      - "docs/**"
+      - "*.md"
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - "*.md"
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  PYTHONUNBUFFERED: "1"
+  FORCE_COLOR: "1"
+
+jobs:
+
+  pre-commit:
+    name: Lint
+    runs-on: "ubuntu-latest"
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      - name: Install uv
+        uses: astral-sh/setup-uv@v6
+        with:
+          version: "0.7.6"
+          enable-cache: true
+          cache-dependency-glob: "uv.lock"
+      - name: "Set up Python"
+        uses: actions/setup-python@v5
+        with:
+          python-version-file: ".python-version"
+      - name: Install base and hatch and lint
+        run: uv sync --locked --extra hatch --extra lint
+      - name: Cache pre-commit
+        uses: actions/cache@v4
+        with:
+          path: /home/runner/.cache/pre-commit/
+          key: pre-commit|${{ runner.os }}|${{ hashFiles('.pre-commit-config.yaml') }}
+          restore-keys: pre-commit|${{ runner.os }}|
+      - name: Run lint
+        run: uv run pre-commit run --all-files --show-diff-on-failure # hatch run lint:lint
+
+  tests:
+    name: ${{ matrix.tests }} py-${{ matrix.python }} on ${{ startsWith(matrix.os, 'macos-') && 'macOS' || startsWith(matrix.os, 'windows-') && 'Windows' || 'Linux' }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        python: ["3.13", "3.12", "3.11"]
+        tests: [test, type, xdoc]
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      - name: Install uv
+        uses: astral-sh/setup-uv@v6
+        with:
+          version: "0.7.6"
+          enable-cache: true
+          cache-dependency-glob: "uv.lock"
+          python-version: ${{ matrix.python }}
+      - name: Install base and hatch
+        run: uv sync --locked --extra hatch
+      - name: Run test and coverage
+        if: matrix.tests == 'test'
+        run: |
+          uv run hatch run tests.py${{ matrix.python }}:test
+          uv run hatch run tests.py${{ matrix.python }}:cov
+      - name: Upload coverage report
+        if: matrix.tests == 'test'
+        uses: codecov/codecov-action@v5.4.3
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+      - name: Run mypy or xdoc
+        if: matrix.tests != 'test'
+        run: uv run hatch run tests.py${{ matrix.python }}:${{ matrix.tests }}
+
+
+
+
+  build-publish-release:
+    needs: [pre-commit] # fixme: tests, docsdeploy
+    runs-on: ubuntu-latest
+    if: "startsWith(github.event.head_commit.message, 'chore: release')"
+    # if: startsWith(github.ref, 'refs/tags/v')
+    env:
+      VERSION: ${{ github.ref_name }}
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      - name: Install git-cliff
+        uses: taiki-e/install-action@git-cliff
+      - name: Generate release notes
+        run: git cliff --tag "$VERSION" --latest -o RELEASE.md
+      - name: Version check
+        run: echo "Generating release for version $VERSION"
+      - name: Create GitHub Release
+        uses: ncipollo/release-action@v1
+        with:
+          bodyFile: "RELEASE.md"
+          # tag: v${{ needs.testpypi.outputs.version }}
+          tag: ${{ env.VERSION }}
+      - name: Install uv
+        uses: astral-sh/setup-uv@v6
+        with:
+          version: "0.7.6"
+          enable-cache: true
+          cache-dependency-glob: "uv.lock"
+      - name: "Set up Python"
+        uses: actions/setup-python@v5
+        with:
+          python-version-file: ".python-version"
+      - name: Install base and hatch
+        run: uv sync --locked --extra hatch
+      - name: Build and publish
+        run: |
+          uv run hatch build
+          uv run hatch publish --user=__token__ --auth=${{ secrets.PYPI_TOKEN }}
+
+  docs_build:
+    runs-on: ubuntu-latest
+    steps:
+      # - name: Install docs binaries (Linux)
+      #   if: runner.os == 'Linux'
+      #   run: |
+      #     sudo apt-get install -y --no-install-recommends pandoc
+      - uses: r-lib/actions/setup-pandoc@v2
+        with:
+          pandoc-version: "3.1.12"
+      - run: echo "# Test" | pandoc -t html
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      - name: Install uv
+        uses: astral-sh/setup-uv@v6
+        with:
+          version: "0.7.6"
+          enable-cache: true
+          cache-dependency-glob: "uv.lock"
+      - name: "Set up Python"
+        uses: actions/setup-python@v5
+        with:
+          python-version-file: ".python-version"
+      - name: Install base and hatch
+        run: uv sync --locked --extra hatch
+      - name: Run hatch
+        run: uv run hatch run docs:build
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          name: github-pages
+          path: "./docs/_build"
+
+  docs_deploy:
+    runs-on: ubuntu-latest
+    if: ${{ github.ref == 'refs/heads/main' }}
+    needs: [docs_build]
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: github-pages
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+  auto_merge_deps:
+    name: Auto Merge dependencies labeled PRs
+    needs: [pre-commit, tests, docs_build]
+    # Run only on pull_request labeled "dependencies"
+    if: >
+      startsWith(github.event.pull_request.title, 'build(pre-commit): update hooks') ||
+      contains(github.event.pull_request.labels.*.name, 'dependencies')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Merge PR
+        uses: pascalgn/automerge-action@v0.16.4
+        env:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          MERGE_LABELS: ""
+          MERGE_METHOD: squash
+          DELETE_BRANCH_AFTER_MERGE: true
+          LOG: "TRACE" # or DEBUG

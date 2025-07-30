@@ -1,0 +1,305 @@
+[build-system]
+build-backend = "hatchling.build"
+requires = ["hatchling"]
+
+[project]
+authors = [
+  { name = "daniele arosio", email = "daniele.arosio@cnr.it" },
+]
+classifiers = [
+  "Environment :: Console",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Unix Shell",
+  "Intended Audience :: Science/Research",
+  "Topic :: Scientific/Engineering",
+  "Development Status :: 2 - Pre-Alpha",
+]
+dependencies = [
+  "bioio-tifffile>=1.1.0",
+  "click>=8.2.1",
+  "dask[distributed]>=2025.5.1",
+  "matplotlib>=3.10.3",
+  "numpy>=2.2.6",
+  "pandas>=2.2.3",
+  "pims>=0.7",
+  "pyarrow>=20.0.0",
+  "s3fs>=2025.5.0",
+  "scikit-image>=0.25.2",
+  "scipy>=1.15.3",
+  "sigfig>=1.3.19",
+  "tifffile>=2025.5.21", # changed >2019.7.2 an OME recognition check and "IYX" -> "TCYX"
+  "xmltodict>=0.14.2",
+]
+description = "Numerical IMage Analyses."
+keywords = ["ClopHensor", "ratio imaging", "image analysis", "chloride", "pH"]
+license = "BSD-3-Clause"
+name = "nima"
+readme = "README.md"
+requires-python = ">=3.11"
+version = "0.11.1"
+
+[project.optional-dependencies]
+dev = [
+  "git-cliff>=2.8.0",
+  "mdformat==0.7.22",
+  "mdformat-gfm==0.4.1",
+  "pylsp-mypy==0.7.0",
+  "ruff==0.11.10",
+  "ruff-lsp==0.0.62",
+]
+docs = [
+  "autodocsumm==0.2.14",
+  "bokeh==3.7.3",
+  "dask-image==2024.5.3",
+  "holoviews==1.20.2",
+  "hvplot==0.11.3",
+  "impy-array==2.4.9",
+  "ipykernel==6.29.5",
+  "jupyter==1.1.1",
+  "nbsphinx==0.9.7",
+  "pydata-sphinx-theme==0.16.1",
+  "pygments==2.19.1",
+  "pympler==1.1",
+  "seaborn==0.13.2",
+  "selenium==4.32.0",
+  "sphinx-autodoc-typehints<3.2", # TODO: wait nbsphinx
+  "sphinx-click==6.0.0",
+  "sphinx<8.2", # TODO: wait nbsphinx
+  "statsmodels==0.14.4",
+]
+lint = [
+  "pre-commit==4.2.0",
+]
+tests = [
+  "coverage[toml]>=7.8.1",
+  "mypy>=1.15.0",
+  "pandas-stubs>=2.2.3.250308",
+  "pygments>=2.19.1", # color xdoctest
+  "pypdf>=5.5.0",
+  "pytest>=8.3.5",
+  "xdoctest>=1.2.0",
+]
+hatch = [
+  "hatch>=1.14.1",
+]
+
+[project.scripts]
+bima = "nima.__main__:bima"
+# nima = "nima.scripts:main"
+nima = "nima.__main__:main"
+
+[project.urls]
+"Bug Tracker" = "https://github.com/darosio/nima/issues"
+Changelog = "https://github.com/darosio/nima/blob/main/CHANGELOG.md"
+# Discussions = "https://github.com/darosio/nima/discussions"
+Documentation = "https://nima.readthedocs.io"
+"Github releases" = "https://github.com/darosio/nima/releases"
+Homepage = "https://github.com/darosio/nima"
+repository = "https://github.com/darosio/nima/"
+
+# tag_format = "v$version"
+# version = "0.10.2"
+# version_files = [
+#   "pyproject.toml:version",
+#   "docs/conf.py:release",
+#   "README.md:Version",
+# ]
+
+[tool.coverage.paths]
+source = ["src", "*/site-packages"]
+tests = ["tests", "*/tests"]
+
+[tool.coverage.report]
+# fail_under = 100
+exclude_lines = [
+  "pragma: no cover",
+  "def __repr__",
+  "raise NotImplementedError",
+  "if __name__ == .__main__.:",
+]
+show_missing = true
+skip_covered = true
+
+[tool.coverage.run]
+branch = true
+omit = ["*/__init__.py"]
+source = ["nima"]
+
+[tool.hatch.envs.default]
+features = ["dev", "docs", "lint", "tests"] # separate docs and lint
+installer = "uv"
+path = ".venv"
+
+[tool.hatch.envs.default.scripts]
+ch = "git cliff --bump -u --prepend CHANGELOG.md"
+bump = """
+NEXT_VERSION=$(git cliff --bumped-version)
+uv version $NEXT_VERSION
+uv sync --all-extras
+git add .
+git commit -m "chore: release $NEXT_VERSION"
+git tag $NEXT_VERSION
+git push
+git push --tags
+"""
+# bump = [
+#   "cz bump --major-version-zero -ch {args}", # e.g. "--increment PATCH"
+#   "uv sync --all-extras",
+#   "hatch build",
+#   "export TEST_PYPI_TOKEN=$(pass show cloud/test_pypi | head -n 1) && hatch publish -r test -u __token__ -a $TEST_PYPI_TOKEN",
+# ]
+clean = "rm -rf ./build .coverage ./__pycache__ ./.mypy_cache ./.pytest_cache ./docs/_build ./tests/__pycache__ ./dist ./src/nima/__pycache__"
+
+[tool.hatch.envs.docs]
+type = "virtual"
+features = ["docs"]
+installer = "uv"
+
+[tool.hatch.envs.docs.scripts]
+build = "sphinx-build docs docs/_build"
+serve = "python -m http.server 8000 -d docs/_build"
+
+[tool.hatch.envs.lint]
+type = "virtual"
+features = ["lint"]
+installer = "uv"
+
+[tool.hatch.envs.lint.scripts]
+init = "pre-commit install"
+lint = "pre-commit run --all-files --show-diff-on-failure {args}"
+
+[tool.hatch.envs.tests]
+type = "virtual"
+features = ["tests"]
+installer = "uv"
+matrix = [{ python = ["3.13", "3.12", "3.11"] }]
+template = "tests" #built-in test template
+
+[tool.hatch.envs.tests.scripts]
+all = ["test", "type", "xdoc", "cov"]
+cov = "coverage combine && coverage report && coverage xml"
+test = "coverage run -p -m pytest -v"
+type = "mypy src tests docs/conf.py"
+xdoc = "python -m xdoctest nima all"
+
+[tool.isort]
+combine_as_imports = true
+force_single_line = false
+include_trailing_comma = true
+known_first_party = "nima"
+line_length = 88 # to match black's default line length
+multi_line_output = 3
+profile = "black"
+
+[tool.mypy]
+enable_error_code = ["ignore-without-code", "redundant-expr", "truthy-bool"]
+plugins = ["numpy.typing.mypy_plugin"]
+pretty = true
+show_column_numbers = true
+show_error_codes = true
+show_error_context = true
+strict = true
+warn_unreachable = true
+warn_unused_configs = true
+
+[tool.pylsp-mypy]
+dmypy = false
+enabled = true
+live_mode = true
+strict = true
+
+[tool.ruff]
+extend-include = ["*.ipynb"]
+fix = true
+force-exclude = true
+line-length = 88
+target-version = "py311"
+unsafe-fixes = true
+
+[tool.ruff.format]
+docstring-code-format = true
+
+[tool.ruff.lint]
+ignore = [
+  "ISC001",
+  "S311", # Standard pseudo-random generators are not suitable for cryptographic purposes
+]
+select = [
+  "A", # builtins
+  "ANN", # typing annotation
+  "ARG", # unused arguments
+  "B", # bugbear
+  "BLE", # blind-except
+  "C",
+  "C4", # comprehensions
+  "C90", # mccabe
+  "D", # pydocstyle
+  "DTZ", # dates
+  "E", # pycodestyle
+  "TRY", # exceptions
+  "EM", # exceptions
+  "ERA", # eradicate
+  "F", # pyflakes
+  "FBT", # boolean-trap
+  "FLY", # flyntp
+  "FURB", # refurbishing and modernizing
+  "I", # isort
+  "ICN", # import conventions (opinionated)
+  "ISC", # implicit-str-concat
+  "N", # pep8-naming
+  "NPY",
+  "AIR", # airflow
+  "PERF", # pperformance anti pattern
+  "PD", # pandas-vet
+  "PGH", # pygrep WAIT
+  "PL", # pylint see PLR2004...
+  "PT", # pytest-style
+  "PTH", # use-pathlib
+  "Q", # quotes
+  "RET", # Return
+  "RSE", # Raise
+  "RUF", # Ruff
+  "S", # bandit
+  "SLF", # private self
+  "SLOT", # __slot__
+  "SIM", # simplify
+  "TID", # tidy-imports
+  "TCH", # TYPE_CHECKING
+  "TRY", # tryceratops
+  # "TD",  # TODOs
+  # "FIX",  #
+  "UP", # pyupgrade
+  "YTT", # 2020
+  "W", # pycodestyle
+]
+isort.combine-as-imports = true
+isort.force-single-line = false
+isort.known-first-party = ["nima"]
+isort.split-on-trailing-comma = true
+mccabe.max-complexity = 12
+
+[tool.ruff.lint.per-file-ignores]
+"*.ipynb" = ["ANN001", "ANN201", "D103", "ERA", "PD901", "PD013", "E501", "PLR2004", "SLF"]
+"tests/*" = ["PLR2004", "S101"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "numpy"
+
+[tool.typos]
+
+[tool.typos.default]
+# Ignore specific patterns such as "id": "XXXX" in JSON
+extend-ignore-re = ["\"id\":\\s*\"[^\"]+\""]
+
+[tool.typos.default.extend-words]
+ND = "ND"
+Nd = "Nd"
+OME = "OME"
+arange = "arange"
+arosio = "Arosio"
+generat = "generat"
+thr = "thr"
