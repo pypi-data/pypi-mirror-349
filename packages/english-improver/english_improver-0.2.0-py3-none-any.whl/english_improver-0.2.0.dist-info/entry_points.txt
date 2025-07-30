@@ -1,0 +1,2 @@
+[console_scripts]
+english-improver = english_improver:main
