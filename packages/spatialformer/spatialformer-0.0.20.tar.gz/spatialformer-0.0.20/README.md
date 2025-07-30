@@ -1,0 +1,175 @@
+---
+
+This is the official codebase for the SpatialFormer, the first single cell spatial foundation model to learn the universal representation (subcellular molecular & cellular spatial proximity) by multi-tasks learning.
+
+[![License](https://img.shields.io/badge/license-MIT-blue)](https://github.com/username/repo/blob/main/LICENSE)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/spatialformer)
+[![PyPIDownloadsTotal](https://pepy.tech/badge/spatialformer)](https://pepy.tech/project/spatialformer)
+![Last Commit](https://img.shields.io/github/last-commit/TerminatorJ/Spatialformer)
+
+
+![SpatialFormer](./rm_figs/github_main_figure.png)
+
+## Overview
+Spatial transcriptomics quantifies gene expression within its spatial context, significantly advancing biomedical research. Understanding gene spatial expression and the organization of multicellular systems is vital for disease diagnosis and studying biological processes. However, existing models often struggle to integrate gene expression data with cellular spatial information effectively. In this study, we introduce SpatialFormer, a hybrid framework combining convolutional networks and transformers to learn single-cell multimodal and multi-scale information in the niche context, including expression data and subcellular gene spatial distribution. Pre-trained on 300 million cell pairs from 12 million spatially resolved single cells across 62 Xenium slides, SpatialFormer merges gene spatial expression profiles with cell niche information via the pair-wise training strategy. Our findings demonstrate that SpatialFormer distills biological signals across various tasks, including single-cell batch correction, cell-type annotation, co-localization detection, and identifying gene pairs that are critical for the immune cell-cell interactions involved in the regulation of lung fibrosis. These advancements enhance our understanding of cellular dynamics and offer new pathways for applications in biomedical research. 
+
+For the instructions of SpatialFormer, please refer to our jupyter notebook [tutorials](downstream/) on:
+
+The zero-shot tutorials 
+- [Dataset Integration](downstream/zero-shot_batch_correction/zero_shot_batch_integration.ipynb)
+- [Gene-gene colocalization1](downstream/cell_cell_communication/1.Tutorial_attention_analysis.ipynb)
+- [Gene-gene colocalization2](downstream/cell_cell_communication/2.Tutorial_perturbation_analysis.ipynb)
+- [Gene-gene colocalization3](downstream/cell_cell_communication/3.Tutorial_CCC_analysis_VUILD96MF.ipynb)
+- [Cell-cell colocalization](downstream/cell_cell_communication/cell_cell_communication_zero_shot_cross_slide.ipynb)
+
+The fine-tuning tutorials
+- [Cell type/niches annotation](downstream/cell_types_nich_annotation/Tutorial_cell_type_annotation.ipynb)
+
+
+
+## System Requirements
+### Hardware requirements
+We provide the GPU and CPU version for users with different device levels. However, if a large scale of cells need to be calculated, the GPUs is mandatory to get the results effeciently. When using GPUs, AMD and IVIDIA GPUs are all supported.
+### Software requirements
+#### OS requirements
+This package is supported for macOS and Linux. The package has been tested on the following systems:
+- macOS: Sequoia (15.3.1)
+- Linux: Ubuntu 16.04; SLES 15.5
+
+#### Python environment requirements
+Create the spatialformer environment by anaconda (python >= 3.9 required)
+```bash
+conda create -n spatialformer python=3.9
+```
+
+## Installation
+
+### Install from PyPi
+If you are using the AMD gpus
+```bash
+pip install spatialformer --extra-index-url https://download.pytorch.org/whl/rocm6.0
+```
+Alternatively, if you are using the NVDIA gpus
+```bash
+pip install spatialformer --extra-index-url https://download.pytorch.org/whl/cu121
+```
+
+### Install from Github
+```bash
+git clone https://github.com/TerminatorJ/Spatialformer/
+cd Spatialformer
+```
+if you are using the AMD gpus
+```bash
+pip install -e --extra-index-url https://download.pytorch.org/whl/rocm6.0
+```
+whereas, if you are using the NVIDIA gpus
+```bash
+pip install -e --extra-index-url https://download.pytorch.org/whl/cu121
+```
+
+
+
+
+## Pretraining data
+
+The model is capable of handling input from individual cells and doublets. It was originally pretrained on a large-scale dataset of pairwise doublets with both positive and negative characteristics. Specifically, the positive pairs consist of all cells located within the niches of a certain query cell. In contrast, the negative pairs can include any distant cells that are either far away from the query cell or just one hop away from their corresponding positive pairs. Notably, the positive and negative pairs are maintained at a 1:1 ratio to ensure that each training batch contains 50% positive and 50% negative examples.
+
+The processed individual cell dataset can be retrieved from the Hugging Face dataset repository at [SpatialCC-12M](https://huggingface.co/datasets/TerminatorJ/xenium_pandavid_dataset). The pairwise data can be generated by following the instructions provided in `/data_preprocess/`.
+
+You can easily download the dataset in python as below
+```python
+from datasets import load_dataset
+spatialcc = load_dataset("TerminatorJ/xenium_pandavid_dataset4", cache_dir = "your_cache_dir")
+```
+Alternatively, the original pretraining dataset can be downloaded from figshare (DOI https://doi.org/10.6084/m9.figshare.28436606.v1) [SpatialCC-12M](https://figshare.com/articles/dataset/SpatialCC-12M/28436606?file=52449404).
+
+
+
+## Get the Embeddings
+
+SpatialFormer provides a simple function to extract embeddings. By using the `sp.tl.embed()` function, we can seamlessly integrate with the AnnData object, meaning the generated embeddings will be stored in `obsm` under the key `"X_SpaF"`.
+
+SpatialFormer supports two methods for generating embeddings: 1) single input mode and 2) pairwise input mode. Below is an example of generating the AnnData embeddings:
+
+A simple example anndata can be downloaded [here](downstream/cell_cell_communication/data/covid_subsampled.h5ad)
+
+The checkpoints can be downloaded according to different use cases as below:
+
+| Input type | Tissue types | Size (number of slides) | Links |
+| :------------------------   | :--------- | :--------- | :--------- | 
+| Paired | 1(lung) | 1 | https://figshare.com/articles/dataset/VUILD102LF_checkpoint/28452137?file=52503359 |
+| Paired | 13 types | 62 | https://figshare.com/articles/dataset/61slides_checkpoints/28452167?file=52503416 |
+| Single | 13 types| 62 | https://figshare.com/articles/dataset/single_input/28452209?file=52503695 |
+| Paired | 1(lung) | 25 | https://figshare.com/articles/dataset/lung_paired_checkpoint/28452233?file=52504040 |
+
+#### Loading the anndata
+
+```python
+import scanpy as sc
+adata = sc.read_h5ad("./downstream/cell_cell_communication/data/covid_subsampled.h5ad")
+```
+
+
+#### Single Input Mode
+```python
+import spatialformer as sp
+method = "cls"
+tissue = "Lung"
+condition = "Disease"
+model_ckp_path = "./61slides.ckpt"
+batch_size = 4
+embed_adata = sp.tl.embed_data(adata, 
+                              tissue,
+                              condition,
+                               method,
+                            model_ckp_path, 
+                            batch_size,
+                            mode = "single",
+                            threshold = 0.7,
+                            num_workers = 8
+                            )
+```
+#### Pairwise Input Mode
+```python
+method = "cls"
+tissue = "Lung"
+condition = "Disease"
+model_ckp_path = "./61slides.ckpt"
+batch_size = 4
+embed_adata = sp.tl.embed_data(adata, 
+                              tissue,
+                              condition,
+                               method,
+                            model_ckp_path, 
+                            batch_size,
+                            mode = "pair",
+                            left_cell = ["20532-0-1-0-1", "222101-0-0-1"],
+                            right_cell = ["483188-0-0-1", "513429-0-0-1"],
+                            num_workers = 8
+                            )
+```
+
+| Arguments         | dtype |Description |
+| :------------------------   | :--------- | :--------- | 
+| adata | object  | An AnnData object that stores expression information by CellXGene.|
+|  tissue | string | The type of tissue (e.g., Breast/Lung).|
+| condition | string | Metadata for the sample condition (e.g., Disease/Healthy). |
+| method | string | The method of the embed function, which can be either "single" or "pair." The single mode collates only individual cells as input for the model. In "pair" mode, data is prepared for pairwise input. If using "pair," both left_cell and right_cell must be provided, and their lengths must be the same. Each cell ID in left_cell corresponds to the cell ID at the same index in right_cell.  |
+| model_ckp_path | string | The path to the SpatialFormer model checkpoint.|
+| batch_size | integer | The batch size for the data loader.|
+| threshold | float | The threshold for filtering whether two genes are paired, which helps in identifying confidently paired genes at subcellular resolution. This option is applicable only in "single" input mode and is not functional in "pair" mode.|
+| left_cell | array_like | A list of cell IDs representing the query cells.|
+| right_cell | array_like | A list of cell IDs representing the key cells. |
+| num_workers | integer | The number of CPU cores to load the data. This value should match the number of workers specified in the data loader.|
+
+### Star Trend
+
+[![Star History Chart](https://api.star-history.com/svg?repos=TerminatorJ/Spatialformer&type=Date)](https://star-history.com/#TerminatorJ/Spatialformer&Date)
+
+
+
+## Cite our work
+Wang J, Huang Y, Winther O. SpatialFormer: Universal Spatial Representation Learning from Subcellular Molecular to Multicellular Landscapes[J]. bioRxiv, 2025: 2025.01. 18.633701.
+
+
