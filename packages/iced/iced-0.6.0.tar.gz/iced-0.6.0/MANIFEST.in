@@ -1,0 +1,3 @@
+recursive-include iced *.c *.h *.py
+recursive-include iced *.matrix *.bed *.mat
+include pyproject.toml
