@@ -1,0 +1,10 @@
+annotated-types
+colorama
+graphviz
+jax
+jaxlib
+jaxtyping
+matplotlib
+numpy>=2.1.0
+sympy
+yattag
