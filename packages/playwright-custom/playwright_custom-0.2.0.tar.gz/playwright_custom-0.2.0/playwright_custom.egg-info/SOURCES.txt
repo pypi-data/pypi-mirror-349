@@ -1,0 +1,6 @@
+setup.py
+playwright_custom.egg-info/PKG-INFO
+playwright_custom.egg-info/SOURCES.txt
+playwright_custom.egg-info/dependency_links.txt
+playwright_custom.egg-info/requires.txt
+playwright_custom.egg-info/top_level.txt
