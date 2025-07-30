@@ -1,0 +1,41 @@
+Metadata-Version: 2.3
+Name: gpb-models
+Version: 1.4.0
+Summary: Pydantic datamodels for the Gene Panel Builder
+License: GPL-3.0-or-later
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: pydantic (>=2.10.6,<3.0.0)
+Project-URL: Homepage, https://gitlab.com/alleles/genepanel-builder
+Project-URL: Repository, https://gitlab.com/alleles/genepanel-builder
+Description-Content-Type: text/markdown
+
+# Gene panel builder datamodels
+
+A collection of useful Pydantic datamodels for the Gene Panel Builder
+
+## Installation
+
+`pip install gpb-models`
+
+## Usage
+
+With a gene panel exported from the Gene Panel Builder in a folder `MyGenePanel`, load the panel like this:
+
+```
+from pathlib import Path
+from gpb_models import GenePanel
+
+json_file = next(Path("MyGenePanel").glob("*.json))
+with json_file.open() as f:
+    panel = GenePanel.model_validate_json(f.read())
+
+print(panel)
+```

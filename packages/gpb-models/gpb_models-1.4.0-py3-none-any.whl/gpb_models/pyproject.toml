@@ -1,0 +1,24 @@
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[project]
+name = "gpb-models"
+version="1.4.0"
+description="Pydantic datamodels for the Gene Panel Builder"
+readme = "README.md"
+requires-python = ">=3.8,<4.0"
+license = "GPL-3.0-or-later"
+
+[project.urls]
+homepage = "https://gitlab.com/alleles/genepanel-builder"
+repository = "https://gitlab.com/alleles/genepanel-builder"
+
+
+[tool.poetry]
+packages=[
+    {include = "*", from=".", to="gpb_models"}
+]
+
+[tool.poetry.dependencies]
+pydantic = "^2.10.6"

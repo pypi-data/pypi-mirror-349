@@ -1,0 +1,10 @@
+gpb_models/PKG-INFO,sha256=QSmanvy07wEgsvPbmZxWGwF1BzkKv7n5zgGN-5O4ck4,1303
+gpb_models/README.md,sha256=Dnsv9sR-sMwmkeF87YwlBl-cfEf8gPi41aGJQ-5IrMQ,478
+gpb_models/__init__.py,sha256=yRbaBKtC8Su5wtirwKWiXLmCQOLFXyyNyHTXG5mmRwU,175
+gpb_models/dist/gpb_models-1.4.0.tar.gz,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gpb_models/models.py,sha256=tMZ0-zQ0cPYHjIaNV0nSitZ3uDHEqafnF1JjRnLHpfI,14673
+gpb_models/pyproject.toml,sha256=IMwzuM9qlXUkEZnhG3xio15tDNPkE7BWKAKESz_rOGY,531
+gpb_models/types.py,sha256=aqjIkwkUbcPGMO0mb7887R2Trx8FwyieH2d1t_cq8sg,1125
+gpb_models-1.4.0.dist-info/METADATA,sha256=QSmanvy07wEgsvPbmZxWGwF1BzkKv7n5zgGN-5O4ck4,1303
+gpb_models-1.4.0.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+gpb_models-1.4.0.dist-info/RECORD,,
