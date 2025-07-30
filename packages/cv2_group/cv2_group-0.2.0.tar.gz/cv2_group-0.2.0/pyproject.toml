@@ -1,0 +1,47 @@
+[tool.poetry]
+name = "cv2_group"
+version = "0.2.0"
+description = "Package to predict roots of thaliana plant"
+authors = ["TeunvanderWolf235874 <235874@buas.nl>"]
+license = "MIT"
+readme = "README.md"
+
+
+
+packages = [
+    { include = "cv2_group", from = "src" }
+]
+
+[tool.poetry.dependencies]
+python = "3.10.11"
+fastapi = "^0.110.0"
+uvicorn = "^0.29.0"
+typer = "^0.9.0"
+opencv-python = "^4.10.0.84"
+scikit-image = "^0.22.0"
+patchify = "^0.2.3"
+pytest = "^8.3.0"
+numpy = "^1.26.0"
+pillow = "^10.3.0"
+docker = "^7.1.0"
+pytest-cov = "^6.1.1"
+protobuf = ">=3.9.2, <3.20"
+matplotlib = "==3.8.4"
+tensorflow = "2.10.0"
+tensorflow-io-gcs-filesystem = "0.26.0"
+ghp-import = "^2.1.0"
+
+
+[tool.poetry.scripts]
+root-predictor = "main:app"
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^4.2.0"
+black = "^25.1.0"
+flake8 = "^7.2.0"
+isort = "^6.0.1"
+ghp-import = "^2.1.0"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
