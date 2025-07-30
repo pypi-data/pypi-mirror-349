@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: gwPythonSecTt1
+Version: 0.1
+Summary: Python Sec Test1
+Requires-Python: >=3.6
+Requires-Dist: requests >=2.27.1
+
