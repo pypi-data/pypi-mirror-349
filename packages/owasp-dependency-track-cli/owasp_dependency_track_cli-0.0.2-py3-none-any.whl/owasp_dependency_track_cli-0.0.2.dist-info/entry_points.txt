@@ -1,0 +1,2 @@
+[console_scripts]
+owasp-dt-cli = owasp_dt_cli.cli:run
