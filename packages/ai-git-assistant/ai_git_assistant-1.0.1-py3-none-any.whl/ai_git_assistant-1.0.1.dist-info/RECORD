@@ -1,0 +1,11 @@
+ai_git_assistant/__init__.py,sha256=bMIenWosteoeUs51RbaWVZetIuzRhWymuyy-n0rfK0I,21
+ai_git_assistant/__main__.py,sha256=bCiNziaUjm7ceHbhJn3DuN-aSkHNc5vGNr6oBEmtk3c,18690
+ai_git_assistant-1.0.1.dist-info/licenses/LICENSE,sha256=FqXbvw4VVdXH2c1owAiAwD3NtTVl0i8NWAQb7ZxDlMQ,1064
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/tests_cli.py,sha256=4o69n43XUbS7maPxOeoe-KIGKMge8BOYImSmTH79kOY,490
+tests/tests_git_utils.py,sha256=oNj1rlhXuKxALEmG4SX9zhk_qKLmwIcRZIcu0qLwnpg,308
+ai_git_assistant-1.0.1.dist-info/METADATA,sha256=8ML1q8I4KkNgCtYOxHkOCw1lruGpSKmJX9qSx4bctz4,4395
+ai_git_assistant-1.0.1.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+ai_git_assistant-1.0.1.dist-info/entry_points.txt,sha256=buYEChdAzQXxqGPLpeWDNA4rhVfFrFb81HM1TSEGmac,68
+ai_git_assistant-1.0.1.dist-info/top_level.txt,sha256=yi6p5JOPds8KIFinicTZjXorp6k7mFN38pNB-8TcNhs,23
+ai_git_assistant-1.0.1.dist-info/RECORD,,
