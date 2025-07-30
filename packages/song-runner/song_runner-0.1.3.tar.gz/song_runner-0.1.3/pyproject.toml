@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "song-runner"
+version = "0.1.3"
+description = "A YouTube song runner CLI"
+authors = [
+    { name = "Vishesh Jain", email = "visheshj2005@example.com" }
+]
+requires-python = ">=3.7"
+dependencies = [
+    "yt-dlp",
+    "ffpyplayer",
+    "youtube-search-python"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+
+[project.scripts]
+song = "song.cli:main"

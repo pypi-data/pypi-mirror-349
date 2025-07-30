@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.py
+song/__init__.py
+song/cli.py
+song_runner.egg-info/PKG-INFO
+song_runner.egg-info/SOURCES.txt
+song_runner.egg-info/dependency_links.txt
+song_runner.egg-info/entry_points.txt
+song_runner.egg-info/requires.txt
+song_runner.egg-info/top_level.txt
