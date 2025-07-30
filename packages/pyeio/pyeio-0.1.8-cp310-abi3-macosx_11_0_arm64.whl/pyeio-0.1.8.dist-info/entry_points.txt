@@ -1,0 +1,2 @@
+[console_scripts]
+io=pyeio.__main__:cli
