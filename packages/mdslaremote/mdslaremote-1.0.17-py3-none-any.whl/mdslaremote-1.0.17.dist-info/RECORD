@@ -1,0 +1,17 @@
+mdslaremote/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mdslaremote/mda.py,sha256=3vLsaT-TDLM3JD4vxbHVf_4_314I75XRlg9xlMWiXGs,10341
+mdslaremote/impl/Call.py,sha256=To6ocJFuySVcnH3cwY69altigcXsU9ushq3sUIM62M4,2494
+mdslaremote/impl/Common.py,sha256=LTXdEPt0AXsD3LkKid2GZ1k89TFh5kTAUjCwTjYBV40,7046
+mdslaremote/impl/ConnectionSet.py,sha256=0X3q9oETbpnsiLfnTeghwE9nfp9pYFnfmRgE_ZdDtbU,2522
+mdslaremote/impl/Group.py,sha256=3QrkItoeLYjJbBopcr_IBkMyzXPXZaSzODtLINdMfT4,952
+mdslaremote/impl/Mdsla.py,sha256=XmMKQabxIsKJSZWk2qmJIRg9ne0dIHdPJrYoUDydzmE,5551
+mdslaremote/impl/Node.py,sha256=NrNUmJaPbgzHyJY5s85-4yd3llM899zjvPLHQNJ7XzM,20744
+mdslaremote/impl/Result.py,sha256=dj7AhM5oX0IuYyNVph0LMiJoU7eI0BpWyc9fzRf-Fog,12065
+mdslaremote/impl/TaskList.py,sha256=LW7bby4KlIgmhBjCc1D9-7EHPpw-tr8Rx0iyQ3eLRw8,1221
+mdslaremote/impl/Test.py,sha256=NjaMqS_OVqUihfvwOIYNBUX3sAPDNQjbCQXPGNg09Rg,18289
+mdslaremote/impl/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mdslaremote-1.0.17.dist-info/LICENSE,sha256=vKrLiEXqgmxyN9Ko7HDSZrxk08bXbMwI6L9x_G_Wouc,1014
+mdslaremote-1.0.17.dist-info/METADATA,sha256=34lyzPwEDl8T1UhsBp6li-bZucbZSyfl2Xa4pWginjA,406
+mdslaremote-1.0.17.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+mdslaremote-1.0.17.dist-info/top_level.txt,sha256=4MX9AnUFIeduBQv8Tvj-S01QTBUQZMVI5O4nY2z1m3o,12
+mdslaremote-1.0.17.dist-info/RECORD,,
