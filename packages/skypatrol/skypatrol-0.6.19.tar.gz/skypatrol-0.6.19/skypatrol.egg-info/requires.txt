@@ -1,0 +1,7 @@
+astropy
+matplotlib
+numpy
+pandas
+pyarrow
+requests
+tqdm>=4.65.0

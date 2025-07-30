@@ -1,0 +1,25 @@
+Vcams = ["ba", "bb", "bc", "bd", "be", "bf", "bg", "bh"]
+gcams = [
+    "bA",
+    "bB",
+    "cB",
+    "bC",
+    "bD",
+    "bE",
+    "bF",
+    "bG",
+    "bH",
+    "bi",
+    "bj",
+    "bk",
+    "bl",
+    "bm",
+    "bn",
+    "bo",
+    "bp",
+    "bq",
+    "br",
+    "bs",
+    "bt",
+    "cB"
+]
