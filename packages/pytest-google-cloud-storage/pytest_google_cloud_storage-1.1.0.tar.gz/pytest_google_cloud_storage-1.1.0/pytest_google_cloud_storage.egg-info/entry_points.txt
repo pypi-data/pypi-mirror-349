@@ -1,0 +1,2 @@
+[pytest11]
+storage = pytest_gcs.storage.plugin
