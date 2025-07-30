@@ -1,0 +1,13 @@
+safelz4-0.0.1.dev0.dist-info/METADATA,sha256=ZB2ZeN-wIEEdI8iZi4muGX8O6N7SuccZ5VtbnBT_Jjk,3399
+safelz4-0.0.1.dev0.dist-info/WHEEL,sha256=YBxTPgux3EpqRUs41VsGbxWNCQEdpwhnB_ShQiS8dvY,90
+safelz4-0.0.1.dev0.dist-info/licenses/LICENCE.md,sha256=YWp9pWDk-B6CqdmvcXYmQFEiaLFdmxPFVvDTiadq1UQ,1076
+safelz4/__init__.py,sha256=jGvjH-B52Ne1--2jAKI-tycNUkUVgrIgnBeRkLO7CE8,538
+safelz4/__main__.py,sha256=HX4MrDFp3XQJC-6BmcAv_LjtfdQ5rN3NW-zEmKNW6t0,38
+safelz4/_block/__init__.py,sha256=b0If7NStP85ZeVdD16gyo8Pn195-HSvCxyADpVwiyI4,460
+safelz4/_block/__init__.pyi,sha256=FzKqe__pgk9t2pmKu0peu5E9o9e5OCR1CKR6suX-YEo,3595
+safelz4/_frame/__init__.py,sha256=jr8tKQzi7OjENfph4EhiNPYD8wiDCojuNHUiMVLCHcc,1329
+safelz4/_frame/__init__.pyi,sha256=Cud3a7NLu0oFPmK77gwDej9QRldMsnSaX9pBJMVTjRU,7584
+safelz4/_safelz4_rs.pyd,sha256=P6JNLEcJK5h2Zp0DsjGWmWfXFeWDTg4IZXd75Hb0Q4Y,433664
+safelz4/block.py,sha256=S9PEFdYpCMGoQveG_1Hxik0dqFjqpvSafIj5_LPQrfY,4516
+safelz4/frame.py,sha256=Jl5qROsjHxkBXz8MBUxS08mOk5qv2TTEPSTihdK0efw,4246
+safelz4-0.0.1.dev0.dist-info/RECORD,,
