@@ -1,0 +1,15 @@
+elfinTerminal/scripts/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+elfinTerminal/scripts/config.py,sha256=QmB7y1DEQNj1bv7y9HfQAwOkCPcIr0iGBa5abc5E0XQ,688
+elfinTerminal/scripts/terminal.py,sha256=nRWLjIlb8MVQ_taoJyOjWwDk5cTn1FtihpXI9XI9FQ4,398
+elfinTerminal/setUp/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+elfinTerminal/setUp/pipSetUp.py,sha256=NoR7QHB9oUuijnLqUUxjHZzVf_vlUtP0UqcGU4JzrlE,1612
+elfinTerminal/source/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+elfinTerminal/source/config.py,sha256=PkRC7soh3wrx71bvVUCV-fXhnNSUGaomCcL-RlPWoIw,2156
+elfinTerminal/tools/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+elfinTerminal/tools/pathSearch.py,sha256=hMrByt7_DY3wd9rsbcumCTRaynr_nm3rMsQxQxPqv3c,793
+elfinterminal-0.0.2.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+elfinterminal-0.0.2.dist-info/METADATA,sha256=SX8yrnniq-WLmMWCpugMuhgySdFmVtF7IRhgfE14s5E,371
+elfinterminal-0.0.2.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+elfinterminal-0.0.2.dist-info/entry_points.txt,sha256=ri-vXQAFK35TFYO97Y2c13Euiy-9LWMtOUdDn6vpTMw,80
+elfinterminal-0.0.2.dist-info/top_level.txt,sha256=x1tidWrStFGwkj7Om1wHo4JucWbMM_IN1yi-MvPCM28,14
+elfinterminal-0.0.2.dist-info/RECORD,,
