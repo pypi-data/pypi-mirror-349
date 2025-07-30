@@ -1,0 +1,9 @@
+README.md
+setup.py
+proxyrotator/__init__.py
+proxyrotator/proxyrotator.py
+proxyrotator.egg-info/PKG-INFO
+proxyrotator.egg-info/SOURCES.txt
+proxyrotator.egg-info/dependency_links.txt
+proxyrotator.egg-info/requires.txt
+proxyrotator.egg-info/top_level.txt
