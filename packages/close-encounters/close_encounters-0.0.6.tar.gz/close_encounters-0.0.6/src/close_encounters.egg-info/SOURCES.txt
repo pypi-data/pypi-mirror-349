@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+src/close_encounters/__init__.py
+src/close_encounters/brute_force.py
+src/close_encounters/h3_full_disk.py
+src/close_encounters/h3_half_disk.py
+src/close_encounters/helpers.py
+src/close_encounters.egg-info/PKG-INFO
+src/close_encounters.egg-info/SOURCES.txt
+src/close_encounters.egg-info/dependency_links.txt
+src/close_encounters.egg-info/requires.txt
+src/close_encounters.egg-info/top_level.txt
