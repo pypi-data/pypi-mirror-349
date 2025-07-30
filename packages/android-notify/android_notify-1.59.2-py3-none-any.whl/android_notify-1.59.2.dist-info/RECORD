@@ -1,0 +1,12 @@
+android_notify/__init__.py,sha256=lcLjyfegXgU7cyGhfSphAOBipXwemrVkdYy3mcF6X5Y,172
+android_notify/__main__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+android_notify/an_types.py,sha256=LlE0zzPskVG2topZx3mVETGu5MqnpThs58Ph392ocy4,2390
+android_notify/an_utils.py,sha256=Io34r5JTorH3EbeR0bIfQ-8-bF3xO1wiVnvqafA2qyw,245
+android_notify/base.py,sha256=Fgv3hf-vwu-GvivDsKxseOyeOrLmw1moNAv_mZKvA5M,3477
+android_notify/core.py,sha256=Per4HFwYwP-mxHJqnwcLlWXsbZsSeeAYN49MmFU2qVk,6113
+android_notify/styles.py,sha256=jLxeXB41HXe0fn3l07JZsHi-d0u-dESvsV_OqQow_Xc,726
+android_notify/sword.py,sha256=DASgJ5t4HIYCLd_-my_WGi678M2v_7xEJO4oBDL-gOc,38450
+android_notify-1.59.2.dist-info/METADATA,sha256=ogkrhZVaMdpIi8WBCTtqaG9ohj5eSEjhIGrVfEs8k_M,4375
+android_notify-1.59.2.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+android_notify-1.59.2.dist-info/top_level.txt,sha256=IR1ONMrRSRINZpWn2X0dL5gbWwWINsK7PW8Jy2p4fU8,15
+android_notify-1.59.2.dist-info/RECORD,,
