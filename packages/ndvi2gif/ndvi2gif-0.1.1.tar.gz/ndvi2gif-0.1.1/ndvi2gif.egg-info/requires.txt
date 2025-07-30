@@ -1,0 +1,8 @@
+geemap==0.29.5
+earthengine-api>=0.1.347
+numpy<2.0
+matplotlib
+pillow
+imageio
+tqdm
+deims>=4.0
