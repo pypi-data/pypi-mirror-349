@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: arc-agi
+Version: 0.0.6
+Requires-Python: >=3.12
+Requires-Dist: arc-agi-core
+Provides-Extra: all
+Requires-Dist: arc-agi-dsl; extra == 'all'
+Requires-Dist: arc-agi-llm; extra == 'all'
+Provides-Extra: dsl
+Requires-Dist: arc-agi-dsl; extra == 'dsl'
+Provides-Extra: llm
+Requires-Dist: arc-agi-llm; extra == 'llm'
