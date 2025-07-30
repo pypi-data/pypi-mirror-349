@@ -1,0 +1,25 @@
+Metadata-Version: 2.4
+Name: mcp-server-yfinance
+Version: 0.0.post1.dev17
+Summary: MCP server for yfinance
+Project-URL: Homepage, https://github.com/danchev/mcp-server-yfinance
+Project-URL: Issues, https://github.com/danchev/mcp-server-yfinance/issues
+Author-email: Dobri Danchev <python-dist@danchev.net>
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3.14
+Classifier: Topic :: Office/Business :: Financial
+Classifier: Topic :: Office/Business :: Financial :: Investment
+Classifier: Topic :: Scientific/Engineering :: Interface Engine/Protocol Translator
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.11
+Requires-Dist: mcp[cli]>=1.9.0
+Requires-Dist: yfinance>=0.2.61
