@@ -1,0 +1,17 @@
+webtask/__init__.py,sha256=F8_oZrp8s93NcD-ycQYUa-uJ0xln_pxgkvUFEj7FxsY,272
+webtask/main.py,sha256=OhTrkkp3Ahf6j-UupRAI2jaeX_H5tyYACuzpwma07pw,1270
+webtask/server.py,sha256=Zrn6Eis_4TrJej6PlKev-3gFJ0QzPpFNkLYI-wQsUic,2080
+webtask/static/config.json,sha256=An3jjf5QhGs45M0dWezzOuLaQ2NoBiwnPxuP1rjXDw8,1510
+webtask/static/favicon.ico,sha256=NafvKc3Bk9fwDQYuTdERFtZ2cSrIyTWxFtJWMdBpOvI,11
+webtask/static/file-icons.css,sha256=YOsM92PaCBae5jX6T7Bct42i35p-8Q4C42aIOr-8aLk,6039
+webtask/static/file-system.js,sha256=Lr9nYouZows3RDqC7Yei8LR8c76_Y2BJhh16Y1dqdP0,31037
+webtask/static/index.html,sha256=alNPRCxKjAxCirkBcKw-tMFWS7cjuhpNG_OZVgO395w,5756
+webtask/static/manifest.json,sha256=4lLdK3e47iag6bnfhuVBCfGptFEC8zBn7_sLdSj5jB0,398
+webtask/static/process-data.js,sha256=1Snw2d63xFDZvLofrEEjf-j2FQvaTcfrAGexaXEXVFs,15247
+webtask/static/styles.css,sha256=kpKLcBn8yMEA8PblKF0V9r8grxn6shZ3DwWMYLEMnA8,10183
+webtask/static/webtask.js,sha256=KrZZLcMHz6yPDmraitwWTXcqBDYxYzEKChs1nSrOF-A,33218
+webtask-2.0.4.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+webtask-2.0.4.dist-info/METADATA,sha256=5CLCS5QGbmy_udFOjb-ev2BfOl71jWdyRs5Su8hcTqg,8952
+webtask-2.0.4.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+webtask-2.0.4.dist-info/entry_points.txt,sha256=HLqOTFYLVpZD3UOxBOVw92bSQSnrEZKwHbTjPSWaq2I,45
+webtask-2.0.4.dist-info/RECORD,,
