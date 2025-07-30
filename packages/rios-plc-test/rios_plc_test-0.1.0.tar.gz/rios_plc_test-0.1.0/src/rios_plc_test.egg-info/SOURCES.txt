@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+src/rios_plc_test/__init__.py
+src/rios_plc_test/cli.py
+src/rios_plc_test.egg-info/PKG-INFO
+src/rios_plc_test.egg-info/SOURCES.txt
+src/rios_plc_test.egg-info/dependency_links.txt
+src/rios_plc_test.egg-info/entry_points.txt
+src/rios_plc_test.egg-info/requires.txt
+src/rios_plc_test.egg-info/top_level.txt
