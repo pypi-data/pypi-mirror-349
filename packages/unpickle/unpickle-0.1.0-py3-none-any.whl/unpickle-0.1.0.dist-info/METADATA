@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: unpickle
+Version: 0.1.0
+Summary: Add your description here
+Author-email: generativist <jbn@abreka.com>
+Requires-Python: >=3.10.12
+Requires-Dist: click>=8.2.1
+Requires-Dist: numpy>=2.2.6
+Requires-Dist: torch>=2.7.0
