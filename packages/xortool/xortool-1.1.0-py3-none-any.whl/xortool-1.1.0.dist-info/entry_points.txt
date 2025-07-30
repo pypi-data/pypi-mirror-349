@@ -1,0 +1,4 @@
+[console_scripts]
+xortool=xortool.tool_main:main
+xortool-xor=xortool.tool_xor:main
+
