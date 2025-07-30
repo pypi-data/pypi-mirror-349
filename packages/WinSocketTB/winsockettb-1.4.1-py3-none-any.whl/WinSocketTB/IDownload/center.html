@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8">
+    <title>IDownload center</title>
+    <link rel="icon" type="image/x-icon" href="icon_48.png">
+    <style type="text/css">
+      body {
+        position: relative;
+        margin: 5px;
+        background-color: rgb(40, 45, 50);
+        color: rgb(225, 225, 225);
+      }
+      h1 {
+        width: 100%;
+        text-align: center;
+      }
+      @keyframes blink {
+        0% {opacity: 0;}
+        50% {opacity: 1;}
+        100% {opacity: 0;}
+      }
+      #connected {
+        position: absolute;
+        left: 0.5em;
+        top: 0.5em;
+        font-size: 120%;
+        &.not {
+          animation: blink 2s ease-in-out 0s infinite normal;
+        }
+      }
+      #downloads {
+        max-width: 100%;
+        margin: 0;
+        padding-left: 2em;
+        padding-right: 1.5em;
+        white-space: nowrap;
+      }
+      #download_pattern {
+        display: none;
+      }
+      li {
+        list-style-type: square;
+        line-height: 1.4em;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        border-bottom: solid 1px rgba(255, 255, 255, 0.2);
+        &.working {
+          list-style-type: "\1f86b\00a0\00a0";
+          &::marker {
+            color: dodgerblue;
+          }
+          &>button.discard {
+            display: revert;
+          }
+          &:has(>div.progression>span.bar>progress:not(.no))>button.suspend {
+            display: revert;
+          }
+        }
+        &.completed {
+          list-style-type: "\2714\00a0\00a0";
+          &::marker {
+            color: limegreen;
+          }
+        }
+        &.aborted {
+          list-style-type: "\2716\00a0\00a0";
+          &::marker {
+            color: crimson;
+          }
+          &>button.restart {
+            display: revert;
+          }
+          &:has(>div.progression>span.bar>progress:not(.no))>button.resume {
+            display: revert;
+          }
+        }
+        &>div {
+          position: relative;
+          margin-right: 1em;
+          white-space: pre;
+          word-break: keep-all;
+          &::before {
+            content: attr(class)": ";
+            display: inline-block;
+            width: 7em;
+            text-transform: capitalize;
+          }
+          &:not(.progression)>span {
+            position: absolute;
+            display: inline-block;
+            max-width: calc(100% - 7em);
+            overflow: auto;
+            scrollbar-width: none;
+            &:is(.size, .downloaded) {
+              &:not(:empty)::after {
+                content: " o";
+              }
+              &:empty::after {
+                content: "?";
+              }
+            }
+          }
+          &.progression {
+            &>span.bar {
+              display: inline-flex;
+              flex-flow: row nowrap;
+              justify-content: flex-start;
+              align-items: center;
+              align-content: center;
+              width: max(10em, 100% - 9em);
+              vertical-align: -0.2em;
+              &:empty {
+                display: none;
+              }
+              &>progress {
+                min-width: 0;
+                max-width: none;
+                accent-color: #0060df;
+              }
+            }
+            &>span.percent {
+              &:not(:empty)::after {
+                content: " %";
+              }
+              &:empty::after {
+                content: "?";
+              }
+            }
+            &>span.bar:not(:empty)+span.percent:not(:empty) {
+              display: inline-block;
+              width: 3.2em;
+              text-align: right;
+            }
+          }
+        }
+        &>button {
+          width: 5em;
+          height: 1.7em;
+          margin-top: 0.5em;
+          margin-right: 1em;
+          border: none;
+          background-color: rgb(30, 30, 35);
+          color: inherit;
+          cursor: pointer;
+          &:not(.explorer) {
+            display: none;
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>IDownload center</h1>
+    <div id="connected" class="not">&udarr;</div>
+    <ul id="downloads">
+      <li id="download_pattern">
+        <div class="url"><span class="url"></span></div>
+        <div class="file"><span class="file"></span></div>
+        <div class="size"><span class="size"></span></div>
+        <div class="status"><span class="status"></span></div>
+        <div class="downloaded"><span class="downloaded"></span></div>
+        <div class="progression"><span class="bar"></span><span class="percent"></span></div>
+        <button class="explorer">Explorer</button><button class="discard">Discard</button><button class="restart">Restart</button><button class="suspend">Suspend</button><button class="resume">Resume</button>
+      </li>
+    </ul>
+    <script src="center.js"></script>
+  </body>
+</html>
