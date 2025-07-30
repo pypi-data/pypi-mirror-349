@@ -1,0 +1,19 @@
+id: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/samples/light_source_power
+name: light_source_power
+prefixes:
+#  metrics: https://github.com/MontpellierRessourcesImagerie/microscope-metrics/blob/main/src/microscopemetrics/model/
+#imports:
+#  - metrics:types
+  linkml: https://w3id.org/linkml/
+imports:
+  - linkml:types
+  - ../core
+
+default_range: string
+
+
+classes:
+  LightSourcePower:
+      is_a: Sample
+      # TODO: This is a bit of an odd one as, for the moment, power measurements are done without sample
+      description: A sample providing measurements on light source power.
