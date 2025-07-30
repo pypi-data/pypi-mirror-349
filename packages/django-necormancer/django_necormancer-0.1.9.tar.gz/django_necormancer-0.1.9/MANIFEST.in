@@ -1,0 +1,3 @@
+include src/necromancer/core/requirements/*
+include src/necromancer/core/project_templates/*
+include src/necromancer/core/build_tools/*
