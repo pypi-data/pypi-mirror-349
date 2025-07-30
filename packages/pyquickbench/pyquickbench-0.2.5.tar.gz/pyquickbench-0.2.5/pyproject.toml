@@ -1,0 +1,60 @@
+[build-system]
+requires = [
+    "setuptools>=42",
+    "wheel",
+    "build",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyquickbench"
+version = "0.2.5"
+description = "A pure Pyton tool to perform time and accuracy benchmarks"
+readme = {file = "README.md", content-type = "text/markdown"}
+license = {file = "LICENSE"}
+keywords = ["Python", "benchmark"]
+authors = [
+  {name = "Gabriel Fougeron", email = "gabriel.fougeron@hotmail.fr"},
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.7",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "License :: OSI Approved :: BSD License",
+  "Natural Language :: English",
+]
+requires-python = ">= 3.7"
+dynamic = ["dependencies", "optional-dependencies"]
+[tool.setuptools.dynamic.dependencies]
+file = ["requirements.txt"]
+
+[tool.setuptools.dynamic.optional-dependencies]
+docs = {file = ["requirements-docs.txt"]}
+tests = {file = ["requirements-tests.txt"]}
+
+[project.urls]
+Homepage = "https://gabrielfougeron.github.io/pyquickbench/"
+Documentation = "https://gabrielfougeron.github.io/pyquickbench/"
+Repository = "https://github.com/gabrielfougeron/pyquickbench"
+Changelog = "https://github.com/gabrielfougeron/pyquickbench/releases/"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-v -ra --junit-xml=docs/pytest_out/junit.xml -n auto"
+testpaths = [
+    "tests",
+]
+filterwarnings = [
+    "ignore::DeprecationWarning",
+]
+junit_family = "xunit2"
+junit_logging = "system-out"
+junit_suite_name = "Pytest test results"
+junit_log_passing_tests = true

@@ -1,0 +1,21 @@
+# --extra-index-url https://download.pytorch.org/whl/cu126 # This gives me an error with pip
+Sphinx
+pydata-sphinx-theme
+sphinx-gallery
+sphinx-pyproject
+sphinx-needs
+sphinx-test-reports
+sphinxcontrib-plantuml
+seed-intersphinx-mapping
+myst-parser
+sphinxext-rediraffe
+sphinx-sitemap
+sphinx-design
+sphinx-copybutton
+scipy
+numba
+threadpoolctl
+# mkl-fft
+torch
+torchvision
+torchaudio
