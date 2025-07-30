@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: atomix_base
+Version: 0.1.4
+Summary: atomics for pyatomix
+Home-page: https://github.com/0xDEADFED5/pyatomix
+Author: 0xDEADFED5
+Author-email: admin@terminoid.com
+Requires-Python: >=3.7
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+Dynamic: summary
