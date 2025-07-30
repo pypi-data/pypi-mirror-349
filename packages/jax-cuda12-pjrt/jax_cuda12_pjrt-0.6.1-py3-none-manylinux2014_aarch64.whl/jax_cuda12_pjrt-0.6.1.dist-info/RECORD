@@ -1,0 +1,8 @@
+jax_plugins/xla_cuda12/__init__.py,sha256=3hROzvI88eSiJGuQhT9RywpNSelOaOZS8-IVOARaKP8,9299
+jax_plugins/xla_cuda12/version.py,sha256=Tw0XFb3fO-gHOGpR_L-Z6sETerEAFZUpkoF7HLyHr9s,6733
+jax_plugins/xla_cuda12/xla_cuda_plugin.so,sha256=L15QtCmupT3JlFRDRD6aCtpv5cT2nifeJFYuQ3jihm0,268259752
+jax_cuda12_pjrt-0.6.1.dist-info/METADATA,sha256=NRkM8-GV8aI9blKftGreTNbmgPhcxAHPGOonihuA1Qg,492
+jax_cuda12_pjrt-0.6.1.dist-info/WHEEL,sha256=yXaLHS9b5_h8hsOzPS1xZSo9g3iuDxqM_dtowxBXduM,109
+jax_cuda12_pjrt-0.6.1.dist-info/entry_points.txt,sha256=SepI53hNzXQuLjHrMFCsXcbZ93yOdB2MaK9NrHCoi0Y,50
+jax_cuda12_pjrt-0.6.1.dist-info/top_level.txt,sha256=BMuBVFd0VZSL85gH2fQxPQpETv27dLmJ90vD27bu13Q,12
+jax_cuda12_pjrt-0.6.1.dist-info/RECORD,,
