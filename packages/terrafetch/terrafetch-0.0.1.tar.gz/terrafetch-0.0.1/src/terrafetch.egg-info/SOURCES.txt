@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+src/terrafetch.egg-info/PKG-INFO
+src/terrafetch.egg-info/SOURCES.txt
+src/terrafetch.egg-info/dependency_links.txt
+src/terrafetch.egg-info/requires.txt
+src/terrafetch.egg-info/top_level.txt
