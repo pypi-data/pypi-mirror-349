@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+adolib/adolib.egg-info/PKG-INFO
+adolib/adolib.egg-info/SOURCES.txt
+adolib/adolib.egg-info/dependency_links.txt
+adolib/adolib.egg-info/top_level.txt
+tests/test_logger.py
