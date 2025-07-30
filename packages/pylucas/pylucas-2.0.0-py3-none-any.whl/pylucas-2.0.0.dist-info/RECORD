@@ -1,0 +1,11 @@
+pylucas/__init__.py,sha256=_XQsQ3QdNGVL9hxNmtA3dgu3fYa-u3TnzWBCpSa1ZZc,246
+pylucas/Class/ConfigEditor.py,sha256=1igSOuTpDk2mIt0-VgKJSTVpMooIz3t2NpxDuFCRaso,8932
+pylucas/Class/KbdCapture.py,sha256=fxMprs2TwW8Ec3hgYoTquc7XbiqDs8HYPHvK2TC-st8,154
+pylucas/Class/LogManager.py,sha256=fk4ST-0tiJMA9JHBSMnxPEevjRrDYIaHaQAcQs4Ak5w,3983
+pylucas/Class/Result.py,sha256=A6VMQjjxO2m4QbTibXBIfoZ0Nhy7dzNYaeWruHZtaLA,1208
+pylucas/Function/__init__.py,sha256=--kj97bt8VEzayILA8y4oksuzqA8XrXA4Iu_k-G7N0k,148
+pylucas/Function/Function.py,sha256=gTJIOVs9_3YA2tWMy-itkADSd0gXnaGMSyWevY0GMy8,2076
+pylucas-2.0.0.dist-info/LICENSE,sha256=RBhg5hIyHCQyj9Hd6pdx4QVzRdIfplLdnbuNB0fm2H4,1093
+pylucas-2.0.0.dist-info/METADATA,sha256=MIfaSCjL84cI5hAxPN9FizssrvTK4LpYW9CiznGdXiI,2514
+pylucas-2.0.0.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+pylucas-2.0.0.dist-info/RECORD,,
