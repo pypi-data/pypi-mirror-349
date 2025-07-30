@@ -1,0 +1,8 @@
+pxr/.libs/libPxrGf.so,sha256=3pYDFUKD-l8F9Fll5tv8qtHxCNgC2ISMYnMXY8z7bBQ,645224
+pxr/Gf/__init__.py,sha256=dfkygjy7y-F5ungVcq9tfPSJbUhITy8k6abuAH0jOrE,322
+pxr/Gf/_gf.so,sha256=9m8jYMD9gYkmMXIDqse8FKFoEVMSHqcL_y1a8zIIFMQ,7057872
+pxr_gf-25.5.1.dist-info/METADATA,sha256=utBWEi7cwicZW87F7rcu4JANmjSNY0X4Vo7zJLqdEEY,2003
+pxr_gf-25.5.1.dist-info/WHEEL,sha256=9rerCdvuXeLOPeDROQnIT7PuuTo8vWqb6yuPA_EBBsM,156
+pxr_gf-25.5.1.dist-info/RECORD,,
+pxr_gf-25.5.1.dist-info/licenses/LICENSE.txt,sha256=W3MUPgj4LfF93F56oA7-iJxRuO6j3MDxYV5Q5d2oKDw,12253
+pxr_gf-25.5.1.dist-info/licenses/NOTICE.txt,sha256=k6ldE5TIDcCuglcT9C5Yod0oPtv0Ta_x8-h6HZ3y3n4,149
