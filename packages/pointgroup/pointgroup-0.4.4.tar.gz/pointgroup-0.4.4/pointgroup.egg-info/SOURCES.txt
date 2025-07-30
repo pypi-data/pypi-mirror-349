@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+pointgroup/__init__.py
+pointgroup/element_data.py
+pointgroup/grid.py
+pointgroup/operations.py
+pointgroup/tools.py
+pointgroup.egg-info/PKG-INFO
+pointgroup.egg-info/SOURCES.txt
+pointgroup.egg-info/dependency_links.txt
+pointgroup.egg-info/requires.txt
+pointgroup.egg-info/top_level.txt
