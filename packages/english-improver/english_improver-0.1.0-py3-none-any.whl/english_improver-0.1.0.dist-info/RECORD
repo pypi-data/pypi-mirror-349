@@ -1,0 +1,10 @@
+english_improver/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+english_improver/constants.py,sha256=rt11Y4xyqRIePbLHQzu4BEqiblNKPv0a4ZRa5P7wzGE,22
+english_improver/example_usage.py,sha256=eMU5BO6YxNUmOXIbeYMqYiQA4WWPIkrCpkE8LALducc,647
+english_improver/gutenberg_scraper.py,sha256=U4ddsW5A4IUBAr0XFRCmoj7IfKGUVDIMNHZBniJC0Pk,2021
+english_improver/markov_chain_generator.py,sha256=mCrqsk2jPO-vjGyfiV4gmEUYqcWlB5oZMU648FUOChs,1751
+english_improver/pdf_generator.py,sha256=8y4w9wntOHoRb9HDqnCqsmUh9loqlO1LX7OjG3jdOhw,682
+english_improver-0.1.0.dist-info/METADATA,sha256=xZd-EXOuMrFbe7EPcvfuc1rJF04iDofDgqM3R_QSk7o,192
+english_improver-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+english_improver-0.1.0.dist-info/entry_points.txt,sha256=S-qXj3FSdXpUTii-5JtQL6lwONhcChrq9vWQHFGZxOc,59
+english_improver-0.1.0.dist-info/RECORD,,
