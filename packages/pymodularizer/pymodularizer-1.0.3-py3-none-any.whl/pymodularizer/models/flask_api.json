@@ -1,0 +1,63 @@
+{
+  "flask_api": {
+        "description": "API criada com Flask, incluindo frontend com HTML, CSS e JS.",
+        "structure": {
+          "app/": {
+            "__init__.py": "from flask import Flask\nfrom .routes import example_bp\nfrom .api import api_bp\ndef create_app():\n    app = Flask(__name__)\n    app.register_blueprint(example_bp)\n    app.register_blueprint(api_bp)\n    return app",
+            "app.py": "from app import create_app\n\napp = create_app()\n\nif __name__ == '__main__':\n    app.run(debug=True)",
+            "api/": {
+              "__init__.py": "from .v1 import api_bp",
+              "v1/": {
+                "__init__.py": "from flask import Blueprint\nfrom flask_restx import Api\nfrom .example_api import ns as example_ns\napi_bp = Blueprint('api', __name__, url_prefix='/api/v1')\napi = Api(api_bp, title='API Example', version='1.0', description='A simple example API', doc='/docs')\napi.add_namespace(example_ns)",
+                "example_api.py": "from flask import jsonify, request\nfrom flask_restx import Namespace, Resource, fields\nns = Namespace('example', description='Example operations')\nexpect_model = ns.model('ExampleModelPost', {\n    'id': fields.Integer(readOnly=True, description='The unique identifier of an example'),\n    'name': fields.String(required=True, description='The name of the example'),\n    'description': fields.String(description='A description of the example')\n})\n@ns.route('/')\nclass ExampleResource(Resource):\n    def get(self):\n        return {'message': 'Hello, World!'}\n    @ns.expect(expect_model, validate=True)\n    def post(self):\n        data = request.get_json()\n        return {'message': 'Data received', 'data': data}\n@ns.route('/<int:id>')\nclass ExampleResourceById(Resource):\n    def get(self, id):\n        return {'id': id, 'message': 'Hello, World!'}"
+              }
+            },
+            "config/": {
+              "__init__.py": "",
+              "config.py": "import os\n\nDEBUG = os.getenv('DEBUG', 'true').lower() == 'true'"
+            },
+            "db/": {
+              "__init__.py": "",
+              "db.py": "# Módulo db"
+            },
+            "models/": {
+              "__init__.py": "",
+              "model.py": "# Definições de modelos"
+            },
+            "routes/": {
+              "__init__.py": "from flask import Blueprint\nexample_bp = Blueprint('example', __name__)\nfrom . import example_route",
+              "example_route.py": "from . import example_bp\nfrom flask import jsonify\n@example_bp.route('/ping')\ndef ping():\n    return jsonify({'message': 'pong'}), 200"
+            },
+            "services/": {
+              "__init__.py": "",
+              "service.py": "# Lógica de serviços"
+            },
+            "static/": {
+              "css/": {
+                "style.css": "body {\n    font-family: Arial, sans-serif;\n    background-color: #f9f9f9;\n}"
+              },
+              "images/": {
+                "swagger.png": ""
+              },
+              "js/": {
+                "script.js": "console.log(\"JS loaded correctly!\");"
+              }
+            },
+            "templates/": {
+              "index.html": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>My Flask App</title>\n    <link rel=\"stylesheet\" href=\"{{ url_for('static', filename='css/style.css') }}\">\n</head>\n<body>\n    <h1>Hello from Flask!</h1>\n    <script src=\"{{ url_for('static', filename='js/script.js') }}\"></script>\n</body>\n</html>"
+            },
+            "utils/": {
+              "__init__.py": "",
+              "helpers.py": "# Funções auxiliares"
+            }
+          },
+          "tests/": {
+            "test_example_api.py": "import pytest\nfrom app import create_app\n@pytest.fixture\ndef client():\n    app = create_app()\n    app.config['TESTING'] = True\n    with app.test_client() as client:\n        yield client\ndef test_get_example(client):\n    response = client.get('/api/v1/example')\n    assert response.status_code == 200\n    data = response.get_json()\n    assert 'message' in data\n    assert data['message'] == 'Hello, World!'\ndef test_post_example(client):\n    payload = {\n        'name': 'Test Name',\n        'description': 'Test Description'\n    }\n    response = client.post('/api/v1/example', json=payload)\n    assert response.status_code in (200, 201)\n    data = response.get_json()\n    assert 'message' in data\n    assert data['message'] == 'Data received'\n    assert 'data' in data\n    assert data['data']['name'] == 'Test Name'\n    assert data['data']['description'] == 'Test Description'\ndef test_get_example_by_id(client):\n    response = client.get('/api/v1/example/123')\n    assert response.status_code == 200\n    data = response.get_json()\n    assert 'id' in data\n    assert data['id'] == 123\n    assert 'message' in data\n    assert data['message'] == 'Hello, World!'",
+            "test_main.py": "from app import create_app\ndef test_home():\n    app = create_app()\n    client = app.test_client()\n    response = client.get('/')\n    assert response.status_code == 200"
+          },
+          "requirements.txt": "flask\nflask-restx\npytest\npython-dotenv",
+          "pyproject.toml": "[project]\nname = \"flask-blueprint-example\"\nversion = \"0.1.0\"\ndescription = \"Exemplo de API com Flask, Flask-RESTX e blueprints\"\nauthors = [\n    { name=\"DOJO technology\", email=\"hermes.urquijo@dojo.technology\" }\n]\ndependencies = [\n    \"flask>=2.2\",\n    \"flask-restx>=1.1.0\"\n]\nrequires-python = \">=3.8\"\n[tool.setuptools.packages.find]\nwhere = [\"app\"]\n[build-system]\nrequires = [\"setuptools>=61.0\"]\nbuild-backend = \"setuptools.build_meta\"",
+          ".env.example": "DEBUG=true"
+        }
+      }
+  }

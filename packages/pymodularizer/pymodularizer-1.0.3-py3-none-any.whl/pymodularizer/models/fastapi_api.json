@@ -1,0 +1,50 @@
+{
+    "fastapi_api": {
+        "description": "API criada com FastAPI, estrutura modular para projetos de Data Science e MLOps.",
+        "structure": {
+          "app/": {
+            "__init__.py": "",
+            "main.py": "from fastapi import FastAPI\nfrom app.api.v1.router import api_router\nfrom app.config import settings\n\napp = FastAPI(\n    title=settings.PROJECT_NAME,\n    version=\"1.0.0\",\n    description=\"API com documentação automática via Swagger e Redoc\"\n)\napp.include_router(api_router, prefix=settings.API_PREFIX)",
+            "api/": {
+              "__init__.py": "",
+              "v1/": {
+                "__init__.py": "",
+                "router.py": "from fastapi import APIRouter\nfrom .endpoints import example_endpoint\n\napi_router = APIRouter()\napi_router.include_router(example_endpoint.router, prefix=\"/example\", tags=[\"Users\"])",
+                "endpoints/": {
+                  "__init__.py": "",
+                  "example_endpoint.py": "from fastapi import APIRouter, HTTPException\nfrom app.schemas.example_schema import UserCreate, UserOut\n\nrouter = APIRouter()\n\n@router.post(\"/\", response_model=UserOut)\ndef create_user(user: UserCreate):\n    # lógica simulada\n    return {\"id\": 1, \"email\": user.email}\n\n@router.get(\"/hello\")\ndef hello():\n    return {\"msg\": \"Hello World\"}"
+                }
+              }
+            },
+            "config/": {
+              "__init__.py": "",
+              "settings.py": "import os\n\nDEBUG = os.getenv('DEBUG', 'true') == 'true'\nPROJECT_NAME = os.getenv('PROJECT_NAME', 'FastAPI Model')\nAPI_PREFIX = os.getenv('API_PREFIX', '/api/v1')"
+            },
+            "db/": {
+              "__init__.py": "",
+              "db.py": "# Módulo db"
+            },
+            "models/": {
+              "__init__.py": "",
+              "example_model.py": ""
+            },
+            "schemas/": {
+              "__init__.py": "",
+              "example_schema.py": "from pydantic import BaseModel, EmailStr\n\nclass UserCreate(BaseModel):\n    email: EmailStr\n    password: str\n\nclass UserOut(BaseModel):\n    id: int\n    email: EmailStr\n    class Config:\n        orm_mode = True"
+            },
+            "services/": {
+              "__init__.py": "",
+              "example_service.py": ""
+            }
+          },
+          "scripts/": {
+            "start.sh": "uvicorn app.main:app --reload"
+          },
+          "tests/": {
+            "test_example.py": ""
+          },
+          "requirements.txt": "# requirements.txt",
+          "pyproject.toml": "# pyproject.toml"
+        }
+      }
+    }

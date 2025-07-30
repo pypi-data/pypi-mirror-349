@@ -1,0 +1,2 @@
+__version__ = "0.1.0"
+__author__ = "Hermes Alfredo Velázquez Urquijo"

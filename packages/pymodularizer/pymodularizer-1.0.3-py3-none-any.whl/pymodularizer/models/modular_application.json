@@ -1,0 +1,51 @@
+{
+    "modular_application": {
+        "description": "Aplicação modular com múltiplos componentes.",
+        "structure": {
+          "my_app/": {
+            "__init__.py": "",
+            "main.py": "",
+            "config/": {
+              "__init__.py": "",
+              "settings.py": ""
+            },
+            "modules/": {
+              "__init__.py": "",
+              "mod_base.py": "",
+              "mod_example/": {
+                "__init__.py": "",
+                "logic.py": "",
+                "handlers.py": ""
+              }
+            },
+            "services/": {
+              "__init__.py": "",
+              "database.py": "",
+              "api.py": ""
+            }
+          },
+          "tests/": {
+            "__init__.py": "",
+            "modules/": {
+              "__init__.py": "",
+              "test_mod_example.py": ""
+            },
+            "services/": {
+              "__init__.py": "",
+              "test_database.py": "",
+              "test_api.py": ""
+            }
+          },
+          "scripts/": {
+            "start_dev.sh": "",
+            "setup_env.py": ""
+          },
+          "README.md": "# Modular Application\n",
+          "pyproject.toml": "[project]\nname = 'modular-application'\nversion = '0.1.0'\n",
+          "setup.cfg": "[metadata]\nname = modular-application\nversion = 0.1.0\n",
+          "requirements.txt": "# requirements\n",
+          ".gitignore": "__pycache__/\n.env\n",
+          ".env.example": "# Exemplo de variáveis de ambiente\n"
+        }
+      }
+    }

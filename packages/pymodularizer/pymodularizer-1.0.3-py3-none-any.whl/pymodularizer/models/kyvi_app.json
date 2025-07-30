@@ -1,0 +1,41 @@
+{
+  "kyvi_app": {
+    "description": "Aplicação desktop criada com Kivy, estrutura modular para projetos Python GUI.",
+    "structure": {
+      "app/": {
+        "__init__.py": "# Inicialização do app Kivy\nfrom kivy.app import App\nfrom .main import MainWidget\n\nclass MyKivyApp(App):\n    def build(self):\n        return MainWidget()",
+        "main.py": "# Widget principal\nfrom kivy.uix.boxlayout import BoxLayout\n\nclass MainWidget(BoxLayout):\n    pass",
+        "ui/": {
+          "main.kv": "<MainWidget>:\n    orientation: 'vertical'\n    Label:\n        text: 'Hello Kivy!'\n    Button:\n        text: 'Clique aqui'"
+        },
+        "config/": {
+          "__init__.py": "",
+          "config.py": "# Configurações do app\nAPP_NAME = 'KyviApp'\nDEBUG = True"
+        },
+        "models/": {
+          "__init__.py": "",
+          "model.py": "# Definições de modelos de dados"
+        },
+        "services/": {
+          "__init__.py": "",
+          "service.py": "# Lógica de serviços"
+        },
+        "utils/": {
+          "__init__.py": "",
+          "helpers.py": "# Funções utilitárias"
+        },
+        "assets/": {
+          "images/": {},
+          "icons/": {}
+        }
+      },
+      "tests/": {
+        "test_main.py": "# Teste do widget principal\ndef test_main_widget():\n    from app.main import MainWidget\n    widget = MainWidget()\n    assert widget is not None"
+      },
+      "requirements.txt": "kivy\npytest",
+      "pyproject.toml": "[project]\nname = 'kyvi-app'\nversion = '0.1.0'\ndescription = 'Exemplo de app Kivy'\nauthors = [ { name = 'Seu Nome', email = 'seu@email.com' } ]\ndependencies = [ 'kivy>=2.0.0' ]\nrequires-python = '>=3.8'\n[build-system]\nrequires = [ 'setuptools>=61.0' ]\nbuild-backend = 'setuptools.build_meta'",
+      "setup.cfg": "[metadata]\nname = kyvi-app\nversion = 0.1.0",
+      "README.md": "# Kyvi App\n\nEstrutura modular para projetos Kivy."
+    }
+  }
+}

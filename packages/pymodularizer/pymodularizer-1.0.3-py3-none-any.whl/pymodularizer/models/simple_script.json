@@ -1,0 +1,21 @@
+{
+    "simple_script": {
+        "description": "Projeto com um único script principal e módulos auxiliares.",
+        "structure": {
+          "my_project/": {
+            "__main__.py": "",
+            "utils.py": "",
+            "config.py": ""
+          },
+          "tests/": {
+            "test_utils.py": ""
+          },
+          "README.md": "# Projeto Simple Script\n",
+          "pyproject.toml": "[project]\nname = 'simple-script'\nversion = '0.1.0'\n",
+          "setup.cfg": "[metadata]\nname = simple-script\nversion = 0.1.0\n",
+          "requirements.txt": "# requirements\n",
+          ".gitignore": "__pycache__/\n.env\n",
+          ".env.example": "# Exemplo de variáveis de ambiente\n"
+        }
+      }
+}
