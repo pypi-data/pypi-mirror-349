@@ -1,0 +1,64 @@
+Metadata-Version: 2.4
+Name: Py2ExeLite
+Version: 1.0.0
+Summary: Lightweight tool to convert Python scripts into .exe files with style
+Home-page: https://github.com/PozStudio/Py2ExeLite
+Author: Poyraz (PozStudio)
+Author-email: pozstudio.dev@gmail.com
+Project-URL: Bug Tracker, https://github.com/PozStudio/Py2ExeLite/issues
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Topic :: Software Development :: Build Tools
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: project-url
+Dynamic: requires-python
+Dynamic: summary
+
+# 🚀 FastInstaller
+
+> Instantly convert your Python scripts into standalone Windows `.exe` applications – with advanced control, clean output, and ease-of-use.  
+> Created by [PozStudio](https://github.com/PozStudioX), designed for speed & simplicity.
+
+---
+
+## 📦 What is FastInstaller?
+
+**FastInstaller** is a Python CLI tool that allows you to transform `.py` scripts into fully functional `.exe` executables. It wraps the underlying build engine into a clean, developer-friendly interface.
+
+No more long commands. No more confusing options. Just build and ship.
+
+---
+
+## ✨ Features
+
+- ✅ **One-command build**: Just point to your `.py` and you’re done
+- 🎨 Add **custom icons** with `.ico` support
+- 🖼️ **GUI mode** support (no console window)
+- 🔐 Optionally **encrypt** your `.py` before building
+- 🧼 Auto-clean build artifacts (`dist`, `build`, `__pycache__`)
+- 📁 Specify **custom output folders**
+- 🧊 Disable UPX compression if needed
+- 🪄 **Add splash screens**
+- 🧠 **Advanced logging**, hidden imports, versioning and more...
+
+---
+
+## ⚙️ Installation
+
+> Requires Python 3.6+
+
+```bash
+git clone https://github.com/PozStudioX/fastinstaller
+cd fastinstaller
+pip install .
