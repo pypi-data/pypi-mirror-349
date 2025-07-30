@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+SLACplots/__init__.py
+SLACplots/colors.py
+SLACplots/latex.py
+SLACplots/rcparams.py
+SLACplots/stanford.py
+SLACplots.egg-info/PKG-INFO
+SLACplots.egg-info/SOURCES.txt
+SLACplots.egg-info/dependency_links.txt
+SLACplots.egg-info/requires.txt
+SLACplots.egg-info/top_level.txt
