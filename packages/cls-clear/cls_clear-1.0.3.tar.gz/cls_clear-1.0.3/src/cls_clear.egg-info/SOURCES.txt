@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+pyproject.toml
+src/cls/__init__.py
+src/cls/cls.py
+src/cls_clear.egg-info/PKG-INFO
+src/cls_clear.egg-info/SOURCES.txt
+src/cls_clear.egg-info/dependency_links.txt
+src/cls_clear.egg-info/not-zip-safe
+src/cls_clear.egg-info/requires.txt
+src/cls_clear.egg-info/top_level.txt
