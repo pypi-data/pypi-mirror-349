@@ -1,0 +1,2 @@
+dnspython>=2.3.0
+load-dotenv>=0.1.0
