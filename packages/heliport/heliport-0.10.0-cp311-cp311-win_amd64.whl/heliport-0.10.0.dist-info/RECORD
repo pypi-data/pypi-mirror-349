@@ -1,0 +1,16 @@
+heliport-0.10.0.data/platlib/heliport/.gitignore,sha256=S7OL5tbZ7w0vm8wzmFD_SNgh7M-nOTaUArNUybqUbqI,16
+heliport-0.10.0.data/platlib/heliport/bigram.bin,sha256=_PCmxwDdE-J0tvuo3uqN2bJuTu3eNJVxfKyECMnFF38,2
+heliport-0.10.0.data/platlib/heliport/confidenceThresholds,sha256=Nd3WlSxv2hZ3AWq3mdpxU5W047x9x-VE4XS4oTFInA0,6238
+heliport-0.10.0.data/platlib/heliport/hexagram.bin,sha256=QNiBJ9TTGjiR9BWY7u1BF05byJseubvWaoy_wJlWo_0,2
+heliport-0.10.0.data/platlib/heliport/quadgram.bin,sha256=TzUhLRL5rSA2SSyV8f55uvTse9m-89_6dXnyKT_1RqQ,2
+heliport-0.10.0.data/platlib/heliport/quingram.bin,sha256=nxr6TcEky6cxNOgv9Q8XyPcWQlfHn-2aE_WUOmrLjj0,2
+heliport-0.10.0.data/platlib/heliport/trigram.bin,sha256=WDx9-3swVdmUZVRAMqVx4QoTSxtvdpQiu7cf1_oWel0,2
+heliport-0.10.0.data/platlib/heliport/unigram.bin,sha256=tBP0fRPuL-bIRbLuFBr4HehY307FSaWLeXC7lmRbyNI,2
+heliport-0.10.0.data/platlib/heliport/word.bin,sha256=lqKW0iTyhcZ77pPDD4owkVfw2qNdxbh-QQt4YwoJz8c,2
+heliport-0.10.0.dist-info/METADATA,sha256=Ay-U2Ob1hQ8Spb2TfwbwRd7njgQSfu_zpT9YkDMR7yY,6688
+heliport-0.10.0.dist-info/WHEEL,sha256=Kw8y023UaufEXFM028WbBCk7rJUUAhAX1Zw-54pv0m4,96
+heliport-0.10.0.dist-info/entry_points.txt,sha256=B1RiLuTzQmaHuNui_0MMdO7UfsEPwJpv5mux1cPof98,44
+heliport-0.10.0.dist-info/licenses/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+heliport/__init__.py,sha256=8NiMfM2N1xmpwf3X0DERBs_0T64qOmQ2vXXGBG_WNXI,115
+heliport/heliport.cp311-win_amd64.pyd,sha256=UK4c5ZN6IfuZ4u56s8XKIxxeUhhofJB8f7oZApGL9UE,3368960
+heliport-0.10.0.dist-info/RECORD,,
