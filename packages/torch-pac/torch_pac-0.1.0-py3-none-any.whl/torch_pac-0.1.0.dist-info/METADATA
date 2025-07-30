@@ -1,0 +1,81 @@
+Metadata-Version: 2.4
+Name: torch-pac
+Version: 0.1.0
+Summary: GPU-Accelerated Phase-Amplitude Coupling calculation using PyTorch
+Author-email: Yusuke Watanabe <ywatanabe@alumni.u-tokyo.ac.jp>
+License: Copyright 2025 Yusuke Watanabe (ywatanabe@alumni.u-tokyo.ac.jp)
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+Project-URL: Homepage, https://github.com/ywatanabe1989/gPAC
+Project-URL: Repository, https://github.com/ywatanabe1989/gPAC
+Project-URL: Bug Tracker, https://github.com/ywatanabe1989/gPAC/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: torch>=1.9.0
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: torchaudio>=0.9.0
+Dynamic: license-file
+
+# gPAC: GPU-Accelerated Phase-Amplitude Coupling
+
+`gPAC` is a PyTorch-based package for efficient computation of Phase-Amplitude Coupling (PAC) metrics with GPU acceleration.
+
+## Key Features
+
+- **GPU Acceleration**: 5-100x faster PAC computation via PyTorch/CUDA
+- **Differentiable Filters**: Optional gradient flow for integration with deep learning models
+- **Synthetic Data Generation**: Built-in tools for generating test signals with known PAC properties
+- **Statistical Analysis**: Permutation testing and surrogate distributions for validation
+- **Return Full Distributions**: Access complete surrogate data for custom statistical analyses
+
+## Quick Start
+
+```bash
+# Installation
+git clone https://github.com/[username]/gPAC.git
+cd gPAC
+pip install -e .
+```
+
+```python
+# Basic usage
+import torch
+import gpac
+import numpy as np
+
+# Create example data (batch_size, channels, segments, time)
+signal = torch.randn(2, 4, 1, 1024)
+
+# Calculate PAC with GPU acceleration
+pac_values, pha_freqs, amp_freqs = gpac.calculate_pac(
+    signal=signal,
+    fs=256.0,         # Sampling frequency
+    pha_n_bands=10,   # Number of phase bands
+    amp_n_bands=10,   # Number of amplitude bands
+    device="cuda",    # Use GPU
+    n_perm=200,       # Permutation testing
+)
+```
+
+## Documentation
+
+For detailed usage examples and API reference, see:
+- `examples/` directory for sample scripts
+- `src/gpac/README.md` for implementation details
+- Docstrings in the source code for function parameters
+
+## Contact
+
+Yusuke Watanabe (ywatanabe@alumni.u-tokyo.ac.jp)
