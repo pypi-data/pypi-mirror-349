@@ -1,0 +1,23 @@
+[project]
+name = "jlproj"
+version = "0.1.7"
+description = "Johnson–Lindenstrauss Projection Toolkit for dimensionality reduction"
+readme = "README.md"
+license = "MIT"
+authors = [
+  { name = "Anton Smirnov", email = "AntonSmirnovM@protonmail.com" }
+]
+requires-python = ">=3.8"
+dependencies = [
+  "numpy",
+  "faiss-cpu",
+  "scikit-learn",
+  "sentence-transformers"
+]
+dynamic = []
+
+[project.scripts]
+jlproj = "jlproj.cli:main"
+
+[tool.setuptools]
+packages = ["jlproj"]
