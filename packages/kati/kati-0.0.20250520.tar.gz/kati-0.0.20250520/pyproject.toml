@@ -1,0 +1,64 @@
+[build-system]
+build-backend = 'mesonpy'
+requires = ['meson-python']
+
+[project]
+name = 'kati'
+version = '0.0.20250520'
+description = 'An experimental GNU make clone'
+readme = 'README.md'
+keywords = ["xmake"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Topic :: Software Development :: Build Tools",
+  "License :: OSI Approved :: Apache Software License",
+  "Operating System :: Microsoft :: Windows",
+  "Operating System :: POSIX",
+  "Operating System :: Unix",
+  "Operating System :: MacOS",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+
+[project.license]
+text = "Apache-2.0"
+
+[project.urls]
+Homepage = "https://github.com/google/kati/"
+Download = "https://github.com/google/kati/releases"
+"Bug Report" = "https://github.com/google/kati/issues"
+Source = "https://github.com/google/kati"
+
+[[project.authors]]
+name = "Delilah Hoare"
+email = "delilah@dhoare.me"
+
+[[project.authors]]
+name = "Koichi Shiraishi"
+email = "zchee.io@gmail.com"
+
+[[project.authors]]
+name = "Kouhei Sutou"
+email = "kou@cozmixng.org"
+
+[[project.authors]]
+name = "Po Hu"
+email = "hupo1985@gmail.com"
+
+[tool.cibuildwheel]
+archs = ["all"]
+build = "*312-*"
+# https://github.com/mesonbuild/meson-python/discussions/751
+skip = "*-macosx_universal2"
+build-frontend = "build[uv]"
+
+# https://github.com/astral-sh/uv/issues/10260
+[[tool.cibuildwheel.overrides]]
+select = ["*-musllinux_s390x", "*-musllinux_ppc64*"]
+build-frontend = "build"
