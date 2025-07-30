@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "smartapi-client"
+version = "0.1.15"
+description = "A dynamic and flexible API client for OpenAPI and Postman specs."
+authors = ["Raja D <rajaone987@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{ include = "smartapi", from = "src" }]
+
+[tool.poetry.dependencies]
+python = ">=3.8,<4.0"
+requests = "^2.31.0"
+PyYAML = "^6.0.1"
+click = "^8.1.7"
+
+
+[tool.poetry.dev-dependencies]
+pytest = "^8.0"
+pre-commit = "^3.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+smartapi = "smartapi.cli:generate"
