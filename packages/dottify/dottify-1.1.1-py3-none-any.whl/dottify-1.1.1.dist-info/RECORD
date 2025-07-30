@@ -1,0 +1,9 @@
+dottify/__init__.py,sha256=i79StWKXCoG2UgK2_Qo5U9_97tK4L8vsmkJWr7cRZ8c,641
+dottify/__version__.py,sha256=q8_5C0f-8mHWNb6mMw02zlYPnEGXBqvOmP3z0CEwZKM,22
+dottify/dottify.py,sha256=671y_IoGyPQV9_IhDVJ8Ms2uPqNGPPJXEdk0ifuA05A,4076
+dottify/exceptions.py,sha256=ya-nSGZS0YC4FvvnbOJUEH4rbb-nYETSPuRIbpBec2Q,76
+dottify-1.1.1.dist-info/licenses/LICENSE,sha256=GXjeQTEnz2jGNO8BIhl3cREcO_0XGTmVDPnKqqyxWeQ,1067
+dottify-1.1.1.dist-info/METADATA,sha256=FiuklYmi_8o8OVB8OkOkmjr7n5y0WuVu1ekd8aAEjhA,4743
+dottify-1.1.1.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+dottify-1.1.1.dist-info/top_level.txt,sha256=Y8Su9e7cEHKcgybhEir7ri6b3gOTyrBBwY15SGnsIyc,8
+dottify-1.1.1.dist-info/RECORD,,
