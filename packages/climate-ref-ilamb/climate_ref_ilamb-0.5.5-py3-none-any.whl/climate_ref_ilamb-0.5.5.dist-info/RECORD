@@ -1,0 +1,14 @@
+climate_ref_ilamb/__init__.py,sha256=hMEkSjBY3yo-EbdMNOIvMSdGK14G2s5PERmWrBEtzFk,1414
+climate_ref_ilamb/datasets.py,sha256=MVCt1pxV5dIfYLm6huC0BZWP5stCamYNwXzc7kKW5AI,799
+climate_ref_ilamb/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+climate_ref_ilamb/standard.py,sha256=xloR7gtinWVILjBFsoFP9N2DbovmdXR8GawFXS9L90w,9834
+climate_ref_ilamb/configure/ilamb.yaml,sha256=iq1u-VNBr622pxB4zUBRPAT_dNDBeW-hoWbivK6QHfo,799
+climate_ref_ilamb/configure/iomb.yaml,sha256=HeA5DDp6Pi2NAkQh5d3Vxsc2LVY5ucKLua1W4A0vOTQ,494
+climate_ref_ilamb/dataset_registry/ilamb.txt,sha256=gO-nyNjJQYyFdCQcRaDjA7DtC8YaLTrxfXixfGRq4Dw,817
+climate_ref_ilamb/dataset_registry/iomb.txt,sha256=-ud-u2sTmamGNVFRS1GuJUfi-7UcMUMo_22h5Ke8kUg,284
+climate_ref_ilamb/dataset_registry/test.txt,sha256=gBjUJ6W-crghYqKN0QOFmjyqpMxKK50dU3SYTuIA6jM,206
+climate_ref_ilamb-0.5.5.dist-info/METADATA,sha256=pOhMANm5mtkx_QaeEMsMsva1uyo3aTUi-iJ6Xa4IBks,2258
+climate_ref_ilamb-0.5.5.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+climate_ref_ilamb-0.5.5.dist-info/licenses/LICENCE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+climate_ref_ilamb-0.5.5.dist-info/licenses/NOTICE,sha256=4qTlax9aX2-mswYJuVrLqJ9jK1IkN5kSBqfVvYLF3Ws,128
+climate_ref_ilamb-0.5.5.dist-info/RECORD,,
