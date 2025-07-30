@@ -1,0 +1,2 @@
+[console_scripts]
+office-tools-mcp-server = office_tool.office:mcp.run

@@ -1,0 +1,55 @@
+Metadata-Version: 2.4
+Name: office-tools-mcp-server
+Version: 0.1.0
+Summary: Office Tool MCP Server, different types of file could be generated, including PPTs, documents, spreadsheets, webpages and broadcasts.
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: aiohttp>=3.11.18
+Requires-Dist: fastmcp>=2.4.0
+Requires-Dist: python-dotenv>=1.1.0
+Requires-Dist: uvicorn>=0.34.2
+Dynamic: license-file
+
+# Skywork-Super-Agents
+
+A lightweight MCP server offering office tools to generate various file types, including PPTs, documents, spreadsheets, webpages and broadcasts.
+
+## Setup
+
+1. Install dependencies using `uv`:
+```bash
+uv venv
+uv sync
+```
+
+2. Create a `.env` file with your SkyWork API key:
+```
+SKYWORK_API_KEY=your_api_key_here
+```
+
+"You can request an API key by reaching out to peter@skywork.ai."
+
+## Running the Server
+
+```json
+{
+    "mcpServers": {
+        "office": {
+            "command": "uvx",
+            "args": ["--from", "git+https://github.com/Skywork-ai/Skywork-Super-Agents.git", "office-tool"],
+            "env": {
+                "SKYWORK_API_KEY": "your_api_key_here"
+            }
+        }
+    }
+}
+```
+
+## API Usage Response
+Response:
+```json
+{
+    "url": "output_oss_url"
+}
+```
