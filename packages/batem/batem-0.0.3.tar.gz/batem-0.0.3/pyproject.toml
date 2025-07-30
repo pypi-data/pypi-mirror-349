@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "batem"
+version = "0.0.3"
+description = "A meta-package including core, heatpump, tespy, sites and ecommunity"
+authors = [
+  {name = "Stephane Ploix", email = "stephane.ploix@grenoble-inp.fr"},
+]
+readme = "README.md"
+license = {file = "LICENSE"}
+dependencies = ["ipython", "ipywidgets", "nbformat", "joblib", "matplotlib", "networkx", "numpy", "openpyxl", "pandas", "plotly", "prettytable", "psychrochart", "PyExcelerate", "importlib-metadata", "pymor", "pytz", "Requests", "SALib", "hplib", "scipy", "SQLAlchemy", "tzlocal", "tomlkit", "timezonefinder", "windrose", "kaleido", "ipympl", "weasyprint", "CoolProp"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+[tool.setuptools]
+include-package-data = true
+
