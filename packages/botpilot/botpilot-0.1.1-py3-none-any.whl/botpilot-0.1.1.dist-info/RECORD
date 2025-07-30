@@ -1,0 +1,10 @@
+botpilot/__init__.py,sha256=5xvN_gb61nKeq5TER5dSfcArTP3DVasZGN_MQq5dNpA,23
+botpilot/main.py,sha256=_m1IwF8Ctl7v6Hd_NblcAbGCRu2TpKWwoS53yVVfR8U,221
+botpilot/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+botpilot/commands/init.py,sha256=WYLL47dVtzeCIzsxa4k1eLPzvy6lWVkgEIVTpudLfjU,3361
+botpilot-0.1.1.dist-info/licenses/LICENSE,sha256=Gniiyk_BoGzwhhopSNb9b847yGA5fW6vCmAkosEeO_Q,324
+botpilot-0.1.1.dist-info/METADATA,sha256=wt1qkojreLj5KYPzwcp7AQKERU4DC8leZ2iycikqKlg,1268
+botpilot-0.1.1.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+botpilot-0.1.1.dist-info/entry_points.txt,sha256=e5a1FgO91TmfUW2sqYxjJnq_egxqPQ-2bhyXG6ox2GE,48
+botpilot-0.1.1.dist-info/top_level.txt,sha256=elOhr3Ra6ZdvbRpRZBZlCHjw8TJcybuBh7Iw0zrhUjI,9
+botpilot-0.1.1.dist-info/RECORD,,
