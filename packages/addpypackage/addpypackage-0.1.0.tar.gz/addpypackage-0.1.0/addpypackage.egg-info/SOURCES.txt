@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+addpypackage/__init__.py
+addpypackage/core.py
+addpypackage.egg-info/PKG-INFO
+addpypackage.egg-info/SOURCES.txt
+addpypackage.egg-info/dependency_links.txt
+addpypackage.egg-info/top_level.txt
+tests/test_core.py

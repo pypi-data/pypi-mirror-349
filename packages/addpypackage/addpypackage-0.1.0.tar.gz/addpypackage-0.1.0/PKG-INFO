@@ -1,0 +1,32 @@
+Metadata-Version: 2.4
+Name: addpypackage
+Version: 0.1.0
+Summary: A sample Python package
+Home-page: https://github.com/yourusername/addpypackage
+Author: Anup Kumar
+Author-email: anup.rulez@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# mypackage
+
+A simple Python package example.
+
+## Installation
+
+```bash
+pip install addpypackage
+```
+
+## Usage
+
+```python
+from addpypackage import add
+print(add(2, 3))
+```
