@@ -1,0 +1,10 @@
+typed_schema_shot/__init__.py,sha256=Vyr2jTzV9k5gvPY9KJvRrhVZhkcNY28hXso8MPMXiOk,385
+typed_schema_shot/cfg.py,sha256=2PxKLAHxumk5VhjFtcZwBEpkg3rkJ7LDOLDotjFcp7g,478
+typed_schema_shot/compare_schemas.py,sha256=gxyB9MsoJVn6vGVTRfdw3eYG99nMiO3NK9iNRVMvNKc,7124
+typed_schema_shot/core.py,sha256=gvetssY_8bCXtXcLlM-kFTvqC-1yeGZ0g69iMd1yodE,4748
+typed_schema_shot/plugin.py,sha256=Hs4WLnnf01xJrinpv283dkyokcdkBpSXHsbDehuL5vk,2173
+pytest_typed_schema_shot-0.1.4.dist-info/METADATA,sha256=fOLi3t1qjxIjaW8r7ZCpRVIPGHSBBy2xn9I2MZVm_bw,5052
+pytest_typed_schema_shot-0.1.4.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pytest_typed_schema_shot-0.1.4.dist-info/entry_points.txt,sha256=FEbNA00C2OLC19vrE3BrYteCsBmTgi9kGSjsTCFoy74,49
+pytest_typed_schema_shot-0.1.4.dist-info/licenses/LICENSE,sha256=1HRFdSzlJ4BtHv6U7tZun3iCArjbCnm5NUowE9hZpNs,1071
+pytest_typed_schema_shot-0.1.4.dist-info/RECORD,,
