@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+./src/msgraph_pywrap.egg-info/PKG-INFO
+./src/msgraph_pywrap.egg-info/SOURCES.txt
+./src/msgraph_pywrap.egg-info/dependency_links.txt
+./src/msgraph_pywrap.egg-info/requires.txt
+./src/msgraph_pywrap.egg-info/top_level.txt
+src/msgraph/__init__.py
+src/msgraph/msgraph.py
+src/msgraph_pywrap.egg-info/PKG-INFO
+src/msgraph_pywrap.egg-info/SOURCES.txt
+src/msgraph_pywrap.egg-info/dependency_links.txt
+src/msgraph_pywrap.egg-info/requires.txt
+src/msgraph_pywrap.egg-info/top_level.txt
+tests/test_msgraph.py
