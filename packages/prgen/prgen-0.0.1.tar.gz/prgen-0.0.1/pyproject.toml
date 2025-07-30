@@ -1,0 +1,19 @@
+[project]
+name = "prgen"
+version = "0.0.1"
+authors = [
+  { name="Lukas Nakamura", email="lugen4ro@gmail.com" },
+]
+description = "CLI tool to autogenerate GitHub PRs"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+
+[project.urls]
+Homepage = "https://github.com/lugen4ro/prgen"
+Issues = "https://github.com/lugen4ro/prgen/issues"
