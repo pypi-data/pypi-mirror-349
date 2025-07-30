@@ -1,0 +1,189 @@
+Metadata-Version: 2.4
+Name: psengine
+Version: 2.0.4
+Summary: psengine is a simple, yet elegant, library for rapid development of integrations with Recorded Future.
+Author-email: Moise Medici <moise.medici@recordedfuture.com>, Patrick Kinsella <patrick.kinsella@recordedfuture.com>, Ernest Bartosevic <ernest.bartosevic@recordedfuture.com>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/RecordedFuture-ProfessionalServices/psengine-py
+Project-URL: Changelog, https://github.com/RecordedFuture-ProfessionalServices/psengine-py/CHANGELOG.rst
+Keywords: API,Recorded Future,Cyber Security Engineering,Threat Intelligence
+Requires-Python: <3.14,>=3.9
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: requests>=2.27.1
+Requires-Dist: jsonpath_ng<=1.6.1,>=1.5.3
+Requires-Dist: stix2~=3.0.1
+Requires-Dist: python-dateutil>=2.7.0
+Requires-Dist: more-itertools<=10.2.0,>=9.0.0
+Requires-Dist: pydantic<3.0.0,>=2.7
+Requires-Dist: pydantic-settings[toml]~=2.5.2
+Requires-Dist: markdown-strings==3.4.0
+Provides-Extra: dev
+Requires-Dist: tox==4.12.1; extra == "dev"
+Requires-Dist: build==1.0.3; extra == "dev"
+Requires-Dist: pytest==8.3.4; extra == "dev"
+Requires-Dist: pytest-cov==6.0.0; extra == "dev"
+Requires-Dist: pytest-mock==3.14.0; extra == "dev"
+Requires-Dist: pytest-random-order==1.1.1; extra == "dev"
+Requires-Dist: pytest-vcr==1.0.2; extra == "dev"
+Requires-Dist: pytest-watch==4.2.0; extra == "dev"
+Requires-Dist: requests==2.29.0; extra == "dev"
+Requires-Dist: ruff~=0.7.0; extra == "dev"
+Requires-Dist: wheel==0.37.1; extra == "dev"
+Requires-Dist: setuptools==61.0.0; extra == "dev"
+Requires-Dist: Sphinx==7.1.2; extra == "dev"
+Requires-Dist: sphinxcontrib-confluencebuilder==2.3.0; extra == "dev"
+Requires-Dist: atlassian-python-api==3.41.4; extra == "dev"
+Requires-Dist: sphinx_autodoc_typehints==1.25.2; extra == "dev"
+Requires-Dist: sphinxcontrib-napoleon; extra == "dev"
+Requires-Dist: typer==0.12.5; extra == "dev"
+Requires-Dist: cookiecutter==2.6.0; extra == "dev"
+Requires-Dist: tomlkit>=0.13.2; extra == "dev"
+Dynamic: license-file
+
+==================================================
+PSEngine
+==================================================
+**PSEngine** is a simple, yet elegant, library for rapid development of integrations with Recorded Future.
+
+
+.. code-block:: python
+
+    >>> from psengine.enrich import LookupMgr
+    >>> lookup_mgr = LookupMgr(rf_token='token')
+    >>> domain = lookup_mgr.lookup('cpejcogzznpudbsmaxxm.com', 'domain')
+    >>> domain
+    'EnrichedDomain: cpejcogzznpudbsmaxxm.com, Risk Score: 20, Last Seen: 2024-07-22 02:50:59PM'
+    >>> domain.entity
+    'cpejcogzznpudbsmaxxm.com'
+    >>> domain.content.risk
+    EntityRisk(criticality_label='Unusual', risk_string='4/52', score=20, rules=4...)
+    >>> domain.content.risk.score
+    20
+    >>> 
+    domain.content.risk.risk_summary
+    '4 of 52 Risk Rules currently observed.'
+
+
+PSEngine allows you to interact with the Recorded Future API extremely easily. There’s no need to manually build the URLs and query parameters - but nowadays, just use the modules dedicated to individual API endpoints!
+
+PSEngine is a Python package solely built and maintained by the Cyber Security Engineering team powering a number of high profile integrations, such as: Elasticsearch, QRadar, Anomali, Jira, TheHive, etc..
+
+
+Installation
+==================================================
+PSEngine is a Python package that can be installed using pip. To install PSengine, run the following command:
+
+.. code-block:: bash
+
+    $ pip install psengine git+https://github.com/RecordedFuture-ProfessionalServices/psengine.git@main
+
+
+PSEngine officially supports Python >= 3.9, < 3.14
+
+
+Supported Features & Best–Practices
+==================================================
+
+PSEngine is ready for the demands of building robust and reliable integrations.
+
+* Collective Insights
+* Analyst Notes
+* Classic & Playbook Alerts
+* Risklists
+* On demand IOC enrichment
+* List management
+* Detection Rules
+* Built in logging
+* Easy configuration management
+* Proxy support
+
+
+Quick Start
+==================================================
+Excited, to get started? 
+
+The section below will give you the basic building blocks to start building integrations with PSEngine.
+
+But first ensure that:
+
+- PSEngine is installed
+- PSEngine is up-to-date
+
+Let’s get started with some core concepts and practices.
+
+Config Management
+--------------------------------------------------
+The key requirement when building integrations with PSEngine is initializing `Config` as early as possible in your program,
+before initializing any PSEngine managers. This way `rf_token` `app_id` and `platform_id` you set will be used by every manager
+initialized after the Config.
+
+.. code-block:: python
+
+    >>> from psengine.config import Config, get_config
+    # Name & version of the integration itself
+    >>> APP_ID = 'example-app/1.0.0'
+    # Name & version of the tool this integrates with (Optional)
+    >>> PLATFORM_ID = 'PSE/1.0.0'
+    >>> Config.init(rf_token='your_token', app_id=APP_ID, platform_id=PLATFORM_ID)
+    >>> config = get_config()
+    >>> config.app_id
+    'example-app/1.0.0'
+
+The above will result in API calls made by the managers having the following headers set:
+
+- 'X-RFToken' Header will contain the Recorded Future API Token
+- 'User-Agent' Header will contain APP ID and Platform ID (if supplied) which is a Recorded Future requirement, which might look like this:
+
+    example-app/1.0.0 (macOS-14.1-arm64-arm-64bit) psengine-py/2.0.1 PSE/1.0.0
+    
+Authorization
+--------------------------------------------------
+In the example above we saw a token passed to the Config by the caller, but you can also omit the token during initialization and let
+Config retrieve it from the environment variable `RF_TOKEN`. Just ensure that the environment variable is set before running your program:
+
+    export RF_TOKEN=your_token
+
+Alternatively, if you want to set an rf_token separately for a single manager, you may pass it in the constructor:
+
+.. code-block:: python
+
+    >>> note_mgr = AnalystNoteMgr(rf_token='your_token')
+
+Logging
+--------------------------------------------------
+PSEngine also provides the capability for logging to console and files. If your program needs to show log output on the terminal and keep a .log file, just import and use psengine’s logger:
+
+.. code-block:: python
+
+    >>> from psengine.logger import RFLogger
+    >>> LOG = RFLogger().get_logger()
+    >>> LOG.info('Hello, world!')
+
+On the other hand, if your program’s log statements already have handlers setup, just log the normal way:
+
+.. code-block:: python
+
+    >>> import logging
+    >>> LOG = logging.getLogger(__name__)
+    >>> LOG.info('Hello, world!')
+
+In the second example, nothing is printed to terminal or file unless a handler is setup by another program running your code.
+
+Proxies
+--------------------------------------------------
+If your environment requires a proxy to access the internet, you can set the proxy in the Config:
+
+.. code-block:: python
+
+    >>> Config.init(
+            app_id=APP_ID,
+            platform_id=PLATFORM_ID,
+            http_proxy='http://proxy:8080',
+            https_proxy='http://proxy:8080',
+            client_ssl_verify=False,
+        )
+
+Examples
+--------------------------------------------------
+Please refer to `examples <examples>`_ for usage example of each module.

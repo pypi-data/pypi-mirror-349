@@ -1,0 +1,2 @@
+[console_scripts]
+psengine = psengine_cli:main
