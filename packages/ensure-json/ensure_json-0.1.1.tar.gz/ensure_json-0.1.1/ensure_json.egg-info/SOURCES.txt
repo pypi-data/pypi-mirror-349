@@ -1,0 +1,11 @@
+README.md
+cli.py
+ensure_json.py
+setup.py
+ensure_json.egg-info/PKG-INFO
+ensure_json.egg-info/SOURCES.txt
+ensure_json.egg-info/dependency_links.txt
+ensure_json.egg-info/entry_points.txt
+ensure_json.egg-info/requires.txt
+ensure_json.egg-info/top_level.txt
+test/test.py
