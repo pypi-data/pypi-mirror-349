@@ -1,0 +1,14 @@
+django_mailing-0.3.dist-info/licenses/AUTHORS.txt,sha256=DLNBwYgOt6MsmrgEXbqjBipa1vyod6verhuHRh0J1ks,178
+django_mailing-0.3.dist-info/licenses/LICENSE.txt,sha256=SNkhs8SdfUC6g9OOD3RAIqIK2ljk448g1oRNuWpJjRU,1113
+mailing/__init__.py,sha256=rhOhlXYSJf5OIebZiJmcqe_2BnCxbMx0XEI6X-Cz4nw,525
+mailing/mail.py,sha256=seJH3ajtn0tvnR3MDHzHfVs4hdPD-sf2Yy9MA_WjmB4,6922
+mailing/models.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mailing/shortcuts.py,sha256=a2Jc7M_gtgw1I1GgctT6e4asZMn9kw8ML2ZQZ_3bxqQ,4549
+mailing/tasks.py,sha256=ARwv8xzJI2ZdgeIf7GnQjyL37wZLFxv2a1QI1jdHwDk,2000
+mailing/views.py,sha256=F42JXgnqFqK0fajXeutyJJxwOszRxoLMNkIhfc4Z7KI,26
+mailing/templates/mailing/base.html,sha256=Y1V-NALGyeFw5yIv97yKTa9_39r6mvrBAHbqo4UYbXg,3245
+mailing/templates/mailing/base.txt,sha256=dzckXwXqX8jVqPxpjAHgMgmhuPCNjHuu9Aw37fp56Q8,150
+django_mailing-0.3.dist-info/METADATA,sha256=pxKZZpe2ScPLfBTBCCu_jHjK5jjYN7mTinPd8snRNIA,9137
+django_mailing-0.3.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+django_mailing-0.3.dist-info/top_level.txt,sha256=n5cIrpHWQ8RUaW-zZaw2NwAwBScV0BUzAw-ZkyfK0fo,8
+django_mailing-0.3.dist-info/RECORD,,
