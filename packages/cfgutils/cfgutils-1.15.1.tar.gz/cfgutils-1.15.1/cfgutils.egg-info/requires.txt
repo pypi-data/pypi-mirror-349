@@ -1,0 +1,9 @@
+networkx
+graphviz
+numpy
+scipy
+pygraphviz
+
+[tests]
+pytest
+sailreval
