@@ -1,0 +1,5 @@
+python-dotenv==1.0.1
+typer==0.15.2
+PyYAML==6.0.2
+ruamel.yaml==0.18.10
+xkcdpass>=1.20
