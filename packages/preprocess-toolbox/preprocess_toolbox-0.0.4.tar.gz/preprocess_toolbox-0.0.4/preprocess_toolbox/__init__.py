@@ -1,0 +1,7 @@
+"""Top-level package for Environmental Forecasting Preprocess Toolbox."""
+
+__author__ = "British Antarctic Survey"
+__copyright__ = "British Antarctic Survey"
+__email__ = 'digitalinnovation@bas.ac.uk'
+__license__ = "MIT"
+__version__ = '0.0.4'
