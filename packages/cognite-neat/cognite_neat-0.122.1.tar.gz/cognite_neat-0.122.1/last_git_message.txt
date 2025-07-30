@@ -1,0 +1,21 @@
+Neat 1007 skip setting node type for instances of system space views (#1220)
+
+# Description
+
+CDF system (schema) space (e.g. cdm) does not contain definition of node
+types. This leads to error when we try to create instances with neat, as
+neat is automatically set node type for every instance , where node type
+has same id (space,external_id) of view instances is being written
+through.
+
+## Bump
+
+- [x] Patch
+- [ ] Minor
+- [ ] Skip
+
+## Changelog
+### Fixed
+
+- When generating instances through views from system space(s) node type
+is no longer set
