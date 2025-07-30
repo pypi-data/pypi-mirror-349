@@ -1,0 +1,19 @@
+{
+  "csv": {
+    "menu_title": "CSV Import",
+    "import": {
+      "menu_title": "Import CSV File",
+      "prepare_title": "Prepare CSV Import",
+      "do_import_title": "Do CSV Import",
+      "csv_file": "CSV File",
+      "import_template": "Import Template",
+      "school_term": "Related School Term",
+      "create_new_objects": "Create new objects if necessary",
+      "instructions": "You can import data from several school administration software using this CSV importer. Please read the notes according to your software in the documentation! Sometimes there is needed a special procedure to import the data correctly.",
+      "import_data": "Import Data"
+    },
+    "import_template": {
+      "menu_title": "Import Templates"
+    }
+  }
+}
