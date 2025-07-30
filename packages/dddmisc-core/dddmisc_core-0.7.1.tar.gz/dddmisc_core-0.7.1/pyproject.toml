@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "dddmisc-core"
+version = "0.7.1"
+description = "This package provides the core interfaces and types for dddmisc packages family"
+authors = ['Vladislav Vorobyov <vladislav.vorobyov@gmail.com>']
+homepage = "https://dddmisc.github.io/dddmisc-docs/"
+repository = "https://github.com/dddmisc/dddmisc"
+license = "MIT"
+readme = "README.md"
+
+packages = [
+    {include = "d3m"},
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pydantic = "^2.1.0"
+
+[tool.poetry.group.dev.dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
