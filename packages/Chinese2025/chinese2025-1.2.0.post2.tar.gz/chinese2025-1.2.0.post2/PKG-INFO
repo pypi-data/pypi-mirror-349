@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: Chinese2025
+Version: 1.2.0.post2
+Summary: 一个关于中文的集合库，支持广韵查询，方言查询，常见拟音搜索功能，永明体检测，古体诗注韵，古诗注声调、韵。
+Author-email: 李岚霏 <yesandnoandperhaps@yesandnoandperhaps.cn>
+License-Expression: MIT
+Project-URL: Repository, https://github.com/yesandnoandperhaps/Chinese2025
+Project-URL: Homepage, https://yesandnoandperhaps.cn/posts/59f94f23.html
+Requires-Python: <4,>=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pypinyin>=0.47.0
+Provides-Extra: test
+Requires-Dist: pytest; extra == "test"
+Dynamic: license-file
+
+## 介绍
+
+一个关于汉语的数据库，未来还会添加更多功能，目前已有广韵查询，方言查询，常见拟音搜索功能，永明体检测，古体诗注韵，古诗注声调、韵等功能。
+
+## 使用教程
+
+[Chinese2025库文档](https://yesandnoandperhaps.cn/posts/59f94f23.html)

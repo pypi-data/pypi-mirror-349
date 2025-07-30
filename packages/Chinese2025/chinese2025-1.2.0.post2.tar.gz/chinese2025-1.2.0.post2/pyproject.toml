@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "Chinese2025"
+version = "1.2.0.post2"
+description = "一个关于中文的集合库，支持广韵查询，方言查询，常见拟音搜索功能，永明体检测，古体诗注韵，古诗注声调、韵。"
+readme = "README.md"
+requires-python = ">=3.6, <4"
+authors = [
+    {name = "李岚霏", email = "yesandnoandperhaps@yesandnoandperhaps.cn"}
+]
+dependencies = [
+    "pypinyin>=0.47.0"
+]
+license = "MIT"
+license-files = ["LICENSE"]
+
+[project.urls]
+Repository = "https://github.com/yesandnoandperhaps/Chinese2025"
+Homepage = "https://yesandnoandperhaps.cn/posts/59f94f23.html"
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[tool.setuptools]
+packages = ["Chinese2025"]
+include-package-data = true
+
+[tool.setuptools.package-data]
+Chinese2025 = ["reconstructions_list.sqlite"]
