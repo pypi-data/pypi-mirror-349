@@ -1,0 +1,120 @@
+[build-system]
+requires = ["setuptools>=64", "setuptools_scm>=8"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lightning-template"
+dynamic = ["version"]
+authors = [{ name = "shenmishajing", email = "shenmishajing@gmail.com" }]
+description = "A template wrapper for pytorch-lightning."
+readme = "README.md"
+license = { text = "MIT License" }
+requires-python = ">=3.8, <3.13"
+dependencies = [
+    "lightning>=2.0.0",
+    "jsonargparse[signatures,urls,fsspec,ruyaml,argcomplete]",
+    "scikit-learn",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Environment :: GPU :: NVIDIA CUDA",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Natural Language :: English",
+]
+
+[project.optional-dependencies]
+# optional dependencies for project
+optional = ["wandb", "rich", "thop"]
+deps = ["lightning-template[optional]"]
+
+# dependencies for development
+dev-commit = ["pre-commit", "commitizen"]
+dev-doc = [
+    "sphinx",
+    "sphinx-autobuild",
+    "sphinx-book-theme",
+    "sphinx-autoapi",
+    "myst-parser",
+    "sphinx_design",
+]
+dev-build = ["build"]
+dev-test = ["tox", "pytest", "pytest-cov"]
+dev-profile = ["torch_tb_profiler"]
+dev-core = ["lightning-template[dev-commit]"]
+dev = ["lightning-template[dev-core,dev-doc,dev-build,dev-test,dev-profile]"]
+
+# all dependencies
+all = ["lightning-template[deps,dev]"]
+
+[project.urls]
+Homepage = "https://github.com/shenmishajing/lightning_template"
+Repository = "https://github.com/shenmishajing/lightning_template"
+Documentation = "https://lightning-template.readthedocs.io"
+Issues = "https://github.com/shenmishajing/lightning_template/issues"
+Changelog = "https://github.com/shenmishajing/lightning_template/blob/main/docs/get_started/changelog.md"
+
+[project.scripts]
+cli = "lightning_template.tools.cli:main"
+lr_finder = "lightning_template.tools.model.lr_finder:main"
+batch_size_finder = "lightning_template.tools.model.batch_size_finder:main"
+model_statistics = "lightning_template.tools.model.model_statistics:main"
+
+[tool.setuptools_scm]
+version_file = "lightning_template/version.py"
+local_scheme = "dirty-tag"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-q --doctest-modules --doctest-glob='*.md' --doctest-continue-on-failure"
+testpaths = ["tests", "docs"]
+
+[tool.coverage]
+[tool.coverage.run]
+omit = ['__init__.py', 'version.py', 'tests/*', 'docs/*', '.venv/*']
+
+[tool.coverage.report]
+skip_empty = true
+skip_covered = true
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+tag_format = "$version"
+annotated_tag = true
+version_scheme = "pep440"
+version_provider = "scm"
+changelog_file = "docs/get_started/changelog.md"
+update_changelog_on_bump = true
+
+[tool.pixi.workspace]
+channels = ["conda-forge"]
+platforms = ["linux-64"]
+
+[tool.pixi.pypi-dependencies]
+lightning-template = { path = ".", editable = true }
+
+[tool.pixi.environments]
+default = { solve-group = "default" }
+all = { features = ["all", "deps", "dev"], solve-group = "default" }
+deps = { features = ["deps", "optional"], solve-group = "default" }
+dev = { features = ["dev", "dev-core", "dev-doc", "dev-build", "dev-test", "dev-profile"], solve-group = "default" }
+dev-build = { features = ["dev-build"], solve-group = "default" }
+dev-commit = { features = ["dev-commit"], solve-group = "default" }
+dev-core = { features = ["dev-core", "dev-commit"], solve-group = "default" }
+dev-doc = { features = ["dev-doc"], solve-group = "default" }
+dev-profile = { features = ["dev-profile"], solve-group = "default" }
+dev-test = { features = ["dev-test"], solve-group = "default" }
+optional = { features = ["optional"], solve-group = "default" }
+
+[tool.pixi.tasks]
