@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.py
+datum-authorization/__init__.py
+datum-authorization/azure_validator.py
+datum-authorization/keycloak_validator.py
+datum_authorization.egg-info/PKG-INFO
+datum_authorization.egg-info/SOURCES.txt
+datum_authorization.egg-info/dependency_links.txt
+datum_authorization.egg-info/top_level.txt
