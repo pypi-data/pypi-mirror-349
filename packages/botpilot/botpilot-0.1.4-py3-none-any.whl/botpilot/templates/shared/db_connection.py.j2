@@ -1,0 +1,43 @@
+from configparser import ConfigParser
+import oracledb
+import time
+import os
+
+def get_connection(env="UAT", section="GODIGI"):
+    """
+    Returns a database connection using environment and section-based keys.
+    Reads from assets/app.ini using ConfigParser.
+    Example keys: PROD_SERVICE, PROD_DBUser, etc.
+    """
+    config_path = os.path.join(os.path.dirname(__file__), "..", "assets", "app.ini")
+    config = ConfigParser()
+    config.read(config_path)
+
+    try:
+        service_name = config.get(section, f"{env}_SERVICE")
+        host = config.get(section, f"{env}_HOST", fallback="localhost")
+        user = config.get(section, f"USER")
+        password = config.get(section, f"PASSWORD")
+        port = config.get(section, f"PORT", fallback="1521")
+        lib_dir = config.get("RESOURCES", r"LibDIR")
+        oracledb.init_oracle_client(lib_dir=lib_dir)
+
+    except Exception as e:
+        print(f"\u274c Config error: {e}")
+        raise
+
+    dsn = f"{host}:{port}/{service_name}"
+    max_retries = 3
+
+    for attempt in range(1, max_retries + 1):
+        try:
+            connection = oracledb.connect(user=user, password=password, dsn=dsn)
+            print(f"\u2705 Connected to {env} in section [{section}] (Attempt {attempt})")
+            return connection
+        except Exception as e:
+            print(f"\u2705 Attempt {attempt} failed: {e}")
+            time.sleep(2)
+
+    print(f"\u274c Failed to connect to DB: {env} [{section}] after 3 attempts.")
+    raise ConnectionError(f"Connection to {env} in section [{section}] failed.")
+ 

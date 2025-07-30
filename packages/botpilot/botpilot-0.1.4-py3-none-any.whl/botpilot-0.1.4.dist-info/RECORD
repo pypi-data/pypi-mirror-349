@@ -1,0 +1,15 @@
+botpilot/__init__.py,sha256=wQL21SKqJmZ-NSboyC8tgIR3EmyN1XDjwrN7CAHZpGQ,23
+botpilot/main.py,sha256=_m1IwF8Ctl7v6Hd_NblcAbGCRu2TpKWwoS53yVVfR8U,221
+botpilot/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+botpilot/commands/init.py,sha256=1P4oNPtOu5Njc4VfIczeYN3DRgcddipHYQ45XsSojEU,3411
+botpilot/templates/shared/app.ini.j2,sha256=UP-dulZonRnLw5MPji4zebX8ltpwHTesgDfx1K7N8zY,864
+botpilot/templates/shared/db_connection.py.j2,sha256=jtFm5jBfNUarhPSpp3s_RT9ws3c-wCX6pdFnWZBAJX0,1599
+botpilot/templates/shared/emailer.py.j2,sha256=GM86m7HSB53NtHrcGhi0FpMzHSXpRWlgWWTge-OIsq0,804
+botpilot/templates/shared/logger.py.j2,sha256=a7XJngAzAVj02kTwEiTrRe9qOnv36sbgkNN8H-5eV1E,382
+botpilot/templates/web_bot/web_bot.py.j2,sha256=i-828YXZwoDoFDqAlmlO8oGG_XxXarU0xulPtPazAGE,2412
+botpilot-0.1.4.dist-info/licenses/LICENSE,sha256=Gniiyk_BoGzwhhopSNb9b847yGA5fW6vCmAkosEeO_Q,324
+botpilot-0.1.4.dist-info/METADATA,sha256=wyCRcb5ohkMVvaArnwO3Mr3v-_Ct97Fleo0aw4Fooq8,1268
+botpilot-0.1.4.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+botpilot-0.1.4.dist-info/entry_points.txt,sha256=e5a1FgO91TmfUW2sqYxjJnq_egxqPQ-2bhyXG6ox2GE,48
+botpilot-0.1.4.dist-info/top_level.txt,sha256=elOhr3Ra6ZdvbRpRZBZlCHjw8TJcybuBh7Iw0zrhUjI,9
+botpilot-0.1.4.dist-info/RECORD,,
