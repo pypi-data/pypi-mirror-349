@@ -1,0 +1,36 @@
+Metadata-Version: 2.4
+Name: base-common-voc
+Version: 0.2
+Summary: Django app with common implementations for base Angewandte projects using the voc.uni-ak.ac.at vocabulary
+License: Apache License, Version 2.0
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: NOTICE
+Requires-Dist: django>=4.2
+Requires-Dist: rdflib>=7.1.4
+Requires-Dist: requests>=2.32.3
+Dynamic: license-file
+
+# base-common-voc
+
+base-common-voc is a Django app with common implementations for base Angewandte projects using the voc.uni-ak.ac.at vocabulary.
+
+## Quick start
+
+1. Install the package:
+
+```
+pip install base-common-voc
+```
+
+2. Add `base_common_voc` to your `INSTALLED_APPS` setting like this:
+
+```
+INSTALLED_APPS = [
+    …,
+    'base_common_voc',
+]
+```
