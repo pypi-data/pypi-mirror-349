@@ -1,0 +1,54 @@
+Metadata-Version: 2.3
+Name: schema-cat
+Version: 0.1.2
+Summary: A Python library for typed prompts
+License: MIT
+Author: Michael Lahr
+Author-email: michael.lahr@gmail.com
+Requires-Python: >=3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: anthropic (>=0.51.0,<0.52.0)
+Requires-Dist: bs4 (>=0.0.2,<0.0.3)
+Requires-Dist: lxml (>=5.4.0,<6.0.0)
+Requires-Dist: openai (>=1.79.0,<2.0.0)
+Requires-Dist: pydantic (>=2.11.4,<3.0.0)
+Requires-Dist: python-dotenv (>=1.1.0,<2.0.0)
+Description-Content-Type: text/markdown
+
+# schema-cat
+
+A Python library for typed prompts.
+
+## Installation
+
+```bash
+pip install schema-cat
+```
+
+## Usage
+
+```python
+import schema_cat
+# Your usage here
+```
+
+## Development
+
+Install dependencies with Poetry:
+
+```bash
+poetry install
+```
+
+## Publishing
+
+To publish to PyPI:
+
+```bash
+poetry build
+poetry publish
+``` 
