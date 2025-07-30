@@ -1,0 +1,28 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["artgym_env"]
+
+[project]
+name = "artgym_env"
+version = "0.0.2"
+authors = [ 
+    { name="Sean Yi", email="sangyobe@gmail.com" },
+    { name="Sean Yi", email="sean.yi@hyundai.com" }
+]
+description = "Gymnasium environments and wrappers published by ART team. It is a part of ART-Framework(TM) and ART-Gym(TM)."
+readme = "README.md"
+requires-python = ">=3.7"   # 패키지가 지원하는 Python 버전
+classifiers = [             # 패키지 분류자
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+keywords = ["leoquad", "reinforcement learning", "art framework", "gymnasium", "mujoco"] # 검색 키워드
+dependencies = [
+  "gymnasium",
+  "pygame>=2.1.3",
+  "pre-commit",
+]
