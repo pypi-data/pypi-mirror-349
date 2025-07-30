@@ -1,0 +1,65 @@
+Metadata-Version: 2.1
+Name: annotile
+Version: 0.0.1
+Summary: Tile and restitch images and labels for computer vision models.
+Home-page: https://github.com/AdharshKan42/Annotile
+License: MIT
+Author: Adharsh Kandula
+Author-email: akandula.dev@gmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: numpy (>=2.1.0,<3.0.0)
+Requires-Dist: opencv-python (>=4.11.0.86,<5.0.0.0)
+Requires-Dist: pandas (>=2.2.2,<3.0.0)
+Requires-Dist: pillow (>=10.4.0,<11.0.0)
+Requires-Dist: pydantic (>=2.10.6,<3.0.0)
+Requires-Dist: shapely (>=2.1.0,<3.0.0)
+Project-URL: Repository, https://github.com/AdharshKan42/Annotile
+Description-Content-Type: text/markdown
+
+# Annotile
+<hr>
+
+Tile and restitch images and labels for computer vision models.
+
+# Getting Started
+<hr>
+
+## Installation
+<hr>
+
+This is a WIP, not all steps are covered.
+
+1. Install [Just](https://github.com/casey/just) (currently set for windows).
+2. Install `poetry` using `pipx`.
+3. Install dependencies using poetry.
+
+```
+cd Annotile
+poetry install
+```
+
+## Dev tools
+<hr>
+
+Just is used for running formatting and testing jobs.
+
+Run `just --list` for a list of all relevant jobs.
+
+Formatting command:
+```
+just format
+```
+
+Testing command:
+```
+just test
+```
+
+## Docs
+<hr>
+
+Build docs using `mkdocs serve` in the root of the repo.

@@ -1,0 +1,12 @@
+annotile/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+annotile/dataloader/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+annotile/dataloader/dataloader.py,sha256=8Mwn9WtmUtwZlwGil78g7lFHyeOGi0omDhc3cHQLDtU,3583
+annotile/image_tiler/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+annotile/image_tiler/image_tiler.py,sha256=iVqkTtT3_kz5SaT5-wLhjLUsm18pW2hEXypLa8l5zHg,6520
+annotile/label_tiler/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+annotile/label_tiler/label_tiler.py,sha256=vY7xQJcnDqPXrML87YV-bI-mKZNnRvdpSOOydU6rXlg,2707
+annotile/main.py,sha256=ejEsq-qR3-zg41AOhpQlDRSdPQNk-3eXapkaY8TxxdU,894
+annotile-0.0.1.dist-info/LICENSE,sha256=7TaOvXvpA8kVHB6gm5dq0YpyVGekFSz7MSIvjIBal8Q,1069
+annotile-0.0.1.dist-info/METADATA,sha256=xmNcN7FfJrchF769ATOzRHmWeUS1jibaaDkv0XwOerk,1472
+annotile-0.0.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+annotile-0.0.1.dist-info/RECORD,,
