@@ -1,0 +1,75 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "uv.sync",
+            "type": "shell",
+            "command": "uv",
+            "args": [
+                "sync",
+            ],
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
+        },
+        {
+            "label": "uv.sync.dev",
+            "type": "shell",
+            "command": "uv",
+            "args": [
+                "sync",
+                "--all-extras",
+                "--all-groups"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "uv.sync.dev.reinstall",
+            "type": "shell",
+            "command": "uv",
+            "args": [
+                "sync",
+                "--all-extras",
+                "--all-groups"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "uv.build",
+            "type": "shell",
+            "command": "uv",
+            "args": [
+                "build"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "maturin.develop.release",
+            "type": "shell",
+            "command": "maturin",
+            "args": [
+                "develop",
+                "--release"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "maturin.build.release",
+            "type": "shell",
+            "command": "maturin",
+            "args": [
+                "build",
+                "--release"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "publish",
+            "type": "shell",
+            "command": "./publish.sh",
+            "problemMatcher": []
+        },
+    ]
+}
