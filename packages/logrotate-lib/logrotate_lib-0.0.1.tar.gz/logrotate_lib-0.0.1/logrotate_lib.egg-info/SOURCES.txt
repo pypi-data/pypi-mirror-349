@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+setup.py
+logrotate_lib/__init__.py
+logrotate_lib.egg-info/PKG-INFO
+logrotate_lib.egg-info/SOURCES.txt
+logrotate_lib.egg-info/dependency_links.txt
+logrotate_lib.egg-info/top_level.txt
