@@ -1,0 +1,33 @@
+# SPDX-FileCopyrightText: 2025 Mercator Ocean International <https://www.mercator-ocean.eu/>
+#
+# SPDX-License-Identifier: EUPL-1.2
+
+[project]
+name = "oceanbench"
+version = "0.0.2"
+description = ""
+authors = [
+    {name = "Mercator Ocean International",email = "digital-ocean-dev@mercator-ocean.eu"},
+]
+readme = "README.md"
+requires-python = ">=3.12.9"
+dependencies = [
+    "xarray==2025.1.2",
+    "matplotlib (>=3.10.0,<4.0.0)",
+    "netcdf4 (>=1.7.2,<2.0.0)",
+    "seaborn (>=0.13.2,<0.14.0)",
+    "gsw (>=3.6.19,<4.0.0)",
+    "parcels (>=3.1.2,<4.0.0)",
+    "zarr==2.18.4",
+    "dask (>=2022)",
+    "numcodecs==0.15.1",
+    "copernicusmarine==2.0.1",
+    "requests (>=2.27.1)",
+    "aiohttp (>=3.0.0)",
+    "jupyter (>=1.1)",
+    "papermill[s3] (>=2.6.0)"
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
