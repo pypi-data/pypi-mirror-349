@@ -1,0 +1,231 @@
+query group($id: ID!) {
+  groupById(id: $id) {
+    id
+    name
+  }
+}
+
+query gqlGroupsByTimeGrid($timeGrid: ID!) {
+  groups: groupsByTimeGrid(timeGrid: $timeGrid) {
+    id
+    name
+  }
+}
+
+query courseBundles($group: ID!, $validityRange: ID!) {
+  courseBundles: courseBundlesForGroup(
+    group: $group
+    validityRange: $validityRange
+  ) {
+    id
+    name
+    lessonQuota
+    courses {
+      id
+      name
+      lessonQuota
+      subject {
+        id
+        name
+        shortName
+        colourFg
+        colourBg
+      }
+      teachers {
+        id
+        fullName
+        shortName
+      }
+      defaultRoom {
+        id
+        name
+        shortName
+      }
+      groups {
+        id
+        name
+        shortName
+      }
+    }
+  }
+}
+
+query lessonBundles($group: ID!, $timeGrid: ID!) {
+  lessonBundles: lessonBundlesForGroup(group: $group, timeGrid: $timeGrid) {
+    id
+    slotStart {
+      id
+      period
+      weekday
+    }
+    slotEnd {
+      id
+      period
+      weekday
+    }
+    recurrence
+    courseBundle {
+      id
+    }
+    lessons {
+      id
+      subject {
+        id
+        name
+        shortName
+        colourFg
+        colourBg
+      }
+      teachers {
+        id
+        fullName
+        shortName
+      }
+      rooms {
+        id
+        name
+        shortName
+      }
+      course {
+        id
+        name
+      }
+    }
+    isOptimistic
+    canEdit
+    canDelete
+  }
+}
+
+query overlayBundles($rooms: [ID]!, $teachers: [ID]!, $timeGrid: ID!) {
+  overlayBundles: lessonBundlesForRoomsOrTeachers(
+    rooms: $rooms
+    teachers: $teachers
+    timeGrid: $timeGrid
+  ) {
+    id
+    slotStart {
+      id
+      period
+      weekday
+    }
+    slotEnd {
+      id
+      period
+      weekday
+    }
+    lessons {
+      id
+      teachers {
+        id
+        shortName
+      }
+      rooms {
+        id
+        shortName
+      }
+    }
+  }
+}
+
+mutation createLessonBundles($input: [BatchCreateLessonBundleInput]!) {
+  createLessonBundles(input: $input) {
+    items: lessonBundles {
+      id
+      slotStart {
+        id
+        period
+        weekday
+      }
+      slotEnd {
+        id
+        period
+        weekday
+      }
+      recurrence
+      courseBundle {
+        id
+      }
+      lessons {
+        id
+        subject {
+          id
+          name
+          shortName
+          colourFg
+          colourBg
+        }
+        teachers {
+          id
+          fullName
+          shortName
+        }
+        rooms {
+          id
+          name
+          shortName
+        }
+        course {
+          id
+          name
+        }
+      }
+      isOptimistic
+      canEdit
+      canDelete
+    }
+  }
+}
+
+mutation moveLessonBundles($input: [BatchPatchLessonBundleInput]!) {
+  updateLessonBundles(input: $input) {
+    lessonBundles {
+      id
+      slotStart {
+        id
+        period
+        weekday
+      }
+      slotEnd {
+        id
+        period
+        weekday
+      }
+      isOptimistic
+    }
+  }
+}
+
+mutation updateLessons($input: [BatchPatchLessonInput]!) {
+  updateLessons(input: $input) {
+    items: lessons {
+      id
+      subject {
+        id
+        name
+        shortName
+        colourFg
+        colourBg
+      }
+      teachers {
+        id
+        fullName
+        shortName
+      }
+      rooms {
+        id
+        name
+        shortName
+      }
+      isOptimistic
+      canEdit
+      canDelete
+    }
+  }
+}
+
+mutation deleteLessonBundles($ids: [ID]!) {
+  deleteLessonBundles(ids: $ids) {
+    deletionCount
+  }
+}

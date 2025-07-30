@@ -1,0 +1,7 @@
+<div class="card lesson-card">
+  <div class="card-content">
+    {% for element in elements %}
+        {% include "lesrooster/partials/lesson.html" with lesson=element %}
+    {% endfor %}
+  </div>
+</div>

@@ -1,0 +1,8 @@
+query validityRangeById($id: ID!) {
+  validityRange: validityRangeById(id: $id) {
+    id
+    name
+    dateStart
+    dateEnd
+  }
+}

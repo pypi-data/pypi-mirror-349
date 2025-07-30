@@ -1,0 +1,15 @@
+{% load i18n %}
+
+<div class="card lesson-card supervision-card">
+  <div class="card-content">
+    {% if supervision %}
+      <div>
+        <p>
+          <strong>{% trans "Supervision" %}</strong>
+          {% include "lesrooster/partials/rooms.html" with rooms=supervision.rooms.all %}
+          {% include "lesrooster/partials/teachers.html" with teachers=supervision.teachers.all %}
+        </p>
+      </div>
+    {% endif %}
+  </div>
+</div>

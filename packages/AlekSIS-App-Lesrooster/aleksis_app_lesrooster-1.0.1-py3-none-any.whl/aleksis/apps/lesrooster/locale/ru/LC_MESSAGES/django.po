@@ -1,0 +1,311 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-04-15 21:15+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: aleksis/apps/lesrooster/model_extensions.py:14
+msgid "Slot by day (1-7) and period"
+msgstr ""
+
+#: aleksis/apps/lesrooster/model_extensions.py:32
+msgid "Weekly recurrence (for lessons, supervisions etc.)"
+msgstr ""
+
+#: aleksis/apps/lesrooster/models.py:45
+msgid "Draft"
+msgstr ""
+
+#: aleksis/apps/lesrooster/models.py:46
+msgid "Published"
+msgstr ""
+
+#: aleksis/apps/lesrooster/models.py:57
+msgid "School term"
+msgstr ""
+
+#: aleksis/apps/lesrooster/models.py:60 aleksis/apps/lesrooster/models.py:311
+msgid "Name"
+msgstr ""
+
+#: aleksis/apps/lesrooster/models.py:62
+msgid "Start date"
+msgstr ""
+
+#: aleksis/apps/lesrooster/models.py:63
+msgid "End date"
+msgstr ""
+
+#: aleksis/apps/lesrooster/models.py:66
+msgid "Status"
+msgstr ""
+
+#: aleksis/apps/lesrooster/models.py:112
+msgid "You can't unpublish a validity range."
+msgstr ""
+
+#: aleksis/apps/lesrooster/models.py:115
+msgid "The start date must be earlier than the end date."
+msgstr ""
+
+#: aleksis/apps/lesrooster/models.py:121
+msgid "The validity range must be within the school term."
+msgstr ""
+
+#: aleksis/apps/lesrooster/models.py:127
+msgid "The school term of a published validity range can't be changed."
+msgstr ""
+
+#: aleksis/apps/lesrooster/models.py:133
+msgid "You can't change the start date if the validity range is already active."
+msgstr ""
+
+#: aleksis/apps/lesrooster/models.py:136
+msgid "You can't set the start date to a date in the past."
+msgstr ""
+
+#: aleksis/apps/lesrooster/models.py:141
+msgid "You can't change the end date if the validity range is already in the past."
+msgstr ""
+
+#: aleksis/apps/lesrooster/models.py:146
+msgid "To avoid data loss, the validity range can be only shortened until the current day."
+msgstr ""
+
+#: aleksis/apps/lesrooster/models.py:161
+msgid "There is already a published validity range for this time or a part of this time."
+msgstr ""
+
+#: aleksis/apps/lesrooster/models.py:190
+msgid "Publish validity range {}"
+msgstr ""
+
+#: aleksis/apps/lesrooster/models.py:192
+msgid "All lessons and supervisions in the validity range {} are being synced …"
+msgstr ""
+
+#: aleksis/apps/lesrooster/models.py:194
+msgid "The validity range has been published successfully."
+msgstr ""
+
+#: aleksis/apps/lesrooster/models.py:195
+msgid "There was a problem while publishing the validity range."
+msgstr ""
+
+#: aleksis/apps/lesrooster/models.py:213
+#: aleksis/apps/lesrooster/templates/lesrooster/timetable_print.html:55
+msgid "Validity range"
+msgstr ""
+
+#: aleksis/apps/lesrooster/models.py:214
+msgid "Validity ranges"
+msgstr ""
+
+#: aleksis/apps/lesrooster/models.py:235 aleksis/apps/lesrooster/models.py:752
+msgid "Linked validity range"
+msgstr ""
+
+#: aleksis/apps/lesrooster/models.py:240
+msgid "Group"
+msgstr ""
+
+#: aleksis/apps/lesrooster/models.py:284 aleksis/apps/lesrooster/models.py:308
+msgid "Time Grid"
+msgstr ""
+
+#: aleksis/apps/lesrooster/models.py:285
+msgid "Time Grids"
+msgstr ""
+
+#: aleksis/apps/lesrooster/models.py:314
+msgid "Week day"
+msgstr ""
+
+#: aleksis/apps/lesrooster/models.py:317
+msgid "Number of period"
+msgstr ""
+
+#: aleksis/apps/lesrooster/models.py:320
+msgid "Start time"
+msgstr ""
+
+#: aleksis/apps/lesrooster/models.py:321
+msgid "End time"
+msgstr ""
+
+#: aleksis/apps/lesrooster/models.py:397
+msgid "Slot"
+msgstr ""
+
+#: aleksis/apps/lesrooster/models.py:398
+msgid "Slots"
+msgstr ""
+
+#: aleksis/apps/lesrooster/models.py:408
+msgid "Course Bundle"
+msgstr ""
+
+#: aleksis/apps/lesrooster/models.py:414
+msgid "Bundled lessons"
+msgstr ""
+
+#: aleksis/apps/lesrooster/models.py:422
+msgid "Start slot"
+msgstr ""
+
+#: aleksis/apps/lesrooster/models.py:428
+msgid "End slot"
+msgstr ""
+
+#: aleksis/apps/lesrooster/models.py:435 aleksis/apps/lesrooster/models.py:671
+msgid "Recurrence"
+msgstr ""
+
+#: aleksis/apps/lesrooster/models.py:438
+msgid "Leave empty for a single lesson."
+msgstr ""
+
+#: aleksis/apps/lesrooster/models.py:444
+msgid "The slots must be in the same time grid."
+msgstr ""
+
+#: aleksis/apps/lesrooster/models.py:536
+msgid "Lesson Bundle"
+msgstr ""
+
+#: aleksis/apps/lesrooster/models.py:537
+msgid "Lesson Bundles"
+msgstr ""
+
+#: aleksis/apps/lesrooster/models.py:553
+msgid "Linked lesson event"
+msgstr ""
+
+#: aleksis/apps/lesrooster/models.py:561 aleksis/apps/lesrooster/models.py:746
+msgid "Course"
+msgstr ""
+
+#: aleksis/apps/lesrooster/models.py:568 aleksis/apps/lesrooster/models.py:645
+msgid "Rooms"
+msgstr ""
+
+#: aleksis/apps/lesrooster/models.py:574 aleksis/apps/lesrooster/models.py:650
+#: aleksis/apps/lesrooster/models.py:764
+msgid "Teachers"
+msgstr ""
+
+#: aleksis/apps/lesrooster/models.py:581 aleksis/apps/lesrooster/models.py:662
+msgid "Subject"
+msgstr ""
+
+#: aleksis/apps/lesrooster/models.py:614
+msgid "Lesson"
+msgstr ""
+
+#: aleksis/apps/lesrooster/models.py:615
+msgid "Lessons"
+msgstr ""
+
+#: aleksis/apps/lesrooster/models.py:625
+msgid "Break"
+msgstr ""
+
+#: aleksis/apps/lesrooster/models.py:626
+msgid "Breaks"
+msgstr ""
+
+#: aleksis/apps/lesrooster/models.py:638
+msgid "Linked supervision event"
+msgstr ""
+
+#: aleksis/apps/lesrooster/models.py:656
+msgid "Break Slot"
+msgstr ""
+
+#: aleksis/apps/lesrooster/models.py:674
+msgid "Leave empty for a single supervision."
+msgstr ""
+
+#: aleksis/apps/lesrooster/models.py:687
+#: aleksis/apps/lesrooster/templates/lesrooster/partials/supervision.html:8
+msgid "Supervision"
+msgstr ""
+
+#: aleksis/apps/lesrooster/models.py:688
+msgid "Supervisions"
+msgstr ""
+
+#: aleksis/apps/lesrooster/models.py:757
+msgid "Lesson quota"
+msgstr ""
+
+#: aleksis/apps/lesrooster/models.py:758
+msgid "Number of slots this course is scheduled to fill per week"
+msgstr ""
+
+#: aleksis/apps/lesrooster/models.py:795
+msgid "Timebound course config"
+msgstr ""
+
+#: aleksis/apps/lesrooster/models.py:796
+msgid "Timebound course configs"
+msgstr ""
+
+#: aleksis/apps/lesrooster/models.py:803
+msgid "Can manage lesson raster"
+msgstr ""
+
+#: aleksis/apps/lesrooster/models.py:804
+msgid "Can plan timetables"
+msgstr ""
+
+#: aleksis/apps/lesrooster/preferences.py:9
+msgid "Lesson management"
+msgstr ""
+
+#: aleksis/apps/lesrooster/preferences.py:17
+msgid "Create course group when planning new courses"
+msgstr ""
+
+#: aleksis/apps/lesrooster/preferences.py:19
+msgid "If creating a new course with the 'Plan courses' feature, also create a seperate course group with the original group(s) as parent group(s) and link that/these group(s) to the newly created course"
+msgstr ""
+
+#: aleksis/apps/lesrooster/preferences.py:33
+msgid "Group type for automatically created course groups"
+msgstr ""
+
+#: aleksis/apps/lesrooster/preferences.py:34
+msgid "If you leave it empty, no group type will be used."
+msgstr ""
+
+#: aleksis/apps/lesrooster/preferences.py:42
+msgid "Fill course group with the given courses' members"
+msgstr ""
+
+#: aleksis/apps/lesrooster/preferences.py:44
+msgid "If creating a new course with the 'Plan courses' feature, fill the seperately created course group with the members of the original group(s)."
+msgstr ""
+
+#: aleksis/apps/lesrooster/schema/timebound_course_config.py:145
+#: aleksis/apps/lesrooster/schema/validity_range.py:52
+msgid "There is no school term for the school structure."
+msgstr ""
+
+#: aleksis/apps/lesrooster/templates/lesrooster/timetable_print.html:10
+msgid "Timetable"
+msgstr ""

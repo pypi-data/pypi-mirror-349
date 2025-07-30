@@ -1,0 +1,56 @@
+{% extends 'core/base_print.html' %}
+
+{% load data_helpers static i18n %}
+
+{% block extra_head %}
+  <link rel="stylesheet" href="{% static 'css/lesrooster/timetable_print.css' %}">
+{% endblock %}
+
+{% block page_title %}
+  {% trans "Timetable" %} <i>{{ el.short_name|default:el.name }}</i>
+{% endblock %}
+{% block content %}
+
+  <div class="timetable-plan">
+    {#  Week days #}
+    <div class="row">
+      <div class="col s2">
+
+      </div>
+      {% for weekday in weekdays %}
+        <div class="col s2">
+          <div class="card timetable-title-card">
+            <div class="card-content">
+              <span class="card-title">
+                {{ weekday.1 }}
+              </span>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+    {% for row in timetable %}
+      <div class="row">
+        <div class="col s2">
+          {% if row.type == "period" %}
+            {% include "lesrooster/partials/slot_time.html" with slot=row.slot %}
+          {% endif %}
+        </div>
+
+        {% for col in row.cols %}
+          {# A lesson #}
+          <div class="col s2">
+            {% if col.type == "period" %}
+              {% include "lesrooster/partials/elements.html" with elements=col.col %}
+            {% else %}
+              {% include "lesrooster/partials/supervision.html" with supervision=col.col %}
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    {% endfor %}
+  </div>
+
+  <small>{% trans "Validity range" %}: {{ time_grid.validity_range.date_start }}–{{ time_grid.validity_range.date_end }}</small>
+{% endblock %}
