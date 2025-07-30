@@ -1,0 +1,17 @@
+ariadne>=0.20.1
+uvicorn
+starlette
+httpx
+aiocache[memcached]
+sentry-sdk>=1.32.0
+swh.core[http]>=3.7.0
+swh.storage>=1.15.3
+swh.model>=6.14.0
+swh.search
+swh.auth>=0.7.2
+
+[testing]
+pytest>=8.1
+pytest-mock
+swh.core[testing]>=3.7.0
+types-PyYAML
