@@ -1,0 +1,11 @@
+squad_builder/__init__.py,sha256=4mizlsE0dLusYlN1uFbmO9cyBqXqXQZlA9GJThhhCJ4,160
+squad_builder/api/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+squad_builder/api/cli.py,sha256=iIQr1xMB9NL7OsXmeFeRKLKKT5HWAUiXzrPnDkl-3pE,1379
+squad_builder/api/decorators.py,sha256=WT4glZuP4sq-Q_h_vqJUAWPNTsidKEguRz_TuFCAH6Q,937
+squad_builder/data_client/__init__.py,sha256=5aE2HDS-lqQUMvtnH7-6ysjrrNmYB_CcxVrWcHnSD4o,134
+squad_builder/data_client/client.py,sha256=Q5ZfE9akYVU1GJJGNCrN3wi61959pDoF27lsFjoSQ4s,11272
+squad_builder-0.1.0.dist-info/licenses/LICENSE,sha256=SpDh3KFOxtg7M5lBaebbqgB9suxUJMbtjv_q-elZQoc,1075
+squad_builder-0.1.0.dist-info/METADATA,sha256=ETgj90VYA_kut0j_LhtSarw-5SmCfcPJ1-RXkXtsNJE,6436
+squad_builder-0.1.0.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+squad_builder-0.1.0.dist-info/top_level.txt,sha256=loxyVh9JTPFkGm4sl89YoqkIFyslPZ_P-yvZ9tVoJes,14
+squad_builder-0.1.0.dist-info/RECORD,,
