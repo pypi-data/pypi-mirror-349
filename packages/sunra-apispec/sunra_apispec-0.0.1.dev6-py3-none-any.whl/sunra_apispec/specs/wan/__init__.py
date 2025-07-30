@@ -1,0 +1,1 @@
+from .wan2_1_i2v_14b_720p import Wan21I2V14b720PReplicateMapper
