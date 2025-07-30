@@ -1,0 +1,12 @@
+gitflow/__init__.py,sha256=TvNHN8mkMbO8RLR_nlfgl3Tisy84V5RpZ9sSGcHBr7E,87
+gitflow/cli.py,sha256=nVszhvs0Wh3wxT8Qha6IQt5cWXDi3xlIeaSoVFsP_-s,3917
+gitflow/commands.py,sha256=HK77gk4ewCDj2_gD9Vb6tOHkLY6DYw75AkIMs2Qdlzo,11930
+gitflow/__pycache__/__init__.cpython-312.pyc,sha256=T64-zj1kkCXXOxs3aIREimXdkaOmHKJxtZNZO70f-xk,256
+gitflow/__pycache__/cli.cpython-312.pyc,sha256=tzbfKoOoDE2lnjIeRQZ8R7Vle92FW4J6UI5ehLNBdH0,4939
+gitflow/__pycache__/commands.cpython-312.pyc,sha256=ox-PfmMwijalWM2L8iY9vCmlXUUBQxjLdFRM_dQgdeE,15837
+gitflow_cli-0.1.0.dist-info/licenses/LICENSE,sha256=OS_UiXa5O5rX8zvqUEGktCndf4B3JlR2G8XbV85X20A,1068
+gitflow_cli-0.1.0.dist-info/METADATA,sha256=08X0GnbH4talCD7wuVOltgU8ZfYDKMlAW-u-l2zFoS8,2508
+gitflow_cli-0.1.0.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+gitflow_cli-0.1.0.dist-info/entry_points.txt,sha256=t7QrfF32hjmoFXk87ZsS_JEXP9hW-aXZBWEAzS5iBQo,45
+gitflow_cli-0.1.0.dist-info/top_level.txt,sha256=C4GBp4W9N6sLzwnKJ_LVDdooZ1MO2eR5YIqyDX45C7k,8
+gitflow_cli-0.1.0.dist-info/RECORD,,
