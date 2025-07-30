@@ -1,0 +1,15 @@
+fastapi_agmin/__init__.py,sha256=U3YLcFsqy9OTLD0tZefMyYunwhBLzmSD2Hz1j0GNWhk,134
+fastapi_agmin/agmin.py,sha256=5sg5UiMHLhSRkKkIcSh0TSGq2P1YDuobt5F3fqe0xGg,19956
+fastapi_agmin/static/index.html,sha256=8fUAcT-_cDOnesk6KlPfr1efvy1fIG_Kb_sobFJojnc,375
+fastapi_agmin/static/vite.svg,sha256=SnSK_UQ5GLsWWRyDTEAdrjPoeGGrXbrQgRw6O0qSFPs,1497
+fastapi_agmin/static/assets/HomeView-BnX8hJ0G.js,sha256=och9op_6nMM9y2HsGYBT8U-ZucgkcqUOuCA87DBuYEk,1003921
+fastapi_agmin/static/assets/HomeView-DKlFP5ja.css,sha256=drXuq7IY6K77oLdu7g2tSmg880FOeDJnUllknr0mxDw,177
+fastapi_agmin/static/assets/ModelAndRelated-BWhtassW.css,sha256=tVxYVyDYV7f4CKP5nq7JJUUgZCzPu9NVDftDAIRjMSE,6530
+fastapi_agmin/static/assets/ModelAndRelated-BkPGuUv9.js,sha256=r5m_LKTim0nRT6QhAONUBWfnwc_Zvn37zfgoJQEIkDg,1012029
+fastapi_agmin/static/assets/duckdb-DnmI0-ym.js,sha256=Qjm3jMJ_QAB1c2ACyqG499idIynhUNaLcK-mAsOxn0o,8494588
+fastapi_agmin/static/assets/index-CMWJxmaP.css,sha256=E1h8kvebv7GDgMDu4Hbjcp5pLRp0J2Q2v0ev3CLoBfQ,263912
+fastapi_agmin/static/assets/index-CbGGTe5v.js,sha256=5fduHmW_LGdN23chY5-RtYcgOxIJcm0OjTX9GsmfMuA,131925
+fastapi_agmin-0.3.0.dist-info/METADATA,sha256=ps40pKtlZmyJ-BQ8R-KHSM44lMQuKpXlBl3aF_dr3SA,4607
+fastapi_agmin-0.3.0.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+fastapi_agmin-0.3.0.dist-info/top_level.txt,sha256=B6Pr-u2AEckf_txZU3phm1_dPP1C8mxEAEnG4cBlNyM,14
+fastapi_agmin-0.3.0.dist-info/RECORD,,
