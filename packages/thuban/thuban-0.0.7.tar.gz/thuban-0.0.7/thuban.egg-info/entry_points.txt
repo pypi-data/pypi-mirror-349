@@ -1,0 +1,2 @@
+[console_scripts]
+thuban = thuban.cli:determine_pointing_and_distortion
