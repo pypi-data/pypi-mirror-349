@@ -1,0 +1,14 @@
+pyfcg/__init__.py,sha256=MCU0j4WmkfglrW-Eg99tZb7QqJuLT9s8Co8GzYswK-U,378
+pyfcg/agent.py,sha256=Bv2VH4Uly5G_ooxI0GX2jTM9VGRwnmoCf2NyolLqVNs,3024
+pyfcg/cxn.py,sha256=zHsAFCPOjIP6cuTNGozd5xju_liuXqtbOvsB3zmZrOA,1850
+pyfcg/fcg_go_bridge.py,sha256=oY6NakI7FaVclQcspLvFh31ockr0_EXhuOtvVRF5gbg,5840
+pyfcg/grammar.py,sha256=vXOg0pvSkZNpxvGXWzDG7nxA6MDE8jqPIxnPEVHRdxQ,9787
+pyfcg/propbank.py,sha256=ePdPFOpLyvbwRjKOc702nDr_uoWpAHC58FYEF9_KuYs,2678
+pyfcg/resources.py,sha256=MNeuKBlXCGoOl2GgRuWYgYg4KZMarAj8ql7dt3kHaqM,1253
+pyfcg/routes.py,sha256=FdhkLIKX-sNwFatEuhf4X_D8Bv6Q0CQbGGq00x_tzy0,7344
+pyfcg/utils.py,sha256=Vu8-pX1snH1XSH5piwkxwL4W082nGirvumvgIPuLkzs,4732
+pyfcg/test/testje.txt,sha256=yLmjwg2gWZHkv4C4ovU6kcv42-ucfR919RZr8tF_gbQ,18
+pyfcg-0.1b5.dist-info/METADATA,sha256=K9_RvJIUb6fHnOBguYoG_y0xjyVMcEUgwhkY1DhY8FM,1669
+pyfcg-0.1b5.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+pyfcg-0.1b5.dist-info/top_level.txt,sha256=q5b7u6nj-YPU5OZyprKKKfFOfWcTJTEhmTCSwgk5f2o,6
+pyfcg-0.1b5.dist-info/RECORD,,
