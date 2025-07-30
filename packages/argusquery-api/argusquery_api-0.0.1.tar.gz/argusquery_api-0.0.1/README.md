@@ -1,0 +1,90 @@
+[![License](https://img.shields.io/badge/license-MIT-blue
+)](https://gitlab.com/argusquery/api/-/blob/main/LICENSE)
+
+# ArgusQuery API
+An open source API for conducting LLM search via requests to the ArgusQuery backend
+
+# Table of Contents
+1. [Installation](#installation)
+2. [Usage](#usage)
+3. [Dependencies](#dependencies)
+4. [Development](#development)
+5. [License](#license)
+
+<a name="installation"></a>
+
+# Installation
+
+## PyPi
+
+Coming soon...
+
+## Source
+
+Be sure to have `poetry` installed for build and dependency management. It is highly recommended to install this library using `pipx`. See documentation for installation instructions [here](https://pipx.pypa.io/stable/installation/).
+
+**Note**: Do not use `pipx` to install libraries other than `poetry` unless you know what you are doing.
+
+```bash
+pipx install poetry
+poetry build
+pip install dist/argusquery_api*.whl
+```
+
+<a name="usage"></a>
+
+# Usage
+
+This section of the README is under construction. In the meantime, refer to the Jupyter Notebooks located under `/examples`
+
+<a name="dependencies"></a>
+
+# Dependencies
+
+## Python Version
+**>= 3.10** required : see below for a list of critical versioned features included in this library
+- **3.10** : union type hints using pipe `|` character
+- **3.7** : dataclasses
+- **3.5** : type hints
+
+## Core Dependencies
+
+**pydantic** : [Docs](https://docs.pydantic.dev/latest/) | [GitHub](https://github.com/pydantic/pydantic) | [PyPI](https://pypi.org/project/pydantic/)
+
+**requests** : [Docs](https://requests.readthedocs.io/en/latest/) | [GitHub](https://github.com/psf/requests) | [PyPI](https://pypi.org/project/requests/)
+
+## Testing Dependencies
+
+**coverage** : [Docs](https://coverage.readthedocs.io/en/latest/) |  [GitHub](https://github.com/nedbat/coveragepy) | [PyPI](https://pypi.org/project/coverage/)
+
+**genbadge** : [Docs](https://smarie.github.io/python-genbadge/) | [GitHub](https://github.com/smarie/python-genbadge) | [PyPI](https://pypi.python.org/pypi/genbadge/)
+
+**pytest** : [Docs](https://docs.pytest.org/en/stable/contents.html) | [GitHub](https://github.com/pytest-dev/pytest/) | [PyPI](https://pypi.org/project/pytest/)
+
+<a name="development"></a>
+
+# Development
+The following command installs all core package dependencies and the project library:
+```bash
+poetry install
+```
+To avoid installing the project library, use the `--no-root` flag, for example:
+```bash
+poetry install --no-root
+```
+To install testing dependencies, supply `--with test` to the `install` command, for example:
+```bash
+poetry install --with test
+```
+This is typically all that is required to continue to testing. Otherwise, see the `poetry` documentation for a full list of commands [here](https://python-poetry.org/docs/).
+
+After installing testing dependencies, check out the `Makefile` for some handy `make` invocations.
+
+## OS Compatibility
+
+In the CircleCI pipeline, testing occurs on an Ubuntu 22.04 amd64 Linux machine, running the `cimg/python:3.10.14` image. See image specifics at [CircleCI docs](https://circleci.com/developer/images/image/cimg/python) and [Docker Hub](https://hub.docker.com/r/cimg/python).
+
+<a name="license"></a>
+
+# License
+This project is distributed under the terms of the [MIT license](https://gitlab.com/argusquery/api/-/blob/main/LICENSE).

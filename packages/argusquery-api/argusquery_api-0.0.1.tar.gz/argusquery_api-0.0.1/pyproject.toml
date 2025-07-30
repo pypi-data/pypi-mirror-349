@@ -1,0 +1,50 @@
+[project]
+name = "argusquery-api"
+version = "0.0.1"
+description = "A Python API for executing backend admin workflows for ArgusQuery"
+authors = [
+    { name = "Kiran de Silva", email = "kiran.desilva@argusanalytics.io" },
+    { name = "Parag Panse", email = "paragpm@argusanalytics.io" }
+]
+license = { text = "MIT" }
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "requests==2.31.0",
+    "pydantic==2.10.6"
+]
+dynamic = [ "classifiers" ]
+
+[project.urls]
+homepage = "https://gitlab.com/argusquery/api"
+repository = "https://gitlab.com/argusquery/api"
+
+[tool.poetry]
+classifiers = [
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+packages = [
+    { include = "argusquery_api" }
+]
+
+[tool.poetry.group.test]
+optional = true
+
+[tool.poetry.group.test.dependencies]
+coverage = "^6.4.0"
+pytest = "^7.4.0"
+genbadge = {extras = ["coverage", "tests"], version = "^1.1.1"}
+
+[tool.coverage.run]
+branch = true
+source = ["."]
+omit = ["tests/*"]
+
+[tool.coverage.report]
+show_missing = true
+skip_empty = true
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
