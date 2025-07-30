@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+nn_tilde.egg-info/PKG-INFO
+nn_tilde.egg-info/SOURCES.txt
+nn_tilde.egg-info/dependency_links.txt
+nn_tilde.egg-info/requires.txt
+nn_tilde.egg-info/top_level.txt
+python_tools/__init__.py
+python_tools/buffer.py
+python_tools/codegen.py
+python_tools/module.py
+python_tools/templates/__init__.py
+python_tools/templates/attributes.py
+python_tools/templates/buffers.py
