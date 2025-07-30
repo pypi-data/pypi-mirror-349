@@ -1,0 +1,3 @@
+[console_scripts]
+agentops=agentops.cli.commands:cli
+
