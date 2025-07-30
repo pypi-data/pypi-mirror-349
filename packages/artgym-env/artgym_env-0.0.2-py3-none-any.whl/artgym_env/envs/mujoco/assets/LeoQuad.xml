@@ -1,0 +1,242 @@
+<mujoco model="LeoQuad">
+    <compiler angle="radian" meshdir="meshes/" autolimits="true" />
+    <option timestep="0.001" tolerance="1e-06" cone="elliptic" jacobian="sparse" solver="CG" iterations="30" />
+    <default>
+        <joint armature="1" damping="1" limited="true"/>
+        <geom conaffinity="0" condim="3" density="5.0" friction="1 0.5 0.5" margin="0.01" rgba="0.8 0.6 0.4 1"/>
+    </default>
+    <asset>
+        <texture builtin="gradient" height="100" rgb1="1 1 1" rgb2="0 0 0" type="skybox" width="100"/>
+        <texture builtin="flat" height="1278" mark="cross" markrgb="1 1 1" name="texgeom" random="0.01" rgb1="0.8 0.6 0.4" rgb2="0.8 0.6 0.4" type="cube" width="127"/>
+        <texture builtin="checker" height="100" name="texplane" rgb1="0 0 0" rgb2="0.8 0.8 0.8" type="2d" width="100"/>
+        <material name="MatPlane" reflectance="0.5" shininess="1" specular="1" texrepeat="60 60" texture="texplane"/>
+        <material name="geom" texture="texgeom" texuniform="true"/>
+    </asset>
+    <asset>
+        <mesh name="BODY" file="BODY.STL" />
+        <mesh name="FL_HP" file="FL_HP.STL" />
+        <mesh name="FL_THIGH" file="FL_THIGH.STL" />
+        <mesh name="FL_CALF" file="FL_CALF.STL" />
+        <mesh name="BL_HP" file="BL_HP.STL" />
+        <mesh name="BL_THIGH" file="BL_THIGH.STL" />
+        <mesh name="BL_CALF" file="FL_CALF.STL" />
+        <mesh name="FR_HP" file="FR_HP.STL" />
+        <mesh name="FR_THIGH" file="FR_THIGH.STL" />
+        <mesh name="FR_CALF" file="FR_CALF.STL" />
+        <mesh name="BR_HP" file="BR_HP.STL" />
+        <mesh name="BR_THIGH" file="BR_THIGH.STL" />
+        <mesh name="BR_CALF" file="FR_CALF.STL" />
+        <material name="quadruped" rgba="0.75294 0.75294 0.75294 1" />
+    </asset>
+    <worldbody>
+        <light cutoff="100" diffuse="1 1 1" dir="-0 0 -1.3" directional="true" exponent="1" pos="0 0 1.3" specular=".1 .1 .1"/>
+        <geom conaffinity="1" condim="3" material="MatPlane" name="floor" pos="0 0 0" rgba="0.8 0.9 0.8 1" size="40 40 40" type="plane"/>
+        <body name="BODY" pos="0 0 0.75">
+            <joint armature="0" damping="0" limited="false" margin="0.01" name="BODY" pos="0 0 0" type="free"/>
+            <inertial pos="0.004 0.006 -0.005" quat="0.0428995 0.709987 0.0435274 0.701558" mass="11.359" diaginertia="0.301405 0.276631 0.0499641" />
+            <site name="IMU" size="0.01" pos="0 0 0" />
+            <geom type="mesh" material="quadruped" mesh="BODY" group="1" />
+
+            <!-- Camera(RGB-D) frame
+            x : right
+            y : down
+            z : look-at
+            * this is identical with ROS optical frame
+
+            angle axis for the front-lower(CF2) camera
+            70deg : -0.7040626 0.7040626 -0.1226916 2.8567377
+            75deg : -0.7040626 0.7040626 -0.0926916 2.9567377
+            80deg : -0.7057576 0.7057576 -0.0617458 3.0182577
+            85deg : -0.70677 0.70677 -0.0308582 3.0798957 (current setting)
+            90deg : 0.7071068 -0.7071068 0 3.1415927
+            95deg :  0.70677 -0.70677 -0.0308582 3.0798957
+            100deg : 0.7057576 -0.7057576 -0.0617458 3.0182577
+            105deg : 0.7040626 -0.7040626 -0.0926916 2.9567377
+            //-->
+            <site name="CF1" pos="0.379 0 0.029" axisangle="-0.5773503 0.5773503 -0.5773503 2.0943951" type="cylinder" size=".0015" />
+            <site name="CF2" pos="0.393 0 0.15" axisangle="-0.7057576 0.7057576 -0.0617458 3.0182577" type="cylinder" size=".0015" />
+            <site name="CR" pos="-0.122 -0.129 0.015" axisangle="-0.0091601 -0.9961529 0.0871521 3.3502323" type="cylinder" size=".0015" />
+            <site name="CL" pos="-0.122 0.129 0.015" axisangle="-0.9944803 -0.0091447 -0.1045241 2.9680183" type="cylinder" size=".0015" />
+            <site name="CB" pos="-0.385 0 0.015" axisangle="0.7040626 -0.7040626 -0.0926916 2.9567377" type="cylinder" size=".0015" />
+            <site name="LF" pos="0.2911 0 -0.09975" axisangle="1 0 0 3.141592" type="cylinder" size="0.0015" />
+            <site name="LB" pos="-0.2911 0 -0.09975" axisangle="1 0 0 3.141592" type="cylinder" size="0.0015" />
+
+            <body name="FL_HP" pos="0.2126 0.055 0">
+                <inertial pos="0.068 0.009 0" quat="0.53355 0.53355 0.464031 0.464031" mass="1.271" diaginertia="0.00814005 0.008 0.000859945" />
+                <joint name="FL_HR_JOINT" pos="0 0 0" axis="1 0 0" range="-3.14 3.14" type="hinge"/>
+                <geom type="mesh" material="quadruped" mesh="FL_HP" group="1" />
+                <body name="FL_THIGH" pos="0.0785 0 0">
+                    <inertial pos="0 0.101 -0.03" quat="0.513878 0.857863 0 0" mass="2.455" diaginertia="0.043 0.0338167 0.0121833" />
+                    <joint name="FL_HP_JOINT" pos="0 0 0" axis="0 1 0" range="-3.14 3.14" type="hinge"/>
+                    <geom type="mesh" material="quadruped" mesh="FL_THIGH" group="1" />
+                    <body name="FL_CALF" pos="0 0.1247 -0.28">
+                        <inertial pos="0.018 0 -0.156" quat="0.706804 0.0206991 0.0206991 0.706804" mass="0.834" diaginertia="0.024 0.024 0.024" />
+                        <joint name="FL_KN_JOINT" pos="0 0 0" axis="0 1 0" range="-3.14 3.14" type="hinge"/>
+                        <geom type="mesh" material="quadruped" mesh="FL_CALF" group="1" />
+                        <site name="FL_FOOT" pos="0 0 -0.329" type="sphere" size="0.001" />
+                    </body>
+                </body>
+            </body>
+            <body name="BL_HP" pos="-0.2126 0.055 0">
+                <inertial pos="-0.068 0.009 0" quat="0.464031 0.464031 0.53355 0.53355" mass="1.271" diaginertia="0.00814005 0.008 0.000859945" />
+                <joint name="BL_HR_JOINT" pos="0 0 0" axis="1 0 0" range="-3.14 3.14" type="hinge"/>
+                <geom type="mesh" material="quadruped" mesh="BL_HP" group="1" />
+                <body name="BL_THIGH" pos="-0.0785 0 0">
+                    <inertial pos="-0.001 0.101 -0.03" quat="0.513878 0.857863 0 0" mass="2.438" diaginertia="0.043 0.0338167 0.0121833" />
+                    <joint name="BL_HP_JOINT" pos="0 0 0" axis="0 1 0" range="-3.14 3.14" type="hinge"/>
+                    <geom type="mesh" material="quadruped" mesh="BL_THIGH" group="1" />
+                    <body name="BL_CALF" pos="0 0.1247 -0.28">
+                        <inertial pos="0.016 0 -0.156" quat="0.996201 0 -0.0870823 0" mass="0.834" diaginertia="0.036057 0.036 0.00094295" />
+                        <joint name="BL_KN_JOINT" pos="0 0 0" axis="0 1 0" range="-3.14 3.14" type="hinge"/>
+                        <geom type="mesh" material="quadruped" mesh="BL_CALF" group="1" />
+                        <site name="BL_FOOT" pos="0 0 -0.329" type="sphere" size="0.001" />
+                    </body>
+                </body>
+            </body>
+            <body name="FR_HP" pos="0.2126 -0.055 0">
+                <inertial pos="0.068 -0.009 0" quat="0.464031 0.464031 0.53355 0.53355" mass="1.271" diaginertia="0.00814005 0.008 0.000859945" />
+                <joint name="FR_HR_JOINT" pos="0 0 0" axis="1 0 0" range="-3.14 3.14" type="hinge"/>
+                <geom type="mesh" material="quadruped" mesh="FR_HP" group="1" />
+                <body name="FR_THIGH" pos="0.0785 0 0">
+                    <inertial pos="-0.001 -0.101 -0.03" quat="0.86289 0.505392 0 0" mass="2.442" diaginertia="0.044 0.0340475 0.0129525" />
+                    <joint name="FR_HP_JOINT" pos="0 0 0" axis="0 1 0" range="-3.14 3.14" type="hinge"/>
+                    <geom type="mesh" material="quadruped" mesh="FR_THIGH" group="1" />
+                    <body name="FR_CALF" pos="0 -0.1247 -0.28">
+                        <inertial pos="0.017 0 -0.157" quat="0.706804 0.0206991 0.0206991 0.706804" mass="0.825" diaginertia="0.024 0.024 0.024" />
+                        <joint name="FR_KN_JOINT" pos="0 0 0" axis="0 1 0" range="-3.14 3.14" type="hinge"/>
+                        <geom type="mesh" material="quadruped" mesh="FR_CALF" group="1" />
+                        <site name="FR_FOOT" pos="0 0 -0.329" type="sphere" size="0.001" />
+                    </body>
+                </body>
+            </body>
+            <body name="BR_HP" pos="-0.2126 -0.055 0">
+                <inertial pos="-0.068 -0.009 0" quat="0.5 0.5 0.5 0.5" mass="1.271" diaginertia="0.002 0.002 0.001" />
+                <joint name="BR_HR_JOINT" pos="0 0 0" axis="1 0 0" range="-3.14 3.14" type="hinge"/>
+                <geom type="mesh" material="quadruped" mesh="BR_HP" group="1" />
+                <body name="BR_THIGH" pos="-0.0785 0 0">
+                    <inertial pos="-0.001 -0.101 -0.03" quat="0.857863 0.513878 0 0" mass="2.434" diaginertia="0.043 0.0338167 0.0121833" />
+                    <joint name="BR_HP_JOINT" pos="0 0 0" axis="0 1 0" range="-3.14 3.14" type="hinge"/>
+                    <geom type="mesh" material="quadruped" mesh="BR_THIGH" group="1" />
+                    <body name="BR_CALF" pos="0 -0.1247 -0.28">
+                        <inertial pos="0.017 0 -0.157" quat="0.704264 -0.0633373 -0.0633373 0.704264" mass="0.825" diaginertia="0.024 0.024 0.024" />
+                        <joint name="BR_KN_JOINT" pos="0 0 0" axis="0 1 0" range="-3.14 3.14" type="hinge"/>
+                        <geom type="mesh" material="quadruped" mesh="BR_CALF" group="1" />
+                        <site name="BR_FOOT" pos="0 0 -0.329" type="sphere" size="0.001" />
+                    </body>
+                </body>
+            </body>
+        </body>
+    </worldbody>
+    <actuator>
+        <motor name="FL_Roll" gear="1" joint="FL_HR_JOINT" ctrllimited="true" ctrlrange="-3 3" />
+        <motor name="FL_Pitch" gear="1" joint="FL_HP_JOINT" ctrllimited="true" ctrlrange="-3 3" />
+        <motor name="FL_Knee" gear="1" joint="FL_KN_JOINT" ctrllimited="true" ctrlrange="-3 3" />
+        <motor name="BL_Roll" gear="1" joint="BL_HR_JOINT" ctrllimited="true" ctrlrange="-3 3" />
+        <motor name="BL_Pitch" gear="1" joint="BL_HP_JOINT" ctrllimited="true" ctrlrange="-3 3" />
+        <motor name="BL_Knee" gear="1" joint="BL_KN_JOINT" ctrllimited="true" ctrlrange="-3 3" />
+        <motor name="FR_Roll" gear="1" joint="FR_HR_JOINT" ctrllimited="true" ctrlrange="-3 3" />
+        <motor name="FR_Pitch" gear="1" joint="FR_HP_JOINT" ctrllimited="true" ctrlrange="-3 3" />
+        <motor name="FR_Knee" gear="1" joint="FR_KN_JOINT" ctrllimited="true" ctrlrange="-3 3" />
+        <motor name="BR_Roll" gear="1" joint="BR_HR_JOINT" ctrllimited="true" ctrlrange="-3 3" />
+        <motor name="BR_Pitch" gear="1" joint="BR_HP_JOINT" ctrllimited="true" ctrlrange="-3 3" />
+        <motor name="BR_Knee" gear="1" joint="BR_KN_JOINT" ctrllimited="true" ctrlrange="-3 3" />
+    </actuator>
+    <contact>
+        <exclude name="FL_1" body1="BODY" body2="FL_HP" />
+        <exclude name="FL_2" body1="FL_HP" body2="FL_THIGH" />
+        <exclude name="FL_3" body1="FL_THIGH" body2="FL_CALF" />
+        <exclude name="FL_4" body1="BODY" body2="FL_THIGH" />
+        <exclude name="FL_5" body1="BODY" body2="FL_CALF" />
+        <exclude name="BL_1" body1="BODY" body2="BL_HP" />
+        <exclude name="BL_2" body1="BL_HP" body2="BL_THIGH" />
+        <exclude name="BL_3" body1="BL_THIGH" body2="BL_CALF" />
+        <exclude name="BL_4" body1="BODY" body2="BL_THIGH" />
+        <exclude name="BL_5" body1="BODY" body2="BL_CALF" />
+        <exclude name="FR_1" body1="BODY" body2="FR_HP" />
+        <exclude name="FR_2" body1="FR_HP" body2="FR_THIGH" />
+        <exclude name="FR_3" body1="FR_THIGH" body2="FR_CALF" />
+        <exclude name="FR_4" body1="BODY" body2="FR_THIGH" />
+        <exclude name="FR_5" body1="BODY" body2="FR_CALF" />
+        <exclude name="BR_1" body1="BODY" body2="BR_HP" />
+        <exclude name="BR_2" body1="BR_HP" body2="BR_THIGH" />
+        <exclude name="BR_3" body1="BR_THIGH" body2="BR_CALF" />
+        <exclude name="BR_4" body1="BODY" body2="BR_THIGH" />
+        <exclude name="BR_5" body1="BODY" body2="BR_CALF" />
+    </contact>
+    <sensor>
+        <touch name="FLcontactSensor" site="FL_FOOT" />
+        <touch name="BLcontactSensor" site="BL_FOOT" />
+        <touch name="FRcontactSensor" site="FR_FOOT" />
+        <touch name="BRcontactSensor" site="BR_FOOT" />
+        <gyro name="torso-angular-velocity" site="IMU" noise="1e-3" cutoff="97" />
+        <accelerometer name="torso-linear-acceleration" site="IMU" noise="1e-2" cutoff="97" />
+        <!--
+		Depth sensors (ray-casting)
+		dim : dimension of sensor data
+		datatype : data type(real(for scalar), positive, axis, quaternion) of each sensor data
+		user : [user_sensor_type(0:1D,1:2D,2:Omni), fov_x(rad), fov_y(rad), dim_x(number of rays in x-direction), dist_min(m), dist_max(m), noise_mean, noise_std]
+		axis(optical frame) :
+		x : right
+		y : down
+		z : look-at direction
+		-->
+        <!-- <user name="CF1_RGB" objtype="site" objname="CF1" datatype="real" dim="1200" user="1 1.57 1.04 40 0.05 10.0 0.0 0.0" needstage="pos" /> -->
+        <!-- <user name="CF2_Depth" objtype="site" objname="CF2" datatype="real" dim="1200" user="1 1.57 1.04 40 0.05 10.0 0.0 0.0" needstage="pos" />
+		<user name="CB_Depth" objtype="site" objname="CB" datatype="real" dim="1200" user="1 1.57 1.04 40 0.05 10.0 0.0 0.0" needstage="pos" />
+		<user name="CR_Depth" objtype="site" objname="CR" datatype="real" dim="1200" user="1 1.57 1.04 40 0.05 10.0 0.0 0.0" needstage="pos" />
+		<user name="CL_Depth" objtype="site" objname="CL" datatype="real" dim="1200" user="1 1.57 1.04 40 0.05 10.0 0.0 0.0" needstage="pos" /> -->
+        <!-- <user name="LF_Depth" objtype="site" objname="LF" datatype="real" dim="7200" user="2 0.9075 -0.1222 40 0.1 40.0 0.0 0.0" needstage="pos" /> -->
+        <!-- <user name="LB_Depth" objtype="site" objname="LB" datatype="real" dim="7200" user="2 0.9075 -0.1222 40 0.1 40.0 0.0 0.0" needstage="pos" /> -->
+        <!--
+		Vision(RGB) sensors
+		dim : dimension of sensor data
+		datatype : data type of each sensor data
+		user : [fov_x(rad), fov_y(rad), dim_x(pixels)]
+		-->
+        <!-- <user name="CF1_RGB" objtype="site" objname="CF1" datatype="real" dim="24" cutoff="100.0" user="1.04 1.57 6" needstage="pos" /> -->
+    </sensor>
+    <keyframe>
+        <!--
+		The values below are split into rows for readibility:
+		base position
+		base orientation
+		front left leg
+		back left leg
+		front right leg
+		back right leg
+        Free Joint Obstacle Position
+        Free Joint Obstalce Orientation
+		-->
+        <!-- Wheel Quad init pos -->
+        <key name="initPos" qpos="0.0     0.0     0.05
+                                  1       0.0     0.0    0.0
+                                  0.2     1.38   -2.95
+                                  0.2     1.38   -2.95
+                                 -0.2     1.38   -2.95
+                                 -0.2     1.38   -2.95" />
+        <!--
+		<key name="start" qpos="0.0 0.0 0.0
+		1 0 0 0
+		0.0 1.22 -2.8
+		0.0 1.22 -2.8
+		0.0 1.22 -2.8
+		0.0 1.22 -2.8"/>
+		-->
+        <!--
+		<key name="initpose" qpos="-0.05 0 0.04
+		1 0 0 0
+		0.0118 1.44 -3.05
+		0.0156 1.45 -3.05
+		-0.00879 1.45 -3.05
+		-0.0178 1.44 -3.05"/>
+		-->
+        <!--
+		<key name="ready" qpos="0.05 0 0.48
+		1 0 0 0
+		-0.00276 0.901 -1.4
+		-0.00339 0.902 -1.4
+		0.00222 0.901 -1.4
+		0.00272 0.901 -1.4"/>
+		-->
+    </keyframe> -->
+</mujoco>
