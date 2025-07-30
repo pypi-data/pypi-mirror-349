@@ -1,0 +1,3 @@
+[xarray.backends]
+jrrle_engine = ggcmpy.jrrle_backend:JrrleEntrypoint
+
