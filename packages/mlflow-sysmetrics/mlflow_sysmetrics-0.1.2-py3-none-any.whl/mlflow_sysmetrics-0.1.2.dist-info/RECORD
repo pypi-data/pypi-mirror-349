@@ -1,0 +1,8 @@
+mlflow_sysmetrics/__init__.py,sha256=YD4XNxkfej04S6LeO8g6sR0z2JG9v-_dLQdKdl55Dc0,228
+mlflow_sysmetrics/constants.py,sha256=hatZEqR8irdPvjv-jc7iN64_7KvVFP6H6ZGzHpllI1w,463
+mlflow_sysmetrics/system_context.py,sha256=h_5gZFrs-DWAECip8QdbtDe48j7WNk7bmRxw2Ot6rFU,2655
+mlflow_sysmetrics-0.1.2.dist-info/LICENCE,sha256=JTvF-kszuGnrI8A4EAJVMwyPLz5ycVlUsLYNUN6Kcow,11308
+mlflow_sysmetrics-0.1.2.dist-info/METADATA,sha256=Fb-ohQ8nNnIjL288AuFiHptAmCNO3Z8IWrGEk_wQk_c,4081
+mlflow_sysmetrics-0.1.2.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+mlflow_sysmetrics-0.1.2.dist-info/entry_points.txt,sha256=XYHDtzg5IB6JbdD-4FCOgwiZ0y61B_3O6e2zbQCXdMw,89
+mlflow_sysmetrics-0.1.2.dist-info/RECORD,,
