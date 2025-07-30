@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: my-ctools
+Version: 0.1.6
+Summary: Fast column-wise std calculator using C++ thread pool
+Author: KevinCJM
+License: MIT
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# My C Tools
+
+High-performance C++ functions packaged as a Python module using pybind11.
