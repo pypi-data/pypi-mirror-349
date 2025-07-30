@@ -1,0 +1,48 @@
+Metadata-Version: 2.4
+Name: streamlit_lyrics_sync
+Version: 0.2.0
+Summary: A compoennt for syncing lyrics to an audio waveform
+Home-page: 
+Author: Liam Power
+Author-email: info@liampower.dev
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: python-dotenv>=1.1.0
+Requires-Dist: requests>=2.32.3
+Requires-Dist: setuptools>=75.8.0
+Requires-Dist: streamlit>=1.42.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-python
+
+# streamlit_lyrics_sync
+
+A compoennt for syncing lyrics to an audio waveform
+
+## Installation
+
+```bash
+pip install streamlit_lyrics_sync
+```
+
+
+## Development
+
+To develop the component, run the following command:
+
+```bash
+streamlit run streamlit_lyrics_sync/__init__.py
+```
+
+Then run the frontend development server:
+
+```bash
+cd streamlit_lyrics_sync/frontend
+npm run dev
+```
+
+This will start the streamlit development server.
+
+## Building
+
+To build the component, run the following command:
