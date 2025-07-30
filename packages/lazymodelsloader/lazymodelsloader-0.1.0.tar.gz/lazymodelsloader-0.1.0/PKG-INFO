@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: lazymodelsloader
+Version: 0.1.0
+Summary: Lazy transformer model loader with memory-based unloading (CPU/GPU)
+Author: Никита
+Requires-Python: >=3.8
+Requires-Dist: transformers>=4.0.0
+Requires-Dist: torch
+Requires-Dist: psutil
+Dynamic: author
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
