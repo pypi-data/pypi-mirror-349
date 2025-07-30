@@ -1,0 +1,51 @@
+[project]
+name = "siemens-standard-bom"
+version = "4.0.0"
+description = "Standard BOM Format Library"
+keywords = ["sbom", "software-bill-of-materials", "cyclonedx", "cdx"]
+authors = [
+    { name = "Hakan Dilek", email = "hakan.dilek@siemens.com" },
+    { name = "Thomas Jensen", email = "jensenthomas@siemens.com" },
+    { name = "Leo Reinmann", email = "leo.reinmann@siemens.com" },
+]
+license = "MIT"
+readme = "README.md"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+urls = { homepage = "https://sbom.siemens.io/", repository = "https://github.com/siemens/standard-bom-python", "Bug Tracker" = "https://github.com/siemens/standard-bom-python/issues", documentation = "https://github.com/siemens/standard-bom-python/blob/main/README.md" }
+
+requires-python = ">=3.10,<4.0"
+dependencies = [
+    "python-dateutil (>=2.9.0.post0,<3.0.0)",
+    "cyclonedx-python-lib(>=9.1.0,<10.0.0)",
+]
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+package-mode = true
+packages = [
+    { include = "siemens_standard_bom" },
+    { include = "siemens_standard_bom/py.typed" },
+]
+
+[tool.poetry.group.dev.dependencies]
+coverage = "^7.6.12"
+pytest = "^8.3.5"
+flake8 = "^7.1.2"
+deepdiff = "^8.3.0"
+mypy = "^1.15.0"
+types-python-dateutil = "^2.9.0.20241206"
+tox = "^4.24.1"
+sortedcontainers-stubs = "^2.4.2"
