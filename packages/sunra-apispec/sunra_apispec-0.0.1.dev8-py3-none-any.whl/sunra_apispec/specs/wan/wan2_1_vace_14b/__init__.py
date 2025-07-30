@@ -1,0 +1,1 @@
+from .service_providers.replicate.mapper import Wan2_1_Vace_14bReplicateMapper
