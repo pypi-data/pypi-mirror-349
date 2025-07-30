@@ -1,0 +1,8 @@
+README.md
+setup.py
+yvette_matrix_product/__init__.py
+yvette_matrix_product/main.py
+yvette_matrix_product.egg-info/PKG-INFO
+yvette_matrix_product.egg-info/SOURCES.txt
+yvette_matrix_product.egg-info/dependency_links.txt
+yvette_matrix_product.egg-info/top_level.txt
