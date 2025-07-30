@@ -1,0 +1,9 @@
+vizpanel/__init__.py,sha256=PG3Gh0s1NtudOh5yU7h08bd5QhAH5iVA-MYBpfE_Zbs,78
+vizpanel/main.py,sha256=OJ2Qn5bhjuzvJBz0E1ysAK78Xy7f-jUVMWSBw8Gdf9c,118
+vizpanel/vizpanel.py,sha256=EkMrGGO37rN0gw1S6gitdGLZG0wJ7a6AGss4iwHRLaQ,448
+vizpanel/web/index.html,sha256=zGvsXMQ_Y58Y9zAMzroCvnQuafYHwLj9SEW3AhtGo74,227
+vizpanel-0.1.0.dist-info/METADATA,sha256=GfKk-hbXmS_ZsI0HeEcF7AwM3tBNovFbHrEiEgSZqK8,1001
+vizpanel-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+vizpanel-0.1.0.dist-info/entry_points.txt,sha256=oNBVJm1OJRLYj0lufdt11gRi0RdJXWs9vs09UNBliUg,48
+vizpanel-0.1.0.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+vizpanel-0.1.0.dist-info/RECORD,,
