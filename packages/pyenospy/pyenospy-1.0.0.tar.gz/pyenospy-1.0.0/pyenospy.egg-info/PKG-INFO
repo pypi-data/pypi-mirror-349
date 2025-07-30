@@ -1,0 +1,76 @@
+Metadata-Version: 2.4
+Name: pyenospy
+Version: 1.0.0
+Summary: Basit ve kullanışlı bir mouse ve klavye kontrol kütüphanesi
+Home-page: https://github.com/yourusername/pyenospy
+Author: enos
+Author-email: enos@enos.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pywin32>=306
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# PyEnosPy
+
+Basit ve kullanÄ±ÅŸlÄ± bir mouse ve klavye kontrol kÃ¼tÃ¼phanesi.
+
+## Kurulum
+
+```bash
+pip install pyenospy
+```
+
+## KullanÄ±m
+
+```python
+from pyenospy import MyInput
+
+# KÃ¼tÃ¼phaneyi baÅŸlat
+input = MyInput()
+
+# Mouse kontrolÃ¼
+input.mouse_move(100, 200)  # Mouse'u (100,200) konumuna taÅŸÄ±
+input.mouse_click('left')   # Sol tÄ±klama yap
+input.mouse_double_click()  # Ã‡ift tÄ±klama yap
+
+# Klavye kontrolÃ¼
+input.key_press('a')        # 'a' tuÅŸuna bas
+input.type_text("Merhaba")  # "Merhaba" yaz
+
+# TuÅŸ kombinasyonu
+input.key_down('shift')     # Shift tuÅŸunu basÄ±lÄ± tut
+input.key_press('a')        # Shift+A kombinasyonu
+input.key_up('shift')       # Shift tuÅŸunu bÄ±rak
+
+# Bekleme
+input.wait(1.5)            # 1.5 saniye bekle
+```
+
+## Ã–zellikler
+
+- Mouse kontrolÃ¼ (hareket, tÄ±klama, Ã§ift tÄ±klama)
+- Klavye kontrolÃ¼ (tuÅŸ basma, tuÅŸ kombinasyonlarÄ±, metin yazma)
+- Bekleme fonksiyonu
+- Basit ve anlaÅŸÄ±lÄ±r API
+- TÃ¼rkÃ§e dokÃ¼mantasyon
+
+## Gereksinimler
+
+- Python 3.6 veya Ã¼zeri
+- Windows iÅŸletim sistemi
+- pywin32 paketi
+
+## Lisans
+
+MIT License 
