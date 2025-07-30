@@ -1,0 +1,38 @@
+Metadata-Version: 2.4
+Name: wecomUtils
+Version: 0.1.0
+Summary: Utility functions for WeChat Work/WeCom integration
+Author-email: oldManZhang <old_man_zhang@163.com>
+Project-URL: Homepage, https://github.com/yourusername/wecom-utils
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pycryptodome==3.23.0
+Requires-Dist: DBUtils==3.1.0
+Requires-Dist: requests==2.28.1
+Requires-Dist: cryptography==38.0.4
+Requires-Dist: PyMySQL==1.0.2
+Dynamic: license-file
+
+# WeComUtils
+
+Utility functions for WeChat Work/WeCom integration.
+
+## Installation
+
+```bash
+pip install wecomUtils
+```
+
+## Usage
+
+```python
+from wecomUtils.db_manager import DBManager
+```
+
+## License
+
+MIT 

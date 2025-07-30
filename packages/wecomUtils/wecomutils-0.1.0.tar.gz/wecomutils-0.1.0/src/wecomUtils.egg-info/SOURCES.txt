@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/wecomUtils/__init__.py
+src/wecomUtils/db_manager.py
+src/wecomUtils/fc_service.py
+src/wecomUtils/storage.py
+src/wecomUtils.egg-info/PKG-INFO
+src/wecomUtils.egg-info/SOURCES.txt
+src/wecomUtils.egg-info/dependency_links.txt
+src/wecomUtils.egg-info/requires.txt
+src/wecomUtils.egg-info/top_level.txt
+tests/test_wecomutils.py
