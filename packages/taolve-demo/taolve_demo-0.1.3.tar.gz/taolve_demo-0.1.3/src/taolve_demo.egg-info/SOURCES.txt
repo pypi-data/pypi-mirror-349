@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+src/taolve/__init__.py
+src/taolve/core.py
+src/taolve_demo.egg-info/PKG-INFO
+src/taolve_demo.egg-info/SOURCES.txt
+src/taolve_demo.egg-info/dependency_links.txt
+src/taolve_demo.egg-info/top_level.txt
