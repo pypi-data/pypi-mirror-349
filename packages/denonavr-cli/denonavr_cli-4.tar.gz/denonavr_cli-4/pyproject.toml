@@ -1,0 +1,39 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "denonavr_cli"
+authors = [{name = "Michał Górny", email = "mgorny@gentoo.org"}]
+license = {text = "GPL-2.0-or-later"}
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)",
+    "Programming Language :: Python :: 3 :: Only",
+]
+dynamic = ["version", "description"]
+readme = {file = "README.rst", content-type = "text/x-rst"}
+requires-python = ">=3.9"
+dependencies = [
+    "denonavr",
+]
+
+[project.optional-dependencies]
+ipython-shell = [
+    "ipython",
+    "nest_asyncio",
+]
+test = [
+    "pytest",
+    "pytest-asyncio",
+]
+
+[project.urls]
+Homepage = "https://github.com/mgorny/denonavr-cli/"
+
+[project.scripts]
+denonavr-cli = "denonavr_cli.__main__:entry_point"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
