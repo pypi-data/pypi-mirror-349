@@ -1,0 +1,18 @@
+astropy
+scipy
+scikit-image
+sunpy
+sunkit-magex
+
+[docs]
+sphinx
+sphinx-automodapi
+pydata-sphinx-theme
+matplotlib
+
+[docs:python_version < "3.11"]
+tomli
+
+[test]
+pytest
+pytest-doctestplus
