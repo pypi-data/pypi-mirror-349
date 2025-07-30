@@ -1,0 +1,2 @@
+[console_scripts]
+choumine-project-kpi = choumine_project_kpi:main
