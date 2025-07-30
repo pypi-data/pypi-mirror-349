@@ -1,0 +1,752 @@
+[
+    {
+        "stanza_id": 0,
+        "rhyme_scheme": "abab",
+        "verses": [
+            {
+                "rhyme_score": 0,
+                "rhyme_tag": "a",
+                "text": "Saa er jeg da endelig ene",
+                "transcription": "",
+                "tokens": [
+                    "saa",
+                    "er",
+                    "jeg",
+                    "da",
+                    "endelig",
+                    "ene"
+                ],
+                "syllables": null,
+                "last_token": "ene",
+                "rhymes_with": null,
+                "verse_id": 0
+            },
+            {
+                "rhyme_score": 0,
+                "rhyme_tag": "b",
+                "text": "Med al min smerte og skam!",
+                "transcription": "",
+                "tokens": [
+                    "med",
+                    "al",
+                    "min",
+                    "smerte",
+                    "og",
+                    "skam"
+                ],
+                "syllables": null,
+                "last_token": "skam",
+                "rhymes_with": null,
+                "verse_id": 1
+            },
+            {
+                "rhyme_score": 1,
+                "rhyme_tag": "a",
+                "text": "‒ At ikke jeg dræbte dig, kvinde,",
+                "transcription": "",
+                "tokens": [
+                    "at",
+                    "ikke",
+                    "jeg",
+                    "dræbte",
+                    "dig",
+                    "kvinde"
+                ],
+                "syllables": null,
+                "last_token": "kvinde",
+                "rhymes_with": 0,
+                "verse_id": 2
+            },
+            {
+                "rhyme_score": 1,
+                "rhyme_tag": "b",
+                "text": "Dengang du berørte ham!",
+                "transcription": "",
+                "tokens": [
+                    "dengang",
+                    "du",
+                    "berørte",
+                    "ham"
+                ],
+                "syllables": null,
+                "last_token": "ham",
+                "rhymes_with": 1,
+                "verse_id": 3
+            }
+        ]
+    },
+    {
+        "stanza_id": 1,
+        "rhyme_scheme": "abcb",
+        "verses": [
+            {
+                "rhyme_score": 0,
+                "rhyme_tag": "a",
+                "text": "Ak jeg, jeg flygtede bare,",
+                "transcription": "",
+                "tokens": [
+                    "ak",
+                    "jeg",
+                    "jeg",
+                    "flygtede",
+                    "bare"
+                ],
+                "syllables": null,
+                "last_token": "bare",
+                "rhymes_with": null,
+                "verse_id": 0
+            },
+            {
+                "rhyme_score": 0,
+                "rhyme_tag": "b",
+                "text": "Jeg stormed forvildet frem,",
+                "transcription": "",
+                "tokens": [
+                    "jeg",
+                    "stormed",
+                    "forvildet",
+                    "frem"
+                ],
+                "syllables": null,
+                "last_token": "frem",
+                "rhymes_with": null,
+                "verse_id": 1
+            },
+            {
+                "rhyme_score": 0,
+                "rhyme_tag": "c",
+                "text": "Halvt sandsesløs fandt jeg dog veien",
+                "transcription": "",
+                "tokens": [
+                    "halvt",
+                    "sandsesløs",
+                    "fandt",
+                    "jeg",
+                    "dog",
+                    "veien"
+                ],
+                "syllables": null,
+                "last_token": "veien",
+                "rhymes_with": null,
+                "verse_id": 2
+            },
+            {
+                "rhyme_score": 1,
+                "rhyme_tag": "b",
+                "text": "Og naaede endelig hjem",
+                "transcription": "",
+                "tokens": [
+                    "og",
+                    "naaede",
+                    "endelig",
+                    "hjem"
+                ],
+                "syllables": null,
+                "last_token": "hjem",
+                "rhymes_with": 1,
+                "verse_id": 3
+            }
+        ]
+    },
+    {
+        "stanza_id": 2,
+        "rhyme_scheme": "abcd",
+        "verses": [
+            {
+                "rhyme_score": 0,
+                "rhyme_tag": "a",
+                "text": "Hvi kom han saa sent til stævnet?",
+                "transcription": "",
+                "tokens": [
+                    "hvi",
+                    "kom",
+                    "han",
+                    "saa",
+                    "sent",
+                    "til",
+                    "stævnet"
+                ],
+                "syllables": null,
+                "last_token": "stævnet",
+                "rhymes_with": null,
+                "verse_id": 0
+            },
+            {
+                "rhyme_score": 0,
+                "rhyme_tag": "b",
+                "text": "Hvor havde han været ikveld?",
+                "transcription": "",
+                "tokens": [
+                    "hvor",
+                    "havde",
+                    "han",
+                    "været",
+                    "ikveld"
+                ],
+                "syllables": null,
+                "last_token": "ikveld",
+                "rhymes_with": null,
+                "verse_id": 1
+            },
+            {
+                "rhyme_score": 0,
+                "rhyme_tag": "c",
+                "text": "Mon lige nylig han havde",
+                "transcription": "",
+                "tokens": [
+                    "mon",
+                    "lige",
+                    "nylig",
+                    "han",
+                    "havde"
+                ],
+                "syllables": null,
+                "last_token": "havde",
+                "rhymes_with": null,
+                "verse_id": 2
+            },
+            {
+                "rhyme_score": 0,
+                "rhyme_tag": "d",
+                "text": "Sin unge brud sagt farvel?",
+                "transcription": "",
+                "tokens": [
+                    "sin",
+                    "unge",
+                    "brud",
+                    "sagt",
+                    "farvel"
+                ],
+                "syllables": null,
+                "last_token": "farvel",
+                "rhymes_with": null,
+                "verse_id": 3
+            }
+        ]
+    },
+    {
+        "stanza_id": 3,
+        "rhyme_scheme": "abcb",
+        "verses": [
+            {
+                "rhyme_score": 0,
+                "rhyme_tag": "a",
+                "text": "Maaske har han nylig siddet",
+                "transcription": "",
+                "tokens": [
+                    "maaske",
+                    "har",
+                    "han",
+                    "nylig",
+                    "siddet"
+                ],
+                "syllables": null,
+                "last_token": "siddet",
+                "rhymes_with": null,
+                "verse_id": 0
+            },
+            {
+                "rhyme_score": 0,
+                "rhyme_tag": "b",
+                "text": "Ved hendes forældres bord!",
+                "transcription": "",
+                "tokens": [
+                    "ved",
+                    "hendes",
+                    "forældres",
+                    "bord"
+                ],
+                "syllables": null,
+                "last_token": "bord",
+                "rhymes_with": null,
+                "verse_id": 1
+            },
+            {
+                "rhyme_score": 0,
+                "rhyme_tag": "c",
+                "text": "Maaske har han nylig vandret",
+                "transcription": "",
+                "tokens": [
+                    "maaske",
+                    "har",
+                    "han",
+                    "nylig",
+                    "vandret"
+                ],
+                "syllables": null,
+                "last_token": "vandret",
+                "rhymes_with": null,
+                "verse_id": 2
+            },
+            {
+                "rhyme_score": 1,
+                "rhyme_tag": "b",
+                "text": "Paa hellig, indviet jord!",
+                "transcription": "",
+                "tokens": [
+                    "paa",
+                    "hellig",
+                    "indviet",
+                    "jord"
+                ],
+                "syllables": null,
+                "last_token": "jord",
+                "rhymes_with": 1,
+                "verse_id": 3
+            }
+        ]
+    },
+    {
+        "stanza_id": 4,
+        "rhyme_scheme": "abcb",
+        "verses": [
+            {
+                "rhyme_score": 0,
+                "rhyme_tag": "a",
+                "text": "Hans yndige brud nu kviler",
+                "transcription": "",
+                "tokens": [
+                    "hans",
+                    "yndige",
+                    "brud",
+                    "nu",
+                    "kviler"
+                ],
+                "syllables": null,
+                "last_token": "kviler",
+                "rhymes_with": null,
+                "verse_id": 0
+            },
+            {
+                "rhyme_score": 0,
+                "rhyme_tag": "b",
+                "text": "Mod puden sin rosenkind,",
+                "transcription": "",
+                "tokens": [
+                    "mod",
+                    "puden",
+                    "sin",
+                    "rosenkind"
+                ],
+                "syllables": null,
+                "last_token": "rosenkind",
+                "rhymes_with": null,
+                "verse_id": 1
+            },
+            {
+                "rhyme_score": 0,
+                "rhyme_tag": "c",
+                "text": "Han var hendes sidste tanke",
+                "transcription": "",
+                "tokens": [
+                    "han",
+                    "var",
+                    "hendes",
+                    "sidste",
+                    "tanke"
+                ],
+                "syllables": null,
+                "last_token": "tanke",
+                "rhymes_with": null,
+                "verse_id": 2
+            },
+            {
+                "rhyme_score": 0.5,
+                "rhyme_tag": "b",
+                "text": "Just som hun sovnede ind.",
+                "transcription": "",
+                "tokens": [
+                    "just",
+                    "som",
+                    "hun",
+                    "sovnede",
+                    "ind"
+                ],
+                "syllables": null,
+                "last_token": "ind",
+                "rhymes_with": 1,
+                "verse_id": 3
+            }
+        ]
+    },
+    {
+        "stanza_id": 5,
+        "rhyme_scheme": "abcb",
+        "verses": [
+            {
+                "rhyme_score": 0,
+                "rhyme_tag": "a",
+                "text": "Nu ser hun ham i sine drømme",
+                "transcription": "",
+                "tokens": [
+                    "nu",
+                    "ser",
+                    "hun",
+                    "ham",
+                    "i",
+                    "sine",
+                    "drømme"
+                ],
+                "syllables": null,
+                "last_token": "drømme",
+                "rhymes_with": null,
+                "verse_id": 0
+            },
+            {
+                "rhyme_score": 0,
+                "rhyme_tag": "b",
+                "text": "Og smiler saa sødt derved",
+                "transcription": "",
+                "tokens": [
+                    "og",
+                    "smiler",
+                    "saa",
+                    "sødt",
+                    "derved"
+                ],
+                "syllables": null,
+                "last_token": "derved",
+                "rhymes_with": null,
+                "verse_id": 1
+            },
+            {
+                "rhyme_score": 0,
+                "rhyme_tag": "c",
+                "text": "Og sover saa dybt og roligt",
+                "transcription": "",
+                "tokens": [
+                    "og",
+                    "sover",
+                    "saa",
+                    "dybt",
+                    "og",
+                    "roligt"
+                ],
+                "syllables": null,
+                "last_token": "roligt",
+                "rhymes_with": null,
+                "verse_id": 2
+            },
+            {
+                "rhyme_score": 1,
+                "rhyme_tag": "b",
+                "text": "I uskyld og tryghed og fred.",
+                "transcription": "",
+                "tokens": [
+                    "i",
+                    "uskyld",
+                    "og",
+                    "tryghed",
+                    "og",
+                    "fred"
+                ],
+                "syllables": null,
+                "last_token": "fred",
+                "rhymes_with": 1,
+                "verse_id": 3
+            }
+        ]
+    },
+    {
+        "stanza_id": 6,
+        "rhyme_scheme": "abcb",
+        "verses": [
+            {
+                "rhyme_score": 0,
+                "rhyme_tag": "a",
+                "text": "I nattens og dagens drømme",
+                "transcription": "",
+                "tokens": [
+                    "i",
+                    "nattens",
+                    "og",
+                    "dagens",
+                    "drømme"
+                ],
+                "syllables": null,
+                "last_token": "drømme",
+                "rhymes_with": null,
+                "verse_id": 0
+            },
+            {
+                "rhyme_score": 0,
+                "rhyme_tag": "b",
+                "text": "Er han hendes dyreste skat,",
+                "transcription": "",
+                "tokens": [
+                    "er",
+                    "han",
+                    "hendes",
+                    "dyreste",
+                    "skat"
+                ],
+                "syllables": null,
+                "last_token": "skat",
+                "rhymes_with": null,
+                "verse_id": 1
+            },
+            {
+                "rhyme_score": 0,
+                "rhyme_tag": "c",
+                "text": "Han, som hende feigt forraader,",
+                "transcription": "",
+                "tokens": [
+                    "han",
+                    "som",
+                    "hende",
+                    "feigt",
+                    "forraader"
+                ],
+                "syllables": null,
+                "last_token": "forraader",
+                "rhymes_with": null,
+                "verse_id": 2
+            },
+            {
+                "rhyme_score": 1,
+                "rhyme_tag": "b",
+                "text": "Saasnart han har sagt godnat.",
+                "transcription": "",
+                "tokens": [
+                    "saasnart",
+                    "han",
+                    "har",
+                    "sagt",
+                    "godnat"
+                ],
+                "syllables": null,
+                "last_token": "godnat",
+                "rhymes_with": 1,
+                "verse_id": 3
+            }
+        ]
+    },
+    {
+        "stanza_id": 7,
+        "rhyme_scheme": "abcb",
+        "verses": [
+            {
+                "rhyme_score": 0,
+                "rhyme_tag": "a",
+                "text": "Elendige kvinde, du voved",
+                "transcription": "",
+                "tokens": [
+                    "elendige",
+                    "kvinde",
+                    "du",
+                    "voved"
+                ],
+                "syllables": null,
+                "last_token": "voved",
+                "rhymes_with": null,
+                "verse_id": 0
+            },
+            {
+                "rhyme_score": 0,
+                "rhyme_tag": "b",
+                "text": "At lægge din arm i hans,",
+                "transcription": "",
+                "tokens": [
+                    "at",
+                    "lægge",
+                    "din",
+                    "arm",
+                    "i",
+                    "hans"
+                ],
+                "syllables": null,
+                "last_token": "hans",
+                "rhymes_with": null,
+                "verse_id": 1
+            },
+            {
+                "rhyme_score": 0,
+                "rhyme_tag": "c",
+                "text": "Og rive hans billed i støvet",
+                "transcription": "",
+                "tokens": [
+                    "og",
+                    "rive",
+                    "hans",
+                    "billed",
+                    "i",
+                    "støvet"
+                ],
+                "syllables": null,
+                "last_token": "støvet",
+                "rhymes_with": null,
+                "verse_id": 2
+            },
+            {
+                "rhyme_score": 1,
+                "rhyme_tag": "b",
+                "text": "Og plette dets høihed og glans!",
+                "transcription": "",
+                "tokens": [
+                    "og",
+                    "plette",
+                    "dets",
+                    "høihed",
+                    "og",
+                    "glans"
+                ],
+                "syllables": null,
+                "last_token": "glans",
+                "rhymes_with": 1,
+                "verse_id": 3
+            }
+        ]
+    },
+    {
+        "stanza_id": 8,
+        "rhyme_scheme": "abcd",
+        "verses": [
+            {
+                "rhyme_score": 0,
+                "rhyme_tag": "a",
+                "text": "Og med hans fordunklede billed",
+                "transcription": "",
+                "tokens": [
+                    "og",
+                    "med",
+                    "hans",
+                    "fordunklede",
+                    "billed"
+                ],
+                "syllables": null,
+                "last_token": "billed",
+                "rhymes_with": null,
+                "verse_id": 0
+            },
+            {
+                "rhyme_score": 0,
+                "rhyme_tag": "b",
+                "text": "Blev alting fordunklet for mig,",
+                "transcription": "",
+                "tokens": [
+                    "blev",
+                    "alting",
+                    "fordunklet",
+                    "for",
+                    "mig"
+                ],
+                "syllables": null,
+                "last_token": "mig",
+                "rhymes_with": null,
+                "verse_id": 1
+            },
+            {
+                "rhyme_score": 0,
+                "rhyme_tag": "c",
+                "text": "Det sidste lys er nu slukket",
+                "transcription": "",
+                "tokens": [
+                    "det",
+                    "sidste",
+                    "lys",
+                    "er",
+                    "nu",
+                    "slukket"
+                ],
+                "syllables": null,
+                "last_token": "slukket",
+                "rhymes_with": null,
+                "verse_id": 2
+            },
+            {
+                "rhyme_score": 0,
+                "rhyme_tag": "d",
+                "text": "Og natten beskygger min vei!",
+                "transcription": "",
+                "tokens": [
+                    "og",
+                    "natten",
+                    "beskygger",
+                    "min",
+                    "vei"
+                ],
+                "syllables": null,
+                "last_token": "vei",
+                "rhymes_with": null,
+                "verse_id": 3
+            }
+        ]
+    },
+    {
+        "stanza_id": 9,
+        "rhyme_scheme": "abcb",
+        "verses": [
+            {
+                "rhyme_score": 0,
+                "rhyme_tag": "a",
+                "text": "Og alting er blevet et virvar,",
+                "transcription": "",
+                "tokens": [
+                    "og",
+                    "alting",
+                    "er",
+                    "blevet",
+                    "et",
+                    "virvar"
+                ],
+                "syllables": null,
+                "last_token": "virvar",
+                "rhymes_with": null,
+                "verse_id": 0
+            },
+            {
+                "rhyme_score": 0,
+                "rhyme_tag": "b",
+                "text": "Jeg finder ei rede deri!",
+                "transcription": "",
+                "tokens": [
+                    "jeg",
+                    "finder",
+                    "ei",
+                    "rede",
+                    "deri"
+                ],
+                "syllables": null,
+                "last_token": "deri",
+                "rhymes_with": null,
+                "verse_id": 1
+            },
+            {
+                "rhyme_score": 0,
+                "rhyme_tag": "c",
+                "text": "Thu livet har mistet sin mening,",
+                "transcription": "",
+                "tokens": [
+                    "thu",
+                    "livet",
+                    "har",
+                    "mistet",
+                    "sin",
+                    "mening"
+                ],
+                "syllables": null,
+                "last_token": "mening",
+                "rhymes_with": null,
+                "verse_id": 2
+            },
+            {
+                "rhyme_score": 1,
+                "rhyme_tag": "b",
+                "text": "Og nu er det hele forbi!",
+                "transcription": "",
+                "tokens": [
+                    "og",
+                    "nu",
+                    "er",
+                    "det",
+                    "hele",
+                    "forbi"
+                ],
+                "syllables": null,
+                "last_token": "forbi",
+                "rhymes_with": 1,
+                "verse_id": 3
+            }
+        ]
+    }
+]
