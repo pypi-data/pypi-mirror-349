@@ -1,0 +1,53 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "todo_manager"
+description = "Manage a to-do list"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3.12",
+]
+keywords = ["todo_manager"]
+dynamic = ["version"]
+license = { file = "LICENSE" }
+requires-python = ">=3.9"
+dependencies = [
+    "environs>=9.3.5",
+]
+authors = [
+    { name = "Tiffany Lift",  email = "tlift@example.com" },
+]
+
+[project.readme]
+file = "README.md"
+content-type = "text/markdown"
+
+[project.urls]
+Homepage = "https://github.com/laffy_taffy/todo-manager"
+Documentation = "https://laffy_taffy.github.io/todo_manager"
+Repository = "https://github.com/laffy_taffy/todo-manager"
+Changelog = "https://github.com/laffy_taffy/todo-manager/CHANGELOG.md"
+
+[project.optional-dependencies]
+dev = [
+    "pre-commit>=2.15.0",
+    "uv",
+]
+test = [
+    "coverage>=6.1.2",
+    "pre-commit>=2.15.0",
+    "pytest-cov>=3.0.0",
+    "pytest>=6.0.0",
+]
+docs = [
+    "black",
+    "mkdocs",
+    "mkdocs-material",
+]
+
+[tool.hatch.version]
+path = "todo_manager/__init__.py"
