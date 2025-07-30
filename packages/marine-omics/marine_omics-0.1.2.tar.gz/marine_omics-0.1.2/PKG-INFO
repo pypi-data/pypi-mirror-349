@@ -1,0 +1,36 @@
+Metadata-Version: 2.4
+Name: marine-omics
+Version: 0.1.2
+Summary: Utilities for metagoflow and marine omics demos
+Maintainer-email: FAIR-Ease <dpalecek@ualg.pt>
+Requires-Python: >=3.10
+License-File: LICENSE
+Requires-Dist: bioblend>=1.4.0
+Requires-Dist: bokeh>=3.7.3
+Requires-Dist: holoviews>=1.20.0
+Requires-Dist: hvplot>=0.11.2
+Requires-Dist: fastparquet>=2024.11.0
+Requires-Dist: ipython>=8.30.0
+Requires-Dist: matplotlib>=3.5
+Requires-Dist: numpy>=1.23.5
+Requires-Dist: pandas>=1.2.0
+Requires-Dist: panel>=1.6.0
+Requires-Dist: plotly>=5.3.0
+Requires-Dist: psutil>=5.8.0
+Requires-Dist: pyngrok>=7.2.3
+Requires-Dist: python-dotenv>=1.0.0
+Requires-Dist: requests>=2.26.0
+Requires-Dist: scikit-bio>=0.6.3
+Requires-Dist: scikit-learn>=1.6.0
+Requires-Dist: seaborn>=0.11.2
+Provides-Extra: testing
+Requires-Dist: pytest; extra == "testing"
+Requires-Dist: pytest-cov; extra == "testing"
+Requires-Dist: pytest-timeout; extra == "testing"
+Requires-Dist: tox; extra == "testing"
+Provides-Extra: docs
+Requires-Dist: sphinx<9.0.0,>=5.0.0; extra == "docs"
+Requires-Dist: sphinx-autoapi>=1.9.0; extra == "docs"
+Requires-Dist: pydata-sphinx-theme; extra == "docs"
+Requires-Dist: matplotlib>=3.5; extra == "docs"
+Dynamic: license-file
