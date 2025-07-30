@@ -1,0 +1,15 @@
+pyproject.toml
+src/BBO.egg-info/PKG-INFO
+src/BBO.egg-info/SOURCES.txt
+src/BBO.egg-info/dependency_links.txt
+src/BBO.egg-info/not-zip-safe
+src/BBO.egg-info/requires.txt
+src/BBO.egg-info/top_level.txt
+src/bbo/__init__.py
+src/bbo/_approx_hull_ndim.py
+src/bbo/exception.py
+src/bbo/hull.py
+src/bbo/output.py
+src/bbo/pca.py
+src/bbo/typing.py
+src/bbo/util.py

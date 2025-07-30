@@ -1,0 +1,6 @@
+numpy
+scipy
+jax
+arrayer<0.2
+beartype
+jaxtyping
