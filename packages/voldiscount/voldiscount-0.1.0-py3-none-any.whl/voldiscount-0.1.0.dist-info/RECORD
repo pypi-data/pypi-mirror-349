@@ -1,0 +1,13 @@
+voldiscount/__init__.py,sha256=Pru0BlFBASFCFo7McHdohtKkUtgMPDwbGfyUZlE2_Vw,21
+voldiscount/calibration.py,sha256=0rC5tO5edDgt3tN29gj5x_opiWP_T24G8Wy6VCqcCtI,36829
+voldiscount/data.py,sha256=iL5hTMDgnBgqUiOZ3792cc7lkqnYdx-lmTVd-3ksn4s,33845
+voldiscount/interpolation.py,sha256=6np1RWdfUQh0IwnywPU29W_KV2_c-lt_ky7kjT-nNak,12685
+voldiscount/models.py,sha256=O3UQTrMyaMBCskyowHnBtHKw6ebySFHpuiW_P0JCjX4,13622
+voldiscount/pair_selection.py,sha256=Dq9A2M4PbkM-oy6eB0YPtXKgXjXQNLaIt_U-ktzEoqk,37562
+voldiscount/vol_params.py,sha256=JOIgWc4M9ULLbfNLN6MdokLDY7LVP_TlvCyKkexVNVE,3438
+voldiscount/voldiscount.py,sha256=g8enZiyKIVjSaJqxigYX43eMlNl7qT0nWDKe20ENdLc,5927
+voldiscount-0.1.0.dist-info/licenses/LICENSE,sha256=lk8g9lHsRWXnmOXouRFZX1xTi0vlAicp8wS824c_esE,1089
+voldiscount-0.1.0.dist-info/METADATA,sha256=HBmsVjursuwo-ji0MVSBNhqD43AA3dtFvS5SOLWNKzI,728
+voldiscount-0.1.0.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+voldiscount-0.1.0.dist-info/top_level.txt,sha256=j0ZiFvoYWf-fcMxcUFmNmy-8rmbbILpLqpbHD9neU7Y,12
+voldiscount-0.1.0.dist-info/RECORD,,
