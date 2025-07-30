@@ -1,0 +1,9 @@
+torch
+torchvision
+numpy
+opencv-python
+numba
+more_itertools
+simplepyutils
+rlemasklib
+framepump
