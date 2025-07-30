@@ -1,0 +1,2 @@
+[console_scripts]
+irish-pipeline = irish_pipeline.cli:main

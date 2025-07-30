@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "irish-pipeline"
+version = "0.1.0"
+description = "Tools to inspect schemas and load Irish data into Postgres database"
+authors = [
+    {name = "Shyam Kumar Ray Yadav", email = "shyamkumar.rayyadav@gwdg.de"}
+]
+readme = "README.md"
+
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3.11",
+    "Operating System :: OS Independent",
+]
+
+#Put your runtime dependencies here. 
+dependencies = [
+    "pandas>=2.2.0",
+    "PyYAML>=6.0.1",
+    "SQLAlchemy>=2.0.25",
+    "python-dotenv>=0.21.0",
+    "click", 
+]
+
+[project.urls]
+Homepage = "https://gitlab.gwdg.de/srayyad/irish_data_crc_development"
+
+[project.scripts]
+irish-pipeline = "irish_pipeline.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
