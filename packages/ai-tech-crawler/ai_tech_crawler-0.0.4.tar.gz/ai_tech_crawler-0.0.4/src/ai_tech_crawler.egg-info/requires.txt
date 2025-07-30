@@ -1,0 +1,9 @@
+fastapi
+langchain
+langchain-community
+langchain-core
+langchain-openai
+langchain-text-splitters
+markdownify
+playwright
+python-dotenv
