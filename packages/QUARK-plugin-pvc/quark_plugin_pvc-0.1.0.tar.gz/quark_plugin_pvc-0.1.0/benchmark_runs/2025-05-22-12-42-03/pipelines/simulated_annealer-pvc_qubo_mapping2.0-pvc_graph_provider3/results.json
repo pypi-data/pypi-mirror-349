@@ -1,0 +1,38 @@
+{
+    "steps": [
+        {
+            "module_info": {
+                "name": "simulated_annealer",
+                "params": {}
+            },
+            "preprocess_time": 0.3032672090048436,
+            "postprocess_time": 0.00032175000524148345,
+            "additional_metrics": {},
+            "unique_name": "simulated_annealer"
+        },
+        {
+            "module_info": {
+                "name": "pvc_qubo_mapping",
+                "params": {
+                    "lagrange_factor": 2.0
+                }
+            },
+            "preprocess_time": 0.02819945800001733,
+            "postprocess_time": 6.270900485105813e-05,
+            "additional_metrics": {},
+            "unique_name": "pvc_qubo_mapping2.0"
+        },
+        {
+            "module_info": {
+                "name": "pvc_graph_provider",
+                "params": {
+                    "seams": 3
+                }
+            },
+            "preprocess_time": 0.01052937499480322,
+            "postprocess_time": 0.000108207983430475,
+            "additional_metrics": {},
+            "unique_name": "pvc_graph_provider3"
+        }
+    ]
+}

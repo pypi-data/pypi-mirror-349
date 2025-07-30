@@ -1,0 +1,15 @@
+{
+    "exception": "'Other' object has no attribute 'values'",
+    "metrics_up_to_now": [
+        {
+            "module_info": {
+                "name": "simulated_annealer",
+                "params": {}
+            },
+            "preprocess_time": 0.299323084007483,
+            "postprocess_time": 0.0002829160075634718,
+            "additional_metrics": {},
+            "unique_name": "simulated_annealer"
+        }
+    ]
+}
