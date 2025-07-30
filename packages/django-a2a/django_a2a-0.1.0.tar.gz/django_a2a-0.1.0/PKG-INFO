@@ -1,0 +1,55 @@
+Metadata-Version: 2.4
+Name: django-a2a
+Version: 0.1.0
+Summary: Django app for handling a2a communication protocol
+Project-URL: Homepage, https://github.com/ppak10/django-a2a
+Project-URL: Issues, https://github.com/ppak10/django-a2a/issues
+Author-email: Peter Pak <ppak10@gmail.com>
+License-File: LICENSE
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Requires-Dist: django>=4.0
+Requires-Dist: djangorestframework
+Description-Content-Type: text/markdown
+
+# django-a2a
+
+![Django 5.0](https://github.com/ppak10/django-a2a/actions/workflows/django_5.yml/badge.svg)
+![Django 4.0](https://github.com/ppak10/django-a2a/actions/workflows/django_4.yml/badge.svg)
+
+## Installation
+### 1. Install `django-a2a` via pip
+```bash
+pip install django-a2a
+```
+### 2. Add `django_a2a` in `INSTALLED_APP` within `settings.py`
+```python
+# Application definition
+
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+
+    # Django A2A
+    'django_a2a',
+]
+```
+
+### 3. Migrate database.
+```bash
+python manage.py migrate
+```
+
+## Contributing
+
+## Testing
+### Using Act to run GitHub Actions locally
+#### Ubuntu
+```bash
+curl --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/nektos/act/master/install.sh | sudo bash && ./bin/act
+```
