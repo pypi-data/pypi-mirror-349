@@ -1,0 +1,102 @@
+[project]
+name = "cloai"
+version = "1.1.0"
+description = "A generic interface for AI models."
+readme = "README.md"
+requires-python = ">3.10"
+dependencies = [
+  "anthropic[bedrock]>=0.37.1",
+  "httpx==0.27",
+  "instructor[anthropic]>1.6",
+  "ollama>=0.4.5",
+  "openai>=1.58.1"
+]
+
+[tool.uv]
+dev-dependencies = [
+  "mypy>=1.14.0",
+  "pre-commit>=4.0.1",
+  "pytest>=8.3.4",
+  "pytest-asyncio>=0.25.0",
+  "pytest-cov>=6.0.0",
+  "pytest-mock>=3.14.0",
+  "ruff>=0.8.4",
+  "pdoc>=15.0.1"
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/cloai"]
+
+[tool.pytest.ini_options]
+pythonpath = [
+  "src"
+]
+
+[tool.mypy]
+ignore_missing_imports = true
+
+[tool.ruff]
+exclude = [
+  ".bzr",
+  ".direnv",
+  ".eggs",
+  ".git",
+  ".git-rewrite",
+  ".hg",
+  ".mypy_cache",
+  ".nox",
+  ".pants.d",
+  ".pytype",
+  ".ruff_cache",
+  ".svn",
+  ".tox",
+  ".venv",
+  "__pypackages__",
+  "_build",
+  "buck-out",
+  "build",
+  "dist",
+  "node_modules",
+  "venv"
+]
+line-length = 88
+indent-width = 4
+src = ["src"]
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+  "B008"  # Allow function call in arguments; this is common in FastAPI.
+]
+fixable = ["ALL"]
+unfixable = []
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**/*.py" = [
+  "S101",  # Allow assets
+  "ARG",  # Unused arguments are common in tests (fixtures).
+  "FBT",  # Allow positional booleans
+  "SLF001",  # Allow private member access.
+  "INP001"  # No need for namespace packages in tests.
+]
+"src/**/models.py" = [
+  "A003"  # Allow id as a field name.
+]
+"src/**/schemas.py" = [
+  "A003"  # Allow id as a field name.
+]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
