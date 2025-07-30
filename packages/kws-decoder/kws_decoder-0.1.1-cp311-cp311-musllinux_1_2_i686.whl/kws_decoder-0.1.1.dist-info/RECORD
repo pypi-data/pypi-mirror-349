@@ -1,0 +1,8 @@
+kws_decoder/__init__.py,sha256=vwGMQC4oOVgSOBcslafYqTZ_rGvEKvmZ9qTb26yiq5A,42
+kws_decoder/kws_decoder.cpython-311-i386-linux-musl.so,sha256=D1BCqCrjx4AYrB2GZa1hT-O2KDdT-aafteKnbtVW6rE,268513
+kws_decoder.libs/libgcc_s-887de51c.so.1,sha256=RNCpguSD0HdFtlL1g8NK7PFi5CjUceWeO3d0Hf_dMQ0,218145
+kws_decoder.libs/libstdc++-d6415257.so.6.0.33,sha256=meIiZn0YlC5otOd-KKSYWFNdlouafStLQyPhNs_zcYQ,3597909
+kws_decoder-0.1.1.dist-info/METADATA,sha256=DkY2s09eugy1yE5Qh45Y4IvNRa-PL1UAT3oRQIyVNOc,5410
+kws_decoder-0.1.1.dist-info/WHEEL,sha256=tIgdrmsCDVDFlYLXNj3OUwQqOXq8DTpSl9x1HviCzqc,115
+kws_decoder-0.1.1.dist-info/RECORD,,
+kws_decoder-0.1.1.dist-info/licenses/LICENSE,sha256=vfgRJOdRTyg34zpMiraycFdWrF1x9TJBJtLHtkr-6Ss,1084
