@@ -1,0 +1,7 @@
+setup.py
+goorm_hellopkg/__init__.py
+goorm_hellopkg/hello.py
+goorm_hellopkg.egg-info/PKG-INFO
+goorm_hellopkg.egg-info/SOURCES.txt
+goorm_hellopkg.egg-info/dependency_links.txt
+goorm_hellopkg.egg-info/top_level.txt
