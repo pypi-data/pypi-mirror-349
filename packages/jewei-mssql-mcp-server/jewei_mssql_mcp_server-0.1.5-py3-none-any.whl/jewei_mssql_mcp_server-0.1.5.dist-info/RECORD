@@ -1,0 +1,10 @@
+jewei_mssql_mcp_server-0.1.5.dist-info/licenses/LICENSE,sha256=eNdaHLg_D2Xh-EqVDDqTAFX9yFCVr2OsrXRYx023C8U,1081
+mcp_server_jewei/__init__.py,sha256=QIOb5JgH50ePj2g2NcTQivJ45lY3pyv8kxnP1p_r0DU,51
+mcp_server_jewei/app_config.py,sha256=YKVAfp-Y_NoxJ7FerLkbeLxXSFCNYNwN3S3bXXvai94,928
+mcp_server_jewei/core.py,sha256=2xEKzmQQK9xz1ixWtVgHk9JeI70K4lPQ7RX6Mpca0AA,17625
+mcp_server_jewei/server.py,sha256=iBo-my3-osfKm_oi8qHjtDlASqhpEfKwhtzNeUCZH6k,3183
+jewei_mssql_mcp_server-0.1.5.dist-info/METADATA,sha256=u4Z59K8YuRn1bDjJwX_1clQymgKtZjUF_XJpymAGZ3Q,6443
+jewei_mssql_mcp_server-0.1.5.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+jewei_mssql_mcp_server-0.1.5.dist-info/entry_points.txt,sha256=NEh1ZoLfiwBx02pPaHTuEbvgi-5_Bp_ghdJQT39FF9Y,72
+jewei_mssql_mcp_server-0.1.5.dist-info/top_level.txt,sha256=0efwkUzinDJLxrSRtaKACWHCN7JkEP3TM8DM8cYrDVQ,17
+jewei_mssql_mcp_server-0.1.5.dist-info/RECORD,,
