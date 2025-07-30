@@ -1,0 +1,10 @@
+from cfn_resource_provider_schemas.Elasticache.Cachecluster import SCHEMA as Cachecluster
+from cfn_resource_provider_schemas.Elasticache.Globalreplicationgroup import SCHEMA as Globalreplicationgroup
+from cfn_resource_provider_schemas.Elasticache.Parametergroup import SCHEMA as Parametergroup
+from cfn_resource_provider_schemas.Elasticache.Replicationgroup import SCHEMA as Replicationgroup
+from cfn_resource_provider_schemas.Elasticache.Securitygroup import SCHEMA as Securitygroup
+from cfn_resource_provider_schemas.Elasticache.Securitygroupingress import SCHEMA as Securitygroupingress
+from cfn_resource_provider_schemas.Elasticache.Serverlesscache import SCHEMA as Serverlesscache
+from cfn_resource_provider_schemas.Elasticache.Subnetgroup import SCHEMA as Subnetgroup
+from cfn_resource_provider_schemas.Elasticache.User import SCHEMA as User
+from cfn_resource_provider_schemas.Elasticache.Usergroup import SCHEMA as Usergroup

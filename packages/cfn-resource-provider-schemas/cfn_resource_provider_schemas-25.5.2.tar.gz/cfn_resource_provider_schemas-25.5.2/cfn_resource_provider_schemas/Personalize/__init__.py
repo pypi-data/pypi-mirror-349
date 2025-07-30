@@ -1,0 +1,4 @@
+from cfn_resource_provider_schemas.Personalize.Dataset import SCHEMA as Dataset
+from cfn_resource_provider_schemas.Personalize.Datasetgroup import SCHEMA as Datasetgroup
+from cfn_resource_provider_schemas.Personalize.Schema import SCHEMA as Schema
+from cfn_resource_provider_schemas.Personalize.Solution import SCHEMA as Solution

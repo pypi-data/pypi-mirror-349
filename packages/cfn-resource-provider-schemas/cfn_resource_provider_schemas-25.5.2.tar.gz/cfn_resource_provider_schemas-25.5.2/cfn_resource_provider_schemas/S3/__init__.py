@@ -1,0 +1,10 @@
+from cfn_resource_provider_schemas.S3.Accessgrant import SCHEMA as Accessgrant
+from cfn_resource_provider_schemas.S3.Accessgrantsinstance import SCHEMA as Accessgrantsinstance
+from cfn_resource_provider_schemas.S3.Accessgrantslocation import SCHEMA as Accessgrantslocation
+from cfn_resource_provider_schemas.S3.Accesspoint import SCHEMA as Accesspoint
+from cfn_resource_provider_schemas.S3.Bucket import SCHEMA as Bucket
+from cfn_resource_provider_schemas.S3.Bucketpolicy import SCHEMA as Bucketpolicy
+from cfn_resource_provider_schemas.S3.Multiregionaccesspoint import SCHEMA as Multiregionaccesspoint
+from cfn_resource_provider_schemas.S3.Multiregionaccesspointpolicy import SCHEMA as Multiregionaccesspointpolicy
+from cfn_resource_provider_schemas.S3.Storagelens import SCHEMA as Storagelens
+from cfn_resource_provider_schemas.S3.Storagelensgroup import SCHEMA as Storagelensgroup

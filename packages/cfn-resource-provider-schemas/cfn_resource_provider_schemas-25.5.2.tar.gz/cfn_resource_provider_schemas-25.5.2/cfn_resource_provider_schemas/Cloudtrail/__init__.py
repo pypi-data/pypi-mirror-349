@@ -1,0 +1,5 @@
+from cfn_resource_provider_schemas.Cloudtrail.Channel import SCHEMA as Channel
+from cfn_resource_provider_schemas.Cloudtrail.Dashboard import SCHEMA as Dashboard
+from cfn_resource_provider_schemas.Cloudtrail.Eventdatastore import SCHEMA as Eventdatastore
+from cfn_resource_provider_schemas.Cloudtrail.Resourcepolicy import SCHEMA as Resourcepolicy
+from cfn_resource_provider_schemas.Cloudtrail.Trail import SCHEMA as Trail

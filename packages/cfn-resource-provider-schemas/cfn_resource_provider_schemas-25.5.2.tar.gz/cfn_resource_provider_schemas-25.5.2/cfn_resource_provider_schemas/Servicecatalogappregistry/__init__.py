@@ -1,0 +1,4 @@
+from cfn_resource_provider_schemas.Servicecatalogappregistry.Application import SCHEMA as Application
+from cfn_resource_provider_schemas.Servicecatalogappregistry.Attributegroup import SCHEMA as Attributegroup
+from cfn_resource_provider_schemas.Servicecatalogappregistry.Attributegroupassociation import SCHEMA as Attributegroupassociation
+from cfn_resource_provider_schemas.Servicecatalogappregistry.Resourceassociation import SCHEMA as Resourceassociation

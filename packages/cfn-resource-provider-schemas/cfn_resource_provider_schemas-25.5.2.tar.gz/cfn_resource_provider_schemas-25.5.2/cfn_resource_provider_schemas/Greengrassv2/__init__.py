@@ -1,0 +1,2 @@
+from cfn_resource_provider_schemas.Greengrassv2.Componentversion import SCHEMA as Componentversion
+from cfn_resource_provider_schemas.Greengrassv2.Deployment import SCHEMA as Deployment

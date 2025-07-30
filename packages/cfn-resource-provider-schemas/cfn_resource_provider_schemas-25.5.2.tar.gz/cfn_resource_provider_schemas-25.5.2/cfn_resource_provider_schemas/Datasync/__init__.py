@@ -1,0 +1,13 @@
+from cfn_resource_provider_schemas.Datasync.Agent import SCHEMA as Agent
+from cfn_resource_provider_schemas.Datasync.Locationazureblob import SCHEMA as Locationazureblob
+from cfn_resource_provider_schemas.Datasync.Locationefs import SCHEMA as Locationefs
+from cfn_resource_provider_schemas.Datasync.Locationfsxlustre import SCHEMA as Locationfsxlustre
+from cfn_resource_provider_schemas.Datasync.Locationfsxontap import SCHEMA as Locationfsxontap
+from cfn_resource_provider_schemas.Datasync.Locationfsxopenzfs import SCHEMA as Locationfsxopenzfs
+from cfn_resource_provider_schemas.Datasync.Locationfsxwindows import SCHEMA as Locationfsxwindows
+from cfn_resource_provider_schemas.Datasync.Locationhdfs import SCHEMA as Locationhdfs
+from cfn_resource_provider_schemas.Datasync.Locationnfs import SCHEMA as Locationnfs
+from cfn_resource_provider_schemas.Datasync.Locationobjectstorage import SCHEMA as Locationobjectstorage
+from cfn_resource_provider_schemas.Datasync.Locations3 import SCHEMA as Locations3
+from cfn_resource_provider_schemas.Datasync.Locationsmb import SCHEMA as Locationsmb
+from cfn_resource_provider_schemas.Datasync.Task import SCHEMA as Task

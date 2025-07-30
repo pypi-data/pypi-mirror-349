@@ -1,0 +1,4 @@
+from cfn_resource_provider_schemas.S3outposts.Accesspoint import SCHEMA as Accesspoint
+from cfn_resource_provider_schemas.S3outposts.Bucket import SCHEMA as Bucket
+from cfn_resource_provider_schemas.S3outposts.Bucketpolicy import SCHEMA as Bucketpolicy
+from cfn_resource_provider_schemas.S3outposts.Endpoint import SCHEMA as Endpoint

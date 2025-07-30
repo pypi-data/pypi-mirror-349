@@ -1,0 +1,9 @@
+from cfn_resource_provider_schemas.Iotwireless.Destination import SCHEMA as Destination
+from cfn_resource_provider_schemas.Iotwireless.Deviceprofile import SCHEMA as Deviceprofile
+from cfn_resource_provider_schemas.Iotwireless.Fuotatask import SCHEMA as Fuotatask
+from cfn_resource_provider_schemas.Iotwireless.Multicastgroup import SCHEMA as Multicastgroup
+from cfn_resource_provider_schemas.Iotwireless.Networkanalyzerconfiguration import SCHEMA as Networkanalyzerconfiguration
+from cfn_resource_provider_schemas.Iotwireless.Serviceprofile import SCHEMA as Serviceprofile
+from cfn_resource_provider_schemas.Iotwireless.Taskdefinition import SCHEMA as Taskdefinition
+from cfn_resource_provider_schemas.Iotwireless.Wirelessdevice import SCHEMA as Wirelessdevice
+from cfn_resource_provider_schemas.Iotwireless.Wirelessgateway import SCHEMA as Wirelessgateway

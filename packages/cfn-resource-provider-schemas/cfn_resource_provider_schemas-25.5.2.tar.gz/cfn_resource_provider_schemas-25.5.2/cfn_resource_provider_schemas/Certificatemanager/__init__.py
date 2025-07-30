@@ -1,0 +1,2 @@
+from cfn_resource_provider_schemas.Certificatemanager.Account import SCHEMA as Account
+from cfn_resource_provider_schemas.Certificatemanager.Certificate import SCHEMA as Certificate

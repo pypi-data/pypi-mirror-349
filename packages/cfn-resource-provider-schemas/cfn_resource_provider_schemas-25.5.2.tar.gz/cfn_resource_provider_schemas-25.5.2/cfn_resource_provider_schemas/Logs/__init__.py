@@ -1,0 +1,14 @@
+from cfn_resource_provider_schemas.Logs.Accountpolicy import SCHEMA as Accountpolicy
+from cfn_resource_provider_schemas.Logs.Delivery import SCHEMA as Delivery
+from cfn_resource_provider_schemas.Logs.Deliverydestination import SCHEMA as Deliverydestination
+from cfn_resource_provider_schemas.Logs.Deliverysource import SCHEMA as Deliverysource
+from cfn_resource_provider_schemas.Logs.Destination import SCHEMA as Destination
+from cfn_resource_provider_schemas.Logs.Integration import SCHEMA as Integration
+from cfn_resource_provider_schemas.Logs.Loganomalydetector import SCHEMA as Loganomalydetector
+from cfn_resource_provider_schemas.Logs.Loggroup import SCHEMA as Loggroup
+from cfn_resource_provider_schemas.Logs.Logstream import SCHEMA as Logstream
+from cfn_resource_provider_schemas.Logs.Metricfilter import SCHEMA as Metricfilter
+from cfn_resource_provider_schemas.Logs.Querydefinition import SCHEMA as Querydefinition
+from cfn_resource_provider_schemas.Logs.Resourcepolicy import SCHEMA as Resourcepolicy
+from cfn_resource_provider_schemas.Logs.Subscriptionfilter import SCHEMA as Subscriptionfilter
+from cfn_resource_provider_schemas.Logs.Transformer import SCHEMA as Transformer

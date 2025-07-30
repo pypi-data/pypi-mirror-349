@@ -1,0 +1,5 @@
+from cfn_resource_provider_schemas.Apprunner.Autoscalingconfiguration import SCHEMA as Autoscalingconfiguration
+from cfn_resource_provider_schemas.Apprunner.Observabilityconfiguration import SCHEMA as Observabilityconfiguration
+from cfn_resource_provider_schemas.Apprunner.Service import SCHEMA as Service
+from cfn_resource_provider_schemas.Apprunner.Vpcconnector import SCHEMA as Vpcconnector
+from cfn_resource_provider_schemas.Apprunner.Vpcingressconnection import SCHEMA as Vpcingressconnection

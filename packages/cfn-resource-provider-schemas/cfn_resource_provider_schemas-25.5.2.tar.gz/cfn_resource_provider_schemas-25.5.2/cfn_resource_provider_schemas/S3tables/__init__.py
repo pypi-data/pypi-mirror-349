@@ -1,0 +1,2 @@
+from cfn_resource_provider_schemas.S3tables.Tablebucket import SCHEMA as Tablebucket
+from cfn_resource_provider_schemas.S3tables.Tablebucketpolicy import SCHEMA as Tablebucketpolicy

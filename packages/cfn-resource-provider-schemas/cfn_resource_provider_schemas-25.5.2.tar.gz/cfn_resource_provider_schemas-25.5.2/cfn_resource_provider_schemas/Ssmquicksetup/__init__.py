@@ -1,0 +1,1 @@
+from cfn_resource_provider_schemas.Ssmquicksetup.Configurationmanager import SCHEMA as Configurationmanager

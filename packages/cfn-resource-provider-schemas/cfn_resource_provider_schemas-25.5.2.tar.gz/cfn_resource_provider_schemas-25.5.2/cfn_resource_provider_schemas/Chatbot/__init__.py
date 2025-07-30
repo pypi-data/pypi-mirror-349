@@ -1,0 +1,3 @@
+from cfn_resource_provider_schemas.Chatbot.Customaction import SCHEMA as Customaction
+from cfn_resource_provider_schemas.Chatbot.Microsoftteamschannelconfiguration import SCHEMA as Microsoftteamschannelconfiguration
+from cfn_resource_provider_schemas.Chatbot.Slackchannelconfiguration import SCHEMA as Slackchannelconfiguration

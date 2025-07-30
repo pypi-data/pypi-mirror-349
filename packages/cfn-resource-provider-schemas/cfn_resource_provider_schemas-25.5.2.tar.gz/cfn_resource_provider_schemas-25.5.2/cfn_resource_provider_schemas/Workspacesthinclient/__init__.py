@@ -1,0 +1,1 @@
+from cfn_resource_provider_schemas.Workspacesthinclient.Environment import SCHEMA as Environment

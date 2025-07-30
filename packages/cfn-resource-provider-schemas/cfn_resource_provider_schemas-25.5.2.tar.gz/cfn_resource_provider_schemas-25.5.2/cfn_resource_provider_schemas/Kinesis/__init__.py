@@ -1,0 +1,3 @@
+from cfn_resource_provider_schemas.Kinesis.Resourcepolicy import SCHEMA as Resourcepolicy
+from cfn_resource_provider_schemas.Kinesis.Stream import SCHEMA as Stream
+from cfn_resource_provider_schemas.Kinesis.Streamconsumer import SCHEMA as Streamconsumer

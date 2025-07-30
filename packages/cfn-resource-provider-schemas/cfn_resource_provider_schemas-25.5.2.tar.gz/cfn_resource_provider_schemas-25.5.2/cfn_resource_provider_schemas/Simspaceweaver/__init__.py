@@ -1,0 +1,1 @@
+from cfn_resource_provider_schemas.Simspaceweaver.Simulation import SCHEMA as Simulation

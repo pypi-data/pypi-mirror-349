@@ -1,0 +1,3 @@
+from cfn_resource_provider_schemas.Codepipeline.Customactiontype import SCHEMA as Customactiontype
+from cfn_resource_provider_schemas.Codepipeline.Pipeline import SCHEMA as Pipeline
+from cfn_resource_provider_schemas.Codepipeline.Webhook import SCHEMA as Webhook

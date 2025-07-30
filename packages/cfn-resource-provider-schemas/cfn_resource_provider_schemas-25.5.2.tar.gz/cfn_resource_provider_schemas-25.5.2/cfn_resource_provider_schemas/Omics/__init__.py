@@ -1,0 +1,7 @@
+from cfn_resource_provider_schemas.Omics.Annotationstore import SCHEMA as Annotationstore
+from cfn_resource_provider_schemas.Omics.Referencestore import SCHEMA as Referencestore
+from cfn_resource_provider_schemas.Omics.Rungroup import SCHEMA as Rungroup
+from cfn_resource_provider_schemas.Omics.Sequencestore import SCHEMA as Sequencestore
+from cfn_resource_provider_schemas.Omics.Variantstore import SCHEMA as Variantstore
+from cfn_resource_provider_schemas.Omics.Workflow import SCHEMA as Workflow
+from cfn_resource_provider_schemas.Omics.Workflowversion import SCHEMA as Workflowversion

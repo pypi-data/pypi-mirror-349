@@ -1,0 +1,8 @@
+from cfn_resource_provider_schemas.Emr.Cluster import SCHEMA as Cluster
+from cfn_resource_provider_schemas.Emr.Instancefleetconfig import SCHEMA as Instancefleetconfig
+from cfn_resource_provider_schemas.Emr.Instancegroupconfig import SCHEMA as Instancegroupconfig
+from cfn_resource_provider_schemas.Emr.Securityconfiguration import SCHEMA as Securityconfiguration
+from cfn_resource_provider_schemas.Emr.Step import SCHEMA as Step
+from cfn_resource_provider_schemas.Emr.Studio import SCHEMA as Studio
+from cfn_resource_provider_schemas.Emr.Studiosessionmapping import SCHEMA as Studiosessionmapping
+from cfn_resource_provider_schemas.Emr.Walworkspace import SCHEMA as Walworkspace

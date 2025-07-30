@@ -1,0 +1,1 @@
+from cfn_resource_provider_schemas.Codestar.Githubrepository import SCHEMA as Githubrepository

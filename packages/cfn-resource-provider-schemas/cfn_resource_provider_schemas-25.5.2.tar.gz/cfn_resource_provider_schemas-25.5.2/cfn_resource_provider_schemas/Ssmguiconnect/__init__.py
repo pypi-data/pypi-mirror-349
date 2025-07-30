@@ -1,0 +1,1 @@
+from cfn_resource_provider_schemas.Ssmguiconnect.Preferences import SCHEMA as Preferences

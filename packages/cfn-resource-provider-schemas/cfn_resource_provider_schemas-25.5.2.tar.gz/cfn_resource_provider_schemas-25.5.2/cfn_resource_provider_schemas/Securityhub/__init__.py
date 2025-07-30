@@ -1,0 +1,11 @@
+from cfn_resource_provider_schemas.Securityhub.Automationrule import SCHEMA as Automationrule
+from cfn_resource_provider_schemas.Securityhub.Configurationpolicy import SCHEMA as Configurationpolicy
+from cfn_resource_provider_schemas.Securityhub.Delegatedadmin import SCHEMA as Delegatedadmin
+from cfn_resource_provider_schemas.Securityhub.Findingaggregator import SCHEMA as Findingaggregator
+from cfn_resource_provider_schemas.Securityhub.Hub import SCHEMA as Hub
+from cfn_resource_provider_schemas.Securityhub.Insight import SCHEMA as Insight
+from cfn_resource_provider_schemas.Securityhub.Organizationconfiguration import SCHEMA as Organizationconfiguration
+from cfn_resource_provider_schemas.Securityhub.Policyassociation import SCHEMA as Policyassociation
+from cfn_resource_provider_schemas.Securityhub.Productsubscription import SCHEMA as Productsubscription
+from cfn_resource_provider_schemas.Securityhub.Securitycontrol import SCHEMA as Securitycontrol
+from cfn_resource_provider_schemas.Securityhub.Standard import SCHEMA as Standard

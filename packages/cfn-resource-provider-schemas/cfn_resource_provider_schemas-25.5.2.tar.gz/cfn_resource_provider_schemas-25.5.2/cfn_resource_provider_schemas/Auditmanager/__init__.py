@@ -1,0 +1,1 @@
+from cfn_resource_provider_schemas.Auditmanager.Assessment import SCHEMA as Assessment

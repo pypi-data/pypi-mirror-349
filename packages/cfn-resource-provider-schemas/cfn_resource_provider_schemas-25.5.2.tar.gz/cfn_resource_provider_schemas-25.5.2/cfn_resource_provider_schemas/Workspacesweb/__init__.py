@@ -1,0 +1,9 @@
+from cfn_resource_provider_schemas.Workspacesweb.Browsersettings import SCHEMA as Browsersettings
+from cfn_resource_provider_schemas.Workspacesweb.Dataprotectionsettings import SCHEMA as Dataprotectionsettings
+from cfn_resource_provider_schemas.Workspacesweb.Identityprovider import SCHEMA as Identityprovider
+from cfn_resource_provider_schemas.Workspacesweb.Ipaccesssettings import SCHEMA as Ipaccesssettings
+from cfn_resource_provider_schemas.Workspacesweb.Networksettings import SCHEMA as Networksettings
+from cfn_resource_provider_schemas.Workspacesweb.Portal import SCHEMA as Portal
+from cfn_resource_provider_schemas.Workspacesweb.Truststore import SCHEMA as Truststore
+from cfn_resource_provider_schemas.Workspacesweb.Useraccessloggingsettings import SCHEMA as Useraccessloggingsettings
+from cfn_resource_provider_schemas.Workspacesweb.Usersettings import SCHEMA as Usersettings

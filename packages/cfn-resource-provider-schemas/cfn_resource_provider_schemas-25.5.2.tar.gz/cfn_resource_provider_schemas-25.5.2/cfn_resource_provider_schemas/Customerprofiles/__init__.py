@@ -1,0 +1,7 @@
+from cfn_resource_provider_schemas.Customerprofiles.Calculatedattributedefinition import SCHEMA as Calculatedattributedefinition
+from cfn_resource_provider_schemas.Customerprofiles.Domain import SCHEMA as Domain
+from cfn_resource_provider_schemas.Customerprofiles.Eventstream import SCHEMA as Eventstream
+from cfn_resource_provider_schemas.Customerprofiles.Eventtrigger import SCHEMA as Eventtrigger
+from cfn_resource_provider_schemas.Customerprofiles.Integration import SCHEMA as Integration
+from cfn_resource_provider_schemas.Customerprofiles.Objecttype import SCHEMA as Objecttype
+from cfn_resource_provider_schemas.Customerprofiles.Segmentdefinition import SCHEMA as Segmentdefinition

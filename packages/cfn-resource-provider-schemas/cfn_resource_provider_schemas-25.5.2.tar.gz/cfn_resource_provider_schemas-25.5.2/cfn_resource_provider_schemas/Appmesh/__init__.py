@@ -1,0 +1,7 @@
+from cfn_resource_provider_schemas.Appmesh.Gatewayroute import SCHEMA as Gatewayroute
+from cfn_resource_provider_schemas.Appmesh.Mesh import SCHEMA as Mesh
+from cfn_resource_provider_schemas.Appmesh.Route import SCHEMA as Route
+from cfn_resource_provider_schemas.Appmesh.Virtualgateway import SCHEMA as Virtualgateway
+from cfn_resource_provider_schemas.Appmesh.Virtualnode import SCHEMA as Virtualnode
+from cfn_resource_provider_schemas.Appmesh.Virtualrouter import SCHEMA as Virtualrouter
+from cfn_resource_provider_schemas.Appmesh.Virtualservice import SCHEMA as Virtualservice

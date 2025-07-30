@@ -1,0 +1,5 @@
+from cfn_resource_provider_schemas.Batch.Computeenvironment import SCHEMA as Computeenvironment
+from cfn_resource_provider_schemas.Batch.Consumableresource import SCHEMA as Consumableresource
+from cfn_resource_provider_schemas.Batch.Jobdefinition import SCHEMA as Jobdefinition
+from cfn_resource_provider_schemas.Batch.Jobqueue import SCHEMA as Jobqueue
+from cfn_resource_provider_schemas.Batch.Schedulingpolicy import SCHEMA as Schedulingpolicy

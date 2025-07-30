@@ -1,0 +1,8 @@
+from cfn_resource_provider_schemas.Cleanrooms.Analysistemplate import SCHEMA as Analysistemplate
+from cfn_resource_provider_schemas.Cleanrooms.Collaboration import SCHEMA as Collaboration
+from cfn_resource_provider_schemas.Cleanrooms.Configuredtable import SCHEMA as Configuredtable
+from cfn_resource_provider_schemas.Cleanrooms.Configuredtableassociation import SCHEMA as Configuredtableassociation
+from cfn_resource_provider_schemas.Cleanrooms.Idmappingtable import SCHEMA as Idmappingtable
+from cfn_resource_provider_schemas.Cleanrooms.Idnamespaceassociation import SCHEMA as Idnamespaceassociation
+from cfn_resource_provider_schemas.Cleanrooms.Membership import SCHEMA as Membership
+from cfn_resource_provider_schemas.Cleanrooms.Privacybudgettemplate import SCHEMA as Privacybudgettemplate

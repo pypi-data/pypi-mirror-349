@@ -1,0 +1,4 @@
+from cfn_resource_provider_schemas.Eventschemas.Discoverer import SCHEMA as Discoverer
+from cfn_resource_provider_schemas.Eventschemas.Registry import SCHEMA as Registry
+from cfn_resource_provider_schemas.Eventschemas.Registrypolicy import SCHEMA as Registrypolicy
+from cfn_resource_provider_schemas.Eventschemas.Schema import SCHEMA as Schema

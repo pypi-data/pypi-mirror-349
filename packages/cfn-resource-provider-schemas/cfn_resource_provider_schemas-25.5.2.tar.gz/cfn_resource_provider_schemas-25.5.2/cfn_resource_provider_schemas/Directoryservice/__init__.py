@@ -1,0 +1,2 @@
+from cfn_resource_provider_schemas.Directoryservice.Microsoftad import SCHEMA as Microsoftad
+from cfn_resource_provider_schemas.Directoryservice.Simplead import SCHEMA as Simplead

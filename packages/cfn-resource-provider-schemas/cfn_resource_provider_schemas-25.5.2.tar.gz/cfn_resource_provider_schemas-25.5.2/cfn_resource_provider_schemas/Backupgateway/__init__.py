@@ -1,0 +1,1 @@
+from cfn_resource_provider_schemas.Backupgateway.Hypervisor import SCHEMA as Hypervisor

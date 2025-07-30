@@ -1,0 +1,2 @@
+from cfn_resource_provider_schemas.Opensearchservice.Application import SCHEMA as Application
+from cfn_resource_provider_schemas.Opensearchservice.Domain import SCHEMA as Domain

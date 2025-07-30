@@ -1,0 +1,2 @@
+from cfn_resource_provider_schemas.Licensemanager.Grant import SCHEMA as Grant
+from cfn_resource_provider_schemas.Licensemanager.License import SCHEMA as License

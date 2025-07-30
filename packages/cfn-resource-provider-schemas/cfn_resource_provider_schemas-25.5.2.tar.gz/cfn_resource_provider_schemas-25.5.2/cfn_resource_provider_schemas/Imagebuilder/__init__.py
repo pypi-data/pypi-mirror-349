@@ -1,0 +1,9 @@
+from cfn_resource_provider_schemas.Imagebuilder.Component import SCHEMA as Component
+from cfn_resource_provider_schemas.Imagebuilder.Containerrecipe import SCHEMA as Containerrecipe
+from cfn_resource_provider_schemas.Imagebuilder.Distributionconfiguration import SCHEMA as Distributionconfiguration
+from cfn_resource_provider_schemas.Imagebuilder.Image import SCHEMA as Image
+from cfn_resource_provider_schemas.Imagebuilder.Imagepipeline import SCHEMA as Imagepipeline
+from cfn_resource_provider_schemas.Imagebuilder.Imagerecipe import SCHEMA as Imagerecipe
+from cfn_resource_provider_schemas.Imagebuilder.Infrastructureconfiguration import SCHEMA as Infrastructureconfiguration
+from cfn_resource_provider_schemas.Imagebuilder.Lifecyclepolicy import SCHEMA as Lifecyclepolicy
+from cfn_resource_provider_schemas.Imagebuilder.Workflow import SCHEMA as Workflow

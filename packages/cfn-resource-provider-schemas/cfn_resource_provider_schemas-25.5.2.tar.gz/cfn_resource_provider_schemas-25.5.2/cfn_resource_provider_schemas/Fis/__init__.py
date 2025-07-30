@@ -1,0 +1,2 @@
+from cfn_resource_provider_schemas.Fis.Experimenttemplate import SCHEMA as Experimenttemplate
+from cfn_resource_provider_schemas.Fis.Targetaccountconfiguration import SCHEMA as Targetaccountconfiguration

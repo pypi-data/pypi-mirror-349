@@ -1,0 +1,3 @@
+from cfn_resource_provider_schemas.Amplifyuibuilder.Component import SCHEMA as Component
+from cfn_resource_provider_schemas.Amplifyuibuilder.Form import SCHEMA as Form
+from cfn_resource_provider_schemas.Amplifyuibuilder.Theme import SCHEMA as Theme

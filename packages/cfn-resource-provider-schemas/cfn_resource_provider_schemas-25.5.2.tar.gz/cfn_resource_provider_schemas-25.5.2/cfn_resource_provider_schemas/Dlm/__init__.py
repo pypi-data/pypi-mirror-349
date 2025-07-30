@@ -1,0 +1,1 @@
+from cfn_resource_provider_schemas.Dlm.Lifecyclepolicy import SCHEMA as Lifecyclepolicy

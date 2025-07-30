@@ -1,0 +1,4 @@
+from cfn_resource_provider_schemas.Timestream.Database import SCHEMA as Database
+from cfn_resource_provider_schemas.Timestream.Influxdbinstance import SCHEMA as Influxdbinstance
+from cfn_resource_provider_schemas.Timestream.Scheduledquery import SCHEMA as Scheduledquery
+from cfn_resource_provider_schemas.Timestream.Table import SCHEMA as Table

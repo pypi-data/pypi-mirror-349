@@ -1,0 +1,6 @@
+from cfn_resource_provider_schemas.Cloudwatch.Alarm import SCHEMA as Alarm
+from cfn_resource_provider_schemas.Cloudwatch.Anomalydetector import SCHEMA as Anomalydetector
+from cfn_resource_provider_schemas.Cloudwatch.Compositealarm import SCHEMA as Compositealarm
+from cfn_resource_provider_schemas.Cloudwatch.Dashboard import SCHEMA as Dashboard
+from cfn_resource_provider_schemas.Cloudwatch.Insightrule import SCHEMA as Insightrule
+from cfn_resource_provider_schemas.Cloudwatch.Metricstream import SCHEMA as Metricstream

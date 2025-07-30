@@ -1,0 +1,3 @@
+from cfn_resource_provider_schemas.Devopsguru.Loganomalydetectionintegration import SCHEMA as Loganomalydetectionintegration
+from cfn_resource_provider_schemas.Devopsguru.Notificationchannel import SCHEMA as Notificationchannel
+from cfn_resource_provider_schemas.Devopsguru.Resourcecollection import SCHEMA as Resourcecollection

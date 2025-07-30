@@ -1,0 +1,3 @@
+from cfn_resource_provider_schemas.Sqs.Queue import SCHEMA as Queue
+from cfn_resource_provider_schemas.Sqs.Queueinlinepolicy import SCHEMA as Queueinlinepolicy
+from cfn_resource_provider_schemas.Sqs.Queuepolicy import SCHEMA as Queuepolicy

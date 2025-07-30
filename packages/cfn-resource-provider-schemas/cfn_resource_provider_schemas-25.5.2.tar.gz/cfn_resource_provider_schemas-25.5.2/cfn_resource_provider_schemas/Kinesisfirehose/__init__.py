@@ -1,0 +1,1 @@
+from cfn_resource_provider_schemas.Kinesisfirehose.Deliverystream import SCHEMA as Deliverystream

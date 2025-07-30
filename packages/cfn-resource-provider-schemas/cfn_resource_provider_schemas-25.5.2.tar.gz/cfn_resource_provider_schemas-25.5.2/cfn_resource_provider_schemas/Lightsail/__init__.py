@@ -1,0 +1,10 @@
+from cfn_resource_provider_schemas.Lightsail.Alarm import SCHEMA as Alarm
+from cfn_resource_provider_schemas.Lightsail.Bucket import SCHEMA as Bucket
+from cfn_resource_provider_schemas.Lightsail.Certificate import SCHEMA as Certificate
+from cfn_resource_provider_schemas.Lightsail.Container import SCHEMA as Container
+from cfn_resource_provider_schemas.Lightsail.Database import SCHEMA as Database
+from cfn_resource_provider_schemas.Lightsail.Disk import SCHEMA as Disk
+from cfn_resource_provider_schemas.Lightsail.Instance import SCHEMA as Instance
+from cfn_resource_provider_schemas.Lightsail.Loadbalancer import SCHEMA as Loadbalancer
+from cfn_resource_provider_schemas.Lightsail.Loadbalancertlscertificate import SCHEMA as Loadbalancertlscertificate
+from cfn_resource_provider_schemas.Lightsail.Staticip import SCHEMA as Staticip

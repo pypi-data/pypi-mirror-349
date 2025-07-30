@@ -1,0 +1,2 @@
+from cfn_resource_provider_schemas.Paymentcryptography.Alias import SCHEMA as Alias
+from cfn_resource_provider_schemas.Paymentcryptography.Key import SCHEMA as Key

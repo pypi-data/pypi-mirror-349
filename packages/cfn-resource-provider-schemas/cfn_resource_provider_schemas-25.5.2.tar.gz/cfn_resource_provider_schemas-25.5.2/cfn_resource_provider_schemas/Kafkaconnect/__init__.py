@@ -1,0 +1,3 @@
+from cfn_resource_provider_schemas.Kafkaconnect.Connector import SCHEMA as Connector
+from cfn_resource_provider_schemas.Kafkaconnect.Customplugin import SCHEMA as Customplugin
+from cfn_resource_provider_schemas.Kafkaconnect.Workerconfiguration import SCHEMA as Workerconfiguration

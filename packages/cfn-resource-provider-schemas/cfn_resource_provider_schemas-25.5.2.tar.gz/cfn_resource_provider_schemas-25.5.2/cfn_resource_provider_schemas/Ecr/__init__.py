@@ -1,0 +1,6 @@
+from cfn_resource_provider_schemas.Ecr.Pullthroughcacherule import SCHEMA as Pullthroughcacherule
+from cfn_resource_provider_schemas.Ecr.Registrypolicy import SCHEMA as Registrypolicy
+from cfn_resource_provider_schemas.Ecr.Registryscanningconfiguration import SCHEMA as Registryscanningconfiguration
+from cfn_resource_provider_schemas.Ecr.Replicationconfiguration import SCHEMA as Replicationconfiguration
+from cfn_resource_provider_schemas.Ecr.Repository import SCHEMA as Repository
+from cfn_resource_provider_schemas.Ecr.Repositorycreationtemplate import SCHEMA as Repositorycreationtemplate

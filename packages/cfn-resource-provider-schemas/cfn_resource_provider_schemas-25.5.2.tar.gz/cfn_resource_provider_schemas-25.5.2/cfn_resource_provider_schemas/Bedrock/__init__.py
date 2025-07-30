@@ -1,0 +1,13 @@
+from cfn_resource_provider_schemas.Bedrock.Agent import SCHEMA as Agent
+from cfn_resource_provider_schemas.Bedrock.Agentalias import SCHEMA as Agentalias
+from cfn_resource_provider_schemas.Bedrock.Applicationinferenceprofile import SCHEMA as Applicationinferenceprofile
+from cfn_resource_provider_schemas.Bedrock.Datasource import SCHEMA as Datasource
+from cfn_resource_provider_schemas.Bedrock.Flow import SCHEMA as Flow
+from cfn_resource_provider_schemas.Bedrock.Flowalias import SCHEMA as Flowalias
+from cfn_resource_provider_schemas.Bedrock.Flowversion import SCHEMA as Flowversion
+from cfn_resource_provider_schemas.Bedrock.Guardrail import SCHEMA as Guardrail
+from cfn_resource_provider_schemas.Bedrock.Guardrailversion import SCHEMA as Guardrailversion
+from cfn_resource_provider_schemas.Bedrock.Intelligentpromptrouter import SCHEMA as Intelligentpromptrouter
+from cfn_resource_provider_schemas.Bedrock.Knowledgebase import SCHEMA as Knowledgebase
+from cfn_resource_provider_schemas.Bedrock.Prompt import SCHEMA as Prompt
+from cfn_resource_provider_schemas.Bedrock.Promptversion import SCHEMA as Promptversion

@@ -1,0 +1,4 @@
+from cfn_resource_provider_schemas.Athena.Datacatalog import SCHEMA as Datacatalog
+from cfn_resource_provider_schemas.Athena.Namedquery import SCHEMA as Namedquery
+from cfn_resource_provider_schemas.Athena.Preparedstatement import SCHEMA as Preparedstatement
+from cfn_resource_provider_schemas.Athena.Workgroup import SCHEMA as Workgroup

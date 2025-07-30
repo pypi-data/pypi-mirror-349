@@ -1,0 +1,6 @@
+from cfn_resource_provider_schemas.Wafv2.Ipset import SCHEMA as Ipset
+from cfn_resource_provider_schemas.Wafv2.Loggingconfiguration import SCHEMA as Loggingconfiguration
+from cfn_resource_provider_schemas.Wafv2.Regexpatternset import SCHEMA as Regexpatternset
+from cfn_resource_provider_schemas.Wafv2.Rulegroup import SCHEMA as Rulegroup
+from cfn_resource_provider_schemas.Wafv2.Webacl import SCHEMA as Webacl
+from cfn_resource_provider_schemas.Wafv2.Webaclassociation import SCHEMA as Webaclassociation

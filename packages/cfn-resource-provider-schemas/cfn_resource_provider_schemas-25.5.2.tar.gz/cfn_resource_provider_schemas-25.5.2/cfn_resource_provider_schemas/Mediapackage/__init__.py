@@ -1,0 +1,5 @@
+from cfn_resource_provider_schemas.Mediapackage.Asset import SCHEMA as Asset
+from cfn_resource_provider_schemas.Mediapackage.Channel import SCHEMA as Channel
+from cfn_resource_provider_schemas.Mediapackage.Originendpoint import SCHEMA as Originendpoint
+from cfn_resource_provider_schemas.Mediapackage.Packagingconfiguration import SCHEMA as Packagingconfiguration
+from cfn_resource_provider_schemas.Mediapackage.Packaginggroup import SCHEMA as Packaginggroup

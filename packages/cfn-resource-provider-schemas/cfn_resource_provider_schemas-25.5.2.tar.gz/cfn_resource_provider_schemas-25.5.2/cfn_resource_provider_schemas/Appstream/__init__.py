@@ -1,0 +1,13 @@
+from cfn_resource_provider_schemas.Appstream.Appblock import SCHEMA as Appblock
+from cfn_resource_provider_schemas.Appstream.Appblockbuilder import SCHEMA as Appblockbuilder
+from cfn_resource_provider_schemas.Appstream.Application import SCHEMA as Application
+from cfn_resource_provider_schemas.Appstream.Applicationentitlementassociation import SCHEMA as Applicationentitlementassociation
+from cfn_resource_provider_schemas.Appstream.Applicationfleetassociation import SCHEMA as Applicationfleetassociation
+from cfn_resource_provider_schemas.Appstream.Directoryconfig import SCHEMA as Directoryconfig
+from cfn_resource_provider_schemas.Appstream.Entitlement import SCHEMA as Entitlement
+from cfn_resource_provider_schemas.Appstream.Fleet import SCHEMA as Fleet
+from cfn_resource_provider_schemas.Appstream.Imagebuilder import SCHEMA as Imagebuilder
+from cfn_resource_provider_schemas.Appstream.Stack import SCHEMA as Stack
+from cfn_resource_provider_schemas.Appstream.Stackfleetassociation import SCHEMA as Stackfleetassociation
+from cfn_resource_provider_schemas.Appstream.Stackuserassociation import SCHEMA as Stackuserassociation
+from cfn_resource_provider_schemas.Appstream.User import SCHEMA as User

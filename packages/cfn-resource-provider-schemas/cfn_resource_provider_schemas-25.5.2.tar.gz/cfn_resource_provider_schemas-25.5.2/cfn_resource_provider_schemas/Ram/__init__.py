@@ -1,0 +1,2 @@
+from cfn_resource_provider_schemas.Ram.Permission import SCHEMA as Permission
+from cfn_resource_provider_schemas.Ram.Resourceshare import SCHEMA as Resourceshare

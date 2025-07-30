@@ -1,0 +1,2 @@
+from cfn_resource_provider_schemas.Applicationsignals.Discovery import SCHEMA as Discovery
+from cfn_resource_provider_schemas.Applicationsignals.Servicelevelobjective import SCHEMA as Servicelevelobjective

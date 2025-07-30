@@ -1,0 +1,8 @@
+from cfn_resource_provider_schemas.Guardduty.Detector import SCHEMA as Detector
+from cfn_resource_provider_schemas.Guardduty.Filter import SCHEMA as Filter
+from cfn_resource_provider_schemas.Guardduty.Ipset import SCHEMA as Ipset
+from cfn_resource_provider_schemas.Guardduty.Malwareprotectionplan import SCHEMA as Malwareprotectionplan
+from cfn_resource_provider_schemas.Guardduty.Master import SCHEMA as Master
+from cfn_resource_provider_schemas.Guardduty.Member import SCHEMA as Member
+from cfn_resource_provider_schemas.Guardduty.Publishingdestination import SCHEMA as Publishingdestination
+from cfn_resource_provider_schemas.Guardduty.Threatintelset import SCHEMA as Threatintelset

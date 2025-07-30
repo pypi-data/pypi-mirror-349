@@ -1,0 +1,7 @@
+from cfn_resource_provider_schemas.Ecs.Capacityprovider import SCHEMA as Capacityprovider
+from cfn_resource_provider_schemas.Ecs.Cluster import SCHEMA as Cluster
+from cfn_resource_provider_schemas.Ecs.Clustercapacityproviderassociations import SCHEMA as Clustercapacityproviderassociations
+from cfn_resource_provider_schemas.Ecs.Primarytaskset import SCHEMA as Primarytaskset
+from cfn_resource_provider_schemas.Ecs.Service import SCHEMA as Service
+from cfn_resource_provider_schemas.Ecs.Taskdefinition import SCHEMA as Taskdefinition
+from cfn_resource_provider_schemas.Ecs.Taskset import SCHEMA as Taskset

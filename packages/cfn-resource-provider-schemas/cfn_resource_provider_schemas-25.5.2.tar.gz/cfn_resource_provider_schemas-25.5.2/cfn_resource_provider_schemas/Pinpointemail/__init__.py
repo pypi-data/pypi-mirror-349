@@ -1,0 +1,4 @@
+from cfn_resource_provider_schemas.Pinpointemail.Configurationset import SCHEMA as Configurationset
+from cfn_resource_provider_schemas.Pinpointemail.Configurationseteventdestination import SCHEMA as Configurationseteventdestination
+from cfn_resource_provider_schemas.Pinpointemail.Dedicatedippool import SCHEMA as Dedicatedippool
+from cfn_resource_provider_schemas.Pinpointemail.Identity import SCHEMA as Identity

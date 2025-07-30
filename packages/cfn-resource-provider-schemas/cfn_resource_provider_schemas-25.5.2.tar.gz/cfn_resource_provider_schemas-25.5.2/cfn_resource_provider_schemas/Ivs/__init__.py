@@ -1,0 +1,10 @@
+from cfn_resource_provider_schemas.Ivs.Channel import SCHEMA as Channel
+from cfn_resource_provider_schemas.Ivs.Encoderconfiguration import SCHEMA as Encoderconfiguration
+from cfn_resource_provider_schemas.Ivs.Ingestconfiguration import SCHEMA as Ingestconfiguration
+from cfn_resource_provider_schemas.Ivs.Playbackkeypair import SCHEMA as Playbackkeypair
+from cfn_resource_provider_schemas.Ivs.Playbackrestrictionpolicy import SCHEMA as Playbackrestrictionpolicy
+from cfn_resource_provider_schemas.Ivs.Publickey import SCHEMA as Publickey
+from cfn_resource_provider_schemas.Ivs.Recordingconfiguration import SCHEMA as Recordingconfiguration
+from cfn_resource_provider_schemas.Ivs.Stage import SCHEMA as Stage
+from cfn_resource_provider_schemas.Ivs.Storageconfiguration import SCHEMA as Storageconfiguration
+from cfn_resource_provider_schemas.Ivs.Streamkey import SCHEMA as Streamkey

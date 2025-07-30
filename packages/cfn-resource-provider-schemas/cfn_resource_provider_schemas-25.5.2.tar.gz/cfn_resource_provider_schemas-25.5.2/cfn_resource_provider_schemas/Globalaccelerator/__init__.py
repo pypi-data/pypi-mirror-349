@@ -1,0 +1,4 @@
+from cfn_resource_provider_schemas.Globalaccelerator.Accelerator import SCHEMA as Accelerator
+from cfn_resource_provider_schemas.Globalaccelerator.Crossaccountattachment import SCHEMA as Crossaccountattachment
+from cfn_resource_provider_schemas.Globalaccelerator.Endpointgroup import SCHEMA as Endpointgroup
+from cfn_resource_provider_schemas.Globalaccelerator.Listener import SCHEMA as Listener

@@ -1,0 +1,2 @@
+from cfn_resource_provider_schemas.Resiliencehub.App import SCHEMA as App
+from cfn_resource_provider_schemas.Resiliencehub.Resiliencypolicy import SCHEMA as Resiliencypolicy

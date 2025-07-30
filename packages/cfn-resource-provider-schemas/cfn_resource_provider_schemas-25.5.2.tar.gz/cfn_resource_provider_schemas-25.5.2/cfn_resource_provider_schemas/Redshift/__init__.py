@@ -1,0 +1,10 @@
+from cfn_resource_provider_schemas.Redshift.Cluster import SCHEMA as Cluster
+from cfn_resource_provider_schemas.Redshift.Clusterparametergroup import SCHEMA as Clusterparametergroup
+from cfn_resource_provider_schemas.Redshift.Clustersecuritygroup import SCHEMA as Clustersecuritygroup
+from cfn_resource_provider_schemas.Redshift.Clustersecuritygroupingress import SCHEMA as Clustersecuritygroupingress
+from cfn_resource_provider_schemas.Redshift.Clustersubnetgroup import SCHEMA as Clustersubnetgroup
+from cfn_resource_provider_schemas.Redshift.Endpointaccess import SCHEMA as Endpointaccess
+from cfn_resource_provider_schemas.Redshift.Endpointauthorization import SCHEMA as Endpointauthorization
+from cfn_resource_provider_schemas.Redshift.Eventsubscription import SCHEMA as Eventsubscription
+from cfn_resource_provider_schemas.Redshift.Integration import SCHEMA as Integration
+from cfn_resource_provider_schemas.Redshift.Scheduledaction import SCHEMA as Scheduledaction

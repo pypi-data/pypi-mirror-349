@@ -1,0 +1,7 @@
+from cfn_resource_provider_schemas.Msk.Batchscramsecret import SCHEMA as Batchscramsecret
+from cfn_resource_provider_schemas.Msk.Cluster import SCHEMA as Cluster
+from cfn_resource_provider_schemas.Msk.Clusterpolicy import SCHEMA as Clusterpolicy
+from cfn_resource_provider_schemas.Msk.Configuration import SCHEMA as Configuration
+from cfn_resource_provider_schemas.Msk.Replicator import SCHEMA as Replicator
+from cfn_resource_provider_schemas.Msk.Serverlesscluster import SCHEMA as Serverlesscluster
+from cfn_resource_provider_schemas.Msk.Vpcconnection import SCHEMA as Vpcconnection

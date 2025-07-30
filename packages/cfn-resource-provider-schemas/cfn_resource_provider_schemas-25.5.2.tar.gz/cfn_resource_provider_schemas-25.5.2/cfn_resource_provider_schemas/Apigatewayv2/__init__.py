@@ -1,0 +1,14 @@
+from cfn_resource_provider_schemas.Apigatewayv2.Api import SCHEMA as Api
+from cfn_resource_provider_schemas.Apigatewayv2.Apigatewaymanagedoverrides import SCHEMA as Apigatewaymanagedoverrides
+from cfn_resource_provider_schemas.Apigatewayv2.Apimapping import SCHEMA as Apimapping
+from cfn_resource_provider_schemas.Apigatewayv2.Authorizer import SCHEMA as Authorizer
+from cfn_resource_provider_schemas.Apigatewayv2.Deployment import SCHEMA as Deployment
+from cfn_resource_provider_schemas.Apigatewayv2.Domainname import SCHEMA as Domainname
+from cfn_resource_provider_schemas.Apigatewayv2.Integration import SCHEMA as Integration
+from cfn_resource_provider_schemas.Apigatewayv2.Integrationresponse import SCHEMA as Integrationresponse
+from cfn_resource_provider_schemas.Apigatewayv2.Model import SCHEMA as Model
+from cfn_resource_provider_schemas.Apigatewayv2.Route import SCHEMA as Route
+from cfn_resource_provider_schemas.Apigatewayv2.Routeresponse import SCHEMA as Routeresponse
+from cfn_resource_provider_schemas.Apigatewayv2.Routingrule import SCHEMA as Routingrule
+from cfn_resource_provider_schemas.Apigatewayv2.Stage import SCHEMA as Stage
+from cfn_resource_provider_schemas.Apigatewayv2.Vpclink import SCHEMA as Vpclink

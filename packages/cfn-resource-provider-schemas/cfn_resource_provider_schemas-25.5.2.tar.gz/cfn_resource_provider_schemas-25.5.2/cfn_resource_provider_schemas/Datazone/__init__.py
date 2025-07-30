@@ -1,0 +1,14 @@
+from cfn_resource_provider_schemas.Datazone.Connection import SCHEMA as Connection
+from cfn_resource_provider_schemas.Datazone.Datasource import SCHEMA as Datasource
+from cfn_resource_provider_schemas.Datazone.Domain import SCHEMA as Domain
+from cfn_resource_provider_schemas.Datazone.Domainunit import SCHEMA as Domainunit
+from cfn_resource_provider_schemas.Datazone.Environment import SCHEMA as Environment
+from cfn_resource_provider_schemas.Datazone.Environmentactions import SCHEMA as Environmentactions
+from cfn_resource_provider_schemas.Datazone.Environmentblueprintconfiguration import SCHEMA as Environmentblueprintconfiguration
+from cfn_resource_provider_schemas.Datazone.Environmentprofile import SCHEMA as Environmentprofile
+from cfn_resource_provider_schemas.Datazone.Groupprofile import SCHEMA as Groupprofile
+from cfn_resource_provider_schemas.Datazone.Owner import SCHEMA as Owner
+from cfn_resource_provider_schemas.Datazone.Project import SCHEMA as Project
+from cfn_resource_provider_schemas.Datazone.Projectmembership import SCHEMA as Projectmembership
+from cfn_resource_provider_schemas.Datazone.Subscriptiontarget import SCHEMA as Subscriptiontarget
+from cfn_resource_provider_schemas.Datazone.Userprofile import SCHEMA as Userprofile

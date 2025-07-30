@@ -1,0 +1,5 @@
+from cfn_resource_provider_schemas.Networkfirewall.Firewall import SCHEMA as Firewall
+from cfn_resource_provider_schemas.Networkfirewall.Firewallpolicy import SCHEMA as Firewallpolicy
+from cfn_resource_provider_schemas.Networkfirewall.Loggingconfiguration import SCHEMA as Loggingconfiguration
+from cfn_resource_provider_schemas.Networkfirewall.Rulegroup import SCHEMA as Rulegroup
+from cfn_resource_provider_schemas.Networkfirewall.Tlsinspectionconfiguration import SCHEMA as Tlsinspectionconfiguration

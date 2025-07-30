@@ -1,0 +1,6 @@
+from cfn_resource_provider_schemas.Sso.Application import SCHEMA as Application
+from cfn_resource_provider_schemas.Sso.Applicationassignment import SCHEMA as Applicationassignment
+from cfn_resource_provider_schemas.Sso.Assignment import SCHEMA as Assignment
+from cfn_resource_provider_schemas.Sso.Instance import SCHEMA as Instance
+from cfn_resource_provider_schemas.Sso.Instanceaccesscontrolattributeconfiguration import SCHEMA as Instanceaccesscontrolattributeconfiguration
+from cfn_resource_provider_schemas.Sso.Permissionset import SCHEMA as Permissionset

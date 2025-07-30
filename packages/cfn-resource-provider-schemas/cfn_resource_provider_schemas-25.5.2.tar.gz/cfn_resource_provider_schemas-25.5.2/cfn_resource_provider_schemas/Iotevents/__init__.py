@@ -1,0 +1,3 @@
+from cfn_resource_provider_schemas.Iotevents.Alarmmodel import SCHEMA as Alarmmodel
+from cfn_resource_provider_schemas.Iotevents.Detectormodel import SCHEMA as Detectormodel
+from cfn_resource_provider_schemas.Iotevents.Input import SCHEMA as Input

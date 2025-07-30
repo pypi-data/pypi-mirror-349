@@ -1,0 +1,4 @@
+from cfn_resource_provider_schemas.Securitylake.Awslogsource import SCHEMA as Awslogsource
+from cfn_resource_provider_schemas.Securitylake.Datalake import SCHEMA as Datalake
+from cfn_resource_provider_schemas.Securitylake.Subscriber import SCHEMA as Subscriber
+from cfn_resource_provider_schemas.Securitylake.Subscribernotification import SCHEMA as Subscribernotification

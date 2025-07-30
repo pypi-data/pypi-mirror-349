@@ -1,0 +1,94 @@
+SCHEMA = {
+  "typeName" : "AWS::MemoryDB::ACL",
+  "description" : "Resource Type definition for AWS::MemoryDB::ACL",
+  "sourceUrl" : "https://github.com/aws-cloudformation/aws-cloudformation-resource-providers-memorydb",
+  "definitions" : {
+    "Tag" : {
+      "description" : "A key-value pair to associate with a resource.",
+      "type" : "object",
+      "additionalProperties" : False,
+      "properties" : {
+        "Key" : {
+          "description" : "The key name of the tag. You can specify a value that is 1 to 128 Unicode characters in length and cannot be prefixed with 'aws:'. You can use any of the following characters: the set of Unicode letters, digits, whitespace, _, ., /, =, +, and -.",
+          "type" : "string",
+          "pattern" : "^(?!aws:)[a-zA-Z0-9 _\\.\\/=+:\\-@]*$",
+          "minLength" : 1,
+          "maxLength" : 128
+        },
+        "Value" : {
+          "description" : "The value for the tag. You can specify a value that is 0 to 256 Unicode characters in length. You can use any of the following characters: the set of Unicode letters, digits, whitespace, _, ., /, =, +, and -.",
+          "type" : "string",
+          "pattern" : "^[a-zA-Z0-9 _\\.\\/=+:\\-@]*$",
+          "minLength" : 0,
+          "maxLength" : 256
+        }
+      },
+      "required" : [ "Key" ]
+    }
+  },
+  "properties" : {
+    "Status" : {
+      "description" : "Indicates acl status. Can be \"creating\", \"active\", \"modifying\", \"deleting\".",
+      "type" : "string"
+    },
+    "ACLName" : {
+      "description" : "The name of the acl.",
+      "pattern" : "[a-z][a-z0-9\\\\-]*",
+      "type" : "string"
+    },
+    "UserNames" : {
+      "type" : "array",
+      "$comment" : "List of users.",
+      "uniqueItems" : True,
+      "insertionOrder" : True,
+      "items" : {
+        "type" : "string"
+      },
+      "description" : "List of users associated to this acl."
+    },
+    "Arn" : {
+      "description" : "The Amazon Resource Name (ARN) of the acl.",
+      "type" : "string"
+    },
+    "Tags" : {
+      "description" : "An array of key-value pairs to apply to this cluster.",
+      "type" : "array",
+      "maxItems" : 50,
+      "uniqueItems" : True,
+      "insertionOrder" : False,
+      "items" : {
+        "$ref" : "#/definitions/Tag"
+      }
+    }
+  },
+  "tagging" : {
+    "taggable" : True,
+    "tagOnCreate" : True,
+    "tagUpdatable" : True,
+    "cloudFormationSystemTags" : True,
+    "tagProperty" : "/properties/Tags",
+    "permissions" : [ "memorydb:TagResource", "memorydb:ListTags", "memorydb:UntagResource" ]
+  },
+  "additionalProperties" : False,
+  "required" : [ "ACLName" ],
+  "readOnlyProperties" : [ "/properties/Status", "/properties/Arn" ],
+  "createOnlyProperties" : [ "/properties/ACLName" ],
+  "primaryIdentifier" : [ "/properties/ACLName" ],
+  "handlers" : {
+    "create" : {
+      "permissions" : [ "memorydb:CreateACL", "memorydb:DescribeACLs", "memorydb:TagResource", "memorydb:ListTags", "iam:CreateServiceLinkedRole" ]
+    },
+    "read" : {
+      "permissions" : [ "memorydb:DescribeACLs", "memorydb:ListTags" ]
+    },
+    "update" : {
+      "permissions" : [ "memorydb:UpdateACL", "memorydb:DescribeACLs", "memorydb:ListTags", "memorydb:TagResource", "memorydb:UntagResource" ]
+    },
+    "delete" : {
+      "permissions" : [ "memorydb:ModifyReplicationGroup", "memorydb:DeleteACL", "memorydb:DescribeACLs" ]
+    },
+    "list" : {
+      "permissions" : [ "memorydb:DescribeACLs", "memorydb:ListTags" ]
+    }
+  }
+}

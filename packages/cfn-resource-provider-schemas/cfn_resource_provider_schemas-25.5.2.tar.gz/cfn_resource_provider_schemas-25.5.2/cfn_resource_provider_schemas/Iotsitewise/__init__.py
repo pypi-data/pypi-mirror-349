@@ -1,0 +1,7 @@
+from cfn_resource_provider_schemas.Iotsitewise.Accesspolicy import SCHEMA as Accesspolicy
+from cfn_resource_provider_schemas.Iotsitewise.Asset import SCHEMA as Asset
+from cfn_resource_provider_schemas.Iotsitewise.Assetmodel import SCHEMA as Assetmodel
+from cfn_resource_provider_schemas.Iotsitewise.Dashboard import SCHEMA as Dashboard
+from cfn_resource_provider_schemas.Iotsitewise.Gateway import SCHEMA as Gateway
+from cfn_resource_provider_schemas.Iotsitewise.Portal import SCHEMA as Portal
+from cfn_resource_provider_schemas.Iotsitewise.Project import SCHEMA as Project

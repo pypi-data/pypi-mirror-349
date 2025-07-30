@@ -1,0 +1,1 @@
+from cfn_resource_provider_schemas.Autoscalingplans.Scalingplan import SCHEMA as Scalingplan

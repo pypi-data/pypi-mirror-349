@@ -1,0 +1,11 @@
+from cfn_resource_provider_schemas.Gamelift.Alias import SCHEMA as Alias
+from cfn_resource_provider_schemas.Gamelift.Build import SCHEMA as Build
+from cfn_resource_provider_schemas.Gamelift.Containerfleet import SCHEMA as Containerfleet
+from cfn_resource_provider_schemas.Gamelift.Containergroupdefinition import SCHEMA as Containergroupdefinition
+from cfn_resource_provider_schemas.Gamelift.Fleet import SCHEMA as Fleet
+from cfn_resource_provider_schemas.Gamelift.Gameservergroup import SCHEMA as Gameservergroup
+from cfn_resource_provider_schemas.Gamelift.Gamesessionqueue import SCHEMA as Gamesessionqueue
+from cfn_resource_provider_schemas.Gamelift.Location import SCHEMA as Location
+from cfn_resource_provider_schemas.Gamelift.Matchmakingconfiguration import SCHEMA as Matchmakingconfiguration
+from cfn_resource_provider_schemas.Gamelift.Matchmakingruleset import SCHEMA as Matchmakingruleset
+from cfn_resource_provider_schemas.Gamelift.Script import SCHEMA as Script

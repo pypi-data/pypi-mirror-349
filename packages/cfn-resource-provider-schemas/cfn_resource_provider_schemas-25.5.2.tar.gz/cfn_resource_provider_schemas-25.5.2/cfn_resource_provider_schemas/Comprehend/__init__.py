@@ -1,0 +1,2 @@
+from cfn_resource_provider_schemas.Comprehend.Documentclassifier import SCHEMA as Documentclassifier
+from cfn_resource_provider_schemas.Comprehend.Flywheel import SCHEMA as Flywheel

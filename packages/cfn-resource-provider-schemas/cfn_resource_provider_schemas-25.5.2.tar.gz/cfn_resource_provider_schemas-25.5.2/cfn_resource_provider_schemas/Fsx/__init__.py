@@ -1,0 +1,5 @@
+from cfn_resource_provider_schemas.Fsx.Datarepositoryassociation import SCHEMA as Datarepositoryassociation
+from cfn_resource_provider_schemas.Fsx.Filesystem import SCHEMA as Filesystem
+from cfn_resource_provider_schemas.Fsx.Snapshot import SCHEMA as Snapshot
+from cfn_resource_provider_schemas.Fsx.Storagevirtualmachine import SCHEMA as Storagevirtualmachine
+from cfn_resource_provider_schemas.Fsx.Volume import SCHEMA as Volume

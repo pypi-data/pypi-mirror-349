@@ -1,0 +1,2 @@
+from cfn_resource_provider_schemas.Ssmincidents.Replicationset import SCHEMA as Replicationset
+from cfn_resource_provider_schemas.Ssmincidents.Responseplan import SCHEMA as Responseplan

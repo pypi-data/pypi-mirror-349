@@ -1,0 +1,10 @@
+from cfn_resource_provider_schemas.Lambda.Alias import SCHEMA as Alias
+from cfn_resource_provider_schemas.Lambda.Codesigningconfig import SCHEMA as Codesigningconfig
+from cfn_resource_provider_schemas.Lambda.Eventinvokeconfig import SCHEMA as Eventinvokeconfig
+from cfn_resource_provider_schemas.Lambda.Eventsourcemapping import SCHEMA as Eventsourcemapping
+from cfn_resource_provider_schemas.Lambda.Function import SCHEMA as Function
+from cfn_resource_provider_schemas.Lambda.Layerversion import SCHEMA as Layerversion
+from cfn_resource_provider_schemas.Lambda.Layerversionpermission import SCHEMA as Layerversionpermission
+from cfn_resource_provider_schemas.Lambda.Permission import SCHEMA as Permission
+from cfn_resource_provider_schemas.Lambda.Url import SCHEMA as Url
+from cfn_resource_provider_schemas.Lambda.Version import SCHEMA as Version

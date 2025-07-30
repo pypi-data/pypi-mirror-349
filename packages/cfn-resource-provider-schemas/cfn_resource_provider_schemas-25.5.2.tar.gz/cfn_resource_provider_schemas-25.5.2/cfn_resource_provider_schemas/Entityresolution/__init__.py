@@ -1,0 +1,5 @@
+from cfn_resource_provider_schemas.Entityresolution.Idmappingworkflow import SCHEMA as Idmappingworkflow
+from cfn_resource_provider_schemas.Entityresolution.Idnamespace import SCHEMA as Idnamespace
+from cfn_resource_provider_schemas.Entityresolution.Matchingworkflow import SCHEMA as Matchingworkflow
+from cfn_resource_provider_schemas.Entityresolution.Policystatement import SCHEMA as Policystatement
+from cfn_resource_provider_schemas.Entityresolution.Schemamapping import SCHEMA as Schemamapping

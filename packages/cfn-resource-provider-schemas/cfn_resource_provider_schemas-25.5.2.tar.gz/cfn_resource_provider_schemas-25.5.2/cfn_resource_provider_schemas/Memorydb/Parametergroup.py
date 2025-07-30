@@ -1,0 +1,92 @@
+SCHEMA = {
+  "typeName" : "AWS::MemoryDB::ParameterGroup",
+  "description" : "The AWS::MemoryDB::ParameterGroup resource creates an Amazon MemoryDB ParameterGroup.",
+  "sourceUrl" : "https://github.com/aws-cloudformation/aws-cloudformation-resource-providers-memorydb",
+  "definitions" : {
+    "Tag" : {
+      "description" : "A key-value pair to associate with a resource.",
+      "type" : "object",
+      "additionalProperties" : False,
+      "properties" : {
+        "Key" : {
+          "description" : "The key for the tag. May not be None.",
+          "pattern" : "^(?!aws:)(?!memorydb:)[a-zA-Z0-9 _\\.\\/=+:\\-@]{1,128}$",
+          "type" : "string",
+          "minLength" : 1,
+          "maxLength" : 128
+        },
+        "Value" : {
+          "description" : "The tag's value. May be None.",
+          "type" : "string",
+          "pattern" : "^(?!aws:)(?!memorydb:)[a-zA-Z0-9 _\\.\\/=+:\\-@]{1,256}$",
+          "minLength" : 1,
+          "maxLength" : 256
+        }
+      },
+      "required" : [ "Key", "Value" ]
+    }
+  },
+  "properties" : {
+    "ParameterGroupName" : {
+      "description" : "The name of the parameter group.",
+      "type" : "string"
+    },
+    "Family" : {
+      "description" : "The name of the parameter group family that this parameter group is compatible with.",
+      "type" : "string"
+    },
+    "Description" : {
+      "description" : "A description of the parameter group.",
+      "type" : "string"
+    },
+    "Tags" : {
+      "description" : "An array of key-value pairs to apply to this parameter group.",
+      "type" : "array",
+      "maxItems" : 50,
+      "uniqueItems" : True,
+      "insertionOrder" : False,
+      "items" : {
+        "$ref" : "#/definitions/Tag"
+      }
+    },
+    "Parameters" : {
+      "description" : "An map of parameter names and values for the parameter update. You must supply at least one parameter name and value; subsequent arguments are optional.",
+      "type" : "object"
+    },
+    "ARN" : {
+      "description" : "The Amazon Resource Name (ARN) of the parameter group.",
+      "type" : "string"
+    }
+  },
+  "tagging" : {
+    "taggable" : True,
+    "tagOnCreate" : True,
+    "tagUpdatable" : True,
+    "cloudFormationSystemTags" : True,
+    "tagProperty" : "/properties/Tags",
+    "permissions" : [ "memorydb:TagResource", "memorydb:ListTags", "memorydb:UntagResource" ]
+  },
+  "additionalProperties" : False,
+  "required" : [ "ParameterGroupName", "Family" ],
+  "readOnlyProperties" : [ "/properties/ARN" ],
+  "writeOnlyProperties" : [ "/properties/Parameters" ],
+  "createOnlyProperties" : [ "/properties/ParameterGroupName", "/properties/Family", "/properties/Description" ],
+  "primaryIdentifier" : [ "/properties/ParameterGroupName" ],
+  "handlers" : {
+    "create" : {
+      "permissions" : [ "memorydb:CreateParameterGroup", "memorydb:DescribeParameterGroups", "memorydb:TagResource", "memorydb:ListTags", "iam:CreateServiceLinkedRole" ]
+    },
+    "read" : {
+      "permissions" : [ "memorydb:DescribeParameterGroups", "memorydb:ListTags" ]
+    },
+    "update" : {
+      "permissions" : [ "memorydb:UpdateParameterGroup", "memorydb:DescribeParameterGroups", "memorydb:DescribeParameters", "memorydb:DescribeClusters", "memorydb:ListTags", "memorydb:TagResource", "memorydb:UntagResource" ]
+    },
+    "delete" : {
+      "permissions" : [ "memorydb:DeleteParameterGroup" ]
+    },
+    "list" : {
+      "permissions" : [ "memorydb:DescribeParameterGroups" ]
+    }
+  }
+}

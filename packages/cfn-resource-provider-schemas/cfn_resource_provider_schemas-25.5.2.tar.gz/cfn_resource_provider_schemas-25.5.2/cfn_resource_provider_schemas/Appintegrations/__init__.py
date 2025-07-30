@@ -1,0 +1,3 @@
+from cfn_resource_provider_schemas.Appintegrations.Application import SCHEMA as Application
+from cfn_resource_provider_schemas.Appintegrations.Dataintegration import SCHEMA as Dataintegration
+from cfn_resource_provider_schemas.Appintegrations.Eventintegration import SCHEMA as Eventintegration

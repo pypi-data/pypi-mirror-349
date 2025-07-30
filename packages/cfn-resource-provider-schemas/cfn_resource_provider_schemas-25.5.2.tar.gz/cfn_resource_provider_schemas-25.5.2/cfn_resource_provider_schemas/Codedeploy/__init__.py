@@ -1,0 +1,3 @@
+from cfn_resource_provider_schemas.Codedeploy.Application import SCHEMA as Application
+from cfn_resource_provider_schemas.Codedeploy.Deploymentconfig import SCHEMA as Deploymentconfig
+from cfn_resource_provider_schemas.Codedeploy.Deploymentgroup import SCHEMA as Deploymentgroup

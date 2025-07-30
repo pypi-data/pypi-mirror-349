@@ -1,0 +1,5 @@
+from cfn_resource_provider_schemas.Pcaconnectorad.Connector import SCHEMA as Connector
+from cfn_resource_provider_schemas.Pcaconnectorad.Directoryregistration import SCHEMA as Directoryregistration
+from cfn_resource_provider_schemas.Pcaconnectorad.Serviceprincipalname import SCHEMA as Serviceprincipalname
+from cfn_resource_provider_schemas.Pcaconnectorad.Template import SCHEMA as Template
+from cfn_resource_provider_schemas.Pcaconnectorad.Templategroupaccesscontrolentry import SCHEMA as Templategroupaccesscontrolentry

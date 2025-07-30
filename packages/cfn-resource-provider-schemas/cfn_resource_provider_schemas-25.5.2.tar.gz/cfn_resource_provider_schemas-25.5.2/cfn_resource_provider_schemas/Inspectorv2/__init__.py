@@ -1,0 +1,2 @@
+from cfn_resource_provider_schemas.Inspectorv2.Cisscanconfiguration import SCHEMA as Cisscanconfiguration
+from cfn_resource_provider_schemas.Inspectorv2.Filter import SCHEMA as Filter

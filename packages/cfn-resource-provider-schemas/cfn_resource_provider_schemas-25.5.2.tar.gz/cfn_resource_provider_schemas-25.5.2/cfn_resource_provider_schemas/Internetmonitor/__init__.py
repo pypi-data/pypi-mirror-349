@@ -1,0 +1,1 @@
+from cfn_resource_provider_schemas.Internetmonitor.Monitor import SCHEMA as Monitor

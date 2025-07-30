@@ -1,0 +1,2 @@
+from cfn_resource_provider_schemas.Lookoutmetrics.Alert import SCHEMA as Alert
+from cfn_resource_provider_schemas.Lookoutmetrics.Anomalydetector import SCHEMA as Anomalydetector

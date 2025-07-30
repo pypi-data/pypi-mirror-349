@@ -1,0 +1,3 @@
+from cfn_resource_provider_schemas.Mediaconvert.Jobtemplate import SCHEMA as Jobtemplate
+from cfn_resource_provider_schemas.Mediaconvert.Preset import SCHEMA as Preset
+from cfn_resource_provider_schemas.Mediaconvert.Queue import SCHEMA as Queue

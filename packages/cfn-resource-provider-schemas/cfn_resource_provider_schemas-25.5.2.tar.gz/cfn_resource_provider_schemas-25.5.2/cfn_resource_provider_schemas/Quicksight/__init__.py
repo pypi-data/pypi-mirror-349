@@ -1,0 +1,11 @@
+from cfn_resource_provider_schemas.Quicksight.Analysis import SCHEMA as Analysis
+from cfn_resource_provider_schemas.Quicksight.Custompermissions import SCHEMA as Custompermissions
+from cfn_resource_provider_schemas.Quicksight.Dashboard import SCHEMA as Dashboard
+from cfn_resource_provider_schemas.Quicksight.Dataset import SCHEMA as Dataset
+from cfn_resource_provider_schemas.Quicksight.Datasource import SCHEMA as Datasource
+from cfn_resource_provider_schemas.Quicksight.Folder import SCHEMA as Folder
+from cfn_resource_provider_schemas.Quicksight.Refreshschedule import SCHEMA as Refreshschedule
+from cfn_resource_provider_schemas.Quicksight.Template import SCHEMA as Template
+from cfn_resource_provider_schemas.Quicksight.Theme import SCHEMA as Theme
+from cfn_resource_provider_schemas.Quicksight.Topic import SCHEMA as Topic
+from cfn_resource_provider_schemas.Quicksight.Vpcconnection import SCHEMA as Vpcconnection

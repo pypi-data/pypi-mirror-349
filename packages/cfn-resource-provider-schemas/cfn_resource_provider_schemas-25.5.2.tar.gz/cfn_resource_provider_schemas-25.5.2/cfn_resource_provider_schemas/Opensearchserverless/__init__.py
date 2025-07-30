@@ -1,0 +1,7 @@
+from cfn_resource_provider_schemas.Opensearchserverless.Accesspolicy import SCHEMA as Accesspolicy
+from cfn_resource_provider_schemas.Opensearchserverless.Collection import SCHEMA as Collection
+from cfn_resource_provider_schemas.Opensearchserverless.Index import SCHEMA as Index
+from cfn_resource_provider_schemas.Opensearchserverless.Lifecyclepolicy import SCHEMA as Lifecyclepolicy
+from cfn_resource_provider_schemas.Opensearchserverless.Securityconfig import SCHEMA as Securityconfig
+from cfn_resource_provider_schemas.Opensearchserverless.Securitypolicy import SCHEMA as Securitypolicy
+from cfn_resource_provider_schemas.Opensearchserverless.Vpcendpoint import SCHEMA as Vpcendpoint

@@ -1,0 +1,8 @@
+from cfn_resource_provider_schemas.Appconfig.Application import SCHEMA as Application
+from cfn_resource_provider_schemas.Appconfig.Configurationprofile import SCHEMA as Configurationprofile
+from cfn_resource_provider_schemas.Appconfig.Deployment import SCHEMA as Deployment
+from cfn_resource_provider_schemas.Appconfig.Deploymentstrategy import SCHEMA as Deploymentstrategy
+from cfn_resource_provider_schemas.Appconfig.Environment import SCHEMA as Environment
+from cfn_resource_provider_schemas.Appconfig.Extension import SCHEMA as Extension
+from cfn_resource_provider_schemas.Appconfig.Extensionassociation import SCHEMA as Extensionassociation
+from cfn_resource_provider_schemas.Appconfig.Hostedconfigurationversion import SCHEMA as Hostedconfigurationversion

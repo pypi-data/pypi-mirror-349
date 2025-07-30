@@ -1,0 +1,188 @@
+SCHEMA = {
+  "typeName" : "AWS::VpcLattice::Listener",
+  "description" : "Creates a listener for a service. Before you start using your Amazon VPC Lattice service, you must add one or more listeners. A listener is a process that checks for connection requests to your services.",
+  "additionalProperties" : False,
+  "definitions" : {
+    "Forward" : {
+      "type" : "object",
+      "properties" : {
+        "TargetGroups" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/WeightedTargetGroup"
+          },
+          "maxItems" : 10,
+          "minItems" : 1,
+          "insertionOrder" : False
+        }
+      },
+      "required" : [ "TargetGroups" ],
+      "additionalProperties" : False
+    },
+    "FixedResponse" : {
+      "type" : "object",
+      "additionalProperties" : False,
+      "properties" : {
+        "StatusCode" : {
+          "type" : "integer",
+          "maximum" : 599,
+          "minimum" : 100
+        }
+      },
+      "required" : [ "StatusCode" ]
+    },
+    "DefaultAction" : {
+      "type" : "object",
+      "additionalProperties" : False,
+      "properties" : {
+        "Forward" : {
+          "$ref" : "#/definitions/Forward"
+        },
+        "FixedResponse" : {
+          "$ref" : "#/definitions/FixedResponse"
+        }
+      },
+      "required" : [ ]
+    },
+    "WeightedTargetGroup" : {
+      "type" : "object",
+      "properties" : {
+        "TargetGroupIdentifier" : {
+          "type" : "string",
+          "maxLength" : 2048,
+          "minLength" : 20,
+          "pattern" : "^((tg-[0-9a-z]{17})|(arn:[a-z0-9\\-]+:vpc-lattice:[a-zA-Z0-9\\-]+:\\d{12}:targetgroup/tg-[0-9a-z]{17}))$"
+        },
+        "Weight" : {
+          "type" : "integer",
+          "maximum" : 999,
+          "minimum" : 0
+        }
+      },
+      "required" : [ "TargetGroupIdentifier" ],
+      "additionalProperties" : False
+    },
+    "Tag" : {
+      "type" : "object",
+      "additionalProperties" : False,
+      "properties" : {
+        "Key" : {
+          "type" : "string",
+          "minLength" : 1,
+          "maxLength" : 128
+        },
+        "Value" : {
+          "type" : "string",
+          "minLength" : 1,
+          "maxLength" : 256
+        }
+      },
+      "required" : [ "Key", "Value" ]
+    }
+  },
+  "properties" : {
+    "Arn" : {
+      "type" : "string",
+      "maxLength" : 2048,
+      "minLength" : 20,
+      "pattern" : "^arn(:[a-z0-9]+([.-][a-z0-9]+)*){2}(:([a-z0-9]+([.-][a-z0-9]+)*)?){2}:service/svc-[0-9a-z]{17}/listener/listener-[0-9a-z]{17}$"
+    },
+    "DefaultAction" : {
+      "$ref" : "#/definitions/DefaultAction"
+    },
+    "Id" : {
+      "type" : "string",
+      "maxLength" : 26,
+      "minLength" : 26,
+      "pattern" : "^listener-[0-9a-z]{17}$"
+    },
+    "Name" : {
+      "type" : "string",
+      "maxLength" : 63,
+      "minLength" : 3,
+      "pattern" : "^(?!listener-)(?![-])(?!.*[-]$)(?!.*[-]{2})[a-z0-9-]+$"
+    },
+    "Port" : {
+      "type" : "integer",
+      "maximum" : 65535,
+      "minimum" : 1
+    },
+    "Protocol" : {
+      "type" : "string",
+      "enum" : [ "HTTP", "HTTPS", "TLS_PASSTHROUGH" ]
+    },
+    "ServiceArn" : {
+      "type" : "string",
+      "maxLength" : 2048,
+      "minLength" : 21,
+      "pattern" : "^arn:[a-z0-9\\-]+:vpc-lattice:[a-zA-Z0-9\\-]+:\\d{12}:service/svc-[0-9a-z]{17}$"
+    },
+    "ServiceId" : {
+      "type" : "string",
+      "maxLength" : 21,
+      "minLength" : 21,
+      "pattern" : "^svc-[0-9a-z]{17}$"
+    },
+    "ServiceIdentifier" : {
+      "type" : "string",
+      "maxLength" : 2048,
+      "minLength" : 21,
+      "pattern" : "^((svc-[0-9a-z]{17})|(arn:[a-z0-9\\-]+:vpc-lattice:[a-zA-Z0-9\\-]+:\\d{12}:service/svc-[0-9a-z]{17}))$"
+    },
+    "Tags" : {
+      "type" : "array",
+      "insertionOrder" : False,
+      "uniqueItems" : True,
+      "minItems" : 0,
+      "maxItems" : 50,
+      "items" : {
+        "$ref" : "#/definitions/Tag"
+      }
+    }
+  },
+  "propertyTransform" : {
+    "/properties/DefaultAction/Forward/TargetGroups/*/TargetGroupIdentifier" : "$split(TargetGroupIdentifier, \"/\")[-1]"
+  },
+  "required" : [ "DefaultAction", "Protocol" ],
+  "readOnlyProperties" : [ "/properties/Arn", "/properties/Id", "/properties/ServiceArn", "/properties/ServiceId" ],
+  "createOnlyProperties" : [ "/properties/ServiceIdentifier", "/properties/Name", "/properties/Port", "/properties/Protocol" ],
+  "writeOnlyProperties" : [ "/properties/ServiceIdentifier" ],
+  "primaryIdentifier" : [ "/properties/Arn" ],
+  "additionalIdentifiers" : [ [ "/properties/ServiceIdentifier", "/properties/Name", "/properties/Port" ] ],
+  "handlers" : {
+    "create" : {
+      "permissions" : [ "vpc-lattice:CreateListener", "vpc-lattice:TagResource", "vpc-lattice:GetListener", "vpc-lattice:ListTagsForResource" ]
+    },
+    "read" : {
+      "permissions" : [ "vpc-lattice:GetListener", "vpc-lattice:ListTagsForResource" ]
+    },
+    "update" : {
+      "permissions" : [ "vpc-lattice:UpdateListener", "vpc-lattice:TagResource", "vpc-lattice:UntagResource", "vpc-lattice:GetListener", "vpc-lattice:ListTagsForResource" ]
+    },
+    "delete" : {
+      "permissions" : [ "vpc-lattice:DeleteListener" ]
+    },
+    "list" : {
+      "permissions" : [ "vpc-lattice:ListListeners" ],
+      "handlerSchema" : {
+        "properties" : {
+          "ServiceIdentifier" : {
+            "type" : "string",
+            "maxLength" : 2048,
+            "minLength" : 21,
+            "pattern" : "^((svc-[0-9a-z]{17})|(arn:[a-z0-9\\-]+:vpc-lattice:[a-zA-Z0-9\\-]+:\\d{12}:service/svc-[0-9a-z]{17}))$"
+          }
+        },
+        "required" : [ "ServiceIdentifier" ]
+      }
+    }
+  },
+  "tagging" : {
+    "taggable" : True,
+    "tagOnCreate" : True,
+    "tagUpdatable" : True,
+    "cloudFormationSystemTags" : False,
+    "tagProperty" : "/properties/Tags",
+    "permissions" : [ "vpc-lattice:UntagResource", "vpc-lattice:TagResource", "vpc-lattice:ListTagsForResource" ]
+  }
+}

@@ -1,0 +1,6 @@
+from cfn_resource_provider_schemas.Mediatailor.Channel import SCHEMA as Channel
+from cfn_resource_provider_schemas.Mediatailor.Channelpolicy import SCHEMA as Channelpolicy
+from cfn_resource_provider_schemas.Mediatailor.Livesource import SCHEMA as Livesource
+from cfn_resource_provider_schemas.Mediatailor.Playbackconfiguration import SCHEMA as Playbackconfiguration
+from cfn_resource_provider_schemas.Mediatailor.Sourcelocation import SCHEMA as Sourcelocation
+from cfn_resource_provider_schemas.Mediatailor.Vodsource import SCHEMA as Vodsource

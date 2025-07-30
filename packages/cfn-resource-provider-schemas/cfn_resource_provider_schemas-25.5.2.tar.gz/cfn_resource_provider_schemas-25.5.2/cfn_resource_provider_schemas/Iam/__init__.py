@@ -1,0 +1,16 @@
+from cfn_resource_provider_schemas.Iam.Accesskey import SCHEMA as Accesskey
+from cfn_resource_provider_schemas.Iam.Group import SCHEMA as Group
+from cfn_resource_provider_schemas.Iam.Grouppolicy import SCHEMA as Grouppolicy
+from cfn_resource_provider_schemas.Iam.Instanceprofile import SCHEMA as Instanceprofile
+from cfn_resource_provider_schemas.Iam.Managedpolicy import SCHEMA as Managedpolicy
+from cfn_resource_provider_schemas.Iam.Oidcprovider import SCHEMA as Oidcprovider
+from cfn_resource_provider_schemas.Iam.Policy import SCHEMA as Policy
+from cfn_resource_provider_schemas.Iam.Role import SCHEMA as Role
+from cfn_resource_provider_schemas.Iam.Rolepolicy import SCHEMA as Rolepolicy
+from cfn_resource_provider_schemas.Iam.Samlprovider import SCHEMA as Samlprovider
+from cfn_resource_provider_schemas.Iam.Servercertificate import SCHEMA as Servercertificate
+from cfn_resource_provider_schemas.Iam.Servicelinkedrole import SCHEMA as Servicelinkedrole
+from cfn_resource_provider_schemas.Iam.User import SCHEMA as User
+from cfn_resource_provider_schemas.Iam.Userpolicy import SCHEMA as Userpolicy
+from cfn_resource_provider_schemas.Iam.Usertogroupaddition import SCHEMA as Usertogroupaddition
+from cfn_resource_provider_schemas.Iam.Virtualmfadevice import SCHEMA as Virtualmfadevice

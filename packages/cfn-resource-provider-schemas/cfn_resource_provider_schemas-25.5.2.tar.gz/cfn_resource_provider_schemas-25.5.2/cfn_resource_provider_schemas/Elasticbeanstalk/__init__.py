@@ -1,0 +1,4 @@
+from cfn_resource_provider_schemas.Elasticbeanstalk.Application import SCHEMA as Application
+from cfn_resource_provider_schemas.Elasticbeanstalk.Applicationversion import SCHEMA as Applicationversion
+from cfn_resource_provider_schemas.Elasticbeanstalk.Configurationtemplate import SCHEMA as Configurationtemplate
+from cfn_resource_provider_schemas.Elasticbeanstalk.Environment import SCHEMA as Environment

@@ -1,0 +1,9 @@
+from cfn_resource_provider_schemas.Ssm.Association import SCHEMA as Association
+from cfn_resource_provider_schemas.Ssm.Document import SCHEMA as Document
+from cfn_resource_provider_schemas.Ssm.Maintenancewindow import SCHEMA as Maintenancewindow
+from cfn_resource_provider_schemas.Ssm.Maintenancewindowtarget import SCHEMA as Maintenancewindowtarget
+from cfn_resource_provider_schemas.Ssm.Maintenancewindowtask import SCHEMA as Maintenancewindowtask
+from cfn_resource_provider_schemas.Ssm.Parameter import SCHEMA as Parameter
+from cfn_resource_provider_schemas.Ssm.Patchbaseline import SCHEMA as Patchbaseline
+from cfn_resource_provider_schemas.Ssm.Resourcedatasync import SCHEMA as Resourcedatasync
+from cfn_resource_provider_schemas.Ssm.Resourcepolicy import SCHEMA as Resourcepolicy

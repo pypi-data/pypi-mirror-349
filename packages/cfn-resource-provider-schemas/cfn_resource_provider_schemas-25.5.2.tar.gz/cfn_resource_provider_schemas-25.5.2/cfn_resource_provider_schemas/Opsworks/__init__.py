@@ -1,0 +1,7 @@
+from cfn_resource_provider_schemas.Opsworks.App import SCHEMA as App
+from cfn_resource_provider_schemas.Opsworks.Elasticloadbalancerattachment import SCHEMA as Elasticloadbalancerattachment
+from cfn_resource_provider_schemas.Opsworks.Instance import SCHEMA as Instance
+from cfn_resource_provider_schemas.Opsworks.Layer import SCHEMA as Layer
+from cfn_resource_provider_schemas.Opsworks.Stack import SCHEMA as Stack
+from cfn_resource_provider_schemas.Opsworks.Userprofile import SCHEMA as Userprofile
+from cfn_resource_provider_schemas.Opsworks.Volume import SCHEMA as Volume

@@ -1,0 +1,4 @@
+from cfn_resource_provider_schemas.Macie.Allowlist import SCHEMA as Allowlist
+from cfn_resource_provider_schemas.Macie.Customdataidentifier import SCHEMA as Customdataidentifier
+from cfn_resource_provider_schemas.Macie.Findingsfilter import SCHEMA as Findingsfilter
+from cfn_resource_provider_schemas.Macie.Session import SCHEMA as Session
