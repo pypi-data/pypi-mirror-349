@@ -1,0 +1,8 @@
+livekit/plugins/avatarioai/__init__.py,sha256=rvyla9w2aa4EpdtdoL7IrsvnO6zpMLmdu-wqdd8QshQ,405
+livekit/plugins/avatarioai/api.py,sha256=jdEAnT5JIAvhQUZytgCy7qnjrW-9Nn-DbUEK71vEab4,3734
+livekit/plugins/avatarioai/avatar.py,sha256=2uiGZ4U90rTZNbtsy6hT-hqSRrkD2D2N_MiOdThJsWg,3594
+livekit/plugins/avatarioai/log.py,sha256=0j4uVeXAFrBRgehFt-pHYEnNMXbaDHKwEOLfmAReSlg,73
+livekit/plugins/avatarioai/version.py,sha256=D3FIR1OP9p54JyJSpU5wDfDWvaAjk2k-IH5FzjX_kCA,23
+livekit_plugins_avatarioai-1.0.20.dist-info/METADATA,sha256=8lq0egNBrTNBA6GjoLCEXDyKL4UuQoxXYCE6GEDdM7A,1154
+livekit_plugins_avatarioai-1.0.20.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+livekit_plugins_avatarioai-1.0.20.dist-info/RECORD,,
