@@ -1,0 +1,84 @@
+Metadata-Version: 2.4
+Name: django-necormancer
+Version: 0.1.6
+Summary: A short description of your package
+Author-email: Byron Farrell <byronfarrell22@email.com>
+License: MIT
+Project-URL: Homepage, https://github.com/Byron-Farrell/necromancer
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: typer
+Requires-Dist: InquirerPy
+Dynamic: license-file
+
+# necromancer
+
+A Django tool used to boostrap projects and reduced intial setup and development time. The tool will create a strong base for a professional project that can be easily built on top of. It will also have optiona prebuilt Django apps e.g. Users. 
+
+## Features 
+
+**Other Ideas**
+- Advanced option to further customise setup. This allows the base command to be short and simple for hobby projects.
+- Add enviroment setup after intial build. E.g. if a user picks Make give them the option to also add docker in the future?
+
+### V1
+- CLI
+- Boostrap Django Project `necromancer conjure/build/animate`
+    - Select API framework: django, DRF
+    - Build Tools: None, pip-tools
+    - Select enviroment setup: None, Make
+    - Select boostrap apps users
+    - Install other apps (things like django-environ should be autamtically installed)
+        - django-cors-headers
+    - create skeleton app
+    - folder structure
+
+### V2
+- CLI
+- Boostrap Django Project `necromancer conjure/build/animate`
+    - Build Tools: poetry
+    - Select enviroment setup: None, Docker, Make
+    - Select boostrap apps users (advanced?)
+        - Select username field
+            - email
+            - username
+        - exclude fields
+            - fields to exclude
+
+
+### V3
+- CLI
+- Boostrap Django Project `necromancer conjure/build/animate`
+    - Create Github CI/CD templates
+    - Python hints: yes, no
+    - Install other apps (things like django-environ should be autamtically installed)
+        - celery
+        - cache
+            - redit
+            - others
+        - others?
+
+
+## CLI
+
+Create a new project (Still deciding what name to use for create the boostrap project)
+```
+necromancer conjure
+```
+```
+necromancer build
+```
+```
+necromancer animate
+```
+```
+necromancer summon (I think this should just be for creating skeleton apps?)
+```
+Create skeleton app
+```
+necromancer summon --skeleton (might omit --skeleton if summon is only used for creating skeleton/base apps) <app_name>
+```
+
+
+
