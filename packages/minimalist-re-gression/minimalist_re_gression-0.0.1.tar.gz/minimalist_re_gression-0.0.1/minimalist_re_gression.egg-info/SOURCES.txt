@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+setup.py
+minimalist_re_gression/__init__.py
+minimalist_re_gression.egg-info/PKG-INFO
+minimalist_re_gression.egg-info/SOURCES.txt
+minimalist_re_gression.egg-info/dependency_links.txt
+minimalist_re_gression.egg-info/top_level.txt
