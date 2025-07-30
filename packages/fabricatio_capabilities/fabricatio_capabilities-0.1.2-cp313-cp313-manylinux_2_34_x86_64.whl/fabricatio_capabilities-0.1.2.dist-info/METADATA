@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: fabricatio_capabilities
+Version: 0.1.2
+Requires-Dist: fabricatio-core
+License-File: LICENSE
+Summary: Add your description here
+Author-email: Whth <zettainspector@foxmail.com>
+Requires-Python: >=3.12, <3.14
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Project-URL: Homepage, https://github.com/Whth/fabricatio
+Project-URL: Repository, https://github.com/Whth/fabricatio
+Project-URL: Issues, https://github.com/Whth/fabricatio/issues
+
+
