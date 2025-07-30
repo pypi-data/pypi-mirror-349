@@ -1,0 +1,14 @@
+titanic_model/VERSION,sha256=WYVJhIUxBN9cNT4vaBoV_HkkdC-aLkaMKa8kjc5FzgM,6
+titanic_model/__init__.py,sha256=lFNMcBbhC0rNhBGBxMHiVTqGFBZDsyrDnQRcg5tdjpQ,855
+titanic_model/config.yml,sha256=_1PXBjR0NnDyAbcNyVmpnIopyy-5QLwW2yYN_LzUz4Y,801
+titanic_model/pipeline.py,sha256=z9O-jeuACu89URN_WAGyNpZo1TpOeaa7CjJ62YmgznI,2180
+titanic_model/predict.py,sha256=w9VdhU0bqY1kqRZdOabys2Zgajm0ci4qdbpgEak76Ww,1080
+titanic_model/train_pipeline.py,sha256=Tisqdx93NxqqmuBNM-TND-jpt2Adk1BBGVYCi4VUcVM,2675
+titanic_model/datasets/test.csv,sha256=VgI7mUgjbzx6HJRI_PQYsoPhCe8Xf6jH4GkVjdfdUrI,28629
+titanic_model/datasets/train.csv,sha256=fRGP74tsz3-BERh3vDiFNvex5JimVePWSdGaqgEOn28,61194
+titanic_model/trained_models/titanic_model_output_v1.0.0.pkl,sha256=Ha3wsQvf5-gQnmfpy7KrCeLCIKc0XwETSsqJUF5lj-s,2468114
+titanic_model-1.0.0.dist-info/licenses/LICENSE,sha256=FGMjXoc2gjvSZmbN9TDgmU7Z3EKboeq2cMhbBTBUN_U,1067
+titanic_model-1.0.0.dist-info/METADATA,sha256=KLd_NAq8aP78D-7D3Jz8npATWVpe_sR1T7P0lsg92s0,4996
+titanic_model-1.0.0.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+titanic_model-1.0.0.dist-info/top_level.txt,sha256=PTchdfzSv6aW-ftZkylWkTmF8PQWAnJLs3iizJ3vWAo,14
+titanic_model-1.0.0.dist-info/RECORD,,
