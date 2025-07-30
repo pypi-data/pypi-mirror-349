@@ -1,0 +1,12 @@
+[pyaro.timeseries]
+actrisebas = pyaro_readers.actrisebas:ActrisEbasTimeSeriesEngine
+aeronetsdareader = pyaro_readers.aeronetsdareader:AeronetSdaTimeseriesEngine
+aeronetsunreader = pyaro_readers.aeronetsunreader:AeronetSunTimeseriesEngine
+ascii2netcdf = pyaro_readers.ascii2netcdf:Ascii2NetcdfTimeseriesEngine
+eeareader = pyaro_readers.eeareader:EEATimeseriesEngine
+harp = pyaro_readers.harpreader:AeronetHARPEngine
+mergingreader = pyaro_readers.merging_reader:MergingReaderEngine
+netcdf_rw = pyaro_readers.netcdf_rw:Netcdf_RWTimeseriesEngine
+nilupmfabsorption = pyaro_readers.nilupmfabsorptionreader:NILUPMFAbsorptionTimeseriesEngine
+nilupmfebas = pyaro_readers.nilupmfebas:EbasPmfTimeseriesEngine
+parquet = pyaro_readers.parquet:ParquetTimeseriesEngine
