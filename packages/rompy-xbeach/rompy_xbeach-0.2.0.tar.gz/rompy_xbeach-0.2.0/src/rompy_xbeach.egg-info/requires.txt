@@ -1,0 +1,13 @@
+rioxarray
+rompy==0.3.1
+oceantide
+typer
+
+[dev]
+coverage
+mypy
+pytest
+ruff
+
+[extra]
+rompy-binary-datasources

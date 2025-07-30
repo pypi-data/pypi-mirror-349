@@ -1,0 +1,25 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% XBeach parameter settings input file
+%%%
+%%% Date: {{ runtime._generated_at }}
+%%% User: {{ runtime._generated_on }}
+%%% Template: {{ _template }}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+{% for key, value in config.items() %}{{ key }} = {{ value }}
+{% endfor %}
+nmeanvar = 14
+H
+thetamean
+hh
+u
+v
+D
+R
+k
+ue
+ve
+urms
+Qb
+zb
+zs

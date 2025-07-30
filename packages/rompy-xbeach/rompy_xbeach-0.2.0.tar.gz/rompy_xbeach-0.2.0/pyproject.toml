@@ -1,0 +1,87 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rompy_xbeach"
+description = "Rompy Xbeach Config package."
+readme = "README.rst"
+authors = [
+  {name = "Rompy Developers", email = "developers@rompy.com"}
+]
+maintainers = [
+  {name = "Rompy Developers", email = "developers@rompy.com"}
+]
+classifiers = [
+
+]
+license = {text = "BSD 3-Clause License"}
+dependencies = [
+  "rioxarray",
+  "rompy==0.3.1",
+  "oceantide",
+  "typer",
+]
+dynamic = ["version"]
+
+[project.optional-dependencies]
+extra = [
+  "rompy-binary-datasources",
+]
+dev = [
+  "coverage",
+  "mypy",
+  "pytest",
+  "ruff"
+]
+
+[project.scripts]
+rompy_xbeach = "rompy_xbeach.cli:app"
+
+[project.entry-points."rompy.config"]
+xbeach = "rompy_xbeach.config:Config"
+
+[project.entry-points."xbeach.data"]
+"wind_grid:wind" = "rompy_xbeach.forcing:WindGrid"
+"wind_station:wind" = "rompy_xbeach.forcing:WindStation"
+"wind_point:wind" = "rompy_xbeach.forcing:WindPoint"
+"tide_cons_grid:tide" = "rompy_xbeach.forcing:TideConsGrid"
+"tide_cons_point:tide" = "rompy_xbeach.forcing:TideConsPoint"
+"water_level_grid:tide" = "rompy_xbeach.forcing:WaterLevelGrid"
+"water_level_station:tide" = "rompy_xbeach.forcing:WaterLevelStation"
+"water_level_point:tide" = "rompy_xbeach.forcing:WaterLevelPoint"
+"boundary_station_spectra_jons:wave" = "rompy_xbeach.boundary:BoundaryStationSpectraJons"
+"boundary_station_param_jons:wave" = "rompy_xbeach.boundary:BoundaryStationParamJons"
+"boundary_grid_param_jons:wave" = "rompy_xbeach.boundary:BoundaryGridParamJons"
+"boundary_point_param_jons:wave" = "rompy_xbeach.boundary:BoundaryPointParamJons"
+"boundary_station_spectra_jonstable:wave" = "rompy_xbeach.boundary:BoundaryStationSpectraJonstable"
+"boundary_station_param_jonstable:wave" = "rompy_xbeach.boundary:BoundaryStationParamJonstable"
+"boundary_grid_param_jonstable:wave" = "rompy_xbeach.boundary:BoundaryGridParamJonstable"
+"boundary_point_param_jonstable:wave" = "rompy_xbeach.boundary:BoundaryPointParamJonstable"
+"boundary_station_spectra_swan:wave" = "rompy_xbeach.boundary:BoundaryStationSpectraSwan"
+
+[project.entry-points."xbeach.source"]
+"geotiff:crs" = "rompy_xbeach.source:SourceGeotiff"
+"xyz:crs" = "rompy_xbeach.source:SourceXYZ"
+"dataset:crs" = "rompy_xbeach.source:SourceCRSDataset"
+"file:crs" = "rompy_xbeach.source:SourceCRSFile"
+"intake:crs" = "rompy_xbeach.source:SourceCRSIntake"
+"tide_cons_point_csv:tide_cons_point" = "rompy_xbeach.source:SourceTideConsPointCSV"
+
+[project.entry-points."xbeach.interpolator"]
+regular_grid = "rompy_xbeach.interpolate:RegularGridInterpolator"
+
+[project.urls]
+bugs = "https://github.com/rom-py/rompy_xbeach/issues"
+changelog = "https://github.com/rom-py/rompy_xbeach/blob/master/changelog.md"
+homepage = "https://github.com/rom-py/rompy_xbeach"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.package-data]
+"*" = ["*.*"]
+"rompy_xbeach" = ["templates/**/*", "templates/**/.*"]
+
+[tool.setuptools.dynamic]
+version = {attr = "rompy_xbeach.__version__"}

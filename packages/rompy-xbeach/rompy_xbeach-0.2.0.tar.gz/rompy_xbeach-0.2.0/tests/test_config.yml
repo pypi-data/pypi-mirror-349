@@ -1,0 +1,112 @@
+model_type: xbeach
+grid:
+  model_type: regular
+  ori:
+    x: 115.594239
+    y: -32.641104
+    crs: EPSG:4326
+  alfa: 347
+  dx: 10
+  dy: 15
+  nx: 230
+  ny: 220
+  crs: EPSG:28350
+bathy:
+  model_type: xbeach_bathy
+  source:
+    model_type: geotiff
+    filename: ./data/bathy.tif
+  posdwn: False
+  interpolator:
+    model_type: scipy_regular_grid
+    kwargs:
+      method: linear
+      fill_value: null
+  left: 3
+  right: 3
+  extension:
+    model_type: linear
+    depth: 25
+    slope: 0.3
+# Model input data
+input:
+  wave:
+    model_type: station_param_jonstable
+    source:
+      model_type: file
+      uri: ./data/smc-params-20230101.nc
+      crs: 4326
+    coords:
+      s: seapoint
+    hm0: phs1
+    tp: ptp1
+    mainang: pdir1
+    gammajsp: ppe1
+    dspr: pspr1
+  wind:
+    model_type: wind_station
+    source:
+      model_type: file
+      uri: ./data/smc-params-20230101.nc
+      crs: 4326
+    coords:
+      s: seapoint
+    wind_vars:
+      model_type: wind_vector
+      u: uwnd
+      v: vwnd
+  tide:
+    model_type: tide_cons_grid
+    source:
+      model_type: oceantide
+      reader: read_otis_binary
+      kwargs:
+        gfile: ./data/swaus_tide_cons/grid_m2s2n2k2k1o1p1q1mmmf
+        hfile: ./data/swaus_tide_cons/h_m2s2n2k2k1o1p1q1mmmf
+        ufile: ./data/swaus_tide_cons/u_m2s2n2k2k1o1p1q1mmmf
+      crs: 4326
+    coords:
+      x: lon
+      y: lat
+# Wave boundary conditions
+front: abs_2d #1
+back: abs_2d #2
+left: neumann #0
+right: neumann #0
+rugdepth: 0.011
+tunits: seconds since 1970-01-01 00:00:00.00 +00
+break: roelvink_daly
+scheme: warmbeam
+order: 1
+lateralwave: wavecrest
+random: 1
+zs0: null
+hmin: 0.01
+wci: 0
+alpha: 1
+delta: 0.0
+n: 10
+rho: 1025
+g: 9.81
+thetamin: -80
+thetamax: 80
+dtheta: 10.0
+beta: 0.1
+roller: 1
+gamma: 0.55
+gammax: 1.0
+sedtrans: 0
+morfac: 0.0
+morphology: 0
+cf: 0.01
+paulrevere: land
+eps: 0.01
+epsi: 0.001
+cfl: 0.8
+umin: 0.1
+oldhu: 1
+# Model output
+tstart: 0.0
+tintm: 3600.0
+outputformat: netcdf
+ncfilename: xboutput_test.nc
