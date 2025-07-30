@@ -1,0 +1,15 @@
+bqmcp_cloud/prompts/deep_read_system_prompt.md,sha256=Ek-pBnq02CtekGP4Y4udau40tjdgmRBKaJ-3G0uTp4c,5670
+bqmcp_cloud/prompts/doc_system_prompt.md,sha256=QRguW61-ugJJICbS7UY8sNa47R6R581mMgjRMyIlt4A,9942
+bqmcp_cloud/prompts/ppt_system_prompt.md,sha256=IJyU_-0NXGWawFesmeg8_u9aSyA7sXJXNhHJHvKgQY0,5540
+bqmcp_cloud/prompts/release_date_system_prompt.md,sha256=k6rLAfUoKApHQKCuRIqIrIsDWjdtSOWfqtVSlYaLwjc,1348
+bqmcp_cloud/prompts/strategy_system_prompt.md,sha256=S2bOoktv3FcRD3HazFkffVT7CulYQb1h5R5WMt5apEI,101882
+bqmcp_cloud-0.1.5.data/data/bqmcp_cloud/prompts/deep_read_system_prompt.md,sha256=Ek-pBnq02CtekGP4Y4udau40tjdgmRBKaJ-3G0uTp4c,5670
+bqmcp_cloud-0.1.5.data/data/bqmcp_cloud/prompts/doc_system_prompt.md,sha256=QRguW61-ugJJICbS7UY8sNa47R6R581mMgjRMyIlt4A,9942
+bqmcp_cloud-0.1.5.data/data/bqmcp_cloud/prompts/ppt_system_prompt.md,sha256=IJyU_-0NXGWawFesmeg8_u9aSyA7sXJXNhHJHvKgQY0,5540
+bqmcp_cloud-0.1.5.data/data/bqmcp_cloud/prompts/release_date_system_prompt.md,sha256=k6rLAfUoKApHQKCuRIqIrIsDWjdtSOWfqtVSlYaLwjc,1348
+bqmcp_cloud-0.1.5.data/data/bqmcp_cloud/prompts/strategy_system_prompt.md,sha256=S2bOoktv3FcRD3HazFkffVT7CulYQb1h5R5WMt5apEI,101882
+bqmcp_cloud-0.1.5.dist-info/METADATA,sha256=25TOHcimlcBGcCy0D1NtHfmFDAHdPVvaF5eGUAVlZjI,3567
+bqmcp_cloud-0.1.5.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+bqmcp_cloud-0.1.5.dist-info/entry_points.txt,sha256=UKfythJq2BMethaMhLADDwZHE8GUXVSgWSkaih68z7g,49
+bqmcp_cloud-0.1.5.dist-info/licenses/LICENSE,sha256=8dZ4jxS0PlHAwyU2ZjAZSrqpOi7ishftqT4Pn3VMATw,1086
+bqmcp_cloud-0.1.5.dist-info/RECORD,,

@@ -1,0 +1,2 @@
+[console_scripts]
+bqmcp-cloud = bqmcp_cloud:main
