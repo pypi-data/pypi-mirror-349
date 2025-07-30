@@ -1,0 +1,179 @@
+.editorconfig
+.gitignore
+LICENSE
+MANIFEST.in
+README.md
+mkdocs.yml
+pyproject.toml
+requirements.txt
+requirements_dev.txt
+.github/ISSUE_TEMPLATE/bug_report.md
+.github/ISSUE_TEMPLATE/config.yml
+.github/ISSUE_TEMPLATE/feature_request.md
+.github/workflows/docs-build.yml
+.github/workflows/docs.yml
+.github/workflows/installation.yml
+.github/workflows/macos.yml
+.github/workflows/pypi.yml
+.github/workflows/ubuntu.yml
+.github/workflows/windows.yml
+deabook/CNLSSDFDDF.py
+deabook/CNLSSDFDDFweak.py
+deabook/CNLSSDFDDFweakmeta.py
+deabook/DDFDUAL.py
+deabook/DEA.py
+deabook/DEAweak.py
+deabook/DRFDUAL.py
+deabook/MB.py
+deabook/MQDEA.py
+deabook/MQDEAweak.py
+deabook/StoNED.py
+deabook/__init__.py
+deabook/common.py
+deabook/constant.py
+deabook/deabook.py
+deabook.egg-info/PKG-INFO
+deabook.egg-info/SOURCES.txt
+deabook.egg-info/dependency_links.txt
+deabook.egg-info/entry_points.txt
+deabook.egg-info/requires.txt
+deabook.egg-info/top_level.txt
+deabook/data/41Firm.csv
+deabook/data/Ex3.dta
+deabook/data/Ex4.dta
+deabook/data/Ex5.dta
+deabook/data/aaa.xls
+deabook/data/abatementCost.csv
+deabook/data/china data.xlsx
+deabook/data/electricityFirms.csv
+deabook/data/oecd data.xlsx
+deabook/data/power plant data.xlsx
+deabook/data/riceProduction.csv
+deabook/example/chap12/chap12.ipynb
+deabook/example/chap13/chap13.ipynb
+deabook/example/chap14/chap14.ipynb
+deabook/example/chap15/chap15.ipynb
+deabook/example/chap2/DDF_CRS.md
+deabook/example/chap2/DDF_VRS.md
+deabook/example/chap2/DDF_VRS_province.md
+deabook/example/chap2/DEA_CRS.md
+deabook/example/chap2/DEA_VRS.md
+deabook/example/chap2/HYPER_CRS.md
+deabook/example/chap2/HYPER_VRS.md
+deabook/example/chap2/chap 2_country.ipynb
+deabook/example/chap2/chap 2_province.ipynb
+deabook/example/chap2/chap2分国家资本效率.png
+deabook/example/chap2/chap2分年份地区资本效率-省.png
+deabook/example/chap2/chap2分年份资本效率-国.png
+deabook/example/chap2/chap2分年份资本效率-省.png
+deabook/example/chap2/chap2分省份资本效率.png
+deabook/example/chap3/MQDDF_CRS.md
+deabook/example/chap3/MQDDF_VRS.md
+deabook/example/chap3/MQDEA_CRS - 副本.xlsx
+deabook/example/chap3/MQDEA_CRS.md
+deabook/example/chap3/MQDEA_CRS.xlsx
+deabook/example/chap3/MQDEA_VRS_.md
+deabook/example/chap3/chap 3.ipynb
+deabook/example/chap3/chap 3_province.ipynb
+deabook/example/chap3/chap3分国家产出效率.png
+deabook/example/chap3/chap3分年份产出效率-国.png
+deabook/example/chap3/chap3分年份产出效率-省.png
+deabook/example/chap3/chap3分省份产出效率.png
+deabook/example/chap3/table3.1.md
+deabook/example/chap3/table3.2_MQDEA_VRS_.md
+deabook/example/chap3/table3.3_MQDDF_VRS.md
+deabook/example/chap3/table3.4.md
+deabook/example/chap4/DDF_VRS.md
+deabook/example/chap4/MQDEA_VRS_.md
+deabook/example/chap4/chap 4动态 province.ipynb
+deabook/example/chap4/chap 4动态.ipynb
+deabook/example/chap4/chap 4静态.ipynb
+deabook/example/chap4/chap 4静态_province.ipynb
+deabook/example/chap4/chap41分国家能源效率.png
+deabook/example/chap4/chap41分年份能源效率-国.png
+deabook/example/chap4/chap41分年份能源效率-省.png
+deabook/example/chap4/chap41分省份能源效率.png
+deabook/example/chap4/chap42分国家能源效率.png
+deabook/example/chap4/chap42分年份能源效率-国.png
+deabook/example/chap4/chap42分年份能源效率-省.png
+deabook/example/chap4/chap42分省份能源效率.png
+deabook/example/chap4/table4.1.md
+deabook/example/chap5/DEA_UO_CRS.md
+deabook/example/chap5/DEA_UO_VRS_DIFF.md
+deabook/example/chap5/DEA_UO_VRS_SAME.md
+deabook/example/chap5/HYPER_CRS.md
+deabook/example/chap5/HYPER_VRS.md
+deabook/example/chap5/HYPER_VRS1.md
+deabook/example/chap5/HYPER_VRS2.md
+deabook/example/chap5/chap 5.ipynb
+deabook/example/chap5/chap 5_province.ipynb
+deabook/example/chap5/table5.10_DDF_VRS_DIFF.md
+deabook/example/chap5/table5.11_NDDF_CRS.md
+deabook/example/chap5/table5.12_NDDF_VRS_SAME.md
+deabook/example/chap5/table5.13_NDDF_VRS_DIFF.md
+deabook/example/chap5/table5.2_DEA_UO_CRS.md
+deabook/example/chap5/table5.3_DEA_UO_VRS_SAME.md
+deabook/example/chap5/table5.4_DEA_UO_VRS_DIFF.md
+deabook/example/chap5/table5.5_HYPER_CRS.md
+deabook/example/chap5/table5.6_HYPER_VRS1.md
+deabook/example/chap5/table5.7_HYPER_VRS2.md
+deabook/example/chap5/table5.8_DDF_CRS.md
+deabook/example/chap5/table5.9_DDF_VRS_SAME.md
+deabook/example/chap5/分国家环境效率2.png
+deabook/example/chap5/分年份地区环境效率-省hyper.png
+deabook/example/chap5/分年份地区环境效率-省nddf.png
+deabook/example/chap5/分年份环境效率-国.png
+deabook/example/chap5/分年份环境效率-省.png
+deabook/example/chap5/分年份环境效率.png
+deabook/example/chap5/分省份环境效率.png
+deabook/example/chap5/分省份环境效率2.png
+deabook/example/chap6/MQDDF_CRS.md
+deabook/example/chap6/MQDDF_VRS_DIFF.md
+deabook/example/chap6/MQDDF_VRS_SAME.md
+deabook/example/chap6/MQDEA_CRS.md
+deabook/example/chap6/MQDEA_VRS_DIFF.md
+deabook/example/chap6/MQDEA_VRS_SAME.md
+deabook/example/chap6/chap 6.ipynb
+deabook/example/chap6/chap 6_province.ipynb
+deabook/example/chap6/chap6分国家环境效率.png
+deabook/example/chap6/chap6分年份环境效率-国.png
+deabook/example/chap6/chap6分年份环境效率-省.png
+deabook/example/chap6/chap6分年份环境效率-省2.png
+deabook/example/chap6/chap6分省份环境效率.png
+deabook/example/chap6/table6.2_MQDEA_CRS.md
+deabook/example/chap6/table6.3_MQDEA_VRS_SAME.md
+deabook/example/chap6/table6.4_MQDEA_VRS_DIFF.md
+deabook/example/chap6/table6.5_MQDDF_CRS.md
+deabook/example/chap6/table6.6_MQDDF_VRS_SAME.md
+deabook/example/chap6/table6.7_MQDDF_VRS_DIFF.md
+deabook/example/chap7/MB_CRS_1.md
+deabook/example/chap7/MB_CRS_23.md
+deabook/example/chap7/MB_CRS_45.md
+deabook/example/chap7/chap 7.ipynb
+deabook/example/chap7/table7.1.md
+deabook/example/chap8/chap 8.ipynb
+deabook/example/chap8/chap8分年份碳排放效率-省.png
+deabook/example/chap8/chap8分省份碳排放效率.png
+deabook/example/chap8/table8.2_CNLSDDFb_CRS3.md
+deabook/example/chap8/table8.3_CNLSDDFb_VRS_SAME3.md
+deabook/example/chap8/table8.4_CNLSDDFb_VRS_DIFF3.md
+deabook/example/chap8/table_CNLSSDb_CRS3.md
+deabook/example/chap8/table_CNLSSDb_VRS_DIFF3.md
+deabook/example/chap8/table_CNLSSDb_VRS_SAME3.md
+deabook/utils/MB_.py
+deabook/utils/__init__.py
+deabook/utils/sweet.py
+deabook/utils/tools.py
+deabook/utils/unihyper.py
+docs/changelog.md
+docs/common.md
+docs/contributing.md
+docs/deabook.md
+docs/faq.md
+docs/index.md
+docs/installation.md
+docs/usage.md
+docs/examples/intro.ipynb
+docs/overrides/main.html
+tests/__init__.py
+tests/test_deabook.py
