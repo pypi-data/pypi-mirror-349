@@ -1,0 +1,30 @@
+[project]
+name = "learn-pyproject"
+version = "0.1.0"
+description = "Learn modern Python packaging with Poetry and PyProject"
+authors = [
+    { name = "Jordan Blakey", email = "454820+jordanblakey@users.noreply.github.com" },
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = ["pendulum (>=3.1.0,<4.0.0)"]
+
+[tool.poetry]
+package-mode = true
+packages = [{ include = "learn_pyproject", from = "src" }]
+
+[tool.poetry.group.test]
+optional = true
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.3.5"
+
+[tool.poetry.group.docs]
+optional = true
+
+[tool.poetry.group.docs.dependencies]
+mkdocs = "^1.6.1"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
