@@ -1,0 +1,12 @@
+markupever-0.3.1.dist-info/METADATA,sha256=XU8_Vf_-mjorIrh8fMDG4ZRq_pQNk1T4y6lqwUYzfuo,4184
+markupever-0.3.1.dist-info/WHEEL,sha256=Kw8y023UaufEXFM028WbBCk7rJUUAhAX1Zw-54pv0m4,96
+markupever-0.3.1.dist-info/licenses/LICENSE,sha256=JoTeFzAOCkNGhvHsf4r2BFIHpLRXo_4EsrnOZV58XVA,17098
+markupever/__init__.py,sha256=jqGGZBq_jYVxjbBabQ1oNLmZthcNwLkxBkGIdQlZgYY,454
+markupever/_display.py,sha256=D8I9VxAH5_m2dlitV7KgGNAGV_goPnKNg2HrQIKgv58,1888
+markupever/_rustlib.cp311-win_amd64.pyd,sha256=t8_4xpgWUiXyPE5MqMn5AW5ziGafFszXjGa7DUNHyu8,1342976
+markupever/_rustlib.pyi,sha256=YwJ8ACx_jl5DKTyM0n8ttvv7kiFpmuc1gmrb8XnyeNg,5488
+markupever/dom.py,sha256=RlIRP9WzMIfW09S_wBIEnQKBE0U7O_6XXqNv6F-lXfQ,36227
+markupever/iterators.py,sha256=U6sGybe3ifvfCxubEBSHuQzBsWB3lP3VHwaJ79igluA,3095
+markupever/parser.py,sha256=K3SKVKYjlRd5dw-TPWAeZ_PnCUpj7H1CLdDdKCxOfVo,5728
+markupever/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+markupever-0.3.1.dist-info/RECORD,,
