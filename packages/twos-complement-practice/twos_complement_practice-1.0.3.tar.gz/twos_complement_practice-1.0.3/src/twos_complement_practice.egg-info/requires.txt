@@ -1,0 +1,8 @@
+colorama>=0.4
+
+[dev]
+coverage
+pytest
+flake8
+pylint
+build
