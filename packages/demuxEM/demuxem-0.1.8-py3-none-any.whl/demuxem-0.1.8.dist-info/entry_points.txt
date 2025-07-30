@@ -1,0 +1,2 @@
+[console_scripts]
+demuxEM = demuxEM.__main__:main
