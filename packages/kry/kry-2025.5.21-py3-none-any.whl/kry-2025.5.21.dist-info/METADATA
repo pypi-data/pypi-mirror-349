@@ -1,0 +1,6 @@
+Metadata-Version: 2.4
+Name: kry
+Version: 2025.5.21
+Summary: Cryptography library
+License-Expression: Unlicense OR CC0-1.0
+Project-URL: Homepage, https://github.com/krylib/kry
