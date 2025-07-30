@@ -1,0 +1,2 @@
+[console_scripts]
+lp-tool-mcp = lp_tool_mcp.__main__.main
