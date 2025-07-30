@@ -1,0 +1,13 @@
+LICENCE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/web3_collections/__init__.py
+src/web3_collections.egg-info/PKG-INFO
+src/web3_collections.egg-info/SOURCES.txt
+src/web3_collections.egg-info/dependency_links.txt
+src/web3_collections.egg-info/requires.txt
+src/web3_collections.egg-info/top_level.txt
+src/web3_collections/providers/__init__.py
+src/web3_collections/providers/rpc.py
