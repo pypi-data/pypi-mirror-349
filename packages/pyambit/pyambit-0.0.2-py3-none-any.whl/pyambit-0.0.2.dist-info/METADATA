@@ -1,0 +1,37 @@
+Metadata-Version: 2.3
+Name: pyambit
+Version: 0.0.2
+Summary: Python implementation of AMBIT data model
+License: MIT
+Keywords: ambit,cheminformatics,enanomapper,nanoinformatics
+Author: Nina Jeliazkova
+Author-email: jeliazkova.nina@gmail.com
+Maintainer: Luchesar Iliev
+Maintainer-email: luchesar.iliev@gmail.com
+Requires-Python: >=3.10,<3.14
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: nexusformat (>=1.0.6,<2.0.0)
+Requires-Dist: pandas (>=2.2.2,<3.0.0)
+Requires-Dist: pydantic (>=2.0,<3.0)
+Project-URL: Homepage, https://ambit.sourceforge.net
+Project-URL: Repository, https://github.com/ideaconsult/pyambit
+Description-Content-Type: text/markdown
+
+# pyambit
+Python implementation of AMBIT data model https://ambit.sourceforge.net/
+
