@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+weather.py
+amapote_moni_mcp_server_xyt.egg-info/PKG-INFO
+amapote_moni_mcp_server_xyt.egg-info/SOURCES.txt
+amapote_moni_mcp_server_xyt.egg-info/dependency_links.txt
+amapote_moni_mcp_server_xyt.egg-info/entry_points.txt
+amapote_moni_mcp_server_xyt.egg-info/requires.txt
+amapote_moni_mcp_server_xyt.egg-info/top_level.txt
