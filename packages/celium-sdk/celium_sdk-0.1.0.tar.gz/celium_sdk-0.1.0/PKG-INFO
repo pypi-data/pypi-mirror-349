@@ -1,0 +1,32 @@
+Metadata-Version: 2.4
+Name: celium-sdk
+Version: 0.1.0
+Summary: A Python SDK for Celium API.
+Author: Waris Ali
+Project-URL: homepage, https://github.com/Datura-ai/celium-sdk
+Project-URL: Repository, https://github.com/Datura-ai/celium-sdk
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: pydantic>=2.0.0
+Requires-Dist: httpx>=0.24.0
+Requires-Dist: requests>=2.31.0
+Requires-Dist: build>=0.10.0
+
+# Celium SDK
+
+A Python SDK for interacting with the Celium API.
+
+## Installation
+
+```bash
+pip install .
+```
+
+## Usage
+
+```python
+import celium
+
+client = celium.Client(api_key="your-key")
+data = client.get_data()
+``` 
