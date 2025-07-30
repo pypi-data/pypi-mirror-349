@@ -1,0 +1,19 @@
+Metadata-Version: 2.3
+Name: oiseau-authentication-sample-fastapi
+Version: 0.1.1
+Summary: projet exemple utilisation du package authentification fastapi
+Author: your name
+Author-email: you@example.com
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: fastapi (>=0.115.4,<0.116.0)
+Requires-Dist: oiseau-authentification (==0.0.2)
+Requires-Dist: uvicorn (>=0.32.0,<0.33.0)
+Description-Content-Type: text/markdown
+
+# Sample fastapi
+
+Poetry installez moi
