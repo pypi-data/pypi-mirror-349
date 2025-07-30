@@ -1,0 +1,19 @@
+Metadata-Version: 2.3
+Name: ass-whispers
+Version: 0.1.0
+Summary: Transcribe audio to text for aegisub macro whispers
+Author: Ghegghe
+Author-email: nicopante98@gmail.com
+Requires-Python: >=3.12
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: faster-whisper (>=1.1.1,<2.0.0)
+Description-Content-Type: text/markdown
+
+poetry install
+
+poetry build
+pip install dist/ass_whispers-0.1.0-py3-none-any.whl
+poetry publish
+
