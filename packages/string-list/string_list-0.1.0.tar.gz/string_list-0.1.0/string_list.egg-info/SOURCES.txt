@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+string_list/__init__.py
+string_list/core.py
+string_list.egg-info/PKG-INFO
+string_list.egg-info/SOURCES.txt
+string_list.egg-info/dependency_links.txt
+string_list.egg-info/top_level.txt
+tests/test_core.py
