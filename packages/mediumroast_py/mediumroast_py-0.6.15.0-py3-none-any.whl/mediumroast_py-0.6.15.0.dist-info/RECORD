@@ -1,0 +1,11 @@
+mediumroast_py/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mediumroast_py/api/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mediumroast_py/api/authorize.py,sha256=qKPruNCZQl3-2J9mwDtmOimMXQCzUSKVtRSuOh_zNG8,14484
+mediumroast_py/api/github.py,sha256=wU0wJ_px022wvsFIat_WvQJM5VFfW3CZGQ_kDWbZ8mQ,71381
+mediumroast_py/api/github_server.py,sha256=5mNOmCcXKxi9aL7Y7LfCqKR8NjTapsKXIvb3kn3Di8M,22171
+mediumroast_py/api/messages.json,sha256=fUJSDnbGE49Y6cDL9axgujpJUIkrweg7AwnNrbEABdY,325
+mediumroast_py-0.6.15.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+mediumroast_py-0.6.15.0.dist-info/METADATA,sha256=kE3kmv4M3-uD01J4fvJb3FSI0KKR_HZ2FJOG6vT1FEw,3750
+mediumroast_py-0.6.15.0.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+mediumroast_py-0.6.15.0.dist-info/entry_points.txt,sha256=7PeHn2Me7ZS0Bsw8CWnXQWPWMKdZiDds79vpg5MzicI,39
+mediumroast_py-0.6.15.0.dist-info/RECORD,,
