@@ -1,0 +1,6 @@
+Metadata-Version: 2.4
+Name: ui-tars
+Version: 0.1.0
+Summary: Pioneering automated GUI Interaction with Native Agents
+Author-email: jinxin001 <jinxin001@bytedance.com>
+Requires-Python: <4.0,>=3.10
