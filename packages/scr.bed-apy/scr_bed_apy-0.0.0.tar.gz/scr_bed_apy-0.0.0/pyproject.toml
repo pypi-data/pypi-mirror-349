@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "bed_apy"
+version = "1.0.0"
+description = "A Bedrock WebSocket system for Minecraft Python modding"
+authors = ["Ezekiel Nogle"]
+
+[dependencies]
+websockets = "^10.4"
+asyncio = "^3.4.3"
+json = "^2.0.9"
+uuid = "^1.30"
+urllib = "^1.26.16"
+base64 = "^1.0.0"
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
