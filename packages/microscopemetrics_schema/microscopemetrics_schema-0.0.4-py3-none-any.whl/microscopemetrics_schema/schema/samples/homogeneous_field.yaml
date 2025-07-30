@@ -1,0 +1,27 @@
+id: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/samples/homogeneous_field
+name: homogeneous_field
+prefixes:
+#  metrics: https://github.com/MontpellierRessourcesImagerie/microscope-metrics/blob/main/src/microscopemetrics/model/
+#imports:
+#  - metrics:types
+  linkml: https://w3id.org/linkml/
+imports:
+  - linkml:types
+  - ../core
+
+default_range: string
+
+
+classes:
+  HomogeneousField:
+      is_a: Sample
+      description: An homogeneous field.
+      abstract: true
+
+  FluorescentHomogeneousThickField:
+    is_a: HomogeneousField
+    description: An homogeneous field with a fluorescent thick sample. Similar to the Chroma slides.
+
+  FluorescentHomogeneousThinField:
+    is_a: HomogeneousField
+    description: An homogeneous field with a fluorescent thin sample. Similar to a dye thin layer.

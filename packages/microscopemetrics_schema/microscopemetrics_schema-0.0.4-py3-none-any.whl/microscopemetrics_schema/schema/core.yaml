@@ -1,0 +1,1002 @@
+id: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/core
+name: core
+prefixes:
+#  metrics: https://github.com/MontpellierRessourcesImagerie/microscope-metrics/blob/main/src/microscopemetrics/model/
+#imports:
+#  - metrics:types
+  linkml: https://w3id.org/linkml/
+  isa: https://isa-specs.readthedocs.io/en/latest/isamodel.html#
+  schema: http://schema.org/
+  ome: https://www.openmicroscopy.org/Schemas/Documentation/Generated/OME-2016-06/ome.html#
+  ORCID: https://orcid.org/
+  wiki: https://en.wikipedia.org/wiki/
+  ucum: https://unitsofmeasure.org/ucum/
+
+imports:
+  - linkml:types
+
+default_range: string
+
+
+classes:
+  MetaObject:
+    class_uri: linkml:Any
+
+  NamedObject:
+    description: An object with a name and a description
+    abstract: true
+    attributes:
+      name:
+        range: string
+        description: The human readable name of an entity
+        required: false
+        multivalued: false
+      description:
+        range: string
+        description: A human readable description of an entity
+        required: false
+        multivalued: false
+
+  DataReference:
+    description: A reference to a data resource
+    slots:
+      - data_uri
+      - omero_host
+      - omero_port
+      - omero_object_type
+      - omero_object_id
+    unique_keys:
+      omero_reference:
+        description: A metrics object is uniquely identified by a combination of its OMERO attributes
+        unique_key_slots:
+          - omero_host
+          - omero_object_type
+          - omero_object_id
+
+  MetricsObject:
+    is_a: NamedObject
+    abstract: true
+    description: A base object for all microscope-metrics objects.
+    slots:
+      - data_reference
+      - linked_references
+
+  MicroscopeCollection:
+    description: A collection of microscopes
+    slots:
+      - microscope_collection
+
+  Microscope:
+    is_a: MetricsObject
+    description: A microscope
+    slots:
+      - microscope_type
+      - manufacturer
+      - model
+      - serial_number
+      - comment_collection
+
+  Sample:
+    is_a: NamedObject
+    description: A sample is a standard physical object that is imaged by a microscope
+    abstract: true
+    slots:
+      - preparation_protocol
+      - manufacturer
+
+  Protocol:
+    is_a: NamedObject
+    description: Set of instructions for preparing a sample or acquiring data
+    attributes:
+      version:
+        range: string
+        description: The version of the protocol
+        required: true
+      authors:
+        range: Experimenter
+        description: The authors of the protocol
+        multivalued: true
+        inlined: false
+      url:
+        range: string
+        description: The URL where the protocol can be found
+        required: true
+        identifier: true
+
+  Experimenter:
+    is_a: MetricsObject
+    description: The person that performed the experiment or developed the protocol
+    attributes:
+      orcid:
+        range: string
+        description: The ORCID of the experimenter
+        identifier: true
+
+  Comment:
+    is_a: MetricsObject
+    description: A comment
+    attributes:
+      datetime:
+        range: datetime
+        description: The datetime to which the comment is referring
+        required: true
+        multivalued: false
+      author:
+        range: Experimenter
+        description: The author of the comment
+        required: false
+        multivalued: false
+      comment_type:
+        range: CommentTypesEnum
+        description: The type of the comment
+        required: true
+        multivalued: false
+      text:
+        range: string
+        description: The text of the comment
+        required: true
+        multivalued: false
+
+  MetricsDatasetCollection:
+    is_a: MetricsObject
+    description: A collection of microscope-metrics datasets
+    attributes:
+      dataset_collection:
+        range: MetricsDataset
+        description: The datasets of the collection
+        multivalued: true
+        inlined: true
+        inlined_as_list: true
+
+  HarmonizedMetricsDatasetCollection:
+    is_a: MetricsDatasetCollection
+    description: >-
+      A collection of harmonized microscope-metrics datasets. All of the datasets 
+      in the collection share the same analysis and processing parameters.
+    attributes:
+      dataset_class:
+        range: string
+        description: The class of the datasets in the collection
+        required: true
+        multivalued: false
+
+  MetricsDataset:
+    is_a: MetricsObject
+    description: A base object on which microscope-metrics runs the analysis
+    abstract: true
+    tree_root: true
+    attributes:
+      microscope:
+        range: Microscope
+        description: The microscope that was used to acquire the dataset
+        required: true
+        multivalued: false
+      experimenter:
+        range: Experimenter
+        description: The experimenter that performed the imaging experiment
+        multivalued: false
+      acquisition_protocol:
+        range: Protocol
+        description: The protocol used to acquire the dataset
+        required: false
+        multivalued: false
+        inlined: false
+      processed:
+        range: boolean
+        description: Has the dataset been processed by microscope-metrics
+        required: true
+        ifabsent: false
+        multivalued: false
+    slots:
+      - acquisition_datetime
+      - input_data
+      - output
+
+  HasSampleMixin:
+    mixin: true
+    description: >-
+      A mixin for objects that have a sample.
+    slots:
+      - sample
+
+  HasInputParametersMixin:
+    mixin: true
+    description: >-
+      A mixin for objects that have input parameters.
+    slots:
+      - input_parameters
+
+  MetricsInputData:
+    description: An abstract class for analysis input data
+    abstract: true
+
+  MetricsInputParameters:
+    description: An abstract class for analysis inputs parameters
+    abstract: true
+
+  MetricsOutput:
+    description: An abstract class for analysis outputs
+    abstract: true
+    attributes:
+      processing_application:
+        range: string
+        description: The application used to process the dataset
+        required: true
+        multivalued: true
+      processing_version:
+        range: string
+        description: The version of the application used to process the dataset
+        required: true
+        multivalued: true
+      processing_entity:
+        range: string
+        description: The entity that processed the dataset
+        required: false
+        multivalued: true
+      processing_datetime:
+        range: datetime
+        description: The datetime of the processing by microscope-metrics
+        required: true
+        multivalued: false
+      processing_log:
+        range: string
+        description: The log of the processing by microscope-metrics
+        required: false
+        multivalued: false
+      warnings:
+        range: string
+        description: The warnings of the processing by microscope-metrics
+        required: false
+        multivalued: true
+      errors:
+        range: string
+        description: The errors of the processing by microscope-metrics
+        required: false
+        multivalued: true
+      validated:
+        range: boolean
+        description: Has the dataset been validated by a human
+        required: true
+        ifabsent: false
+        multivalued: false
+      validation_datetime:
+        range: datetime
+        description: The datetime of the validation
+        required: false
+        multivalued: false
+    slots:
+      - key_measurements
+      - comment
+
+  Image:
+    is_a: MetricsObject
+    description: A microscope-metrics image
+    slots:
+      - acquisition_datetime
+      - voxel_size_x_micron
+      - voxel_size_y_micron
+      - voxel_size_z_micron
+      - shape_x
+      - shape_y
+      - shape_z
+      - shape_c
+      - shape_t
+      - time_series
+      - channel_series
+      - source_images
+      - array_data
+
+  ImageMask:
+    is_a: Image
+    description: A mask image. Either a binary image or a label image
+
+  OrthogonalImage:
+    is_a: Image
+    description: An image that is orthogonal to the main image
+    attributes:
+      source_roi:
+        range: Roi
+        description: >-
+          The source ROI of the orthogonal image. The ROI has to contain a single point shape.
+        required: true
+        multivalued: false
+      axis:
+        range: PlaneAxisEnum
+        description: The axis of the orthogonal image
+        required: true
+        multivalued: false
+
+  ChannelSeries:
+    description: A series representing channels
+    implements:
+      - linkml:OneDimensionalSeries
+    attributes:
+      channels:
+        range: Channel
+        description: The channels of the ChannelSeries
+        multivalued: true
+        implements:
+          - linkml:elements
+        required: true
+
+  Channel:
+    is_a: MetricsObject
+    description: A image channel
+    slots:
+      - excitation_wavelength_nm
+      - emission_wavelength_nm
+
+  TimeSeries:
+    description: A series whose values represent time
+    implements:
+      - linkml:OneDimensionalSeries
+    attributes:
+      time_points_sec:
+        range: float
+        description: The relative times at which the time series were acquired in seconds
+        multivalued: true
+        implements:
+          - linkml:elements
+        required: true
+        unit:
+          ucum_code: s
+
+  Column:
+    is_a: NamedObject
+    description: Attributes of a column
+    attributes:
+      source_reference:
+        range: DataReference
+        description: The source object of the column
+        required: false
+        multivalued: false
+      data_type:
+        # TODO: make an enum
+        range: string
+        description: The data type of the column
+        required: true
+        multivalued: false
+        ifabsent: string(str)
+      values:
+        range: string
+        description: An optional container for the values of the column
+        required: false
+        multivalued: true
+
+  Roi:
+    is_a: MetricsObject
+    description: A ROI (Region Of Interest). Collection of shapes and an image to which they are applied
+    attributes:
+      points:
+        range: Point
+        description: A list of points included in the ROI
+        required: false
+        multivalued: true
+        inlined: true
+        inlined_as_list: true
+      lines:
+        range: Line
+        description: A list of lines included in the ROI
+        required: false
+        multivalued: true
+        inlined: true
+        inlined_as_list: true
+      rectangles:
+        range: Rectangle
+        description: A list of rectangles included in the ROI
+        required: false
+        multivalued: true
+        inlined: true
+        inlined_as_list: true
+      ellipses:
+        range: Ellipse
+        description: A list of ellipses included in the ROI
+        required: false
+        multivalued: true
+        inlined: true
+        inlined_as_list: true
+      polygons:
+        range: Polygon
+        description: A list of polygons included in the ROI
+        required: false
+        multivalued: true
+        inlined: true
+        inlined_as_list: true
+      masks:
+        range: Mask
+        description: A list of masks included in the ROI
+        required: false
+        multivalued: true
+        inlined: true
+        inlined_as_list: true
+
+  Shape:
+    is_a: NamedObject
+    description: A shape
+    abstract: true
+    slots:
+      - z
+      - c
+      - t
+    attributes:
+      fill_color:
+        range: Color
+        description: The fill color of the shape
+        required: false
+      stroke_color:
+        range: Color
+        description: The stroke color of the shape
+        required: false
+      stroke_width:
+        range: integer
+        description: The stroke width of the shape
+        required: false
+        ifabsent: int(1)
+
+  Point:
+    is_a: Shape
+    description: A point as defined by x and y coordinates
+    slots:
+      - x
+      - y
+
+  Line:
+    is_a: Shape
+    description: A line as defined by x1, y1, x2, y2 coordinates
+    attributes:
+      x1:
+        range: float
+        description: The x coordinate of the first point of the line
+        multivalued: false
+        required: true
+      y1:
+        range: float
+        description: The y coordinate of the first point of the line
+        multivalued: false
+        required: true
+      x2:
+        range: float
+        description: The x coordinate of the second point of the line
+        multivalued: false
+        required: true
+      y2:
+        range: float
+        description: The y coordinate of the second point of the line
+        multivalued: false
+        required: true
+
+  Rectangle:
+    is_a: Shape
+    description: A rectangle as defined by x, y coordinates and width, height
+    slots:
+      - x
+      - y
+      - w
+      - h
+
+  Ellipse:
+    is_a: Shape
+    description: An ellipse as defined by x, y coordinates and x and y radii
+    slots:
+      - x
+      - y
+      - w
+      - h
+
+  Polygon:
+    is_a: Shape
+    description: >-
+      A polygon as defined by a series of vertexes and a boolean to indicate if closed or not
+    attributes:
+      vertexes:
+        range: Vertex
+        description: A list of vertexes defining the polygon
+        multivalued: true
+        required: true
+      is_open:
+        range: boolean
+        description: Is the polygon open. By default, it is closed (false)
+        multivalued: false
+        required: true
+        ifabsent: false
+
+  Vertex:
+    description: A vertex as defined by x and y coordinates
+    slots:
+      - x
+      - y
+
+  Mask: # review for arrays
+    is_a: Shape
+    description: A mask as defined by a boolean image
+    slots:
+      - x
+      - y
+    attributes:
+      mask:
+        range: ImageMask
+        description: The mask image
+        multivalued: false
+
+  Color:
+    description: A color as defined by RGB values and an optional alpha value
+    attributes:
+      r:
+        range: integer
+        description: The red value of the color
+        required: true
+        ifabsent: int(128)
+        multivalued: false
+        minimum_value: 0
+        maximum_value: 255
+      g:
+        range: integer
+        description: The green value of the color
+        required: true
+        ifabsent: int(128)
+        multivalued: false
+        minimum_value: 0
+        maximum_value: 255
+      b:
+        range: integer
+        description: The blue value of the color
+        required: true
+        ifabsent: int(128)
+        multivalued: false
+        minimum_value: 0
+        maximum_value: 255
+      alpha:
+        range: integer
+        description: The alpha value of the color (optional)
+        required: false
+        ifabsent: int(255)
+        multivalued: false
+        minimum_value: 0
+        maximum_value: 255
+
+  CentersOfMass:
+    mixin: true
+    description: >-
+      The center of mass of detected objects.
+      Intended to be used with ROIs.
+
+  CentersGeometric:
+    mixin: true
+    description: >-
+      The geometric center of detected objects.
+      Intended to be used with ROIs.
+
+  CentersFitted:
+    mixin: true
+    description: >-
+      The fitted center of detected objects.
+      Intended to be used with ROIs.
+
+  CentersMaxIntensity:
+    mixin: true
+    description: >-
+      The position of maximum intensity of detected objects.
+      Intended to be used with ROIs.
+
+  ProfilesIntensity:
+    mixin: true
+    description: >-
+      Profiles computed on the image.
+      Intended to be used with ROIs.
+    attributes:
+      intensity_profiles_table:
+        range: Table
+        description: Linked table of profiles
+        required: false
+        multivalued: false
+
+  RoiMeasurements:
+    mixin: true
+    description: >-
+      Measurements computed on the ROIs of an image.
+      Intended to be used with ROIs.
+    attributes:
+      measurements_table:
+        range: Table
+        description: Linked table of measurements
+        required: false
+        multivalued: false
+
+  KeyMeasurements:
+    is_a: MetricsObject
+    description: A table of key measurements
+    abstract: true
+    slots:
+      - table_data
+
+  Table:
+    is_a: MetricsObject
+    description: A microscope-metrics table
+    abstract: true
+    slots:
+      - table_data
+    attributes:
+      columns:
+        range: Column
+        description: The columns of the table
+        required: true
+        multivalued: true
+        inlined: true
+        inlined_as_list: true
+        implements:
+          - linkml:elements
+
+
+slots:
+  acquisition_datetime:
+    range: datetime
+    description: The datetime of the acquisition
+    multivalued: false
+
+  # DataReference slots
+  data_uri:
+    # TODO: make required and compose the URI from OMERO attributes if absent
+    range: string
+    description: The URI of the object data
+  omero_host:
+    range: string
+    description: The host of the OMERO server
+  omero_port:
+    range: integer
+    description: The port of the OMERO server
+  omero_object_type:
+    range: OMEROObjectTypeEnum
+    description: The type of the OMERO object
+  omero_object_id:
+    range: integer
+    description: The ID of the OMERO object
+
+  # Microscope slots
+  microscope_type:
+    range: MicroscopeTypeEnum
+    description: The type of the microscope
+    required: false
+    multivalued: false
+  comments:
+    range: Comment
+    description: A list of comments linked to the microscope
+    required: false
+    multivalued: true
+
+  # MetricsDataset slots
+  sample:
+    range: Sample
+    description: The physical sample that was imaged
+    required: false
+    multivalued: false
+  input_data:
+    range: MetricsInputData
+    description: The input data for the analysis
+    required: true
+    multivalued: false
+  input_parameters:
+    range: MetricsInputParameters
+    description: The input parameters for the analysis
+    required: false
+    multivalued: false
+  output:
+    abstract: true
+    range: MetricsOutput
+    description: The output of the analysis
+    required: false
+    multivalued: false
+
+  # MetricsOutput slots
+  key_measurements:
+    range: KeyMeasurements
+    description: >-
+      Key measurements is a table summarizing the most important 
+      measurements as a function of, for example, channels
+    required: true
+    multivalued: false
+
+
+  # Sample slots
+  preparation_protocol:
+    range: Protocol
+    description: The protocol used to prepare a sample
+    required: true
+    multivalued: false
+    inlined: false
+
+  # MetricsObject slots
+  data_reference:
+    range: DataReference
+    description: A reference to the data
+    required: false
+    multivalued: false
+  linked_references:
+    range: DataReference
+    description: A list of linked references
+    required: false
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+
+  # Image slots
+  voxel_size_x_micron:
+    range: float
+    description: The physical size in the voxel in the x dimension in microns
+    required: false
+    multivalued: false
+  voxel_size_y_micron:
+    range: float
+    description: The physical size in the voxel in the y dimension in microns
+    required: false
+    multivalued: false
+  voxel_size_z_micron:
+    range: float
+    description: The physical size in the voxel in the z dimension in microns
+    required: false
+    multivalued: false
+  shape_x:
+    range: integer
+    description: The shape of an image in the x dimension
+    required: true
+    multivalued: false
+  shape_y:
+    range: integer
+    description: The shape of an image in the y dimension
+    required: true
+    multivalued: false
+  shape_z:
+    range: integer
+    description: The shape of an image in the z dimension
+    required: true
+    multivalued: false
+    ifabsent: int(1)
+  shape_c:
+    range: integer
+    description: The shape of an image in the c dimension
+    required: true
+    multivalued: false
+    ifabsent: int(1)
+  shape_t:
+    range: integer
+    description: The shape of an image in the t dimension
+    required: true
+    multivalued: false
+    ifabsent: int(1)
+  time_series:
+    range: TimeSeries
+    description: A series representing time for time-lapse images.
+    implements:
+      - linkml:axis0
+    required: false
+  channel_series:
+    range: ChannelSeries
+    description: A series representing channels for multi-channel images.
+    implements:
+      - linkml:axis4
+    required: false
+  source_images:
+    range: DataReference
+    description: A list of references linking to the images that were used as a source
+    required: false
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+  array_data:
+    range: MetaObject
+    description: A non-required slot for non-serializable array data object
+    required: false
+    multivalued: false
+
+  # Table slots
+  table_data:
+    range: MetaObject
+    description: A non-required slot for non-serializable table data object
+    required: false
+    multivalued: false
+
+  # ROI slots
+  x:
+    range: float
+    description: The x coordinate
+    required: true
+  y:
+    range: float
+    description: The y coordinate
+    required: true
+  z:
+    range: float
+    description: The z coordinate
+    required: false
+  c:
+    range: integer
+    description: The c coordinate
+    required: false
+  t:
+    range: integer
+    description: The t coordinate
+    required: false
+  w:
+    range: float
+    description: The width
+    required: true
+  h:
+    range: float
+    description: The height
+    required: true
+
+  # Various slots
+  microscope_collection:
+    range: Microscope
+    description: The microscopes of the collection
+    required: true
+    multivalued: true
+  comment:
+    range: Comment
+    description: A human readable comment
+    required: false
+    multivalued: false
+  comment_collection:
+    range: Comment
+    description: A collection of comments
+    required: false
+    multivalued: true
+  manufacturer:
+    range: string
+    description: A manufacturer
+    required: false
+  model:
+    range: string
+    description: The model of a device
+    required: false
+  serial_number:
+    range: string
+    description: The serial number of a device
+    required: false
+  excitation_wavelength_nm:
+    range: float
+    description: The excitation wavelength in nm
+    required: false
+    multivalued: false
+  emission_wavelength_nm:
+    range: float
+    description: The emission wavelength in nm
+    required: false
+    multivalued: false
+  image_name:
+    range: string
+    description: >-
+      The name of the image where the measurement was taken
+    multivalued: true
+  image_id:
+    range: string
+    description: >-
+      The id of the image where the measurement was taken. If images are originary in OMERO this is the image_id.
+    multivalued: true
+  channel_nr:
+    range: integer
+    description: >-
+      The channel number to which the measurements apply
+    multivalued: true
+    minimum_value: 0
+  channel_name:
+    range: string
+    description: >-
+      The channel name to which the measurements apply
+    multivalued: true
+  channel_id:
+    range: string
+    description: >-
+      The channel id to which the measurements apply
+    multivalued: true
+  bit_depth:
+    range: integer
+    description: >-
+      Detector bit depth
+    multivalued: false
+    minimum_value: 1
+    maximum_value: 64
+  saturation_threshold:
+    range: float
+    description: >-
+      Tolerated saturation threshold. If the amount of saturated pixels is above this threshold, 
+      the image is considered as saturated and the analysis is not performed.
+    multivalued: false
+    ifabsent: float(0.01)
+    minimum_value: 0.0
+    maximum_value: 1.0
+  sigma_z:
+    range: float
+    description: >-
+      Smoothing sigma to be applied to the image in the Z axis.
+  sigma_y:
+    range: float
+    description: >-
+      Smoothing sigma to be applied to the image in the Y axis.
+  sigma_x:
+    range: float
+    description: >-
+      Smoothing sigma to be applied to the image in the X axis.
+      
+
+subsets:
+  critical_parameter:
+    description: >-
+      A subset indicating that changing this parameter may damage the consistency of the analysis.
+
+
+enums:
+  PlaneAxisEnum:
+    description: The axis of the plane
+    permissible_values:
+      XY:
+        description: The XY plane
+      XZ:
+        description: The XZ plane
+      YZ:
+        description: The YZ plane
+
+  AxisEnum:
+    description: The axis of the image
+    permissible_values:
+      X:
+        description: The X axis
+      Y:
+        description: The Y axis
+      Z:
+        description: The Z axis
+      C:
+        description: The C axis
+      T:
+        description: The T axis
+
+  CommentTypesEnum:
+    description: The type of the comment
+    permissible_values:
+      ACQUISITION:
+        description: The comment is referring to the acquisition
+      PROCESSING:
+        description: The comment is referring to the processing
+      OTHER:
+        description: The comment is referring to something else
+
+  MicroscopeTypeEnum:
+    description: The type of the microscope
+    permissible_values:
+      WIDEFIELD:
+        description: A wide-field microscope
+      CONFOCAL:
+        description: A confocal microscope
+      STED:
+        description: A STED microscope
+      SIM3D:
+        description: A 3D-SIM microscope
+      OTHER:
+        description: Another type of microscope
+
+  OMEROObjectTypeEnum:
+    description: The type of the OMERO object
+    permissible_values:
+      IMAGE:
+        description: An image
+      CHANNEL:
+        description: A channel
+      DATASET:
+        description: A dataset
+      PROJECT:
+        description: A project
+      EXPERIMENTERGROUP:
+        description: A group
+      EXPERIMENTER:
+        description: An experimenter
+      TABLE:
+        description: A table
+      KEY_VALUES:
+        description: A set of key-value pairs
+      TAG:
+        description: A tag
+      COMMENT:
+        description: A comment
+      ROI:
+        description: A region of interest
+      FILEANNOTATION:
+        description: A file

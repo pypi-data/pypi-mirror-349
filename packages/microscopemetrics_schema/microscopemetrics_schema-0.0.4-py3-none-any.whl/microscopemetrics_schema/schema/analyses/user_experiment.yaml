@@ -1,0 +1,128 @@
+id: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/analyses/user_experiment
+name: user_experiment
+prefixes:
+#  metrics: https://github.com/MontpellierRessourcesImagerie/microscope-metrics/blob/main/src/microscopemetrics/model/
+#imports:
+#  - metrics:types
+  linkml: https://w3id.org/linkml/
+imports:
+  - linkml:types
+  - ../core
+  - ../samples/user_sample
+
+default_range: string
+
+
+classes:
+  UserExperimentDataset:
+    is_a: MetricsDataset
+    description: >-
+      A dataset of non-standardized microscope samples produced during regular operation of a research project.
+    mixins:
+      - HasSampleMixin
+      - HasInputParametersMixin
+    slot_usage:
+      input_data:
+        range: UserExperimentInputData
+      input_parameters:
+        range: UserExperimentInputParameters
+      output:
+        range: UserExperimentOutput
+      sample:
+        range: UserExperiment
+
+  UserExperimentInputData:
+    is_a: MetricsInputData
+    slots:
+      - user_experiment_images
+      - orthogonal_rois
+      - profile_rois
+
+  UserExperimentInputParameters:
+    is_a: MetricsInputParameters
+    slots:
+      - bit_depth
+      - saturation_threshold
+
+  UserExperimentOutput:
+    is_a: MetricsOutput
+    attributes:
+      intensity_profiles:
+        range: Table
+        description: >-
+          Intensity profiles as measured in the provided profile_rois.
+        multivalued: true
+        inlined: true
+        inlined_as_list: true
+      orthogonal_images:
+        range: OrthogonalImage
+        description: >-
+          Orthogonal images created from the provided orthogonal_rois.
+        required: false
+        multivalued: true
+        inlined: true
+        inlined_as_list: true
+      fft_images:
+        range: Image
+        description: >-
+          Fourier space transforms of the input images.
+        required: false
+        multivalued: true
+        inlined: true
+        inlined_as_list: true
+      key_measurements:
+        range: UserExperimentKeyMeasurements
+        description: >-
+          The key measurements on the user_experiment dataset.
+        multivalued: false
+        inlined: true
+        inlined_as_list: true
+
+  UserExperimentKeyMeasurements:
+    is_a: KeyMeasurements
+    slots:
+      - channel_name
+      - channel_nr
+      - variation_coefficient
+      - saturated_channels
+
+
+slots:
+  # Inputs
+  user_experiment_images:
+    range: Image
+    description: >-
+      The user_experiment images provided in the order TZYXC.
+      More than one image can be provided if the image conditions are the same.
+    required: true
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+  orthogonal_rois:
+    range: Roi
+    description: >-
+      Rois containing a point shape where the orthogonal views are to be taken.
+    required: false
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+  profile_rois:
+    range: Roi
+    description: >-
+      Rois containing a line shape where a intensity profile is to be calculated.
+    required: false
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+
+  # Outputs
+  variation_coefficient:
+    range: float
+    description: >-
+      The variation coefficient of the signal of the image. One value per channel.
+    multivalued: true
+  saturated_channels:
+    range: integer
+    description: >-
+      The channels that are saturated in the image. One value per channel.
+    multivalued: true

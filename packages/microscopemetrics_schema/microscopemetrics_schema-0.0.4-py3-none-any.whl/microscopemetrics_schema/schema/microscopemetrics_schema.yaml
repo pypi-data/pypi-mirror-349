@@ -1,0 +1,30 @@
+---
+id: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
+name: microscopemetrics-schema
+title: microscopemetrics-schema
+description: |-
+  A schema for microscope-metrics, a python package for microscope QC
+license: GNU GPL v3.0
+see_also:
+  - https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema
+
+prefixes:
+  microscopemetrics_schema: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/
+  linkml: https://w3id.org/linkml/
+#  biolink: https://w3id.org/biolink/
+#  schema: http://schema.org/
+  example: http://www.example.org/rdf#
+default_prefix: microscopemetrics_schema
+default_range: string
+
+imports:
+  - linkml:types
+  - core
+  - analyses/field_illumination
+  - analyses/psf_beads
+  - analyses/light_source_power
+#  - analyses/user_experiment
+  - samples/homogeneous_field
+  - samples/beads
+  - samples/light_source_power
+#  - samples/user_sample

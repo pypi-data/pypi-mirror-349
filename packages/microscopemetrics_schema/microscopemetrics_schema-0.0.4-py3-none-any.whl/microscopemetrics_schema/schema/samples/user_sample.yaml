@@ -1,0 +1,18 @@
+id: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/samples/user_sample
+name: user_sample
+prefixes:
+#  metrics: https://github.com/MontpellierRessourcesImagerie/microscope-metrics/blob/main/src/microscopemetrics/model/
+#imports:
+#  - metrics:types
+  linkml: https://w3id.org/linkml/
+imports:
+  - linkml:types
+  - ../core
+
+default_range: string
+
+
+classes:
+  UserExperiment:
+    is_a: Sample
+    description: A non-standardized microscope sample produced during regular operation of a research project.

@@ -1,0 +1,194 @@
+id: https://MontpellierRessourcesImagerie.github.io/microscopemetrics-schema/analyses/light_source_power
+name: light_source_power
+prefixes:
+#  metrics: https://github.com/MontpellierRessourcesImagerie/microscope-metrics/blob/main/src/microscopemetrics/model/
+#imports:
+#  - metrics:types
+  linkml: https://w3id.org/linkml/
+imports:
+  - linkml:types
+  - ../core
+
+default_range: string
+
+
+classes:
+  LightSourcePowerDataset:
+    is_a: MetricsDataset
+    description: >-
+      Power measurements dataset. A collection of power samples for different light sources.
+    slot_usage:
+      input_data:
+        range: LightSourcePowerInputData
+      output:
+        range: LightSourcePowerOutput
+
+  LightSourcePowerInputData:
+    is_a: MetricsInputData
+    slots:
+      - measurement_device  # TODO: is there a single device for all measurements in a dataset?
+      - power_samples
+
+  LightSourcePowerInputParameters:
+    is_a: MetricsInputParameters
+    # No input parameters for now
+
+  LightSourcePowerOutput:
+    is_a: MetricsOutput
+    attributes:
+      key_measurements:
+        range: LightSourcePowerKeyMeasurements
+        description: >-
+          Key-Value measurements for the power measurements.
+
+
+  LightSourcePowerKeyMeasurements:
+    is_a: KeyMeasurements
+    slots:
+      - light_source
+      - power_mean_mw
+      - power_median_mw
+      - power_std_mw
+      - power_min_mw
+      - power_max_mw
+      - linearity
+
+  PowerSample:
+    description: >-
+      A single power measurement for a light source.
+    slots:
+      - acquisition_datetime
+      - light_source
+      - sampling_location
+      - power_set_point
+      - power_mw
+      - integration_time_ms
+#      - irradiance???
+    slot_usage:
+      acquisition_datetime:
+        required: true
+
+  LightSource:
+    description: >-
+      A light source.
+    slots:
+      - wavelength_nm
+
+  PowerMeter:
+    is_a: NamedObject
+    attributes:
+      manufacturer:
+        range: string
+        multivalued: false
+      model:
+        range: string
+        multivalued: false
+
+slots:
+  power_samples:
+    range: PowerSample
+    description: >-
+      This is a collection of power samples for different light sources.
+    required: true
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+
+  light_source:
+    range: LightSource
+    description: >-
+      The light source under investigation.
+    required: true
+    multivalued: false
+  sampling_location:
+    range: SamplingLocationEnum
+    description: >-
+      The location at which the sampling was taken.
+    required: true
+    multivalued: false
+  wavelength_nm:
+    range: float
+    description: >-
+      The wavelength of the light source in nanometers.
+    required: true
+    multivalued: false
+
+  measurement_device:
+    range: PowerMeter
+    description: >-
+      The power meter used to measure the power.
+    required: true
+
+  power_set_point:
+    range: float
+    description: >-
+      The power set point as a fraction of the nominal power of the light source.
+    multivalued: false
+    required: true
+  power_mw:
+    range: float
+    description: >-
+      The power measured in milliwatts.
+    multivalued: false
+    required: true
+  integration_time_ms:
+    range: float
+    description: >-
+      The integration time in milliseconds.
+    multivalued: false
+    required: false
+
+  power_mean_mw:
+    range: float
+    description: >-
+      The mean power measured in milliwatts.
+    multivalued: true
+    required: true
+  power_median_mw:
+    range: float
+    description: >-
+      The median power measured in milliwatts.
+    multivalued: true
+    required: true
+  power_std_mw:
+    range: float
+    description: >-
+      The standard deviation of the power measured in milliwatts.
+    multivalued: true
+    required: true
+  power_min_mw:
+    range: float
+    description: >-
+      The minimum power measured in milliwatts.
+    multivalued: true
+    required: true
+  power_max_mw:
+    range: float
+    description: >-
+      The maximum power measured in milliwatts.
+    multivalued: true
+  linearity:
+    title: Linearity R2
+    range: float
+    description: >-
+      The linearity of the power measurements.
+    multivalued: true
+    required: true
+
+enums:
+  SamplingLocationEnum:
+    description: >-
+      The location at which the sampling was taken.
+    permissible_values:
+      SOURCE_EXIT:
+        description: Power at the exit of the light source
+      FIBER_EXIT:
+        description: Power at the exit of the fiber
+      OBJECTIVE_BACKFOCAL:
+        description: Power at the back focal plane of the objective
+      OBJECTIVE_EXIT:
+        description: Power at the exit of the objective
+      OBJECTIVE_FOCAL:
+        description: Power at the focal plane of the objective
+      OTHER:
+        description: Other location
