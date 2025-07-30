@@ -1,0 +1,22 @@
+[project]
+name = "jumla"
+version = "0.1.1"
+description = "Jumla generates Lean 4 verification datasets from Python code and tests."
+readme = "README.md"
+authors = [
+    { name = "Meek Msaki", email = "meek10x@gmail.com" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "colorama>=0.4.6",
+]
+
+[project.scripts]
+jumla = "jumla:main"
+
+[project.urls]
+Source = "https://github.com/mmsaki/jumla"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
