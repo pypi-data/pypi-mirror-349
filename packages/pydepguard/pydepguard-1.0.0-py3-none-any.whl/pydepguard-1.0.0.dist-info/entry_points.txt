@@ -1,0 +1,3 @@
+[console_scripts]
+pydepguard = pylock.cli:main
+pylock = pylock.cli:main
