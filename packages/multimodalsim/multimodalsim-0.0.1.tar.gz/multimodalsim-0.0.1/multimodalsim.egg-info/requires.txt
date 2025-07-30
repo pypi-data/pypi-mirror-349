@@ -1,0 +1,8 @@
+pip
+networkx
+numpy>=2.2.6
+pandas>=2.2.3
+requests
+polyline
+pyproj
+matplotlib
