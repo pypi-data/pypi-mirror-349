@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: wheel_generator
+Version: 1.1.1
+Summary: Blender addon to generate wheels and gears
+Home-page: https://github.com/A-D-H-I/wheel_generator
+Author: Adhithiyan
+Author-email: adhithiyan12899@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+Dynamic: summary
