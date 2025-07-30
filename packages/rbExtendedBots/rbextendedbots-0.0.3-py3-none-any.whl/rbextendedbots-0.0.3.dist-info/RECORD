@@ -1,0 +1,10 @@
+extended_bots/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+extended_bots/chardetector.py,sha256=I7d--icoVyUqWE1GTmDRbmvXx_xukRiHEhTX3v2MgpI,2147
+extended_bots/regex.py,sha256=RRIrkmzP40PrxBjBcin7haeBaOHeYJ4KVUSYfg7HnK4,2615
+extended_bots/uncrustify.py,sha256=05kxPF_bEUrni2cdJugFwTCeOGXpfIR9tBoaHeCbYeU,4325
+rbextendedbots-0.0.3.dist-info/licenses/LICENSE,sha256=OIJXaMt4rmIRFH5sqhODpKG17phPZkLr2cb3rBGepj0,1072
+rbextendedbots-0.0.3.dist-info/METADATA,sha256=i-NN0ZgSzsRoaxM2D51QFVxbMXRsMhy06uWFq_WsEM8,1068
+rbextendedbots-0.0.3.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+rbextendedbots-0.0.3.dist-info/entry_points.txt,sha256=VfsO6gXKXEQlXmJPUfvbYHdyDt9jyvR_8ox5PADdqx8,168
+rbextendedbots-0.0.3.dist-info/top_level.txt,sha256=9X_o3ZaRNXXOQpTSSTvIrUo2fpYvLBYgsUNihRRdonk,14
+rbextendedbots-0.0.3.dist-info/RECORD,,
