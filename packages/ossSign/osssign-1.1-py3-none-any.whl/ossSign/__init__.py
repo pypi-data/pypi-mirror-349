@@ -1,0 +1,1 @@
+from .sign import get_sign_v1 as GetSignV1
