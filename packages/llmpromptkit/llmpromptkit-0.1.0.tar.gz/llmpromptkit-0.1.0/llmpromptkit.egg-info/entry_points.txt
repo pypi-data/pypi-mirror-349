@@ -1,0 +1,2 @@
+[console_scripts]
+llmpromptkit = llmpromptkit.cli.commands:main

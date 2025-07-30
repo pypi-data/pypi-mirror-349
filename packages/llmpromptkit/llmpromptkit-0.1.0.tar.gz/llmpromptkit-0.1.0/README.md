@@ -1,0 +1,167 @@
+# LLMPromptKit: LLM Prompt Management System
+
+LLMPromptKit is a comprehensive library for managing, versioning, testing, and evaluating prompts for Large Language Models (LLMs). It provides a structured framework to help data scientists and developers create, optimize, and maintain high-quality prompts.
+
+## Features
+
+- **Prompt Management**: Create, update, and organize prompts with metadata and tags
+- **Version Control**: Track prompt changes over time with full version history
+- **A/B Testing**: Compare different prompt variations to find the most effective one
+- **Evaluation Framework**: Measure prompt quality with customizable metrics
+- **Advanced Templating**: Create dynamic prompts with variables, conditionals, and loops
+- **Command-line Interface**: Easily integrate into your workflow
+
+## Documentation
+
+For detailed documentation, see the [docs](./docs) directory:
+
+- [Getting Started](./docs/getting_started.md)
+- [API Reference](./docs/api_reference.md)
+- [CLI Usage](./docs/cli_usage.md)
+- [Advanced Features](./docs/advanced_features.md)
+- [Integration Examples](./docs/integration_examples.md)
+
+## Installation
+
+```bash
+pip install llmpromptkit
+
+Quick Start
+
+from llmpromptkit import PromptManager, VersionControl, PromptTesting, Evaluator
+
+# Initialize components
+prompt_manager = PromptManager()
+version_control = VersionControl(prompt_manager)
+testing = PromptTesting(prompt_manager)
+evaluator = Evaluator(prompt_manager)
+
+# Create a prompt
+prompt = prompt_manager.create(
+    content="Summarize the following text: {text}",
+    name="Simple Summarization",
+    description="A simple prompt for text summarization",
+    tags=["summarization", "basic"]
+)
+
+# Create a new version
+version_control.commit(
+    prompt_id=prompt.id,
+    commit_message="Initial version"
+)
+
+# Update the prompt
+prompt_manager.update(
+    prompt.id,
+    content="Please provide a concise summary of the following text in 2-3 sentences: {text}"
+)
+
+# Commit the updated version
+version_control.commit(
+    prompt_id=prompt.id,
+    commit_message="Improved prompt with length guidance"
+)
+
+# Create a test case
+test_case = testing.create_test_case(
+    prompt_id=prompt.id,
+    input_vars={"text": "Lorem ipsum dolor sit amet..."},
+    expected_output="This is a summary of the text."
+)
+
+# Define an LLM callback for testing
+async def llm_callback(prompt, vars):
+    # In a real scenario, this would call an actual LLM API
+    return "This is a summary of the text."
+
+# Run the test case
+import asyncio
+test_result = asyncio.run(testing.run_test_case(
+    test_case_id=test_case.id,
+    llm_callback=llm_callback
+))
+
+# Evaluate a prompt with multiple inputs
+evaluation_result = asyncio.run(evaluator.evaluate_prompt(
+    prompt_id=prompt.id,
+    inputs=[{"text": "Sample text 1"}, {"text": "Sample text 2"}],
+    llm_callback=llm_callback
+))
+
+print(f"Evaluation metrics: {evaluation_result['aggregated_metrics']}")
+
+Command-line Interface
+LLMPromptKit comes with a powerful CLI for managing prompts:
+
+# Create a prompt
+llmpromptkit prompt create "Summarization" --content "Summarize: {text}" --tags "summarization,basic"
+
+# List all prompts
+llmpromptkit prompt list
+
+# Create a new version
+llmpromptkit version commit <prompt_id> --message "Updated prompt"
+
+# Run tests
+llmpromptkit test run-all <prompt_id> --llm openai
+
+Advanced Usage
+Advanced Templating
+LLMPromptKit supports advanced templating with conditionals and loops:
+
+from llmpromptkit import PromptTemplate
+
+template = PromptTemplate("""
+{system_message}
+
+{for example in examples}
+Input: {example.input}
+Output: {example.output}
+{endfor}
+
+Input: {input}
+Output:
+""")
+
+rendered = template.render(
+    system_message="You are a helpful assistant.",
+    examples=[
+        {"input": "Hello", "output": "Hi there!"},
+        {"input": "How are you?", "output": "I'm doing well, thanks!"}
+    ],
+    input="What's the weather like?"
+)
+
+Custom Evaluation Metrics
+Create custom metrics to evaluate prompt performance:
+from llmpromptkit import EvaluationMetric, Evaluator
+
+class CustomMetric(EvaluationMetric):
+    def __init__(self):
+        super().__init__("custom_metric", "My custom evaluation metric")
+    
+    def compute(self, generated_output, expected_output=None, **kwargs):
+        # Custom logic to score the output
+        return score  # A float between 0 and 1
+
+# Register the custom metric
+evaluator = Evaluator(prompt_manager)
+evaluator.register_metric(CustomMetric())
+
+Use Cases
+
+Prompt Development: Iteratively develop and refine prompts with version control
+Prompt Optimization: A/B test different prompt variations to find the most effective approach
+Quality Assurance: Ensure prompt quality with automated testing and evaluation
+Team Collaboration: Share and collaborate on prompts with a centralized management system
+Production Deployment: Maintain consistent prompt quality in production applications
+
+License
+MIT License
+
+## Contributing
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## Author
+Biswanath Roul - [GitHub](https://github.com/biswanathroul)
+
