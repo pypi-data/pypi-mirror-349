@@ -1,0 +1,6 @@
+build
+cpp_function
+dist
+docs
+tactics2d
+tests
