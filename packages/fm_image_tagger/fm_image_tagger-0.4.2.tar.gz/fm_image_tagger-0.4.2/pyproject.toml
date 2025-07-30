@@ -1,0 +1,36 @@
+[project]
+name = "fm_image_tagger"
+"version" = "0.4.2"
+description = "Caption tagger tool"
+readme = "README.md"
+authors = [
+    { name = "rerofumi", email = "rero2@yuumu.org" }
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Topic :: Multimedia :: Graphics",
+]
+requires-python = ">=3.10"
+dependencies = [
+ "click>=8.1.7",
+ "huggingface-hub>=0.25.2",
+ "numpy>=2.1.2",
+ "ollama>=0.3.3",
+ "onnxruntime>=1.19.2",
+ "pandas>=2.2.3",
+ "pillow",
+]
+
+[project.urls]
+Homepage = "https://github.com/rerofumi/fm_image_tagger"
+
+[project.scripts]
+fm_image_tagger = "fm_image_tagger.fm_image_tagger:run"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
