@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/automic/__init__.py
+src/automic/automaton.py
+src/automic/torch_automaton.py
+src/automic.egg-info/PKG-INFO
+src/automic.egg-info/SOURCES.txt
+src/automic.egg-info/dependency_links.txt
+src/automic.egg-info/top_level.txt

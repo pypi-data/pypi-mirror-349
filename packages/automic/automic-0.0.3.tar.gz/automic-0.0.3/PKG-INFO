@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: automic
+Version: 0.0.3
+Summary: A library for manipulating finite-state automata
+Home-page: https://github.com/person594/automic
+Author: Sean Papay
+Author-email: sean.papay@ims.uni-stuttgart.de
+Project-URL: Bug Tracker, https://github.com/person594/automic/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# Automic
+
+This is a library for simple operations on nondeterministic finite automata.
+It is primarily being developed as a component of the CCRF sequence-labeling model, and so it may not contain features not directly related to this.
