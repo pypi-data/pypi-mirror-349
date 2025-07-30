@@ -1,0 +1,12 @@
+manim_nerdfont_icons/docbuild/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+manim_nerdfont_icons/docbuild/_create_icon_table_for_docs.py,sha256=aq7wVYO8RM9bfoAq8UgtRyHxN06GyYvy0NgsiBZHFEg,1266
+manim_nerdfont_icons/docbuild/_csv_table_export.py,sha256=VkFMrm9zevewUF3MVi79yf3JkZ0N-9a_za4hvz47mKc,818
+manim_nerdfont_icons/docbuild/manta_directive.py,sha256=MVnywVXz_0_WIrVoaLUBwCDdXViax83qUTpmyU58DVM,14302
+manim_nerdfont_icons/icons.py,sha256=9PjQfmP6nfFsQ7Y2J7vUKYMmYRXrfPev9Fazx8KeOus,1364
+manim_nerdfont_icons/icons_dict.py,sha256=fQnQXBksFP_KR2N5-8rVz94nDnC4piaY961vRURtRGw,448461
+manim_nerdfont_icons/resources/SymbolsNerdFontMono-Regular.ttf,sha256=b34zmvM73iUKTXNgoxdqsf_k6ZwA7vDXG0wyI2TFlfM,2145960
+manim_nerdfont_icons/resources/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+manim_nerdfont_icons-1.0.1.dist-info/LICENSE,sha256=UGe75WojDiw_77SEnK2aysEDlElRlkWie7U7NaAFx00,1072
+manim_nerdfont_icons-1.0.1.dist-info/METADATA,sha256=6xOQYCHRzMw9WQYZM7DBz9lLzK11mDVzFACJ0-PKsaU,3762
+manim_nerdfont_icons-1.0.1.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+manim_nerdfont_icons-1.0.1.dist-info/RECORD,,
