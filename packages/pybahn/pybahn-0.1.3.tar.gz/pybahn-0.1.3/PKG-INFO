@@ -1,0 +1,146 @@
+Metadata-Version: 2.4
+Name: pybahn
+Version: 0.1.3
+Summary: A Python library for interacting with Deutsche Bahn data.
+Author: qwwesq
+Author-email: qwwesq.dev@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+
+# Pybahn
+
+A Python library to query Deutsche Bahn journey, departure, and arrival data using the (unofficial) API.
+
+## 📚 Table of Contents
+
+- [📦 Installation](#installation)
+- [🛠️ Usage](#-usage)
+  - [🔍 Search Station](#-search-station)
+  - [🚆 Get a Journey](#-get-a-journey)
+  - [🎯 Filter Departures/Arrivals](#-filter-departuresarrivals)
+  - [🎯 Filter Journeys](#-filter-journeys)
+- [📄 License](#-license)
+- [⚠️ Disclaimer](#disclaimer)
+
+## 📦 Installation
+
+Install pybahn with terminal
+
+```bash
+pip install pybahn
+```
+    
+## 🛠️ Usage
+
+
+### 🔍 Search Station
+
+```python
+from pybahn import PyBahn
+
+client = PyBahn(__name__)
+
+station1 = client.station("Frankfurt")
+
+print(station1.name)
+```
+
+### 🚆 Get a Journey
+
+``` python
+from pybahn import PyBahn
+
+client = PyBahn(__name__)
+
+station1 = client.station("Frankfurt")
+
+station2 = client.station("Berlin")
+
+journeys = client.journeys(station1.lid, stat2.lid)
+# OR
+journeys = client.journeys(station1, station2)
+
+print(journeys[0].arrival_name)
+```
+
+
+### 🎯 Filter Departures/Arrivals
+
+```python
+from pybahn import PyBahn
+from pybahn.structs import Filter
+from pybahn.structs import Products
+from datetime import datetime
+
+
+client = PyBahn(__name__)
+
+station1 = client.station("Frankfurt")
+
+station2 = client.station("Berlin")
+
+time = datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
+
+journeys = client.journeys(departure=station1, 
+                      destination=station2, 
+                      time = time,
+                      products=[Products.EC_IC, Products.SBAHN],
+                      only_d_ticket=True)
+
+print(journeys[0].changes_amont)
+
+```
+
+
+### 🎯 Filter Journeys
+
+```python
+from pybahn import PyBahn
+from pybahn.structs import Products
+
+client = PyBahn(__name__)
+
+station1 = client.station("Frankfurt")
+
+station2 = client.station("Berlin")
+
+
+journeys = client.journeys(station1.lid, station2.lid, products=Products.REGIONALS)
+
+# OR
+
+journeys = client.journeys(departure=station2, 
+                           destination=station1, 
+                           products=[Products.EC_IC, Products.REGIONAL])
+
+print(journeys[0].changes_amont)
+```
+## 📄 License
+
+[MIT License](https://choosealicense.com/licenses/mit/)
+
+## ⚠️ Disclaimer
+
+This library (`pybahn`) is an **unofficial** wrapper around Deutsche Bahn’s internal web APIs, discovered via publicly accessible browser traffic.
+
+- It is **not affiliated with or endorsed by Deutsche Bahn**.
+- It uses **undocumented and unsupported endpoints**, which may break or change without notice.
+- Use this library **at your own risk**.
+- Please respect Deutsche Bahn’s terms of use and avoid abusive behavior.
