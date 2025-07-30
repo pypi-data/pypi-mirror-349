@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+src/eu_consultations/__init__.py
+src/eu_consultations/consultation_data.py
+src/eu_consultations/extract_filetext.py
+src/eu_consultations/scrape.py
+src/eu_consultations/utils_scraping.py
+src/eu_consultations.egg-info/PKG-INFO
+src/eu_consultations.egg-info/SOURCES.txt
+src/eu_consultations.egg-info/dependency_links.txt
+src/eu_consultations.egg-info/requires.txt
+src/eu_consultations.egg-info/top_level.txt
+tests/test_scrape.py
+tests/test_utils_scraping.py
