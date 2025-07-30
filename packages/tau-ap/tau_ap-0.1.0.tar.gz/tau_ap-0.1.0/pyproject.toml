@@ -1,0 +1,13 @@
+[project]
+name = "tau_ap"
+version = "0.1.0"
+description = "Implementation of the Tau AP rank correlation measure"
+authors = [{ name = "Jack McKechnie", email = "j.mckechnie.1@research.gla.ac.uk" }]
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.7"
+dependencies = ["numpy"]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
