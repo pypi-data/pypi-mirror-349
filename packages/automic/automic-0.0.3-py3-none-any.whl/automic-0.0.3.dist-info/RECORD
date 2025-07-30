@@ -1,0 +1,8 @@
+automic/__init__.py,sha256=T9J00UQ28Lti3Dyacoi3U9bPE8XG9i4PLY_TGNvitbw,32
+automic/automaton.py,sha256=164vVilr9ZBT4uztqxr7NwPT-kpS5cy0MF3PuF1zvWU,21052
+automic/torch_automaton.py,sha256=xpB6wLixYuOG1NJQKqVHfepFFDDFpdJdZA1QNSocawI,214
+automic-0.0.3.dist-info/licenses/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+automic-0.0.3.dist-info/METADATA,sha256=jFwYdcMZ89ojoUGRIygHwVfGM62qewG5at2Bw6tvByE,783
+automic-0.0.3.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+automic-0.0.3.dist-info/top_level.txt,sha256=nkeCsU3DwElIInQUmzOjm78Jr_3QlNZIxfhhJ3fHF5E,8
+automic-0.0.3.dist-info/RECORD,,
