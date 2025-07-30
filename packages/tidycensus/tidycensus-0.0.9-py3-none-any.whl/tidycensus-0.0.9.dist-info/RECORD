@@ -1,0 +1,6 @@
+tidycensus/__init__.py,sha256=Dz0AHc-PP5zUe8Z7N14JcbribR7XcIwVjIidEN7QvX0,37
+tidycensus/census.py,sha256=ZInzXlI8YKVEc271Ahj1g2iqxWKp23ThWbYZmfqYnhA,7506
+tidycensus-0.0.9.dist-info/METADATA,sha256=qoEbPzBqoeWGbJ8KY2S65o7vjcfJNpgug9iHumv_GLQ,1141
+tidycensus-0.0.9.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+tidycensus-0.0.9.dist-info/licenses/LICENSE,sha256=c53NguaPgpwtaJQceEGoxQ3B3wh_nm75rzAA5qOWEhU,1070
+tidycensus-0.0.9.dist-info/RECORD,,
