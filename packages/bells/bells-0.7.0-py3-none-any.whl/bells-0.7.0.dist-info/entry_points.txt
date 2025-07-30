@@ -1,0 +1,3 @@
+[console_scripts]
+bells=bells.__main__:main
+
