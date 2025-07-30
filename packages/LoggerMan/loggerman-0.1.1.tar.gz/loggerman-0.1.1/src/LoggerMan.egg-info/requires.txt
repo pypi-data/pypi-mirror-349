@@ -1,0 +1,8 @@
+MDit<0.2,>=0.1
+PySerials<0.2,>=0.1
+ActionMan<0.2,>=0.1
+ProtocolMan<0.2,>=0.1
+ExceptionMan<0.2,>=0.1
+pkgdata<0.2,>=0.1.2
+pydantic
+rich
