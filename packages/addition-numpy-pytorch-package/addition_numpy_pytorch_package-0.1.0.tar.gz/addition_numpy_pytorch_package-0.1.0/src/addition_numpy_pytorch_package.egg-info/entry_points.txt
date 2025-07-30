@@ -1,0 +1,2 @@
+[console_scripts]
+addition-numpy-pytorch-package = addition_numpy_pytorch_package:main
