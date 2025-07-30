@@ -1,0 +1,1 @@
+from cfn_resource_provider_schemas.Cloud9.Environmentec2 import SCHEMA as Environmentec2

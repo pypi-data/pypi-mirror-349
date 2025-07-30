@@ -1,0 +1,11 @@
+from cfn_resource_provider_schemas.Deadline.Farm import SCHEMA as Farm
+from cfn_resource_provider_schemas.Deadline.Fleet import SCHEMA as Fleet
+from cfn_resource_provider_schemas.Deadline.Licenseendpoint import SCHEMA as Licenseendpoint
+from cfn_resource_provider_schemas.Deadline.Limit import SCHEMA as Limit
+from cfn_resource_provider_schemas.Deadline.Meteredproduct import SCHEMA as Meteredproduct
+from cfn_resource_provider_schemas.Deadline.Monitor import SCHEMA as Monitor
+from cfn_resource_provider_schemas.Deadline.Queue import SCHEMA as Queue
+from cfn_resource_provider_schemas.Deadline.Queueenvironment import SCHEMA as Queueenvironment
+from cfn_resource_provider_schemas.Deadline.Queuefleetassociation import SCHEMA as Queuefleetassociation
+from cfn_resource_provider_schemas.Deadline.Queuelimitassociation import SCHEMA as Queuelimitassociation
+from cfn_resource_provider_schemas.Deadline.Storageprofile import SCHEMA as Storageprofile

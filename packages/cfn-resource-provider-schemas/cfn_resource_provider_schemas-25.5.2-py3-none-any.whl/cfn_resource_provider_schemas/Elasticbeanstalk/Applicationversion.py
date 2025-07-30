@@ -1,0 +1,67 @@
+SCHEMA = {
+  "typeName" : "AWS::ElasticBeanstalk::ApplicationVersion",
+  "description" : "Resource Type definition for AWS::ElasticBeanstalk::ApplicationVersion",
+  "sourceUrl" : "https://github.com/aws-cloudformation/aws-cloudformation-resource-providers-elasticbeanstalk.git",
+  "properties" : {
+    "Id" : {
+      "type" : "string"
+    },
+    "ApplicationName" : {
+      "description" : "The name of the Elastic Beanstalk application that is associated with this application version. ",
+      "type" : "string"
+    },
+    "Description" : {
+      "description" : "A description of this application version.",
+      "type" : "string"
+    },
+    "SourceBundle" : {
+      "description" : "The Amazon S3 bucket and key that identify the location of the source bundle for this version. ",
+      "$ref" : "#/definitions/SourceBundle"
+    }
+  },
+  "definitions" : {
+    "SourceBundle" : {
+      "type" : "object",
+      "additionalProperties" : False,
+      "properties" : {
+        "S3Bucket" : {
+          "description" : "The Amazon S3 bucket where the data is located.",
+          "type" : "string"
+        },
+        "S3Key" : {
+          "description" : "The Amazon S3 key where the data is located.",
+          "type" : "string"
+        }
+      },
+      "required" : [ "S3Bucket", "S3Key" ]
+    }
+  },
+  "required" : [ "ApplicationName", "SourceBundle" ],
+  "additionalProperties" : False,
+  "tagging" : {
+    "taggable" : False,
+    "tagOnCreate" : False,
+    "tagUpdatable" : False,
+    "cloudFormationSystemTags" : False
+  },
+  "createOnlyProperties" : [ "/properties/SourceBundle", "/properties/ApplicationName" ],
+  "primaryIdentifier" : [ "/properties/ApplicationName", "/properties/Id" ],
+  "readOnlyProperties" : [ "/properties/Id" ],
+  "handlers" : {
+    "create" : {
+      "permissions" : [ "elasticbeanstalk:CreateApplicationVersion", "elasticbeanstalk:DescribeApplicationVersions", "s3:GetObject", "s3:PutObject" ]
+    },
+    "read" : {
+      "permissions" : [ "elasticbeanstalk:DescribeApplicationVersions" ]
+    },
+    "update" : {
+      "permissions" : [ "elasticbeanstalk:UpdateApplicationVersion" ]
+    },
+    "delete" : {
+      "permissions" : [ "elasticbeanstalk:DeleteApplicationVersion" ]
+    },
+    "list" : {
+      "permissions" : [ "elasticbeanstalk:DescribeApplicationVersions" ]
+    }
+  }
+}

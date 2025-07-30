@@ -1,0 +1,3 @@
+from cfn_resource_provider_schemas.Amazonmq.Broker import SCHEMA as Broker
+from cfn_resource_provider_schemas.Amazonmq.Configuration import SCHEMA as Configuration
+from cfn_resource_provider_schemas.Amazonmq.Configurationassociation import SCHEMA as Configurationassociation

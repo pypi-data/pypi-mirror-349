@@ -1,0 +1,2 @@
+from cfn_resource_provider_schemas.Neptunegraph.Graph import SCHEMA as Graph
+from cfn_resource_provider_schemas.Neptunegraph.Privategraphendpoint import SCHEMA as Privategraphendpoint

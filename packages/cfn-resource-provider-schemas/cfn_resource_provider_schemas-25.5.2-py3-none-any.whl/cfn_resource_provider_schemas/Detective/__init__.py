@@ -1,0 +1,3 @@
+from cfn_resource_provider_schemas.Detective.Graph import SCHEMA as Graph
+from cfn_resource_provider_schemas.Detective.Memberinvitation import SCHEMA as Memberinvitation
+from cfn_resource_provider_schemas.Detective.Organizationadmin import SCHEMA as Organizationadmin

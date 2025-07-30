@@ -1,0 +1,3 @@
+from cfn_resource_provider_schemas.Route53profiles.Profile import SCHEMA as Profile
+from cfn_resource_provider_schemas.Route53profiles.Profileassociation import SCHEMA as Profileassociation
+from cfn_resource_provider_schemas.Route53profiles.Profileresourceassociation import SCHEMA as Profileresourceassociation

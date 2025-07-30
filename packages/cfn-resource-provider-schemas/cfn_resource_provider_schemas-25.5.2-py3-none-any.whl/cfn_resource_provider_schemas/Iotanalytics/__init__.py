@@ -1,0 +1,4 @@
+from cfn_resource_provider_schemas.Iotanalytics.Channel import SCHEMA as Channel
+from cfn_resource_provider_schemas.Iotanalytics.Dataset import SCHEMA as Dataset
+from cfn_resource_provider_schemas.Iotanalytics.Datastore import SCHEMA as Datastore
+from cfn_resource_provider_schemas.Iotanalytics.Pipeline import SCHEMA as Pipeline

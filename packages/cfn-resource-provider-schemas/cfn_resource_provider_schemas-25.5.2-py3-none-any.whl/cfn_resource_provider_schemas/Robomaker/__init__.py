@@ -1,0 +1,6 @@
+from cfn_resource_provider_schemas.Robomaker.Fleet import SCHEMA as Fleet
+from cfn_resource_provider_schemas.Robomaker.Robot import SCHEMA as Robot
+from cfn_resource_provider_schemas.Robomaker.Robotapplication import SCHEMA as Robotapplication
+from cfn_resource_provider_schemas.Robomaker.Robotapplicationversion import SCHEMA as Robotapplicationversion
+from cfn_resource_provider_schemas.Robomaker.Simulationapplication import SCHEMA as Simulationapplication
+from cfn_resource_provider_schemas.Robomaker.Simulationapplicationversion import SCHEMA as Simulationapplicationversion

@@ -1,0 +1,1 @@
+from cfn_resource_provider_schemas.Emrcontainers.Virtualcluster import SCHEMA as Virtualcluster

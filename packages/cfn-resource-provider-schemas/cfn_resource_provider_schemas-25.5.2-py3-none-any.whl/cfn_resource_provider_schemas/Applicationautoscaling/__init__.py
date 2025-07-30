@@ -1,0 +1,2 @@
+from cfn_resource_provider_schemas.Applicationautoscaling.Scalabletarget import SCHEMA as Scalabletarget
+from cfn_resource_provider_schemas.Applicationautoscaling.Scalingpolicy import SCHEMA as Scalingpolicy

@@ -1,0 +1,2 @@
+from cfn_resource_provider_schemas.Gameliftstreams.Application import SCHEMA as Application
+from cfn_resource_provider_schemas.Gameliftstreams.Streamgroup import SCHEMA as Streamgroup

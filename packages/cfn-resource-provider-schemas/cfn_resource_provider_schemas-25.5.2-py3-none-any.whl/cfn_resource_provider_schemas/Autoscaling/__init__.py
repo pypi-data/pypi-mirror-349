@@ -1,0 +1,6 @@
+from cfn_resource_provider_schemas.Autoscaling.Autoscalinggroup import SCHEMA as Autoscalinggroup
+from cfn_resource_provider_schemas.Autoscaling.Launchconfiguration import SCHEMA as Launchconfiguration
+from cfn_resource_provider_schemas.Autoscaling.Lifecyclehook import SCHEMA as Lifecyclehook
+from cfn_resource_provider_schemas.Autoscaling.Scalingpolicy import SCHEMA as Scalingpolicy
+from cfn_resource_provider_schemas.Autoscaling.Scheduledaction import SCHEMA as Scheduledaction
+from cfn_resource_provider_schemas.Autoscaling.Warmpool import SCHEMA as Warmpool

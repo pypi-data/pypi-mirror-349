@@ -1,0 +1,7 @@
+from cfn_resource_provider_schemas.Location.Apikey import SCHEMA as Apikey
+from cfn_resource_provider_schemas.Location.Geofencecollection import SCHEMA as Geofencecollection
+from cfn_resource_provider_schemas.Location.Map import SCHEMA as Map
+from cfn_resource_provider_schemas.Location.Placeindex import SCHEMA as Placeindex
+from cfn_resource_provider_schemas.Location.Routecalculator import SCHEMA as Routecalculator
+from cfn_resource_provider_schemas.Location.Tracker import SCHEMA as Tracker
+from cfn_resource_provider_schemas.Location.Trackerconsumer import SCHEMA as Trackerconsumer

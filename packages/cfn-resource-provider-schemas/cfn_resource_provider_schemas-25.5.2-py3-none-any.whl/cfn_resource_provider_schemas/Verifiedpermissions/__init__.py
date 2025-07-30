@@ -1,0 +1,4 @@
+from cfn_resource_provider_schemas.Verifiedpermissions.Identitysource import SCHEMA as Identitysource
+from cfn_resource_provider_schemas.Verifiedpermissions.Policy import SCHEMA as Policy
+from cfn_resource_provider_schemas.Verifiedpermissions.Policystore import SCHEMA as Policystore
+from cfn_resource_provider_schemas.Verifiedpermissions.Policytemplate import SCHEMA as Policytemplate

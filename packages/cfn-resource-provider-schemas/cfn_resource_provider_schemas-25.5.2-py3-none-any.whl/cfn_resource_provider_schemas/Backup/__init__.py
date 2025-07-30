@@ -1,0 +1,8 @@
+from cfn_resource_provider_schemas.Backup.Backupplan import SCHEMA as Backupplan
+from cfn_resource_provider_schemas.Backup.Backupselection import SCHEMA as Backupselection
+from cfn_resource_provider_schemas.Backup.Backupvault import SCHEMA as Backupvault
+from cfn_resource_provider_schemas.Backup.Framework import SCHEMA as Framework
+from cfn_resource_provider_schemas.Backup.Logicallyairgappedbackupvault import SCHEMA as Logicallyairgappedbackupvault
+from cfn_resource_provider_schemas.Backup.Reportplan import SCHEMA as Reportplan
+from cfn_resource_provider_schemas.Backup.Restoretestingplan import SCHEMA as Restoretestingplan
+from cfn_resource_provider_schemas.Backup.Restoretestingselection import SCHEMA as Restoretestingselection

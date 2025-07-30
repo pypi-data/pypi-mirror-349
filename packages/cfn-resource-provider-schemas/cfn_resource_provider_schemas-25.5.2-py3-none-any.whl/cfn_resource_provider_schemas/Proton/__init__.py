@@ -1,0 +1,3 @@
+from cfn_resource_provider_schemas.Proton.Environmentaccountconnection import SCHEMA as Environmentaccountconnection
+from cfn_resource_provider_schemas.Proton.Environmenttemplate import SCHEMA as Environmenttemplate
+from cfn_resource_provider_schemas.Proton.Servicetemplate import SCHEMA as Servicetemplate

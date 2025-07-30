@@ -1,0 +1,1 @@
+from cfn_resource_provider_schemas.Elasticsearch.Domain import SCHEMA as Domain

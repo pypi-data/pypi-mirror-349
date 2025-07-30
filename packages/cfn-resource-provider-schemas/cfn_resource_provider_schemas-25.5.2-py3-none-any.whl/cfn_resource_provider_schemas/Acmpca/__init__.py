@@ -1,0 +1,4 @@
+from cfn_resource_provider_schemas.Acmpca.Certificate import SCHEMA as Certificate
+from cfn_resource_provider_schemas.Acmpca.Certificateauthority import SCHEMA as Certificateauthority
+from cfn_resource_provider_schemas.Acmpca.Certificateauthorityactivation import SCHEMA as Certificateauthorityactivation
+from cfn_resource_provider_schemas.Acmpca.Permission import SCHEMA as Permission

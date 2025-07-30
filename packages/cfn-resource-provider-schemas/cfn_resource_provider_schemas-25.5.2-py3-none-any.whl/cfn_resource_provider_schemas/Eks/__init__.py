@@ -1,0 +1,7 @@
+from cfn_resource_provider_schemas.Eks.Accessentry import SCHEMA as Accessentry
+from cfn_resource_provider_schemas.Eks.Addon import SCHEMA as Addon
+from cfn_resource_provider_schemas.Eks.Cluster import SCHEMA as Cluster
+from cfn_resource_provider_schemas.Eks.Fargateprofile import SCHEMA as Fargateprofile
+from cfn_resource_provider_schemas.Eks.Identityproviderconfig import SCHEMA as Identityproviderconfig
+from cfn_resource_provider_schemas.Eks.Nodegroup import SCHEMA as Nodegroup
+from cfn_resource_provider_schemas.Eks.Podidentityassociation import SCHEMA as Podidentityassociation

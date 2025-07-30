@@ -1,0 +1,1 @@
+from cfn_resource_provider_schemas.Codegurureviewer.Repositoryassociation import SCHEMA as Repositoryassociation

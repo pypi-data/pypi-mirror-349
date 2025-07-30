@@ -1,0 +1,2 @@
+from cfn_resource_provider_schemas.Ivschat.Loggingconfiguration import SCHEMA as Loggingconfiguration
+from cfn_resource_provider_schemas.Ivschat.Room import SCHEMA as Room

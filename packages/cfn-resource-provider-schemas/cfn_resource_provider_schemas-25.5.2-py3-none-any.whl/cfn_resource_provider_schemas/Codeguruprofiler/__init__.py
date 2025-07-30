@@ -1,0 +1,1 @@
+from cfn_resource_provider_schemas.Codeguruprofiler.Profilinggroup import SCHEMA as Profilinggroup

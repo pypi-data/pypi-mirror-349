@@ -1,0 +1,3 @@
+from cfn_resource_provider_schemas.Rolesanywhere.Crl import SCHEMA as Crl
+from cfn_resource_provider_schemas.Rolesanywhere.Profile import SCHEMA as Profile
+from cfn_resource_provider_schemas.Rolesanywhere.Trustanchor import SCHEMA as Trustanchor

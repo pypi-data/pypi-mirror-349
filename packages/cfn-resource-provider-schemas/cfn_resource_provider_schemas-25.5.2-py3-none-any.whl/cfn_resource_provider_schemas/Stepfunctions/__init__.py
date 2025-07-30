@@ -1,0 +1,4 @@
+from cfn_resource_provider_schemas.Stepfunctions.Activity import SCHEMA as Activity
+from cfn_resource_provider_schemas.Stepfunctions.Statemachine import SCHEMA as Statemachine
+from cfn_resource_provider_schemas.Stepfunctions.Statemachinealias import SCHEMA as Statemachinealias
+from cfn_resource_provider_schemas.Stepfunctions.Statemachineversion import SCHEMA as Statemachineversion

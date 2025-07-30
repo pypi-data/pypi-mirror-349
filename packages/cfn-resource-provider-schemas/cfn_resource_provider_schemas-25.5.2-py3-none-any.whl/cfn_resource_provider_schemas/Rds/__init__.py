@@ -1,0 +1,16 @@
+from cfn_resource_provider_schemas.Rds.Customdbengineversion import SCHEMA as Customdbengineversion
+from cfn_resource_provider_schemas.Rds.Dbcluster import SCHEMA as Dbcluster
+from cfn_resource_provider_schemas.Rds.Dbclusterparametergroup import SCHEMA as Dbclusterparametergroup
+from cfn_resource_provider_schemas.Rds.Dbinstance import SCHEMA as Dbinstance
+from cfn_resource_provider_schemas.Rds.Dbparametergroup import SCHEMA as Dbparametergroup
+from cfn_resource_provider_schemas.Rds.Dbproxy import SCHEMA as Dbproxy
+from cfn_resource_provider_schemas.Rds.Dbproxyendpoint import SCHEMA as Dbproxyendpoint
+from cfn_resource_provider_schemas.Rds.Dbproxytargetgroup import SCHEMA as Dbproxytargetgroup
+from cfn_resource_provider_schemas.Rds.Dbsecuritygroup import SCHEMA as Dbsecuritygroup
+from cfn_resource_provider_schemas.Rds.Dbsecuritygroupingress import SCHEMA as Dbsecuritygroupingress
+from cfn_resource_provider_schemas.Rds.Dbshardgroup import SCHEMA as Dbshardgroup
+from cfn_resource_provider_schemas.Rds.Dbsubnetgroup import SCHEMA as Dbsubnetgroup
+from cfn_resource_provider_schemas.Rds.Eventsubscription import SCHEMA as Eventsubscription
+from cfn_resource_provider_schemas.Rds.Globalcluster import SCHEMA as Globalcluster
+from cfn_resource_provider_schemas.Rds.Integration import SCHEMA as Integration
+from cfn_resource_provider_schemas.Rds.Optiongroup import SCHEMA as Optiongroup

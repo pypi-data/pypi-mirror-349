@@ -1,0 +1,9 @@
+from cfn_resource_provider_schemas.Mediaconnect.Bridge import SCHEMA as Bridge
+from cfn_resource_provider_schemas.Mediaconnect.Bridgeoutput import SCHEMA as Bridgeoutput
+from cfn_resource_provider_schemas.Mediaconnect.Bridgesource import SCHEMA as Bridgesource
+from cfn_resource_provider_schemas.Mediaconnect.Flow import SCHEMA as Flow
+from cfn_resource_provider_schemas.Mediaconnect.Flowentitlement import SCHEMA as Flowentitlement
+from cfn_resource_provider_schemas.Mediaconnect.Flowoutput import SCHEMA as Flowoutput
+from cfn_resource_provider_schemas.Mediaconnect.Flowsource import SCHEMA as Flowsource
+from cfn_resource_provider_schemas.Mediaconnect.Flowvpcinterface import SCHEMA as Flowvpcinterface
+from cfn_resource_provider_schemas.Mediaconnect.Gateway import SCHEMA as Gateway

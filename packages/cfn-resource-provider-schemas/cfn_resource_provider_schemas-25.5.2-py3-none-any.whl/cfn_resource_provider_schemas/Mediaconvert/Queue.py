@@ -1,0 +1,34 @@
+SCHEMA = {
+  "typeName" : "AWS::MediaConvert::Queue",
+  "description" : "Resource Type definition for AWS::MediaConvert::Queue",
+  "additionalProperties" : False,
+  "properties" : {
+    "Status" : {
+      "type" : "string"
+    },
+    "Description" : {
+      "type" : "string"
+    },
+    "PricingPlan" : {
+      "type" : "string"
+    },
+    "Id" : {
+      "type" : "string"
+    },
+    "Arn" : {
+      "type" : "string"
+    },
+    "Tags" : {
+      "type" : "object"
+    },
+    "Name" : {
+      "type" : "string"
+    },
+    "ConcurrentJobs" : {
+      "type" : "integer"
+    }
+  },
+  "createOnlyProperties" : [ "/properties/Name" ],
+  "primaryIdentifier" : [ "/properties/Id" ],
+  "readOnlyProperties" : [ "/properties/Id", "/properties/Arn" ]
+}

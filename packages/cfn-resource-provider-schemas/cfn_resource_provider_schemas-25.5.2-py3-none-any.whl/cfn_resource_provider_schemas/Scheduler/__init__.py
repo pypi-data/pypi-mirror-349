@@ -1,0 +1,2 @@
+from cfn_resource_provider_schemas.Scheduler.Schedule import SCHEMA as Schedule
+from cfn_resource_provider_schemas.Scheduler.Schedulegroup import SCHEMA as Schedulegroup

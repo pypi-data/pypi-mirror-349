@@ -1,0 +1,4 @@
+from cfn_resource_provider_schemas.Xray.Group import SCHEMA as Group
+from cfn_resource_provider_schemas.Xray.Resourcepolicy import SCHEMA as Resourcepolicy
+from cfn_resource_provider_schemas.Xray.Samplingrule import SCHEMA as Samplingrule
+from cfn_resource_provider_schemas.Xray.Transactionsearchconfig import SCHEMA as Transactionsearchconfig

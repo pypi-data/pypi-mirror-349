@@ -1,0 +1,7 @@
+from cfn_resource_provider_schemas.Iotfleetwise.Campaign import SCHEMA as Campaign
+from cfn_resource_provider_schemas.Iotfleetwise.Decodermanifest import SCHEMA as Decodermanifest
+from cfn_resource_provider_schemas.Iotfleetwise.Fleet import SCHEMA as Fleet
+from cfn_resource_provider_schemas.Iotfleetwise.Modelmanifest import SCHEMA as Modelmanifest
+from cfn_resource_provider_schemas.Iotfleetwise.Signalcatalog import SCHEMA as Signalcatalog
+from cfn_resource_provider_schemas.Iotfleetwise.Statetemplate import SCHEMA as Statetemplate
+from cfn_resource_provider_schemas.Iotfleetwise.Vehicle import SCHEMA as Vehicle

@@ -1,0 +1,14 @@
+from cfn_resource_provider_schemas.Medialive.Channel import SCHEMA as Channel
+from cfn_resource_provider_schemas.Medialive.Channelplacementgroup import SCHEMA as Channelplacementgroup
+from cfn_resource_provider_schemas.Medialive.Cloudwatchalarmtemplate import SCHEMA as Cloudwatchalarmtemplate
+from cfn_resource_provider_schemas.Medialive.Cloudwatchalarmtemplategroup import SCHEMA as Cloudwatchalarmtemplategroup
+from cfn_resource_provider_schemas.Medialive.Cluster import SCHEMA as Cluster
+from cfn_resource_provider_schemas.Medialive.Eventbridgeruletemplate import SCHEMA as Eventbridgeruletemplate
+from cfn_resource_provider_schemas.Medialive.Eventbridgeruletemplategroup import SCHEMA as Eventbridgeruletemplategroup
+from cfn_resource_provider_schemas.Medialive.Input import SCHEMA as Input
+from cfn_resource_provider_schemas.Medialive.Inputsecuritygroup import SCHEMA as Inputsecuritygroup
+from cfn_resource_provider_schemas.Medialive.Multiplex import SCHEMA as Multiplex
+from cfn_resource_provider_schemas.Medialive.Multiplexprogram import SCHEMA as Multiplexprogram
+from cfn_resource_provider_schemas.Medialive.Network import SCHEMA as Network
+from cfn_resource_provider_schemas.Medialive.Sdisource import SCHEMA as Sdisource
+from cfn_resource_provider_schemas.Medialive.Signalmap import SCHEMA as Signalmap

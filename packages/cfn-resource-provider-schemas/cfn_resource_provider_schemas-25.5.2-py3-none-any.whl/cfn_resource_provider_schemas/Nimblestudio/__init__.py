@@ -1,0 +1,1 @@
+from cfn_resource_provider_schemas.Nimblestudio.Studio import SCHEMA as Studio

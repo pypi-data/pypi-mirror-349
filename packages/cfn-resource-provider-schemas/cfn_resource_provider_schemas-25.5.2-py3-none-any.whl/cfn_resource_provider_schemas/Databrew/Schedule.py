@@ -1,0 +1,90 @@
+SCHEMA = {
+  "typeName" : "AWS::DataBrew::Schedule",
+  "description" : "Resource schema for AWS::DataBrew::Schedule.",
+  "sourceUrl" : "https://github.com/aws-cloudformation/aws-cloudformation-resource-providers-databrew.git",
+  "properties" : {
+    "JobNames" : {
+      "type" : "array",
+      "insertionOrder" : True,
+      "uniqueItems" : True,
+      "items" : {
+        "$ref" : "#/definitions/JobName"
+      }
+    },
+    "CronExpression" : {
+      "description" : "Schedule cron",
+      "type" : "string",
+      "minLength" : 1,
+      "maxLength" : 512
+    },
+    "Name" : {
+      "description" : "Schedule Name",
+      "type" : "string",
+      "minLength" : 1,
+      "maxLength" : 255
+    },
+    "Tags" : {
+      "type" : "array",
+      "insertionOrder" : False,
+      "uniqueItems" : False,
+      "items" : {
+        "$ref" : "#/definitions/Tag"
+      }
+    }
+  },
+  "definitions" : {
+    "JobName" : {
+      "description" : "Job name",
+      "type" : "string",
+      "minLength" : 1,
+      "maxLength" : 255
+    },
+    "Tag" : {
+      "description" : "A key-value pair to associate with a resource.",
+      "type" : "object",
+      "properties" : {
+        "Key" : {
+          "type" : "string",
+          "minLength" : 1,
+          "maxLength" : 128
+        },
+        "Value" : {
+          "type" : "string",
+          "minLength" : 0,
+          "maxLength" : 256
+        }
+      },
+      "additionalProperties" : False,
+      "required" : [ "Value", "Key" ]
+    }
+  },
+  "additionalProperties" : False,
+  "required" : [ "Name", "CronExpression" ],
+  "primaryIdentifier" : [ "/properties/Name" ],
+  "createOnlyProperties" : [ "/properties/Name" ],
+  "tagging" : {
+    "taggable" : True,
+    "tagOnCreate" : True,
+    "tagUpdatable" : True,
+    "cloudFormationSystemTags" : True,
+    "tagProperty" : "/properties/Tags",
+    "permissions" : [ "databrew:TagResource", "databrew:UntagResource", "databrew:ListTagsForResource" ]
+  },
+  "handlers" : {
+    "create" : {
+      "permissions" : [ "databrew:CreateSchedule", "databrew:DescribeSchedule", "databrew:TagResource", "databrew:UntagResource", "iam:PassRole" ]
+    },
+    "read" : {
+      "permissions" : [ "databrew:DescribeSchedule", "iam:ListRoles" ]
+    },
+    "update" : {
+      "permissions" : [ "databrew:UpdateSchedule", "databrew:TagResource", "databrew:UntagResource" ]
+    },
+    "delete" : {
+      "permissions" : [ "databrew:DeleteSchedule" ]
+    },
+    "list" : {
+      "permissions" : [ "databrew:ListSchedules", "databrew:ListTagsForResource", "iam:ListRoles" ]
+    }
+  }
+}

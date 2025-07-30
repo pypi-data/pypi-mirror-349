@@ -1,0 +1,1 @@
+from cfn_resource_provider_schemas.Datapipeline.Pipeline import SCHEMA as Pipeline

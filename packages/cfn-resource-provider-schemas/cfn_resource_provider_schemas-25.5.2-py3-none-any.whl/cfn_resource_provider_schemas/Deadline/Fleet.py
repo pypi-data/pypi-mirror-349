@@ -1,0 +1,540 @@
+SCHEMA = {
+  "typeName" : "AWS::Deadline::Fleet",
+  "description" : "Definition of AWS::Deadline::Fleet Resource Type",
+  "sourceUrl" : "https://github.com/aws-cloudformation/aws-cloudformation-resource-providers-deadline",
+  "definitions" : {
+    "AcceleratorCountRange" : {
+      "type" : "object",
+      "properties" : {
+        "Min" : {
+          "type" : "integer",
+          "maximum" : 2147483647,
+          "minimum" : 0
+        },
+        "Max" : {
+          "type" : "integer",
+          "maximum" : 2147483647,
+          "minimum" : 0
+        }
+      },
+      "required" : [ "Min" ],
+      "additionalProperties" : False
+    },
+    "AcceleratorTotalMemoryMiBRange" : {
+      "type" : "object",
+      "properties" : {
+        "Min" : {
+          "type" : "integer",
+          "maximum" : 2147483647,
+          "minimum" : 0
+        },
+        "Max" : {
+          "type" : "integer",
+          "maximum" : 2147483647,
+          "minimum" : 0
+        }
+      },
+      "required" : [ "Min" ],
+      "additionalProperties" : False
+    },
+    "AcceleratorType" : {
+      "type" : "string",
+      "enum" : [ "gpu" ]
+    },
+    "AutoScalingMode" : {
+      "type" : "string",
+      "enum" : [ "NO_SCALING", "EVENT_BASED_AUTO_SCALING" ]
+    },
+    "CpuArchitectureType" : {
+      "type" : "string",
+      "enum" : [ "x86_64", "arm64" ]
+    },
+    "CustomerManagedFleetConfiguration" : {
+      "type" : "object",
+      "properties" : {
+        "Mode" : {
+          "$ref" : "#/definitions/AutoScalingMode"
+        },
+        "WorkerCapabilities" : {
+          "$ref" : "#/definitions/CustomerManagedWorkerCapabilities"
+        },
+        "StorageProfileId" : {
+          "type" : "string",
+          "pattern" : "^sp-[0-9a-f]{32}$"
+        },
+        "TagPropagationMode" : {
+          "$ref" : "#/definitions/TagPropagationMode"
+        }
+      },
+      "required" : [ "Mode", "WorkerCapabilities" ],
+      "additionalProperties" : False
+    },
+    "CustomerManagedFleetOperatingSystemFamily" : {
+      "type" : "string",
+      "enum" : [ "WINDOWS", "LINUX", "MACOS" ]
+    },
+    "CustomerManagedWorkerCapabilities" : {
+      "type" : "object",
+      "properties" : {
+        "VCpuCount" : {
+          "$ref" : "#/definitions/VCpuCountRange"
+        },
+        "MemoryMiB" : {
+          "$ref" : "#/definitions/MemoryMiBRange"
+        },
+        "AcceleratorTypes" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/AcceleratorType"
+          }
+        },
+        "AcceleratorCount" : {
+          "$ref" : "#/definitions/AcceleratorCountRange"
+        },
+        "AcceleratorTotalMemoryMiB" : {
+          "$ref" : "#/definitions/AcceleratorTotalMemoryMiBRange"
+        },
+        "OsFamily" : {
+          "$ref" : "#/definitions/CustomerManagedFleetOperatingSystemFamily"
+        },
+        "CpuArchitectureType" : {
+          "$ref" : "#/definitions/CpuArchitectureType"
+        },
+        "CustomAmounts" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/FleetAmountCapability"
+          },
+          "maxItems" : 15,
+          "minItems" : 1
+        },
+        "CustomAttributes" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/FleetAttributeCapability"
+          },
+          "maxItems" : 15,
+          "minItems" : 1
+        }
+      },
+      "required" : [ "CpuArchitectureType", "MemoryMiB", "OsFamily", "VCpuCount" ],
+      "additionalProperties" : False
+    },
+    "Ec2EbsVolume" : {
+      "type" : "object",
+      "properties" : {
+        "SizeGiB" : {
+          "type" : "integer",
+          "default" : 250
+        },
+        "Iops" : {
+          "type" : "integer",
+          "default" : 3000,
+          "maximum" : 16000,
+          "minimum" : 3000
+        },
+        "ThroughputMiB" : {
+          "type" : "integer",
+          "default" : 125,
+          "maximum" : 1000,
+          "minimum" : 125
+        }
+      },
+      "additionalProperties" : False
+    },
+    "AcceleratorSelection" : {
+      "type" : "object",
+      "properties" : {
+        "Name" : {
+          "type" : "string",
+          "enum" : [ "t4", "a10g", "l4", "l40s" ]
+        },
+        "Runtime" : {
+          "type" : "string",
+          "maxLength" : 100,
+          "minLength" : 1
+        }
+      },
+      "required" : [ "Name" ],
+      "additionalProperties" : False
+    },
+    "AcceleratorCapabilities" : {
+      "type" : "object",
+      "properties" : {
+        "Selections" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/AcceleratorSelection"
+          },
+          "minItems" : 1
+        },
+        "Count" : {
+          "$ref" : "#/definitions/AcceleratorCountRange"
+        }
+      },
+      "required" : [ "Selections" ],
+      "additionalProperties" : False
+    },
+    "Ec2MarketType" : {
+      "type" : "string",
+      "enum" : [ "on-demand", "spot" ]
+    },
+    "FleetAmountCapability" : {
+      "type" : "object",
+      "properties" : {
+        "Name" : {
+          "type" : "string",
+          "maxLength" : 100,
+          "minLength" : 1,
+          "pattern" : "^([a-zA-Z][a-zA-Z0-9]{0,63}:)?amount(\\.[a-zA-Z][a-zA-Z0-9]{0,63})+$"
+        },
+        "Min" : {
+          "type" : "number"
+        },
+        "Max" : {
+          "type" : "number"
+        }
+      },
+      "required" : [ "Min", "Name" ],
+      "additionalProperties" : False
+    },
+    "FleetAttributeCapability" : {
+      "type" : "object",
+      "properties" : {
+        "Name" : {
+          "type" : "string",
+          "maxLength" : 100,
+          "minLength" : 1,
+          "pattern" : "^([a-zA-Z][a-zA-Z0-9]{0,63}:)?attr(\\.[a-zA-Z][a-zA-Z0-9]{0,63})+$"
+        },
+        "Values" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string",
+            "maxLength" : 100,
+            "minLength" : 1,
+            "pattern" : "^[a-zA-Z_]([a-zA-Z0-9_\\-]{0,99})$"
+          },
+          "maxItems" : 10,
+          "minItems" : 1
+        }
+      },
+      "required" : [ "Name", "Values" ],
+      "additionalProperties" : False
+    },
+    "FleetCapabilities" : {
+      "type" : "object",
+      "properties" : {
+        "Amounts" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/FleetAmountCapability"
+          },
+          "maxItems" : 15,
+          "minItems" : 1
+        },
+        "Attributes" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/FleetAttributeCapability"
+          },
+          "maxItems" : 15,
+          "minItems" : 1
+        }
+      },
+      "additionalProperties" : False
+    },
+    "FleetConfiguration" : {
+      "oneOf" : [ {
+        "type" : "object",
+        "title" : "CustomerManaged",
+        "properties" : {
+          "CustomerManaged" : {
+            "$ref" : "#/definitions/CustomerManagedFleetConfiguration"
+          }
+        },
+        "required" : [ "CustomerManaged" ],
+        "additionalProperties" : False
+      }, {
+        "type" : "object",
+        "title" : "ServiceManagedEc2",
+        "properties" : {
+          "ServiceManagedEc2" : {
+            "$ref" : "#/definitions/ServiceManagedEc2FleetConfiguration"
+          }
+        },
+        "required" : [ "ServiceManagedEc2" ],
+        "additionalProperties" : False
+      } ]
+    },
+    "FleetStatus" : {
+      "type" : "string",
+      "enum" : [ "ACTIVE", "CREATE_IN_PROGRESS", "UPDATE_IN_PROGRESS", "CREATE_FAILED", "UPDATE_FAILED" ]
+    },
+    "HostConfiguration" : {
+      "type" : "object",
+      "properties" : {
+        "ScriptBody" : {
+          "type" : "string",
+          "maxLength" : 15000,
+          "minLength" : 0
+        },
+        "ScriptTimeoutSeconds" : {
+          "type" : "integer",
+          "default" : 300,
+          "maximum" : 3600,
+          "minimum" : 300
+        }
+      },
+      "required" : [ "ScriptBody" ],
+      "additionalProperties" : False
+    },
+    "MemoryMiBRange" : {
+      "type" : "object",
+      "properties" : {
+        "Min" : {
+          "type" : "integer",
+          "maximum" : 2147483647,
+          "minimum" : 512
+        },
+        "Max" : {
+          "type" : "integer",
+          "maximum" : 2147483647,
+          "minimum" : 512
+        }
+      },
+      "required" : [ "Min" ],
+      "additionalProperties" : False
+    },
+    "ServiceManagedEc2FleetConfiguration" : {
+      "type" : "object",
+      "properties" : {
+        "InstanceCapabilities" : {
+          "$ref" : "#/definitions/ServiceManagedEc2InstanceCapabilities"
+        },
+        "InstanceMarketOptions" : {
+          "$ref" : "#/definitions/ServiceManagedEc2InstanceMarketOptions"
+        }
+      },
+      "required" : [ "InstanceCapabilities", "InstanceMarketOptions" ],
+      "additionalProperties" : False
+    },
+    "ServiceManagedEc2InstanceMarketOptions" : {
+      "type" : "object",
+      "properties" : {
+        "Type" : {
+          "$ref" : "#/definitions/Ec2MarketType"
+        }
+      },
+      "required" : [ "Type" ],
+      "additionalProperties" : False
+    },
+    "ServiceManagedEc2InstanceCapabilities" : {
+      "type" : "object",
+      "properties" : {
+        "VCpuCount" : {
+          "$ref" : "#/definitions/VCpuCountRange"
+        },
+        "MemoryMiB" : {
+          "$ref" : "#/definitions/MemoryMiBRange"
+        },
+        "OsFamily" : {
+          "$ref" : "#/definitions/ServiceManagedFleetOperatingSystemFamily"
+        },
+        "CpuArchitectureType" : {
+          "$ref" : "#/definitions/CpuArchitectureType"
+        },
+        "RootEbsVolume" : {
+          "$ref" : "#/definitions/Ec2EbsVolume"
+        },
+        "AcceleratorCapabilities" : {
+          "$ref" : "#/definitions/AcceleratorCapabilities"
+        },
+        "AllowedInstanceTypes" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string",
+            "pattern" : "^[a-zA-Z0-9]+\\.[a-zA-Z0-9]+$"
+          },
+          "maxItems" : 100,
+          "minItems" : 1
+        },
+        "ExcludedInstanceTypes" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string",
+            "pattern" : "^[a-zA-Z0-9]+\\.[a-zA-Z0-9]+$"
+          },
+          "maxItems" : 100,
+          "minItems" : 1
+        },
+        "CustomAmounts" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/FleetAmountCapability"
+          },
+          "maxItems" : 15,
+          "minItems" : 1
+        },
+        "CustomAttributes" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/FleetAttributeCapability"
+          },
+          "maxItems" : 15,
+          "minItems" : 1
+        }
+      },
+      "required" : [ "CpuArchitectureType", "MemoryMiB", "OsFamily", "VCpuCount" ],
+      "additionalProperties" : False
+    },
+    "ServiceManagedFleetOperatingSystemFamily" : {
+      "type" : "string",
+      "enum" : [ "LINUX", "WINDOWS" ]
+    },
+    "TagPropagationMode" : {
+      "type" : "string",
+      "enum" : [ "NO_PROPAGATION", "PROPAGATE_TAGS_TO_WORKERS_AT_LAUNCH" ]
+    },
+    "Tag" : {
+      "description" : "A key-value pair to associate with a resource.",
+      "type" : "object",
+      "properties" : {
+        "Key" : {
+          "type" : "string",
+          "description" : "The key name of the tag. You can specify a value that is 1 to 127 Unicode characters in length and cannot be prefixed with aws:. You can use any of the following characters: the set of Unicode letters, digits, whitespace, _, ., /, =, +, and -. ",
+          "minLength" : 1,
+          "maxLength" : 127
+        },
+        "Value" : {
+          "type" : "string",
+          "description" : "The value for the tag. You can specify a value that is 1 to 255 Unicode characters in length and cannot be prefixed with aws:. You can use any of the following characters: the set of Unicode letters, digits, whitespace, _, ., /, =, +, and -. ",
+          "minLength" : 1,
+          "maxLength" : 255
+        }
+      },
+      "required" : [ "Key", "Value" ],
+      "additionalProperties" : False
+    },
+    "VCpuCountRange" : {
+      "type" : "object",
+      "properties" : {
+        "Min" : {
+          "type" : "integer",
+          "maximum" : 10000,
+          "minimum" : 1
+        },
+        "Max" : {
+          "type" : "integer",
+          "maximum" : 10000,
+          "minimum" : 1
+        }
+      },
+      "required" : [ "Min" ],
+      "additionalProperties" : False
+    }
+  },
+  "properties" : {
+    "Capabilities" : {
+      "$ref" : "#/definitions/FleetCapabilities"
+    },
+    "Configuration" : {
+      "$ref" : "#/definitions/FleetConfiguration"
+    },
+    "Description" : {
+      "type" : "string",
+      "default" : "",
+      "maxLength" : 100,
+      "minLength" : 0
+    },
+    "DisplayName" : {
+      "type" : "string",
+      "maxLength" : 100,
+      "minLength" : 1
+    },
+    "FarmId" : {
+      "type" : "string",
+      "pattern" : "^farm-[0-9a-f]{32}$"
+    },
+    "FleetId" : {
+      "type" : "string",
+      "pattern" : "^fleet-[0-9a-f]{32}$"
+    },
+    "HostConfiguration" : {
+      "$ref" : "#/definitions/HostConfiguration"
+    },
+    "MaxWorkerCount" : {
+      "type" : "integer",
+      "maximum" : 2147483647,
+      "minimum" : 0
+    },
+    "MinWorkerCount" : {
+      "type" : "integer",
+      "default" : 0,
+      "maximum" : 2147483647,
+      "minimum" : 0
+    },
+    "RoleArn" : {
+      "type" : "string",
+      "pattern" : "^arn:(aws[a-zA-Z-]*):iam::\\d{12}:role(/[!-.0-~]+)*/[\\w+=,.@-]+$"
+    },
+    "Status" : {
+      "$ref" : "#/definitions/FleetStatus"
+    },
+    "WorkerCount" : {
+      "type" : "integer"
+    },
+    "Arn" : {
+      "type" : "string",
+      "pattern" : "^arn:(aws[a-zA-Z-]*):deadline:[a-z0-9-]+:[0-9]+:farm/farm-[0-9a-z]{32}/fleet/fleet-[0-9a-z]{32}"
+    },
+    "Tags" : {
+      "type" : "array",
+      "maxItems" : 50,
+      "description" : "An array of key-value pairs to apply to this resource.",
+      "items" : {
+        "$ref" : "#/definitions/Tag"
+      },
+      "insertionOrder" : False,
+      "uniqueItems" : True
+    }
+  },
+  "required" : [ "Configuration", "DisplayName", "FarmId", "MaxWorkerCount", "RoleArn" ],
+  "readOnlyProperties" : [ "/properties/Capabilities", "/properties/FleetId", "/properties/Status", "/properties/WorkerCount", "/properties/Arn" ],
+  "createOnlyProperties" : [ "/properties/FarmId" ],
+  "primaryIdentifier" : [ "/properties/Arn" ],
+  "tagging" : {
+    "taggable" : True,
+    "tagOnCreate" : True,
+    "tagUpdatable" : True,
+    "cloudFormationSystemTags" : True,
+    "tagProperty" : "/properties/Tags",
+    "permissions" : [ "deadline:TagResource", "deadline:UntagResource", "deadline:ListTagsForResource" ]
+  },
+  "handlers" : {
+    "create" : {
+      "permissions" : [ "deadline:CreateFleet", "deadline:GetFleet", "iam:PassRole", "identitystore:ListGroupMembershipsForMember", "logs:CreateLogGroup", "deadline:TagResource", "deadline:ListTagsForResource" ]
+    },
+    "read" : {
+      "permissions" : [ "deadline:GetFleet", "identitystore:ListGroupMembershipsForMember", "deadline:ListTagsForResource" ]
+    },
+    "update" : {
+      "permissions" : [ "deadline:UpdateFleet", "deadline:GetFleet", "iam:PassRole", "identitystore:ListGroupMembershipsForMember", "deadline:TagResource", "deadline:UntagResource", "deadline:ListTagsForResource" ]
+    },
+    "delete" : {
+      "permissions" : [ "deadline:DeleteFleet", "deadline:GetFleet", "identitystore:ListGroupMembershipsForMember" ]
+    },
+    "list" : {
+      "handlerSchema" : {
+        "properties" : {
+          "FarmId" : {
+            "$ref" : "resource-schema.json#/properties/FarmId"
+          }
+        },
+        "required" : [ "FarmId" ]
+      },
+      "permissions" : [ "deadline:ListFleets", "identitystore:DescribeGroup", "identitystore:DescribeUser", "identitystore:ListGroupMembershipsForMember" ]
+    }
+  },
+  "additionalProperties" : False
+}

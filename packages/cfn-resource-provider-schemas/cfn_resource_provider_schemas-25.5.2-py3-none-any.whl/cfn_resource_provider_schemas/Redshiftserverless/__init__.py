@@ -1,0 +1,2 @@
+from cfn_resource_provider_schemas.Redshiftserverless.Namespace import SCHEMA as Namespace
+from cfn_resource_provider_schemas.Redshiftserverless.Workgroup import SCHEMA as Workgroup

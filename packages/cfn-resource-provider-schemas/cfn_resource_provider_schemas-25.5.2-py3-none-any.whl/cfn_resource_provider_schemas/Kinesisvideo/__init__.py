@@ -1,0 +1,2 @@
+from cfn_resource_provider_schemas.Kinesisvideo.Signalingchannel import SCHEMA as Signalingchannel
+from cfn_resource_provider_schemas.Kinesisvideo.Stream import SCHEMA as Stream

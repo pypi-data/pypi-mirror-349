@@ -1,0 +1,1 @@
+from cfn_resource_provider_schemas.Applicationinsights.Application import SCHEMA as Application

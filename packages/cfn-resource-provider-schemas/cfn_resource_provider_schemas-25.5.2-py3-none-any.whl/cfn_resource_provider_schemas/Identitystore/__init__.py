@@ -1,0 +1,2 @@
+from cfn_resource_provider_schemas.Identitystore.Group import SCHEMA as Group
+from cfn_resource_provider_schemas.Identitystore.Groupmembership import SCHEMA as Groupmembership

@@ -1,0 +1,6 @@
+from cfn_resource_provider_schemas.Memorydb.Acl import SCHEMA as Acl
+from cfn_resource_provider_schemas.Memorydb.Cluster import SCHEMA as Cluster
+from cfn_resource_provider_schemas.Memorydb.Multiregioncluster import SCHEMA as Multiregioncluster
+from cfn_resource_provider_schemas.Memorydb.Parametergroup import SCHEMA as Parametergroup
+from cfn_resource_provider_schemas.Memorydb.Subnetgroup import SCHEMA as Subnetgroup
+from cfn_resource_provider_schemas.Memorydb.User import SCHEMA as User

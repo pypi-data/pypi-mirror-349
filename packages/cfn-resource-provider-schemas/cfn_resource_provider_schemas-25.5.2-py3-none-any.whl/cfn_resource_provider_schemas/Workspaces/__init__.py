@@ -1,0 +1,3 @@
+from cfn_resource_provider_schemas.Workspaces.Connectionalias import SCHEMA as Connectionalias
+from cfn_resource_provider_schemas.Workspaces.Workspace import SCHEMA as Workspace
+from cfn_resource_provider_schemas.Workspaces.Workspacespool import SCHEMA as Workspacespool

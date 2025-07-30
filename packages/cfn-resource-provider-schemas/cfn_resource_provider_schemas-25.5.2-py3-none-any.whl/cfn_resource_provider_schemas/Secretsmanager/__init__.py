@@ -1,0 +1,4 @@
+from cfn_resource_provider_schemas.Secretsmanager.Resourcepolicy import SCHEMA as Resourcepolicy
+from cfn_resource_provider_schemas.Secretsmanager.Rotationschedule import SCHEMA as Rotationschedule
+from cfn_resource_provider_schemas.Secretsmanager.Secret import SCHEMA as Secret
+from cfn_resource_provider_schemas.Secretsmanager.Secrettargetattachment import SCHEMA as Secrettargetattachment

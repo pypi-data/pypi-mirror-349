@@ -1,0 +1,2 @@
+from cfn_resource_provider_schemas.Arczonalshift.Autoshiftobservernotificationstatus import SCHEMA as Autoshiftobservernotificationstatus
+from cfn_resource_provider_schemas.Arczonalshift.Zonalautoshiftconfiguration import SCHEMA as Zonalautoshiftconfiguration

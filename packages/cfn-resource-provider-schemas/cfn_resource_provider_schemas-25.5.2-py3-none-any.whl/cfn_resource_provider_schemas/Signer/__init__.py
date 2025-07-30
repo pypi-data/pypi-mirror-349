@@ -1,0 +1,2 @@
+from cfn_resource_provider_schemas.Signer.Profilepermission import SCHEMA as Profilepermission
+from cfn_resource_provider_schemas.Signer.Signingprofile import SCHEMA as Signingprofile

@@ -1,0 +1,11 @@
+from cfn_resource_provider_schemas.Wafregional.Bytematchset import SCHEMA as Bytematchset
+from cfn_resource_provider_schemas.Wafregional.Geomatchset import SCHEMA as Geomatchset
+from cfn_resource_provider_schemas.Wafregional.Ipset import SCHEMA as Ipset
+from cfn_resource_provider_schemas.Wafregional.Ratebasedrule import SCHEMA as Ratebasedrule
+from cfn_resource_provider_schemas.Wafregional.Regexpatternset import SCHEMA as Regexpatternset
+from cfn_resource_provider_schemas.Wafregional.Rule import SCHEMA as Rule
+from cfn_resource_provider_schemas.Wafregional.Sizeconstraintset import SCHEMA as Sizeconstraintset
+from cfn_resource_provider_schemas.Wafregional.Sqlinjectionmatchset import SCHEMA as Sqlinjectionmatchset
+from cfn_resource_provider_schemas.Wafregional.Webacl import SCHEMA as Webacl
+from cfn_resource_provider_schemas.Wafregional.Webaclassociation import SCHEMA as Webaclassociation
+from cfn_resource_provider_schemas.Wafregional.Xssmatchset import SCHEMA as Xssmatchset

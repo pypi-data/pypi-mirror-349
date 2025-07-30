@@ -1,0 +1,12 @@
+from cfn_resource_provider_schemas.Appsync.Api import SCHEMA as Api
+from cfn_resource_provider_schemas.Appsync.Apicache import SCHEMA as Apicache
+from cfn_resource_provider_schemas.Appsync.Apikey import SCHEMA as Apikey
+from cfn_resource_provider_schemas.Appsync.Channelnamespace import SCHEMA as Channelnamespace
+from cfn_resource_provider_schemas.Appsync.Datasource import SCHEMA as Datasource
+from cfn_resource_provider_schemas.Appsync.Domainname import SCHEMA as Domainname
+from cfn_resource_provider_schemas.Appsync.Domainnameapiassociation import SCHEMA as Domainnameapiassociation
+from cfn_resource_provider_schemas.Appsync.Functionconfiguration import SCHEMA as Functionconfiguration
+from cfn_resource_provider_schemas.Appsync.Graphqlapi import SCHEMA as Graphqlapi
+from cfn_resource_provider_schemas.Appsync.Graphqlschema import SCHEMA as Graphqlschema
+from cfn_resource_provider_schemas.Appsync.Resolver import SCHEMA as Resolver
+from cfn_resource_provider_schemas.Appsync.Sourceapiassociation import SCHEMA as Sourceapiassociation

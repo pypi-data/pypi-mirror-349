@@ -1,0 +1,5 @@
+from cfn_resource_provider_schemas.Servicediscovery.Httpnamespace import SCHEMA as Httpnamespace
+from cfn_resource_provider_schemas.Servicediscovery.Instance import SCHEMA as Instance
+from cfn_resource_provider_schemas.Servicediscovery.Privatednsnamespace import SCHEMA as Privatednsnamespace
+from cfn_resource_provider_schemas.Servicediscovery.Publicdnsnamespace import SCHEMA as Publicdnsnamespace
+from cfn_resource_provider_schemas.Servicediscovery.Service import SCHEMA as Service

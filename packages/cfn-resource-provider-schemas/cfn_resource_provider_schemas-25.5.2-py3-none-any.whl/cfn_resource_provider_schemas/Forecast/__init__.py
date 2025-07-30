@@ -1,0 +1,2 @@
+from cfn_resource_provider_schemas.Forecast.Dataset import SCHEMA as Dataset
+from cfn_resource_provider_schemas.Forecast.Datasetgroup import SCHEMA as Datasetgroup

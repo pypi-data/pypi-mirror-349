@@ -1,0 +1,95 @@
+SCHEMA = {
+  "typeName" : "AWS::IoT::Authorizer",
+  "description" : "Creates an authorizer.",
+  "sourceUrl" : "https://github.com/aws-cloudformation/aws-cloudformation-rpdk.git",
+  "definitions" : {
+    "Tag" : {
+      "type" : "object",
+      "properties" : {
+        "Key" : {
+          "type" : "string"
+        },
+        "Value" : {
+          "type" : "string"
+        }
+      },
+      "additionalProperties" : False,
+      "required" : [ "Key", "Value" ]
+    }
+  },
+  "properties" : {
+    "AuthorizerFunctionArn" : {
+      "type" : "string"
+    },
+    "Arn" : {
+      "type" : "string"
+    },
+    "AuthorizerName" : {
+      "type" : "string",
+      "pattern" : "[\\w=,@-]+",
+      "minLength" : 1,
+      "maxLength" : 128
+    },
+    "SigningDisabled" : {
+      "type" : "boolean"
+    },
+    "Status" : {
+      "type" : "string",
+      "enum" : [ "ACTIVE", "INACTIVE" ]
+    },
+    "TokenKeyName" : {
+      "type" : "string"
+    },
+    "TokenSigningPublicKeys" : {
+      "type" : "object",
+      "additionalProperties" : False,
+      "patternProperties" : {
+        "[a-zA-Z0-9:_-]+" : {
+          "type" : "string",
+          "maxLength" : 5120
+        }
+      }
+    },
+    "EnableCachingForHttp" : {
+      "type" : "boolean"
+    },
+    "Tags" : {
+      "type" : "array",
+      "uniqueItems" : True,
+      "insertionOrder" : False,
+      "items" : {
+        "$ref" : "#/definitions/Tag"
+      }
+    }
+  },
+  "tagging" : {
+    "taggable" : True,
+    "tagOnCreate" : True,
+    "tagUpdatable" : True,
+    "cloudFormationSystemTags" : True,
+    "tagProperty" : "/properties/Tags",
+    "permissions" : [ "iot:ListTagsForResource", "iot:TagResource", "iot:UntagResource" ]
+  },
+  "additionalProperties" : False,
+  "required" : [ "AuthorizerFunctionArn" ],
+  "createOnlyProperties" : [ "/properties/SigningDisabled", "/properties/AuthorizerName" ],
+  "readOnlyProperties" : [ "/properties/Arn" ],
+  "primaryIdentifier" : [ "/properties/AuthorizerName" ],
+  "handlers" : {
+    "create" : {
+      "permissions" : [ "iot:CreateAuthorizer", "iot:DescribeAuthorizer", "iot:TagResource", "iot:ListTagsForResource" ]
+    },
+    "read" : {
+      "permissions" : [ "iot:DescribeAuthorizer", "iot:ListTagsForResource" ]
+    },
+    "update" : {
+      "permissions" : [ "iot:UpdateAuthorizer", "iot:DescribeAuthorizer", "iot:TagResource", "iot:UntagResource", "iot:ListTagsForResource" ]
+    },
+    "delete" : {
+      "permissions" : [ "iot:UpdateAuthorizer", "iot:DeleteAuthorizer", "iot:DescribeAuthorizer" ]
+    },
+    "list" : {
+      "permissions" : [ "iot:ListAuthorizers" ]
+    }
+  }
+}

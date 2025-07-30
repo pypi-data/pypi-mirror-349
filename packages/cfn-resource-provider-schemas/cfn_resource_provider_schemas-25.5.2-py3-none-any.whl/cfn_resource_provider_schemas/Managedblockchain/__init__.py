@@ -1,0 +1,2 @@
+from cfn_resource_provider_schemas.Managedblockchain.Member import SCHEMA as Member
+from cfn_resource_provider_schemas.Managedblockchain.Node import SCHEMA as Node

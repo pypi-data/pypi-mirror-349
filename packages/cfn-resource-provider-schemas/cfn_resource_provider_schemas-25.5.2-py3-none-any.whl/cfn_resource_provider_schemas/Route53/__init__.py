@@ -1,0 +1,7 @@
+from cfn_resource_provider_schemas.Route53.Cidrcollection import SCHEMA as Cidrcollection
+from cfn_resource_provider_schemas.Route53.Dnssec import SCHEMA as Dnssec
+from cfn_resource_provider_schemas.Route53.Healthcheck import SCHEMA as Healthcheck
+from cfn_resource_provider_schemas.Route53.Hostedzone import SCHEMA as Hostedzone
+from cfn_resource_provider_schemas.Route53.Keysigningkey import SCHEMA as Keysigningkey
+from cfn_resource_provider_schemas.Route53.Recordset import SCHEMA as Recordset
+from cfn_resource_provider_schemas.Route53.Recordsetgroup import SCHEMA as Recordsetgroup

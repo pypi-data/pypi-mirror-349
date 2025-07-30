@@ -1,0 +1,4 @@
+from cfn_resource_provider_schemas.Codebuild.Fleet import SCHEMA as Fleet
+from cfn_resource_provider_schemas.Codebuild.Project import SCHEMA as Project
+from cfn_resource_provider_schemas.Codebuild.Reportgroup import SCHEMA as Reportgroup
+from cfn_resource_provider_schemas.Codebuild.Sourcecredential import SCHEMA as Sourcecredential

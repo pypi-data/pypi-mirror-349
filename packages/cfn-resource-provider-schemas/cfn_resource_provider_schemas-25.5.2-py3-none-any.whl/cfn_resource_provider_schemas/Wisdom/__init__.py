@@ -1,0 +1,11 @@
+from cfn_resource_provider_schemas.Wisdom.Aiagent import SCHEMA as Aiagent
+from cfn_resource_provider_schemas.Wisdom.Aiagentversion import SCHEMA as Aiagentversion
+from cfn_resource_provider_schemas.Wisdom.Aiguardrail import SCHEMA as Aiguardrail
+from cfn_resource_provider_schemas.Wisdom.Aiguardrailversion import SCHEMA as Aiguardrailversion
+from cfn_resource_provider_schemas.Wisdom.Aiprompt import SCHEMA as Aiprompt
+from cfn_resource_provider_schemas.Wisdom.Aipromptversion import SCHEMA as Aipromptversion
+from cfn_resource_provider_schemas.Wisdom.Assistant import SCHEMA as Assistant
+from cfn_resource_provider_schemas.Wisdom.Assistantassociation import SCHEMA as Assistantassociation
+from cfn_resource_provider_schemas.Wisdom.Knowledgebase import SCHEMA as Knowledgebase
+from cfn_resource_provider_schemas.Wisdom.Messagetemplate import SCHEMA as Messagetemplate
+from cfn_resource_provider_schemas.Wisdom.Messagetemplateversion import SCHEMA as Messagetemplateversion

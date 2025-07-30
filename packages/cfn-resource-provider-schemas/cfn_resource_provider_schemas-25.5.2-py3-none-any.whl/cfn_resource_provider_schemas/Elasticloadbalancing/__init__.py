@@ -1,0 +1,1 @@
+from cfn_resource_provider_schemas.Elasticloadbalancing.Loadbalancer import SCHEMA as Loadbalancer

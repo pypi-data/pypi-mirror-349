@@ -1,0 +1,3 @@
+from cfn_resource_provider_schemas.Fms.Notificationchannel import SCHEMA as Notificationchannel
+from cfn_resource_provider_schemas.Fms.Policy import SCHEMA as Policy
+from cfn_resource_provider_schemas.Fms.Resourceset import SCHEMA as Resourceset

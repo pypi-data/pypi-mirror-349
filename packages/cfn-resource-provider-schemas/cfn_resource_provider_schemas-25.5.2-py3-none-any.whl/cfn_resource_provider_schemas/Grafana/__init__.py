@@ -1,0 +1,1 @@
+from cfn_resource_provider_schemas.Grafana.Workspace import SCHEMA as Workspace

@@ -1,0 +1,3 @@
+from cfn_resource_provider_schemas.Codestarconnections.Connection import SCHEMA as Connection
+from cfn_resource_provider_schemas.Codestarconnections.Repositorylink import SCHEMA as Repositorylink
+from cfn_resource_provider_schemas.Codestarconnections.Syncconfiguration import SCHEMA as Syncconfiguration

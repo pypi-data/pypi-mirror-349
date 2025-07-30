@@ -1,0 +1,5 @@
+from cfn_resource_provider_schemas.Iottwinmaker.Componenttype import SCHEMA as Componenttype
+from cfn_resource_provider_schemas.Iottwinmaker.Entity import SCHEMA as Entity
+from cfn_resource_provider_schemas.Iottwinmaker.Scene import SCHEMA as Scene
+from cfn_resource_provider_schemas.Iottwinmaker.Syncjob import SCHEMA as Syncjob
+from cfn_resource_provider_schemas.Iottwinmaker.Workspace import SCHEMA as Workspace

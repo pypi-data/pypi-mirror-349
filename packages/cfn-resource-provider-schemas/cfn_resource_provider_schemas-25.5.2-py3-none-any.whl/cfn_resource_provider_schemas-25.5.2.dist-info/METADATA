@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: cfn-resource-provider-schemas
+Version: 25.5.2
+Summary: AWS CFN Resource Properties JSON Schema definitions
+Project-URL: Repository, https://github.com/morph027/cfn-resource-provider-schemas
+Author-email: Stefan Heitmüller <stefan.heitmueller@gmx.com>
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+
+# Python importable [AWS CFN resource provider schemas](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/resource-type-schemas.html)
+
+Downloaded from [AWS](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/resource-type-schemas.html) and converted to python package.
+
+Usefule for schema validation using e.g. [jsonschema](https://pypi.org/project/jsonschema/).
+
+## Usage
+
+```python
+from cfn_resource_provider_schemas.Ecs import Taskdefinition
+```

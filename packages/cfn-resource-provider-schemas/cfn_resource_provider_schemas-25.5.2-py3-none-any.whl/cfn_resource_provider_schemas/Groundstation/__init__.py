@@ -1,0 +1,3 @@
+from cfn_resource_provider_schemas.Groundstation.Config import SCHEMA as Config
+from cfn_resource_provider_schemas.Groundstation.Dataflowendpointgroup import SCHEMA as Dataflowendpointgroup
+from cfn_resource_provider_schemas.Groundstation.Missionprofile import SCHEMA as Missionprofile

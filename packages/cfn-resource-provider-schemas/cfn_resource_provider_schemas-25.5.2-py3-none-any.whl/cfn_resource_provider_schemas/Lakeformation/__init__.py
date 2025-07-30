@@ -1,0 +1,7 @@
+from cfn_resource_provider_schemas.Lakeformation.Datacellsfilter import SCHEMA as Datacellsfilter
+from cfn_resource_provider_schemas.Lakeformation.Datalakesettings import SCHEMA as Datalakesettings
+from cfn_resource_provider_schemas.Lakeformation.Permissions import SCHEMA as Permissions
+from cfn_resource_provider_schemas.Lakeformation.Principalpermissions import SCHEMA as Principalpermissions
+from cfn_resource_provider_schemas.Lakeformation.Resource import SCHEMA as Resource
+from cfn_resource_provider_schemas.Lakeformation.Tag import SCHEMA as Tag
+from cfn_resource_provider_schemas.Lakeformation.Tagassociation import SCHEMA as Tagassociation

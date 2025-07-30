@@ -1,0 +1,5 @@
+from cfn_resource_provider_schemas.Docdb.Dbcluster import SCHEMA as Dbcluster
+from cfn_resource_provider_schemas.Docdb.Dbclusterparametergroup import SCHEMA as Dbclusterparametergroup
+from cfn_resource_provider_schemas.Docdb.Dbinstance import SCHEMA as Dbinstance
+from cfn_resource_provider_schemas.Docdb.Dbsubnetgroup import SCHEMA as Dbsubnetgroup
+from cfn_resource_provider_schemas.Docdb.Eventsubscription import SCHEMA as Eventsubscription

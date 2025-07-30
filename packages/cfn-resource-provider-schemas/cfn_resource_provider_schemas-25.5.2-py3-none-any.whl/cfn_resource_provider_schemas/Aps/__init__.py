@@ -1,0 +1,3 @@
+from cfn_resource_provider_schemas.Aps.Rulegroupsnamespace import SCHEMA as Rulegroupsnamespace
+from cfn_resource_provider_schemas.Aps.Scraper import SCHEMA as Scraper
+from cfn_resource_provider_schemas.Aps.Workspace import SCHEMA as Workspace

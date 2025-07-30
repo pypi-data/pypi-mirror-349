@@ -1,0 +1,3 @@
+from cfn_resource_provider_schemas.Supportapp.Accountalias import SCHEMA as Accountalias
+from cfn_resource_provider_schemas.Supportapp.Slackchannelconfiguration import SCHEMA as Slackchannelconfiguration
+from cfn_resource_provider_schemas.Supportapp.Slackworkspaceconfiguration import SCHEMA as Slackworkspaceconfiguration

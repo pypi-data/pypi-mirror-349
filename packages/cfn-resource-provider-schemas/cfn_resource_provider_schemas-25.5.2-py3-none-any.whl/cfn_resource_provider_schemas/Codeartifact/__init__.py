@@ -1,0 +1,3 @@
+from cfn_resource_provider_schemas.Codeartifact.Domain import SCHEMA as Domain
+from cfn_resource_provider_schemas.Codeartifact.Packagegroup import SCHEMA as Packagegroup
+from cfn_resource_provider_schemas.Codeartifact.Repository import SCHEMA as Repository

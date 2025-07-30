@@ -1,0 +1,3 @@
+from cfn_resource_provider_schemas.Inspector.Assessmenttarget import SCHEMA as Assessmenttarget
+from cfn_resource_provider_schemas.Inspector.Assessmenttemplate import SCHEMA as Assessmenttemplate
+from cfn_resource_provider_schemas.Inspector.Resourcegroup import SCHEMA as Resourcegroup

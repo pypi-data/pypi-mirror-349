@@ -1,0 +1,2 @@
+from cfn_resource_provider_schemas.Resourcegroups.Group import SCHEMA as Group
+from cfn_resource_provider_schemas.Resourcegroups.Tagsynctask import SCHEMA as Tagsynctask

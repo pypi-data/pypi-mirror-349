@@ -1,0 +1,3 @@
+from cfn_resource_provider_schemas.Rekognition.Collection import SCHEMA as Collection
+from cfn_resource_provider_schemas.Rekognition.Project import SCHEMA as Project
+from cfn_resource_provider_schemas.Rekognition.Streamprocessor import SCHEMA as Streamprocessor

@@ -1,0 +1,1 @@
+from cfn_resource_provider_schemas.Mediastore.Container import SCHEMA as Container

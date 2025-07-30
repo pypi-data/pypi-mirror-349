@@ -1,0 +1,1 @@
+from cfn_resource_provider_schemas.Accessanalyzer.Analyzer import SCHEMA as Analyzer

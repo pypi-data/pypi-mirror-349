@@ -1,0 +1,4 @@
+from cfn_resource_provider_schemas.Refactorspaces.Application import SCHEMA as Application
+from cfn_resource_provider_schemas.Refactorspaces.Environment import SCHEMA as Environment
+from cfn_resource_provider_schemas.Refactorspaces.Route import SCHEMA as Route
+from cfn_resource_provider_schemas.Refactorspaces.Service import SCHEMA as Service

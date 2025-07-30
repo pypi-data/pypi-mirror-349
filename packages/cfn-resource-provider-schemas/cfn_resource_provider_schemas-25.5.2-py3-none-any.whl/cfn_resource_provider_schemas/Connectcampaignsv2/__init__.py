@@ -1,0 +1,1 @@
+from cfn_resource_provider_schemas.Connectcampaignsv2.Campaign import SCHEMA as Campaign
