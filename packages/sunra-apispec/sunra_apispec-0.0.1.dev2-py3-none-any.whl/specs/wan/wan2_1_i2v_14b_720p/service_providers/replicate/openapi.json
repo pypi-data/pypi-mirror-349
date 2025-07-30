@@ -1,0 +1,252 @@
+{
+  "openapi": "3.0.2",
+  "components": {
+      "schemas": {
+          "Input": {
+              "type": "object",
+              "title": "Input",
+              "required": [
+                  "prompt"
+              ],
+              "properties": {
+                  "seed": {
+                      "type": "integer",
+                      "title": "Seed",
+                      "x-order": 8,
+                      "description": "Random seed. Leave blank for random"
+                  },
+                  "prompt": {
+                      "type": "string",
+                      "title": "Prompt",
+                      "x-order": 0,
+                      "description": "Prompt for video generation"
+                  },
+                  "fast_mode": {
+                      "allOf": [
+                          {
+                              "$ref": "#/components/schemas/fast_mode"
+                          }
+                      ],
+                      "default": "Balanced",
+                      "x-order": 4,
+                      "description": "Speed up generation with different levels of acceleration. Faster modes may degrade quality somewhat. The speedup is dependent on the content, so different videos may see different speedups."
+                  },
+                  "lora_scale": {
+                      "type": "number",
+                      "title": "Lora Scale",
+                      "default": 1,
+                      "x-order": 10,
+                      "description": "Determines how strongly the main LoRA should be applied. Sane results between 0 and 1 for base inference. For go_fast we apply a 1.5x multiplier to this value; we've generally seen good performance when scaling the base value by that amount. You may still need to experiment to find the best value for your particular lora."
+                  },
+                  "num_frames": {
+                      "type": "integer",
+                      "title": "Num Frames",
+                      "default": 81,
+                      "maximum": 100,
+                      "minimum": 81,
+                      "x-order": 1,
+                      "description": "Number of video frames. 81 frames give the best results"
+                  },
+                  "aspect_ratio": {
+                      "allOf": [
+                          {
+                              "$ref": "#/components/schemas/aspect_ratio"
+                          }
+                      ],
+                      "default": "16:9",
+                      "x-order": 2,
+                      "description": "Aspect ratio of video. 16:9 corresponds to 1280x720px, 9:16 is 720x1280px, and 1:1 is 1024x1024px"
+                  },
+                  "lora_weights": {
+                      "type": "string",
+                      "title": "Lora Weights",
+                      "x-order": 9,
+                      "description": "Load LoRA weights. Supports Replicate models in the format \u003Cowner\u003E/\u003Cusername\u003E or \u003Cowner\u003E/\u003Cusername\u003E/\u003Cversion\u003E, HuggingFace URLs in the format huggingface.co/\u003Cowner\u003E/\u003Cmodel-name\u003E, CivitAI URLs in the format civitai.com/models/\u003Cid\u003E[/\u003Cmodel-name\u003E], or arbitrary .safetensors URLs from the Internet. For example, 'fofr/flux-pixar-cars'"
+                  },
+                  "sample_shift": {
+                      "type": "number",
+                      "title": "Sample Shift",
+                      "default": 5,
+                      "maximum": 10,
+                      "minimum": 1,
+                      "x-order": 7,
+                      "description": "Sample shift factor"
+                  },
+                  "sample_steps": {
+                      "type": "integer",
+                      "title": "Sample Steps",
+                      "default": 30,
+                      "maximum": 40,
+                      "minimum": 1,
+                      "x-order": 5,
+                      "description": "Number of generation steps. Fewer steps means faster generation, at the expensive of output quality. 30 steps is sufficient for most prompts"
+                  },
+                  "frames_per_second": {
+                      "type": "integer",
+                      "title": "Frames Per Second",
+                      "default": 16,
+                      "maximum": 24,
+                      "minimum": 5,
+                      "x-order": 3,
+                      "description": "Frames per second. Note that the pricing of this model is based on the video duration at 16 fps"
+                  },
+                  "sample_guide_scale": {
+                      "type": "number",
+                      "title": "Sample Guide Scale",
+                      "default": 5,
+                      "maximum": 10,
+                      "minimum": 0,
+                      "x-order": 6,
+                      "description": "Higher guide scale makes prompt adherence better, but can reduce variation"
+                  }
+              }
+          },
+          "Output": {
+              "type": "string",
+              "title": "Output",
+              "format": "uri"
+          },
+          "Status": {
+              "enum": [
+                  "starting",
+                  "processing",
+                  "succeeded",
+                  "canceled",
+                  "failed"
+              ],
+              "type": "string",
+              "title": "Status",
+              "description": "An enumeration."
+          },
+          "fast_mode": {
+              "enum": [
+                  "Off",
+                  "Balanced",
+                  "Fast"
+              ],
+              "type": "string",
+              "title": "fast_mode",
+              "description": "An enumeration."
+          },
+          "WebhookEvent": {
+              "enum": [
+                  "start",
+                  "output",
+                  "logs",
+                  "completed"
+              ],
+              "type": "string",
+              "title": "WebhookEvent",
+              "description": "An enumeration."
+          },
+          "aspect_ratio": {
+              "enum": [
+                  "16:9",
+                  "9:16",
+                  "1:1"
+              ],
+              "type": "string",
+              "title": "aspect_ratio",
+              "description": "An enumeration."
+          },
+          "ValidationError": {
+              "type": "object",
+              "title": "ValidationError",
+              "required": [
+                  "loc",
+                  "msg",
+                  "type"
+              ],
+              "properties": {
+                  "loc": {
+                      "type": "array",
+                      "items": {
+                          "anyOf": [
+                              {
+                                  "type": "string"
+                              },
+                              {
+                                  "type": "integer"
+                              }
+                          ]
+                      },
+                      "title": "Location"
+                  },
+                  "msg": {
+                      "type": "string",
+                      "title": "Message"
+                  },
+                  "type": {
+                      "type": "string",
+                      "title": "Error Type"
+                  }
+              }
+          },
+          "PredictionResponse": {
+              "type": "object",
+              "title": "PredictionResponse",
+              "properties": {
+                  "id": {
+                      "type": "string",
+                      "title": "Id"
+                  },
+                  "logs": {
+                      "type": "string",
+                      "title": "Logs",
+                      "default": ""
+                  },
+                  "error": {
+                      "type": "string",
+                      "title": "Error"
+                  },
+                  "input": {
+                      "$ref": "#/components/schemas/Input"
+                  },
+                  "output": {
+                      "$ref": "#/components/schemas/Output"
+                  },
+                  "status": {
+                      "$ref": "#/components/schemas/Status"
+                  },
+                  "metrics": {
+                      "type": "object",
+                      "title": "Metrics",
+                      "additionalProperties": true
+                  },
+                  "version": {
+                      "type": "string",
+                      "title": "Version"
+                  },
+                  "created_at": {
+                      "type": "string",
+                      "title": "Created At",
+                      "format": "date-time"
+                  },
+                  "started_at": {
+                      "type": "string",
+                      "title": "Started At",
+                      "format": "date-time"
+                  },
+                  "completed_at": {
+                      "type": "string",
+                      "title": "Completed At",
+                      "format": "date-time"
+                  }
+              }
+          },
+          "HTTPValidationError": {
+              "type": "object",
+              "title": "HTTPValidationError",
+              "properties": {
+                  "detail": {
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/components/schemas/ValidationError"
+                      },
+                      "title": "Detail"
+                  }
+              }
+          }
+      }
+  }
+}
