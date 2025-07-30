@@ -1,0 +1,7 @@
+LICENSE.txt
+pyproject.toml
+setup.py
+financa_py.egg-info/PKG-INFO
+financa_py.egg-info/SOURCES.txt
+financa_py.egg-info/dependency_links.txt
+financa_py.egg-info/top_level.txt

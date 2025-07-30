@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: financa_py
+Version: 0.0.1
+Summary: este é meu primeiro projeto no pypi
+Author: Douglas Faria
+Author-email: douglasfariasil14@gmail.com
+License: MIT License
+Keywords: financa_py
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: keywords
+Dynamic: license
+Dynamic: license-file
+Dynamic: summary
+
+readme

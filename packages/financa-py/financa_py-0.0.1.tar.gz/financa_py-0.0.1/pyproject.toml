@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "financa-py"
+version = "0.1.0"
+description = "este é meu primeiro projeto no pypi"
+authors = ["douglasfariasil <douglasfariasil@outlook.com>"]
+license = "y"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+twine = "^6.1.0"
+setuptools = "^80.8.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
