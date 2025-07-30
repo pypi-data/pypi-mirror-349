@@ -1,0 +1,8 @@
+boringcatalog/__init__.py,sha256=cS6UwSLi4k9pZwP3QXIY9UoY62inkpfvc3Ux_hT54JE,119
+boringcatalog/catalog.py,sha256=N_kg4IGUABkbdLq2MPhUrYlW7_BMpcPRqaSdybPIpdI,20596
+boringcatalog/cli.py,sha256=RDkzMwJ5ahA2fnhxM8qs_vQErdkORXPdLyHBGh5SiYQ,15699
+boringcatalog/duckdb_init.sql,sha256=tUZR9LJPgAFXFeG03C4rmhHkd2f27Ph_ziXnND_QOvo,2604
+boringcatalog-0.4.0.dist-info/METADATA,sha256=RRgaQfkv-l5Lkqe5yplcDoz9ee62XYLBS1syPeOV42w,6330
+boringcatalog-0.4.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+boringcatalog-0.4.0.dist-info/entry_points.txt,sha256=7L_p4iWL2-JT2EOxiDzEF4WaNmL46AoPZHrR6Q-n0jU,46
+boringcatalog-0.4.0.dist-info/RECORD,,
