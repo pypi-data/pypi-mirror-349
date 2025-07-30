@@ -1,0 +1,23 @@
+2024-10-04T01:25:27+01:00 my_add_blocker pihole Oct  4 01:25:27 dnsmasq[421]: started, version pi-hole-v2.90+1 cachesize 10000
+2024-10-04T01:25:27+01:00 my_add_blocker pihole Oct  4 01:25:27 dnsmasq[421]: using only locally-known addresses for localhost
+2024-10-04T01:25:29+01:00 my_add_blocker pihole Oct  4 01:25:29 dnsmasq[421]: using nameserver 8.8.4.4#53
+2024-10-05T00:00:06+01:00 my_add_blocker pihole Oct  5 00:00:06 dnsmasq[421]: cached fakewebsite.com is NODATA-IPv6
+2024-10-05T01:08:17+01:00 my_add_blocker pihole Oct  5 01:08:17 dnsmasq[421]: config my_streaming_device is NODATA-IPv6
+2024-10-05T03:42:33+01:00 my_add_blocker pihole Oct  5 03:42:33 dnsmasq[421]: special domain mask.whatever.org is NXDOMAIN
+2024-10-05T04:03:22+01:00 my_add_blocker pihole Oct  5 04:03:22 dnsmasq[421]: exactly blacklisted dumbwebsite.com is NODATA
+2024-10-05T05:00:06+01:00 my_add_blocker pihole Oct  5 05:00:06 dnsmasq[421]: forwarded whatisthis.com to 8.8.8.8
+2024-10-05T06:06:10+01:00 my_add_blocker pihole Oct  5 06:06:10 dnsmasq[421]: gravity blocked spyware.com is NODATA
+2024-10-05T08:30:18+01:00 my_add_blocker pihole Oct  5 08:30:18 dnsmasq[421]: /etc/hosts 10.87.2.13 is some_device
+2024-10-05T09:00:06+01:00 my_add_blocker pihole Oct  5 09:00:06 dnsmasq[421]: query[A] queried_website.com from 10.86.32.102
+2024-10-05T10:00:06+01:00 my_add_blocker pihole Oct  5 10:00:06 dnsmasq[421]: reply fake_thing.com is <CNAME>
+2024-10-14T15:44:32+01:00 my_add_blocker pihole Oct 14 15:44:32 dnsmasq[421]: reply is truncated
+2024-10-18T01:25:25+01:00 my_add_blocker pihole Oct 18 01:25:25 dnsmasq[422]: compile time options: misc_fake_info other_fake_info ipv6
+2024-10-19T07:05:16+01:00 my_add_blocker pihole Oct 19 07:05:16 dnsmasq[422]: Pi-hole hostname MY_Host_name is fe80::37a:10ff:fdd9:9e9b
+2024-10-20T04:03:15+01:00 my_add_blocker pihole Oct 20 04:03:15 dnsmasq[422]: read /fake_path/fake_pihole_pihole/custom.list - 0 names
+2024-11-23T12:31:34+01:00 my_add_blocker pihole Nov 23 12:31:34 dnsmasq[420]: Rate-limiting support.mozilla.org is REFUSED (EDE: blocked)
+2025-02-19T20:32:21+01:00 my_add_blocker piFTL 2025-02-19 20:32:21.326 EST [23465/T23485] ERROR: Failed to receive data from NTP server pool.ntp.org (172.234.37.140): Timeout
+2025-02-19T22:32:11+01:00 my_add_blocker piFTL 2025-02-19 22:32:11.294 EST [23465/T23485] INFO: Time offset: -2.674661e+01 ms (excluded 1 outliers)
+2025-02-19T23:55:47+01:00 my_add_blocker pihole Feb 19 23:55:47 dnsmasq[23465]: exactly denied web.thing.com is 0.0.0.0
+2025-02-19T23:59:15+01:00 my_add_blocker pihole Feb 19 23:59:15 dnsmasq[23465]: cached-stale fake.com is NODATA-IPv4
+2025-02-24T05:24:27+01:00 my_add_blocker pihole Feb 24 05:24:27 dnsmasq[30260]: exiting on receipt of SIGTERM
+2025-03-01T05:18:17+01:00 my_add_blocker pihole-FTL[23035]: 2025-03-01 05:18:17.276 MST [23035M] INFO:  - 153 total entries
