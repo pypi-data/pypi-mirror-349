@@ -1,0 +1,16 @@
+hackerbot/__init__.py,sha256=fjzBB_VsqCuKJ3yeLdqLSvAQIz9bAMI-KXrUC6ZrscY,1248
+hackerbot/core.py,sha256=oZKQEUaMn19MnaWNTDFqTZ7lziBEZeSk5CdLXLSLvr0,5521
+hackerbot/arm/__init__.py,sha256=JdCmTDQ2qk3W8-Alc4mjaQYxHnmH26r0nSy0JFg6J4A,3400
+hackerbot/arm/gripper.py,sha256=xZux0PZL4vvrJTTKHL7dDsRBfJr4zbmgMaA0uBR1u4s,1986
+hackerbot/base/__init__.py,sha256=7OtK29R8G9JYkg_hYWJbZ4DhX0PtldYCneyrZE31qCQ,11387
+hackerbot/base/maps.py,sha256=I_4NdvOMnkHX6-mW43QpDPJ-eVc6npgcBXq99tU7D1g,5916
+hackerbot/head/__init__.py,sha256=uBJ4gTst_QuCdveeNnuYZLIwsS8ANK9hxKMsLJVpI74,2467
+hackerbot/head/eyes.py,sha256=xqeKMxL12iaa8KQzDlbgbNy3LzcmWm8aXkebztYJ4P8,1370
+hackerbot/utils/hackerbot_helper.py,sha256=egQPVBBUo52ywsO6jGAGVqhyGLpMPz-b2fgLBb39WSM,4998
+hackerbot/utils/serial_helper.py,sha256=qo-mpbE_sb23_IAIfDuRT8sCDtW8d8A8qyav-b9e5Kw,6567
+hackerbot/utils/tts_helper.py,sha256=X-3G2hhq94i9z3MdLzD-pFSwnIW707pI7Leu1h8EO60,3575
+hackerbot-0.6.0.dist-info/licenses/LICENSE,sha256=SCcXH0bf35ISRu_Ks8xEKySHXiqclANLWhBUbVU8VvA,1081
+hackerbot-0.6.0.dist-info/METADATA,sha256=V95jUbd4OUR80K9xnCg2uIjeCmMpAC2NmgSW4PHx8GM,2724
+hackerbot-0.6.0.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+hackerbot-0.6.0.dist-info/top_level.txt,sha256=2n_FStAr1SiI3BV67x7KJHYIOmEwxjUD59zedw2hLkU,10
+hackerbot-0.6.0.dist-info/RECORD,,
