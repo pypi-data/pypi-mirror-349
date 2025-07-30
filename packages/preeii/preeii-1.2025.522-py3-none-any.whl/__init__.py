@@ -1,0 +1,1 @@
+print('DEBE EJECUTAR DE LA SIGUIENTE FORMA python -m preeii.main')
