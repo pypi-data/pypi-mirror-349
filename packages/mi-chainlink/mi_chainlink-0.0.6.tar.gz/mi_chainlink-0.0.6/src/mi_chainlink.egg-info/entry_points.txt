@@ -1,0 +1,2 @@
+[console_scripts]
+chainlink = mi_chainlink.main:app
