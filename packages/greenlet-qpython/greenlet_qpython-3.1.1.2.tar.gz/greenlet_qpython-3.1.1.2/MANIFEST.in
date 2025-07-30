@@ -1,0 +1,4 @@
+include greenlet/_greenlet.cpython-312.so
+include greenlet/__init__.py
+recursive-include greenlet/platform *
+recursive-include greenlet/tests *
