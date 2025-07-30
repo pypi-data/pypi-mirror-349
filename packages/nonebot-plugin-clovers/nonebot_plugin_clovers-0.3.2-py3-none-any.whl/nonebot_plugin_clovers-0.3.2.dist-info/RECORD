@@ -1,0 +1,13 @@
+nonebot_plugin_clovers/__init__.py,sha256=6s3ZAJqxmnOjrZxRzIn5Eg3BJ8Y2mWCocRwuKjFoTVU,738
+nonebot_plugin_clovers/adapters/onebot/v11.py,sha256=qNZ3qF61RToxqWpwfCKoy3v4hz30W9k_v_wrBwgrK10,6213
+nonebot_plugin_clovers/adapters/qq/general.py,sha256=jLA6Wlxz6UHwTiJzzz6OsPOxI7YmSvZrbzHwbbkbnm4,2359
+nonebot_plugin_clovers/adapters/qq/group.py,sha256=a4pnyt8GiP4SD17Mc67fn1Eld0vNz8tmlCCS3zqCNhY,1021
+nonebot_plugin_clovers/adapters/qq/guild.py,sha256=U4kYuIRz24YPDC4FVxi71fNycXF1ReLZ540bX4BYKZQ,1527
+nonebot_plugin_clovers/adapters/satori/__init__.py,sha256=dAxnPX7yifHCSTbZ67oB3mNGDA2kVTTMka6iy-swCNw,6219
+nonebot_plugin_clovers/adapters/typing.py,sha256=tQ5_DwixSLimw3B2_v_kfrJyFo7FJg-6XxfSzQ5B3aI,732
+nonebot_plugin_clovers/clovers.py,sha256=VuoshPy14AAu420jm6zu6VKJtQ_WHSPuN1vqXtiTTpo,3635
+nonebot_plugin_clovers/config.py,sha256=nTTO0Cc_YF7G4LCIvvArTgmJX03Aof6sjd8ZeFN1-Ic,643
+nonebot_plugin_clovers-0.3.2.dist-info/LICENSE,sha256=v2QDhv3Xo1gkhRe1DXym6RZe_E3gSOKFi3FkKbVCVWw,1086
+nonebot_plugin_clovers-0.3.2.dist-info/METADATA,sha256=40NVFNDaOW6T3FRyfuu7LniD2mTUjp_9ruiM22t8mxs,2035
+nonebot_plugin_clovers-0.3.2.dist-info/WHEEL,sha256=IYZQI976HJqqOpQU6PHkJ8fb3tMNBFjg-Cn-pwAbaFM,88
+nonebot_plugin_clovers-0.3.2.dist-info/RECORD,,
