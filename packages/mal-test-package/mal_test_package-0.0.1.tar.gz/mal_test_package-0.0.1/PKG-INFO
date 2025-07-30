@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: mal-test-package
+Version: 0.0.1
+Description-Content-Type: text/markdown
+Requires-Dist: build>=1.2.2.post1
+Requires-Dist: setuptools>=80.8.0
+Requires-Dist: twine>=6.1.0
+Requires-Dist: wheel>=0.45.1
+
+# mal. testing package
+
+## Description
+
+This is a package created to verify `mal.` package analysis.
+This is the package not intended to be installed and highlight problems in your setup.
