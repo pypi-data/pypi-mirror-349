@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+requirements.txt
+src/angutils/__init__.py
+src/angutils/angutils.py
+src/angutils.egg-info/PKG-INFO
+src/angutils.egg-info/SOURCES.txt
+src/angutils.egg-info/dependency_links.txt
+src/angutils.egg-info/requires.txt
+src/angutils.egg-info/top_level.txt
+tests/test_angutils.py

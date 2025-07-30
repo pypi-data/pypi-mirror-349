@@ -1,0 +1,50 @@
+Metadata-Version: 2.4
+Name: angutils
+Version: 1.0.0
+Summary: Routines for operating on 3D Euclidean vectors and computing a variety of angles and projections.
+Author-email: Dmitry Savransky <dsavransky@gmail.com>
+Maintainer-email: Dmitry Savransky <dsavransky@gmail.com>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/dsavransky/angutils
+Project-URL: Documentation, https://angutils.readthedocs.io/
+Project-URL: Repository, https://github.com/dsavransky/angutils
+Project-URL: Issues, https://github.com/dsavransky/angutils/issues
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Dynamic: license-file
+
+# angutils
+Routines for operating on 3D Euclidean vectors and computing a variety of angles and projections.
+
+![Build Status](https://github.com/dsavransky/angutils/actions/workflows/ci.yml/badge.svg)
+[![Coverage Status](https://coveralls.io/repos/github/dsavransky/angutils/badge.svg)](https://coveralls.io/github/dsavransky/angutils)
+[![Documentation Status](https://readthedocs.org/projects/angutils/badge/?version=latest)](https://angutils.readthedocs.io/en/latest/?badge=latest)
+[![PyPI version](https://badge.fury.io/py/angutils.svg)](https://badge.fury.io/py/angutils)
+
+## Installation
+
+```
+pip install angutils
+```
+
+To install from source, clone or download the repository, and, in the top level directory run:
+
+```
+pip install .
+```
+
+## Documentation
+
+https://angutils.readthedocs.io/
