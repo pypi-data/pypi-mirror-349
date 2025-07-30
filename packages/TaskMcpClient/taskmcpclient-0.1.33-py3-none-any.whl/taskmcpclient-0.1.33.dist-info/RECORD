@@ -1,0 +1,10 @@
+FileQueryResult.py,sha256=ALpIYkUjyDHvyuCSYxCnF-LSZSXBce7SfN9P9gDCEQo,4069
+LlmServer.py,sha256=Q7Xr2cebLWoZuxFyAt1d7H4xWvDH8XgZyQqeslxNNZo,6712
+LoadMcpServerConfig.py,sha256=Rpy9QyVK-pSIYAooheYT8ckBZuXWWnpKgNiPdYoOY0Q,4476
+TaskMcpClient.py,sha256=kMrN8BjU_k2zeRBOaN8LNqNloaZbGjcHL1mLqBR_ikw,13384
+ToMarkItDown.py,sha256=2sbXN6iFMQToY-IURnN-OXRnO0W25r0j8ULuDtrlB9g,964
+taskmcpclient-0.1.33.dist-info/METADATA,sha256=RuIqXmamvGJQTNmrTIedjGkEUGLdRIVA_GOD0ZchJ3k,3615
+taskmcpclient-0.1.33.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+taskmcpclient-0.1.33.dist-info/entry_points.txt,sha256=F6ohiBwb2mRJ1M_D83lyyeeNLtXexd7_Pi7wygn-lkQ,53
+taskmcpclient-0.1.33.dist-info/top_level.txt,sha256=851OPEpDtjJOjUMOJeJB2LRZyWEJUAdRoEXh2Vo184M,73
+taskmcpclient-0.1.33.dist-info/RECORD,,
