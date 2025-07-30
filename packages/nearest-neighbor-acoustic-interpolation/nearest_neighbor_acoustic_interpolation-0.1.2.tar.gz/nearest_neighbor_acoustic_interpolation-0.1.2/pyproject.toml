@@ -1,0 +1,40 @@
+[project]
+name = "nearest_neighbor_acoustic_interpolation"
+version = "0.1.2"
+description = "This is the code behind the paper 'Translating jet noise measurement to near-field level maps with nearest neighbor bilinear smoothing interpolation'"
+authors = [
+    { name = "frankmobley", email = "mobssoft@gmail.com" },
+    { name = "Dr. Frank Mobley", email = "frank.mobley.1@afrl.af.mil" },
+]
+dependencies = [
+    "numpy>=1.21.5",
+    "pandas>=1.4.3",
+    "scipy>=1.9.1",
+]
+requires-python = ">=3.9"
+readme = "README.md"
+keywords = [
+    "interpolation",
+    "acoustic",
+]
+
+[project.license]
+text = "MIT"
+
+[project.urls]
+Homepage = "https://gitlab.com/acousticprocessing/nearest-neighbor-interpolation"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
+package-dir = "src"
+
+[tool.pdm.build]
+excludes = [
+    "tests",
+]
