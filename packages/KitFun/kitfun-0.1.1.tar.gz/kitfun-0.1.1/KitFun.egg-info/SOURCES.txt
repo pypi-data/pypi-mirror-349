@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+KitFun/KitFun.py
+KitFun/__init__.py
+KitFun.egg-info/PKG-INFO
+KitFun.egg-info/SOURCES.txt
+KitFun.egg-info/dependency_links.txt
+KitFun.egg-info/requires.txt
+KitFun.egg-info/top_level.txt
