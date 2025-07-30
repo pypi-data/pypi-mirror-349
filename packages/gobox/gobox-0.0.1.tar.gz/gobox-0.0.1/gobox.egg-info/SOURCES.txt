@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+gobox/__init__.py
+gobox/__main__.py
+gobox/gobox.py
+gobox.egg-info/PKG-INFO
+gobox.egg-info/SOURCES.txt
+gobox.egg-info/dependency_links.txt
+gobox.egg-info/requires.txt
+gobox.egg-info/top_level.txt
