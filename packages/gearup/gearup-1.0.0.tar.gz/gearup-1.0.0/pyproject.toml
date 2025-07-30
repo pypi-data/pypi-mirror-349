@@ -1,0 +1,32 @@
+# pyproject.toml
+
+[build-system]
+requires      = ['setuptools>=61.0.0', 'wheel']
+build-backend = 'setuptools.build_meta'
+
+[project]
+name = 'gearup'
+version = '1.0.0'
+description = 'Turns Python functions into CLI via Python annotations'
+readme = {file = 'README.md', content-type = 'text/markdown'}
+authors = [{ name = 'Maxim Borisyak', email = 'maximus.been@gmail.com' }]
+license = { file = 'LICENSE' }
+classifiers = [
+    'License :: OSI Approved :: MIT License',
+    'Programming Language :: Python',
+    'Programming Language :: Python :: 3',
+]
+keywords = ['cli']
+dependencies = [
+    'omegaconf>=2.3.0'
+]
+requires-python = '>=3.9'
+
+[project.optional-dependencies]
+dev = ['pytest>=5.3.2']
+
+[project.urls]
+Homepage = 'https://gitlab.com/craynn/gearup'
+
+[tool.setuptools.packages.find]
+exclude = ['contrib', 'examples', 'docs', 'tests']
