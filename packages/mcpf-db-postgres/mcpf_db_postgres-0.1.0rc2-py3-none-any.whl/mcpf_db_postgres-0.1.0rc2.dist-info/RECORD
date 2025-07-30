@@ -1,0 +1,5 @@
+mcpf_db/pg/__init__.py,sha256=nGh2jQyl6WtDn5odYULnmHv3Xn2A4ZtDcjaXER1qEII,13694
+mcpf_db/pg/helper.py,sha256=OReJPZovUICph-iFGwcLdUx1m4fXwRiqmN5_i0XTpOU,5484
+mcpf_db_postgres-0.1.0rc2.dist-info/METADATA,sha256=mdr5IArilC120JDw-M-4VxsUyTOnlx4PYyE1uRyYnR4,506
+mcpf_db_postgres-0.1.0rc2.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+mcpf_db_postgres-0.1.0rc2.dist-info/RECORD,,
