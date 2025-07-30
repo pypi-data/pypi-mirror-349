@@ -1,0 +1,116 @@
+<CButton>:
+    size_hint: None, None
+    cbutton_layout: cbutton_box_layout
+    text_color:
+        { \
+        "normal": self.text_color, \
+        "disabled": self.text_color_disabled, \
+        "active": self.text_color_focus,\
+        }[self.cstate]
+    text_color_hover: app.text_on_color
+    text_color_focus: app.text_on_color
+    text_color_disabled: app.text_on_color_disabled
+    icon_color: app.text_on_color
+    bg_color:
+        { \
+        "normal": self.bg_color, \
+        "disabled": self.bg_color_disabled, \
+        "active": self.active_color,\
+        }[self.cstate]
+    bg_color_focus: self.bg_color
+    bg_color_disabled: app.button_disabled
+    hover_color: app.background_hover
+    active_color: app.background_active
+    _inset_color: self.bg_color
+    inset_color: app.focus_inset
+    inset_color_focus: app.focus_inset
+    line_color_focus: app.focus
+    line_color: self.bg_color
+    line_color_disabled: app.button_disabled
+    font_size: plex_16
+    padding: [dp(16), 0, dp(64) if not self.icon else dp(16), 0]
+    width: self.cbutton_layout.width if self.text else self.height
+    spacing: dp(32) if self.text else 0
+    actual_width: self.width + self.line_width
+
+    CBoxLayout:
+        id: cbutton_box_layout
+        orientation: 'horizontal'
+        size_hint: None if not root.size_hint_x else 1, 1
+        width: self.minimum_width
+        spacing: root.spacing
+        padding: root.padding
+        pos_hint: {'center_x': 0.5,'center_y': 0.5}
+
+
+<CButtonIcon>:
+    icon: self.base_button.icon
+    _color: self.base_button.icon_color
+    halign: "center"
+    font_size: self.base_button.font_size + sp(4)
+    pos_hint: {"center_y": 0.5}
+
+
+<CButtonLabel>:
+    disabled_color: self.base_button.text_color_disabled
+    size_hint: None, None
+    size: self.texture_size
+    text_size: None, self.texture_size[1]
+    text: self.base_button.text
+    color: self.base_button._text_color
+    font_size:  self.base_button.font_size
+    pos_hint: {'center_y': 0.5}
+
+
+<CButtonPrimary>:
+    bg_color: app.button_primary
+    active_color: app.button_primary_active
+    hover_color: app.button_primary_hover
+
+
+<CButtonSecondary>:
+    bg_color: app.button_secondary
+    active_color: app.button_secondary_active
+    hover_color: app.button_secondary_hover
+
+
+<CButtonGhost>:
+    bg_color: app.transparent
+    bg_color_disabled: app.transparent
+    inset_width: 0
+    text_color: app.link_primary
+    icon_color: app.link_primary
+    text_color_hover: app.link_primary_hover
+    text_color_focus: app.link_primary_hover
+    inset_color: app.transparent
+    inset_color_focus: app.transparent
+    padding: [dp(16), 0, dp(16), 0]
+
+
+<CButtonTertiary>:
+    bg_color: app.transparent
+    bg_color_focus: app.button_tertiary
+    bg_color_disabled: app.transparent
+    active_color: app.button_tertiary_active
+    hover_color: app.button_tertiary_hover
+    inset_color: app.transparent
+    inset_color_focus: app.focus_inset
+    text_color: app.link_primary
+    icon_color: app.link_primary
+    text_color_hover: app.text_inverse
+    text_color_focus: app.text_inverse
+    line_color:
+        { \
+        "normal": app.focus, \
+        "active": self.bg_color, \
+        "disabled": self.line_color_disabled, \
+        }[self.cstate]
+
+
+<CButtonDanger>:
+    bg_color: app.button_danger_primary if self.variant == "Primary" else app.transparent
+    bg_color_focus: app.button_danger_primary
+    hover_color: app.button_danger_hover
+    active_color: app.button_danger_active
+    line_color: app.button_danger_secondary if self.variant == "Tertiary" else self.line_color
+    text_color: self.text_color if self.variant == "Primary" else app.button_danger_secondary

@@ -1,0 +1,51 @@
+<CTextInputLayout>:
+    size_hint: 1, None
+    inset_color: app.transparent
+    bg_color:
+        { \
+        1: app.field_01, \
+        2: app.field_02, \
+        }[self.layer_code]
+    line_color_focus: app.focus
+    inset_width: 0
+    hover_color:
+        { \
+        1: app.field_hover_01, \
+        2: app.field_hover_02, \
+        }[self.layer_code]
+
+<CTextInputLabel>:
+    color: app.text_secondary
+    style: "label_01"
+    pos: [0, self.parent.height + (self.height/2)]
+    adaptive: [False, True]
+
+<CTextInputHelperText>:
+    color: app.text_helper
+    style: "helper_text_01"
+    pos: [0, -self.height]
+    adaptive: [False, True]
+
+<CTextInputTrailingIconButton>:
+    text_color: app.icon_primary
+    spacing: 0
+    pos: [self.parent.width - (self.width + dp(8)), (dp(4))]
+
+<CTextInput>:
+    canvas.after:
+        Color:
+            rgba: app.border_strong_01
+        SmoothLine:
+            points: [self.x, self.y, self.right, self.y]
+            width: dp(1)
+    padding: [dp(16), dp(16), dp(48), dp(16)]
+    size_hint_y: None
+    font_size: plex_14
+    height: self.minimum_height
+    background_normal: ""
+    background_color: app.transparent
+    background_active: ""
+    hint_text_color: app.text_placeholder
+    foreground_color: app.text_primary
+    cursor_color: app.text_primary
+    password_mask: u"\u2022"
