@@ -1,0 +1,30 @@
+[project]
+name = "mcp-server-rash"
+version = "0.1.0"
+description = "MCP server rash"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+dependencies = [
+    "mcp[cli]>=1.3.0",
+    "requests>=2.32.3",
+    "twine>=6.1.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = [
+    "isort>=6.0.1",
+    "mypy>=1.9.0",
+    "pre-commit>=4.1.0",
+    "pyright>=1.1.389",
+    "pytest>=8.3.3",
+    "pytest-asyncio>=0.23.0",
+    "ruff>=0.8.0",
+]
+
+[project.scripts]
+mcp-server-rash = "mcp_server_rash.main:main"
