@@ -1,0 +1,3 @@
+[console_scripts]
+webtop=webtop.main:main
+

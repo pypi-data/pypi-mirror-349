@@ -1,0 +1,17 @@
+webtop/__init__.py,sha256=DBWez9x9DhDoQR_99dAAwFmtfKE_VYLlmT2rTAN1Wik,270
+webtop/main.py,sha256=kAxjsDcpdrS3k1XB1qhWi69wBeq6BRMhlIFGw5cECMo,1293
+webtop/server.py,sha256=koweytI9XxkD3aAdKHUuvRMBX6D7EpLr_Er5w0dWDnQ,2098
+webtop/static/config.json,sha256=t-Pe5tipBM5HQ8yHOBwrScS1juCJnWIGx4zwP19dRrY,1509
+webtop/static/favicon.ico,sha256=NafvKc3Bk9fwDQYuTdERFtZ2cSrIyTWxFtJWMdBpOvI,11
+webtop/static/file-icons.css,sha256=YOsM92PaCBae5jX6T7Bct42i35p-8Q4C42aIOr-8aLk,6039
+webtop/static/file-system.js,sha256=SVcciTstJwnRuIla7ETZzcQPtdiNd8J_QZLq2qx1Dr8,31032
+webtop/static/index.html,sha256=pPV8scMqELiyMXp9Wdn_WY4ay5XVu3q1qNZbBmAgQkw,5748
+webtop/static/manifest.json,sha256=NBProBSQM1Vsjh4BSOku-i73cVLK-OJ9wyPQZO05owk,396
+webtop/static/process-data.js,sha256=1Snw2d63xFDZvLofrEEjf-j2FQvaTcfrAGexaXEXVFs,15247
+webtop/static/styles.css,sha256=kpKLcBn8yMEA8PblKF0V9r8grxn6shZ3DwWMYLEMnA8,10183
+webtop/static/webtop.js,sha256=qzQvdJ1PNjWKO3F3WOfTXcck3H7h9lFNI2kiw723l8Q,33216
+webtask-2.0.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+webtask-2.0.0.dist-info/METADATA,sha256=VOix9XIDXdTEWHzpPl36-zDWwB7f_-5gKxdhwNXHpr8,8932
+webtask-2.0.0.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+webtask-2.0.0.dist-info/entry_points.txt,sha256=dvfBDWQkqJjW-sh9JCvZBSQ84Oa7rzSvh36PwljECCg,43
+webtask-2.0.0.dist-info/RECORD,,
