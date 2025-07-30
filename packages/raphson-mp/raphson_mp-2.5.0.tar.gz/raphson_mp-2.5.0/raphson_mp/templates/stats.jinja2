@@ -1,0 +1,27 @@
+{% set script = "stats" %}
+{% set styles = ["stats"] %}
+{% extends "base_static.jinja2" %}
+
+{% block title %}
+    {% trans %}Playback statistics{% endtrans %}
+{% endblock title %}
+
+{% block content %}
+
+{{ page_heading(gettext('Playback statistics'), back_url='/') }}
+
+<div id="buttons">
+    <button id="btn-day">{% trans %}Day{% endtrans %}</button>
+    <button id="btn-week">{% trans %}Week{% endtrans %}</button>
+    <button id="btn-month">{% trans %}Month{% endtrans %}</button>
+    <button id="btn-year">{% trans %}Year{% endtrans %}</button>
+    <button id="btn-all">{% trans %}All time{% endtrans %}</button>
+</div>
+
+<br>
+
+{% for i in range(chart_count) %}
+    <div data-id="{{ i }}" class="chart"></div>
+{% endfor %}
+
+{% endblock content %}

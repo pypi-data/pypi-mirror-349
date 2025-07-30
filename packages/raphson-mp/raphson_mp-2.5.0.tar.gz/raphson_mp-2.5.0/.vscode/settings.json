@@ -1,0 +1,5 @@
+{
+    "basedpyright.analysis.diagnosticMode": "workspace",
+    "javascript.format.semicolons": "insert",
+    "js/ts.implicitProjectConfig.checkJs": true
+}
