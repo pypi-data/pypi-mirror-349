@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+versioneer.py
+OPDM/OPDM_SOAP_API.py
+OPDM/__init__.py
+OPDM/_version.py
+opdm_api.egg-info/PKG-INFO
+opdm_api.egg-info/SOURCES.txt
+opdm_api.egg-info/dependency_links.txt
+opdm_api.egg-info/requires.txt
+opdm_api.egg-info/top_level.txt
