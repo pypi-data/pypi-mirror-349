@@ -1,0 +1,9 @@
+ipython
+joblib
+jsonpickle
+mendeleev
+numpy
+papermill
+pillow
+pint
+scrapbook
