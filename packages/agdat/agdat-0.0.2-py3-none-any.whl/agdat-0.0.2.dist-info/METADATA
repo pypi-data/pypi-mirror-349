@@ -1,0 +1,13 @@
+Metadata-Version: 2.2
+Name: agdat
+Version: 0.0.2
+Summary: Advanced data structure library
+Author: dianbtcmputr
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Dynamic: author
+Dynamic: classifier
+Dynamic: requires-python
+Dynamic: summary
