@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+src/symrank/__init__.py
+src/symrank.egg-info/PKG-INFO
+src/symrank.egg-info/SOURCES.txt
+src/symrank.egg-info/dependency_links.txt
+src/symrank.egg-info/top_level.txt
