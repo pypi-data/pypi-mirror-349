@@ -1,0 +1,12 @@
+orion_browser_mcp/__init__.py,sha256=oSB2nhomm28Aq8LJpkl65yRu4gFJg9nBYWOrFlyjHn8,73
+orion_browser_mcp/__main__.py,sha256=uOxqQRMiN4l3XMkthyvz-6cz7igW7Fj4jLZGk9RaZtk,1903
+orion_browser_mcp/browser_actions.py,sha256=mJrzcQd-qHvMFQvyGHGI_5Yov6gRAiZ8WlJV75TetPI,10803
+orion_browser_mcp/config.py,sha256=fHZLP3DlrDKSWCYDDG3feEws4CCt8AC7G0OipQGAPkQ,1398
+orion_browser_mcp/utils.py,sha256=SSiKiA5T9L59pUi6KOF_e5BtnhUDivy7BM_TjLkj-2c,4035
+orion_browser_mcp/server/__init__.py,sha256=Snu8H5rcpQzPij5L12PMXh8bsUFuBFq8vnt0INuzRKI,141
+orion_browser_mcp/server/fast_server.py,sha256=RDoI6kQIxnM0jrxQBR3WdaztdHMJyZfktDlilNd_WeY,6710
+orion_browser_mcp-0.2.6.dist-info/METADATA,sha256=QOfLTL_t4H6b7EEwRfzojkR16dpTC5QpB2W24f50O00,2285
+orion_browser_mcp-0.2.6.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+orion_browser_mcp-0.2.6.dist-info/entry_points.txt,sha256=VTjH-HSbunxYyWquoZtQIMu-xuYYN-QKKuGSEtx7ckc,70
+orion_browser_mcp-0.2.6.dist-info/top_level.txt,sha256=bQaWrEi7r4RiYxTITcx_buPrICMOmrPzbMpFFNG6RUo,18
+orion_browser_mcp-0.2.6.dist-info/RECORD,,
