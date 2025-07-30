@@ -1,0 +1,11 @@
+gemmm/__init__.py,sha256=SaMIuCybsvHbCjcwOQAEsyDa6cQEQwZiqeoMuog49eA,369
+gemmm/fetch_data.py,sha256=ZdIQfCJMQ_u330nNTzvE38Q7VRJIMpXwk1gm9HTc_Wo,8092
+gemmm/model.py,sha256=xLP0ktYdZZGnCJtObZxHebyBFYRWB4wcsyRMmY-675o,25292
+gemmm/tables.py,sha256=nFiIz_fxdD8Jfic8Q2HrGuLh6vONQ1RBhSmnNOU-Wmw,776
+gemmm/data/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gemmm/data/msoa_table.parquet,sha256=lAg7ge9Q7lnBgs9q2S_fzMJId9TwiPesuXrJSR9BzGo,139739
+gemmm-1.0.0.dist-info/licenses/LICENSE.txt,sha256=g0vw-5UeD0yyefD_pbeo2ziySfjz46wwiB2Ga7TX4AQ,263
+gemmm-1.0.0.dist-info/METADATA,sha256=uzgHOHPeMcdL_MIUPm3qhPcojUs9zxzs8Z2HWS1Wk1Y,1700
+gemmm-1.0.0.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+gemmm-1.0.0.dist-info/top_level.txt,sha256=n1q1Cc13VjoC4qcs-M9MxKI1ys1mlJtPJ6WTJwiyEw8,6
+gemmm-1.0.0.dist-info/RECORD,,

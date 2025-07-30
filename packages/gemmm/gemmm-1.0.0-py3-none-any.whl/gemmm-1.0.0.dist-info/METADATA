@@ -1,0 +1,45 @@
+Metadata-Version: 2.4
+Name: gemmm
+Version: 1.0.0
+Summary: Generating origin-destination matrices in Python
+Author-email: Jonty Carruthers <jonathan.carruthers@ukhsa.gov.uk>
+Project-URL: Homepage, https://github.com/ukhsa-collaboration/gemmm
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: setuptools>=75.8.0
+Requires-Dist: numpy>=2.0.1
+Requires-Dist: pandas>=2.2.2
+Requires-Dist: scipy>=1.14.0
+Requires-Dist: dask[distributed]>=2024.8.0
+Requires-Dist: pyarrow>=17.0.0
+Requires-Dist: pooch>=1.8.2
+Requires-Dist: netCDF4>=1.6.0
+Requires-Dist: h5py>=3.11.0
+Requires-Dist: tqdm>=4.66.5
+Requires-Dist: pip-system-certs>=4.0
+Dynamic: license-file
+
+# GeMMM - Generalized Mobile Movement Model
+This package allows users to sample origin-destination matrices describing the movement of individuals between different areas of the UK. Since samples are drawn from models previously parameterized using mobile telecoms data, multiple realizations can quickly be generated with only a few lines of code. Full documentation for the package, including a tutorial, is available on the [documentation](https://ukhsa-collaboration.github.io/gemmm/) page.
+
+## Installation
+The simplest way to install GeMMM is from PyPI using pip
+```
+pip install gemmm
+```
+
+Alternatively, a copy of the source code can be downloaded from the GitHub repository
+```
+git clone https://github.com/ukhsa-collaboration/gemmm.git
+```
+and the relevant dependencies, and GeMMM, can be installed
+```
+cd gemmm
+pip install -r requirements.txt
+pip install .
+```
+The installation from source is successful if the following tests produce no errors:
+```
+python -m unittest discover -s tests
+```
