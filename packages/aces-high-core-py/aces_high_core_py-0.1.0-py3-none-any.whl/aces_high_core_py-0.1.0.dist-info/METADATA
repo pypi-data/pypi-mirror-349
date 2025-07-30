@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: aces-high-core-py
+Version: 0.1.0
+Summary: Base library for card game logic
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pytest-cov>=6.1.1
+Dynamic: license-file
