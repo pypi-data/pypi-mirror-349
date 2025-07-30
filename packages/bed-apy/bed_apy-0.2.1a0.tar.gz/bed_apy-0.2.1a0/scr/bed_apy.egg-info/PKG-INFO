@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: bed_apy
+Version: 0.2.1a0
+Summary: A Bedrock WebSocket system for Minecraft Python modding
+Author: Ezekiel Nogle
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+License-File: LICENSE
+Requires-Dist: websockets
+Requires-Dist: asyncio
+Requires-Dist: json
+Requires-Dist: uuid
+Requires-Dist: urllib
+Requires-Dist: base64
+Dynamic: license-file
