@@ -1,0 +1,10 @@
+omero2pandas/__init__.py,sha256=kZEdifkIuPflhUnIIWE70WpUqCv2o0fpGKnAKCAcyIQ,26513
+omero2pandas/connect.py,sha256=byYyOHrfcZ-Ruw-eIu_g7efpFQBp4ArH2luLI2kuzWE,11673
+omero2pandas/io_tools.py,sha256=Y7zegCdVO0mJkCikfNT-_E0IHL4BnrAKWFIDyIIN_i4,4938
+omero2pandas/remote.py,sha256=thjZKxYoiqsUnxBSuvIBdiV-hX3txlcStbdPHhnKmKo,6233
+omero2pandas/upload.py,sha256=OwCPu6i-362sslsBwHcBbYYrLsk5XrV8OQhWfUYctD4,10538
+omero2pandas-0.4.0rc2.dist-info/licenses/LICENSE.txt,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+omero2pandas-0.4.0rc2.dist-info/METADATA,sha256=ZkPYvPqNXh-F6bRqwjUn5_XzTdP21tgCw0aMM-yyqGw,58112
+omero2pandas-0.4.0rc2.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+omero2pandas-0.4.0rc2.dist-info/top_level.txt,sha256=YNcwppDTEUDyIOKSx2JbXRUP4J1xO-47hhL_pOkLTx8,13
+omero2pandas-0.4.0rc2.dist-info/RECORD,,
