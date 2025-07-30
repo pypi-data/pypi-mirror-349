@@ -1,0 +1,34 @@
+[project]
+name = "TCI_tool"
+version = "0.0.3"
+authors = [
+  { name="Albert Koenig", email="albert.koenig@tugraz.at" },
+]
+description = "A repository to calculate TCI after Huang, H.; Chen, X.; Wang, X.; Wang, X.; Liu, L. A Depression-Based Index to Represent Topographic Control in Urban Pluvial Flooding. Water 2019, 11, 2115. https…"
+readme = "README.md"
+requires-python = ">=3.07"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICENSE"]
+dependencies = [
+    "numpy>=2.1.3",
+    "geopandas>=1.0.0",
+    "rasterstats>=0.19.0",
+    "whitebox>=2.3.0",
+    "pandas>=2.2.0",
+    "rasterio>=1.3.0",
+    "tqdm>=4.65.0",
+    "shapely>=2.0.0",
+    "scipy>=1.13.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/alBartig/TCI_tool"
+Issues = "https://github.com/alBartig/TCI_tool/issues"
+
+[build-system]
+requires = ["hatchling >= 1.26"]
+build-backend = "hatchling.build"

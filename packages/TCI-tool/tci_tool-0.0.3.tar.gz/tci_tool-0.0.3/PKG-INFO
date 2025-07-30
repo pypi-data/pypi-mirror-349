@@ -1,0 +1,46 @@
+Metadata-Version: 2.4
+Name: TCI_tool
+Version: 0.0.3
+Summary: A repository to calculate TCI after Huang, H.; Chen, X.; Wang, X.; Wang, X.; Liu, L. A Depression-Based Index to Represent Topographic Control in Urban Pluvial Flooding. Water 2019, 11, 2115. https…
+Project-URL: Homepage, https://github.com/alBartig/TCI_tool
+Project-URL: Issues, https://github.com/alBartig/TCI_tool/issues
+Author-email: Albert Koenig <albert.koenig@tugraz.at>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.07
+Requires-Dist: geopandas>=1.0.0
+Requires-Dist: numpy>=2.1.3
+Requires-Dist: pandas>=2.2.0
+Requires-Dist: rasterio>=1.3.0
+Requires-Dist: rasterstats>=0.19.0
+Requires-Dist: scipy>=1.13.0
+Requires-Dist: shapely>=2.0.0
+Requires-Dist: tqdm>=4.65.0
+Requires-Dist: whitebox>=2.3.0
+Description-Content-Type: text/markdown
+
+# TCI Calculator
+
+A lightweight Python tool to compute the Topographic Control Index (TCI) from a DEM, following Huang et al. (2019).
+
+## Install
+
+```bash
+pip install TCI_tool
+```
+
+## Quick Start
+
+```python
+from TCI_tool import full_workflow
+import rasterio
+
+tci = full_workflow(fp_dem, fp_aoi)
+# save or analyze `tci`
+```
+
+## License
+
+MIT
