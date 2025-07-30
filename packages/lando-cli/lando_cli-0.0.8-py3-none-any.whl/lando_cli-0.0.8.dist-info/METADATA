@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: lando_cli
+Version: 0.0.8
+Summary: Lando Headless API Client
+Author-email: Mozilla <conduit-team@mozilla.com>
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: click
+Requires-Dist: requests
+Requires-Dist: tomli
+Provides-Extra: code-quality
+Requires-Dist: black; extra == "code-quality"
+Requires-Dist: ruff; extra == "code-quality"
+Provides-Extra: testing
+Requires-Dist: pytest; extra == "testing"
+Requires-Dist: requests-mock; extra == "testing"
+Dynamic: license-file
+
+# Lando-Headless-CLI
+
+A CLI for the Lando Headless API.
