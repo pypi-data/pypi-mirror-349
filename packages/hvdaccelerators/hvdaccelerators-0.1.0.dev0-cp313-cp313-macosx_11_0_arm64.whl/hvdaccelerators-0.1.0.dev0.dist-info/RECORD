@@ -1,0 +1,8 @@
+hvdaccelerators/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hvdaccelerators/__about__.py,sha256=kUR5RAFc7HCeiqdlX36dZOHkUI5wI6V_43RpEcD8b-0,22
+hvdaccelerators/__main__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hvdaccelerators/vpdq.cpython-313-darwin.so,sha256=i06tAeJoQibIbjz5YEcTlTFiRDJ-zUsmeU15fOdV6yA,322280
+hvdaccelerators-0.1.0.dev0.dist-info/RECORD,,
+hvdaccelerators-0.1.0.dev0.dist-info/WHEEL,sha256=oObJvfQvyDvvTmI1wmAnyFE_lPD4YOsi8rDfSbwFKWs,141
+hvdaccelerators-0.1.0.dev0.dist-info/METADATA,sha256=8bRLwWkpecS1sm0cE8grKXBbELwlVNZozkY1jE9UswM,65
+hvdaccelerators-0.1.0.dev0.dist-info/licenses/LICENSE,sha256=q77OGCXem6GOum1XLLNX0xXiYYTNEjbihEVc3Wor4_M,1063
