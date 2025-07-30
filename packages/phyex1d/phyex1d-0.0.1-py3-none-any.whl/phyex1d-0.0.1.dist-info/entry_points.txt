@@ -1,0 +1,2 @@
+[console_scripts]
+phyex1d = phyex1d.cli:main
