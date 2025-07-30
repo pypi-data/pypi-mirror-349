@@ -1,0 +1,6 @@
+pillow
+rasterio
+patchify
+geopandas
+xyzservices
+requests
