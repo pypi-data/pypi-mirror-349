@@ -1,0 +1,10 @@
+close_encounters/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+close_encounters/brute_force.py,sha256=KVYGM1ledf-c8FnXdJzYYaBbnuIsyvIDRXJrCJ4K6t4,10488
+close_encounters/h3_full_disk.py,sha256=ajWJbGP40gR2M7xn0WMbVDb5skhimRMn5sE3u7Z4flk,12606
+close_encounters/h3_half_disk.py,sha256=hRkyQmImwyPnfn04w7ZmZDiG9LTIoTVChQQOgAblFrY,12534
+close_encounters/helpers.py,sha256=kUOoDlNuwdmPbg-1la_n26zOyQTrUjMYun39yU0JPA4,2227
+close_encounters-0.0.1.dist-info/licenses/LICENSE,sha256=FnyNZK2jjInnjbYhKjc-jUgMeGt-zqYjS3BCK9IkVG0,1097
+close_encounters-0.0.1.dist-info/METADATA,sha256=lap5_MJZW0Epey7k6TFAUmkUSLRB13kymhs7AaWPQZA,312
+close_encounters-0.0.1.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+close_encounters-0.0.1.dist-info/top_level.txt,sha256=BzjkpmckayzHNU-2u4ZBqq_p-WT1yUEEkf-oI8RxHOg,17
+close_encounters-0.0.1.dist-info/RECORD,,

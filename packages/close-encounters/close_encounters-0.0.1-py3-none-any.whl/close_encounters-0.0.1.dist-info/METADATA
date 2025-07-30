@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: close_encounters
+Version: 0.0.1
+Summary: A Python module for analyzing close flight encounters using H3.
+Author-email: Quinten Goens <quinten.goens@eurocontrol.int>
+Requires-Python: >=3.8
+License-File: LICENSE
+Requires-Dist: h3==4.2.2
+Requires-Dist: tempo==0.12
+Dynamic: license-file
