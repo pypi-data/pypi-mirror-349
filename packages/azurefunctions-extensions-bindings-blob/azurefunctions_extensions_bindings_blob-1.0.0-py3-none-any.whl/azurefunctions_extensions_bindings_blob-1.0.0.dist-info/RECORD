@@ -1,0 +1,14 @@
+azurefunctions/extensions/bindings/blob/__init__.py,sha256=phwvJHTGP_I4WpjyM52XZrfL3jn5g97oCmi1ghj_mA4,444
+azurefunctions/extensions/bindings/blob/blobClient.py,sha256=ZUgLZMDBLCMOij8t5-r-NNBSB0t_iCpCndkQPkY-VwE,2393
+azurefunctions/extensions/bindings/blob/blobClientConverter.py,sha256=IAUJcsUObUzXPk1NyF-Gmh9BVezCn_5Dfcjd2e1k6js,1537
+azurefunctions/extensions/bindings/blob/containerClient.py,sha256=gZT0EXdOcSTVARGQAYfGHNpYa_n20gbl0CnLiXZgmGo,1917
+azurefunctions/extensions/bindings/blob/storageStreamDownloader.py,sha256=5-eu4wxNeZUe2GotrBu96-CNdreBm5UKDDCY57-__-8,2055
+azurefunctions/extensions/bindings/blob/utils.py,sha256=s6mjq6Zl0ySHzgijnJQnW0j2k5ApW-JOo068caiEp7I,2152
+azurefunctions_extensions_bindings_blob-1.0.0.dist-info/licenses/LICENSE,sha256=kD31US99AmCf7Qx4CptwT1o-625NhOvkKimEXIGJmjw,1093
+samples/blob_samples_blobclient/function_app.py,sha256=KKLy-K4t9GMYcPdXUpsN_kH4OG8vlyX5A90y6oOgKoQ,1728
+samples/blob_samples_containerclient/function_app.py,sha256=nlBYQKvHY_nQpCaiTU-no7SvVmFjTotU1dcfvGf_Lgg,1595
+samples/blob_samples_storagestreamdownloader/function_app.py,sha256=5Ng94TCgImkMZ1VOm5Cse8uAUy6vKNhBHHEaUvcIoZo,1714
+azurefunctions_extensions_bindings_blob-1.0.0.dist-info/METADATA,sha256=dhXGqsnGWfJrSQz-pG2tIzW31DTEujiA_tdONeyJL5g,7845
+azurefunctions_extensions_bindings_blob-1.0.0.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+azurefunctions_extensions_bindings_blob-1.0.0.dist-info/top_level.txt,sha256=7OshtAeZN0p0jXt0QfJ5G8KiDpSfCQolR1Sl8OYAsj4,23
+azurefunctions_extensions_bindings_blob-1.0.0.dist-info/RECORD,,
