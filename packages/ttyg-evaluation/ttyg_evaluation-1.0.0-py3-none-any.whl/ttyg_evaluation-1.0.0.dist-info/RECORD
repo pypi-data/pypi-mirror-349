@@ -1,0 +1,8 @@
+ttyg_evaluation/__init__.py,sha256=mGEaG8Dl9-85DYGP-7EjCmfjSJJdYdPHiawDI8h-Z_g,105
+ttyg_evaluation/evaluation.py,sha256=rgzClhrl-73XlcB8eY9Xin7-f55pRlR3v3fAhXPUUkY,6382
+ttyg_evaluation/sparql_results_comparison.py,sha256=Xx2ufWnLl-1oGwse2-CGUj9jhxStnn2u3idQa1BOQwE,2461
+ttyg_evaluation/tools_calls_comparison.py,sha256=aZc4aax2x4w-7YfHTMWcaTgH-oz_I2wNkEx0bLCe_LE,3637
+ttyg_evaluation-1.0.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+ttyg_evaluation-1.0.0.dist-info/METADATA,sha256=J_GJ6pFWeAgOZK6YXZdxb67Bq6dJAs2Fxz6wERMDZfQ,35873
+ttyg_evaluation-1.0.0.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+ttyg_evaluation-1.0.0.dist-info/RECORD,,
