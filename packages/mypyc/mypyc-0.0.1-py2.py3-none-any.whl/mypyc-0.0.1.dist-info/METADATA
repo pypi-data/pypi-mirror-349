@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: mypyc
+Version: 0.0.1
+Summary: Placeholder for the mypyc package
+Author-email: Emma Harper Smith <emma@emmatyping.dev>
+License-Expression: MIT
+License-File: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Description-Content-Type: text/markdown
+
+# mypyc placeholder
+
+This package is holding the name mypyc so that no one maliciously claims it. Please reach out if you need this name.
