@@ -1,0 +1,29 @@
+Metadata-Version: 2.3
+Name: adaptive-ai
+Version: 0.1.0
+Summary: Python SDK for Adaptive AI - A unified interface for multiple LLM providers
+License: MIT
+Keywords: ai,llm,chat,completion,openai,anthropic,groq
+Author: Your Name
+Author-email: your.email@example.com
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Project-URL: Documentation, https://adaptive.readthedocs.io/
+Project-URL: Repository, https://github.com/yourusername/adaptive
+Description-Content-Type: text/markdown
+
+
