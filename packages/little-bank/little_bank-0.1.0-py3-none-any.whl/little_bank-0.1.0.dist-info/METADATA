@@ -1,0 +1,56 @@
+Metadata-Version: 2.4
+Name: little-bank
+Version: 0.1.0
+Summary:  Double book-keeping transaction framework
+Author-email: Anton Agestam <git@antonagestam.se>
+License-Expression: BSD-3-Clause
+Project-URL: Source Repository, https://github.com/antonagestam/little-bank/
+Project-URL: Bug Tracker, https://github.com/antonagestam/little-bank/issues
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Development Status :: 4 - Beta
+Classifier: Typing :: Typed
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown; charset=UTF-8
+License-File: LICENSE
+Provides-Extra: test
+Requires-Dist: mypy; extra == "test"
+Requires-Dist: pytest; extra == "test"
+Requires-Dist: pytest-mypy-plugins; extra == "test"
+Requires-Dist: pytest-random-order; extra == "test"
+Requires-Dist: coverage; extra == "test"
+Requires-Dist: phantom-types; extra == "test"
+Dynamic: license-file
+
+<h1 align=center>little-bank</h1>
+
+<p align=center>
+    <a href=https://github.com/antonagestam/little-bank/actions?query=workflow%3ACI+branch%3Amain><img src=https://github.com/antonagestam/little-bank/workflows/CI/badge.svg alt="CI Build Status"></a>
+</p>
+
+Little Bank is a framework for analyzing financial transactions.
+
+#### Design goals
+
+- All analysis should be a matter of summarizing credit, debit or balance of an account
+  in a system. The intention is to reduce bugs by making all analysis use the same
+  numerical implementation.
+- This means that we're of the opinion that implementing filters and doing arithmetic on
+  transactions outside of little-bank code is _wrong_. If we find ourselves grasping to
+  do this, what we should instead do is introduce new accounts our possibly restructure
+  the flow between the existing ones.
+- Allow defining rules for a system in a declarative way.
+- Disallow mutation. The design encourages immutable, append-only transactions.
+- All operations that update the system are very similar: appending transactions which
+  automatically verifies all defined rules, and persisting the new transactions. This
+  allows centralizing code that saves transactions to a single place.
+
+#### Non-goals
+
+- Performance. This library is intended to be used to analyze systems of a small number
+  of transactions. Therefor exposing APIs that are easy to reason about is a much higher
+  priority than performance.
