@@ -1,0 +1,53 @@
+[build-system]
+requires = ["uv_build>=0.7.3,<0.8"]
+build-backend = "uv_build"
+
+[project]
+name = "base64-regex"
+version = "0.1.2"
+description = "Generate RegEx patterns for finding Base64 substrings"
+readme = "README.md"
+authors = [{ name = "Zeev Rotshtein", email = "zeevro@gmail.com" }]
+requires-python = ">=3.10"
+
+[project.urls]
+Repository = "https://github.com/zeevro/base64-regex"
+
+[tool.uv.build-backend]
+source-include = ["test.py"]
+
+[tool.ruff]
+line-length = 150
+output-format = "concise"
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+    "W191", # tab-indentation - conflicts with formatter
+    "E111", # indentation-with-invalid-multiple - conflicts with formatter
+    "E114", # indentation-with-invalid-multiple-comment - conflicts with formatter
+    "E117", # over-indented - conflicts with formatter
+    "D206", # indent-with-spaces - conflicts with formatter
+    "D300", # triple-single-quotes - conflicts with formatter
+    "Q000", # bad-quotes-inline-string - conflicts with formatter
+    "Q001", # bad-quotes-multiline-string - conflicts with formatter
+    "Q002", # bad-quotes-docstring - conflicts with formatter
+    "Q003", # avoidable-escaped-quote - conflicts with formatter
+    "COM812", # missing-trailing-comma - conflicts with formatter
+    "COM819", # prohibited-trailing-comma - conflicts with formatter
+    "E501", # line-too-long - see formatter documentation
+
+    "D", # linter: pydocstyle
+]
+
+[tool.ruff.lint.isort]
+force-sort-within-sections = true
+lines-after-imports = 2
+
+[tool.ruff.format]
+quote-style = "single"
+
+[tool.mypy]
+strict = true
+files = ["src/", "test.py"]
+namespace_packages = false

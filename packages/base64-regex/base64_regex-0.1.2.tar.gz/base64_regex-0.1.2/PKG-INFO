@@ -1,0 +1,19 @@
+Metadata-Version: 2.3
+Name: base64-regex
+Version: 0.1.2
+Summary: Generate RegEx patterns for finding Base64 substrings
+Author: Zeev Rotshtein
+Author-email: Zeev Rotshtein <zeevro@gmail.com>
+Requires-Python: >=3.10
+Project-URL: Repository, https://github.com/zeevro/base64-regex
+Description-Content-Type: text/markdown
+
+# base64-regex
+
+This library generates RegEx (Regular Expressions) patterns that enable searching for Base64-encoded substrings
+
+Resources:
+- https://stackoverflow.com/a/67880688
+- https://github.com/baltpeter/base64-search
+- https://www.leeholmes.com/searching-for-content-in-base-64-strings/
+- https://en.wikipedia.org/wiki/Base64
