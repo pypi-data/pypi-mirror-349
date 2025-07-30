@@ -1,0 +1,10 @@
+htmligator/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+htmligator/cli.py,sha256=XhRKc016pFA56EJ5LG9nzK5jrlE9-ZPI4Bg82TyB1B0,1186
+htmligator/exception.py,sha256=NrXFgEsUlLYGwUb99YQramZyda0o89JruxXMZqNA924,496
+htmligator/htmligator.py,sha256=AkV_H9lEft3N0JbRh5SU-MISeQ3-Ycra-QmsLB64_l4,2365
+htmligator/util.py,sha256=4giRC3j5ftQp6brsbcLeGTqth5t6oGXfFhdXGhIKdPI,1386
+htmligator-0.8.0.dist-info/LICENSE,sha256=AOdG9K9C03otrAbOnh2P_Urw9y0Sc0zs6Qb0Nj-zscs,1066
+htmligator-0.8.0.dist-info/METADATA,sha256=iDNLmNMKK81LnVixyM5NHxhuBWTeql7Qk_2S5COypLI,6640
+htmligator-0.8.0.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+htmligator-0.8.0.dist-info/entry_points.txt,sha256=TYcCIEkqejH5UwVxHXfAyVvzFqCMViCgj8X4X66ep-w,49
+htmligator-0.8.0.dist-info/RECORD,,
