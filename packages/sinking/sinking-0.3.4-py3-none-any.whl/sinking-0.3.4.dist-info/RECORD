@@ -1,0 +1,11 @@
+sinking/__init__.py,sha256=oYLGMpySamd16KLiaBTfRyrAS7_oyp-TOEHmzmeumwg,22
+sinking/cli.py,sha256=Y7Cugg4fFdQhG0ImMiQGbnG2fKJEIlttTmeYgOsQpvs,3278
+sinking/destination.py,sha256=UQZPVMz95IHPMWyVN5yXZX9KF6xTJRRYRw1vj5GZFMo,1588
+sinking/options.py,sha256=8pAm-HKQT649oDNg5no2Xhm_AaysQo1LBD59KweVIno,332
+sinking/source.py,sha256=GWoq4eYnoENhhU-GbpT6q9MSKbWAb9p2Jvfm8DrqyHM,1374
+sinking/utils.py,sha256=sMUcdI5m6t3rVyGLkM8WmLbbrAZhvn0y0XtWfclPD4Y,167
+sinking-0.3.4.dist-info/METADATA,sha256=jwshSP3VRiT_Lf6XZgAg2mOLa0nbTi2iTFQ7vojALjU,1478
+sinking-0.3.4.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+sinking-0.3.4.dist-info/entry_points.txt,sha256=0R9oKPkHqnKAtdjM7lM2-6a0lQRbxNppy9oW_WFi9RM,45
+sinking-0.3.4.dist-info/licenses/LICENSE,sha256=zBCUm1JNb1yYbV6kh1oVAkonHJ2PRYQpzAcvdhLbU9g,1080
+sinking-0.3.4.dist-info/RECORD,,
