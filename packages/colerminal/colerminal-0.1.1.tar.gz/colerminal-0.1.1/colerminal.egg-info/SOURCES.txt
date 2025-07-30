@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+colerminal.egg-info/PKG-INFO
+colerminal.egg-info/SOURCES.txt
+colerminal.egg-info/dependency_links.txt
+colerminal.egg-info/top_level.txt
