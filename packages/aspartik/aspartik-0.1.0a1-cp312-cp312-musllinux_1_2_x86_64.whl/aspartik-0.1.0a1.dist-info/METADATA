@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: aspartik
+Version: 0.1.0a1
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+License-File: LICENSE
+Summary: Computational biology toolkit
+Author: Andrej Kolčin <self@kaathewise.net>
+Author-email: Andrej Kolčin <self@kaathewise.net>
+License: AGPL-3.0-only
+Requires-Python: >=3.12
+Project-URL: Source Code, https://github.com/kaathewisegit/aspartik
