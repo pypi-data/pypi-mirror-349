@@ -1,0 +1,54 @@
+[build-system]
+requires = ['flit_core >=3.2,<4']
+build-backend = 'flit_core.buildapi'
+
+[project]
+name = 'timeir'
+authors = [{ name = '5j9', email = '5j9@users.noreply.github.com' }]
+description = 'python functions to extract and work with time.ir data'
+readme = 'README.md'
+requires-python = '>=3.12'
+dependencies = ['httpx']
+dynamic = ['version']
+license = {text = 'GPL-3.0'}
+
+[project.urls]
+Homepage = 'https://github.com/5j9/timeir'
+
+[tool.ruff]
+line-length = 79
+format.quote-style = 'single'
+lint.isort.combine-as-imports = true
+lint.extend-select = [
+    'W605', # invalid-escape-sequence
+    'FA',  # flake8-future-annotations
+    'I',  # isort
+    'UP',  # pyupgrade
+    'RUF', # Ruff-specific rules (RUF)
+]
+lint.ignore = [
+    'E721',  # Do not compare types, use `isinstance()`
+    'RUF001',  # ambiguous-unicode-character-string	
+]
+
+[tool.pytest.ini_options]
+addopts = '--quiet --tb=short'
+
+
+[tool.pyright]
+typeCheckingMode = 'standard'
+reportDeprecated = "warning"
+reportPropertyTypeMismatch = "warning"
+reportUnnecessaryCast = "warning"
+reportUnnecessaryContains = "warning"
+reportUnnecessaryIsInstance = "warning"
+reportUnnecessaryTypeIgnoreComment = true
+reportInvalidStringEscapeSequence = false
+reportConstantRedefinition = 'error'
+reportTypeCommentUsage = 'warning'
+reportUnnecessaryComparison = 'warning'
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.5",
+]
