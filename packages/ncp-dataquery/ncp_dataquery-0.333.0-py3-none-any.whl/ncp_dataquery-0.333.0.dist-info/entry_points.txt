@@ -1,0 +1,2 @@
+[sqlalchemy.dialects]
+trino = ncp_dataquery.sqlalchemy.dialect:TrinoDialect
