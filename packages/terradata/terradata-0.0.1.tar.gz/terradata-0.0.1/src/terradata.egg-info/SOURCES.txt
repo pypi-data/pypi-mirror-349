@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+src/terradata.egg-info/PKG-INFO
+src/terradata.egg-info/SOURCES.txt
+src/terradata.egg-info/dependency_links.txt
+src/terradata.egg-info/requires.txt
+src/terradata.egg-info/top_level.txt
