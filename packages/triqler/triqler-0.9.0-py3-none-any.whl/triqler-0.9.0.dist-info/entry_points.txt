@@ -1,0 +1,9 @@
+[console_scripts]
+diann2triqler=triqler.convert.diann:main
+dinosaur2triqler=triqler.convert.dinosaur:main
+maxquant2triqler=triqler.convert.maxquant:main
+plot_hyperparameter_fits=triqler.distribution.plot_hyperparameter_fits:main
+plot_posteriors=triqler.distribution.plot_posteriors:main
+quandenser2triqler=triqler.convert.quandenser:main
+triqler=triqler.triqler:main
+
