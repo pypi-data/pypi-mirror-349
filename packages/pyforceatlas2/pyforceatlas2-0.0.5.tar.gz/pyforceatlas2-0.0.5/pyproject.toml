@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyforceatlas2"
+dynamic = ["version"]
+description = "Fast Gephi's ForceAtlas2 graph layout algorithm written in Python for Python."
+readme = "README.md"
+authors = [
+    { name = "Ira Horecka", email = "ira89@icloud.com" }
+]
+requires-python = ">=3.8"
+dependencies = [
+    "networkx",
+    "numpy",
+    "python-igraph",
+    "scipy",
+    "tqdm",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Topic :: Scientific/Engineering :: Visualization",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+
+[project.license]
+text = "GPL-3.0-or-later"
+
+[project.urls]
+"Homepage" = "https://github.com/irahorecka/pyforceatlas2"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.dynamic]
+version = { attr = "pyforceatlas2.__version__" }
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]

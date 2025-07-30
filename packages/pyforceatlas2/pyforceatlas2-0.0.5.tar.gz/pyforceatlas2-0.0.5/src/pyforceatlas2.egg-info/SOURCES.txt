@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+src/pyforceatlas2/__init__.py
+src/pyforceatlas2/layout.py
+src/pyforceatlas2/pyforceatlas2.py
+src/pyforceatlas2.egg-info/PKG-INFO
+src/pyforceatlas2.egg-info/SOURCES.txt
+src/pyforceatlas2.egg-info/dependency_links.txt
+src/pyforceatlas2.egg-info/requires.txt
+src/pyforceatlas2.egg-info/top_level.txt
+tests/test_layout.py
+tests/test_pyforceatlas2.py
