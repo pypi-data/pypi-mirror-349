@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: pytorch-holo
+Version: 0.0.5
+Summary: Benchmarks for discrete sequence optimization
+Author-email: Samuel Stanton <stanton.samuel@gene.com>
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: botorch>=0.9.4
+Requires-Dist: hydra-core
+Requires-Dist: numpy<2.0
+Requires-Dist: pandas
+Requires-Dist: pooch
+Requires-Dist: torch
+Requires-Dist: wandb
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pip-tools; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: pre-commit; extra == "dev"
+Dynamic: license-file
