@@ -1,0 +1,185 @@
+Metadata-Version: 2.3
+Name: limbic
+Version: 0.0.1
+Summary: 
+Author: Freddie Vargus
+Author-email: freddie@quotientai.co
+Requires-Python: >=3.10.13,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: anthropic (>=0.46.0,<0.47.0)
+Requires-Dist: beautifulsoup4 (>=4.12.3,<5.0.0)
+Requires-Dist: duckduckgo-search (>=8.0.2,<9.0.0)
+Requires-Dist: ipython (>=8.32.0,<9.0.0)
+Requires-Dist: langchain (>=0.1.12,<0.2.0)
+Requires-Dist: langchain-openai (>=0.0.8,<0.0.9)
+Requires-Dist: litellm (>=1.61.1,<2.0.0)
+Requires-Dist: openai (>=1.62.0,<2.0.0)
+Requires-Dist: pdbpp (>=0.10.3,<0.11.0)
+Requires-Dist: quotientai (>=0.3.0,<0.4.0)
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Requires-Dist: rich (>=13.9.4,<14.0.0)
+Requires-Dist: tavily-python (>=0.5.4,<0.6.0)
+Description-Content-Type: text/markdown
+
+# Limbic - A Framework for Building AI Agents
+
+Limbic is a Python framework for building AI agents that can use tools, maintain memory, and plan their actions. It's designed to be modular, extensible, and easy to use.
+
+## Features
+
+- 🤖 ReAct pattern implementation for tool use
+- 🧠 Memory management for maintaining context
+- 📝 Planning capabilities for complex tasks
+- 🛠️ Easy tool creation and management
+- 📊 Built-in statistics and logging
+- 💾 Session management for saving/loading agent state
+
+## Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/quotient-ai/limbic.git
+cd limbic
+
+# Install dependencies using Poetry
+poetry install
+```
+
+## Quick Start
+
+Here's a simple example of creating and using an agent:
+
+```python
+from limbic.core import Agent, AgentConfig
+from limbic.tools import calculator, stock_price
+
+# Create an agent with some tools
+agent = Agent(
+    tools=[calculator, stock_price],
+    model="gpt-4o-mini",
+    config=AgentConfig()
+)
+
+# Run a task
+result = agent.run("Calculate the total cost of buying 10 shares of AAPL")
+print(result)
+```
+
+## Creating Custom Tools
+
+You can create custom tools using the `@tool` decorator:
+
+```python
+from limbic.tools import tool
+
+@tool
+def my_custom_tool(param1: str, param2: int) -> str:
+    """
+    A custom tool that does something interesting.
+
+    Parameters:
+    -----------
+    param1: str
+        Description of param1
+    param2: int
+        Description of param2
+
+    Returns:
+    --------
+    str
+        Description of the return value
+    """
+    # Your tool implementation here
+    return f"Processed {param1} {param2} times"
+```
+
+## Agent Configuration
+
+The `AgentConfig` class allows you to customize agent behavior:
+
+```python
+from limbic.core import AgentConfig
+
+config = AgentConfig(
+    max_steps=10,          # Maximum number of steps before stopping
+    show_steps=True,       # Show detailed step information
+    tool_choice="auto",    # Tool selection mode
+    planning_interval=2    # How often to run planning steps
+)
+```
+
+## Memory Management
+
+The framework includes built-in memory management treated as short-term memory (i.e. the message history).
+
+```python
+from limbic.memory import AgentMemory
+
+# Memory is automatically managed by the agent
+agent = Agent(
+    tools=[...],
+    model="gpt-4-turbo-preview"
+)
+
+# The agent will maintain context between steps
+result = agent.run("First task")
+result = agent.run("Follow-up task using previous context")
+```
+
+## Session Management
+
+You can save and load agent sessions:
+
+```python
+# Save a session
+agent.save_session("my_session.json")
+
+# Load a session
+loaded_agent = Agent.load_from_session("my_session.json")
+```
+
+## Error Handling
+
+Tools should use the `ToolExecutionError` for proper error handling:
+
+```python
+from limbic.tools import tool, ToolExecutionError
+
+@tool
+def my_tool():
+    try:
+        # Your tool implementation
+        pass
+    except Exception as e:
+        raise ToolExecutionError(
+            message="User-friendly error message",
+            developer_message=f"Detailed error: {str(e)}"
+        )
+```
+
+## Example: Research Agent
+
+Here's how to create a research agent using the framework:
+
+```python
+from limbic.core import Agent, AgentConfig
+from limbic.research import get_research_tools
+
+# Create a research agent
+agent = Agent(
+    tools=get_research_tools(),
+    model="gpt-4o-mini",
+    config=AgentConfig()
+)
+
+# Run a research task
+result = agent.run("Research the latest developments in quantum computing")
+```
+
+## Contributing
+
+## License
+
