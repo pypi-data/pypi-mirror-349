@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-server-rash = mcp_server_rash.main:main
