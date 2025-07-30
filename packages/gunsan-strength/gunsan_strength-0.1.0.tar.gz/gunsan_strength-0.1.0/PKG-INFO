@@ -1,0 +1,29 @@
+Metadata-Version: 2.4
+Name: gunsan_strength
+Version: 0.1.0
+Summary: GunSan Strength Index (GSI) – A proprietary leading and lagging indicator for measuring technical strength of a scrip.
+Author: santosh3110
+Author-email: santoshkumarguntupalli@gmail.com
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: vectorbt
+Requires-Dist: pandas-ta
+Requires-Dist: plotly
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# GunSan-Strength-Index
+A leading and lagging indicator built using the old school technical analysis for analysing the technical strength of a financial instrument
