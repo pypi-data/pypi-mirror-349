@@ -1,0 +1,8 @@
+LICENSE
+pyproject.toml
+Ecomodulo/_init_.py
+Ecomodulo/ecomodulo.py
+ecomodulo.egg-info/PKG-INFO
+ecomodulo.egg-info/SOURCES.txt
+ecomodulo.egg-info/dependency_links.txt
+ecomodulo.egg-info/top_level.txt
