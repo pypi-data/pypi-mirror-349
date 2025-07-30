@@ -1,0 +1,60 @@
+Metadata-Version: 2.4
+Name: komora_syncer
+Version: 5.6
+Summary: Synchronize data between Komora and Netbox applications
+Home-page: https://gitlab.cesnet.cz/701/done/netbox_komora_syncer
+Author: Jan Krupa
+Author-email: jan.krupa@cesnet.cz
+Keywords: netbox,komora
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Intended Audience :: Developers
+Classifier: Development Status :: 4 - Beta
+Classifier: Operating System :: Unix
+Requires-Python: >=3.8, <4
+Description-Content-Type: text/markdown
+Requires-Dist: click==8.1.7
+Requires-Dist: pynetbox==7.4.0
+Requires-Dist: python-slugify==8.0.4
+Requires-Dist: appdirs==1.4.4
+Requires-Dist: PyYAML==6.0.2
+Requires-Dist: lat-lon-parser
+Requires-Dist: loguru
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+Netbox and Komora synchronizer
+===
+
+`komora_syncer` is a tool to synchronize data between Komora and Netbox application 
+
+Installation
+------------
+- `git clone` this repository
+- `pip install .`
+- setup configuration files config.yml
+   - paths: 
+      - ~/.config/komora_syncer/
+      - /etc/komora_syncer/config.yml
+      - Or can be set with the env variable `CONFIG_FOLDER_PATH`. Example: `CONFIG_FOLDER_PATH=~/NETBOX/netbox_komora_syncer/configurations/ komora_syncer  synchronize`
+
+
+Run
+---
+
+- `komora_syncer`
+
+komora_syncer requires at least Python 3.6.

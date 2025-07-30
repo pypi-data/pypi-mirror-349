@@ -1,0 +1,2 @@
+[console_scripts]
+komora_syncer = komora_syncer.__main__:cli
