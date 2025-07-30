@@ -1,0 +1,11 @@
+bellameta/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bellameta/base_metadata.py,sha256=sYaEtqR6zd9YlvMCo5xC9m-DUGmjwislhqToZc589tU,4932
+bellameta/constants.py,sha256=F-ffwQOQghQN12A-4KHk8TQczqnZScFrg8jvnAKAiZA,414
+bellameta/database.py,sha256=SmJWAHjr6NVP6D0OSZGw6M9FBHERX5NnFWEFHS2MTWs,3877
+bellameta/types.py,sha256=24k1Stei0LPl3pAXuwgOvEzCMbcSevatyg7ESIHI8XU,2891
+bellameta/utils.py,sha256=Zfw0sr5gE-RLG07t9cN4cv1soREW9jRad0nJDxigrzk,2609
+bellameta-1.2.1.dist-info/licenses/LICENSE,sha256=GOp8eBDy2DzqdLk_1HrBiluWfcZG9SecD5F9n0Fs2S0,1069
+bellameta-1.2.1.dist-info/METADATA,sha256=rFQS1B9PiXW4EoOue3KRr9OfQzVVIrk7mghFYy8YBoE,3279
+bellameta-1.2.1.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+bellameta-1.2.1.dist-info/top_level.txt,sha256=S8VLwvWePonb-1gI7AiGi89abBOch_mXxOMhwQo9NbA,10
+bellameta-1.2.1.dist-info/RECORD,,
