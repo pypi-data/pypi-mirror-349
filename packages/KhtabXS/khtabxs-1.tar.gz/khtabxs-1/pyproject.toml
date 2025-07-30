@@ -1,0 +1,17 @@
+[project]
+name = "KhtabXS"
+version = "1"
+description = "تم صنع بواسطة فريق XS ~ الصانع الرسمي ^[خطاب]^ ~ مساعده ^[سجاد]^"
+authors = [
+  {name = "KhtabXS"}
+]
+readme = ""
+requires-python = ">=3.0"
+
+classifiers = [
+  "Programming Language :: Python :: 3.11"
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
