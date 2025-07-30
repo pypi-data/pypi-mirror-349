@@ -1,0 +1,7 @@
+numpy
+rich
+nuscenes-devkit
+pyyaml
+wind-pypcd
+opencv-python
+numpy-quaternion==2023.0.3

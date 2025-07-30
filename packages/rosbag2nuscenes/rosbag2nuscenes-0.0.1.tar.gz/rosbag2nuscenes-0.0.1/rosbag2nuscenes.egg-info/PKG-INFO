@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: rosbag2nuscenes
+Version: 0.0.1
+Summary: ros bag to nuscenes
+Author-email: windzu <windzu1@gmail.com>
+License: MIT
+Keywords: nuscenes
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Requires-Python: <3.9,>=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: rich
+Requires-Dist: nuscenes-devkit
+Requires-Dist: pyyaml
+Requires-Dist: wind-pypcd
+Requires-Dist: opencv-python
+Requires-Dist: numpy-quaternion==2023.0.3
+
+# roscenes
+
+ros scene to nuscenes
+
+## Description
+
+## Requirements
+
+- Python 3.8
+
+## Installation
+
+```bash
+pip install -e .
+```
