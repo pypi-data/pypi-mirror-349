@@ -1,0 +1,9 @@
+miniwifi/__init__.py,sha256=UJoKcKdZX_yK7euVR27jIevJxrAnvV1nzTLL_E1s-EM,150
+miniwifi/core.py,sha256=HnfT2a0fxAwJH4_L0awedDCg_YX87EPjS85xypGNM7U,2698
+miniwifi/exceptions.py,sha256=67uRs43ievgbr8DY2F9c0QpP5c6fiwY8hpsFSjdBFTo,45
+miniwifi/utils.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+miniwifi-1.2.0.dist-info/METADATA,sha256=8OvnpclZ0P54YwOeEjF0NaDlCVfQQW5zcROfwhL9Ofo,4164
+miniwifi-1.2.0.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+miniwifi-1.2.0.dist-info/entry_points.txt,sha256=OhNhwZzGhwvSx-5vxhzkErhMKJzBDYHsJ24PA8-X0fY,96
+miniwifi-1.2.0.dist-info/top_level.txt,sha256=BMAO9RGMyNHrLO_FKL1ZYNc08cI8zWNQxrN5ZzdKMJQ,9
+miniwifi-1.2.0.dist-info/RECORD,,
