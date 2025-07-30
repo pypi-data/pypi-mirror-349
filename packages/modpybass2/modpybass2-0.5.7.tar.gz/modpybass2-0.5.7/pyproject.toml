@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "modpybass2"
+version = "0.5.7"
+authors = [
+  { name="Johann Mattias kammiste", email="johannmkammiste@gmail.com" },
+    {name="Maxim Kolosov", email="pyirrlicht@gmail.com"}
+]
+description = "Modified pybass"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+  "ctypes",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+keywords = ["pybass", "modpybass", "BASS", "music", "audio", "audio library"]
+
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+
+[project.urls]
+Homepage = "https://github.com/johannmkammiste/modpybassmacos"
+Issues = "https://github.com/johannkammiste/modpybassmacos/issues"
