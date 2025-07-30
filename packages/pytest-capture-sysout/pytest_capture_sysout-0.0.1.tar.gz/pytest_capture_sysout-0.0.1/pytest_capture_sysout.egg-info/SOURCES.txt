@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+setup.py
+pytest_capture_sysout/__init__.py
+pytest_capture_sysout.egg-info/PKG-INFO
+pytest_capture_sysout.egg-info/SOURCES.txt
+pytest_capture_sysout.egg-info/dependency_links.txt
+pytest_capture_sysout.egg-info/top_level.txt
