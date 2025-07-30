@@ -1,0 +1,2 @@
+[console_scripts]
+p-asm = p-asm.__main__:main
