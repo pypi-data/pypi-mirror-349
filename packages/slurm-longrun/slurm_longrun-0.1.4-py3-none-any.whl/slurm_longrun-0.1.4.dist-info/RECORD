@@ -1,0 +1,10 @@
+slurm_longrun/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+slurm_longrun/cli.py,sha256=dU73PbgW5AOQ_XOpNAO8wYSmfZxRmPPHB7kUbOgePFM,1902
+slurm_longrun/common.py,sha256=FH5K2L6qhztEk9TRrX5NlJvHX1P-hGcJizDqjLop80Y,1845
+slurm_longrun/logger.py,sha256=2GTGfi6WeAxZexiSFd4S5a847GUnMiNBkHWt-P9lntk,598
+slurm_longrun/runner.py,sha256=hRcXuJIZYza6l2tE5FlL2YoI2QyYybDskOWnRklWZWY,4228
+slurm_longrun/utils.py,sha256=NZ_asdg1Dwh7ul90Ti7gMsZJZEvP5x_BnFC1Y6wIHMo,4309
+slurm_longrun-0.1.4.dist-info/METADATA,sha256=XmjlYhUwjJ4j9Yxq1ShcP6mKqnJlWYvT3BXBMV_vqsM,12631
+slurm_longrun-0.1.4.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+slurm_longrun-0.1.4.dist-info/entry_points.txt,sha256=tQbPvkAygm_F7WezzafiBDbP5OmeMB_zf3iGfeYU1Xg,57
+slurm_longrun-0.1.4.dist-info/RECORD,,

@@ -1,0 +1,3 @@
+[console_scripts]
+sbatch_longrun=slurm_longrun.cli:main
+
