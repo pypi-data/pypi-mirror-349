@@ -1,0 +1,37 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "medallion-etl"
+version = "0.1.10"
+description = "Una librería modular para construir data pipelines con arquitectura medallion"
+readme = "README.md"
+authors = ["Juan Maniglia <jamr1989@gmail.com>"]
+license = "MIT"
+repository = "https://github.com/JuanManiglia/medallion-etl"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Database",
+]
+
+[tool.poetry.dependencies]
+python = ">=3.11"
+polars = ">=1.30"
+pydantic = ">=2.7"
+sqlalchemy = ">=2.0"
+prefect = ">=3.0"
+requests = ">=2.25.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = ">=7.0.0"
+black = ">=23.0.0"
+isort = ">=5.10.0"
+mypy = ">=1.0.0"
+
+[tool.poetry.scripts]
+medallion-etl = "medallion_etl.cli.commands:main"
