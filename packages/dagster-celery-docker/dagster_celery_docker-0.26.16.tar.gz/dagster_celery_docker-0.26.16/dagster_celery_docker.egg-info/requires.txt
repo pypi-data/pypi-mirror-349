@@ -1,0 +1,4 @@
+dagster==1.10.16
+dagster-celery==0.26.16
+dagster-graphql==1.10.16
+docker
