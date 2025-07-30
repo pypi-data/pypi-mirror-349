@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+README.txt
+pyproject.toml
+batem/__init__.py
+batem/propertiesDB.xlsx
+batem.egg-info/PKG-INFO
+batem.egg-info/SOURCES.txt
+batem.egg-info/dependency_links.txt
+batem.egg-info/requires.txt
+batem.egg-info/top_level.txt
