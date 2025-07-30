@@ -1,0 +1,10 @@
+google_docstring_parser/__init__.py,sha256=mG86aszcEZhWfpkv9cCZUnRB_KePgYzHMvwB4-kdA2s,435
+google_docstring_parser/google_docstring_parser.py,sha256=OxJneI7VqzvI434TgmDJ0mz8Hx_DNUAV5l6HY90wSRw,20336
+google_docstring_parser/type_validation.py,sha256=b2Y05rnnuLnXdK2jVrEgiI-lZcDhX50OhOaI20za3mU,18158
+google_docstring_parser-0.0.8.dist-info/licenses/LICENSE,sha256=K28e2_I4KXVBq-N8hSFwN4QP4SA4GnUypO0Dy1k4VdE,3003
+tools/__init__.py,sha256=1UAmF6rSWbWcMWavJtUbc6wvALZclTwiz5zvjgjWQE0,73
+tools/check_docstrings.py,sha256=rKTtk6KO7l6clr8zrKn4LBGSLR95DXwMNINM9YDwm3o,21966
+google_docstring_parser-0.0.8.dist-info/METADATA,sha256=rKw-R1Lc1pscJTPSMVzhjRKBDyLYuM3RP7vDtNyE9Us,7209
+google_docstring_parser-0.0.8.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+google_docstring_parser-0.0.8.dist-info/top_level.txt,sha256=_0utD2jjoqeoDpyqjmzAM1MBO1TdgbwvB0HTmbpyI8c,30
+google_docstring_parser-0.0.8.dist-info/RECORD,,
