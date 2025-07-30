@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.cfg
+maturin/__init__.py
+maturin/__main__.py
+maturin_qpython.egg-info/PKG-INFO
+maturin_qpython.egg-info/SOURCES.txt
+maturin_qpython.egg-info/dependency_links.txt
+maturin_qpython.egg-info/top_level.txt
