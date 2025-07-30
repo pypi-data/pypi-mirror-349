@@ -1,0 +1,22 @@
+[CDF-24131] Add optional pyarrow dependency (#1584)
+
+# Description
+
+This is used when dumping to parquet.
+
+## Changelog
+
+- [x] Patch
+- [ ] Minor
+- [ ] Skip
+
+## cdf
+
+### Added
+
+- Optional pyarrow dependency. You can install this with `pip install
+cognite-toolkit[table]`.
+
+## templates
+
+No changes.
