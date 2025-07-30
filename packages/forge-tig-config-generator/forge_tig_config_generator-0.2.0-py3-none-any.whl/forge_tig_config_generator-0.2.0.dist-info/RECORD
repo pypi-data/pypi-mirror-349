@@ -1,0 +1,8 @@
+podaac/forge_tig_config_generator/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+podaac/forge_tig_config_generator/generate_config.py,sha256=BzdAIRjhtyHPF7BPSCcxho2AsyrY9VcmsAlUzIP--2A,3656
+podaac/forge_tig_config_generator/schema.json,sha256=fQpYyAJtEaj9V9cX10Raoj5c_bQOVENhA3Z6-9iiOpA,10073
+forge_tig_config_generator-0.2.0.dist-info/LICENSE,sha256=sbH4lMxfuFAesKt9LtgY68wD_BHy7fJipZTHf3z7RJc,11364
+forge_tig_config_generator-0.2.0.dist-info/METADATA,sha256=9CnMV2Zl7ZEIkfjcMZN5gT_hFAnXHWgwGi1Ew4UJqtE,5236
+forge_tig_config_generator-0.2.0.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+forge_tig_config_generator-0.2.0.dist-info/entry_points.txt,sha256=Edkjnx4Q_U8a1jYzeP2nZP_wln11vELqjycUj34XUy8,108
+forge_tig_config_generator-0.2.0.dist-info/RECORD,,
