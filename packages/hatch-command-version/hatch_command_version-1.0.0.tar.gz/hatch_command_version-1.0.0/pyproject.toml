@@ -1,0 +1,27 @@
+[project]
+name = "hatch-command-version"
+version = "1.0.0"
+authors = [{name = "Matt McShane", email = "matt@mattmcshane.com"}]
+description = "A version source plugin to the hatchling.build python build backend that obtains a version by running a command."
+readme = "README.md"
+keywords = ["hatch", "hatchling", "version"]
+dependencies = [
+    "hatchling>=1.27.0",
+]
+
+[project.urls]
+Repository = "https://github.com/mmcshane/hatch-command-version"
+
+[dependency-groups]
+dev = [
+    "mypy",
+    "ruff",
+]
+pylsp = [
+    "python-lsp-server == 1.*",
+    "pylsp-mypy == 0.6.*",
+    "python-lsp-ruff == 2.*",
+]
+
+[project.entry-points.hatch]
+command = "plugin"
