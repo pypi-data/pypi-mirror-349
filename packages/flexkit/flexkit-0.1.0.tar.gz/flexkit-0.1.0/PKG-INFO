@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: flexkit
+Version: 0.1.0
+Summary: Add your description here
+Author-email: FlyQRCode <2314910401@qq.com>
+Requires-Python: >=3.13
+Requires-Dist: fastapi>=0.115.12
+Requires-Dist: psycopg2>=2.9.10
+Requires-Dist: uvicorn>=0.34.2
