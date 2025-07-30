@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "barramento-de-mensagens"
+version = "0.0.1"
+description = "Biblioteca para barramento de mensagens - Sem eventos assincronos"
+authors = ["joaopcamposs <joaopcamposs@outlook.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.11.0"
+ruff = ">=0.11.5,<0.12.0"
+mypy = "^1.15.0"
+pre-commit = "^4.2.0"
+pytest = "^8.3.5"
+dotenv = "^0.9.9"
+sentry-sdk = "^2.27.0"
+sqlalchemy = "^2.0.40"
+build = "^1.2.2.post1"
+twine = "^6.1.0"
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[[tool.poetry.packages]]
+include = "barramento_de_mensagens"
+from = "src"
+
+[tool.setuptools.package-data]
+"barramento_de_mensagens" = ["py.typed"]
