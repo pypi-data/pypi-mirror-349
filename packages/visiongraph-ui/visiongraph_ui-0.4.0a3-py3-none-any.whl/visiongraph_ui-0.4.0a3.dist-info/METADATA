@@ -1,0 +1,94 @@
+Metadata-Version: 2.1
+Name: visiongraph-ui
+Version: 0.4.0a3
+Summary: User interface library for visiongraph projects.
+Home-page: https://github.com/cansik/visiongraph-ui
+Author: Florian Bruggisser
+Author-email: github@broox.ch
+License: MIT License
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: duit[wx]>=0.1.15.0
+Requires-Dist: pygfx>=0.7.0
+Requires-Dist: ConfigArgParse
+Provides-Extra: all
+Requires-Dist: visiongraph>=1.0.0; extra == "all"
+Provides-Extra: vg
+Requires-Dist: visiongraph>=1.0.0; extra == "vg"
+
+# Visiongraph UI
+
+User interface library for visiongraph projects. The idea behind this project is to create a structure for computer vision applications. The idea is to have a **configuration**, **app** and **graph**. And if needed a **window**.
+
+### Example
+
+#### Configuration
+
+```python
+class DemoConfig:
+    def __init__(self):
+        container = ContainerHelper(self)
+
+        # non-ui bound settings
+        with container.section("Test"):
+            self.enable_input = DataField(False) | ui.Boolean("Enable") | Argument(help="Enable input.")
+```
+
+#### Application
+
+```python
+class DemoApp(VisiongraphApp[vg.VisionGraph, DemoConfig]):
+    def __init__(self, config: DemoConfig):
+        super().__init__(config)
+
+    def create_graph(self) -> vg.Visiongraph:
+        graph = DemoGraph().create_graph(vg.VideoCaptureInput())
+        graph.multi_threaded = True
+        return graph
+```
+
+#### Graph
+
+```python
+class DemoGraph:
+    def __init__(self):
+        self.on_frame_ready: Event[np.ndarray] = Event()
+        self.graph: Optional[vg.VisionGraph] = None
+
+    def _on_frame_ready(self, frame: np.ndarray) -> np.ndarray:
+        self.on_frame_ready(frame)
+        return frame
+
+    def create_graph(self, input_device: vg.BaseInput) -> vg.VisionGraph:
+        self.graph = (
+            vg.create_graph(name="Demo Graph", input_node=input_device, multi_threaded=True)
+            .then(vg.custom(self._on_frame_ready))
+            .build()
+        )
+        return self.graph
+```
+
+#### Window
+
+```python
+class DemoWindow(VisiongraphUserInterface[DemoApp, DemoConfig]):
+    def __init__(self, app: DemoApp):
+        super().__init__(app)
+```
+
+#### Usage
+
+```python
+def main():
+    config = DemoConfig()
+    app = DemoApp(config)
+
+    with UIContext():
+        window = DemoWindow(app)
+```
+
+### About
+
+This is a first draft of the library and the api will change in future release.
+
+
