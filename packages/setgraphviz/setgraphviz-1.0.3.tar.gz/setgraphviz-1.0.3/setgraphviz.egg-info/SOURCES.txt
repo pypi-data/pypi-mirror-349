@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setgraphviz/__init__.py
+setgraphviz/examples.py
+setgraphviz/setgraphviz.py
+setgraphviz.egg-info/PKG-INFO
+setgraphviz.egg-info/SOURCES.txt
+setgraphviz.egg-info/dependency_links.txt
+setgraphviz.egg-info/requires.txt
+setgraphviz.egg-info/top_level.txt

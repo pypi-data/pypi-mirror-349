@@ -1,0 +1,2 @@
+include setgraphviz/data/*.zip
+include setgraphviz/data/*.txt
