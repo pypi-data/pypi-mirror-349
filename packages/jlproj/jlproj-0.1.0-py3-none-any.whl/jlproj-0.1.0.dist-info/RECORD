@@ -1,0 +1,8 @@
+jlproj/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jlproj/cli.py,sha256=W291eGFeOjsqu_QekSm7A11u8FoiAvIBdlD32qYxbkY,3796
+jlproj/faiss_wrapper.py,sha256=sAs7OAZVK6PwTqUhp0qRu7lX9gNcI3DY-Cd9oo6T2tk,1098
+jlproj/projector.py,sha256=yEJhyFFQ_ciCB5_316cxYdLl4M43QdBtaf_eaqO8tXY,1551
+jlproj-0.1.0.dist-info/METADATA,sha256=cwFGjPF9u6NoT5xHZYz4pYpHG0AYz6p4aCrUMrACYDo,5503
+jlproj-0.1.0.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+jlproj-0.1.0.dist-info/top_level.txt,sha256=5dt3v5cI6Mqxmj8xuGZ4mOFTrfv1kaHr96uGA5K8W48,7
+jlproj-0.1.0.dist-info/RECORD,,
