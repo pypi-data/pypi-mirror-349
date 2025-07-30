@@ -1,0 +1,1 @@
+"""Terraform Initializer - A CLI tool to bootstrap Terraform projects.""" 

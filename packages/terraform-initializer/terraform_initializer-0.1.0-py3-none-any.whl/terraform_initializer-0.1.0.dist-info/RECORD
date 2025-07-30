@@ -1,0 +1,13 @@
+terraform_initializer/__init__.py,sha256=rLxFNGgg_G858KngjZOLOqi_UL_dm9WmdjExLXA2U-o,74
+terraform_initializer/cli.py,sha256=IMDR56l-M9gbA4SauvglUP_xliIzwtuEYst-SG4BdfY,2157
+terraform_initializer/templates/variables.tf,sha256=jf_PrvgeZ3GqiBLRoucYSdanUMjGAkQ3uaY7gpm1LyQ,758
+terraform_initializer/templates/aws/provider.tf,sha256=rde240TnGTTqGx-u9ARkp0BP_6e7AxfqIrdlsUQkR3s,464
+terraform_initializer/templates/azure/provider.tf,sha256=iSvnku_t79lpleA0B_lD4W64KqR-QEqwekeEv8UoKOM,528
+terraform_initializer/templates/gcp/provider.tf,sha256=HfqaHMNy-az4AzktoMI8eseee5j4CMmJqodmnlVa648,372
+terraform_initializer/templates/local/provider.tf,sha256=fDpqt0pmH-5GEpNpRXRs1xXPpq5C2w7KQrayXisFC5Q,348
+terraform_initializer-0.1.0.dist-info/licenses/LICENSE,sha256=_WiY1BN2ERaF6PZJmJsPI6hHMIX_BG5cVJaMzW8X9vw,1089
+terraform_initializer-0.1.0.dist-info/METADATA,sha256=kI0uHtWY3K6fdhgJBpTRj2GCG8IcyDQUq_6FgMrtWMo,1938
+terraform_initializer-0.1.0.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+terraform_initializer-0.1.0.dist-info/entry_points.txt,sha256=FhMQK3RKvFiaX2E2aay0SBrMbCYat57uN4M72ORK45E,66
+terraform_initializer-0.1.0.dist-info/top_level.txt,sha256=9YZLCQMhe-Ox9szt2rvqliXfL2cdqLsCnyKYFocbTEA,22
+terraform_initializer-0.1.0.dist-info/RECORD,,
