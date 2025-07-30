@@ -1,0 +1,38 @@
+Metadata-Version: 2.4
+Name: uniform-vlm
+Version: 0.1.2
+Summary: Easy one‑liner training + inference tool for the uniform LoRA VLM.
+Author-email: Dillon Murphy <ddmurphy@calpoly.edu>, Kailyn Kragas <kkragas@calpoly.edu>, Sofia Bryukhova <sbryukho@calpoly.edu>, Jasmine Cabrera <jkscabrera2003@gmail.com>
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: pandas>=2.0
+Requires-Dist: huggingface_hub>=0.22
+Requires-Dist: transformers>=4.39
+Requires-Dist: ms-swift
+
+# uniform‑vlm
+A lightweight wrapper Python package for **training** and **inference** with NuExtract‑style LoRA adapters.
+
+```bash
+pip install uniform-vlm
+```
+
+### Inference
+```bash
+# CLI
+uniform-vlm infer images/ --csv preds.csv
+
+# Python
+from uniform_vlm.infer import images_to_csv
+images_to_csv("images", "preds.csv")
+```
+
+### Training (continue fine‑tuning existing adapter by default)
+```bash
+uniform-vlm train data/train.csv --image-col path --label-col label_json \
+             --output-dir output/my_adapter
+```
+
+See the Colab walkthrough ➜ <https://colab.research.google.com/drive/1ndRcS9EMcunvrLorQdP97InvCvkEETjJ?usp=sharing>
+
+---

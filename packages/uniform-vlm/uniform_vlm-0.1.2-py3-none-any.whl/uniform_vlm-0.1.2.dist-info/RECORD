@@ -1,0 +1,15 @@
+uniform_vlm/__init__.py,sha256=JytJidMy92vyxdEUZJTeiUZwEGKcbMjZltvp0jkQ3u0,230
+uniform_vlm/cli.py,sha256=hQ3ZQLzhFL_DVL3xT6XuP3wPrrkZW8NziopQ5HtD6QY,670
+uniform_vlm/warmup.py,sha256=wUWsVuZnfZYifvIOW0hJr1q4TMmgk0gs1sRGbu-YlrU,485
+uniform_vlm/infer/__init__.py,sha256=HNIER2_rCPRScyc_OeAfCPpRZHLxfAla9LHvGFaHsbk,147
+uniform_vlm/infer/dataset.py,sha256=pUNKHwyjxMMmE6IjQ3skYbTamg4FwP_GjvuwJLyIfVE,1752
+uniform_vlm/infer/format.py,sha256=7BM33do9cmGanTX0AkRWnl-viqkoEBq0ciiYQ0wVruQ,631
+uniform_vlm/infer/run.py,sha256=LBzYAoKSeKXygqVdCg-2lHesbg_KHE4LY1UxE53uDL4,3257
+uniform_vlm/train/__init__.py,sha256=kpOegc6pyY8WtaRihZhWm5ZLzlsbC9Q8zdrhwHFZjwM,52
+uniform_vlm/train/dataset.py,sha256=OG3GAR8UYBzCmnAlBnuD-eKKijfM6DON5C-2gvxGs5Q,2339
+uniform_vlm/train/run.py,sha256=a07sLU-7RCSMymNW1hR2yHP2DoS4PPR2P3aG7b4iV0I,3518
+uniform_vlm-0.1.2.dist-info/METADATA,sha256=ab8HTl3pnFAuhIQDNIVZk75VQ1AwR8gKIajm7MzrTuo,1142
+uniform_vlm-0.1.2.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+uniform_vlm-0.1.2.dist-info/entry_points.txt,sha256=-xohsB5M09L8mpwE_kl6iNQnLDLL1FSx4aX_Jb_nN-8,53
+uniform_vlm-0.1.2.dist-info/top_level.txt,sha256=vRggT-XIchYoJ7DccRu4VEqZYd-CgobEe-7Iad2lRxo,12
+uniform_vlm-0.1.2.dist-info/RECORD,,
