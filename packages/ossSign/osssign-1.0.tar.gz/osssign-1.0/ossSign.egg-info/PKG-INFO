@@ -1,0 +1,37 @@
+Metadata-Version: 2.4
+Name: ossSign
+Version: 1.0
+Summary: oss签名
+Author: zhangchaolei
+Author-email: ddt_8888@126.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license-file
+Dynamic: requires-python
+Dynamic: summary
+
+# 用于计算阿里云的签名
+
+## 打包
+```shell
+python setup.py sdist bdist_wheel
+```
+
+## 上传
+### 安装依赖工具
+```shell
+pip install twine
+```
+### 上传到pypi（需要提前准备好账号）
+```shell
+twine upload --repository-url https://upload.pypi.org/legacy/ dist/*
+```
