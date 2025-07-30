@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "activitypub-linked-data"
+version = "0.0.1"
+requires-python = ">= 3.9,<4"
+description = "JSON-LD context loader and RDF schema definitions for ActivityPub"
+authors = [{name = "Raphael Lullis", email = "raphael@mushroomlabs.com"}]
+keywords = ["activitypub", "jsonld"]
+license = "BSD-3-Clause"
+readme = "README.md"
+classifiers = [
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Internet :: WWW/HTTP",
+]
+
+dependencies = [
+  "rdflib >= 7.0.0"
+]
+
+[tool.setuptools]
+packages = ["ap.linked_data"]
+include-package-data = true
+
+[tool.mypy]
+ignore_missing_imports = true
+check_untyped_defs = true
+disallow_untyped_defs = false
+warn_unused_configs = true
+warn_unused_ignores = true
+
+[tool.ruff]
+fix = true
+line-length = 99
+exclude = ["build", "dist", ".git", "migrations"]
+extend-select = ["I"]
+
+[tool.ruff.lint]
+ignore = ["B011", "E203", "E402", "E731"]
+select = ["E", "F", "W", "I"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["ap"]
