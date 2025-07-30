@@ -1,0 +1,16 @@
+clicknick/__init__.py,sha256=Ap6aFMc1gb7P7X0JRL_w2XAlpe3tH51jQ8ZVgO643uc,48
+clicknick/clicknick.py,sha256=tg3MahmgyobUk2oYVYyZXH5PWboukj-DpM8JPHA9bwg,14695
+clicknick/combobox_autocomplete.py,sha256=WWKUwozqkffw0D9FbSGn_IMJ06GHn-L9apVznMV9TtQ,3389
+clicknick/combobox_filter.py,sha256=tkd68pEOjCri1kfz9i7aMmbn4Yn0sm_bPYOF0jhsIcM,3173
+clicknick/nickname_manager.py,sha256=L703xs9TiYHTs4UQnxR2G4ouUM4gcwk-S-liuzckicg,4886
+clicknick/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+clicknick/shared.ahk,sha256=bVJVifDkCF6Gw4pNBK8AiwvCI0g1YW3w7UbvoPw80ww,4010
+clicknick/shared_ahk.py,sha256=reySPi9Nyczk9nFwm3kItDBjeBCROupJOKUWjUW6hV4,314
+clicknick/widgets.py,sha256=exc4xLP-dZYFBI7zvvgx5Ll2BkX1l5_YKtAeL7se8EU,11575
+clicknick/window_detector.py,sha256=6pozo3IXW_5RkrZYKfjsmB3VLj_VS43kr3lV0GWCGHE,5475
+clicknick/window_mapping.py,sha256=oyQj5S-pIrBNWXbReoWRUlF3E_UrqjYApSIcYJL6e-M,4307
+clicknick-0.1.3.dist-info/METADATA,sha256=1p2L3osWO1BgMf4VFl2SDbq-R9f-zT7IHUsvaIoBLHI,2639
+clicknick-0.1.3.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+clicknick-0.1.3.dist-info/entry_points.txt,sha256=XT9hi5NUnlOxZdrr-nc8wX2cnPdy6m04a1Suc146ids,45
+clicknick-0.1.3.dist-info/licenses/LICENSE,sha256=hIahDEOTzuHCU5J2nd07LWwkLW7Hko4UFO__ffsvB-8,34523
+clicknick-0.1.3.dist-info/RECORD,,
