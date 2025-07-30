@@ -1,0 +1,2 @@
+[console_scripts]
+esp-batch-flash = esp_batch_flash.cli:main
