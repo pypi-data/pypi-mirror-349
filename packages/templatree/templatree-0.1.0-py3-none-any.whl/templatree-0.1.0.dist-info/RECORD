@@ -1,0 +1,11 @@
+templatree/__init__.py,sha256=Pru0BlFBASFCFo7McHdohtKkUtgMPDwbGfyUZlE2_Vw,21
+templatree/cli.py,sha256=BEe8GcrUsYkJQOBzaQaxGBR8T7EQOl6mButqfcixQXA,3643
+templatree/generator.py,sha256=nylsNTVqboerVBr4byYOS_X4AnqBc91GWDqztbWDxG0,404
+templatree/templates/main.py,sha256=oF2Ae7ZACD75kT0HFgtz1YubRJqRePv9VlOV8JJFy_E,51
+templatree/templates/static/index.html,sha256=VPbG3ca_XfC8UvARR8KChG4XXgE3lULrXG9Yo8TythQ,121
+templatree-0.1.0.dist-info/licenses/LICENSE,sha256=z4Znzk1dF44BvkmTPLG6CUSk04BTWuucmHElWuIKr-0,1090
+templatree-0.1.0.dist-info/METADATA,sha256=aopQGEIPwPW5lvNjHKAvRASii8WkFCpnxeYaaEsNmSg,2297
+templatree-0.1.0.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+templatree-0.1.0.dist-info/entry_points.txt,sha256=2U5UFG5LKH4PqKzXGZA9yuItvWOC0gubkpUQ5cmOFbM,51
+templatree-0.1.0.dist-info/top_level.txt,sha256=sR7brduz2xORmIruijnh1ms6hxC2TbDlidrEfQTBRbU,11
+templatree-0.1.0.dist-info/RECORD,,

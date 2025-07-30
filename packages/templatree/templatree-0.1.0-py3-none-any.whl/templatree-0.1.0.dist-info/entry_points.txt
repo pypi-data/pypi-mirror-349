@@ -1,0 +1,2 @@
+[console_scripts]
+templatree = templatree.cli:main
