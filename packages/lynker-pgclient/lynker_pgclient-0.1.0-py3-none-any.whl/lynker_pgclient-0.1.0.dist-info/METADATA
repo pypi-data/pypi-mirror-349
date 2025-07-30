@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: lynker-pgclient
+Version: 0.1.0
+Summary: Postgres client utilities for Lynker
+Author: Naveed
+Author-email: m.naveedashfaq@gmail.com
+License-File: LICENSE
+Requires-Dist: psycopg2-binary >=2.9
+
