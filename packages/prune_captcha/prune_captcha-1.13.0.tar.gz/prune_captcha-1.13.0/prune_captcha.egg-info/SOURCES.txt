@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+captcha_prune/__init__.py
+captcha_prune/apps.py
+captcha_prune/utils.py
+prune_captcha.egg-info/PKG-INFO
+prune_captcha.egg-info/SOURCES.txt
+prune_captcha.egg-info/dependency_links.txt
+prune_captcha.egg-info/requires.txt
+prune_captcha.egg-info/top_level.txt
