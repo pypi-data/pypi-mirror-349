@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+pyzxz/__init__.py
+pyzxz/pyzxz.py
+pyzxz.egg-info/PKG-INFO
+pyzxz.egg-info/SOURCES.txt
+pyzxz.egg-info/dependency_links.txt
+pyzxz.egg-info/requires.txt
+pyzxz.egg-info/top_level.txt
