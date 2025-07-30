@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/ScientificMicroservices/__init__.py
+src/ScientificMicroservices/functions.py
+src/ScientificMicroservices.egg-info/PKG-INFO
+src/ScientificMicroservices.egg-info/SOURCES.txt
+src/ScientificMicroservices.egg-info/dependency_links.txt
+src/ScientificMicroservices.egg-info/top_level.txt
