@@ -1,0 +1,318 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-04-15 21:15+0200\n"
+"PO-Revision-Date: 2024-09-02 20:34+0000\n"
+"Last-Translator: Serhii Horichenko <m@sgg.im>\n"
+"Language-Team: Ukrainian <https://translate.edugit.org/projects/aleksis/aleksis-app-lesrooster/uk/>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+"X-Generator: Weblate 5.0.2\n"
+
+#: aleksis/apps/lesrooster/model_extensions.py:14
+msgid "Slot by day (1-7) and period"
+msgstr "Слот за днем (1-7) та уроком"
+
+#: aleksis/apps/lesrooster/model_extensions.py:32
+msgid "Weekly recurrence (for lessons, supervisions etc.)"
+msgstr "Щотижневе повторення (уроків, нагляду та ін.)"
+
+#: aleksis/apps/lesrooster/models.py:45
+msgid "Draft"
+msgstr "Чернетка"
+
+#: aleksis/apps/lesrooster/models.py:46
+msgid "Published"
+msgstr "Опубліковано"
+
+#: aleksis/apps/lesrooster/models.py:57
+msgid "School term"
+msgstr "Навчальний рік"
+
+#: aleksis/apps/lesrooster/models.py:60 aleksis/apps/lesrooster/models.py:311
+msgid "Name"
+msgstr "Повне ім'я"
+
+#: aleksis/apps/lesrooster/models.py:62
+msgid "Start date"
+msgstr "Дата початку"
+
+#: aleksis/apps/lesrooster/models.py:63
+msgid "End date"
+msgstr "Дата закінчення"
+
+#: aleksis/apps/lesrooster/models.py:66
+msgid "Status"
+msgstr "Стан"
+
+#: aleksis/apps/lesrooster/models.py:112
+msgid "You can't unpublish a validity range."
+msgstr "Ви не можете скасувати публікацію області дії."
+
+#: aleksis/apps/lesrooster/models.py:115
+msgid "The start date must be earlier than the end date."
+msgstr "Початкова дата повинна бути раніше кінцевої дати."
+
+#: aleksis/apps/lesrooster/models.py:121
+msgid "The validity range must be within the school term."
+msgstr "Область дії повинна бути в межах навчального року."
+
+#: aleksis/apps/lesrooster/models.py:127
+msgid "The school term of a published validity range can't be changed."
+msgstr "Навчальний рік опублікованої області дії змінити не можна."
+
+#: aleksis/apps/lesrooster/models.py:133
+msgid "You can't change the start date if the validity range is already active."
+msgstr "Ви не можете змінити початкову дату, якщо активна область дії."
+
+#: aleksis/apps/lesrooster/models.py:136
+msgid "You can't set the start date to a date in the past."
+msgstr "Ви не можете встановити початкову дату на дату в минулому."
+
+#: aleksis/apps/lesrooster/models.py:141
+msgid "You can't change the end date if the validity range is already in the past."
+msgstr "Ви не можете змінити кінцеву дату, якщо області дії вже в минулому."
+
+#: aleksis/apps/lesrooster/models.py:146
+msgid "To avoid data loss, the validity range can be only shortened until the current day."
+msgstr "Щоби не втратити дані, область дії може бути скорочена лише до поточного дня."
+
+#: aleksis/apps/lesrooster/models.py:161
+msgid "There is already a published validity range for this time or a part of this time."
+msgstr "Для вказаного періоду часу або для його частини область дії вже опублікована."
+
+#: aleksis/apps/lesrooster/models.py:190
+msgid "Publish validity range {}"
+msgstr "Опублікувати область дії {}"
+
+#: aleksis/apps/lesrooster/models.py:192
+msgid "All lessons and supervisions in the validity range {} are being synced …"
+msgstr "Усі уроки та спостереження в області дії {} синхронізовані …"
+
+#: aleksis/apps/lesrooster/models.py:194
+msgid "The validity range has been published successfully."
+msgstr "Область дії успішно опублікована."
+
+#: aleksis/apps/lesrooster/models.py:195
+msgid "There was a problem while publishing the validity range."
+msgstr "Під час публікації області дії виникла помилка."
+
+#: aleksis/apps/lesrooster/models.py:213
+#: aleksis/apps/lesrooster/templates/lesrooster/timetable_print.html:55
+msgid "Validity range"
+msgstr "Область дії"
+
+#: aleksis/apps/lesrooster/models.py:214
+msgid "Validity ranges"
+msgstr "Області дії"
+
+#: aleksis/apps/lesrooster/models.py:235 aleksis/apps/lesrooster/models.py:752
+msgid "Linked validity range"
+msgstr "Пов'язана область дії"
+
+#: aleksis/apps/lesrooster/models.py:240
+msgid "Group"
+msgstr "Група"
+
+#: aleksis/apps/lesrooster/models.py:284 aleksis/apps/lesrooster/models.py:308
+msgid "Time Grid"
+msgstr "Часова сітка"
+
+#: aleksis/apps/lesrooster/models.py:285
+msgid "Time Grids"
+msgstr "Часові сітки"
+
+#: aleksis/apps/lesrooster/models.py:314
+msgid "Week day"
+msgstr "День тижня"
+
+#: aleksis/apps/lesrooster/models.py:317
+msgid "Number of period"
+msgstr "Номер уроку"
+
+#: aleksis/apps/lesrooster/models.py:320
+msgid "Start time"
+msgstr "Час початку"
+
+#: aleksis/apps/lesrooster/models.py:321
+msgid "End time"
+msgstr "Час закінчення"
+
+#: aleksis/apps/lesrooster/models.py:397
+msgid "Slot"
+msgstr "Слот"
+
+#: aleksis/apps/lesrooster/models.py:398
+msgid "Slots"
+msgstr "Слоти"
+
+#: aleksis/apps/lesrooster/models.py:408
+#, fuzzy
+#| msgid "Course"
+msgid "Course Bundle"
+msgstr "Курс"
+
+#: aleksis/apps/lesrooster/models.py:414
+msgid "Bundled lessons"
+msgstr ""
+
+#: aleksis/apps/lesrooster/models.py:422
+msgid "Start slot"
+msgstr "Початок слота"
+
+#: aleksis/apps/lesrooster/models.py:428
+msgid "End slot"
+msgstr "Завершення слота"
+
+#: aleksis/apps/lesrooster/models.py:435 aleksis/apps/lesrooster/models.py:671
+msgid "Recurrence"
+msgstr "Повторення"
+
+#: aleksis/apps/lesrooster/models.py:438
+msgid "Leave empty for a single lesson."
+msgstr "Залиште порожнім для одного уроку."
+
+#: aleksis/apps/lesrooster/models.py:444
+msgid "The slots must be in the same time grid."
+msgstr "Слоти повинні бути в тій самій часовій сітці."
+
+#: aleksis/apps/lesrooster/models.py:536
+#, fuzzy
+#| msgid "Lesson quota"
+msgid "Lesson Bundle"
+msgstr "Погодинне навантаження"
+
+#: aleksis/apps/lesrooster/models.py:537
+#, fuzzy
+#| msgid "Lessons"
+msgid "Lesson Bundles"
+msgstr "Уроки"
+
+#: aleksis/apps/lesrooster/models.py:553
+msgid "Linked lesson event"
+msgstr "Поєднані уроки"
+
+#: aleksis/apps/lesrooster/models.py:561 aleksis/apps/lesrooster/models.py:746
+msgid "Course"
+msgstr "Курс"
+
+#: aleksis/apps/lesrooster/models.py:568 aleksis/apps/lesrooster/models.py:645
+msgid "Rooms"
+msgstr "Кімнати"
+
+#: aleksis/apps/lesrooster/models.py:574 aleksis/apps/lesrooster/models.py:650
+#: aleksis/apps/lesrooster/models.py:764
+msgid "Teachers"
+msgstr "Викладачі"
+
+#: aleksis/apps/lesrooster/models.py:581 aleksis/apps/lesrooster/models.py:662
+msgid "Subject"
+msgstr "Предмет"
+
+#: aleksis/apps/lesrooster/models.py:614
+msgid "Lesson"
+msgstr "Урок"
+
+#: aleksis/apps/lesrooster/models.py:615
+msgid "Lessons"
+msgstr "Уроки"
+
+#: aleksis/apps/lesrooster/models.py:625
+msgid "Break"
+msgstr "Перерва"
+
+#: aleksis/apps/lesrooster/models.py:626
+msgid "Breaks"
+msgstr "Перерви"
+
+#: aleksis/apps/lesrooster/models.py:638
+msgid "Linked supervision event"
+msgstr "Пов'язані події нагляду"
+
+#: aleksis/apps/lesrooster/models.py:656
+msgid "Break Slot"
+msgstr "Призупинити слот"
+
+#: aleksis/apps/lesrooster/models.py:674
+msgid "Leave empty for a single supervision."
+msgstr "Залишіть порожнім для одного контролю."
+
+#: aleksis/apps/lesrooster/models.py:687
+#: aleksis/apps/lesrooster/templates/lesrooster/partials/supervision.html:8
+msgid "Supervision"
+msgstr "Контроль"
+
+#: aleksis/apps/lesrooster/models.py:688
+#, fuzzy
+msgid "Supervisions"
+msgstr "Нагляди"
+
+#: aleksis/apps/lesrooster/models.py:757
+msgid "Lesson quota"
+msgstr "Погодинне навантаження"
+
+#: aleksis/apps/lesrooster/models.py:758
+msgid "Number of slots this course is scheduled to fill per week"
+msgstr "Кількість слотів цього курсу для планування на цей тиждень"
+
+#: aleksis/apps/lesrooster/models.py:795
+msgid "Timebound course config"
+msgstr "Налаштування курсу"
+
+#: aleksis/apps/lesrooster/models.py:796
+msgid "Timebound course configs"
+msgstr "Конфігурації курсу"
+
+#: aleksis/apps/lesrooster/models.py:803
+msgid "Can manage lesson raster"
+msgstr "Може керувати часовою сіткою"
+
+#: aleksis/apps/lesrooster/models.py:804
+msgid "Can plan timetables"
+msgstr "Може планувати розклад уроків"
+
+#: aleksis/apps/lesrooster/preferences.py:9
+msgid "Lesson management"
+msgstr "Керування уроками"
+
+#: aleksis/apps/lesrooster/preferences.py:17
+msgid "Create course group when planning new courses"
+msgstr "Створити групу курсу при плануванні нового курсу"
+
+#: aleksis/apps/lesrooster/preferences.py:19
+msgid "If creating a new course with the 'Plan courses' feature, also create a seperate course group with the original group(s) as parent group(s) and link that/these group(s) to the newly created course"
+msgstr "Під час створення нового курсу через функцію \"Планування курсу\" створювати також окрему групу курсу з оригінальною батьківською групою (групами) та поєднати цю/ці групу(и) до створеного курсу"
+
+#: aleksis/apps/lesrooster/preferences.py:33
+msgid "Group type for automatically created course groups"
+msgstr "Тип групи для автоматично створюваної групи курсу"
+
+#: aleksis/apps/lesrooster/preferences.py:34
+msgid "If you leave it empty, no group type will be used."
+msgstr "Якщо залишити порожнім, жодний тип групи не буде використаний."
+
+#: aleksis/apps/lesrooster/preferences.py:42
+msgid "Fill course group with the given courses' members"
+msgstr "Заповнити групу курсу вказаними учасниками курсів"
+
+#: aleksis/apps/lesrooster/preferences.py:44
+msgid "If creating a new course with the 'Plan courses' feature, fill the seperately created course group with the members of the original group(s)."
+msgstr "Якщо створювати курс через функцію \"План курсів\", окремо буде створена група курсу з учасниками оригінальних груп(и)."
+
+#: aleksis/apps/lesrooster/schema/timebound_course_config.py:145
+#: aleksis/apps/lesrooster/schema/validity_range.py:52
+msgid "There is no school term for the school structure."
+msgstr ""
+
+#: aleksis/apps/lesrooster/templates/lesrooster/timetable_print.html:10
+msgid "Timetable"
+msgstr ""

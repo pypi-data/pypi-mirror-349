@@ -1,0 +1,25 @@
+{% load i18n %}
+
+<div style="{% include "lesrooster/partials/subject_colour.html" with subject=lesson.subject %}">
+  <p>
+      {# Teacher or room > Display classes #}
+      {% if type.value == "teacher" or type.value == "room" %}
+        {% if lesson.course.groups %}
+          {% include "lesrooster/partials/groups.html" with groups=lesson.course.groups.all %}
+        {% endif %}
+      {% endif %}
+
+      {# Class or room > Display teacher #}
+      {% if type.value == "room" or type.value == "group" %}
+        {% include "lesrooster/partials/teachers.html" with teachers=lesson.teachers.all %}
+      {% endif %}
+
+      {# Display subject #}
+      {% include "lesrooster/partials/subject.html" with subject=lesson.subject %}
+
+      {# Teacher or class > Display room #}
+      {% if type.value == "teacher" or type.value == "group" %}
+        {% include "lesrooster/partials/rooms.html" with rooms=lesson.rooms.all %}
+      {% endif %}
+  </p>
+</div>

@@ -1,0 +1,150 @@
+{
+  "actions": {
+    "confirm_copy_last_configuration": "Ви дійсно хочете скопіювати іншу конфігурацію у цей проміжок?",
+    "confirm_copy_last_configuration_message": "Це перезапише усі наявні в цьому проміжку дані. Ця дія незворотна.",
+    "copy_last_configuration": "Скопіювати з інших проміжків",
+    "copy_to_day": "Скопіювати в інший день",
+    "search_courses": "Пошук курсів"
+  },
+  "labels": {
+    "select_validity_range": "Виберіть область дії"
+  },
+  "lesrooster": {
+    "break": {
+      "create_item": "Створити перерву",
+      "create_items": "Створити перерви",
+      "create_items_error": "Помилка під час створення перерв.",
+      "create_items_success": "Перерви успішно створені.",
+      "menu_title": "Перерви",
+      "repr": {
+        "default": "Перерва з {timeStart} по {timeEnd}",
+        "weekday_short": "{weekday}, {timeStart} - {timeEnd}"
+      },
+      "title_0": "Перерва",
+      "title_1": "Перерви",
+      "title_2": "Перерв"
+    },
+    "lesson_raster": {
+      "menu_title": "План уроків"
+    },
+    "menu_title": "Керування уроками",
+    "slot": {
+      "confirm_delete_multiple_slots": "Ви дійсно хочете видалити усі слоти та перерви для {day}?",
+      "create_items": "Створити слоти",
+      "create_items_error": "Помилка під час створення слотів.",
+      "create_items_success": "Слоти успішно створені.",
+      "create_slot": "Створити слот (часовий інтервал)",
+      "menu_title": "Слоти",
+      "name": "Назва",
+      "period": "Урок",
+      "period_gte": "Урок з",
+      "period_lte": "Урок до",
+      "repr": "Слот в інтервалі {period}, з {timeStart} по {timeEnd}",
+      "time_end": "Час закінчення",
+      "time_start": "Час початку",
+      "title_0": "Слот",
+      "title_1": "Слоти",
+      "title_2": "Слотів",
+      "weekday": "День тижня",
+      "weekdays": "Дні тижня"
+    },
+    "supervision": {
+      "break_slot": "Перерва",
+      "menu_title": "Наглядачі",
+      "rooms": "Кімнати",
+      "subject": "Предмет",
+      "teachers": "Викладачі"
+    },
+    "timebound_course_config": {
+      "all_teachers": "Усі викладачі",
+      "course": "Курс",
+      "create_timebound_course_config": "Створити конфігурацію курсу",
+      "crud_table_menu_title": "Конфігурації курсу",
+      "groups": "Групи",
+      "lesson_quota": "Квота уроків за планом",
+      "no_course_selected": "Курс не обраний",
+      "raster_menu_title": "Планування курсів",
+      "subject": "Предмет",
+      "subject_teachers": "Викладачі цього предмета",
+      "teachers": "Викладачі",
+      "teachers_for": "Викладачі для",
+      "title_0": "Конфігурація курсу",
+      "title_1": "Конфігурації курсу",
+      "title_2": "Конфігурацій курсу"
+    },
+    "timetable_management": {
+      "back": "Назад до структури н/з",
+      "for_group": "Керування розкладом для групи {group}",
+      "lesson_fields": {
+        "rooms": "Кімнати",
+        "subject": "Предмет",
+        "teachers": "Викладачі"
+      },
+      "lessons_used_ratio": "{lessonsUsed}/{lessonQuota}",
+      "lessons_used_ratio_total": "Заплановано {lessonsUsed}/{lessonQuota} уроків",
+      "menu_title": "Керування розкладом",
+      "no_lessons": "В цьому плані уроків ще немає",
+      "no_slots": "Для цього плану часові слоти не визначені",
+      "snacks": {
+        "lesson_change_length": {
+          "error": "Помилка під час зміни довжини уроку.",
+          "success": "Довжина уроку успішно змінена."
+        },
+        "lesson_create": {
+          "error": "Помилка створення уроку.",
+          "success": "Урок успішно створений"
+        },
+        "lesson_edit": {
+          "error": "Помилка під час оновлення уроку.",
+          "success": "Урок успішно оновлений."
+        },
+        "lesson_move": {
+          "error": "Помилка перенесення уроку.",
+          "success": "Урок успішно перенесений."
+        }
+      },
+      "timetable_for": "Розклад для {name}"
+    },
+    "validity_range": {
+      "create_validity_range": "Створити область дії",
+      "date_end": "Дата закінчення",
+      "date_start": "Дата початку",
+      "menu_title": "Області дії",
+      "name": "Назва",
+      "publish": {
+        "button": "Опублікувати",
+        "confirm_button": "Опублікувати",
+        "confirm_explanation": "Будь ласка, зверніть увагу, що ця дія опублікує весь розклад та зробить його видимим для всіх. На додаток, після публікації Ви не зможете змінити у цій області дій часову сітку, налаштування курсів та розклад.",
+        "confirm_title": "Ви дійсно хочете опублікувати область дії \"{name}\"?"
+      },
+      "status": {
+        "draft": "Чернетка",
+        "published": "Опубліковано"
+      },
+      "status_label": "Стан",
+      "time_grid": {
+        "confirm_delete_body": "Якщо видалити цю групу з області дії, усі поєднані з нею дані, такі як слоти та уроки, будуть також видалені.",
+        "create": "Обрати групу",
+        "create_long": "Створити для групи область дії",
+        "explanations": {
+          "multiple_set": "Дані, поєднані з цією областю дії (напр. часові слоти для уроків) для вказаних нижче груп можуть відрізнятися.",
+          "none_created": "Ви ще не налаштували, для яких груп працює ця область дії, тож використати її ще не можна.",
+          "only_generic": "Дані, поєднані з цією областю дії (напр. часові слоти для уроків) однакові для всіх груп.",
+          "only_one_group": "Дані, поєднані з цією областю дії (напр. часові слоти для уроків) дійсні лише для вказаних нижче груп."
+        },
+        "fields": {
+          "group": "Група",
+          "is_generic": "Це загальне"
+        },
+        "generic": "Загальний (для всіх груп)",
+        "repr": {
+          "default": "{0} ({1})",
+          "generic": "{name} (загальне/дійсне для всіх)"
+        }
+      },
+      "title_0": "Область дії",
+      "title_1": "Області дії",
+      "title_2": "Областей дії"
+    }
+  }
+}

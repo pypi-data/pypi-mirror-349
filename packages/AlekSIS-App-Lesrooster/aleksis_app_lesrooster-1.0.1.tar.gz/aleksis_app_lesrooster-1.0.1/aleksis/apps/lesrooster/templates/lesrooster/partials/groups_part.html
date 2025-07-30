@@ -1,0 +1,7 @@
+{% if groups.count > request.site.preferences.lesrooster__shorten_groups_limit and request.user.person.preferences.lesrooster__shorten_groups and not no_collapsible %}
+  {% include "components/text_collapsible.html" with template="lesrooster/partials/group.html" qs=groups %}
+{% else %}
+  {% for group in groups %}
+    {% include "lesrooster/partials/group.html" with item=group %}
+  {% endfor %}
+{% endif %}

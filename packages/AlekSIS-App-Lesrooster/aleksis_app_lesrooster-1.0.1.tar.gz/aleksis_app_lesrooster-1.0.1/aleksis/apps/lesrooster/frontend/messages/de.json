@@ -1,0 +1,154 @@
+{
+  "lesrooster": {
+    "actions": {
+      "confirm_copy_last_configuration": "Soll wirklich eine andere Konfiguration in diesen Zeitraum übernommen werden?",
+      "confirm_copy_last_configuration_message": "Diese Aktion wird alle bestehenden Daten in diesem Zeitraum löschen. Diese Aktion kann nicht rückgängig gemacht werden.",
+      "copy_last_configuration": "Aus anderem Zeitraum übernehmen",
+      "copy_to_day": "Zu anderem Tag übernehmen",
+      "search_courses": "Kurse durchsuchen"
+    },
+    "break": {
+      "create_item": "Pause erstellen",
+      "create_items": "Pausen erstellen",
+      "create_items_error": "Fehler beim Erstellen der Pausen.",
+      "create_items_success": "Pausen erfolgreich erstellt.",
+      "menu_title": "Pausen",
+      "repr": {
+        "default": "Pause von {timeStart} bis {timeEnd}",
+        "weekday_short": "{weekday}, {timeStart} bis {timeEnd}"
+      },
+      "title": "Pause",
+      "title_plural": "Pausen"
+    },
+    "labels": {
+      "select_validity_range": "Gültigkeitszeitraum auswählen"
+    },
+    "lesson_raster": {
+      "menu_title": "Stundenraster"
+    },
+    "menu_title": "Stundenplanung",
+    "slot": {
+      "confirm_delete_multiple_slots": "Wollen Sie wirklich alle Zeitfenster am {day} löschen?",
+      "create_items": "Zeitfenster erstellen",
+      "create_items_error": "Fehler beim Erstellen der Zeitfenster.",
+      "create_items_success": "Zeitfenster erfolgreich erstellt.",
+      "create_slot": "Zeitfenster erstellen",
+      "menu_title": "Zeitfenster",
+      "name": "Name",
+      "period": "Stunde",
+      "period_gte": "Stunde ab",
+      "period_lte": "Stunde bis",
+      "repr": "Zeitfenster in Stunde {period}, von {timeStart} bis {timeEnd}",
+      "time_end": "Endzeitpunkt",
+      "time_start": "Startzeitpunkt",
+      "title": "Zeitfenster",
+      "title_plural": "Zeitfenster",
+      "weekday": "Wochentag",
+      "weekdays": "Wochentage"
+    },
+    "supervision": {
+      "break_slot": "Pause",
+      "create_supervision": "Aufsicht erstellen",
+      "menu_title": "Aufsichten",
+      "rooms": "Räume",
+      "subject": "Fach",
+      "teachers": "Lehrkräfte",
+      "title": "Aufsicht",
+      "title_plural": "Aufsichten"
+    },
+    "timebound_course_config": {
+      "all_teachers": "Alle Lehrkräfte",
+      "course": "Kurs",
+      "create_timebound_course_config": "Kurskonfiguration erstellen",
+      "crud_table_menu_title": "Kurskonfigurationen",
+      "groups": "Gruppen",
+      "lesson_quota": "Stundenpensum",
+      "no_course_selected": "Kein Kurs ausgewählt",
+      "raster_menu_title": "Kurse planen",
+      "subject": "Fach",
+      "subject_teachers": "Fachlehrkräfte",
+      "teachers": "Lehrkräfte",
+      "teachers_for": "Lehrkräfte für",
+      "title": "Kurskonfiguration",
+      "title_plural": "Kurskonfigurationen"
+    },
+    "timetable": {
+      "menu_title": "Reguläre Stundenpläne",
+      "print": "Drucken"
+    },
+    "timetable_management": {
+      "back": "Zurück zur Schulstruktur",
+      "for_group": "Stundenplanung für die Gruppe {group}",
+      "lesson_fields": {
+        "rooms": "Räume",
+        "subject": "Fach",
+        "teachers": "Lehrkräfte"
+      },
+      "lessons_used_ratio": "{lessonsUsed}/{lessonQuota}",
+      "lessons_used_ratio_total": "{lessonsUsed}/{lessonQuota} Stunden verplant",
+      "menu_title": "Stundenplanung",
+      "no_lessons": "Es gibt noch keine Stunden in diesem Plan",
+      "no_slots": "Für diesen Plan sind noch keine Unterrichtszeiten definiert",
+      "snacks": {
+        "lesson_change_length": {
+          "error": "Fehler beim Verändern der Stundenlänge.",
+          "success": "Stundenlänge erfolgreich angepasst"
+        },
+        "lesson_create": {
+          "error": "Fehler beim Erstellen der Stunde.",
+          "success": "Stunde erfolgreich erstellt."
+        },
+        "lesson_edit": {
+          "error": "Fehler beim Bearbeiten der Stunde.",
+          "success": "Stunde erfolgreich bearbeitet."
+        },
+        "lesson_move": {
+          "error": "Fehler beim Verschieben der Stunde.",
+          "success": "Stunde erfolgreich verschoben."
+        }
+      },
+      "timetable_for": "Stundenplan für {name}"
+    },
+    "validity_range": {
+      "create_validity_range": "Gültigkeitszeitraum erstellen",
+      "date_end": "Enddatum",
+      "date_start": "Startdatum",
+      "menu_title": "Gültigkeitszeiträume",
+      "name": "Name",
+      "publish": {
+        "button": "Veröffentlichen",
+        "confirm_button": "Veröffentlichen",
+        "confirm_explanation": "Bitte beachten Sie, dass dies den gesamten Stundenplan veröffentlichen und für alle sichtbar machen wird. Außerdem werden Sie das Zeitraster, die Kurskonfigurationen und den Stundenplan in diesem Gültigkeitsbereich nicht mehr ändern können, nach dem er veröffentlicht wurde.",
+        "confirm_title": "Sind Sie sicher, dass Sie den Gültigkeitsbereich \"{name}\" veröffentlichen wollen?"
+      },
+      "status": {
+        "draft": "Entwurf",
+        "published": "Veröffentlicht"
+      },
+      "status_label": "Status",
+      "time_grid": {
+        "confirm_delete_body": "Wenn diese Gruppe von diesem Gültigkeitszeitraum entfernt wird, werden alle zugehörigen Daten wie Unterrichtszeiten oder Stundenpläne gelöscht.",
+        "create": "Gruppe auswählen",
+        "create_long": "Gruppenspezifischen Gültigkeitszeitraum erstellen",
+        "explanations": {
+          "multiple_set": "Mit dem Gültigkeitszeitraum verbundene Daten (wie Unterrichtszeiten) können sich für folgende Gruppen unterscheiden.",
+          "none_created": "Diesem Gültigkeitszeitraum wurden noch keine Gruppen zugeordnet, er kann daher noch nicht verwendet werden.",
+          "only_generic": "Alle mit dem Gültigkeitszeitraum verbundenen Daten (wie Unterrichtszeiten) sind für alle Gruppen identisch.",
+          "only_one_group": "Alle mit dem Gültigkeitszeitraum verbundenen Daten (wie Unterrichtszeiten) sind nur für die folgende Gruppe gültig."
+        },
+        "fields": {
+          "group": "Gruppe",
+          "is_generic": "Ist generisch"
+        },
+        "generic": "Generisch (Platzhalter für alle Gruppen)",
+        "repr": {
+          "dates_default": "{start}–{end} ({group})",
+          "default": "{name} ({group})",
+          "generic": "{name} (generisch/gültig für alle)"
+        }
+      },
+      "title": "Gültigkeitszeitraum",
+      "title_plural": "Gültigkeitszeitraum"
+    }
+  }
+}

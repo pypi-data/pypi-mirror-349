@@ -1,0 +1,173 @@
+query lessonsTeacher($teacher: ID!, $timeGrid: ID!) {
+  lessonsTeacher: lessonsForTeacher(teacher: $teacher, timeGrid: $timeGrid) {
+    id
+    bundle {
+      id
+      slotStart {
+        id
+        period
+        weekday
+      }
+      slotEnd {
+        id
+        period
+        weekday
+      }
+      recurrence
+    }
+    subject {
+      id
+      name
+      colourFg
+      colourBg
+    }
+    teachers {
+      id
+      fullName
+      shortName
+    }
+    rooms {
+      id
+      name
+      shortName
+    }
+    course {
+      id
+      name
+      subject {
+        id
+        name
+        colourFg
+        colourBg
+      }
+      teachers {
+        id
+        fullName
+        shortName
+      }
+      groups {
+        id
+        name
+        shortName
+      }
+    }
+    canEdit
+    canDelete
+  }
+}
+
+query lessonsRoom($room: ID!, $timeGrid: ID!) {
+  lessonsRoom: lessonsForRoom(room: $room, timeGrid: $timeGrid) {
+    id
+    bundle {
+      id
+      slotStart {
+        id
+        period
+        weekday
+      }
+      slotEnd {
+        id
+        period
+        weekday
+      }
+      recurrence
+    }
+    subject {
+      id
+      name
+      colourFg
+      colourBg
+    }
+    teachers {
+      id
+      fullName
+      shortName
+    }
+    rooms {
+      id
+      name
+      shortName
+    }
+    course {
+      id
+      name
+      subject {
+        id
+        name
+        colourFg
+        colourBg
+      }
+      teachers {
+        id
+        fullName
+        shortName
+      }
+      groups {
+        id
+        name
+        shortName
+      }
+    }
+    canEdit
+    canDelete
+  }
+}
+
+query lessonsGroup($group: ID!, $timeGrid: ID!) {
+  lessonsGroup: lessonsForGroup(group: $group, timeGrid: $timeGrid) {
+    id
+    bundle {
+      id
+      slotStart {
+        id
+        period
+        weekday
+      }
+      slotEnd {
+        id
+        period
+        weekday
+      }
+      recurrence
+    }
+    subject {
+      id
+      name
+      colourFg
+      colourBg
+    }
+    teachers {
+      id
+      fullName
+      shortName
+    }
+    rooms {
+      id
+      name
+      shortName
+    }
+    course {
+      id
+      name
+      subject {
+        id
+        name
+        colourFg
+        colourBg
+      }
+      teachers {
+        id
+        fullName
+        shortName
+      }
+      groups {
+        id
+        name
+        shortName
+      }
+    }
+    canEdit
+    canDelete
+  }
+}

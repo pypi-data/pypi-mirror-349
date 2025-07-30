@@ -1,0 +1,18 @@
+{% load data_helpers %}
+
+<div class="card timetable-title-card">
+  <div class="card-content">
+
+    {# Lesson number #}
+    <div class="card-title left">
+      {{ slot.period }}.
+    </div>
+
+    {# Time dimension of lesson #}
+    <div class="right timetable-time grey-text text-darken-2">
+        <span>{{ slot.time_start|time }}</span>
+        <br/>
+        <span>{{ slot.time_end|time }}</span>
+    </div>
+  </div>
+</div>
