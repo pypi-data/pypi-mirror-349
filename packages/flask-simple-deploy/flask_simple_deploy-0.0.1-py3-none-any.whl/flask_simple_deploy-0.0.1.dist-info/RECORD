@@ -1,0 +1,16 @@
+flask_simple_deploy/__init__.py,sha256=7TwN5QvkVNhe2X_LbBZSO1hMNjGt1Bx6bKm0yF6Mhi4,71
+flask_simple_deploy/cli.py,sha256=n6G8qJGbttM-1OqiyYOq2603SEmIYpP5LHeCZI5PyMA,674
+flask_simple_deploy/deploy.py,sha256=QcbOE-li7taCN-7Z8ISUEFoSgYdUNAOgpGwcQrVPrbg,9242
+flask_simple_deploy/fsd_messages.py,sha256=2oMThG2BbsVEmRIsPBqYdCGEcHiOXNeH2GkhUakOWvg,3275
+flask_simple_deploy/hookspecs.py,sha256=E77OhfnWhTd8-f854UfVtxfMUJrt2FsGCBOPOxKhcFs,480
+flask_simple_deploy/plugins.py,sha256=ZlW9Lov99-KjaazarW1qBumKor8CNslcb-WQ7BrqSo4,118
+flask_simple_deploy/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+flask_simple_deploy/utils/command_errors.py,sha256=fhJDjWgqGJ4THE9wbQNm0p7IHzlhKSwFOu6NcW7BxYo,924
+flask_simple_deploy/utils/fsd_config.py,sha256=YS4a3fT8oMOxDDhRJnnVQVOkzP9nEDnOwyMSJ1UGpJI,1849
+flask_simple_deploy/utils/fsd_utils.py,sha256=So1L0AFkTNMGcQvhmv5U9yvqfaswwbTt-8yUAuk7pZk,5530
+flask_simple_deploy/utils/plugin_utils.py,sha256=nsvzPm73Mas_wg-8pBsDgaF9DMdRCcWJqDtPTsvaoEI,12613
+flask_simple_deploy-0.0.1.dist-info/METADATA,sha256=cvbzG9aNdRP8O1H03lqH8YtgR7Eh4EmFUJAZKEpW2Po,1493
+flask_simple_deploy-0.0.1.dist-info/WHEEL,sha256=zaaOINJESkSfm_4HQVc5ssNzHCPXhJm0kEUakpsEHaU,91
+flask_simple_deploy-0.0.1.dist-info/entry_points.txt,sha256=E_P9eTkrZkH7AQyhw2nAUvsOTdUWO49DXVk9JzRJb-8,57
+flask_simple_deploy-0.0.1.dist-info/top_level.txt,sha256=Td4-kjp5xH-SWMlYefwTfM8zFE5LSpruZjXTN7SXBzM,20
+flask_simple_deploy-0.0.1.dist-info/RECORD,,

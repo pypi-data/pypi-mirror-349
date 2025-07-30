@@ -1,0 +1,2 @@
+[flask.commands]
+deploy = flask_simple_deploy.cli:deploy
