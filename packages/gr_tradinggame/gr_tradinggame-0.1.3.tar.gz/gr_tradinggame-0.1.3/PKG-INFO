@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: gr_tradinggame
+Version: 0.1.3
+Summary: Add your description here
+Author-email: Soeren Wolfers <soeren.wolfers@gresearch.com>
+Requires-Python: >=3.11
+Requires-Dist: cloudpickle==3.1.1
+Requires-Dist: flask-ngrok==0.0.25
+Requires-Dist: flask==3.1.1
+Requires-Dist: ipython==7.34.0
+Requires-Dist: ipywidgets>=7.7.1
+Requires-Dist: numpy==2.0.2
+Requires-Dist: pandas==2.2.2
+Requires-Dist: plotly==5.10.0
+Requires-Dist: pyngrok==7.2.8
+Requires-Dist: requests==2.32.3
