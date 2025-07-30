@@ -1,0 +1,30 @@
+# pyproject.toml
+
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mini-document-storage"
+version = "1.10.0"
+description = "Fast, inexpensive document storage backed by a standard database connector."
+readme = "README.md"
+authors = [{ name = "Stevo Brock", email = "StevoGTA@aol.com" }]
+license = "MIT"
+license-files = [
+    "LICENSE",
+]
+classifiers = [
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+keywords = ["document storage"]
+dependencies = [
+	'aiohttp',
+]
+requires-python = ">=3.9"
+
+[project.urls]
+Homepage = "https://github.com/StevoGTA/Mini-Document-Storage"
+
+# Instructions on deployment: https://realpython.com/pypi-publish-python-package/
