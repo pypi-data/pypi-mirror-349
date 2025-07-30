@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+pomodoro/__init__.py
+pomodoro/pomodoro.py
+project_rigor_pomodoro.egg-info/PKG-INFO
+project_rigor_pomodoro.egg-info/SOURCES.txt
+project_rigor_pomodoro.egg-info/dependency_links.txt
+project_rigor_pomodoro.egg-info/requires.txt
+project_rigor_pomodoro.egg-info/top_level.txt

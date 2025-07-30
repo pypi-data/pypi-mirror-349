@@ -1,0 +1,29 @@
+Metadata-Version: 2.4
+Name: project-rigor-pomodoro
+Version: 0.1
+Summary: A Pomodoro Timer for Project RIGOR
+Home-page: https://github.com/jarvick257/rigor-pomodoro
+Author: jarvick257
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: project-rigor
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+
+# Project RIGOR - Pomodoro Timer
+
+* [Project IGOR](https://github.com/UrbanCircles/igor/tree/main)
+* [Project RIGOR](https://github.com/jarvick257/rigor)
+* [Pomodoro Technique](https://en.wikipedia.org/wiki/Pomodoro_Technique)
