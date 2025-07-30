@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+alluuid/__init__.py
+alluuid/uuid_generator.py
+alluuid.egg-info/PKG-INFO
+alluuid.egg-info/SOURCES.txt
+alluuid.egg-info/dependency_links.txt
+alluuid.egg-info/top_level.txt
+tests/test.py
