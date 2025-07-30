@@ -1,0 +1,101 @@
+---
+source: tests/test.rs
+expression: "format!(\"{:#?}\", engine)"
+---
+Engine {
+    union: U16U16U32U32U32(
+        EngineBase {
+            grammar: Grammar {
+                start_nonterminal: "start[2]",
+                rules: "A[0] ::= \"x\"[0]B[1] | \"x\"[0];\nB[1] ::= \"y\"[1]A[0] | \"y\"[1];\nstart[2] ::= A[0]\"\n\"[2];\n",
+                id_to_regexes: {},
+                id_to_suffix_automata: {},
+                id_to_suffix_automata_first_bytes: [],
+                id_to_regex_first_bytes: [],
+                id_to_regex_complement_first_bytes: [],
+                id_to_terminals: [
+                    (
+                        "\"\n\"[2]",
+                        [
+                            10,
+                        ],
+                    ),
+                    (
+                        "\"x\"[0]",
+                        [
+                            120,
+                        ],
+                    ),
+                    (
+                        "\"y\"[1]",
+                        [
+                            121,
+                        ],
+                    ),
+                ],
+            },
+            allowed_first_bytes: [],
+            allowed_token_ids: [],
+            earley_sets: [
+                [
+                    EarleyItemDebugStruct {
+                        dotted_rule: "start[2] -> .A[0]\"\n\"[2]",
+                        start_position: 0,
+                        state: "",
+                    },
+                    EarleyItemDebugStruct {
+                        dotted_rule: "A[0] -> .\"x\"[0]B[1]",
+                        start_position: 0,
+                        state: "[0]",
+                    },
+                    EarleyItemDebugStruct {
+                        dotted_rule: "A[0] -> .\"x\"[0]",
+                        start_position: 0,
+                        state: "[0]",
+                    },
+                ],
+                [],
+            ],
+            cache: [],
+            to_be_completed_items: [],
+            to_be_completed_items_buffer: [],
+            deduplication_buffer: [],
+            postdot_items: [
+                (
+                    DottedDebugStruct {
+                        postdot_nonterminal: "A[0]",
+                        column: 0,
+                    },
+                    NormalItems(
+                        [
+                            EarleyItemDebugStruct {
+                                dotted_rule: "start[2] -> .A[0]\"\n\"[2]",
+                                start_position: 0,
+                                state: "",
+                            },
+                        ],
+                    ),
+                ),
+            ],
+            leo_items: [
+                (
+                    DottedDebugStruct {
+                        postdot_nonterminal: "B[1]",
+                        column: 0,
+                    },
+                    ToBeCompletedItemDebugStruct {
+                        nonterminal: "A[0]",
+                        start_position: 0,
+                    },
+                ),
+            ],
+            leo_items_buffer: [],
+            finished: true,
+            config: EngineConfig {
+                cache_enabled: true,
+                compaction_enabled: true,
+                rejected_token_prefix_cache_enabled: true,
+            },
+        },
+    ),
+}
