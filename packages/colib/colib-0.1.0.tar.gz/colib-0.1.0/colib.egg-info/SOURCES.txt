@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+colib.egg-info/PKG-INFO
+colib.egg-info/SOURCES.txt
+colib.egg-info/dependency_links.txt
+colib.egg-info/top_level.txt
