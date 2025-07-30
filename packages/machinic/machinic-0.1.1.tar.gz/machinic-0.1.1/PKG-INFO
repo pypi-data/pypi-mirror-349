@@ -1,0 +1,79 @@
+Metadata-Version: 2.4
+Name: machinic
+Version: 0.1.1
+Requires-Dist: pydantic>=2.9.2
+Requires-Dist: cryptography>=44.0.3
+Requires-Dist: orjson>=3.10.18
+Requires-Dist: pyyaml>=6.0.2
+Requires-Dist: toml>=0.10.2
+Requires-Dist: numpy>=2.2.5
+Requires-Dist: rich>=14.0.0
+Requires-Dist: cyclopts>=3.16.1 ; extra == 'cli'
+Requires-Dist: mkdocs-jupyter>=0.25.1 ; extra == 'doc'
+Requires-Dist: mkdocs-material>=9.6.14 ; extra == 'doc'
+Requires-Dist: mkdocs-roamlinks-plugin>=0.3.2 ; extra == 'doc'
+Requires-Dist: mkdocstrings[python]>=0.29.1 ; extra == 'doc'
+Requires-Dist: hypothesis>=6.131.17 ; extra == 'test'
+Requires-Dist: pytest>=8.3.5 ; extra == 'test'
+Requires-Dist: tqdm>=4.67.1 ; extra == 'dev'
+Requires-Dist: charset-normalizer>=3.4.2 ; extra == 'dev'
+Requires-Dist: httpx>=0.28.1 ; extra == 'web'
+Provides-Extra: cli
+Provides-Extra: doc
+Provides-Extra: test
+Provides-Extra: dev
+Provides-Extra: web
+License-File: LICENSE
+Summary: Utilities typically used across projects and extensions of the python standard library.
+Author-email: Hart Traveller <ruling_fiction.0b@icloud.com>
+License: MIT
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Project-URL: homepage, https://pypi.org/project/machinic
+Project-URL: documentation, https://harttraveller.github.io/machinic
+Project-URL: repository, https://github.com/harttraveller/machinic
+
+# machinic
+
+Utilities typically used across projects and extensions of the python standard library.
+
+Long term goal is to get this package <= 3 dependencies, and accelerate most of the slow code in rust.
+
+## Packages
+
+### Dependencies
+
+...
+
+### Integrated
+
+#### [MIT] [python-case-converter](https://github.com/chrisdoherty4/python-case-converter)
+
+Changes:
+
+- Some modifications made to allow for subclasses of `str` for which the constructor sets the relevant case.
+- Additional cases added.
+- Type annotations added where missing.
+- Other assorted modifications.
+- Log statements removed.
+- Parametrized whitespace delimiters.
+
+
+### To Integrate
+
+#### [MIT] [more-itertools](https://github.com/more-itertools/more-itertools)
+
+<!--
+Maybe will add, but probably split into separate project:
+
+- [cryptography](https://github.com/pyca/cryptography)
+- [scipy](https://github.com/scipy/scipy)
+- [sympy](https://github.com/sympy/sympy)
+- [numpy](https://github.com/numpy/numpy)
+
+## References
+
+- [superstring]()
+- [adict]()
+
+-->
